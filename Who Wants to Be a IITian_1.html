@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a IITian - Straight Lines Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .question-area {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .prize-ladder {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+            height: fit-content;
+        }
+
+        .timer-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .timer {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 3px solid #e74c3c;
+        }
+
+        .timer.warning {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+            border-radius: 10px;
+            transition: width 1s linear;
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .easy { background: #2ecc71; color: white; }
+        .medium { background: #f39c12; color: white; }
+        .jee-main { background: #e74c3c; color: white; }
+        .jee-advanced { background: #8e44ad; color: white; }
+
+        .question-number {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 3px solid #dee2e6;
+            border-radius: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: #007bff;
+        }
+
+        .option.selected {
+            background: #007bff;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .option.correct {
+            background: #28a745;
+            color: white;
+            border-color: #1e7e34;
+        }
+
+        .option.incorrect {
+            background: #dc3545;
+            color: white;
+            border-color: #c82333;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .controls {
+            text-align: center;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .ladder-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 3px 0;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .ladder-item.current {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            font-weight: bold;
+            transform: scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+        }
+
+        .ladder-item.completed {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border-color: #28a745;
+        }
+
+        .ladder-item.locked {
+            opacity: 0.4;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .ladder-number {
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-weight: bold;
+            min-width: 25px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .ladder-item.current .ladder-number {
+            background: #000;
+            color: #ffd700;
+        }
+
+        .ladder-item.completed .ladder-number {
+            background: rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .ladder-college {
+            flex: 1;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .explanation {
+            background: #e8f4fd;
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        .explanation h4 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .explanation p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .final-score {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .final-score.show {
+            display: block;
+        }
+
+        .congratulations {
+            font-size: 2rem;
+            color: #28a745;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .start-screen {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .start-screen h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .start-screen p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .game-board {
+                grid-template-columns: 1fr;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="main-title">Who Wants to Be a IITian?</h1>
+            <p class="subtitle">JEE Straight Lines Mastery Challenge</p>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h2>Welcome to the Ultimate JEE Straight Lines Quiz!</h2>
+            <p>Test your knowledge of coordinate geometry with 12 progressively challenging questions based on actual JEE patterns. Each question has a 3-minute time limit. Answer correctly to climb the prestigious college ladder from local colleges all the way to top IITs!</p>
+            <button class="btn" onclick="startGame()">Start Your Journey to IIT</button>
+        </div>
+
+        <div class="game-board" id="gameBoard" style="display: none;">
+            <div class="question-area">
+                <div class="timer-container">
+                    <div class="timer" id="timer">3:00</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="difficulty-badge" id="difficultyBadge">Easy</div>
+                <div class="question-number" id="questionNumber">Question 1 of 12</div>
+                <div class="question-text" id="questionText"></div>
+                
+                <div class="options-grid" id="optionsGrid">
+                    <div class="option" onclick="selectOption(0)">
+                        <span class="option-label">A)</span>
+                        <span id="optionA"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(1)">
+                        <span class="option-label">B)</span>
+                        <span id="optionB"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(2)">
+                        <span class="option-label">C)</span>
+                        <span id="optionC"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(3)">
+                        <span class="option-label">D)</span>
+                        <span id="optionD"></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn" id="submitBtn" onclick="submitAnswer()" disabled>Lock In Answer</button>
+                    <button class="btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+                </div>
+
+                <div class="explanation" id="explanation">
+                    <h4>Explanation</h4>
+                    <div id="explanationText"></div>
+                </div>
+            </div>
+
+            <div class="prize-ladder">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #ffd700;">College Ladder</h3>
+                <div id="ladderItems"></div>
+            </div>
+        </div>
+
+        <div class="final-score" id="finalScore">
+            <div class="congratulations" id="finalMessage"></div>
+            <p id="finalDetails"></p>
+            <button class="btn" onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+
+    <script>
+        const colleges = [
+            "Local Basic College",
+            "Local Tier-3 Colleges (KMIT, CMR)",
+            "Local Niche Colleges (CBIT, Vasavi)",
+            "Regional University (OU, JNTU)",
+            "Other Private (Manipal)",
+            "IIIT Bangalore",
+            "IIIT Hyderabad", 
+            "Top NIT (NIT Warangal)",
+            "Top Private University (BITS, Amrita, VIT)",
+            "Top Private University (SRM)",
+            "Tier-2 IITs (Hyderabad, BHU)",
+            "Top IITs (Madras, Delhi, Bombay)"
+        ];
+
+        const questions = [
+            {
+                question: "What is the slope of a line passing through points (2, 3) and (4, 7)?",
+                options: ["1/2", "2", "3/2", "4"],
+                correct: 1,
+                difficulty: "easy",
+                explanation: "Slope formula: m = (y₂ - y₁)/(x₂ - x₁) = (7 - 3)/(4 - 2) = 4/2 = 2"
+            },
+            {
+                question: "Find the equation of line with slope 3 passing through point (1, 2).",
+                options: ["y = 3x - 1", "y = 3x + 2", "y = 3x - 5", "y = x + 2"],
+                correct: 0,
+                difficulty: "easy",
+                explanation: "Using point-slope form: y - y₁ = m(x - x₁)\nSubstituting: y - 2 = 3(x - 1)\nExpanding: y - 2 = 3x - 3\nRearranging: y = 3x - 3 + 2\nTherefore: y = 3x - 1"
+            },
+            {
+                question: "Two lines are perpendicular if the product of their slopes is:",
+                options: ["0", "1", "-1", "∞"],
+                correct: 2,
+                difficulty: "easy",
+                explanation: "For perpendicular lines, m₁ × m₂ = -1. This is a fundamental property of perpendicular lines in coordinate geometry."
+            },
+            {
+                question: "The distance between parallel lines 3x + 4y + 5 = 0 and 3x + 4y - 7 = 0 is:",
+                options: ["12/5", "2", "2.4", "3"],
+                correct: 2,
+                difficulty: "medium",
+                explanation: "Distance between parallel lines ax + by + c₁ = 0 and ax + by + c₂ = 0 is |c₁ - c₂|/√(a² + b²)\n= |5 - (-7)|/√(9 + 16) = 12/5 = 2.4"
+            },
+            {
+                question: "Find the equation of line passing through (2, -1) and perpendicular to line 2x - 3y + 4 = 0:",
+                options: ["3x + 2y - 4 = 0", "2x + 3y - 1 = 0", "3x + 2y + 4 = 0", "x + 2y = 0"],
+                correct: 0,
+                difficulty: "medium",
+                explanation: "Given line: 2x - 3y + 4 = 0, slope = 2/3\nPerpendicular slope = -3/2\nUsing point-slope form: y - (-1) = -3/2(x - 2)\n2(y + 1) = -3(x - 2)\n2y + 2 = -3x + 6\n3x + 2y - 4 = 0"
+            },
+            {
+                question: "The angle between lines x + y - 1 = 0 and x - y + 1 = 0 is:",
+                options: ["30°", "45°", "60°", "90°"],
+                correct: 3,
+                difficulty: "medium",
+                explanation: "Line 1: x + y - 1 = 0, slope m₁ = -1\nLine 2: x - y + 1 = 0, slope m₂ = 1\nSince m₁ × m₂ = (-1)(1) = -1, the lines are perpendicular.\nAngle = 90°"
+            },
+            {
+                question: "The area of triangle formed by line 2x + 3y = 6 with coordinate axes is:",
+                options: ["2", "3", "6", "9"],
+                correct: 1,
+                difficulty: "jee-main",
+                explanation: "Line 2x + 3y = 6 meets x-axis at (3, 0) and y-axis at (0, 2)\nArea of triangle = (1/2) × base × height = (1/2) × 3 × 2 = 3"
+            },
+            {
+                question: "If lines ax + 2y + 1 = 0, 2x + 3y + 1 = 0, and 3x + 4y + 1 = 0 are concurrent, then a =:",
+                options: ["1", "2", "3", "4"],
+                correct: 0,
+                difficulty: "jee-main",
+                explanation: "For concurrent lines, the determinant must be zero:\n|a  2  1|\n|2  3  1| = 0\n|3  4  1|\nExpanding: a(3 - 4) - 2(2 - 3) + 1(8 - 9) = 0\n-a + 2 - 1 = 0\na = 1"
+            },
+            {
+                question: "The foot of perpendicular from point (3, 4) to line 2x + y - 1 = 0 is:",
+                options: ["(1, -1)", "(1, 1)", "(0, 1)", "(-1, 3)"],
+                correct: 0,
+                difficulty: "jee-main",
+                explanation: "Let foot be (h, k). Line from (3, 4) to (h, k) is perpendicular to given line.\nSlope of perpendicular = -1/2 (negative reciprocal of 2)\n(k - 4)/(h - 3) = -1/2\nAlso, (h, k) lies on 2x + y - 1 = 0\nSolving: 2h + k = 1 and 2(k - 4) = -(h - 3)\nGives h = 1, k = -1"
+            },
+            {
+                question: "Find the reflection of point (2, 3) in the line x + y - 1 = 0:",
+                options: ["(-2, -1)", "(-1, -2)", "(0, -1)", "(-2, 1)"],
+                correct: 0,
+                difficulty: "jee-advanced",
+                explanation: "Let reflection be (h, k). Midpoint of (2, 3) and (h, k) lies on line x + y - 1 = 0\nMidpoint: ((2 + h)/2, (3 + k)/2)\n(2 + h)/2 + (3 + k)/2 - 1 = 0\nAlso, line joining (2, 3) and (h, k) is perpendicular to x + y - 1 = 0\nSolving these conditions gives h = -2, k = -1"
+            },
+            {
+                question: "The locus of point equidistant from lines 3x + 4y + 2 = 0 and 4x + 3y - 6 = 0 consists of:",
+                options: ["One line", "Two lines", "A circle", "Two parallel lines"],
+                correct: 1,
+                difficulty: "jee-advanced",
+                explanation: "Locus of points equidistant from two non-parallel lines consists of two perpendicular lines bisecting the angles between the given lines.\n|3x + 4y + 2|/5 = |4x + 3y - 6|/5\nThis gives two equations: 3x + 4y + 2 = ±(4x + 3y - 6)"
+            },
+            {
+                question: "If the line lx + my + n = 0 is normal to the circle x² + y² + 2gx + 2fy + c = 0 at point (x₁, y₁), then:",
+                options: ["l(x₁ + g) + m(y₁ + f) = 0", "lx₁ + my₁ + n = 0", "l/m = (x₁ + g)/(y₁ + f)", "All of these"],
+                correct: 3,
+                difficulty: "jee-advanced",
+                explanation: "For a normal to circle at (x₁, y₁):\n1. Point lies on normal: lx₁ + my₁ + n = 0\n2. Normal passes through center (-g, -f) and (x₁, y₁)\n3. Slope condition: l/m = (x₁ + g)/(y₁ + f)\nAll conditions are satisfied, hence all options are correct."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let selectedOption = -1;
+        let score = 0;
+        let timeLeft = 180;
+        let timer;
+        let gameStarted = false;
+
+        function startGame() {
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('gameBoard').style.display = 'grid';
+            gameStarted = true;
+            currentQuestion = 0;
+            score = 0;
+            setupLadder();
+            showQuestion();
+        }
+
+        function setupLadder() {
+            const ladderItems = document.getElementById('ladderItems');
+            ladderItems.innerHTML = '';
+            
+            for (let i = colleges.length - 1; i >= 0; i--) {
+                const item = document.createElement('div');
+                item.className = 'ladder-item locked';
+                item.innerHTML = `
+                    <div class="ladder-number">${i + 1}</div>
+                    <div class="ladder-college">${colleges[i]}</div>
+                `;
+                item.id = `ladder-${i}`;
+                ladderItems.appendChild(item);
+            }
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= questions.length) {
+                endGame();
+                return;
+            }
+
+            const q = questions[currentQuestion];
+            
+            // Update ladder
+            updateLadder();
+            
+            // Reset UI state
+            selectedOption = -1;
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('submitBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('explanation').classList.remove('show');
+            
+            // Update question display
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestion + 1} of 12`;
+            document.getElementById('questionText').textContent = q.question;
+            document.getElementById('difficultyBadge').textContent = getDifficultyLabel(q.difficulty);
+            document.getElementById('difficultyBadge').className = `difficulty-badge ${q.difficulty}`;
+            
+            // Update options
+            const optionElements = ['optionA', 'optionB', 'optionC', 'optionD'];
+            const options = document.querySelectorAll('.option');
+            
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(optionElements[i]).textContent = q.options[i];
+                options[i].className = 'option';
+                options[i].style.pointerEvents = 'auto'; // Re-enable clicking
+            }
+            
+            // Start timer
+            startTimer();
+        }
+
+        function getDifficultyLabel(difficulty) {
+            switch(difficulty) {
+                case 'easy': return 'Easy';
+                case 'medium': return 'Medium';
+                case 'jee-main': return 'JEE Main';
+                case 'jee-advanced': return 'JEE Advanced';
+                default: return 'Unknown';
+            }
+        }
+
+        function updateLadder() {
+            for (let i = 0; i < colleges.length; i++) {
+                const item = document.getElementById(`ladder-${i}`);
+                if (i < currentQuestion) {
+                    item.className = 'ladder-item completed';
+                } else if (i === currentQuestion) {
+                    item.className = 'ladder-item current';
+                } else {
+                    item.className = 'ladder-item locked';
+                }
+            }
+        }
+
+        function startTimer() {
+            timeLeft = 180;
+            updateTimerDisplay();
+            
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 30) {
+                    document.getElementById('timer').classList.add('warning');
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    timeUp();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            const progress = (180 - timeLeft) / 180 * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function selectOption(index) {
+            // Check if already submitted answer
+            if (document.getElementById('submitBtn').style.display === 'none') return;
+            
+            selectedOption = index;
+            
+            // Reset all options
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+            
+            // Select current option
+            options[index].classList.add('selected');
+            document.getElementById('submitBtn').disabled = false;
+        }
+
+        function submitAnswer() {
+            if (selectedOption === -1) return;
+            
+            clearInterval(timer);
+            document.getElementById('timer').classList.remove('warning');
+            
+            const q = questions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            
+            // Disable further clicking on options
+            options.forEach(option => option.style.pointerEvents = 'none');
+            
+            // Show correct/incorrect
+            options[selectedOption].classList.remove('selected');
+            
+            if (selectedOption === q.correct) {
+                options[selectedOption].classList.add('correct');
+                score++;
+                
+                // Show explanation
+                document.getElementById('explanationText').innerHTML = `✅ <strong>Correct!</strong><br><br>${q.explanation.replace(/\n/g, '<br>')}`;
+                document.getElementById('explanation').classList.add('show');
+                
+                // Show next button or end game if last question
+                document.getElementById('submitBtn').style.display = 'none';
+                if (currentQuestion === questions.length - 1) {
+                    document.getElementById('nextBtn').textContent = 'See Final Results';
+                } else {
+                    document.getElementById('nextBtn').textContent = 'Next Question';
+                }
+                document.getElementById('nextBtn').style.display = 'inline-block';
+            } else {
+                // Wrong answer - game over!
+                options[selectedOption].classList.add('incorrect');
+                options[q.correct].classList.add('correct');
+                
+                // Show explanation
+                document.getElementById('explanationText').innerHTML = `❌ <strong>Wrong Answer!</strong><br><br>The correct answer was: <strong>${q.options[q.correct]}</strong><br><br>${q.explanation.replace(/\n/g, '<br>')}`;
+                document.getElementById('explanation').classList.add('show');
+                
+                // End game immediately
+                document.getElementById('submitBtn').style.display = 'none';
+                setTimeout(() => {
+                    endGame();
+                }, 3000); // Show explanation for 3 seconds then end game
+            }
+        }
+
+        function timeUp() {
+            // Time up also ends the game
+            document.getElementById('explanationText').innerHTML = `⏰ <strong>Time's Up!</strong><br><br>The correct answer was: <strong>${questions[currentQuestion].options[questions[currentQuestion].correct]}</strong><br><br>${questions[currentQuestion].explanation.replace(/\n/g, '<br>')}`;
+            document.getElementById('explanation').classList.add('show');
+            
+            const options = document.querySelectorAll('.option');
+            options[questions[currentQuestion].correct].classList.add('correct');
+            
+            document.getElementById('submitBtn').style.display = 'none';
+            
+            // End game after timeout too
+            setTimeout(() => {
+                endGame();
+            }, 3000);
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            document.getElementById('gameBoard').style.display = 'none';
+            document.getElementById('finalScore').classList.add('show');
+            
+            let message, details;
+            const finalCollege = score > 0 ? colleges[score - 1] : "No college qualification";
+            
+            if (score === 12) {
+                message = "🎉 INCREDIBLE! Perfect Score! 🎉";
+                details = `Outstanding! You answered all 12 questions correctly! You've reached the pinnacle - ${colleges[11]}! You have mastered JEE Straight Lines concepts and are definitely IIT material!`;
+            } else if (score >= 10) {
+                message = "🎯 Excellent! Top IIT Level! 🎯";
+                details = `Amazing performance! You reached question ${score + 1} and qualified for ${finalCollege}. You have excellent understanding of straight lines concepts!`;
+            } else if (score >= 8) {
+                message = "👍 Great Job! NIT Level! 👍";
+                details = `Well done! You reached question ${score + 1} and qualified for ${finalCollege}. You have a strong foundation in coordinate geometry!`;
+            } else if (score >= 5) {
+                message = "📚 Good Effort! Private University Level! 📚";
+                details = `Nice try! You reached question ${score + 1} and qualified for ${finalCollege}. Keep practicing to reach higher levels!`;
+            } else if (score > 0) {
+                message = "🔄 Keep Learning! 🔄";
+                details = `You reached question ${score + 1} and qualified for ${finalCollege}. Don't give up! Consistent practice will help you improve significantly.`;
+            } else {
+                message = "📖 Study More! 📖";
+                details = `You didn't pass the first question. Focus on basic straight line concepts like slope, point-slope form, and line equations. Practice more and try again!`;
+            }
+            
+            document.getElementById('finalMessage').textContent = message;
+            document.getElementById('finalDetails').textContent = details;
+        }
+
+        function restartGame() {
+            document.getElementById('finalScore').classList.remove('show');
+            document.getElementById('startScreen').style.display = 'block';
+            currentQuestion = 0;
+            selectedOption = -1;
+            score = 0;
+            gameStarted = false;
+        }
+    </script>
+</body>
+</html>
