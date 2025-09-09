@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Acceleration Detective 🕵️‍♀️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .progress-bar {
+            background: #e2e8f0;
+            height: 10px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .progress {
+            background: linear-gradient(90deg, #48bb78, #38a169);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .question-card {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 3px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .question-card.show {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .scenario {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+            font-style: italic;
+            color: #4a5568;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .option {
+            background: white;
+            border: 3px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .option.correct {
+            border-color: #48bb78;
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+        }
+
+        .option.incorrect {
+            border-color: #f56565;
+            background: linear-gradient(135deg, #f56565, #e53e3e);
+            color: white;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            display: none;
+        }
+
+        .feedback.correct {
+            background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+            color: #22543d;
+            display: block;
+        }
+
+        .feedback.incorrect {
+            background: linear-gradient(135deg, #fed7d7, #fbb6ce);
+            color: #742a2a;
+            display: block;
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .score-container {
+            display: none;
+            text-align: center;
+        }
+
+        .score {
+            font-size: 3em;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .restart-btn {
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .restart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .emoji-large {
+            font-size: 2em;
+            margin: 0 10px;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .intro-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .intro-section p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #38a169;
+            color: #2d3748;
+        }
+
+        .tip-box strong {
+            color: #38a169;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="content">
+            <h1>🚀 Acceleration Detective 🕵️‍♀️</h1>
+            <p class="subtitle">Master the mysteries of motion! Can you spot acceleration in action? 🎯✨</p>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="intro-section" id="intro-section">
+                <h3>🎓 Welcome to Acceleration Academy! 🚀</h3>
+                <p>Get ready to become an acceleration expert! You'll analyze speed data, spot motion patterns, and master the science of changing velocity. Some questions show real data - pay close attention to the numbers! 📊✨</p>
+                <div class="tip-box">
+                    <strong>💡 Pro Tip:</strong> Remember that acceleration is ANY change in velocity - speeding up, slowing down, OR changing direction!
+                </div>
+                <button class="next-btn" onclick="startQuiz()" style="display: inline-block;">Start the Adventure! 🚀</button>
+            </div>
+
+            <div id="quiz-content" class="hidden">
+                <div class="question-card" id="question-card">
+                    <div class="question-number" id="question-number">Question 1 of 20</div>
+                    <div class="question-text" id="question-text"></div>
+                    <div class="scenario" id="scenario"></div>
+                    <div class="options" id="options"></div>
+                    <div class="feedback" id="feedback"></div>
+                    <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Question ➡️</button>
+                </div>
+            </div>
+
+            <div class="score-container" id="score-container">
+                <h2>🎉 Quiz Complete! 🎉</h2>
+                <div class="score" id="final-score"></div>
+                <p id="score-message"></p>
+                <button class="restart-btn" onclick="restartQuiz()">Try Again 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            // Speed Change Analysis Questions (10 questions)
+            {
+                text: "📊 Look at this data: A car's speed changes from 20 mph → 40 mph → 60 mph over 3 equal time periods.",
+                scenario: "Time: 0s→2s→4s→6s | Speed: 20mph→40mph→60mph | What's happening here?",
+                options: [
+                    { text: "⚡ Constant acceleration", correct: true },
+                    { text: "� Variable acceleration", correct: false },
+                    { text: "🛑 No acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Speed increases by 20 mph every 2 seconds = constant acceleration of 10 mph/s! 📈",
+                    incorrect: "❌ Look at the pattern: +20 mph every 2 seconds = steady, constant acceleration! 📊"
+                }
+            },
+            {
+                text: "📈 A rocket's speed readings: 0→50→200→450→800 m/s over equal 2-second intervals.",
+                scenario: "Each measurement taken exactly 2 seconds apart. Notice how the speed jumps get bigger!",
+                options: [
+                    { text: "📈 Increasing acceleration", correct: true },
+                    { text: "📉 Decreasing acceleration", correct: false },
+                    { text: "⚖️ Constant acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! Speed changes: +50, +150, +250, +350 - acceleration is increasing! 🚀",
+                    incorrect: "❌ Check the speed jumps: they get bigger each time, meaning acceleration is increasing! 📈"
+                }
+            },
+            {
+                text: "🏃‍♂️ Runner's speed over 8 seconds: 0→3→6→9→12→15→18→21 mph (measured every second).",
+                scenario: "Steady training run with consistent pacing - very disciplined athlete!",
+                options: [
+                    { text: "🎯 Perfectly constant acceleration", correct: true },
+                    { text: "🔄 Variable acceleration", correct: false },
+                    { text: "🏃‍♂️ No acceleration after start", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Brilliant! +3 mph every single second = textbook constant acceleration! 🏃‍♂️✨",
+                    incorrect: "❌ Look closely: speed increases by exactly 3 mph each second - perfectly constant! 📊"
+                }
+            },
+            {
+                text: "🛸 UFO speed data: 100→80→60→40→20→0 km/h over 10-second intervals.",
+                scenario: "The mysterious craft slows down uniformly before landing. Very smooth deceleration!",
+                options: [
+                    { text: "📉 Constant deceleration", correct: true },
+                    { text: "🔄 Variable deceleration", correct: false },
+                    { text: "🛸 Alien physics", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Correct! Losing 20 km/h every 10 seconds = constant negative acceleration! 🛸",
+                    incorrect: "❌ Check it out: -20 km/h every interval = steady, constant deceleration! 📉"
+                }
+            },
+            {
+                text: "🚗 Car data during traffic: 45→45→30→15→0→0→20→40 mph over 8-second intervals.",
+                scenario: "City driving with a red light, full stop, then green light acceleration.",
+                options: [
+                    { text: "🌈 Multiple acceleration phases", correct: true },
+                    { text: "⚖️ Overall constant acceleration", correct: false },
+                    { text: "🛑 No net acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Smart! Constant speed→deceleration→stationary→acceleration - multiple phases! 🚦",
+                    incorrect: "❌ Look at segments: constant, then slowing, then stopped, then speeding up! �🚗"
+                }
+            },
+            {
+                text: "🏀 Basketball thrown upward - speed readings: 20→15→10→5→0→5→10→15→20 m/s.",
+                scenario: "Ball goes up, stops at peak, then falls back down. Classic projectile motion!",
+                options: [
+                    { text: "🎯 Constant acceleration throughout", correct: true },
+                    { text: "🔄 Acceleration changes direction", correct: false },
+                    { text: "🏀 No acceleration at peak", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Amazing! Gravity causes constant 5 m/s² downward acceleration the whole time! 🏀",
+                    incorrect: "❌ Gravity is always pulling down at the same rate - constant acceleration! 📉"
+                }
+            },
+            {
+                text: "🎢 Roller coaster speed: 0→10→30→60→100→120→130→125 mph over equal time periods.",
+                scenario: "From the start through the first big hill and beginning of the descent.",
+                options: [
+                    { text: "📈 Decreasing acceleration", correct: true },
+                    { text: "📊 Constant acceleration", correct: false },
+                    { text: "⚡ Increasing acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! Speed changes: +10,+20,+30,+40,+20,+10,-5 - acceleration decreases! 🎢",
+                    incorrect: "❌ Look at the jumps: they start big then get smaller - acceleration is decreasing! 📉"
+                }
+            },
+            {
+                text: "🚲 Cyclist's speed every 3 seconds: 12→18→24→30→36→42→48 km/h.",
+                scenario: "Steady pedaling down a straight bike path with a slight downhill slope.",
+                options: [
+                    { text: "⚖️ Perfectly constant acceleration", correct: true },
+                    { text: "🔄 Slightly variable acceleration", correct: false },
+                    { text: "🚴‍♂️ Acceleration only from gravity", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! +6 km/h every 3 seconds = constant 2 km/h/s acceleration! 🚲",
+                    incorrect: "❌ Check the pattern: exactly +6 km/h each time = constant acceleration! 📊"
+                }
+            },
+            {
+                text: "🛩️ Small plane speeds: 80→85→95→110→130→155→185 mph at 5-second intervals.",
+                scenario: "Taking off from a runway - pilot gradually increases throttle for smooth acceleration.",
+                options: [
+                    { text: "📈 Increasing acceleration", correct: true },
+                    { text: "📉 Decreasing acceleration", correct: false },
+                    { text: "⚖️ Constant acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! Speed jumps: +5,+10,+15,+20,+25,+30 - acceleration increasing! ✈️",
+                    incorrect: "❌ Watch the increases get bigger: +5,+10,+15,+20,+25,+30 - growing acceleration! 🛩️"
+                }
+            },
+            {
+                text: "🏁 Race car lap times show speeds: 150→150→150→150→150 mph for 10 straight seconds.",
+                scenario: "Professional driver maintaining perfect speed on the straightaway section.",
+                options: [
+                    { text: "🛑 Zero acceleration", correct: true },
+                    { text: "⚡ Constant acceleration", correct: false },
+                    { text: "🏁 High acceleration", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Exactly! No speed change = zero acceleration, even at high speed! 🏎️",
+                    incorrect: "❌ Constant speed means no change in velocity = zero acceleration! 🏁"
+                }
+            },
+
+            // General Acceleration Concept Questions (10 questions)
+            {
+                text: "🚗 A car is cruising down a straight highway at exactly 60 mph for 10 minutes straight.",
+                scenario: "The speedometer needle hasn't moved, and the car maintains the same speed perfectly.",
+                options: [
+                    { text: "🏃‍♂️ Accelerating", correct: false },
+                    { text: "🛑 Not accelerating", correct: true },
+                    { text: "🤔 Need more info", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Correct! When an object moves at constant speed in a straight line, there's zero acceleration! 📏",
+                    incorrect: "❌ Not quite! Remember: acceleration means change in velocity. Constant speed = no acceleration! 🚗"
+                }
+            },
+            {
+                text: "🏃‍♀️ Sarah starts jogging and goes from standing still to 5 mph in 3 seconds.",
+                scenario: "She was at rest, then started running and reached a steady jogging pace.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "🔄 Decelerating", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Sarah's velocity changed from 0 to 5 mph - that's positive acceleration! 🏃‍♀️✨",
+                    incorrect: "❌ Think again! Sarah's speed increased from zero - whenever speed changes, there's acceleration! 🏃‍♀️"
+                }
+            },
+            {
+                text: "🎠 You're sitting on a merry-go-round that spins at a constant rate.",
+                scenario: "The merry-go-round turns at the same speed continuously - no speeding up or slowing down.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "🤷‍♂️ Only if it speeds up", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! Even at constant speed, circular motion involves acceleration because direction constantly changes! 🔄",
+                    incorrect: "❌ Tricky one! Acceleration includes changes in direction. Even constant circular motion is acceleration! 🎠"
+                }
+            },
+            {
+                text: "🛑 A bike rider slams on the brakes and comes to a complete stop.",
+                scenario: "The cyclist was moving at 15 mph and applied the brakes hard until completely stopped.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "🔄 Only decelerating", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! Slowing down is negative acceleration (deceleration). Acceleration can be positive or negative! 🛑",
+                    incorrect: "❌ Remember: deceleration IS acceleration! It's just negative acceleration when slowing down! 🚴‍♂️"
+                }
+            },
+            {
+                text: "🏀 A basketball sits perfectly still on a gym floor.",
+                scenario: "The ball hasn't moved for several minutes - no rolling, no bouncing, just sitting there.",
+                options: [
+                    { text: "🚀 Accelerating", correct: false },
+                    { text: "🛑 Not accelerating", correct: true },
+                    { text: "🤔 Depends on the floor", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Correct! No motion = no change in velocity = zero acceleration! 🏀",
+                    incorrect: "❌ A stationary object has zero velocity and zero acceleration! Nothing's changing! 🏀"
+                }
+            },
+            {
+                text: "🚁 A helicopter hovers in the exact same spot for 5 minutes.",
+                scenario: "The helicopter maintains the same position and altitude without drifting in any direction.",
+                options: [
+                    { text: "🚀 Accelerating", correct: false },
+                    { text: "🛑 Not accelerating", correct: true },
+                    { text: "🌪️ Fighting gravity", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Hovering means zero velocity and zero acceleration - even though engines are working! 🚁",
+                    incorrect: "❌ While the helicopter works against gravity, its velocity isn't changing, so no acceleration! 🚁"
+                }
+            },
+            {
+                text: "🏎️ A race car goes around a circular track at exactly 100 mph the whole lap.",
+                scenario: "The speedometer shows constant 100 mph as the car maintains perfect racing line around the oval.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "🏁 Only at turns", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Brilliant! Constant speed but changing direction = centripetal acceleration throughout! 🏎️💨",
+                    incorrect: "❌ Speed is constant but direction keeps changing! Any change in velocity means acceleration! 🏎️"
+                }
+            },
+            {
+                text: "🛬 An airplane gradually slows down from 200 mph to 100 mph for landing.",
+                scenario: "The pilot reduces throttle and the plane steadily decreases speed over 2 minutes.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "✈️ Just slowing down", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Exactly! Slowing down = negative acceleration. The velocity is definitely changing! ✈️",
+                    incorrect: "❌ 'Slowing down' IS acceleration - just in the negative direction! Change in speed = acceleration! 🛬"
+                }
+            },
+            {
+                text: "🎢 You're at the top of a roller coaster hill, momentarily stopped before the big drop.",
+                scenario: "For just one second, the coaster is completely motionless at the peak before gravity takes over.",
+                options: [
+                    { text: "🚀 About to accelerate", correct: false },
+                    { text: "🛑 Not accelerating right now", correct: true },
+                    { text: "🎢 Always accelerating on coasters", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! At that exact moment of zero velocity, acceleration is also zero! Next second is different! 🎢",
+                    incorrect: "❌ At the exact moment described, velocity is zero and not changing yet - so no acceleration! 🎢"
+                }
+            },
+            {
+                text: "🚀 A rocket ship blasts off and speeds up from 0 to 1000 mph in 30 seconds.",
+                scenario: "The rocket engines fire and the spacecraft rapidly gains speed as it climbs toward space.",
+                options: [
+                    { text: "🚀 Accelerating", correct: true },
+                    { text: "🛑 Not accelerating", correct: false },
+                    { text: "🌌 Only in space", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Absolutely! Massive change in velocity = massive acceleration! This is acceleration at its most obvious! 🚀🔥",
+                    incorrect: "❌ This is classic acceleration! Velocity changing from 0 to 1000 mph - huge acceleration! 🚀"
+                }
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        function startQuiz() {
+            document.getElementById('intro-section').style.display = 'none';
+            document.getElementById('quiz-content').classList.remove('hidden');
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('question-number').textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            document.getElementById('question-text').textContent = question.text;
+            document.getElementById('scenario').textContent = question.scenario;
+            
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.textContent = option.text;
+                optionElement.onclick = () => selectOption(index);
+                optionsContainer.appendChild(optionElement);
+            });
+
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+            answered = false;
+
+            // Update progress
+            const progress = ((currentQuestion) / questions.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Animation
+            const card = document.getElementById('question-card');
+            card.classList.remove('show');
+            setTimeout(() => card.classList.add('show'), 100);
+        }
+
+        function selectOption(selectedIndex) {
+            if (answered) return;
+            
+            answered = true;
+            const question = questions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            const feedback = document.getElementById('feedback');
+            
+            options.forEach((option, index) => {
+                if (index === selectedIndex) {
+                    option.classList.add('selected');
+                }
+                if (question.options[index].correct) {
+                    option.classList.add('correct');
+                } else if (index === selectedIndex && !question.options[index].correct) {
+                    option.classList.add('incorrect');
+                }
+                option.style.pointerEvents = 'none';
+            });
+
+            if (question.options[selectedIndex].correct) {
+                score++;
+                feedback.className = 'feedback correct';
+                feedback.textContent = question.feedback.correct;
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = question.feedback.incorrect;
+            }
+
+            document.getElementById('next-btn').style.display = 'inline-block';
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('final-score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            let emoji = '';
+            
+            if (percentage >= 95) {
+                message = "🏆 ACCELERATION GENIUS! You've mastered the mysteries of motion! Ready for advanced physics! 🚀⚡";
+                emoji = "🌟🎯🚀";
+            } else if (percentage >= 85) {
+                message = "🌟 PHYSICS SUPERSTAR! You understand acceleration like a true scientist! Amazing work! 📊✨";
+                emoji = "🎯�";
+            } else if (percentage >= 75) {
+                message = "� ACCELERATION EXPERT! You've got solid physics knowledge! Keep exploring! 🚗💨";
+                emoji = "📈🎯";
+            } else if (percentage >= 65) {
+                message = "� MOTION DETECTIVE! Good understanding! A bit more practice and you'll be a pro! 🕵️‍♀️";
+                emoji = "🤔💡";
+            } else if (percentage >= 50) {
+                message = "📚 PHYSICS STUDENT! You're on the right track! Review the concepts and try again! 📖";
+                emoji = "🤔📊";
+            } else {
+                message = "💪 FUTURE PHYSICIST! Keep studying! Every expert was once a beginner! You've got this! 🌟";
+                emoji = "📖💪";
+            }
+            
+            document.getElementById('score-message').innerHTML = `${emoji}<br><br>${message}`;
+            
+            // Update progress to 100%
+            document.getElementById('progress').style.width = '100%';
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('intro-section').style.display = 'block';
+            document.getElementById('progress').style.width = '0%';
+        }
+
+        // Initialize quiz with intro
+        // Don't auto-start, let user click to begin
+    </script>
+</body>
+</html>
