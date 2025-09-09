@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Force Master Academy 🏋️‍♂️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: backgroundShift 15s ease-in-out infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%); }
+            50% { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .quiz-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,107,107,0.1) 0%, transparent 70%);
+            animation: rotate 25s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #34495e;
+            margin-bottom: 25px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .formula-display {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4); }
+            to { box-shadow: 0 10px 30px rgba(102, 126, 234, 0.8); }
+        }
+
+        .progress-bar {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+            height: 12px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress {
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+            width: 0%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .question-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 4px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            z-index: -1;
+        }
+
+        .question-card.show {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .question-number {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .question-text {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        .scenario {
+            background: linear-gradient(135deg, #fff, #f8f9fa);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #4ecdc4;
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+            font-size: 1.1em;
+            line-height: 1.8;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .calculation-box {
+            background: linear-gradient(135deg, #fef7e0, #fcd34d);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #f59e0b;
+            font-family: 'Courier New', monospace;
+            color: #92400e;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .options {
+            display: grid;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .option {
+            background: linear-gradient(135deg, #fff, #f8f9fa);
+            border: 4px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .option:hover::before {
+            left: 100%;
+        }
+
+        .option:hover {
+            border-color: #4ecdc4;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            color: white;
+        }
+
+        .option.selected {
+            border-color: #ff6b6b;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .option.correct {
+            border-color: #10b981;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+            animation: correctPulse 0.6s ease;
+        }
+
+        .option.incorrect {
+            border-color: #ef4444;
+            background: linear-gradient(135deg, #ef4444, #f87171);
+            color: white;
+            animation: incorrectShake 0.6s ease;
+        }
+
+        @keyframes correctPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1.05); }
+        }
+
+        @keyframes incorrectShake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .feedback {
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 1.2em;
+            display: none;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .feedback.correct {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            color: #065f46;
+            border-left: 6px solid #10b981;
+            display: block;
+            animation: slideInUp 0.5s ease;
+        }
+
+        .feedback.incorrect {
+            background: linear-gradient(135deg, #fee2e2, #fca5a5);
+            color: #7f1d1d;
+            border-left: 6px solid #ef4444;
+            display: block;
+            animation: slideInUp 0.5s ease;
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            display: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .next-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+        }
+
+        .score-container {
+            display: none;
+            text-align: center;
+            animation: fadeInScale 0.8s ease;
+        }
+
+        @keyframes fadeInScale {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .score {
+            font-size: 3.5em;
+            margin: 25px 0;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .restart-btn {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .restart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #34d399, #6ee7b7);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .intro-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .intro-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 6px solid #10b981;
+            color: #2c3e50;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .tip-box strong {
+            color: #10b981;
+            font-size: 1.1em;
+        }
+
+        .emoji-large {
+            font-size: 2.5em;
+            margin: 0 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 25px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .question-text {
+                font-size: 1.3em;
+            }
+            
+            .option {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="content">
+            <h1>⚡ Force Master Academy 🏋️‍♂️</h1>
+            <p class="subtitle">Unlock the secrets of Force = Mass × Acceleration! 🚀</p>
+            
+            <div class="formula-display pulse">
+                🧮 F = m × a ⚡
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="intro-section" id="intro-section">
+                <h3>🎓 Welcome to Force Physics Lab! ⚗️</h3>
+                <p>Ready to master one of physics' most important equations? You'll calculate forces, analyze real-world scenarios, and become a force expert! 💪✨</p>
+                <div class="tip-box">
+                    <strong>💡 Key Formula:</strong> Force (N) = Mass (kg) × Acceleration (m/s²)<br>
+                    <strong>🔥 Remember:</strong> More mass OR more acceleration = MORE FORCE!
+                </div>
+                <button class="next-btn" onclick="startQuiz()" style="display: inline-block;">Begin Force Training! ⚡</button>
+            </div>
+
+            <div id="quiz-content" class="hidden">
+                <div class="question-card" id="question-card">
+                    <div class="question-number" id="question-number">Question 1 of 20</div>
+                    <div class="question-text" id="question-text"></div>
+                    <div class="scenario" id="scenario"></div>
+                    <div class="calculation-box" id="calculation-box" style="display: none;"></div>
+                    <div class="options" id="options"></div>
+                    <div class="feedback" id="feedback"></div>
+                    <button class="next-btn" id="next-btn" onclick="nextQuestion()">Next Challenge ➡️</button>
+                </div>
+            </div>
+
+            <div class="score-container" id="score-container">
+                <h2>🎉 Force Master Complete! 🎉</h2>
+                <div class="score" id="final-score"></div>
+                <p id="score-message"></p>
+                <button class="restart-btn" onclick="restartQuiz()">Master Again 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 20 Comprehensive F = ma Questions
+        const questions = [
+            // Basic F = ma Calculations (5 questions)
+            {
+                text: "🚗 A 1,200 kg car accelerates at 3 m/s². What force does the engine provide?",
+                scenario: "Mass = 1,200 kg | Acceleration = 3 m/s² | Find: Force",
+                calculation: "F = m × a = 1,200 kg × 3 m/s² = ?",
+                options: [
+                    { text: "⚡ 3,600 N", correct: true },
+                    { text: "🔥 2,400 N", correct: false },
+                    { text: "💨 4,800 N", correct: false },
+                    { text: "🚀 1,800 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! F = 1,200 × 3 = 3,600 N. You've mastered the basic calculation! ⚡",
+                    incorrect: "❌ Remember: F = m × a = 1,200 kg × 3 m/s² = 3,600 N. Practice makes perfect! 🚗"
+                }
+            },
+            {
+                text: "🏃‍♂️ A 70 kg runner speeds up at 2.5 m/s². How much force do their legs generate?",
+                scenario: "Mass = 70 kg | Acceleration = 2.5 m/s² | Find: Force",
+                calculation: "F = m × a = 70 kg × 2.5 m/s² = ?",
+                options: [
+                    { text: "💪 175 N", correct: true },
+                    { text: "🏃‍♂️ 150 N", correct: false },
+                    { text: "⚡ 200 N", correct: false },
+                    { text: "🔥 125 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! F = 70 × 2.5 = 175 N. That's some serious leg power! 💪",
+                    incorrect: "❌ Check your math: F = m × a = 70 kg × 2.5 m/s² = 175 N. Keep calculating! 🏃‍♂️"
+                }
+            },
+            {
+                text: "📦 A 500 N force pushes a 50 kg box. What's the box's acceleration?",
+                scenario: "Force = 500 N | Mass = 50 kg | Find: Acceleration",
+                calculation: "a = F ÷ m = 500 N ÷ 50 kg = ?",
+                options: [
+                    { text: "🚀 10 m/s²", correct: true },
+                    { text: "📦 8 m/s²", correct: false },
+                    { text: "💨 12 m/s²", correct: false },
+                    { text: "⚡ 25 m/s²", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Brilliant! a = F ÷ m = 500 ÷ 50 = 10 m/s². Perfect rearrangement! 🚀",
+                    incorrect: "❌ Rearrange the formula: a = F ÷ m = 500 N ÷ 50 kg = 10 m/s². Try again! 📦"
+                }
+            },
+            {
+                text: "🛩️ An airplane with 8,000 N thrust accelerates at 4 m/s². What's its mass?",
+                scenario: "Force = 8,000 N | Acceleration = 4 m/s² | Find: Mass",
+                calculation: "m = F ÷ a = 8,000 N ÷ 4 m/s² = ?",
+                options: [
+                    { text: "✈️ 2,000 kg", correct: true },
+                    { text: "🛩️ 1,500 kg", correct: false },
+                    { text: "🚀 3,200 kg", correct: false },
+                    { text: "💨 2,500 kg", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Amazing! m = F ÷ a = 8,000 ÷ 4 = 2,000 kg. You can find any variable! ✈️",
+                    incorrect: "❌ Rearrange: m = F ÷ a = 8,000 N ÷ 4 m/s² = 2,000 kg. Keep practicing! 🛩️"
+                }
+            },
+            {
+                text: "🏋️‍♂️ A weightlifter applies 2,400 N to lift 200 kg. What's the acceleration?",
+                scenario: "Force = 2,400 N | Mass = 200 kg | Find: Acceleration",
+                calculation: "a = F ÷ m = 2,400 N ÷ 200 kg = ?",
+                options: [
+                    { text: "💪 12 m/s²", correct: true },
+                    { text: "🏋️‍♂️ 10 m/s²", correct: false },
+                    { text: "⚡ 15 m/s²", correct: false },
+                    { text: "🔥 8 m/s²", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! a = 2,400 ÷ 200 = 12 m/s². That's some serious lifting power! 💪",
+                    incorrect: "❌ Calculate: a = F ÷ m = 2,400 N ÷ 200 kg = 12 m/s². Strong work! 🏋️‍♂️"
+                }
+            },
+
+            // Real-World Applications (5 questions)
+            {
+                text: "🚂 A train (mass 100,000 kg) needs 50,000 N to maintain speed. Why isn't it accelerating?",
+                scenario: "Massive train with constant speed despite large engine force.",
+                calculation: "Force applied = 50,000 N, but acceleration = 0 m/s²",
+                options: [
+                    { text: "⚖️ Friction cancels the force", correct: true },
+                    { text: "🚂 Train is too heavy", correct: false },
+                    { text: "💨 Not enough force", correct: false },
+                    { text: "⚡ Engine is broken", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Exactly! Net force = 0 when friction equals engine force. No acceleration! ⚖️",
+                    incorrect: "❌ At constant speed, friction force = engine force, so net force = 0! 🚂"
+                }
+            },
+            {
+                text: "🚙 Two identical cars: one empty (1,000 kg), one loaded (1,500 kg). Same 3,000 N engine force. Which accelerates faster?",
+                scenario: "Car A: 1,000 kg | Car B: 1,500 kg | Both: 3,000 N force",
+                calculation: "Car A: a = 3,000/1,000 = 3 m/s² | Car B: a = 3,000/1,500 = 2 m/s²",
+                options: [
+                    { text: "🏎️ Empty car (less mass)", correct: true },
+                    { text: "🚛 Loaded car (more mass)", correct: false },
+                    { text: "⚖️ Same acceleration", correct: false },
+                    { text: "🤔 Need more info", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! Less mass = more acceleration with same force. Empty car wins! 🏎️",
+                    incorrect: "❌ Same force ÷ less mass = more acceleration. Empty car accelerates faster! 🚙"
+                }
+            },
+            {
+                text: "🎢 At the bottom of a roller coaster loop, you feel 3× heavier. If you're 60 kg, what's the force on you?",
+                scenario: "Normal weight = 60 kg × 10 m/s² = 600 N | Feels 3× heavier",
+                calculation: "Apparent weight = 3 × 600 N = 1,800 N total force",
+                options: [
+                    { text: "🎢 1,800 N", correct: true },
+                    { text: "⚡ 1,200 N", correct: false },
+                    { text: "💨 600 N", correct: false },
+                    { text: "🔥 2,400 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! 3× heavier means 3 × 600 N = 1,800 N total force! 🎢",
+                    incorrect: "❌ If you feel 3× heavier: 3 × (60 kg × 10 m/s²) = 1,800 N! 🎢"
+                }
+            },
+            {
+                text: "🚀 A rocket (mass 1,000 kg) needs to overcome Earth's gravity (10 m/s²) plus accelerate upward at 5 m/s². What thrust needed?",
+                scenario: "Must overcome gravity: 1,000 kg × 10 m/s² = 10,000 N | Plus accelerate: 1,000 kg × 5 m/s² = 5,000 N",
+                calculation: "Total thrust = 10,000 N + 5,000 N = 15,000 N",
+                options: [
+                    { text: "🚀 15,000 N", correct: true },
+                    { text: "⚡ 10,000 N", correct: false },
+                    { text: "🔥 5,000 N", correct: false },
+                    { text: "💨 20,000 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Brilliant! Must overcome gravity (10,000 N) PLUS add acceleration (5,000 N) = 15,000 N! 🚀",
+                    incorrect: "❌ Need force for gravity (10,000 N) PLUS acceleration (5,000 N) = 15,000 N total! 🚀"
+                }
+            },
+            {
+                text: "🏀 A basketball (0.6 kg) is thrown with 30 N force. Air resistance provides 6 N backward. Net acceleration?",
+                scenario: "Applied force = 30 N forward | Air resistance = 6 N backward | Mass = 0.6 kg",
+                calculation: "Net force = 30 N - 6 N = 24 N | a = 24 N ÷ 0.6 kg = 40 m/s²",
+                options: [
+                    { text: "🏀 40 m/s²", correct: true },
+                    { text: "⚡ 50 m/s²", correct: false },
+                    { text: "💨 35 m/s²", correct: false },
+                    { text: "🔥 45 m/s²", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! Net force = 30-6 = 24 N, then a = 24÷0.6 = 40 m/s²! 🏀",
+                    incorrect: "❌ Net force = 30 N - 6 N = 24 N, then a = 24 N ÷ 0.6 kg = 40 m/s²! 🏀"
+                }
+            },
+
+            // Compare and Contrast (5 questions)
+            {
+                text: "⚖️ Which needs more force: accelerating 100 kg at 5 m/s² OR 200 kg at 2 m/s²?",
+                scenario: "Option A: 100 kg × 5 m/s² | Option B: 200 kg × 2 m/s²",
+                calculation: "A: F = 100 × 5 = 500 N | B: F = 200 × 2 = 400 N",
+                options: [
+                    { text: "🔥 100 kg at 5 m/s² (500 N)", correct: true },
+                    { text: "⚡ 200 kg at 2 m/s² (400 N)", correct: false },
+                    { text: "⚖️ Both need same force", correct: false },
+                    { text: "🤔 Cannot determine", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! 500 N > 400 N. Higher acceleration beats higher mass here! 🔥",
+                    incorrect: "❌ Calculate both: 100×5 = 500 N vs 200×2 = 400 N. First one wins! ⚖️"
+                }
+            },
+            {
+                text: "🚗💨 Sports car (800 kg) vs Truck (3,200 kg). Both accelerate at 4 m/s². Force ratio?",
+                scenario: "Car: 800 kg × 4 m/s² | Truck: 3,200 kg × 4 m/s²",
+                calculation: "Car: 3,200 N | Truck: 12,800 N | Ratio = 12,800 ÷ 3,200 = 4:1",
+                options: [
+                    { text: "🚛 Truck needs 4× more force", correct: true },
+                    { text: "🚗 Car needs 4× more force", correct: false },
+                    { text: "⚖️ Same force needed", correct: false },
+                    { text: "💨 Truck needs 2× more force", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Truck is 4× heavier, so needs 4× more force for same acceleration! 🚛",
+                    incorrect: "❌ Truck mass is 4× bigger (3,200 vs 800), so needs 4× more force! 🚗💨"
+                }
+            },
+            {
+                text: "🏃‍♂️🚶‍♀️ Runner (60 kg, 3 m/s²) vs Walker (80 kg, 1 m/s²). Who needs more leg force?",
+                scenario: "Runner: 60 kg × 3 m/s² | Walker: 80 kg × 1 m/s²",
+                calculation: "Runner: 180 N | Walker: 80 N",
+                options: [
+                    { text: "🏃‍♂️ Runner needs more (180 N)", correct: true },
+                    { text: "🚶‍♀️ Walker needs more (80 N)", correct: false },
+                    { text: "⚖️ Both need same force", correct: false },
+                    { text: "💨 Cannot compare", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Correct! Runner: 60×3 = 180 N vs Walker: 80×1 = 80 N. Running takes more force! 🏃‍♂️",
+                    incorrect: "❌ Calculate: Runner 60×3 = 180 N, Walker 80×1 = 80 N. Runner wins! 🏃‍♂️"
+                }
+            },
+            {
+                text: "🛸📡 Satellite (1,000 kg) orbiting vs Rocket (1,000 kg) launching. Same mass, different scenarios!",
+                scenario: "Satellite: Circular orbit, constant speed | Rocket: Accelerating upward at 8 m/s²",
+                calculation: "Satellite: No net force (constant velocity) | Rocket: F = 1,000 × 8 = 8,000 N",
+                options: [
+                    { text: "🚀 Rocket needs more force", correct: true },
+                    { text: "🛸 Satellite needs more force", correct: false },
+                    { text: "⚖️ Both need same force", correct: false },
+                    { text: "📡 Satellite needs no force", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! Satellite has constant velocity (no acceleration, no net force), rocket accelerates! 🚀",
+                    incorrect: "❌ Satellite orbits at constant speed (no net force), rocket accelerates upward! 🛸"
+                }
+            },
+            {
+                text: "🎯 Archer shoots two arrows: Light (50g, 100 m/s²) vs Heavy (100g, 60 m/s²). Which needs more force?",
+                scenario: "Light arrow: 0.05 kg × 100 m/s² | Heavy arrow: 0.1 kg × 60 m/s²",
+                calculation: "Light: 5 N | Heavy: 6 N",
+                options: [
+                    { text: "🏹 Heavy arrow (6 N)", correct: true },
+                    { text: "💨 Light arrow (5 N)", correct: false },
+                    { text: "⚖️ Both same force", correct: false },
+                    { text: "🎯 Cannot determine", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! Heavy: 0.1×60 = 6 N vs Light: 0.05×100 = 5 N. Mass wins this time! 🏹",
+                    incorrect: "❌ Light: 0.05×100 = 5 N, Heavy: 0.1×60 = 6 N. Heavy arrow needs more! 🎯"
+                }
+            },
+
+            // Advanced Problem Solving (5 questions)
+            {
+                text: "🛗 Elevator (total 800 kg) accelerates upward at 2 m/s². What's the cable tension?",
+                scenario: "Must overcome gravity: 800 kg × 10 m/s² = 8,000 N | Plus accelerate: 800 kg × 2 m/s² = 1,600 N",
+                calculation: "Total tension = Weight + ma = 8,000 N + 1,600 N = 9,600 N",
+                options: [
+                    { text: "🛗 9,600 N", correct: true },
+                    { text: "⚡ 8,000 N", correct: false },
+                    { text: "💨 1,600 N", correct: false },
+                    { text: "🔥 7,200 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Tension = Weight + Force for acceleration = 8,000 + 1,600 = 9,600 N! 🛗",
+                    incorrect: "❌ Need weight (8,000 N) PLUS acceleration force (1,600 N) = 9,600 N total! 🛗"
+                }
+            },
+            {
+                text: "🚗⛔ Car brakes: 1,500 kg car stops from 20 m/s to 0 in 4 seconds. What braking force?",
+                scenario: "Initial velocity = 20 m/s | Final velocity = 0 m/s | Time = 4 s | Mass = 1,500 kg",
+                calculation: "a = (0-20)/4 = -5 m/s² | F = 1,500 × (-5) = -7,500 N",
+                options: [
+                    { text: "🛑 7,500 N backward", correct: true },
+                    { text: "⚡ 5,000 N backward", correct: false },
+                    { text: "💨 10,000 N backward", correct: false },
+                    { text: "🔥 3,000 N backward", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Excellent! a = -5 m/s², so F = 1,500 × 5 = 7,500 N braking force! 🛑",
+                    incorrect: "❌ Deceleration = 20÷4 = 5 m/s², so F = 1,500 × 5 = 7,500 N! 🚗"
+                }
+            },
+            {
+                text: "🎪 Circus performer (60 kg) swings on trapeze. At bottom, feels 2.5× normal weight. What's the total force?",
+                scenario: "Normal weight = 60 kg × 10 m/s² = 600 N | Feels 2.5× heavier",
+                calculation: "Total force = 2.5 × 600 N = 1,500 N",
+                options: [
+                    { text: "🎪 1,500 N", correct: true },
+                    { text: "⚡ 1,200 N", correct: false },
+                    { text: "💨 900 N", correct: false },
+                    { text: "🔥 600 N", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! 2.5 × normal weight = 2.5 × 600 N = 1,500 N centripetal force! 🎪",
+                    incorrect: "❌ Feels 2.5× heavier: 2.5 × (60 × 10) = 1,500 N total force! 🎪"
+                }
+            },
+            {
+                text: "🚁 Helicopter (2,000 kg) hovers, then accelerates up at 3 m/s². How much extra rotor force needed?",
+                scenario: "Hovering force = 2,000 kg × 10 m/s² = 20,000 N | Additional for acceleration = 2,000 kg × 3 m/s² = 6,000 N",
+                calculation: "Extra force needed = 6,000 N (beyond hovering)",
+                options: [
+                    { text: "🚁 6,000 N extra", correct: true },
+                    { text: "⚡ 20,000 N extra", correct: false },
+                    { text: "💨 26,000 N extra", correct: false },
+                    { text: "🔥 3,000 N extra", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Right! Already hovering at 20,000 N, need extra 6,000 N for acceleration! 🚁",
+                    incorrect: "❌ Already countering gravity, just need extra F = ma = 2,000 × 3 = 6,000 N! 🚁"
+                }
+            },
+            {
+                text: "🏂 Snowboarder (75 kg) slides down slope. Gravity component = 400 N, friction = 100 N. Net acceleration?",
+                scenario: "Down-slope gravity = 400 N | Up-slope friction = 100 N | Mass = 75 kg",
+                calculation: "Net force = 400 - 100 = 300 N | a = 300 ÷ 75 = 4 m/s²",
+                options: [
+                    { text: "🏂 4 m/s²", correct: true },
+                    { text: "⚡ 5.3 m/s²", correct: false },
+                    { text: "💨 3 m/s²", correct: false },
+                    { text: "🔥 6 m/s²", correct: false }
+                ],
+                feedback: {
+                    correct: "🎯 Perfect! Net force = 400-100 = 300 N, so a = 300÷75 = 4 m/s²! 🏂",
+                    incorrect: "❌ Net force = 400 N - 100 N = 300 N, then a = 300÷75 = 4 m/s²! 🏂"
+                }
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        // Fun physics facts that appear randomly
+        const physicsFacts = [
+            "🚀 The Saturn V rocket generated 34 million Newtons of force!",
+            "🏃‍♂️ When you run, each step can generate 3× your body weight in force!",
+            "🌍 Earth pulls you down with about 10 N per kilogram of your mass!",
+            "🚗 A car airbag inflates with thousands of Newtons in milliseconds!",
+            "⚡ Lightning strikes with forces up to 200,000 Newtons!",
+            "🦘 Kangaroos can generate 40× their body weight in jumping force!",
+            "🏀 Professional basketball players can jump with 2,000+ N of force!"
+        ];
+
+        function showRandomFact() {
+            if (Math.random() < 0.3) { // 30% chance
+                const fact = physicsFacts[Math.floor(Math.random() * physicsFacts.length)];
+                const factDisplay = document.createElement('div');
+                factDisplay.className = 'tip-box';
+                factDisplay.innerHTML = `<strong>🤓 Fun Physics Fact:</strong> ${fact}`;
+                factDisplay.style.animation = 'slideInUp 0.5s ease';
+                
+                const card = document.getElementById('question-card');
+                card.appendChild(factDisplay);
+                
+                setTimeout(() => factDisplay.remove(), 4000);
+            }
+        }
+
+        function startQuiz() {
+            document.getElementById('intro-section').style.display = 'none';
+            document.getElementById('quiz-content').classList.remove('hidden');
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('question-number').textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+            document.getElementById('question-text').textContent = question.text;
+            document.getElementById('scenario').textContent = question.scenario;
+            
+            // Show calculation box if present
+            const calculationBox = document.getElementById('calculation-box');
+            if (question.calculation) {
+                calculationBox.textContent = question.calculation;
+                calculationBox.style.display = 'block';
+            } else {
+                calculationBox.style.display = 'none';
+            }
+            
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option';
+                optionElement.textContent = option.text;
+                optionElement.onclick = () => selectOption(index);
+                optionsContainer.appendChild(optionElement);
+            });
+
+            document.getElementById('feedback').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+            answered = false;
+
+            // Update progress
+            const progress = ((currentQuestion) / questions.length) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Animation
+            const card = document.getElementById('question-card');
+            card.classList.remove('show');
+            setTimeout(() => card.classList.add('show'), 200);
+        }
+
+        function selectOption(selectedIndex) {
+            if (answered) return;
+            
+            answered = true;
+            const question = questions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+            const feedback = document.getElementById('feedback');
+            
+            // Add selection and correctness styling
+            options.forEach((option, index) => {
+                if (index === selectedIndex) {
+                    option.classList.add('selected');
+                }
+                if (question.options[index].correct) {
+                    option.classList.add('correct');
+                } else if (index === selectedIndex && !question.options[index].correct) {
+                    option.classList.add('incorrect');
+                }
+                option.style.pointerEvents = 'none';
+            });
+
+            // Show feedback with animation delay
+            setTimeout(() => {
+                if (question.options[selectedIndex].correct) {
+                    score++;
+                    feedback.className = 'feedback correct';
+                    feedback.textContent = question.feedback.correct;
+                } else {
+                    feedback.className = 'feedback incorrect';
+                    feedback.textContent = question.feedback.incorrect;
+                }
+                
+                document.getElementById('next-btn').style.display = 'inline-block';
+            }, 600);
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                displayQuestion();
+                // Occasionally show a fun physics fact
+                setTimeout(showRandomFact, 1000);
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            
+            const percentage = Math.round((score / questions.length) * 100);
+            document.getElementById('final-score').textContent = `${score}/${questions.length} (${percentage}%)`;
+            
+            let message = '';
+            let emoji = '';
+            
+            if (percentage >= 95) {
+                message = "🏆 FORCE PHYSICS GENIUS! You've unlocked the secrets of F = ma! Newton would be proud! 🚀⚡";
+                emoji = "🎓🔬⚡";
+            } else if (percentage >= 85) {
+                message = "🌟 FORCE MASTER! Outstanding physics knowledge! You understand force like a true scientist! 💪🧮";
+                emoji = "🎯🏆";
+            } else if (percentage >= 75) {
+                message = "🚀 PHYSICS EXPERT! Excellent work! You've mastered most force concepts! Keep calculating! 📊✨";
+                emoji = "💪🎯";
+            } else if (percentage >= 65) {
+                message = "⚡ FORCE DETECTIVE! Good understanding! A bit more practice with F = ma and you'll be unstoppable! 🔍";
+                emoji = "🤔💡";
+            } else if (percentage >= 50) {
+                message = "📚 PHYSICS STUDENT! You're learning well! Review the formula and try again! F = ma awaits! 🧮";
+                emoji = "📖⚡";
+            } else {
+                message = "💪 FUTURE FORCE EXPERT! Every physicist started here! Keep studying F = ma - you've got this! 🌟";
+                emoji = "📚🚀";
+            }
+            
+            document.getElementById('score-message').innerHTML = `${emoji}<br><br>${message}`;
+            
+            // Update progress to 100%
+            document.getElementById('progress').style.width = '100%';
+            
+            // Add celebratory animation
+            setTimeout(() => {
+                document.querySelector('.score').classList.add('pulse');
+            }, 500);
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('intro-section').style.display = 'block';
+            document.getElementById('progress').style.width = '0%';
+        }
+
+        // Initialize with intro screen
+        console.log("🎉 ALL MILESTONES COMPLETE! Force Master Academy is ready! ⚡");
+    </script>
+</body>
+</html>
