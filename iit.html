@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Wants to Be a Genius - Knowledge Quiz for Kids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .game-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 25px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .question-area {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .prize-ladder {
+            background: rgb(0, 0, 0);
+            border-radius: 20px;
+            padding: 25px;
+            color: white;
+            height: fit-content;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timer-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .timer {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #e74c3c;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 3px solid #e74c3c;
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.2);
+            letter-spacing: 0.1em;
+        }
+
+        .timer.warning {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+            border-radius: 10px;
+            transition: width 1s linear;
+        }
+
+        .difficulty-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .easy { background: #2ecc71; color: white; }
+        .medium { background: #f39c12; color: white; }
+        .jee-main { background: #e74c3c; color: white; }
+        .jee-advanced { background: #8e44ad; color: white; }
+
+        .question-number {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .option {
+            background: #f8f9fa;
+            border: 3px solid #dee2e6;
+            border-radius: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: #007bff;
+        }
+
+        .option.selected {
+            background: #007bff;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .option.correct {
+            background: #28a745;
+            color: white;
+            border-color: #1e7e34;
+        }
+
+        .option.incorrect {
+            background: #dc3545;
+            color: white;
+            border-color: #c82333;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .controls {
+            text-align: center;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .ladder-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 3px 0;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .ladder-item.current {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            font-weight: bold;
+            transform: scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255,215,0,0.5);
+        }
+
+        .ladder-item.completed {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border-color: #28a745;
+        }
+
+        .ladder-item.locked {
+            opacity: 0.7;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .ladder-number {
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-weight: bold;
+            min-width: 25px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .ladder-item.current .ladder-number {
+            background: #000;
+            color: #ffd700;
+        }
+
+        .ladder-item.completed .ladder-number {
+            background: rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        .ladder-college {
+            flex: 1;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .explanation {
+            background: #e8f4fd;
+            border: 2px solid #007bff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        .explanation h4 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .explanation p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .final-score {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .final-score.show {
+            display: block;
+        }
+
+        .congratulations {
+            font-size: 2rem;
+            color: #28a745;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .start-screen {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .start-screen h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .start-screen p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .game-board {
+                grid-template-columns: 1fr;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="main-title">🎯 Who Wants to Be a Genius? 🏆</h1>
+            <p class="subtitle">📚 Knowledge Mastery Challenge ⚡️</p>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h2>🚀 Welcome to the Ultimate Knowledge Quiz! 🌟</h2>
+            <p>🧠 Test your knowledge with 12 fun and challenging questions! Each question has a 3-minute timer ⏰. Answer correctly to climb the amazing achievement ladder from curious explorer to scientist! 🎓</p>
+            <button class="btn" onclick="startGame()">🎯 Start Your Journey to Genius 🚀</button>
+        </div>
+
+        <div class="game-board" id="gameBoard" style="display: none;">
+            <div class="question-area">
+                <div class="timer-container">
+                    <div class="timer" id="timer">3:00</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="difficulty-badge" id="difficultyBadge">Easy</div>
+                <div class="question-number" id="questionNumber">Question 1 of 12</div>
+                <div class="question-text" id="questionText"></div>
+
+                <div class="options-grid" id="optionsGrid">
+                    <div class="option" onclick="selectOption(0)">
+                        <span class="option-label">A)</span>
+                        <span id="optionA"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(1)">
+                        <span class="option-label">B)</span>
+                        <span id="optionB"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(2)">
+                        <span class="option-label">C)</span>
+                        <span id="optionC"></span>
+                    </div>
+                    <div class="option" onclick="selectOption(3)">
+                        <span class="option-label">D)</span>
+                        <span id="optionD"></span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn" id="submitBtn" onclick="submitAnswer()" disabled>🔒 Lock In Answer</button>
+                    <button class="btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">➡️ Next Question</button>
+                </div>
+
+                <div class="explanation" id="explanation">
+                    <h4>💡 Explanation</h4>
+                    <div id="explanationText"></div>
+                </div>
+            </div>
+
+            <div class="prize-ladder">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #ffd700;">🎓 Achievement Ladder 🏆</h3>
+                <div id="ladderItems"></div>
+            </div>
+        </div>
+
+        <div class="final-score" id="finalScore">
+            <div class="congratulations" id="finalMessage"></div>
+            <p id="finalDetails"></p>
+            <button class="btn" onclick="restartGame()">🔄 Play Again</button>
+        </div>
+    </div>
+
+    <script>
+        const colleges = [
+            "🔍 Curious Explorer",
+            "📖 Knowledge Seeker",
+            "🌱 Bright Learner",
+            "💎 Smart Student",
+            "🧠 Clever Thinker",
+            "🎯 Problem Solver",
+            "🚀 Super Learner",
+            "⭐ Knowledge Master",
+            "❄️ Brilliant Mind",
+            "🏆 Genius Kid",
+            "👑 Super Genius",
+            "🌟 Young Scientist"
+        ];
+
+        const questions = [
+		{
+        question: "🚗💨 Imagine you're pushing a shopping cart! When will you need MORE muscle power?",
+        options: ["When it's empty (just the cart)", "When it's loaded with heavy groceries", "When it has colorful decorations", "When you're wearing your favorite shoes"],
+        correct: 1,
+        difficulty: "easy",
+        explanation: "🎯 CORRECT! Heavier objects need more force to move! This is Newton's Second Law: F = ma. More mass (m) = more force (F) needed! It's like trying to push a feather vs a bowling ball! 💪"
+    },
+    {
+        question: "🎈⬆️ You let go of a helium balloon. What happens to it?",
+        options: ["It falls DOWN to the ground", "It floats UP to the ceiling", "It moves LEFT sideways", "It moves RIGHT sideways"],
+        correct: 1,
+        difficulty: "easy",
+        explanation: "🎈 CORRECT! The helium balloon floats UP because helium is lighter than air! The upward force is stronger than gravity pulling it down! 🌟"
+    },
+    {
+        question: "�🎢 You're skateboarding down a smooth hill with NO friction. What happens next?",
+        options: ["You stop because you get tired", "You keep rolling FOREVER unless something stops you!", "You automatically turn purple", "You disappear into thin air"],
+        correct: 1,
+        difficulty: "easy",
+        explanation: "🤯 INCREDIBLE! This is Newton's First Law - the 'Lazy Law'! Moving objects want to keep moving unless a force stops them. You'd roll forever like a space skateboard! 🛸"
+    },
+    {
+        question: "📦🧮 Super Strength Challenge! You push a 2 kg mystery box with 10 N of force. How fast does it speed up? (F = ma)",
+        options: ["20 m/s² (SUPER FAST!)", "5 m/s² (Pretty Quick!)", "12 m/s² (Lightning Speed!)", "8 m/s² (Zoom Zoom!)"],
+        correct: 1,
+        difficulty: "medium",
+        explanation: "🎉 BRILLIANT! Using F = ma: 10 N = 2 kg × a, so a = 10 ÷ 2 = 5 m/s²! You're getting faster every second! Math + Physics = POWER! 💥"
+    },
+    {
+        question: "🚴‍♀️� Cycling Champion Challenge! Your 20 kg super-bike speeds up at 3 m/s². What's your pedal power force?",
+        options: ["60 N (Hercules Level!)", "23 N (Pretty Strong!)", "17 N (Not Bad!)", "6.7 N (Gentle Push!)"],
+        correct: 0,
+        difficulty: "medium",
+        explanation: "🚀 PHENOMENAL! F = ma = 20 kg × 3 m/s² = 60 N! You're pedaling with the strength of 60 Newtons! That's like lifting 6 kg constantly! 🦾"
+    },
+    {
+        question: "📚⚡ Magic Book Trick! A 5 N book sits perfectly still on your desk. What invisible force is the table secretly using?",
+        options: ["0 N (No force needed)", "10 N pushing UP (Double power!)", "5 N pushing UP (Perfect balance!)", "5 N pushing DOWN (Helping gravity!)"],
+        correct: 2,
+        difficulty: "medium",
+        explanation: "🎭 MAGICAL! The table pushes UP with exactly 5 N to balance gravity's 5 N downward pull! Perfect teamwork = no movement! It's like an invisible tug-of-war! ⚖️"
+    },
+    {
+        question: "🪢⚔️ Epic Tug-of-War Battle! Team East pulls with 30 N, Team West pulls with 20 N. Who wins and by how much?",
+        options: ["Teams combine: 50 N East", "Team East wins: 10 N East", "Teams combine: 50 N West", "Team West wins: 10 N West"],
+        correct: 1,
+        difficulty: "medium",
+        explanation: "🏆 VICTORY! Team East wins! Net force = 30 N - 20 N = 10 N toward East! In opposite force battles, subtract to find the winner! East team celebrates! 🎉"
+    },
+    {
+        question: "🏃‍♂️💥 Superhero Training! A 50 kg hero experiences 200 N of force. What's their super-acceleration?",
+        options: ["250 m/s² (Teleport Speed!)", "4 m/s² (Super Human!)", "10,000 m/s² (Impossible!)", "0.25 m/s² (Snail Speed!)"],
+        correct: 1,
+        difficulty: "jee-main",
+        explanation: "💫 SUPER CALCULATION! a = F/m = 200 N ÷ 50 kg = 4 m/s²! That's 4 meters per second faster EVERY SECOND! True superhero physics! 🦸‍♂️"
+    },
+    {
+        question: "🎯🏹 Arrow Shooting! You push an arrow with 12 N forward and 5 N sideways at the same time. What's stronger - forward or sideways push?",
+        options: ["Sideways push (5 N)", "Forward push (12 N)", "They're equal", "Neither has any force"],
+        correct: 1,
+        difficulty: "jee-main",
+        explanation: "🎯 SMART ARCHER! 12 N forward is stronger than 5 N sideways! When forces go in different directions, compare their sizes. Forward wins! 🏹"
+    },
+    {
+        question: "🧭⚔️ Four-Way Force Battle! 10 N North, 3 N East, 10 N South, 3 N West. What happens to the object?",
+        options: ["Moves North fast", "Moves East fast", "Stays perfectly still", "Spins in circles"],
+        correct: 2,
+        difficulty: "jee-main",
+        explanation: "⚖️ PERFECT BALANCE! North (10 N) cancels South (10 N), and East (3 N) cancels West (3 N). All forces balance out = no movement! Like a tug-of-war tie! 🤝"
+    },
+    {
+        question: "🏎️� Race Car Physics! A 1000 kg car zooms from 0 to 20 m/s in just 5 seconds. What engine force does this need? (ignore friction)",
+        options: ["4000 N (Beast Mode!)", "4 N (Weak Sauce)", "100,000 N (Rocket Ship!)", "25 N (Bicycle Power)"],
+        correct: 0,
+        difficulty: "jee-advanced",
+        explanation: "🏁 SPEED DEMON! First: a = (20-0)÷5 = 4 m/s². Then: F = ma = 1000 × 4 = 4000 N! That's like 400 kg pushing constantly! TURBO POWER! 🔥"
+    },
+    {
+        question: "🪢🎪 Circus Challenge! Two strong acrobats each pull a rope to lift a 20 N weight. If they share the work equally, how much does each acrobat pull?",
+        options: ["5 N (Quarter power)", "10 N (Half power each)", "20 N (Full power each)", "40 N (Double power)"],
+        correct: 1,
+        difficulty: "jee-advanced",
+        explanation: "🎪 CIRCUS MATH! When two people share lifting 20 N equally, each person lifts 20 ÷ 2 = 10 N! Teamwork makes the dream work! Perfect sharing! 🤹‍♂️"
+    }
+		];
+
+
+
+        let currentQuestion = 0;
+        let selectedOption = -1;
+        let score = 0;
+        let timeLeft = 180;
+        let timer;
+        let gameStarted = false;
+
+        function startGame() {
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('gameBoard').style.display = 'grid';
+            gameStarted = true;
+            currentQuestion = 0;
+            score = 0;
+            setupLadder();
+            showQuestion();
+        }
+
+        function setupLadder() {
+            const ladderItems = document.getElementById('ladderItems');
+            ladderItems.innerHTML = '';
+
+            for (let i = colleges.length - 1; i >= 0; i--) {
+                const item = document.createElement('div');
+                item.className = 'ladder-item locked';
+                item.innerHTML = `
+                    <div class="ladder-number">${i + 1}</div>
+                    <div class="ladder-college">${colleges[i]}</div>
+                `;
+                item.id = `ladder-${i}`;
+                ladderItems.appendChild(item);
+            }
+        }
+
+        function showQuestion() {
+            if (currentQuestion >= questions.length) {
+                endGame();
+                return;
+            }
+
+            const q = questions[currentQuestion];
+
+            // Update ladder
+            updateLadder();
+
+            // Reset UI state
+            selectedOption = -1;
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('submitBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('explanation').classList.remove('show');
+
+            // Update question display
+            document.getElementById('questionNumber').textContent = `Question ${currentQuestion + 1} of 12`;
+            document.getElementById('questionText').textContent = q.question;
+            document.getElementById('difficultyBadge').textContent = getDifficultyLabel(q.difficulty);
+            document.getElementById('difficultyBadge').className = `difficulty-badge ${q.difficulty}`;
+
+            // Update options
+            const optionElements = ['optionA', 'optionB', 'optionC', 'optionD'];
+            const options = document.querySelectorAll('.option');
+
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(optionElements[i]).textContent = q.options[i];
+                options[i].className = 'option';
+                options[i].style.pointerEvents = 'auto'; // Re-enable clicking
+            }
+
+            // Start timer
+            startTimer();
+        }
+
+        function getDifficultyLabel(difficulty) {
+            switch(difficulty) {
+                case 'easy': return 'Easy';
+                case 'medium': return 'Medium';
+                case 'jee-main': return 'JEE Main';
+                case 'jee-advanced': return 'JEE Advanced';
+                default: return 'Unknown';
+            }
+        }
+
+        function updateLadder() {
+            for (let i = 0; i < colleges.length; i++) {
+                const item = document.getElementById(`ladder-${i}`);
+                if (i < currentQuestion) {
+                    item.className = 'ladder-item completed';
+                } else if (i === currentQuestion) {
+                    item.className = 'ladder-item current';
+                } else {
+                    item.className = 'ladder-item locked';
+                }
+            }
+        }
+
+        function startTimer() {
+            timeLeft = 180;
+            updateTimerDisplay();
+
+            timer = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+
+                if (timeLeft <= 30) {
+                    document.getElementById('timer').classList.add('warning');
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    timeUp();
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+            const progress = (180 - timeLeft) / 180 * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function selectOption(index) {
+            // Check if already submitted answer
+            if (document.getElementById('submitBtn').style.display === 'none') return;
+
+            selectedOption = index;
+
+            // Reset all options
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Select current option
+            options[index].classList.add('selected');
+            document.getElementById('submitBtn').disabled = false;
+        }
+
+        function submitAnswer() {
+            if (selectedOption === -1) return;
+
+            clearInterval(timer);
+            document.getElementById('timer').classList.remove('warning');
+
+            const q = questions[currentQuestion];
+            const options = document.querySelectorAll('.option');
+
+            // Disable further clicking on options
+            options.forEach(option => option.style.pointerEvents = 'none');
+
+            // Show correct/incorrect
+            options[selectedOption].classList.remove('selected');
+
+            if (selectedOption === q.correct) {
+                options[selectedOption].classList.add('correct');
+                score++;
+
+                // Show explanation
+                document.getElementById('explanationText').innerHTML = `✅ <strong>Correct!</strong> 🎉<br><br>${q.explanation.replace(/\n/g, '<br>')}`;
+                document.getElementById('explanation').classList.add('show');
+
+                // Show next button or end game if last question
+                document.getElementById('submitBtn').style.display = 'none';
+                if (currentQuestion === questions.length - 1) {
+                    document.getElementById('nextBtn').textContent = '🏆 See Final Results';
+                } else {
+                    document.getElementById('nextBtn').textContent = '🧲 Next Question';
+                }
+                document.getElementById('nextBtn').style.display = 'inline-block';
+            } else {
+                // Wrong answer - game over!
+                options[selectedOption].classList.add('incorrect');
+                options[q.correct].classList.add('correct');
+
+                // Show explanation
+                document.getElementById('explanationText').innerHTML = `❌ <strong>Wrong Answer!</strong> 😔<br><br>The correct answer was: <strong>${q.options[q.correct]}</strong> ✅<br><br>${q.explanation.replace(/\n/g, '<br>')}`;
+                document.getElementById('explanation').classList.add('show');
+
+                // End game immediately
+                document.getElementById('submitBtn').style.display = 'none';
+                setTimeout(() => {
+                    endGame();
+                }, 9000); // Show explanation for 3 seconds then end game
+            }
+        }
+
+        function timeUp() {
+            // Time up also ends the game
+            document.getElementById('explanationText').innerHTML = `⏰ <strong>Time's Up!</strong> ⌛<br><br>The correct answer was: <strong>${questions[currentQuestion].options[questions[currentQuestion].correct]}</strong> ✅<br><br>${questions[currentQuestion].explanation.replace(/\n/g, '<br>')}`;
+            document.getElementById('explanation').classList.add('show');
+
+            const options = document.querySelectorAll('.option');
+            options[questions[currentQuestion].correct].classList.add('correct');
+
+            document.getElementById('submitBtn').style.display = 'none';
+
+            // End game after timeout too
+            setTimeout(() => {
+                endGame();
+            }, 3000);
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            document.getElementById('gameBoard').style.display = 'none';
+            document.getElementById('finalScore').classList.add('show');
+
+            let message, details;
+            const finalCollege = score > 0 ? colleges[score - 1] : "No achievement unlocked";
+
+            if (score === 12) {
+                message = "🏆 INCREDIBLE! Perfect Score! 🌟";
+                details = `🎉 WOW! You answered all 12 questions correctly! You've become a ${colleges[11]}! You're super smart and really amazing! 🚀🎓`;
+            } else if (score >= 10) {
+                message = "⭐ Excellent! Super Smart! 💎";
+                details = `🔥 Amazing job! You reached question ${score + 1} and became a ${finalCollege}. You're really, really smart! 🧠✨`;
+            } else if (score >= 8) {
+                message = "🎯 Great Job! You're Brilliant! 🏅";
+                details = `👏 Well done! You reached question ${score + 1} and became a ${finalCollege}. You know so much! 💪🌟`;
+            } else if (score >= 5) {
+                message = "📈 Good Try! Keep Going! 🌟";
+                details = `👍 Nice work! You reached question ${score + 1} and became a ${finalCollege}. Keep learning and you'll get even better! 📚💡`;
+            } else if (score > 0) {
+                message = "📖 Keep Learning! 🎯";
+                details = `💪 You reached question ${score + 1} and became a ${finalCollege}. Don't give up! Practice makes perfect! 🚀📊`;
+            } else {
+                message = "📚 Try Again! 💡";
+                details = `🔄 That's okay! Everyone learns at their own pace. Read more, practice, and try again! You can do it! 📖⚡️`;
+            }
+
+            document.getElementById('finalMessage').textContent = message;
+            document.getElementById('finalDetails').textContent = details;
+        }
+
+        function restartGame() {
+            document.getElementById('finalScore').classList.remove('show');
+            document.getElementById('startScreen').style.display = 'block';
+            currentQuestion = 0;
+            selectedOption = -1;
+            score = 0;
+            gameStarted = false;
+        }
+    </script>
+</body>
+</html>
