@@ -1,8 +1,5 @@
 ---
-name:training_documen
-description: provide training material for the input html file
+name: training_document
+description: "Provide training material for the input HTML file"
 ---
-
-# My Agent
-
 
