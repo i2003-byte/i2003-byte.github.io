@@ -109,25 +109,32 @@
             transform: scale(0.95);
         }
 
-        /* Weapon Selector - Bottom */
+        /* Weapon Selector - Bottom corners layout */
         .weapon-selector {
             position: fixed;
-            bottom: max(16px, env(safe-area-inset-bottom));
+            bottom: max(8px, env(safe-area-inset-bottom));
             left: 0;
             right: 0;
             display: flex;
-            justify-content: center;
-            gap: 8px;
-            padding: 0 16px;
+            justify-content: space-between;
+            padding: 0 max(8px, env(safe-area-inset-left)) 0 max(8px, env(safe-area-inset-right));
             z-index: 900;
+            pointer-events: none;
+        }
+
+        .weapon-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            pointer-events: auto;
         }
 
         .weapon-option {
-            width: 64px;
-            height: 80px;
-            background: rgba(0,0,0,0.8);
-            border: 2px solid rgba(100,150,255,0.3);
-            border-radius: 12px;
+            width: 44px;
+            height: 52px;
+            background: rgba(0,0,0,0.9);
+            border: 2px solid rgba(100,150,255,0.4);
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -148,52 +155,48 @@
         }
 
         .weapon-icon {
-            font-size: 28px;
-            margin-bottom: 4px;
+            font-size: 18px;
+            margin-bottom: 1px;
         }
 
         .weapon-option h4 {
-            font-size: 10px;
+            font-size: 7px;
             color: #fff;
-            margin-bottom: 2px;
+            margin-bottom: 0px;
+            font-weight: 600;
         }
 
         .weapon-option span:last-child {
-            font-size: 11px;
+            font-size: 7px;
             color: #90EE90;
+            font-weight: 500;
         }
 
-        /* Fire Button */
-        .fire-button {
+        /* Fire Instruction */
+        .fire-instruction {
             position: fixed;
-            bottom: 100px;
+            bottom: max(20px, env(safe-area-inset-bottom));
             right: 20px;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            border: 4px solid #fff;
-            border-radius: 50%;
+            background: rgba(0,0,0,0.85);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
             color: #fff;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
             z-index: 950;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: transform 0.1s;
-            touch-action: manipulation;
-            user-select: none;
-        }
-
-        .fire-button:active {
-            transform: scale(0.9);
-        }
-
-        .fire-button.cooldown {
-            background: linear-gradient(135deg, #7f8c8d, #95a5a6);
             pointer-events: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .fire-instruction.hidden {
+            display: none;
         }
 
         /* Virtual Joystick */
@@ -292,8 +295,9 @@
             background: rgba(255,255,255,0.2);
         }
 
-        /* Settings Menu */
+        /* Settings Menu - Hidden (not used in mobile) */
         .settings-menu {
+            display: none !important;
             position: fixed;
             top: 0;
             left: 0;
@@ -593,6 +597,7 @@
 
         /* Instructions */
         .instructions {
+            display: none; /* Hidden - using fire-instruction instead */
             position: fixed;
             bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
             left: 50%;
@@ -618,42 +623,42 @@
         <span class="hud-stat">W<span id="wave">1</span></span>
     </div>
     <div class="hud-right">
-        <button class="icon-btn" onclick="openSettings()" aria-label="Settings">⚙️</button>
-        <button class="icon-btn" onclick="pauseGame()" aria-label="Pause">⏸</button>
+        <button class="icon-btn" id="pauseButton" onclick="pauseGame()" aria-label="Pause">⏸</button>
     </div>
 </div>
 
 <!-- Weapon Selector -->
 <div class="weapon-selector">
-    <div class="weapon-option active" id="weapon1" onclick="switchWeapon(0)">
-        <span class="weapon-icon">⚫</span>
-        <h4>CANNON</h4>
-        <span>Cost: 1</span>
+    <div class="weapon-group">
+        <div class="weapon-option active" id="weapon1" onclick="switchWeapon(0)">
+            <span class="weapon-icon">⚫</span>
+            <h4>CANNON</h4>
+            <span>Cost: 1</span>
+        </div>
+        <div class="weapon-option" id="weapon2" onclick="switchWeapon(1)">
+            <span class="weapon-icon">⚡</span>
+            <h4>BOLT</h4>
+            <span>Cost: 3</span>
+        </div>
     </div>
-    <div class="weapon-option" id="weapon2" onclick="switchWeapon(1)">
-        <span class="weapon-icon">🔥</span>
-        <h4>FIRE</h4>
-        <span>Cost: 2</span>
-    </div>
-    <div class="weapon-option" id="weapon3" onclick="switchWeapon(2)">
-        <span class="weapon-icon">⚡</span>
-        <h4>BOLT</h4>
-        <span>Cost: 3</span>
-    </div>
-    <div class="weapon-option" id="weapon4" onclick="switchWeapon(3)">
-        <span class="weapon-icon">💥</span>
-        <h4>SCATTER</h4>
-        <span>Cost: 3</span>
-    </div>
-    <div class="weapon-option" id="weapon5" onclick="switchWeapon(4)">
-        <span class="weapon-icon">🚀</span>
-        <h4>HOMING</h4>
-        <span>Cost: 4</span>
+    <div class="weapon-group">
+        <div class="weapon-option" id="weapon3" onclick="switchWeapon(2)">
+            <span class="weapon-icon">💥</span>
+            <h4>SCATTER</h4>
+            <span>Cost: 3</span>
+        </div>
+        <div class="weapon-option" id="weapon4" onclick="switchWeapon(3)">
+            <span class="weapon-icon">🚀</span>
+            <h4>HOMING</h4>
+            <span>Cost: 4</span>
+        </div>
     </div>
 </div>
 
-<!-- Fire Button -->
-<button class="fire-button" id="fireButton">FIRE</button>
+<!-- Fire Instruction -->
+<div class="fire-instruction" id="fireInstruction">
+    👆 TAP & RELEASE<br>TO FIRE
+</div>
 
 <!-- Virtual Joystick (for joystick mode) -->
 <div class="joystick-container" id="joystickContainer">
@@ -814,7 +819,6 @@ let MAX_EXPLOSIONS = 5;
 
 const weapons = [
     { name: 'Cannonball', power: 18, gravity: 0.3, size: 20, color: [40, 40, 40], splashRadius: 0, type: 'normal', ammoCost: 1 },
-    { name: 'Fireball', power: 22, gravity: 0.15, size: 25, color: [255, 100, 0], splashRadius: 80, type: 'fire', ammoCost: 2 },
     { name: 'Lightning', power: 30, gravity: 0, size: 15, color: [100, 200, 255], splashRadius: 0, type: 'lightning', ammoCost: 3 },
     { name: 'Scatter Shot', power: 15, gravity: 0.25, size: 18, color: [255, 140, 0], splashRadius: 0, type: 'scatter', ammoCost: 3 },
     { name: 'Homing Missile', power: 25, gravity: 0.1, size: 22, color: [220, 50, 50], splashRadius: 0, type: 'homing', ammoCost: 4 }
@@ -856,7 +860,7 @@ function setup() {
     updateControlMode();
     applyGraphicsQuality();
 
-    cannon = new Cannon(width / 2, height - 100);
+    cannon = new Cannon(width / 2, height - 50);
 
     // Create stars
     for (let i = 0; i < 100; i++) {
@@ -939,19 +943,7 @@ function applyGraphicsQuality() {
 }
 
 function setupTouchEvents() {
-    // Fire button
-    let fireBtn = document.getElementById('fireButton');
-    fireBtn.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        if (!gameOver && !gamePaused && !waveComplete) {
-            cannon.fire();
-            if (hapticsEnabled && navigator.vibrate) {
-                navigator.vibrate(50);
-            }
-        }
-    });
-
-    // Canvas touch for aiming
+    // Canvas touch for aiming and firing
     let canvas = document.querySelector('canvas');
     canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
     canvas.addEventListener('touchmove', handleTouchMove, { passive: false });
@@ -991,6 +983,15 @@ function handleTouchMove(e) {
 
 function handleTouchEnd(e) {
     e.preventDefault();
+    if (gameOver || gamePaused || waveComplete) return;
+
+    // Fire on touch release
+    cannon.fire();
+
+    // Hide fire instruction after 3 shots
+    if (totalShots >= 3) {
+        document.getElementById('fireInstruction').classList.add('hidden');
+    }
 }
 
 function draw() {
@@ -1175,7 +1176,7 @@ function handleProjectileHit(projectile, targetIndex) {
     let pointsEarned = target.points * comboMultiplier;
 
     if (projectile.type === 1) {
-        // Fireball splash
+        // Lightning (no splash, instant hit)
         let hitTargets = new Set();
         let splashRadius = weapons[1].splashRadius;
 
@@ -1285,8 +1286,9 @@ function handleProjectileHit(projectile, targetIndex) {
 function drawSkyGradient() {
     let c1 = color(135, 206, 250);
     let c2 = color(100, 149, 237);
-    for (let y = 0; y < height * 0.75; y++) {
-        let inter = map(y, 0, height * 0.75, 0, 1);
+    // Sky goes up to 85% instead of 75%
+    for (let y = 0; y < height * 0.85; y++) {
+        let inter = map(y, 0, height * 0.85, 0, 1);
         stroke(lerpColor(c1, c2, inter));
         strokeWeight(1);
         line(0, y, width, y);
@@ -1294,8 +1296,9 @@ function drawSkyGradient() {
 }
 
 function drawGround() {
-    for (let y = height * 0.75; y < height; y++) {
-        let inter = map(y, height * 0.75, height, 0, 1);
+    // Reduce ground height - only bottom 15% instead of 25%
+    for (let y = height * 0.85; y < height; y++) {
+        let inter = map(y, height * 0.85, height, 0, 1);
         let c1 = color(34, 139, 34);
         let c2 = color(0, 100, 0);
         stroke(lerpColor(c1, c2, inter));
@@ -1396,7 +1399,7 @@ function spawnTarget() {
 }
 
 function spawnPowerUp() {
-    let types = ['star', 'ammo', 'shield', 'star', 'ammo', 'shield', 'star', 'ammo', 'timeSlow'];
+    let types = ['star', 'ammo', 'shield', 'star', 'ammo', 'shield'];
     let type = random(types);
     let x = random(width * 0.2, width * 0.8);
     let y = random(height * 0.2, height * 0.5);
@@ -1675,7 +1678,8 @@ class Cannon {
             let x = this.x + cos(this.angle) * barrelLength;
             let y = this.y + sin(this.angle) * barrelLength;
 
-            if (currentWeapon === 3) {
+            if (currentWeapon === 2) {
+                // Scatter shot fires 5 projectiles in a spread
                 for (let i = -2; i <= 2; i++) {
                     let spreadAngle = this.angle + (i * 0.15);
                     projectiles.push(new Projectile(x, y, spreadAngle, currentWeapon));
@@ -1701,21 +1705,68 @@ class Cannon {
 
     display() {
         push();
-        translate(this.x, this.y - this.recoil);
+        translate(this.x, this.y);
 
-        let barrelLength = 60;
-        stroke(60, 60, 60);
-        strokeWeight(12);
-        line(0, 0, cos(this.angle) * barrelLength, sin(this.angle) * barrelLength);
+        // Base platform (carriage) - drawn first
+        fill(80, 80, 80);
+        stroke(50, 50, 50);
+        strokeWeight(3);
+        rect(-60, 0, 120, 30, 5);
 
+        // Wheels
         fill(40, 40, 40);
         stroke(20, 20, 20);
         strokeWeight(2);
+        circle(-40, 25, 25);
+        circle(40, 25, 25);
+
+        // Wheel spokes (radial lines)
+        stroke(60, 60, 60);
+        strokeWeight(2);
+        for (let a = 0; a < TWO_PI; a += PI / 4) {
+            line(-40 + cos(a) * 5, 25 + sin(a) * 5, -40 + cos(a) * 10, 25 + sin(a) * 10);
+            line(40 + cos(a) * 5, 25 + sin(a) * 5, 40 + cos(a) * 10, 25 + sin(a) * 10);
+        }
+
+        // Rotate for barrel
+        rotate(this.angle);
+
+        // Barrel (with recoil)
+        push();
+        translate(-this.recoil, 0);
+
+        fill(60, 60, 60);
+        stroke(40, 40, 40);
+        strokeWeight(3);
+        rect(0, -15, 80, 30, 5);
+
+        // Barrel end/muzzle
+        fill(40, 40, 40);
+        rect(75, -18, 8, 36, 3);
+
+        // Barrel highlight
+        fill(100, 100, 100);
+        noStroke();
+        rect(10, -12, 60, 8, 3);
+
+        pop();
+
+        // Turret base (center circle)
+        fill(80, 80, 80);
+        stroke(50, 50, 50);
+        strokeWeight(3);
         circle(0, 0, 50);
 
-        fill(80, 80, 80);
+        // Turret detail ring
+        noFill();
+        stroke(100, 100, 100);
+        strokeWeight(4);
+        circle(0, 0, 45);
+
+        // Center pivot bolt
+        fill(40, 40, 40);
         noStroke();
-        circle(-8, -8, 15);
+        circle(0, 0, 15);
 
         pop();
     }
@@ -1744,7 +1795,8 @@ class Projectile {
         this.y += this.vy * gameSpeed;
         this.rotation += 0.1 * gameSpeed;
 
-        if (this.type === 4 && targets.length > 0) {
+        // Homing missile (weapon index 3)
+        if (this.type === 3 && targets.length > 0) {
             let nearestTarget = null;
             let nearestDist = Infinity;
             for (let target of targets) {
@@ -1796,30 +1848,7 @@ class Projectile {
             circle(this.x - 3, this.y - 3, 8);
         }
         else if (this.type === 1) {
-            for (let i = 0; i < this.trail.length; i++) {
-                let alpha = map(i, 0, this.trail.length, 0, 200);
-                fill(255, 100, 0, alpha);
-                noStroke();
-                circle(this.trail[i].x, this.trail[i].y, this.size * (i / this.trail.length));
-            }
-
-            push();
-            translate(this.x, this.y);
-            rotate(this.rotation);
-
-            fill(255, 100, 0);
-            noStroke();
-            star(0, 0, this.size * 0.6, this.size, 8);
-
-            fill(255, 200, 0);
-            star(0, 0, this.size * 0.4, this.size * 0.7, 8);
-
-            fill(255, 255, 200);
-            circle(0, 0, this.size * 0.4);
-
-            pop();
-        }
-        else if (this.type === 2) {
+            // Lightning bolt
             for (let i = 0; i < 5; i++) {
                 let angle = random(TWO_PI);
                 let length = random(15, 25);
@@ -1846,7 +1875,8 @@ class Projectile {
             fill(255, 255, 255);
             circle(this.x, this.y, this.size * 0.6);
         }
-        else if (this.type === 3) {
+        else if (this.type === 2) {
+            // Scatter shot
             for (let i = 0; i < this.trail.length; i++) {
                 let alpha = map(i, 0, this.trail.length, 0, 180);
                 fill(255, 140, 0, alpha);
@@ -1873,7 +1903,8 @@ class Projectile {
 
             pop();
         }
-        else if (this.type === 4) {
+        else if (this.type === 3) {
+            // Homing missile
             for (let i = 0; i < this.trail.length - 1; i++) {
                 let alpha = map(i, 0, this.trail.length, 0, 150);
                 stroke(200, 200, 200, alpha);
@@ -1980,11 +2011,11 @@ class Target {
 
         fill(255, 255, 255);
         stroke(0, 0, 0);
-        strokeWeight(3);
+        strokeWeight(2);
         textAlign(CENTER);
-        textSize(14);
+        textSize(18);
         textStyle(BOLD);
-        text(`+${this.points}`, 0, this.size / 2 + 20);
+        text(`+${this.points}`, 0, this.size / 2 + 25);
 
         pop();
     }
@@ -2442,7 +2473,7 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     if (cannon) {
         cannon.x = width / 2;
-        cannon.y = height - 100;
+        cannon.y = height - 50;
     }
 }
 </script>
