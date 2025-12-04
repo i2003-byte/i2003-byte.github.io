@@ -1,0 +1,24 @@
+# Selenium automation framework dependencies
+
+# Core Testing Framework
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.5.0
+
+# Selenium WebDriver
+selenium==4.15.2
+
+# WebDriver Manager (optional - auto-downloads drivers)
+webdriver-manager==4.0.1
+
+# Reporting
+pytest-json-report==1.5.0
+allure-pytest==2.13.2
+
+# Utilities
+python-dotenv==1.0.0
+
+# Code Quality (optional)
+pytest-cov==4.1.0
+pylint==3.0.3
+black==23.12.1
