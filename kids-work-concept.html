@@ -16,7 +16,7 @@
             font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
-            padding: 20px;
+            padding: 10px;
             min-height: 100vh;
         }
 
@@ -25,14 +25,14 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            padding: 40px;
+            padding: 20px;
             box-shadow: 0 10px 50px rgba(0,0,0,0.3);
         }
 
         h1 {
             color: #FF6B6B;
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
@@ -40,85 +40,161 @@
         .subtitle {
             text-align: center;
             color: #4ECDC4;
-            font-size: 1.5em;
-            margin-bottom: 30px;
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
         .intro {
             background: linear-gradient(135deg, #FFE66D 0%, #FFBA08 100%);
-            padding: 25px;
+            padding: 15px;
             border-radius: 15px;
-            margin-bottom: 30px;
-            font-size: 1.3em;
-            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1em;
+            line-height: 1.6;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .intro strong {
             color: #C1121F;
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
 
         .section {
-            margin: 30px 0;
+            margin: 20px 0;
         }
 
         h2 {
             color: #4ECDC4;
-            font-size: 2em;
-            margin: 20px 0;
+            font-size: 1.4em;
+            margin: 15px 0;
             text-align: center;
         }
 
         .canvas-container {
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            margin: 15px 0;
             background: #f0f0f0;
             border-radius: 15px;
-            padding: 20px;
+            padding: 10px;
             box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+            overflow-x: auto;
         }
 
         .instruction {
             background: #FFE66D;
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
             text-align: center;
-            font-size: 1.2em;
-            margin: 15px 0;
+            font-size: 0.95em;
+            margin: 10px 0;
             border: 3px dashed #FFBA08;
         }
 
         .fun-fact {
             background: linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);
             color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             margin: 20px 0;
-            font-size: 1.2em;
+            font-size: 1em;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .fun-fact h3 {
             color: #FFE66D;
             margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .fun-fact ul {
+            line-height: 1.8;
+            margin-left: 20px;
         }
 
         .formula {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             text-align: center;
-            font-size: 2em;
+            font-size: 1.5em;
             color: #FF6B6B;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 15px 0;
             border: 4px solid #4ECDC4;
         }
 
         canvas {
             border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 3em;
+            }
+
+            .subtitle {
+                font-size: 1.5em;
+                margin-bottom: 30px;
+            }
+
+            .intro {
+                padding: 25px;
+                font-size: 1.3em;
+                line-height: 1.8;
+                margin-bottom: 30px;
+            }
+
+            .intro strong {
+                font-size: 1.2em;
+            }
+
+            .section {
+                margin: 30px 0;
+            }
+
+            h2 {
+                font-size: 2em;
+                margin: 20px 0;
+            }
+
+            .canvas-container {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
+            .instruction {
+                padding: 15px;
+                font-size: 1.2em;
+                margin: 15px 0;
+            }
+
+            .fun-fact {
+                padding: 20px;
+                font-size: 1.2em;
+            }
+
+            .fun-fact ul {
+                line-height: 2;
+            }
+
+            .formula {
+                padding: 20px;
+                font-size: 2em;
+                margin: 20px 0;
+            }
         }
     </style>
 </head>
@@ -182,93 +258,131 @@
     </div>
 
     <script>
+        // Get responsive canvas width
+        function getCanvasWidth() {
+            let containerWidth = document.querySelector('.canvas-container').offsetWidth - 20;
+            return Math.min(containerWidth, 800);
+        }
+
         // Sketch 1: Push the Box
         let sketch1 = function(p) {
             let boxX = 50;
             let boxY;
-            let buttonX, buttonY, buttonSize = 80;
+            let buttonX, buttonY, buttonSize;
             let pushing = false;
             let force = 20;
             let distance = 0;
             let work = 0;
-            let maxX = 650;
+            let maxX;
+            let canvasWidth;
 
             p.setup = function() {
-                p.createCanvas(800, 300);
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.createCanvas(canvasWidth, canvasHeight);
+
                 boxY = p.height / 2;
                 buttonX = 50;
-                buttonY = p.height - 80;
+                buttonY = p.height - 60;
+                buttonSize = p.width < 400 ? 60 : 80;
+                maxX = p.width - 150;
+            };
+
+            p.windowResized = function() {
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.resizeCanvas(canvasWidth, canvasHeight);
+
+                boxY = p.height / 2;
+                buttonY = p.height - 60;
+                buttonSize = p.width < 400 ? 60 : 80;
+                maxX = p.width - 150;
+
+                // Reset if box is out of bounds
+                if (boxX > maxX) {
+                    boxX = 50;
+                    distance = 0;
+                    work = 0;
+                }
             };
 
             p.draw = function() {
                 p.background(200, 230, 255);
 
+                // Scale factor for smaller screens
+                let scale = p.width / 800;
+
                 // Draw ground
                 p.fill(101, 67, 33);
-                p.rect(0, p.height - 30, p.width, 30);
+                p.rect(0, p.height - 20 * scale, p.width, 20 * scale);
 
                 // Push the box
                 if (pushing && boxX < maxX) {
-                    boxX += 2;
+                    boxX += 2 * scale;
                     distance = boxX - 50;
                     work = force * distance;
                 }
 
                 // Draw box
+                let boxSize = 60 * scale;
                 p.fill(255, 180, 50);
                 p.stroke(0);
-                p.strokeWeight(3);
-                p.rect(boxX, boxY - 50, 60, 60, 5);
+                p.strokeWeight(2 * scale);
+                p.rect(boxX, boxY - boxSize, boxSize, boxSize, 5);
 
                 // Draw box details
                 p.fill(255, 200, 100);
-                p.rect(boxX + 5, boxY - 45, 50, 5);
-                p.rect(boxX + 5, boxY - 30, 50, 5);
+                p.rect(boxX + 5 * scale, boxY - boxSize + 5 * scale, boxSize - 10 * scale, 5 * scale);
+                p.rect(boxX + 5 * scale, boxY - boxSize / 2, boxSize - 10 * scale, 5 * scale);
 
-                // Draw person
-                let personX = boxX - 50;
+                // Draw person (simplified for mobile)
+                let personX = boxX - 50 * scale;
+                let personScale = scale * 0.8;
                 p.fill(255, 220, 180);
-                p.ellipse(personX, boxY - 90, 30, 30); // head
+                p.ellipse(personX, boxY - 90 * personScale, 30 * personScale, 30 * personScale); // head
                 p.fill(50, 150, 255);
-                p.rect(personX - 15, boxY - 70, 30, 40, 5); // body
-                p.fill(50, 150, 255);
-                p.rect(personX - 20, boxY - 30, 12, 30); // leg
-                p.rect(personX + 8, boxY - 30, 12, 30); // leg
+                p.rect(personX - 15 * personScale, boxY - 70 * personScale, 30 * personScale, 40 * personScale, 5); // body
+                p.rect(personX - 20 * personScale, boxY - 30 * personScale, 12 * personScale, 30 * personScale); // leg
+                p.rect(personX + 8 * personScale, boxY - 30 * personScale, 12 * personScale, 30 * personScale); // leg
 
                 // Arms pushing
-                p.strokeWeight(5);
+                p.strokeWeight(4 * personScale);
                 p.stroke(255, 220, 180);
-                p.line(personX + 15, boxY - 60, personX + 40, boxY - 40); // pushing arm
+                p.line(personX + 15 * personScale, boxY - 60 * personScale, personX + 40 * personScale, boxY - 40 * personScale);
 
                 // Draw push button
                 p.fill(pushing ? 200 : 100, 255, 100);
                 p.stroke(0);
-                p.strokeWeight(3);
+                p.strokeWeight(2 * scale);
                 p.ellipse(buttonX, buttonY, buttonSize, buttonSize);
                 p.fill(0);
                 p.noStroke();
-                p.textSize(16);
+                p.textSize(p.width < 400 ? 12 : 16);
                 p.textAlign(p.CENTER, p.CENTER);
                 p.text("PUSH →", buttonX, buttonY);
 
                 // Display work info
+                let fontSize = p.width < 400 ? 14 : 20;
+                let lineHeight = p.width < 400 ? 25 : 30;
                 p.fill(0);
-                p.textSize(20);
+                p.textSize(fontSize);
                 p.textAlign(p.LEFT);
-                p.text(`Force: ${force} N`, 10, 30);
-                p.text(`Distance: ${Math.round(distance)} m`, 10, 60);
+                p.text(`Force: ${force} N`, 10, lineHeight);
+                p.text(`Distance: ${Math.round(distance)} m`, 10, lineHeight * 2);
                 p.fill(255, 0, 100);
-                p.textSize(24);
-                p.text(`Work: ${Math.round(work)} Joules! 🎉`, 10, 100);
+                p.textSize(fontSize + 4);
+                p.text(`Work: ${Math.round(work)} J! 🎉`, 10, lineHeight * 3.3);
 
                 // Reset button
                 if (boxX >= maxX - 10) {
+                    let btnW = p.width < 400 ? 80 : 110;
+                    let btnH = p.width < 400 ? 30 : 40;
                     p.fill(255, 100, 100);
-                    p.rect(p.width - 120, 10, 110, 40, 10);
+                    p.rect(p.width - btnW - 10, 10, btnW, btnH, 10);
                     p.fill(255);
                     p.textAlign(p.CENTER, p.CENTER);
-                    p.textSize(16);
-                    p.text("RESET", p.width - 65, 30);
+                    p.textSize(p.width < 400 ? 12 : 16);
+                    p.text("RESET", p.width - btnW/2 - 10, 10 + btnH/2);
                 }
             };
 
@@ -279,133 +393,211 @@
                 }
 
                 // Reset button
-                if (boxX >= maxX - 10 && p.mouseX > p.width - 120 && p.mouseX < p.width - 10 && p.mouseY > 10 && p.mouseY < 50) {
+                let btnW = p.width < 400 ? 80 : 110;
+                let btnH = p.width < 400 ? 30 : 40;
+                if (boxX >= maxX - 10 && p.mouseX > p.width - btnW - 10 && p.mouseX < p.width - 10 && p.mouseY > 10 && p.mouseY < 10 + btnH) {
                     boxX = 50;
                     distance = 0;
                     work = 0;
                 }
             };
 
+            p.touchStarted = function() {
+                p.mousePressed();
+                return false;
+            };
+
             p.mouseReleased = function() {
                 pushing = false;
+            };
+
+            p.touchEnded = function() {
+                pushing = false;
+                return false;
             };
         };
 
         // Sketch 2: Lift the Balloon
         let sketch2 = function(p) {
-            let balloonX = 400;
-            let balloonY = 250;
-            let startY = 250;
+            let balloonX;
+            let balloonY;
+            let startY;
             let dragging = false;
             let force = 15;
+            let canvasWidth;
 
             p.setup = function() {
-                p.createCanvas(800, 300);
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.createCanvas(canvasWidth, canvasHeight);
+
+                balloonX = p.width / 2;
+                balloonY = p.height - 50;
+                startY = p.height - 50;
+            };
+
+            p.windowResized = function() {
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.resizeCanvas(canvasWidth, canvasHeight);
+
+                balloonX = p.width / 2;
+                let ratio = balloonY / startY;
+                startY = p.height - 50;
+                balloonY = startY * ratio;
             };
 
             p.draw = function() {
                 p.background(220, 240, 255);
 
-                // Draw clouds
+                let scale = p.width / 800;
+
+                // Draw clouds (responsive)
                 p.fill(255, 255, 255, 150);
                 p.noStroke();
-                p.ellipse(100, 50, 80, 50);
-                p.ellipse(130, 50, 80, 50);
-                p.ellipse(600, 80, 100, 60);
-                p.ellipse(640, 80, 100, 60);
+                p.ellipse(100 * scale, 50 * scale, 80 * scale, 50 * scale);
+                p.ellipse(130 * scale, 50 * scale, 80 * scale, 50 * scale);
+                if (p.width > 400) {
+                    p.ellipse(p.width - 200 * scale, 80 * scale, 100 * scale, 60 * scale);
+                    p.ellipse(p.width - 160 * scale, 80 * scale, 100 * scale, 60 * scale);
+                }
 
                 let distance = Math.abs(startY - balloonY);
                 let work = force * distance;
 
+                let balloonSize = p.width < 400 ? 50 : 60;
+                let balloonHeight = p.width < 400 ? 60 : 70;
+
                 // Draw string
                 p.stroke(100);
                 p.strokeWeight(2);
-                p.line(balloonX, balloonY + 30, balloonX, balloonY + 60);
+                p.line(balloonX, balloonY + balloonHeight/2, balloonX, balloonY + balloonHeight/2 + 30 * scale);
 
                 // Draw balloon
                 p.fill(255, 50, 100);
                 p.noStroke();
-                p.ellipse(balloonX, balloonY, 60, 70);
+                p.ellipse(balloonX, balloonY, balloonSize, balloonHeight);
 
                 // Balloon highlight
                 p.fill(255, 150, 180, 150);
-                p.ellipse(balloonX - 10, balloonY - 10, 20, 25);
+                p.ellipse(balloonX - 10 * scale, balloonY - 10 * scale, 20 * scale, 25 * scale);
 
                 // Balloon tie
                 p.fill(200, 30, 80);
-                p.triangle(balloonX - 5, balloonY + 30, balloonX + 5, balloonY + 30, balloonX, balloonY + 40);
+                p.triangle(balloonX - 5 * scale, balloonY + balloonHeight/2, balloonX + 5 * scale, balloonY + balloonHeight/2, balloonX, balloonY + balloonHeight/2 + 10 * scale);
 
                 // Draw hand
                 p.fill(255, 220, 180);
-                p.ellipse(balloonX, balloonY + 70, 40, 40);
+                p.ellipse(balloonX, balloonY + balloonHeight/2 + 40 * scale, 40 * scale, 40 * scale);
                 p.fill(0);
                 p.textAlign(p.CENTER);
-                p.textSize(25);
-                p.text("✊", balloonX, balloonY + 75);
+                p.textSize(20 * scale);
+                p.text("✊", balloonX, balloonY + balloonHeight/2 + 45 * scale);
 
                 // Display work info
+                let fontSize = p.width < 400 ? 14 : 20;
+                let lineHeight = p.width < 400 ? 25 : 30;
                 p.fill(0);
-                p.textSize(20);
+                p.textSize(fontSize);
                 p.textAlign(p.LEFT);
-                p.text(`Force: ${force} N`, 10, 30);
-                p.text(`Height: ${Math.round(distance)} m`, 10, 60);
+                p.text(`Force: ${force} N`, 10, lineHeight);
+                p.text(`Height: ${Math.round(distance)} m`, 10, lineHeight * 2);
                 p.fill(255, 0, 100);
-                p.textSize(24);
-                p.text(`Work: ${Math.round(work)} Joules! 🎈`, 10, 100);
+                p.textSize(fontSize + 4);
+                p.text(`Work: ${Math.round(work)} J! 🎈`, 10, lineHeight * 3.3);
 
                 // Instructions
                 if (distance < 10) {
                     p.fill(100);
                     p.textAlign(p.CENTER);
-                    p.textSize(18);
-                    p.text("👆 Drag me up!", balloonX, balloonY - 60);
+                    p.textSize(p.width < 400 ? 14 : 18);
+                    p.text("👆 Drag me up!", balloonX, balloonY - balloonHeight);
                 }
             };
 
             p.mousePressed = function() {
                 let d = p.dist(p.mouseX, p.mouseY, balloonX, balloonY);
-                if (d < 40) {
+                if (d < 50) {
                     dragging = true;
                 }
             };
 
+            p.touchStarted = function() {
+                if (p.touches.length > 0) {
+                    let d = p.dist(p.touches[0].x, p.touches[0].y, balloonX, balloonY);
+                    if (d < 50) {
+                        dragging = true;
+                    }
+                }
+                return false;
+            };
+
             p.mouseDragged = function() {
                 if (dragging) {
-                    balloonY = p.constrain(p.mouseY, 50, 250);
+                    balloonY = p.constrain(p.mouseY, 50, startY);
                 }
+            };
+
+            p.touchMoved = function() {
+                if (dragging && p.touches.length > 0) {
+                    balloonY = p.constrain(p.touches[0].y, 50, startY);
+                }
+                return false;
             };
 
             p.mouseReleased = function() {
                 dragging = false;
             };
+
+            p.touchEnded = function() {
+                dragging = false;
+                return false;
+            };
         };
 
         // Sketch 3: Pull the Toy
         let sketch3 = function(p) {
-            let toyX = 100;
-            let toyY = 200;
-            let targetX = 100;
-            let targetY = 200;
-            let startX = 100;
-            let startY = 200;
+            let toyX;
+            let toyY;
+            let targetX;
+            let targetY;
             let moving = false;
             let force = 25;
             let totalDistance = 0;
             let currentPath = 0;
+            let canvasWidth;
 
             p.setup = function() {
-                p.createCanvas(800, 300);
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.createCanvas(canvasWidth, canvasHeight);
+
+                toyX = 100;
+                toyY = p.height - 100;
+                targetX = toyX;
+                targetY = toyY;
+            };
+
+            p.windowResized = function() {
+                canvasWidth = getCanvasWidth();
+                let canvasHeight = Math.min(canvasWidth * 0.375, 300);
+                p.resizeCanvas(canvasWidth, canvasHeight);
+
+                toyY = p.height - 100;
+                targetY = p.constrain(targetY, 50, p.height - 50);
             };
 
             p.draw = function() {
                 p.background(180, 220, 180);
 
+                let scale = p.width / 800;
+
                 // Draw grass details
                 p.stroke(100, 180, 100);
                 p.strokeWeight(2);
-                for (let i = 0; i < p.width; i += 30) {
-                    p.line(i, p.height - 20, i + 5, p.height - 10);
-                    p.line(i + 10, p.height - 25, i + 15, p.height - 15);
+                for (let i = 0; i < p.width; i += 30 * scale) {
+                    p.line(i, p.height - 20 * scale, i + 5 * scale, p.height - 10 * scale);
+                    p.line(i + 10 * scale, p.height - 25 * scale, i + 15 * scale, p.height - 15 * scale);
                 }
 
                 // Move toy towards target
@@ -425,68 +617,117 @@
                 }
 
                 // Draw path line
-                if (p.mouseIsPressed && !moving) {
+                let touchX = p.touches.length > 0 ? p.touches[0].x : p.mouseX;
+                let touchY = p.touches.length > 0 ? p.touches[0].y : p.mouseY;
+
+                if ((p.mouseIsPressed || p.touches.length > 0) && !moving) {
                     p.stroke(255, 100, 100);
                     p.strokeWeight(3);
-                    p.line(toyX, toyY, p.mouseX, p.mouseY);
-                    currentPath = p.dist(toyX, toyY, p.mouseX, p.mouseY);
+                    p.line(toyX, toyY, touchX, touchY);
+                    currentPath = p.dist(toyX, toyY, touchX, touchY);
                 }
 
-                // Draw toy car
+                // Draw toy car (scaled)
+                let carScale = p.width < 400 ? 0.7 : 1;
                 p.fill(255, 50, 50);
                 p.noStroke();
-                p.rect(toyX - 30, toyY - 15, 60, 25, 5); // body
+                p.rect(toyX - 30 * carScale, toyY - 15 * carScale, 60 * carScale, 25 * carScale, 5); // body
                 p.fill(100, 200, 255);
-                p.rect(toyX - 15, toyY - 25, 30, 15, 3); // cabin
+                p.rect(toyX - 15 * carScale, toyY - 25 * carScale, 30 * carScale, 15 * carScale, 3); // cabin
 
                 // Wheels
                 p.fill(50);
-                p.ellipse(toyX - 15, toyY + 15, 20, 20);
-                p.ellipse(toyX + 15, toyY + 15, 20, 20);
+                p.ellipse(toyX - 15 * carScale, toyY + 15 * carScale, 20 * carScale, 20 * carScale);
+                p.ellipse(toyX + 15 * carScale, toyY + 15 * carScale, 20 * carScale, 20 * carScale);
                 p.fill(150);
-                p.ellipse(toyX - 15, toyY + 15, 8, 8);
-                p.ellipse(toyX + 15, toyY + 15, 8, 8);
+                p.ellipse(toyX - 15 * carScale, toyY + 15 * carScale, 8 * carScale, 8 * carScale);
+                p.ellipse(toyX + 15 * carScale, toyY + 15 * carScale, 8 * carScale, 8 * carScale);
 
                 // Display work info
                 let work = force * totalDistance;
+                let fontSize = p.width < 400 ? 14 : 20;
+                let lineHeight = p.width < 400 ? 25 : 30;
                 p.fill(0);
-                p.textSize(20);
+                p.textSize(fontSize);
                 p.textAlign(p.LEFT);
-                p.text(`Force: ${force} N`, 10, 30);
-                p.text(`Distance: ${Math.round(totalDistance)} m`, 10, 60);
+                p.text(`Force: ${force} N`, 10, lineHeight);
+                p.text(`Distance: ${Math.round(totalDistance)} m`, 10, lineHeight * 2);
                 p.fill(255, 0, 100);
-                p.textSize(24);
-                p.text(`Work: ${Math.round(work)} Joules! 🚗`, 10, 100);
+                p.textSize(fontSize + 4);
+                p.text(`Work: ${Math.round(work)} J! 🚗`, 10, lineHeight * 3.3);
 
                 // Reset button
+                let btnW = p.width < 400 ? 80 : 110;
+                let btnH = p.width < 400 ? 30 : 40;
                 p.fill(255, 150, 50);
                 p.stroke(0);
                 p.strokeWeight(2);
-                p.rect(p.width - 120, 10, 110, 40, 10);
+                p.rect(p.width - btnW - 10, 10, btnW, btnH, 10);
                 p.fill(255);
                 p.noStroke();
                 p.textAlign(p.CENTER, p.CENTER);
-                p.textSize(16);
-                p.text("RESET", p.width - 65, 30);
+                p.textSize(p.width < 400 ? 12 : 16);
+                p.text("RESET", p.width - btnW/2 - 10, 10 + btnH/2);
             };
 
             p.mousePressed = function() {
+                let btnW = p.width < 400 ? 80 : 110;
+                let btnH = p.width < 400 ? 30 : 40;
+
                 // Reset button
-                if (p.mouseX > p.width - 120 && p.mouseX < p.width - 10 && p.mouseY > 10 && p.mouseY < 50) {
+                if (p.mouseX > p.width - btnW - 10 && p.mouseX < p.width - 10 && p.mouseY > 10 && p.mouseY < 10 + btnH) {
                     toyX = 100;
-                    toyY = 200;
+                    toyY = p.height - 100;
                     totalDistance = 0;
                     currentPath = 0;
                     moving = false;
                 }
             };
 
+            p.touchStarted = function() {
+                if (p.touches.length > 0) {
+                    let btnW = p.width < 400 ? 80 : 110;
+                    let btnH = p.width < 400 ? 30 : 40;
+                    let tx = p.touches[0].x;
+                    let ty = p.touches[0].y;
+
+                    // Reset button
+                    if (tx > p.width - btnW - 10 && tx < p.width - 10 && ty > 10 && ty < 10 + btnH) {
+                        toyX = 100;
+                        toyY = p.height - 100;
+                        totalDistance = 0;
+                        currentPath = 0;
+                        moving = false;
+                    }
+                }
+                return false;
+            };
+
             p.mouseReleased = function() {
-                if (!moving && p.mouseX > 0 && p.mouseX < p.width - 120) {
+                let btnW = p.width < 400 ? 80 : 110;
+                if (!moving && p.mouseX > 0 && p.mouseX < p.width - btnW - 20) {
                     targetX = p.mouseX;
-                    targetY = p.constrain(p.mouseY, 50, 250);
+                    targetY = p.constrain(p.mouseY, 50, p.height - 50);
                     moving = true;
                 }
+            };
+
+            p.touchEnded = function() {
+                if (p.touches.length === 0 && !moving) {
+                    let btnW = p.width < 400 ? 80 : 110;
+                    // Use the last touch position before release
+                    if (targetX > 0 && targetX < p.width - btnW - 20) {
+                        moving = true;
+                    }
+                } else if (p.touches.length > 0) {
+                    let btnW = p.width < 400 ? 80 : 110;
+                    targetX = p.touches[0].x;
+                    targetY = p.constrain(p.touches[0].y, 50, p.height - 50);
+                    if (!moving && targetX > 0 && targetX < p.width - btnW - 20) {
+                        moving = true;
+                    }
+                }
+                return false;
             };
         };
 
