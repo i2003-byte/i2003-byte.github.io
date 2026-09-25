@@ -1,0 +1,210 @@
+# SimLab — interactive science simulations
+
+> **Don't just read science. Play with it.**
+> Free, open, interactive simulations that run in any browser — phone, tablet or desktop.
+
+Live site: **https://i2003-byte.github.io/**
+
+SimLab is a plain **HTML + CSS + vanilla JavaScript** website. There is no framework and no build step: upload the files to GitHub Pages and it works. Everything is driven by **one data file**, `assets/js/catalog.js`.
+
+It starts with **Physics**, including the **Sound Lab**: 14 simulations for the Class 7 chapter on sound.
+
+| Sound Lab | What students do |
+|---|---|
+| Vibrating Objects | Strike a fork, drum, bell or ruler. Touch it to stop the vibration, and the sound stops too |
+| Sound Through Solids, Liquids & Gases | Race a sound pulse through steel, water and air |
+| Bell Jar | Pump the air out and hear the ringing fade. Sound can't cross a vacuum |
+| Amplitude & Loudness | Grow the amplitude and hear the sound get louder |
+| Frequency & Pitch | Slide from 20 Hz to 2 kHz, count cycles, find notes on a piano |
+| Oscillation Counter | Time a pendulum and calculate T and f yourself |
+| Voice Box (Larynx) | Tighten the vocal cords and push air from the lungs |
+| Inside the Ear | Follow a sound to the eardrum, bones, cochlea and brain |
+| Who Can Hear It? | Infrasonic, audible and ultrasonic ranges for humans, dogs, bats and elephants |
+| Music or Noise? | Sort clips by their regular or irregular wave patterns |
+| City Decibel Meter | Measure city sounds in dB, see how distance changes the level, and learn safe listening times |
+| Quiet the Neighbourhood | Cut noise pollution with trees, silencers and walls |
+| Water Glass Xylophone | Tune a jal tarang by tapping or blowing |
+| Guitar String | Change length, thickness and tension, then pluck |
+
+It also has **Projectile Motion** and **Simple Pendulum**. Six more physics simulations are listed as "coming soon".
+
+---
+
+## Folder structure
+
+```
+/
+├── index.html              Landing page (hero, search, subjects, featured, recent, levels…)
+├── about.html              About page
+├── 404.html                Friendly "not found" page (GitHub Pages serves it automatically)
+├── .nojekyll               Tells GitHub Pages to serve files as-is (needed for /_template/)
+├── README.md               This file
+│
+├── assets/
+│   ├── css/style.css       ALL styles. Theme tokens (colours, fonts, spacing…) live at the top
+│   ├── js/catalog.js       ★ The single data file: site settings, subjects, simulations
+│   ├── js/nav.js           Shared header, mega-menu, mobile drawer, search, breadcrumbs, footer
+│   ├── js/main.js          Landing-page logic (hero particles, featured scroller, level tabs…)
+│   ├── js/subject.js       Renders subject pages and /simulations/ from the catalog
+│   ├── js/common.js        Simulation toolkit: loop, sliders, graph, audio, URL state, fullscreen…
+│   └── img/                favicon, social preview image, thumbnails (thumbs/*.svg)
+│
+├── physics/
+│   ├── index.html          Subject page (tiny template, reads data-subject="physics")
+│   ├── projectile/         index.html (page + Learn text) and sim.js (the simulation)
+│   ├── pendulum/
+│   └── …14 Sound Lab folders
+├── chemistry/ mathematics/ biology/ astronomy/   Subject pages (coming soon)
+├── simulations/index.html  "All Simulations" page (same template, data-subject="all")
+│
+└── _template/              Blank simulation starter: copy it to create a new simulation
+    ├── index.html
+    └── sim.js
+```
+
+**Paths are root-relative** (`/assets/css/style.css`), so links work from any folder. The site must be served from the domain root, which is what a `username.github.io` repository does.
+
+---
+
+## How to add a new simulation (step by step)
+
+1. **Copy the template folder.**
+   Copy `/_template/` to `/<subject>/<sim-id>/`, for example `/physics/spring-mass/`.
+   Use lowercase letters and dashes for the id.
+
+2. **Edit `index.html` in the new folder.**
+   - Change `<body data-sim="template" …>` to `<body data-page="sim" data-sim="spring-mass">`, and delete the `data-title` / `data-description` attributes.
+   - Update `<title>`, the meta description, and the `canonical` / `og:url` paths.
+   - Rewrite the **Learn** section: big idea, formulas, examples, "Try this" questions.
+
+3. **Write the simulation in `sim.js`.** The template is a fully commented bouncing ball. The shape is:
+
+   ```js
+   SimLab.createSim({
+     params:   [{ id: 'k', label: 'Spring constant', min: 1, max: 100, step: 1, value: 20, unit: 'N/m' }],
+     readouts: [{ id: 'x', label: 'Displacement', unit: 'm' }],
+     graph:    { title: 'x vs time', yLabel: 'm', series: [{ label: 'x' }], window: 10 },
+     reset(sim)      { sim.state = { x: 0.2, v: 0 }; },          // start state from sim.p
+     update(sim, dt) { /* advance physics by dt seconds */ },
+     draw(sim)       { /* paint with sim.ctx, sim.width, sim.height, sim.colors */ },
+     readout(sim)    { return { x: sim.state.x }; },
+     sample(sim)     { return [sim.state.x]; }                    // values for the graph
+   });
+   ```
+
+   `createSim` builds everything else for you:
+   - title, badges and breadcrumbs
+   - Play/Pause, Step, Reset and speed buttons
+   - sliders with live values, presets, dropdowns and toggles
+   - readouts and the live graph
+   - fullscreen, "Copy share link" and "Reset to defaults"
+   - keyboard shortcuts (Space, R, →)
+   - touch and mouse input
+   - previous/next links and related simulations
+
+   Other options:
+   - `audio: true` adds a Sound on/off button. Use it with `SimLab.audio.tone()`, `voice()` or `noise()`.
+   - `transport: false` hides Play/Pause for activities that don't need time.
+   - `buttons: [...]` adds action buttons.
+   - `pointer: { down, move, up }` handles drag interactions.
+   - `onParam` keeps the simulation running while a slider moves, instead of restarting it.
+   - `mobileAspect: '3 / 4'` gives the canvas a taller shape on phones.
+
+   Helpers are available too: `SimLab.math` (clamp, rk4, fmt…), `SimLab.vec`, and `SimLab.draw` (arrow, text, grid, curve…).
+
+4. **Add a thumbnail** (optional): `assets/img/thumbs/<sim-id>.svg`, 320×200. If you skip this, the default thumbnail is used.
+
+5. **Add ONE entry to `SIMULATIONS` in `assets/js/catalog.js`.** Copy an existing entry and edit it:
+
+   ```js
+   {
+     id: 'spring-mass', subject: 'physics', branch: 'mechanics',
+     title: 'Spring–Mass Oscillator',
+     description: "Stretch a spring and explore Hooke's law.",
+     level: 'Beginner', tags: ['hooke', 'spring', 'oscillation'],
+     thumbnail: '/assets/img/thumbs/spring-mass.svg',
+     link: '/physics/spring-mass/',
+     status: 'live',            // 'coming-soon' shows it greyed out, not clickable
+     featured: false,           // true → appears in "Featured" on the home page
+     dateAdded: '2026-10-15',   // drives "Recently added" and the "New" badge (30 days)
+     prerequisites: ['pendulum'] // optional related simulations
+   },
+   ```
+
+That's it. The home page, menus, search, subject page, counts, footer sitemap, prev/next links and related simulations all update automatically.
+
+---
+
+## How to add a new subject (step by step)
+
+1. **Create the folder** `/<subject-id>/`, for example `/geology/`.
+2. **Copy** `physics/index.html` into it and change **only** `data-subject="physics"` to `data-subject="geology"`. Update the `<title>` and meta description too.
+3. **Add ONE entry to `SUBJECTS` in `assets/js/catalog.js`:**
+
+   ```js
+   {
+     id: 'geology', name: 'Geology', icon: '🪨', color: '#f97316',
+     tagline: 'Rocks, plates and volcanoes.',
+     description: 'A sentence or two for the subject banner.',
+     status: 'coming-soon',     // flip to 'live' when it has simulations
+     branches: [ { id: 'rocks', name: 'Rocks & Minerals' }, { id: 'plates', name: 'Plate Tectonics' } ]
+   },
+   ```
+
+4. Add simulations to it as described above, using `subject: 'geology'` and one of its branch ids.
+
+A subject marked `coming-soon` shows up muted, with a badge, everywhere. Change it to `live` and it becomes clickable across the whole site.
+
+Subject pages accept URL filters, for example `/physics/?branch=sound&level=Beginner&q=pitch`.
+
+---
+
+## How to change the theme
+
+Open `assets/css/style.css`. **Section 1** at the top holds every design token as a CSS variable:
+
+- **Colours:** `--primary`, `--secondary`, `--bg`, `--surface`, `--text`, … Dark theme values sit in `:root`, and light theme values in `[data-theme='light']`.
+- **Fonts:** `--font-heading` and `--font-body`. If you change a font, also update the Google Fonts `<link>` in each page's `<head>`.
+- **Spacing, radius and shadows:** `--space-*`, `--radius*`, `--shadow*`
+- **Simulation canvas colours:** `--canvas-bg`, `--canvas-grid`, `--sim-1` … `--sim-4`. Simulations read these, so they re-theme automatically.
+
+Each subject's accent colour comes from its `color` in `catalog.js`.
+
+Dark is the default theme. On a first visit the site follows the visitor's system preference. After that, their choice from the toggle is remembered in `localStorage`.
+
+Site-wide settings are at the top of `catalog.js` in `SimLab.site`:
+- `name`
+- `github` URL (used for the header icon and the "Report an issue" / "Suggest a simulation" links)
+- `newBadgeDays`
+
+---
+
+## Deploying on GitHub Pages
+
+1. Create a repository named **`<your-username>.github.io`**.
+2. Upload all files to the **root** of the default branch, including the hidden `.nojekyll` file.
+3. In **Settings → Pages**, set *Source* to "Deploy from a branch", then pick your branch and `/ (root)`.
+4. Wait a minute, then open `https://<your-username>.github.io/`.
+
+**If you fork this site**, replace `i2003-byte` with your username in:
+- `SimLab.site` inside `catalog.js`
+- the canonical and `og:` URLs in the page `<head>`s
+
+**To preview locally**, run any static server from the project folder, for example `python3 -m http.server 8000`, then open http://localhost:8000. Opening the files directly with `file://` won't work, because the paths are root-relative.
+
+---
+
+## Accessibility and performance notes
+
+- **Keyboard:** everything works from the keyboard. Focus outlines are visible, and there is a skip link.
+  - Search: <kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd>
+  - Simulations: <kbd>Space</kbd> play/pause, <kbd>R</kbd> restart, <kbd>→</kbd> step
+- **Screen readers:** canvases have ARIA labels, and controls are real `<input>`, `<select>` and `<button>` elements.
+- **Reduced motion:** if the visitor prefers reduced motion, scroll animations are turned off, the hero draws one still frame, and simulations don't autoplay.
+- **Sound:** sound is **off** until the user switches it on, and the choice is remembered. Tones go through a compressor to protect ears and speakers. Decibel samples play quietly.
+- **Speed:** there are no libraries (the graph plotter is built in). Animations pause when the tab is hidden or the canvas is off-screen, and thumbnails are small SVGs.
+
+## Credits and licence
+
+Built with HTML, CSS and JavaScript. Hearing ranges, speeds of sound and decibel levels are typical textbook values; real measurements vary.
+Found a bug, or an error in the science? [Open an issue](https://github.com/i2003-byte/i2003-byte.github.io/issues/new).

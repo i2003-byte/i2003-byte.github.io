@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bell Jar: Sound in a Vacuum — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Pump the air out of a jar with a ringing bell inside and listen as the sound fades away.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/bell-jar/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Bell Jar: Sound in a Vacuum — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Pump the air out of a jar with a ringing bell inside and listen as the sound fades away.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/bell-jar/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="bell-jar">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Sound needs a <strong>medium</strong> — particles that can vibrate — to travel. When air is pumped out of the jar there are fewer and fewer particles to carry the vibrations, so the sound gets fainter. In a complete <strong>vacuum</strong> (empty space) sound cannot travel at all, even though you can still <em>see</em> the hammer hitting the bell, because light does not need a medium.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Less air → fainter sound</code>
+            <code class="formula">Vacuum → no sound at all</code>
+            <p class="formula-note">sound cannot travel through empty space</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Astronauts on the Moon use radios to talk — there is no air to carry their voices</li>
+              <li>Explosions in space are silent (films add the sound!)</li>
+              <li>Double-glazed windows with a thin vacuum or gas gap reduce outside noise</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Pump out all the air. Can you still see the bell ringing? Can you hear it?<details><summary>Show answer</summary>You can see it but not hear it — light travels through a vacuum, sound does not.</details></li>
+              <li>Let the air back in halfway. What happens to the loudness?<details><summary>Show answer</summary>The sound returns, at about half the loudness.</details></li>
+              <li>Why can’t astronauts talk to each other directly on the Moon?<details><summary>Show answer</summary>There is no air on the Moon to carry sound.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Vacuum</strong> — A space with no air or other particles.</li>
+              <li><strong>Medium</strong> — The material through which sound travels.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

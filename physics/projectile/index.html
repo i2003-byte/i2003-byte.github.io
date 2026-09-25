@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Projectile Motion — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Launch a ball at any angle and speed. Trace its parabola and measure time of flight, maximum height and range.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/projectile/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Projectile Motion — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Launch a ball at any angle and speed. Trace its parabola and measure time of flight, maximum height and range.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/projectile/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="projectile">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Once a ball leaves the cannon, the only force on it (ignoring air) is <strong>gravity</strong>, pulling straight down. So the motion splits into two independent parts: <strong>horizontally</strong> the ball keeps a constant speed, while <strong>vertically</strong> it slows down, stops at the top and speeds up on the way down. Together they trace a <strong>parabola</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">x = v₀ cos θ · t</code>
+            <p class="formula-note">horizontal position — constant speed</p>
+            <code class="formula">y = h + v₀ sin θ · t − ½ g t²</code>
+            <p class="formula-note">vertical position — constant acceleration</p>
+            <code class="formula">H = h + (v₀ sin θ)² / 2g</code>
+            <p class="formula-note">maximum height</p>
+            <code class="formula">R = v₀² sin 2θ / g   (when h = 0)</code>
+            <p class="formula-note">range on level ground — biggest at θ = 45°</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A footballer taking a long kick or a cricketer hitting a six</li>
+              <li>Water from a garden hose or a fountain</li>
+              <li>A long-jumper leaving the board</li>
+              <li>Fireworks and the path of an arrow</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With height 0, find the angle that gives the longest range. Is it the same on the Moon?<details><summary>Show answer</summary>45° in both cases — gravity changes how far, but not the best angle.</details></li>
+              <li>Launch at 30° and then at 60° with the same speed. What do you notice about the range?<details><summary>Show answer</summary>The ranges are equal: complementary angles (adding to 90°) give the same range when h = 0.</details></li>
+              <li>Raise the launch height to 20 m. Is 45° still the best angle?<details><summary>Show answer</summary>No — from a height, a slightly lower angle (≈ 40° or less) goes further.</details></li>
+              <li>Double the speed. How does the range change?<details><summary>Show answer</summary>It becomes four times larger, because range ∝ v₀².</details></li>
+            </ol>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Amplitude &amp; Loudness — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Turn the amplitude up and down and watch the wave grow taller. Bigger vibrations make louder sounds.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/amplitude-loudness/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Amplitude &amp; Loudness — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Turn the amplitude up and down and watch the wave grow taller. Bigger vibrations make louder sounds.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/amplitude-loudness/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="amplitude-loudness">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The <strong>amplitude</strong> is how far a vibrating object (or air particle) moves from its resting position. A bigger amplitude pushes the air harder, giving a <strong>louder</strong> sound. On a wave diagram, amplitude is the height of a crest above the middle line. Loudness grows with the <strong>square</strong> of the amplitude, so doubling the amplitude makes the sound four times louder.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Loudness ∝ (amplitude)²</code>
+            <p class="formula-note">double the amplitude → 4× louder</p>
+            <code class="formula">Loudness is measured in decibels (dB)</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Hitting a drum harder makes a louder sound</li>
+              <li>Turning up the volume makes a speaker cone move further</li>
+              <li>Shouting pushes more air from the lungs than whispering</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set the amplitude to 25%, then to 50%. How many times louder is the sound?<details><summary>Show answer</summary>4 times louder (2² = 4).</details></li>
+              <li>Does changing the amplitude change the pitch?<details><summary>Show answer</summary>No — the frequency (pitch) stays the same; only loudness changes.</details></li>
+              <li>Watch the air particles. What changes when the sound is louder?<details><summary>Show answer</summary>They move further back and forth — the compressions are more squeezed.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Amplitude</strong> — The maximum distance a vibrating particle moves from its resting position.</li>
+              <li><strong>Loudness</strong> — How strong a sound seems; depends on amplitude.</li>
+              <li><strong>Compression / rarefaction</strong> — Regions where air particles are squeezed together / spread apart.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

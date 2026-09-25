@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="human-ear">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#422006"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <text x="95" y="100" font-size="90" text-anchor="middle" dominant-baseline="central">👂</text>
+  <path d="M150 100 H220" stroke="#fbbf24" stroke-width="3" stroke-dasharray="4 6"/>
+  <text x="255" y="100" font-size="54" text-anchor="middle" dominant-baseline="central">🧠</text>
+</svg>

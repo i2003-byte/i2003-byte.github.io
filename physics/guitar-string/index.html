@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guitar String — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Change the length, thickness and tightness of a string and pluck it. Discover what makes a note higher or lower.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/guitar-string/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Guitar String — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Change the length, thickness and tightness of a string and pluck it. Discover what makes a note higher or lower.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/guitar-string/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="guitar-string">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A plucked string vibrates and makes the air around it vibrate. Three things decide its <strong>pitch</strong>: its <strong>length</strong> (pressing a fret makes the vibrating part shorter → higher), its <strong>tightness</strong> (turning the peg to tighten it → higher) and its <strong>thickness</strong> (a thicker, heavier string → lower). That is why a guitar has thin and thick strings, and why musicians tune by tightening the pegs.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">f = (1 / 2L) × √(T / μ)</code>
+            <p class="formula-note">L = length, T = tension, μ = mass per metre</p>
+            <code class="formula">Half the length → double the frequency (one octave up)</code>
+            <code class="formula">Four times the tension → double the frequency</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Guitar, sitar, veena and violin players press strings to change notes</li>
+              <li>Tuning pegs tighten or loosen strings</li>
+              <li>The thickest string on a guitar plays the lowest note</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Halve the string length (0.65 m → about 0.33 m). What happens to the frequency?<details><summary>Show answer</summary>It doubles — the note goes up one octave.</details></li>
+              <li>Keep everything else fixed and switch from thin to very thick. Higher or lower?<details><summary>Show answer</summary>Lower.</details></li>
+              <li>Can you make a thick string play the same note as a thin one?<details><summary>Show answer</summary>Yes — tighten it more, or shorten it.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Tension</strong> — How tightly the string is stretched.</li>
+              <li><strong>Fret</strong> — A metal strip on the neck; pressing behind it shortens the vibrating string.</li>
+              <li><strong>Octave</strong> — A doubling of frequency.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

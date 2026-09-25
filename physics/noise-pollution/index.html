@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quiet the Neighbourhood — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Add trees, silencers and soundproof walls to cut noise pollution around a school, a hospital and homes.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/noise-pollution/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Quiet the Neighbourhood — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Add trees, silencers and soundproof walls to cut noise pollution around a school, a hospital and homes.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/noise-pollution/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="noise-pollution">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Noise pollution</strong> is the presence of unwanted, excessive sound in the surroundings. It can cause lack of sleep, high blood pressure, anxiety and even hearing loss. We can reduce it by controlling noise <strong>at the source</strong> (silencers, lower volume, no horns), <strong>along its path</strong> (trees, walls) and by keeping noisy activities <strong>away</strong> from where people live, study or heal.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Energy of sounds adds up: two equal sources → +3 dB</code>
+            <code class="formula">Every doubling of distance → about −6 dB</code>
+            <code class="formula">Goals: hospital ≤ 50 dB, school ≤ 55 dB, homes ≤ 55 dB</code>
+            <p class="formula-note">typical guideline values</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Silencers on vehicle exhausts</li>
+              <li>Rows of trees planted along highways</li>
+              <li>Sound barriers beside flyovers and railway lines</li>
+              <li>Industries located away from residential areas</li>
+              <li>“No horn” signs near hospitals and schools</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>What is the fewest number of measures that reaches all three goals?<details><summary>Show answer</summary>Try moving the factory, limiting the loudspeaker and adding silencers — then fine-tune with trees or a wall.</details></li>
+              <li>Which single measure lowers the hospital’s noise the most?<details><summary>Show answer</summary>Moving the factory away — it is the closest loud source.</details></li>
+              <li>Why are trees helpful along roads?<details><summary>Show answer</summary>Leaves and branches absorb and scatter sound, reducing the noise reaching buildings.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Noise pollution</strong> — Unwanted, excessive sound that harms health.</li>
+              <li><strong>Silencer</strong> — A device fitted to exhausts to reduce engine noise.</li>
+              <li><strong>Soundproof</strong> — Built to stop sound passing through.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

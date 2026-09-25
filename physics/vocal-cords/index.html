@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Voice Box (Larynx) — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Tighten and loosen virtual vocal cords and push air from the lungs to find out how the larynx makes our voice.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/vocal-cords/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Voice Box (Larynx) — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Tighten and loosen virtual vocal cords and push air from the lungs to find out how the larynx makes our voice.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/vocal-cords/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="vocal-cords">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Our voice is produced in the <strong>larynx</strong> (voice box) at the top of the windpipe. Two <strong>vocal cords</strong> stretch across it, leaving a narrow slit. When air from the lungs is forced through the slit, the vocal cords <strong>vibrate</strong> and produce sound. Muscles make the cords <strong>tighter or looser</strong>, changing the pitch. Men have longer cords (about 20 mm) than women (about 15 mm) and children, so men usually have deeper voices.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Tighter &amp; thinner cords → higher pitch</code>
+            <code class="formula">Longer &amp; thicker cords → lower pitch</code>
+            <code class="formula">More air pushed → louder voice</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Put your fingers on your throat and hum — you can feel the vibration</li>
+              <li>A boy’s voice “breaks” (gets deeper) as his vocal cords grow</li>
+              <li>Stretching a rubber band tighter gives a higher sound when plucked — the same idea</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the tightness the same and switch between man, woman and child. Which is highest?<details><summary>Show answer</summary>The child — shortest vocal cords give the highest pitch.</details></li>
+              <li>Set the air to 0%. Is there any sound?<details><summary>Show answer</summary>No — without air flowing, the cords do not vibrate.</details></li>
+              <li>How can a singer reach a high note?<details><summary>Show answer</summary>By tightening the vocal cords.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Larynx</strong> — The voice box, at the upper end of the windpipe.</li>
+              <li><strong>Vocal cords</strong> — Two folds in the larynx that vibrate to produce voice.</li>
+              <li><strong>Windpipe</strong> — The tube that carries air between the throat and the lungs.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

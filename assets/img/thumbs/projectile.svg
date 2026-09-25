@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="projectile">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c4a6e"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <line x1="0" y1="172" x2="320" y2="172" stroke="#7dd3fc" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M30 170 Q 150 -10 290 170" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <path d="M30 170 Q 95 70 150 80" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="150" cy="80" r="11" fill="#fbbf24"/>
+  <rect x="18" y="160" width="40" height="14" rx="6" fill="#94a3b8" transform="rotate(-45 30 168)"/>
+  <circle cx="30" cy="170" r="10" fill="#475569"/>
+</svg>

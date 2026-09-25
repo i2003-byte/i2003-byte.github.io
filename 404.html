@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page not found | SimLab</title>
+  <meta name="description" content="This page could not be found. Explore SimLab’s interactive science simulations instead.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/404.html">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Page not found | SimLab">
+  <meta property="og:description" content="This page could not be found. Explore SimLab’s interactive science simulations instead.">
+  <meta property="og:url" content="https://i2003-byte.github.io/404.html">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="404">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main">
+    <div class="container error-page">
+      <div class="error-code gradient-text">4<span class="orbit-404" aria-hidden="true">🪐</span>4</div>
+      <h1>This page drifted out of orbit.</h1>
+      <p>The page you’re looking for doesn’t exist (or has moved). Try searching, or head back to the lab.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/">Go to the home page</a>
+        <button class="btn" type="button" data-open-search><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search simulations</button>
+        <a class="btn" href="/simulations/">All simulations</a>
+      </div>
+      <div class="grid grid-auto" id="notfound-subjects" style="text-align:left"></div>
+    </div>
+  </main>
+
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script>
+    // Show the subject cards so visitors have somewhere to go
+    document.getElementById('notfound-subjects').innerHTML = SimLab.subjects.map(SimLab.ui.subjectCard).join('');
+    SimLab.ui.reveal();
+  </script>
+</body>
+</html>

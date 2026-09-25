@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="electric-fields">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset="1" stop-color="#3b0764"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M110 100 C 140 40, 180 40, 210 100 M110 100 C 140 160, 180 160, 210 100 M110 100 L210 100 M110 100 C 130 10, 190 10, 210 100 M110 100 C 130 190, 190 190, 210 100" fill="none" stroke="#c4b5fd" stroke-opacity=".7" stroke-width="2"/>
+  <circle cx="110" cy="100" r="18" fill="#f87171"/><text x="110" y="101" font-size="24" fill="#fff" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="700">+</text>
+  <circle cx="210" cy="100" r="18" fill="#60a5fa"/><text x="210" y="100" font-size="28" fill="#fff" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-weight="700">−</text>
+</svg>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About SimLab</title>
+  <meta name="description" content="SimLab is a free, open collection of interactive science simulations built with plain HTML, CSS and JavaScript.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/about.html">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="About SimLab">
+  <meta property="og:description" content="SimLab is a free, open collection of interactive science simulations built with plain HTML, CSS and JavaScript.">
+  <meta property="og:url" content="https://i2003-byte.github.io/about.html">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="about">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main">
+    <div class="container">
+      <section class="page-hero reveal">
+        <span class="eyebrow">About</span>
+        <h1>Science is something you <span class="gradient-text">do</span>.</h1>
+        <p>SimLab is a free, open collection of interactive simulations. Every experiment runs right in your browser — on a phone, a tablet or a classroom projector — with no sign-up and no installs.</p>
+      </section>
+
+      <div class="feature-grid">
+        <div class="card reveal"><div class="ico" aria-hidden="true">🎛️</div><h3>Hands-on</h3><p>Every idea comes with sliders, play/pause, live readouts and graphs.</p></div>
+        <div class="card reveal"><div class="ico" aria-hidden="true">🔊</div><h3>See it &amp; hear it</h3><p>Sound simulations generate real tones with the Web Audio API — switch sound on to listen.</p></div>
+        <div class="card reveal"><div class="ico" aria-hidden="true">🔗</div><h3>Shareable</h3><p>Copy a link that recreates your exact setup — perfect for lessons and homework.</p></div>
+        <div class="card reveal"><div class="ico" aria-hidden="true">♿</div><h3>Accessible</h3><p>Keyboard friendly, screen-reader labels, reduced-motion support and light/dark themes.</p></div>
+      </div>
+
+      <div class="prose">
+        <h2 class="reveal">What’s inside</h2>
+        <p>We’re starting with <strong>Physics</strong>, including the <strong>Sound Lab</strong> — 14 simulations covering the Class 7 chapter on sound: how sound is made and travels, amplitude and loudness, frequency and pitch, the voice box and the ear, the range of hearing, music versus noise, noise pollution, and two instruments you can build and play. Chemistry, Mathematics, Biology and Astronomy are on the way.</p>
+
+        <h2 class="reveal">How it’s built</h2>
+        <p>Plain HTML, CSS and vanilla JavaScript — no frameworks and no build step. The whole site is driven by one data file, <code>catalog.js</code>: add an entry there and the menus, search, subject pages and sitemap update themselves. The source is on <a href="https://github.com/i2003-byte/i2003-byte.github.io" target="_blank" rel="noopener">GitHub</a> and the README explains how to add new subjects and simulations.</p>
+
+        <h2 class="reveal">A note on accuracy</h2>
+        <p>Simulations simplify the real world so ideas are easy to see — for example, vibrations are slowed down and air resistance is often ignored. The Learn panel of each simulation explains the model it uses. Hearing ranges and decibel levels are typical values; real measurements vary.</p>
+
+        <h2 class="reveal">Get involved</h2>
+        <ul>
+          <li><a href="https://github.com/i2003-byte/i2003-byte.github.io/issues/new?labels=simulation-request" target="_blank" rel="noopener">Suggest a simulation</a></li>
+          <li><a href="https://github.com/i2003-byte/i2003-byte.github.io/issues/new" target="_blank" rel="noopener">Report a bug or an error in the science</a></li>
+          <li>Contribute code — fork the repository and copy the <code>/_template/</code> folder to get started.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+</body>
+</html>

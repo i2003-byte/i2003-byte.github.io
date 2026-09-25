@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="ray-optics">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1917"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <ellipse cx="160" cy="100" rx="14" ry="70" fill="#7dd3fc" fill-opacity=".35" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M20 60 L160 60 L290 130 M20 100 L290 100 M20 140 L160 140 L290 70" fill="none" stroke="#fde047" stroke-width="2.5"/>
+  <circle cx="230" cy="100" r="4" fill="#fde047"/>
+</svg>

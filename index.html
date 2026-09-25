@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SimLab — Don&#x27;t just read science. Play with it.</title>
+  <meta name="description" content="Free interactive science simulations that run in your browser. Explore physics — projectile motion, pendulums and a 14-activity Sound Lab — and more subjects soon.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="SimLab — Don&#x27;t just read science. Play with it.">
+  <meta property="og:description" content="Free interactive science simulations that run in your browser. Explore physics — projectile motion, pendulums and a 14-activity Sound Lab — and more subjects soon.">
+  <meta property="og:url" content="https://i2003-byte.github.io/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="home">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <a class="hero-pill" id="hero-pill" href="/simulations/"><span class="badge badge-new">New</span> Fresh simulations are live →</a>
+        <h1 id="hero-title">Don’t just read science.<br><span class="gradient-text">Play with it.</span></h1>
+        <p class="lead">Interactive simulations to explore physics and beyond, right in your browser.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#subjects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Start Exploring</a>
+          <button class="btn btn-lg" type="button" data-surprise><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>Surprise Me</button>
+        </div>
+        <!-- Filled from catalog.js: "X Simulations • Y Subjects • Free & Open" -->
+        <div class="stats-strip" id="hero-stats" aria-label="Site statistics"></div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK SEARCH ============ -->
+    <section class="section-tight" aria-labelledby="search-title">
+      <div class="container">
+        <div class="quick-search reveal">
+          <h2 id="search-title">What do you want to explore?</h2>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label class="sr-only" for="quick-search">Search simulations</label>
+            <input type="search" id="quick-search" placeholder="Search simulations… try 'pendulum' or 'waves'">
+            <ul class="search-results" id="quick-results" hidden></ul>
+          </div>
+          <div class="chip-row" role="group" aria-label="Quick filters">
+            <button class="chip" type="button" data-chip="sound lab" aria-pressed="false">🔊 Sound Lab</button>
+            <button class="chip" type="button" data-chip="mechanics" aria-pressed="false">⚙️ Mechanics</button>
+            <button class="chip" type="button" data-chip="waves" aria-pressed="false">🌊 Waves</button>
+            <button class="chip" type="button" data-chip="optics" aria-pressed="false">🔦 Optics</button>
+            <button class="chip" type="button" data-chip="electricity" aria-pressed="false">⚡ Electricity</button>
+            <button class="chip" type="button" data-chip="beginner" aria-pressed="false">🌱 Beginner-friendly</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPLORE BY SUBJECT ============ -->
+    <section class="section" id="subjects" aria-labelledby="subjects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Explore by subject</span><h2 id="subjects-title">Pick your lab</h2></div>
+          <p>Physics is open now. More labs are being built — they unlock automatically when ready.</p>
+        </div>
+        <div class="grid grid-auto" id="subject-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED ============ -->
+    <section class="section section-alt" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Featured</span><h2 id="featured-title">Start with these favourites</h2></div>
+          <div class="scroller-controls">
+            <button class="icon-btn" type="button" id="featured-prev" aria-label="Scroll featured simulations left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="icon-btn" type="button" id="featured-next" aria-label="Scroll featured simulations right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+        <div class="scroller-wrap">
+          <div class="scroller" id="featured-track" tabindex="0" aria-label="Featured simulations (scroll sideways)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECENTLY ADDED ============ -->
+    <section class="section" aria-labelledby="recent-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Recently added</span><h2 id="recent-title">Fresh from the lab</h2></div>
+          <a class="btn btn-ghost" href="/simulations/">See all simulations →</a>
+        </div>
+        <div class="grid grid-auto" id="recent-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ BROWSE BY LEVEL ============ -->
+    <section class="section section-alt" aria-labelledby="level-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Browse by level</span><h2 id="level-title">Right-sized for you</h2></div>
+          <p>From first steps to deep dives.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Difficulty level" id="level-tabs"></div>
+        <div class="level-list" role="tabpanel" id="level-panel" tabindex="0"></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head reveal" style="justify-content:center;text-align:center">
+          <div><span class="eyebrow">How it works</span><h2 id="how-title">Three steps to “aha!”</h2></div>
+        </div>
+        <div class="steps">
+          <div class="card step reveal" style="--accent:#38bdf8"><div class="step-icon" aria-hidden="true">🧭</div><h3>Pick a topic</h3><p>Browse by subject, level or search. Every simulation opens instantly — no sign-up, no install.</p></div>
+          <div class="card step reveal" style="--accent:#a78bfa"><div class="step-icon" aria-hidden="true">🎛️</div><h3>Play with the controls</h3><p>Drag sliders, press play, pause and step. Watch the numbers and graphs change live.</p></div>
+          <div class="card step reveal" style="--accent:#34d399"><div class="step-icon" aria-hidden="true">💡</div><h3>Understand the concept</h3><p>Open the Learn panel for the big idea, key formulas, real-world examples and challenges.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEACHERS & STUDENTS ============ -->
+    <section class="section section-alt" aria-labelledby="audience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">For teachers &amp; students</span><h2 id="audience-title">Made for the classroom — and the bedroom desk</h2></div>
+        </div>
+        <div class="audience">
+          <div class="card reveal" style="--accent:#fbbf24">
+            <h3>👩‍🏫 For teachers</h3>
+            <ul>
+              <li><span class="i" aria-hidden="true">🖥️</span><span><strong>Fullscreen mode</strong> for the projector or smartboard.</span></li>
+              <li><span class="i" aria-hidden="true">🔗</span><span><strong>Shareable setups:</strong> “Copy share link” saves every slider in the URL, so the whole class opens the exact same experiment.</span></li>
+              <li><span class="i" aria-hidden="true">🎯</span><span><strong>Ready-made challenges</strong> in every Learn panel for discussion or homework.</span></li>
+            </ul>
+          </div>
+          <div class="card reveal" style="--accent:#38bdf8">
+            <h3>🧑‍🎓 For students</h3>
+            <ul>
+              <li><span class="i" aria-hidden="true">📚</span><span><strong>Self-study:</strong> see the formulas from your textbook come alive.</span></li>
+              <li><span class="i" aria-hidden="true">📝</span><span><strong>Homework exploration:</strong> test “what if?” questions and check your answers.</span></li>
+              <li><span class="i" aria-hidden="true">📱</span><span><strong>Works everywhere:</strong> phone, tablet or laptop — touch-friendly controls.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-band reveal" style="margin-top:2rem">
+          <h2>Have an idea for a simulation?</h2>
+          <p>SimLab grows with its community. Tell us what you’d love to explore next.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="suggest-link" href="https://github.com/i2003-byte/i2003-byte.github.io/issues/new?labels=simulation-request" target="_blank" rel="noopener">Suggest a simulation</a>
+            <button class="btn" type="button" data-surprise><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>Surprise me instead</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
