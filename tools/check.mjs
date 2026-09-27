@@ -20,7 +20,8 @@
      5. Every root-relative link/src in every HTML file points to a real file
      6. Every page has <title>, meta description and a viewport tag
      7. Generated files (sitemap.xml, llms.txt) match catalog.js
-     8. Required files exist (.nojekyll, 404.html, favicon …)
+     8. README.md lists every live simulation (the "What's inside" table)
+     9. Required files exist (.nojekyll, 404.html, favicon …)
 
    Used by: the Claude Code pre-push hook (.claude/settings.json),
    GitHub Actions (.github/workflows/check.yml) and humans.
@@ -186,7 +187,12 @@ for (const [file, content] of [['sitemap.xml', sitemapXml()], ['llms.txt', llmsT
   else err(`${file} is out of date with catalog.js — run: node tools/check.mjs --write`);
 }
 
-/* ---------- 8. Required files ---------- */
+/* ---------- 8. README lists every live simulation ---------- */
+const readme = exists('README.md') ? fs.readFileSync(path.join(ROOT, 'README.md'), 'utf8') : '';
+for (const m of simulations.filter((x) => S.isLive(x)))
+  if (!readme.includes(m.title)) err(`README.md: live simulation "${m.title}" is missing from the "What's inside" table`);
+
+/* ---------- 9. Required files ---------- */
 for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md'])
   if (!exists(f)) err(`missing required file: ${f}`);
 

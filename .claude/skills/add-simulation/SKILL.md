@@ -50,4 +50,6 @@ node tools/check.mjs --write     # must end with ✅
 node tools/browser-test.mjs /<subject>/<id>/   # if Playwright is available
 git add -A && git commit -m "Add <title> simulation" && git push origin HEAD:main
 ```
-Update the "Current content" section of `AGENTS.md` if the list of live simulations changed.
+Also update, before pushing:
+- the "What's inside" table in `README.md` (title, count per topic and total; the check enforces the titles)
+- the "Current content" section of `AGENTS.md`

@@ -13,8 +13,9 @@ It deploys from the `main` branch via GitHub Pages. There is no build step.
 4. **Phone + desktop.** No horizontal scrolling at 375px, touch targets at least 44px, and the layout must also work at 1366px.
 5. **Accessibility.** Canvases get `ariaLabel`, controls are real `<button>`/`<input>`/`<select>`, respect `prefers-reduced-motion`, and keep focus visible.
 6. **Sound is off until the user turns it on.** Keep volumes gentle (`gain` ≤ 0.6).
-7. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
-8. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
+7. **Keep `README.md` in step with the site.** When simulations or subjects are added, renamed or removed, update the "What's inside" table in `README.md`: the titles, the counts per topic and the total. `tools/check.mjs` fails if a live simulation's title is missing from the README.
+8. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
+9. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
 
 ## Workflow (every change)
 ```bash
