@@ -1,32 +1,45 @@
 # SimLab — interactive science simulations
 
 > **Don't just read science. Play with it.**
-> Free, open, interactive simulations that run in any browser — phone, tablet or desktop.
 
-Live site: **https://i2003-byte.github.io/**
+**Live site: https://i2003-byte.github.io/**
 
-SimLab is a plain **HTML + CSS + vanilla JavaScript** website. There is no framework and no build step: upload the files to GitHub Pages and it works. Everything is driven by **one data file**, `assets/js/catalog.js`.
+[![SimLab — Don't just read science. Play with it.](assets/img/og-image.png)](https://i2003-byte.github.io/)
 
-It starts with **Physics**, including the **Sound Lab**: 14 simulations for the Class 7 chapter on sound.
+SimLab is a free collection of interactive science simulations for school students (starting with Class 7). Every simulation runs in the browser on a phone, tablet or computer, with no sign-up and no install. Students move sliders, press play, watch live graphs and hear real sounds, then open the **Learn** panel for the concept, key formulas, real-world examples and challenge questions.
 
-| Sound Lab | What students do |
+## What's inside
+
+**22 live simulations** in Physics. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+
+| Topic | Simulations |
 |---|---|
-| Vibrating Objects | Strike a fork, drum, bell or ruler. Touch it to stop the vibration, and the sound stops too |
-| Sound Through Solids, Liquids & Gases | Race a sound pulse through steel, water and air |
-| Bell Jar | Pump the air out and hear the ringing fade. Sound can't cross a vacuum |
-| Amplitude & Loudness | Grow the amplitude and hear the sound get louder |
-| Frequency & Pitch | Slide from 20 Hz to 2 kHz, count cycles, find notes on a piano |
-| Oscillation Counter | Time a pendulum and calculate T and f yourself |
-| Voice Box (Larynx) | Tighten the vocal cords and push air from the lungs |
-| Inside the Ear | Follow a sound to the eardrum, bones, cochlea and brain |
-| Who Can Hear It? | Infrasonic, audible and ultrasonic ranges for humans, dogs, bats and elephants |
-| Music or Noise? | Sort clips by their regular or irregular wave patterns |
-| City Decibel Meter | Measure city sounds in dB, see how distance changes the level, and learn safe listening times |
-| Quiet the Neighbourhood | Cut noise pollution with trees, silencers and walls |
-| Water Glass Xylophone | Tune a jal tarang by tapping or blowing |
-| Guitar String | Change length, thickness and tension, then pluck |
+| ⚙️ **Mechanics** (2) | Projectile Motion · Simple Pendulum |
+| 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
+| 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 
-It also has **Projectile Motion** and **Simple Pendulum**. Six more physics simulations are listed as "coming soon".
+## Features
+- **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs
+- **For classrooms:**
+  - Fullscreen mode
+  - **Copy share link** saves every setting in the URL, so a whole class can open the same experiment
+- **See and hear it:** sound simulations generate real tones. Sound is off until you switch it on.
+- **Works everywhere:** phone and desktop layouts, light and dark themes, keyboard shortcuts, screen-reader labels and reduced-motion support
+- **Fast and simple:**
+  - Plain HTML, CSS and JavaScript
+  - No frameworks, no build step, no tracking
+  - Hosted free on GitHub Pages
+
+## Suggest a simulation or report a problem
+Open an [issue](https://github.com/i2003-byte/i2003-byte.github.io/issues/new/choose) and pick **Simulation idea** or **Bug or science error**.
+
+## How this project is maintained
+The site is built and maintained with AI coding agents (Claude Code), guided by the files in this repository:
+- `AGENTS.md`: rules and a map for agents
+- `.claude/skills/`: step-by-step recipes
+- `tools/check.mjs`: automated checks that run before every change goes live
+
+See **Maintaining with AI** below.
 
 ---
 
