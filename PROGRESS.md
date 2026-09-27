@@ -13,10 +13,10 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
-## 2026-09-27 · request · Routines switched to Opus 5.5, 2 simulations per run
-- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md (2 simulations per run, quality first); all routines use claude-opus-5-5
+## 2026-09-27 · request · 2 simulations per run, quality first
+- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md (2 simulations per run, quality first)
 - Checks: ✅ check.mjs passed
-- Roadmap: unchanged. A manual Sonnet test run was stopped before pushing.
+- Roadmap: unchanged
 - Next time: take the first item in 📋 Next (Class 7 · Physics · Motion and time) and build 2 of its 3 simulations
 - Problems/notes: none
 

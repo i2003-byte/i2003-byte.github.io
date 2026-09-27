@@ -14,8 +14,17 @@ It deploys from the `main` branch via GitHub Pages. There is no build step.
 5. **Accessibility.** Canvases get `ariaLabel`, controls are real `<button>`/`<input>`/`<select>`, respect `prefers-reduced-motion`, and keep focus visible.
 6. **Sound is off until the user turns it on.** Keep volumes gentle (`gain` ≤ 0.6).
 7. **Keep `README.md` in step with the site.** When simulations or subjects are added, renamed or removed, update the "What's inside" table in `README.md`: the titles, the counts per topic and the total. `tools/check.mjs` fails if a live simulation's title is missing from the README.
-8. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
-9. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
+8. **This repository is public.** Files and commit messages describe *what* changed and why. Never write:
+   - AI model names or versions
+   - usage, token counts or costs
+   - session links or IDs
+   - personal information
+   - account or billing details
+   - secrets of any kind
+
+   Commit trailers that tools add automatically are the one exception.
+9. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
+10. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
 
 ## Workflow (every change)
 **Start of every session:** get the latest `main` (`git fetch origin main && git checkout -B <work-branch> origin/main`), then read the top 3 entries of `PROGRESS.md` to see where the last session stopped.
