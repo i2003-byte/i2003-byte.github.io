@@ -13,6 +13,17 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-09-27 · request · 4 simulations per run; new subjects approved
+- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md
+  - each run builds 4 simulations: finish the current item, then start the next
+  - approved new subjects: Economics, Geography, Computer Science
+  - languages are out of scope for now
+  - seeded one starter item for each new subject in 📋 Next
+- Checks: ✅ check.mjs passed
+- Roadmap: 3 items added to 📋 Next
+- Next time: finish Motion and time (pendulum-clock), then start the next 📋 Next item (3 more simulations)
+- Problems/notes: none
+
 ## 2026-09-27 · routine · Class 7 · Physics · Motion and time (part 1 of 2)
 - Built/changed: `physics/speed-race` (two-lane race, km/h → m/s, time = d ÷ v, d–t graph in race time with auto fast-forward), `physics/distance-time-graph` (4-leg bus trip drawing its own d–t graph, "guess first" toggle, ready-made trips); thumbnails, catalog, README, AGENTS
 - Checks: ✅ check.mjs passed · ✅ browser-test (both pages, /physics/ and / at phone + desktop); combined screenshot reviewed, label overlaps fixed

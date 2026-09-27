@@ -6,6 +6,8 @@
 ## Audience & scope
 - **Students:** Class 7–12, India (CBSE / NCERT syllabus).
 - **Subjects:** Physics first, then Chemistry, Mathematics, Biology (and Astronomy where the syllabus touches it).
+- **Approved new subjects** (added automatically when their topics come up): Economics, Geography, Computer Science.
+- **Out of scope for now:** languages.
 - **Priority:** topics that are most taught and hardest to picture in a textbook, lower classes first.
 - **Style:**
   - simple English
@@ -31,12 +33,15 @@
 - [~] **Class 7 · Physics · Motion and time.** Branch `mechanics`. Done: speed-race, distance-time-graph. Next: build the 3rd sim, a simple-pendulum clock (id `pendulum-clock`: count oscillations with a stopwatch, time period T = total time ÷ oscillations, NCERT-style table of length vs period; link to `pendulum` and `oscillation-counter` without duplicating them), then move this item to ✅ Done. Started 2026-09-27.
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
 
-## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; runs build 2 at a time)
+## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
 - [ ] **Class 7 · Physics · Electric current and its effects.** Branch `electricity`. Sims: circuit builder with symbols (open/closed, bulb, switch); heating effect and fuse; electromagnet strength (turns, current).
 - [ ] **Class 7 · Physics · Light.** Branch `optics`. Sims: light travels in a straight line (pinhole camera); plane mirror image and lateral inversion; Newton's colour disc / prism rainbow.
 - [ ] **Class 8 · Physics · Force and pressure.** Branch `mechanics`. Sims: push/pull and balanced/unbalanced forces; pressure = force ÷ area (bed of nails, school bag straps); liquid pressure with depth (holes in a bottle).
 - [ ] **Class 8 · Physics · Friction.** Branch `mechanics`. Sims: surface roughness vs sliding block; static vs sliding vs rolling friction; ball bearings and lubricants.
 - [ ] **Class 8 · Physics · Some natural phenomena.** Branch `electricity`. Sims: charging by rubbing (balloon and hair); electroscope; lightning and the lightning conductor.
+- [ ] **Class 7 · Geography · Earth's motions.** New subject `geography` (add it on first use). Sims: rotation, day and night and sunrise times across India; revolution and the seasons (tilted axis); time zones (IST vs world clocks).
+- [ ] **Class 11 · Economics · Demand and supply.** New subject `economics` (add it on first use). Sims: demand curve (price vs quantity, ₹); supply curve and market equilibrium; price ceiling / floor and shortage or surplus.
+- [ ] **Class 11 · Computer Science · Numbers and logic.** New subject `computer-science` (add it on first use). Sims: binary counter and place values; logic gates builder (AND/OR/NOT, truth tables); sorting algorithm race (bubble vs selection vs merge).
 - [ ] **Class 9 · Physics · Motion.** Branch `mechanics`. Sims: distance vs displacement; velocity–time graph and area = distance; uniform circular motion.
 - [ ] **Class 9 · Physics · Force and laws of motion.** Branch `mechanics`. Sims: inertia (coin on card); F = ma cart lab; action–reaction (balloon rocket); build out the `collisions` placeholder (momentum conservation).
 - [ ] **Class 9 · Physics · Gravitation.** Branch `mechanics`. Sims: universal gravitation between two masses; free fall and g (mass vs weight on planets); buoyancy and Archimedes' principle.

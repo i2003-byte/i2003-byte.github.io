@@ -1,11 +1,14 @@
 ---
 name: roadmap-run
-description: One autonomous SimLab build run. Resume or take the next ROADMAP.md item, build 2 simulations, update the roadmap, progress log, README and coverage, then ship to main. Use for scheduled routines, or when asked to "continue the roadmap" or "do the next topic".
+description: One autonomous SimLab build run. Resume or take the next ROADMAP.md item, build 4 simulations, update the roadmap, progress log, README and coverage, then ship to main. Use for scheduled routines, or when asked to "continue the roadmap" or "do the next topic".
 ---
 
-# Roadmap run: build the next 2 simulations
+# Roadmap run: build the next 4 simulations
 
-Goal: 2 high-quality finished simulations per run (quality over quantity), working through one roadmap item at a time. An item usually plans 3 simulations, so it spans 2 runs: leave it 🔨 In progress with a precise "Next:" note after the first run. The result must be live on `main`, with the tracking files telling the next run precisely where things stand.
+Goal: 4 high-quality finished simulations per run, working through the roadmap in order.
+- First finish the current 🔨 In progress item.
+- Then start the next 📋 Next item with the remaining budget. At most 2 items are touched per run.
+- Leave any unfinished item 🔨 In progress with a precise "Next:" note. The result must be live on `main`, with the tracking files telling the next run precisely where things stand.
 
 ## 0. Start from the latest `main`
 ```bash
@@ -22,16 +25,18 @@ Never work from an old branch. Other sessions may have pushed since.
    - Else take the **first item in 📋 Next**. Move it to 🔨 In progress with today's date before building.
    - If 📋 Next is empty, do step 6 (evolve the roadmap) and then build the first new item.
 
-## 2. Build 2 simulations
+## 2. Build 4 simulations
 Follow `.claude/skills/add-simulation/SKILL.md` for each one:
 - page
 - `sim.js`
 - thumbnail
 - catalog entry
 - If the item says "build out the `<id>` placeholder", reuse that catalog entry and flip it to `status: 'live'`.
-- **New subject** (e.g. chemistry, mathematics):
-  - Set the subject's `status: 'live'` in `catalog.js`.
-  - Give it branches that match the syllabus.
+- **Subject that already exists but is coming soon** (chemistry, mathematics, biology, astronomy): set its `status: 'live'` in `catalog.js` and give it branches that match the syllabus.
+- **Brand-new subject** (only Economics, Geography or Computer Science):
+  1. Add a `SUBJECTS` entry in `catalog.js` with an id, name, emoji icon, a distinct colour, tagline, description, `status: 'live'` and syllabus branches.
+  2. Copy `physics/index.html` to `/<id>/index.html` and change `data-subject`, `<title>` and meta.
+  3. Check the menu, home page and footer still look good at phone width.
 - **New physics branch:** add it to the subject's `branches` in `catalog.js`.
 - **Audience:** Class 7–12 India. Use simple English, Indian examples and SI units, and write your own words (no textbook copying).
 - **Science first:** double-check formulas and numbers, and state any simplification in the Learn panel.
@@ -64,13 +69,20 @@ If you truly cannot get a green check:
 3. Do not push broken simulations.
 
 ## 6. Evolve the roadmap (when 📋 Next has fewer than 5 items, or once a week)
-- Compare ✅ Done with the Class 7–12 India syllabus (CBSE / NCERT topic list) across Physics, Chemistry, Mathematics and Biology.
+- Compare ✅ Done with the Class 7–12 India syllabus (CBSE / NCERT topic list) across all subjects in `catalog.js`.
+- **Approved new subjects (auto-approved, Class 7–12 India curriculum):**
+  - Economics: supply and demand, simple and compound interest, budgets
+  - Geography: earth's rotation and revolution, seasons, monsoon, contour maps
+  - Computer Science: binary, sorting and searching algorithms, logic gates
+  - Statistics and probability belong under Mathematics.
+- **Languages are out of scope for now.** Don't add them, not even to Proposed.
+- Any other new subject goes to 💡 Proposed for a human to decide.
 - Add the most valuable missing sub-topics to the end of 📋 Next, each with class, subject, branch and 3 planned simulations. These are auto-approved when on the syllabus.
 - Ideas outside that scope go to 💡 Proposed with a one-line reason.
 - Don't add duplicates of anything in Done, In progress or Next.
 
 ## Rules
-- 2 simulations per run, from one roadmap item. If the item has only 1 simulation left, finish it and stop; don't start the next item. Spend spare effort on quality: science accuracy, clear drawings, a good Learn panel.
+- 4 simulations per run, from at most 2 roadmap items (finish the current one first). Quality still comes first: if a simulation isn't good enough, ship fewer and leave a Next note rather than pushing weak work.
 - Keep token use low:
   - Open only the files you need.
   - Copy patterns from the most similar existing simulation.

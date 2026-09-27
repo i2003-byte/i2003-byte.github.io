@@ -45,10 +45,11 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - `PROGRESS.md` is the memory: a log of every session, newest first.
 - Scheduled routines (and "continue the roadmap" requests) follow `.claude/skills/roadmap-run/SKILL.md`:
   - resume 🔨 In progress, or take the first 📋 Next item
-  - build 2 simulations per run; an item of ~3 simulations spans 2 runs
+  - build 4 simulations per run: finish the current item, then start the next
   - update ROADMAP/PROGRESS/README/AGENTS
   - push to `main`
-- **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. Anything else goes to 💡 Proposed.
+- **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. This includes the approved **new subjects**: Economics, Geography, Computer Science. Languages are out of scope for now.
+- Anything else goes to 💡 Proposed.
 - Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
 - **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, tidy, and record lessons.
 - **Learn from mistakes:** whenever you fix a non-obvious bug or a blocked push, add a one-line lesson to **Gotchas** below. Keep it at about 20 lines or fewer.
