@@ -22,7 +22,7 @@ It deploys from the `main` branch via GitHub Pages. There is no build step.
    - account or billing details
    - secrets of any kind
 
-   Commit trailers that tools add automatically are the one exception.
+   This includes commit messages and trailers: use only the generic `Co-Authored-By: Claude <noreply@anthropic.com>` that `.claude/settings.json` configures. `tools/check.mjs` blocks pushes whose files or unpushed commit messages contain model names or session links.
 9. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
 10. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
 

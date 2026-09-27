@@ -21,7 +21,9 @@
      6. Every page has <title>, meta description and a viewport tag
      7. Generated files (sitemap.xml, llms.txt) match catalog.js
      8. README.md lists every live simulation (the "What's inside" table)
-     9. Required files exist (.nojekyll, 404.html, favicon …)
+     9. No AI model names or session links in public files (and, in --hook mode,
+        in commit messages about to be pushed)
+    10. Required files exist (.nojekyll, 404.html, favicon …)
 
    Used by: the Claude Code pre-push hook (.claude/settings.json),
    GitHub Actions (.github/workflows/check.yml) and humans.
@@ -192,7 +194,20 @@ const readme = exists('README.md') ? fs.readFileSync(path.join(ROOT, 'README.md'
 for (const m of simulations.filter((x) => S.isLive(x)))
   if (!readme.includes(m.title)) err(`README.md: live simulation "${m.title}" is missing from the "What's inside" table`);
 
-/* ---------- 9. Required files ---------- */
+/* ---------- 9. Public repo: no AI model names or session links ---------- */
+const PRIVATE_RE = /\bclaude-(?:opus|sonnet|haiku|fable|mythos)\b|\b(?:opus|sonnet|haiku|fable|mythos)\s*\d(?:\.\d)?\b|claude\.ai\/code\/session_|\bsession_0[0-9A-Za-z]{10,}|\bcse_0[0-9A-Za-z]{10,}/i;
+for (const f of files.filter((f) => /\.(md|html|js|mjs|txt|xml|json|svg)$/.test(f) && !rel(f).startsWith('tools/'))) {
+  const lines = fs.readFileSync(f, 'utf8').split('\n');
+  lines.forEach((line, i) => { if (PRIVATE_RE.test(line)) err(`${rel(f)}:${i + 1}: mentions an AI model name or session link. Remove it (public repo, AGENTS.md rule 8)`); });
+}
+if (HOOK) { // commit messages about to be pushed
+  try {
+    const msgs = execFileSync('git', ['log', '--format=%h %B', '@{u}..HEAD'], { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString();
+    if (PRIVATE_RE.test(msgs)) err('an unpushed commit message mentions an AI model name or session link. Reword it (git commit --amend) before pushing');
+  } catch { /* no upstream: skip */ }
+}
+
+/* ---------- 10. Required files ---------- */
 for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md', 'ROADMAP.md', 'PROGRESS.md'])
   if (!exists(f)) err(`missing required file: ${f}`);
 
