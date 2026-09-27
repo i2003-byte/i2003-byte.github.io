@@ -38,7 +38,22 @@ It also has **Projectile Motion** and **Simple Pendulum**. Six more physics simu
 ├── about.html              About page
 ├── 404.html                Friendly "not found" page (GitHub Pages serves it automatically)
 ├── .nojekyll               Tells GitHub Pages to serve files as-is (needed for /_template/)
-├── README.md               This file
+├── README.md               This file (for humans)
+├── AGENTS.md               Instructions for AI coding agents (open standard, agents.md)
+├── CLAUDE.md               Claude Code entry point → imports AGENTS.md
+├── llms.txt                Site summary for AI tools (open standard, llmstxt.org) — GENERATED
+├── sitemap.xml, robots.txt For search engines — GENERATED
+├── .editorconfig           Formatting rules for any editor
+│
+├── tools/
+│   ├── check.mjs           Validates everything + regenerates the GENERATED files (no dependencies)
+│   └── browser-test.mjs    Optional real-browser test at phone & desktop sizes (uses Playwright)
+├── .claude/
+│   ├── settings.json       Hook: runs tools/check.mjs before every `git push` and blocks bad pushes
+│   └── skills/add-simulation/SKILL.md   Step-by-step recipe an AI follows to add a simulation
+├── .github/
+│   ├── workflows/check.yml Runs tools/check.mjs on GitHub for every push (✓ or ✗ on each commit)
+│   └── ISSUE_TEMPLATE/     Forms for "Simulation idea" and "Bug or science error"
 │
 ├── assets/
 │   ├── css/style.css       ALL styles. Theme tokens (colours, fonts, spacing…) live at the top
@@ -191,6 +206,24 @@ Site-wide settings are at the top of `catalog.js` in `SimLab.site`:
 - the canonical and `og:` URLs in the page `<head>`s
 
 **To preview locally**, run any static server from the project folder, for example `python3 -m http.server 8000`, then open http://localhost:8000. Opening the files directly with `file://` won't work, because the paths are root-relative.
+
+---
+
+## Maintaining with AI
+
+This repository is set up so any AI coding assistant can maintain it in a fresh chat without reading the whole codebase:
+
+1. **Instructions:** `AGENTS.md` holds the rules, a "which file to edit" table, recipes and the simulation API. Claude Code loads it automatically through `CLAUDE.md`; other tools (Codex, Cursor, Copilot, Gemini) read `AGENTS.md` directly.
+2. **Recipes:** `.claude/skills/add-simulation/SKILL.md` is the step-by-step process for adding a simulation.
+3. **Safety checks:** `node tools/check.mjs` validates the catalog, pages, links and generated files.
+   - In Claude Code, a hook runs it automatically before every push and blocks the push if anything is broken.
+   - GitHub also runs it on every push: see the ✓ or ✗ next to each commit.
+4. **Knowledge for other AIs:** `llms.txt` describes the whole site in a format AI tools understand. It is regenerated from `catalog.js`.
+
+**To ask an AI for a change, open a new chat on this repository and say, for example:**
+> "Add a simulation about refraction of light to Physics › Optics. Follow AGENTS.md and push to main when the checks pass."
+
+After any change, run: `node tools/check.mjs --write`
 
 ---
 
