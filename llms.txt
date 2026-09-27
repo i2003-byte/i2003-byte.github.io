@@ -15,6 +15,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 - [Projectile Motion](https://i2003-byte.github.io/physics/projectile/): Launch a ball at any angle and speed. Trace its parabola and measure time of flight, maximum height and range. (Beginner)
 - [Simple Pendulum](https://i2003-byte.github.io/physics/pendulum/): Swing a pendulum, add damping and watch energy flow between kinetic and potential. See how the period depends on length and gravity. (Intermediate)
+- [Speed Race: Distance ÷ Time](https://i2003-byte.github.io/physics/speed-race/): Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed. (Beginner)
+- [Distance–Time Graph Builder](https://i2003-byte.github.io/physics/distance-time-graph/): Plan a four-leg bus trip and watch its distance–time graph being drawn. Steep lines mean fast, flat lines mean stopped. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
 - [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)

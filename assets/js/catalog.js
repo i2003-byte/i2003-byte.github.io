@@ -207,6 +207,39 @@ SimLab.simulations = [
     prerequisites: ['projectile', 'spring-mass']
   },
 
+  {
+    id: 'speed-race',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Speed Race: Distance ÷ Time',
+    description:
+      'Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed.',
+    level: 'Beginner',
+    tags: ['speed', 'distance', 'time', 'km/h', 'm/s', 'uniform motion', 'race', 'stopwatch', 'motion and time', 'class 7'],
+    thumbnail: '/assets/img/thumbs/speed-race.svg',
+    link: '/physics/speed-race/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['distance-time-graph', 'oscillation-counter']
+  },
+  {
+    id: 'distance-time-graph',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Distance–Time Graph Builder',
+    description:
+      'Plan a four-leg bus trip and watch its distance–time graph being drawn. Steep lines mean fast, flat lines mean stopped.',
+    level: 'Beginner',
+    tags: ['distance-time graph', 'graph', 'slope', 'speed', 'average speed', 'uniform motion', 'non-uniform motion', 'bus', 'motion and time', 'class 7'],
+    thumbnail: '/assets/img/thumbs/distance-time-graph.svg',
+    link: '/physics/distance-time-graph/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['speed-race', 'projectile']
+  },
+
   /* ---- SOUND LAB: 14 simulations for Class 7 'Sound' -------------------- */
   {
     id: 'vibration',

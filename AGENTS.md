@@ -97,7 +97,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 
 ## Current content (update when it changes)
 - **Physics (live):**
-  - branch `mechanics`: projectile, pendulum
+  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
   - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
 - **Coming soon (catalog placeholders):** spring-mass, collisions, wave-interference, planetary-orbits, ray-optics, electric-fields.
@@ -108,3 +108,4 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Grid/flex children that scroll sideways need `min-width: 0`, or phones zoom out.
 - Share-link numbers are written with `String(parseFloat(x.toFixed(d)))`. Never strip zeros with a regex (350 would become 35).
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
+- `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

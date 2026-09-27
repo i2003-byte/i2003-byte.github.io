@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Speed Race: Distance ÷ Time — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/speed-race/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Speed Race: Distance ÷ Time — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/speed-race/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="speed-race">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Speed</strong> tells us how much distance an object covers in one unit of time. A racer at 5 m/s covers 5 metres every second. If two racers cover the same track, the one with the <strong>higher speed takes less time</strong>. Here each racer keeps a steady speed the whole way, so its motion is <strong>uniform</strong> and its line on the distance–time graph is straight.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">speed = distance ÷ time</code>
+            <p class="formula-note">so time = distance ÷ speed, and distance = speed × time</p>
+            <code class="formula">1 km/h = 1000 m ÷ 3600 s = 5/18 m/s</code>
+            <p class="formula-note">multiply km/h by 5/18 to get m/s (the SI unit); multiply m/s by 18/5 to go back</p>
+            <code class="formula">36 km/h = 36 × 5/18 = 10 m/s</code>
+            <p class="formula-note">a handy value to remember</p>
+            <p>Simplification: real racers speed up from rest at the start. Here they start at full speed, so the numbers match the formula exactly. Long, slow races are fast-forwarded on screen (look for ⏩), but the stopwatch shows the real race time.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A speedometer in a bus or scooter shows speed in km/h; an odometer shows distance in km.</li>
+              <li>Indian Railways timetables let you work out a train’s average speed: distance between stations ÷ travel time.</li>
+              <li>A 100 m sprinter at about 10 m/s runs at roughly 36 km/h.</li>
+              <li>Traffic police use speed limits such as 50 km/h in cities.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set racer A to 36 km/h and the track to 100 m. Predict the time before you press Start.<details><summary>Show answer</summary>36 km/h = 10 m/s, so time = 100 ÷ 10 = 10 s.</details></li>
+              <li>Racer B is twice as fast as racer A. How do their finishing times compare?<details><summary>Show answer</summary>B takes half the time of A, because time = distance ÷ speed.</details></li>
+              <li>Make the track twice as long without changing speeds. What happens to each finishing time?<details><summary>Show answer</summary>Each time doubles. The winner’s lead in seconds also doubles.</details></li>
+              <li>Look at the graph. Which line is steeper, and why?<details><summary>Show answer</summary>The faster racer’s line is steeper: it gains more metres every second. The slope of a distance–time graph is the speed.</details></li>
+              <li>A cyclist rides at 18 km/h. How far do they go in 1 minute?<details><summary>Show answer</summary>18 km/h = 5 m/s, and 5 m/s × 60 s = 300 m.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Speed:</strong> distance covered per unit time.</li>
+              <li><strong>Uniform motion:</strong> equal distances in equal intervals of time, i.e. steady speed along a straight line.</li>
+              <li><strong>m/s:</strong> metres per second, the SI unit of speed.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
