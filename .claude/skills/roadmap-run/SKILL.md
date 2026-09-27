@@ -1,11 +1,11 @@
 ---
 name: roadmap-run
-description: One autonomous SimLab build run. Resume or take the next ROADMAP.md item, build about 3 simulations, update the roadmap, progress log, README and coverage, then ship to main. Use for scheduled routines, or when asked to "continue the roadmap" or "do the next topic".
+description: One autonomous SimLab build run. Resume or take the next ROADMAP.md item, build 2 simulations, update the roadmap, progress log, README and coverage, then ship to main. Use for scheduled routines, or when asked to "continue the roadmap" or "do the next topic".
 ---
 
-# Roadmap run: build the next ~3 simulations
+# Roadmap run: build the next 2 simulations
 
-Goal: exactly one roadmap item per run, about 3 finished simulations, live on `main`, with the tracking files telling the next run precisely where things stand.
+Goal: 2 high-quality finished simulations per run (quality over quantity), working through one roadmap item at a time. An item usually plans 3 simulations, so it spans 2 runs: leave it 🔨 In progress with a precise "Next:" note after the first run. The result must be live on `main`, with the tracking files telling the next run precisely where things stand.
 
 ## 0. Start from the latest `main`
 ```bash
@@ -22,7 +22,7 @@ Never work from an old branch. Other sessions may have pushed since.
    - Else take the **first item in 📋 Next**. Move it to 🔨 In progress with today's date before building.
    - If 📋 Next is empty, do step 6 (evolve the roadmap) and then build the first new item.
 
-## 2. Build about 3 simulations
+## 2. Build 2 simulations
 Follow `.claude/skills/add-simulation/SKILL.md` for each one:
 - page
 - `sim.js`
@@ -70,7 +70,7 @@ If you truly cannot get a green check:
 - Don't add duplicates of anything in Done, In progress or Next.
 
 ## Rules
-- One roadmap item per run. Don't start a second item even if time remains; improve quality instead.
+- 2 simulations per run, from one roadmap item. If the item has only 1 simulation left, finish it and stop; don't start the next item. Spend spare effort on quality: science accuracy, clear drawings, a good Learn panel.
 - Keep token use low:
   - Open only the files you need.
   - Copy patterns from the most similar existing simulation.

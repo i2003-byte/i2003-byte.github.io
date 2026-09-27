@@ -31,7 +31,7 @@
 _Nothing in progress._
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
 
-## 📋 Next (auto-approved; take items from the top, one per run, about 3 simulations each)
+## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; runs build 2 at a time)
 - [ ] **Class 7 · Physics · Motion and time.** Branch `mechanics`. Sims: speed = distance ÷ time race track; distance–time graph builder; simple-pendulum clock (time period).
 - [ ] **Class 7 · Physics · Electric current and its effects.** Branch `electricity`. Sims: circuit builder with symbols (open/closed, bulb, switch); heating effect and fuse; electromagnet strength (turns, current).
 - [ ] **Class 7 · Physics · Light.** Branch `optics`. Sims: light travels in a straight line (pinhole camera); plane mirror image and lateral inversion; Newton's colour disc / prism rainbow.

@@ -36,7 +36,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - `PROGRESS.md` is the memory: a log of every session, newest first.
 - Scheduled routines (and "continue the roadmap" requests) follow `.claude/skills/roadmap-run/SKILL.md`:
   - resume 🔨 In progress, or take the first 📋 Next item
-  - build about 3 simulations, one item per run
+  - build 2 simulations per run; an item of ~3 simulations spans 2 runs
   - update ROADMAP/PROGRESS/README/AGENTS
   - push to `main`
 - **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. Anything else goes to 💡 Proposed.

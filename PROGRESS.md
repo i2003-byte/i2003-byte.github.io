@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-09-27 · request · Routines switched to Opus 5.5, 2 simulations per run
+- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md (2 simulations per run, quality first); all routines use claude-opus-5-5
+- Checks: ✅ check.mjs passed
+- Roadmap: unchanged. A manual Sonnet test run was stopped before pushing.
+- Next time: take the first item in 📋 Next (Class 7 · Physics · Motion and time) and build 2 of its 3 simulations
+- Problems/notes: none
+
 ## 2026-09-27 · request · Add weekly maintenance
 - Built/changed: `.claude/skills/site-maintenance`, AGENTS.md rules (learn from mistakes, NEEDS HUMAN flag), weekly routine (Sunday ≈10 AM IST)
 - Checks: ✅ check.mjs passed
