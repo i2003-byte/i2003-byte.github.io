@@ -69,6 +69,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - **Physics (live):**
   - branch `mechanics`: projectile, pendulum
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
+  - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
 - **Coming soon (catalog placeholders):** spring-mass, collisions, wave-interference, planetary-orbits, ray-optics, electric-fields.
 - **Subjects coming soon:** chemistry, mathematics, biology, astronomy (their folders exist).
 

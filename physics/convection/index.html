@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Convection Currents in Water — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Heat a beaker of water at one corner and drop in a permanganate crystal. Watch hot water rise, cool water sink and a convection current carry the heat around.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/convection/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Convection Currents in Water — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Heat a beaker of water at one corner and drop in a permanganate crystal. Watch hot water rise, cool water sink and a convection current carry the heat around.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/convection/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="convection">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In liquids and gases, heat mostly travels by <strong>convection</strong>. Water near the flame gets hot, becomes lighter and <strong>rises</strong>. Cooler, heavier water from the top <strong>sinks</strong> to take its place, gets heated, and rises in turn. This circulation is a <strong>convection current</strong> — the moving water itself carries the heat. A crystal of potassium permanganate leaves a purple trail that shows the current.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Convection: heat is carried by the movement of the liquid or gas itself</code>
+            <code class="formula">Hot water / air rises; cool water / air sinks</code>
+            <code class="formula">Convection needs a liquid or gas — it cannot happen in a solid</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Water in a pan is heated from the bottom, yet the whole pan gets hot</li>
+              <li>Smoke and hot air rise from a fire</li>
+              <li>Ventilators are placed near the ceiling so hot air can escape</li>
+              <li>Sea and land breezes are giant convection currents in air</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drop a crystal and watch the purple streak. Which way does it go first?<details><summary>Show answer</summary>Up the side above the burner, across the top, down the far side and back along the bottom.</details></li>
+              <li>Move the burner to the right corner. What changes?<details><summary>Show answer</summary>The current turns the other way — the water always rises above the heat.</details></li>
+              <li>Turn the flame off. What happens to the current?<details><summary>Show answer</summary>It slows down and stops, because there is no more hot water to rise.</details></li>
+              <li>Why does the top of the water get hot before the bottom far from the flame?<details><summary>Show answer</summary>Hot water rises, so the heat is carried upward to the top first.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Convection</strong> — Transfer of heat by the movement of a liquid or gas.</li>
+              <li><strong>Convection current</strong> — The loop of rising hot fluid and sinking cool fluid.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

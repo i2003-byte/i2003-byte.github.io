@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Clinical vs Laboratory Thermometer — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Take your temperature with a clinical thermometer, then measure hot and cold water with a laboratory one. Discover the kink, the range and why you must never boil a clinical thermometer.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/thermometer/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Clinical vs Laboratory Thermometer — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Take your temperature with a clinical thermometer, then measure hot and cold water with a laboratory one. Discover the kink, the range and why you must never boil a clinical thermometer.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/thermometer/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="thermometer">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>clinical thermometer</strong> measures body temperature. Its range is only <strong>35 °C to 42 °C</strong> because the human body never goes outside it, and each small division is 0.1 °C so doctors can read it precisely. A <strong>kink</strong> near the bulb stops the mercury from falling back, so you can read it after taking it out — then you must shake it down. A <strong>laboratory thermometer</strong> has a range of about <strong>−10 °C to 110 °C</strong>, no kink, and must be read while its bulb is still in the substance.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Clinical: 35 °C – 42 °C (94 °F – 108 °F), 1 division = 0.1 °C</code>
+            <code class="formula">Laboratory: −10 °C – 110 °C, 1 division = 1 °C</code>
+            <code class="formula">Normal body temperature: 37 °C = 98.6 °F</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A nurse checks a patient’s temperature with a clinical (or digital) thermometer</li>
+              <li>Students measure the boiling point of water with a lab thermometer</li>
+              <li>Digital thermometers are now used instead of mercury ones, because mercury is poisonous</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Put the clinical thermometer under the tongue with a fever, then take it out. Does the reading drop?<details><summary>Show answer</summary>No — the kink stops the mercury going back, so the reading stays at 39.5 °C until you shake it down.</details></li>
+              <li>Do the same with the laboratory thermometer. What happens?<details><summary>Show answer</summary>The reading falls towards room temperature as soon as it is taken out. That is why you read it while it is still in the liquid.</details></li>
+              <li>What happens if you put a clinical thermometer in boiling water?<details><summary>Show answer</summary>It breaks — its range only goes up to 42 °C.</details></li>
+              <li>Which thermometer would you use to measure the temperature of ice water?<details><summary>Show answer</summary>The laboratory thermometer. 0 °C is below the clinical thermometer’s range.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Range</strong> — The lowest to highest temperature a thermometer can measure.</li>
+              <li><strong>Kink</strong> — A narrow bend near the bulb of a clinical thermometer that stops the mercury falling back.</li>
+              <li><strong>Bulb</strong> — The end of the thermometer that holds the liquid (mercury or coloured alcohol).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

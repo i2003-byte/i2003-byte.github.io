@@ -48,6 +48,15 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 - [Electric Fields](https://i2003-byte.github.io/physics/): Drop positive and negative charges and visualise field lines and equipotentials. (Advanced, coming soon)
 
+### Thermodynamics
+
+- [Hot and Cold: Temperature](https://i2003-byte.github.io/physics/hot-and-cold/): Heat water from ice to boiling and watch its particles speed up. Why can’t your hand tell the real temperature? (Beginner)
+- [Clinical vs Laboratory Thermometer](https://i2003-byte.github.io/physics/thermometer/): Take your temperature, then measure hot and cold water. Discover the kink, the range and why a clinical thermometer must never go in boiling water. (Beginner)
+- [Conduction: Heat Through a Rod](https://i2003-byte.github.io/physics/conduction/): Heat one end of a copper, iron, glass or wood rod and watch wax-stuck pins drop as heat travels along it. (Beginner)
+- [Convection Currents in Water](https://i2003-byte.github.io/physics/convection/): Heat a beaker at one corner and drop in a permanganate crystal. Hot water rises, cool water sinks and a current carries the heat. (Beginner)
+- [Radiation: Black vs Shiny](https://i2003-byte.github.io/physics/radiation/): Race black, white and shiny cans in front of a heater. Which colour absorbs heat best, and which cools fastest? (Beginner)
+- [Sea and Land Breezes](https://i2003-byte.github.io/physics/sea-land-breeze/): Run a day at the seaside. Land heats and cools faster than water, so the breeze blows from the sea by day and from the land by night. (Beginner)
+
 ## Chemistry (coming soon)
 
 Build molecules, balance reactions and watch gases behave. Chemistry simulations are on the way.

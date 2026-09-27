@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hot and Cold: Temperature — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Heat water from ice to boiling and watch its particles speed up. Find out why your sense of touch can’t tell you the real temperature.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/hot-and-cold/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Hot and Cold: Temperature — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Heat water from ice to boiling and watch its particles speed up. Find out why your sense of touch can’t tell you the real temperature.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/hot-and-cold/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="hot-and-cold">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>We use words like <strong>hot</strong> and <strong>cold</strong>, but how hot something is can only be measured reliably with a <strong>thermometer</strong>. The number it gives is the <strong>temperature</strong>, measured in degrees Celsius (°C). In a hotter object the tiny particles move faster. Our hand only tells us whether something is hotter or colder <em>than our hand</em> — so the same lukewarm water can feel warm to one hand and cold to the other.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Temperature is measured in degrees Celsius (°C)</code>
+            <code class="formula">Water freezes at 0 °C and boils at 100 °C</code>
+            <code class="formula">Normal body temperature ≈ 37 °C</code>
+            <code class="formula">°F = °C × 9/5 + 32</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A cup of tea feels hot; an ice cube feels cold</li>
+              <li>Floor tiles feel colder than a carpet at the same temperature</li>
+              <li>Weather reports give the air temperature in °C</li>
+              <li>Doctors measure body temperature to check for fever</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set the hand to “Ice-cold water” and the water to 30 °C. How does it feel?<details><summary>Show answer</summary>Hot! The water is much warmer than your chilled hand.</details></li>
+              <li>Now set the hand to “Hot water” with the same 30 °C water. How does it feel now?<details><summary>Show answer</summary>Cold! The water did not change, only your hand did. Touch is not a reliable way to measure temperature.</details></li>
+              <li>What happens to the particles as you go from 20 °C to 90 °C?<details><summary>Show answer</summary>They move faster — higher temperature means faster-moving particles.</details></li>
+              <li>What does 37 °C become in °F?<details><summary>Show answer</summary>37 × 9/5 + 32 = 98.6 °F.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Temperature</strong> — A measure of how hot or cold something is.</li>
+              <li><strong>Degree Celsius (°C)</strong> — The unit of temperature we use most often.</li>
+              <li><strong>Thermometer</strong> — An instrument that measures temperature.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

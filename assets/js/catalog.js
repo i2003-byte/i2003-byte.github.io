@@ -433,6 +433,104 @@ SimLab.simulations = [
     prerequisites: ['water-xylophone']
   },
 
+  /* ---- HEAT: 6 simulations for Class 7 'Heat' ------------------------ */
+  {
+    id: 'hot-and-cold',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Hot and Cold: Temperature',
+    description:
+      'Heat water from ice to boiling and watch its particles speed up. Why can’t your hand tell the real temperature?',
+    level: 'Beginner',
+    tags: ['temperature', 'hot', 'cold', 'celsius', 'fahrenheit', 'particles', 'touch', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/hot-and-cold.svg',
+    link: '/physics/hot-and-cold/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-27',
+    prerequisites: ['thermometer', 'conduction']
+  },
+  {
+    id: 'thermometer',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Clinical vs Laboratory Thermometer',
+    description:
+      'Take your temperature, then measure hot and cold water. Discover the kink, the range and why a clinical thermometer must never go in boiling water.',
+    level: 'Beginner',
+    tags: ['thermometer', 'clinical', 'laboratory', 'kink', 'mercury', 'fever', 'body temperature', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/thermometer.svg',
+    link: '/physics/thermometer/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-27',
+    prerequisites: ['hot-and-cold', 'conduction']
+  },
+  {
+    id: 'conduction',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Conduction: Heat Through a Rod',
+    description:
+      'Heat one end of a copper, iron, glass or wood rod and watch wax-stuck pins drop as heat travels along it.',
+    level: 'Beginner',
+    tags: ['conduction', 'conductor', 'insulator', 'metal', 'copper', 'iron', 'wood', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/conduction.svg',
+    link: '/physics/conduction/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['convection', 'radiation']
+  },
+  {
+    id: 'convection',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Convection Currents in Water',
+    description:
+      'Heat a beaker at one corner and drop in a permanganate crystal. Hot water rises, cool water sinks and a current carries the heat.',
+    level: 'Beginner',
+    tags: ['convection', 'current', 'hot water rises', 'permanganate', 'liquid', 'fluid', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/convection.svg',
+    link: '/physics/convection/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['conduction', 'sea-land-breeze']
+  },
+  {
+    id: 'radiation',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Radiation: Black vs Shiny',
+    description:
+      'Race black, white and shiny cans in front of a heater. Which colour absorbs heat best, and which cools fastest?',
+    level: 'Beginner',
+    tags: ['radiation', 'absorb', 'reflect', 'black', 'white', 'shiny', 'sun', 'no medium', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/radiation.svg',
+    link: '/physics/radiation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['convection', 'conduction']
+  },
+  {
+    id: 'sea-land-breeze',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Sea and Land Breezes',
+    description:
+      'Run a day at the seaside. Land heats and cools faster than water, so the breeze blows from the sea by day and from the land by night.',
+    level: 'Beginner',
+    tags: ['sea breeze', 'land breeze', 'wind', 'coast', 'convection', 'day', 'night', 'heat', 'class 7'],
+    thumbnail: '/assets/img/thumbs/sea-land-breeze.svg',
+    link: '/physics/sea-land-breeze/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-27',
+    prerequisites: ['convection', 'radiation']
+  },
+
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
     id: 'spring-mass',

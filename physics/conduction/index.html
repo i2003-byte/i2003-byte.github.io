@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Conduction: Heat Through a Rod — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Heat one end of a copper, iron, glass or wood rod with a candle and watch wax-stuck pins drop one by one as heat travels along it.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/conduction/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Conduction: Heat Through a Rod — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Heat one end of a copper, iron, glass or wood rod with a candle and watch wax-stuck pins drop one by one as heat travels along it.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/conduction/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="conduction">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When one end of a metal rod is heated, its particles vibrate faster and pass the heat on to their neighbours, one after another, all along the rod. This is <strong>conduction</strong>. The particles themselves stay in place — only the heat moves. Heat always flows <strong>from the hotter part to the colder part</strong>. Materials that let heat pass easily (metals such as copper and aluminium) are <strong>good conductors</strong>; those that don’t (wood, plastic, glass, air) are <strong>poor conductors</strong> or <strong>insulators</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Heat flows from a hotter object to a colder one</code>
+            <code class="formula">Conduction: heat passes from particle to particle in a solid</code>
+            <code class="formula">Good conductors: copper, aluminium, iron (metals)</code>
+            <code class="formula">Poor conductors (insulators): wood, plastic, glass, air</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Cooking pans are made of metal but have plastic or wooden handles</li>
+              <li>A metal spoon in hot tea gets hot at the other end</li>
+              <li>Woollen clothes trap air, a poor conductor, to keep us warm</li>
+              <li>Ice boxes use thermocol (an insulator) to keep things cold</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Which rod drops all its pins first: copper or iron?<details><summary>Show answer</summary>Copper — it is a better conductor than iron.</details></li>
+              <li>Try glass or wood. Do any pins drop?<details><summary>Show answer</summary>No — heat hardly moves along them. They are poor conductors (insulators).</details></li>
+              <li>Why does the pin nearest the candle always drop first?<details><summary>Show answer</summary>Heat travels along the rod from the hot end, so the nearest wax melts first.</details></li>
+              <li>Turn the candle off halfway through. What happens to the rod?<details><summary>Show answer</summary>It cools down as it loses heat to the air — heat flows from the hot rod to the colder air.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Conduction</strong> — Transfer of heat from the hotter part of a solid to the colder part, particle to particle.</li>
+              <li><strong>Conductor</strong> — A material that lets heat pass through it easily.</li>
+              <li><strong>Insulator</strong> — A material that does not let heat pass easily.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

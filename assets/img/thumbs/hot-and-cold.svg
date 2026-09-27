@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="hot-and-cold">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="40" y="60" width="100" height="110" rx="4" fill="#3b82f6" fill-opacity=".35" stroke="#e2e8f0" stroke-width="3"/>
+  <rect x="180" y="60" width="100" height="110" rx="4" fill="#ef4444" fill-opacity=".35" stroke="#e2e8f0" stroke-width="3"/>
+  <g fill="#60a5fa"><circle cx="65" cy="95" r="6"/><circle cx="95" cy="120" r="6"/><circle cx="118" cy="90" r="6"/><circle cx="72" cy="145" r="6"/><circle cx="110" cy="150" r="6"/></g>
+  <g fill="#f87171"><circle cx="200" cy="85" r="6"/><circle cx="240" cy="130" r="6"/><circle cx="262" cy="92" r="6"/><circle cx="215" cy="150" r="6"/><circle cx="255" cy="155" r="6"/></g>
+  <g stroke="#f87171" stroke-width="3" stroke-opacity=".5" stroke-linecap="round"><path d="M200 85l-18-8M240 130l14 14M262 92l10-16M215 150l-16 6"/></g>
+  <text x="90" y="36" font-size="30" text-anchor="middle" dominant-baseline="central">🧊</text><text x="230" y="36" font-size="30" text-anchor="middle" dominant-baseline="central">🔥</text>
+</svg>

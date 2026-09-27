@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Radiation: Black vs Shiny — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Place black, white and shiny cans in front of a heater and race their temperatures. Which colour absorbs heat best — and which cools fastest?">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/radiation/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Radiation: Black vs Shiny — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Place black, white and shiny cans in front of a heater and race their temperatures. Which colour absorbs heat best — and which cools fastest?">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/radiation/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="radiation">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The heat of the Sun reaches us across empty space, where there is nothing to conduct or carry it. It travels by <strong>radiation</strong>. Every hot object — a heater, a fire, a hot iron — radiates heat in straight lines, and radiation <strong>needs no medium</strong>. When radiation falls on an object, some is reflected and some is absorbed. <strong>Dark, dull</strong> surfaces absorb more heat; <strong>light and shiny</strong> surfaces reflect most of it. Good absorbers are also good emitters, so a black can also cools faster.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Radiation: heat travels without any medium, even through empty space</code>
+            <code class="formula">Dark colours absorb more heat; light / shiny colours reflect more</code>
+            <code class="formula">Closer to the heat source → more heat received</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>We wear light-coloured clothes in summer and dark ones in winter</li>
+              <li>Solar cookers and water heaters are painted black inside</li>
+              <li>Shiny foil around food keeps it warm</li>
+              <li>We feel the warmth of a fire even though the air between isn’t hot</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Compare a black and a shiny can at 40 cm. Which gets hotter?<details><summary>Show answer</summary>The black can — it absorbs about 95% of the radiation, the shiny one only about 10%.</details></li>
+              <li>Move the cans to 80 cm. What happens to the heating?<details><summary>Show answer</summary>Both heat up much more slowly — they receive far less radiation when farther away.</details></li>
+              <li>Run the cooling race with a black and a shiny can. Which cools faster?<details><summary>Show answer</summary>The black can — good absorbers are also good emitters of heat.</details></li>
+              <li>Why should you wear white clothes on a hot summer day?<details><summary>Show answer</summary>White reflects most of the Sun’s heat, so you stay cooler.</details></li>
+            </ol>
+          </section>
+          <section class="wide">
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Radiation</strong> — Transfer of heat without any medium.</li>
+              <li><strong>Absorb</strong> — To take in heat.</li>
+              <li><strong>Reflect</strong> — To bounce heat or light back.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
