@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electric Circuits and Symbols — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Build a battery, switch and bulb circuit, then redraw it with circuit symbols. See why a bulb lights only in a closed circuit.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/electric-circuit/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Electric Circuits and Symbols — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Build a battery, switch and bulb circuit, then redraw it with circuit symbols. See why a bulb lights only in a closed circuit.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/electric-circuit/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="electric-circuit">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>An <strong>electric circuit</strong> is a complete path for electric current. Current flows from the positive (+) terminal of the battery, through the wires, switch and bulb, and back to the negative (−) terminal. If there is a break anywhere (a switch turned OFF, a loose wire or a broken filament) the circuit is <strong>open</strong> and no current flows.</p>
+            <p>Drawing real objects takes time, so we use <strong>circuit symbols</strong>. Switch the view to see the same circuit as a <strong>circuit diagram</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">battery = cells joined + to −</code>
+            <p class="formula-note">each dry cell gives about 1.5 V, so 2 cells give 3 V</p>
+            <ul>
+              <li><strong>Cell symbol:</strong> a long thin line (+) and a short thick line (−).</li>
+              <li><strong>Switch:</strong> a gap that the lever closes (ON) or opens (OFF).</li>
+              <li><strong>Bulb:</strong> a circle with the filament inside; a fused bulb has a broken filament.</li>
+            </ul>
+            <p>Simplification: each bulb is treated as a fixed 10 Ω resistor and cells have no internal resistance. The current values are only a model; in Class 7 focus on “open or closed” and “brighter or dimmer”. The moving dots show the conventional direction of current, from + to −.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A torch: two cells placed one after the other, a switch on the side and a bulb at the front.</li>
+              <li>Fairy lights for Diwali: when one old-style bulb in a series string fuses, the whole string goes dark.</li>
+              <li>Every switch board at home opens or closes a circuit to turn a light or fan on and off.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Tap the switch. Why does the bulb light only when the switch is ON?<details><summary>Show answer</summary>ON closes the gap, so the path round the loop is complete and current can flow.</details></li>
+              <li>Turn on “Fuse a bulb” with the switch ON. What happens, and why?<details><summary>Show answer</summary>The bulb goes out and the current stops. The broken filament leaves a gap in the circuit, just like an open switch.</details></li>
+              <li>With 2 cells, turn one cell the wrong way. What happens?<details><summary>Show answer</summary>The two cells push in opposite directions and cancel, so no current flows. Cells must be joined + to −.</details></li>
+              <li>Add a second bulb in series. Are the bulbs brighter or dimmer? How can you make them normal again?<details><summary>Show answer</summary>Dimmer, because the same battery now pushes current through two bulbs. Using 4 cells brings them back to normal brightness.</details></li>
+              <li>Draw a circuit with 3 cells, a switch and one bulb using symbols. Then check it with the diagram view.<details><summary>Show answer</summary>Three cell symbols in a row (long line of one next to the short line of the next), a switch symbol and a bulb symbol, all joined in one loop.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Closed circuit:</strong> a complete path, so current flows.</li>
+              <li><strong>Open circuit:</strong> a break in the path, so no current flows.</li>
+              <li><strong>Battery:</strong> two or more cells joined together.</li>
+              <li><strong>Filament:</strong> the thin coiled wire inside a bulb that glows.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

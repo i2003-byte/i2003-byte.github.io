@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-09-27 · routine · Class 7 · Physics · Motion and time (finished) + Electric current and its effects
+- Built/changed: `physics/pendulum-clock` (time n oscillations, T = t ÷ n, observation table that spots the length/mass pattern, tick per swing, seconds-pendulum preset), `physics/electric-circuit` (battery/switch/bulbs loop, picture ↔ circuit-symbol view, fused bulb, reversed cell, series bulbs, tap the switch), `physics/heating-fuse` (220 V house circuit with 6 tappable appliances, fuse wire heats and melts on overload or short circuit, unsafe copper-wire option sets the wiring on fire, temperature graph), `physics/electromagnet` (turns, cells, iron/wood/air core, pins lifted, N/S poles by right-hand grip rule, compass deflection from a two-pole field); thumbnails, catalog, README, AGENTS, ROADMAP
+- Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages, /physics/ and / at phone + desktop); combined canvas screenshot reviewed: fixed a 24px phone overflow (long graph legend), tiny pendulum scale, switch label over the wire, and fuse not melting just above its rating
+- Roadmap: Motion and time → Done · Electric current and its effects → Done (3 sims each item; the circuit item was completed in one go)
+- Next time: take the next 📋 Next item, Class 7 · Physics · Light (branch `optics`: pinhole camera, plane mirror and lateral inversion, Newton's disc / prism), then start Class 8 · Force and pressure
+- Problems/notes: the electricity models are relative/simplified (10 Ω bulbs, 0.5 A per cell, fuse temperature formula); each Learn panel states this. 📋 Next still has 22 items, so no roadmap evolution needed.
+
 ## 2026-09-27 · request · 4 simulations per run; new subjects approved
 - Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md
   - each run builds 4 simulations: finish the current item, then start the next

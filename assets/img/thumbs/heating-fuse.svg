@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="heating effect and fuse">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <defs><radialGradient id="glow"><stop offset="0" stop-color="#fb923c" stop-opacity=".7"/><stop offset="1" stop-color="#fb923c" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="110" cy="100" rx="90" ry="46" fill="url(#glow)"/>
+  <rect x="30" y="76" width="160" height="48" rx="10" fill="#e7e5e4" stroke="#a8a29e" stroke-width="2"/>
+  <rect x="38" y="92" width="20" height="16" rx="3" fill="#b45309"/><rect x="162" y="92" width="20" height="16" rx="3" fill="#b45309"/>
+  <line x1="58" y1="100" x2="100" y2="102" stroke="#f97316" stroke-width="3"/><line x1="120" y1="102" x2="162" y2="100" stroke="#f97316" stroke-width="3"/>
+  <circle cx="104" cy="108" r="3" fill="#9ca3af"/><circle cx="116" cy="110" r="2.5" fill="#9ca3af"/>
+  <text x="110" y="150" fill="#fbbf24" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle">200 °C · MELTED</text>
+  <line x1="215" y1="40" x2="300" y2="40" stroke="#f87171" stroke-width="3"/>
+  <g stroke="#f87171" stroke-width="2"><line x1="230" y1="40" x2="230" y2="60"/><line x1="285" y1="40" x2="285" y2="60"/></g>
+  <rect x="212" y="60" width="36" height="44" rx="6" fill="#f97316" fill-opacity=".2" stroke="#f97316" stroke-width="2"/>
+  <path d="M220 90q5-18 10 0q5-18 10 0" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <rect x="267" y="60" width="36" height="44" rx="6" fill="#38bdf8" fill-opacity=".15" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="285" cy="80" r="9" fill="#fde047"/>
+  <path d="M258 140l-12 22h12l-8 20 22-28h-12l8-14z" fill="#fbbf24"/>
+</svg>

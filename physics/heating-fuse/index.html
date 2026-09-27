@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heating Effect and the Fuse — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Switch on appliances in a 220 V house circuit and watch the fuse wire heat up. Overload it or cause a short circuit and see the fuse melt to keep the house safe.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/heating-fuse/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Heating Effect and the Fuse — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Switch on appliances in a 220 V house circuit and watch the fuse wire heat up. Overload it or cause a short circuit and see the fuse melt to keep the house safe.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/heating-fuse/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="heating-fuse">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When electric current flows through a wire, the wire gets hot. This is the <strong>heating effect of electric current</strong>. Heaters, irons, kettles and filament bulbs use it on purpose: their coils are made of a special wire (such as nichrome) that gets very hot.</p>
+            <p>The same effect keeps us safe. A <strong>fuse</strong> is a short piece of thin wire that melts at a low temperature. If too much current flows, the fuse wire melts first, breaks the circuit and stops the current before the house wiring overheats and catches fire.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">current (A) = power (W) ÷ voltage (V)</code>
+            <p class="formula-note">a 2000 W heater on 220 V draws 2000 ÷ 220 ≈ 9.1 A</p>
+            <ul>
+              <li>Appliances at home are connected side by side (in parallel), so their currents <strong>add up</strong> in the main wire and fuse.</li>
+              <li><strong>Overloading:</strong> too many appliances on one circuit, so the current is more than the fuse rating.</li>
+              <li><strong>Short circuit:</strong> the live and neutral wires touch, the current becomes huge and the fuse melts at once.</li>
+            </ul>
+            <p>Simplification: the temperatures come from a simple classroom model, not real fuse data. Real fuses carry their rated current safely and melt when it is exceeded, faster for bigger overloads, just as shown here. Many homes now use an <strong>MCB</strong> (miniature circuit breaker), a switch that turns itself off in the same situations and can be reset.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Electric irons, geysers, toasters and room heaters all use the heating effect.</li>
+              <li>The glowing filament of an old bulb is hot enough to give light; most of the energy is lost as heat.</li>
+              <li>Plugging a heater, a kettle and an iron into one extension board can overload it, which is a common cause of house fires.</li>
+              <li>Always use a fuse wire of the right rating. Never replace it with a thick copper wire.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the 10 A fuse, switch on the bulb, fan, TV and iron. Is it safe?<details><summary>Show answer</summary>Yes. 100 + 75 + 120 + 1000 = 1295 W, and 1295 ÷ 220 ≈ 5.9 A, which is below 10 A.</details></li>
+              <li>Now add the room heater. What happens, and why?<details><summary>Show answer</summary>The total becomes 3295 W, about 15 A. That is more than 10 A, so the fuse wire heats past 200 °C and melts within about a second.</details></li>
+              <li>Press “Cause a short circuit”. How quickly does the fuse melt compared with an overload?<details><summary>Show answer</summary>Almost instantly. The current jumps to hundreds of amperes, so the fuse wire heats up far faster.</details></li>
+              <li>Choose “Thick copper wire” and cause a short circuit. What goes wrong?<details><summary>Show answer</summary>The copper wire does not melt, so nothing stops the current. The house wiring overheats and can catch fire.</details></li>
+              <li>A kettle is rated 1500 W. What current does it draw on 220 V? Would a 5 A fuse be enough?<details><summary>Show answer</summary>1500 ÷ 220 ≈ 6.8 A. No: a 5 A fuse would melt, so it needs a power circuit with a 10 A or 15 A fuse.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Heating effect:</strong> a wire gets hot when current flows through it.</li>
+              <li><strong>Fuse:</strong> a safety device with a thin wire that melts when the current is too large.</li>
+              <li><strong>Rating:</strong> the largest current a fuse carries safely, for example 10 A.</li>
+              <li><strong>Overload / short circuit:</strong> the two faults that make the current too large.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -239,6 +239,72 @@ SimLab.simulations = [
     dateAdded: '2026-09-27',
     prerequisites: ['speed-race', 'projectile']
   },
+  {
+    id: 'pendulum-clock',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Pendulum Clock Lab',
+    description:
+      'Time a simple pendulum with a stopwatch, find its time period T = time ÷ oscillations, and fill an observation table to test length and bob mass.',
+    level: 'Beginner',
+    tags: ['pendulum', 'time period', 'oscillation', 'stopwatch', 'seconds pendulum', 'clock', 'periodic motion', 'motion and time', 'class 7'],
+    thumbnail: '/assets/img/thumbs/pendulum-clock.svg',
+    link: '/physics/pendulum-clock/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['oscillation-counter', 'pendulum', 'speed-race']
+  },
+
+  /* ---- ELECTRICITY: Class 7 'Electric current and its effects' ---------- */
+  {
+    id: 'electric-circuit',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Electric Circuits and Symbols',
+    description:
+      'Build a battery, switch and bulb circuit, then redraw it with circuit symbols. See why a bulb lights only in a closed circuit.',
+    level: 'Beginner',
+    tags: ['circuit', 'battery', 'cell', 'switch', 'bulb', 'circuit diagram', 'symbols', 'open circuit', 'closed circuit', 'class 7'],
+    thumbnail: '/assets/img/thumbs/electric-circuit.svg',
+    link: '/physics/electric-circuit/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['heating-fuse', 'electromagnet']
+  },
+  {
+    id: 'heating-fuse',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Heating Effect and the Fuse',
+    description:
+      'Switch on appliances in a 220 V house circuit and watch the fuse wire heat up. Overload it or cause a short circuit and see the fuse melt to keep the house safe.',
+    level: 'Beginner',
+    tags: ['heating effect', 'fuse', 'short circuit', 'overload', 'MCB', 'appliances', 'safety', 'current', 'class 7'],
+    thumbnail: '/assets/img/thumbs/heating-fuse.svg',
+    link: '/physics/heating-fuse/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['electric-circuit', 'electromagnet']
+  },
+  {
+    id: 'electromagnet',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Make an Electromagnet',
+    description:
+      'Wind wire round an iron nail, connect a battery and pick up pins. Change the turns, cells and core, and watch a compass needle turn.',
+    level: 'Beginner',
+    tags: ['electromagnet', 'magnetic effect', 'coil', 'turns', 'compass', 'iron core', 'crane', 'class 7'],
+    thumbnail: '/assets/img/thumbs/electromagnet.svg',
+    link: '/physics/electromagnet/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-27',
+    prerequisites: ['electric-circuit', 'heating-fuse']
+  },
 
   /* ---- SOUND LAB: 14 simulations for Class 7 'Sound' -------------------- */
   {

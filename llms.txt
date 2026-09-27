@@ -17,6 +17,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Simple Pendulum](https://i2003-byte.github.io/physics/pendulum/): Swing a pendulum, add damping and watch energy flow between kinetic and potential. See how the period depends on length and gravity. (Intermediate)
 - [Speed Race: Distance ÷ Time](https://i2003-byte.github.io/physics/speed-race/): Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed. (Beginner)
 - [Distance–Time Graph Builder](https://i2003-byte.github.io/physics/distance-time-graph/): Plan a four-leg bus trip and watch its distance–time graph being drawn. Steep lines mean fast, flat lines mean stopped. (Beginner)
+- [Pendulum Clock Lab](https://i2003-byte.github.io/physics/pendulum-clock/): Time a simple pendulum with a stopwatch, find its time period T = time ÷ oscillations, and fill an observation table to test length and bob mass. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
 - [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
@@ -48,6 +49,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 ### Electricity & Magnetism
 
+- [Electric Circuits and Symbols](https://i2003-byte.github.io/physics/electric-circuit/): Build a battery, switch and bulb circuit, then redraw it with circuit symbols. See why a bulb lights only in a closed circuit. (Beginner)
+- [Heating Effect and the Fuse](https://i2003-byte.github.io/physics/heating-fuse/): Switch on appliances in a 220 V house circuit and watch the fuse wire heat up. Overload it or cause a short circuit and see the fuse melt to keep the house safe. (Beginner)
+- [Make an Electromagnet](https://i2003-byte.github.io/physics/electromagnet/): Wind wire round an iron nail, connect a battery and pick up pins. Change the turns, cells and core, and watch a compass needle turn. (Beginner)
 - [Electric Fields](https://i2003-byte.github.io/physics/): Drop positive and negative charges and visualise field lines and equipotentials. (Advanced, coming soon)
 
 ### Thermodynamics

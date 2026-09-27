@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pendulum Clock Lab — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Time a simple pendulum with a stopwatch, find its time period T = time ÷ oscillations, and fill an observation table to test length and bob mass.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/pendulum-clock/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Pendulum Clock Lab — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Time a simple pendulum with a stopwatch, find its time period T = time ÷ oscillations, and fill an observation table to test length and bob mass.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/pendulum-clock/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="pendulum-clock">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>simple pendulum</strong> is a small heavy bob hanging from a light string. Pull it aside and let go: it swings to and fro in <strong>periodic motion</strong>, repeating itself in equal intervals of time. One <strong>oscillation</strong> is the trip from one extreme (A) to the other (B) and back to A. The time for one oscillation is the <strong>time period (T)</strong>.</p>
+            <p>One oscillation is too quick to time well, so we time many (say 10 or 20) and divide. Your table shows the key result: <strong>the time period depends on the length of the string, not on the mass of the bob.</strong></p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">T = total time ÷ number of oscillations</code>
+            <p class="formula-note">for example 14.2 s ÷ 10 = 1.42 s</p>
+            <code class="formula">one swing (A → B) = T ÷ 2</code>
+            <p class="formula-note">a pendulum clock ticks once per swing</p>
+            <code class="formula">T = 2π √(L ÷ g)</code>
+            <p class="formula-note">for older students (Class 11): L = length in m, g = 9.8 m/s². Four times the length gives twice the period.</p>
+            <p>Simplification: no air drag, so the swing never dies away, and the stopwatch starts exactly at release. In a real experiment your reaction time adds an error, which is one more reason to time many oscillations. Keep the swing small: large swings are slightly slower.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Old wall clocks in Indian homes and railway stations kept time with a swinging pendulum; turning a nut under the bob to change its length speeds the clock up or slows it down.</li>
+              <li>A <strong>seconds pendulum</strong> (about 99 cm long) swings once every second, so its time period is 2 s.</li>
+              <li>A child on a garden swing is a big pendulum: a longer swing moves back and forth more slowly.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep L = 50 cm. Time 10 oscillations with the small bob, then with the big bob. What do you notice?<details><summary>Show answer</summary>The time period is the same (about 1.42 s). The mass of the bob does not change the period.</details></li>
+              <li>Now try 25 cm, 50 cm and 1 m. How does T change as the string gets longer?<details><summary>Show answer</summary>A longer string gives a longer time period: about 1.0 s, 1.42 s and 2.0 s. Doubling the length does not double T, though; you need four times the length for that.</details></li>
+              <li>Pick the “Seconds pendulum” preset. How long is one swing (one tick)?<details><summary>Show answer</summary>About 1 second. T ≈ 2 s, and one swing is half an oscillation.</details></li>
+              <li>A pendulum makes 20 oscillations in 32 s. What is its time period?<details><summary>Show answer</summary>T = 32 ÷ 20 = 1.6 s.</details></li>
+              <li>A pendulum clock runs slow (it loses time). Should you make its pendulum longer or shorter?<details><summary>Show answer</summary>Shorter. A shorter pendulum has a smaller time period, so it ticks faster.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Oscillation:</strong> one complete to-and-fro movement, A → B → A.</li>
+              <li><strong>Time period:</strong> time taken for one oscillation, in seconds.</li>
+              <li><strong>Mean position (O):</strong> where the bob hangs at rest.</li>
+              <li><strong>Periodic motion:</strong> motion that repeats itself after equal intervals of time.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
