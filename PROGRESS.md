@@ -5,13 +5,20 @@
 > Keep each entry short. Keep only the latest ~30 entries (delete older ones; git history keeps them).
 
 <!-- Entry template:
-## YYYY-MM-DD HH:MM IST · <kind: routine | request | fix> · <roadmap item or task>
+## YYYY-MM-DD HH:MM IST · <kind: routine | maintenance | request | fix> · <roadmap item or task>
 - Built/changed: <simulation ids or files>
 - Checks: ✅ check.mjs passed · ✅/⏭ browser-test
 - Roadmap: <item> → Done | still In progress
 - Next time: <what remains, or "take next item from 📋 Next">
 - Problems/notes: <anything the next session must know, or "none">
 -->
+
+## 2026-09-27 · request · Add weekly maintenance
+- Built/changed: `.claude/skills/site-maintenance`, AGENTS.md rules (learn from mistakes, NEEDS HUMAN flag), weekly routine (Sunday ≈10 AM IST)
+- Checks: ✅ check.mjs passed
+- Roadmap: unchanged
+- Next time: daily builders continue with 📋 Next; maintenance runs on Sunday
+- Problems/notes: none
 
 ## 2026-09-27 · request · Set up roadmap-driven autonomous building
 - Built/changed: ROADMAP.md, PROGRESS.md, `.claude/skills/roadmap-run`, AGENTS.md "Roadmap workflow", two daily routines (≈8 AM and 12 AM IST)

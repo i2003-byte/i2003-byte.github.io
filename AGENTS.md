@@ -41,6 +41,9 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - push to `main`
 - **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. Anything else goes to 💡 Proposed.
 - Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
+- **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, tidy, and record lessons.
+- **Learn from mistakes:** whenever you fix a non-obvious bug or a blocked push, add a one-line lesson to **Gotchas** below. Keep it at about 20 lines or fewer.
+- **Flag what needs a person:** write **NEEDS HUMAN** in the `PROGRESS.md` entry (e.g. a science doubt, or a risky change you didn't make).
 
 ## Where things are (open only what you need)
 | Task | Edit |

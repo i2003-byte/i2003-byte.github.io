@@ -9,4 +9,5 @@ All project instructions live in AGENTS.md (the open standard shared by every AI
 - Project skills:
   - `.claude/skills/add-simulation/SKILL.md`: use it whenever you add or build out a simulation.
   - `.claude/skills/roadmap-run/SKILL.md`: use it for scheduled runs and "continue the roadmap".
+  - `.claude/skills/site-maintenance/SKILL.md`: use it for the weekly maintenance routine and "check the site".
 - Keep token use low. Open only the files in the "Where things are" table that the task needs. Use Grep inside `style.css` and `common.js` rather than reading them whole.
