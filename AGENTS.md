@@ -18,6 +18,7 @@ It deploys from the `main` branch via GitHub Pages. There is no build step.
 9. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
 
 ## Workflow (every change)
+**Start of every session:** get the latest `main` (`git fetch origin main && git checkout -B <work-branch> origin/main`), then read the top 3 entries of `PROGRESS.md` to see where the last session stopped.
 ```bash
 node tools/check.mjs --write   # validate everything + regenerate sitemap/llms.txt
 node tools/browser-test.mjs    # optional: real-browser test at phone & desktop (needs Playwright)
@@ -25,6 +26,21 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 ```
 - `tools/check.mjs` must pass before pushing. A Claude Code hook (`.claude/settings.json`) blocks `git push` if it fails, and GitHub Actions re-runs it on every push.
 - Commit messages: short imperative summary, for example `Add spring-mass simulation`.
+- **End of every session that changed the site:** add an entry at the top of `PROGRESS.md` (template inside it), covering what changed, check results, and what the next session should do.
+
+## Roadmap workflow (autonomous building)
+- `ROADMAP.md` is the plan:
+  - audience (Class 7–12, India)
+  - coverage table
+  - pipeline: 🔨 In progress → 📋 Next → 💡 Proposed → ✅ Done
+- `PROGRESS.md` is the memory: a log of every session, newest first.
+- Scheduled routines (and "continue the roadmap" requests) follow `.claude/skills/roadmap-run/SKILL.md`:
+  - resume 🔨 In progress, or take the first 📋 Next item
+  - build about 3 simulations, one item per run
+  - update ROADMAP/PROGRESS/README/AGENTS
+  - push to `main`
+- **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. Anything else goes to 💡 Proposed.
+- Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
 
 ## Where things are (open only what you need)
 | Task | Edit |
@@ -41,6 +57,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 | Site name, GitHub URL, "New" badge window | `SimLab.site` at the top of `catalog.js` |
 
 ## Recipes
+- **Continue the roadmap / scheduled run.** Follow `.claude/skills/roadmap-run/SKILL.md`.
 - **Add a simulation.** Follow the skill in `.claude/skills/add-simulation/SKILL.md`. Short version:
   1. `cp -r _template <subject>/<id>`
   2. Edit `index.html`: set `data-sim`, the `<title>`, meta and og/canonical URLs, and the Learn section.

@@ -193,7 +193,7 @@ for (const m of simulations.filter((x) => S.isLive(x)))
   if (!readme.includes(m.title)) err(`README.md: live simulation "${m.title}" is missing from the "What's inside" table`);
 
 /* ---------- 9. Required files ---------- */
-for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md'])
+for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md', 'ROADMAP.md', 'PROGRESS.md'])
   if (!exists(f)) err(`missing required file: ${f}`);
 
 report();
