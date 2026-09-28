@@ -18,6 +18,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Speed Race: Distance ÷ Time](https://i2003-byte.github.io/physics/speed-race/): Race two vehicles down a straight track. Set their speeds in km/h, convert to m/s and predict who wins using time = distance ÷ speed. (Beginner)
 - [Distance–Time Graph Builder](https://i2003-byte.github.io/physics/distance-time-graph/): Plan a four-leg bus trip and watch its distance–time graph being drawn. Steep lines mean fast, flat lines mean stopped. (Beginner)
 - [Pendulum Clock Lab](https://i2003-byte.github.io/physics/pendulum-clock/): Time a simple pendulum with a stopwatch, find its time period T = time ÷ oscillations, and fill an observation table to test length and bob mass. (Beginner)
+- [Pressure = Force ÷ Area](https://i2003-byte.github.io/physics/pressure-area/): Rest a brick on sand on its largest, long or smallest face and stack more bricks. See how the same force makes more pressure on a smaller area and digs a deeper dent. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
 - [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
@@ -45,6 +46,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 ### Optics
 
+- [Pinhole Camera](https://i2003-byte.github.io/physics/pinhole-camera/): Make a pinhole camera: see how light travelling in straight lines forms an upside-down image, and how the box length and hole size change its size, sharpness and brightness. (Beginner)
+- [Plane Mirror and Lateral Inversion](https://i2003-byte.github.io/physics/plane-mirror/): Drag an object and your eye in front of a plane mirror. See why the angle of incidence equals the angle of reflection, where the image forms, and why AMBULANCE is written backwards. (Beginner)
+- [Newton's Colour Disc](https://i2003-byte.github.io/physics/newtons-disc/): Spin a disc painted with the seven colours of the rainbow and watch them merge into a whitish grey. Try other colour pairs and find out how fast the disc must spin to fool your eye. (Beginner)
 - [Ray Optics](https://i2003-byte.github.io/physics/): Bend light with lenses and mirrors. Find focal points and form images. (Beginner, coming soon)
 
 ### Electricity & Magnetism

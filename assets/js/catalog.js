@@ -256,6 +256,24 @@ SimLab.simulations = [
     prerequisites: ['oscillation-counter', 'pendulum', 'speed-race']
   },
 
+  /* ---- MECHANICS: Class 8 'Force and pressure' ------------------------- */
+  {
+    id: 'pressure-area',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Pressure = Force ÷ Area',
+    description:
+      'Rest a brick on sand on its largest, long or smallest face and stack more bricks. See how the same force makes more pressure on a smaller area and digs a deeper dent.',
+    level: 'Beginner',
+    tags: ['pressure', 'force', 'area', 'pascal', 'thrust', 'brick', 'sand', 'force and pressure', 'class 8'],
+    thumbnail: '/assets/img/thumbs/pressure-area.svg',
+    link: '/physics/pressure-area/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['speed-race']
+  },
+
   /* ---- ELECTRICITY: Class 7 'Electric current and its effects' ---------- */
   {
     id: 'electric-circuit',
@@ -304,6 +322,56 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-09-27',
     prerequisites: ['electric-circuit', 'heating-fuse']
+  },
+
+  /* ---- OPTICS: Class 7 'Light' ------------------------------------------ */
+  {
+    id: 'pinhole-camera',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Pinhole Camera',
+    description:
+      'Make a pinhole camera: see how light travelling in straight lines forms an upside-down image, and how the box length and hole size change its size, sharpness and brightness.',
+    level: 'Beginner',
+    tags: ['light', 'pinhole camera', 'straight line', 'rectilinear propagation', 'inverted image', 'camera obscura', 'class 7'],
+    thumbnail: '/assets/img/thumbs/pinhole-camera.svg',
+    link: '/physics/pinhole-camera/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['plane-mirror']
+  },
+  {
+    id: 'plane-mirror',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Plane Mirror and Lateral Inversion',
+    description:
+      'Drag an object and your eye in front of a plane mirror. See why the angle of incidence equals the angle of reflection, where the image forms, and why AMBULANCE is written backwards.',
+    level: 'Beginner',
+    tags: ['light', 'reflection', 'plane mirror', 'angle of incidence', 'angle of reflection', 'virtual image', 'lateral inversion', 'class 7'],
+    thumbnail: '/assets/img/thumbs/plane-mirror.svg',
+    link: '/physics/plane-mirror/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['pinhole-camera', 'newtons-disc']
+  },
+  {
+    id: 'newtons-disc',
+    subject: 'physics',
+    branch: 'optics',
+    title: "Newton's Colour Disc",
+    description:
+      'Spin a disc painted with the seven colours of the rainbow and watch them merge into a whitish grey. Try other colour pairs and find out how fast the disc must spin to fool your eye.',
+    level: 'Beginner',
+    tags: ['light', 'white light', 'colours', 'VIBGYOR', 'newton disc', 'persistence of vision', 'spectrum', 'prism', 'class 7'],
+    thumbnail: '/assets/img/thumbs/newtons-disc.svg',
+    link: '/physics/newtons-disc/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['plane-mirror', 'pinhole-camera']
   },
 
   /* ---- SOUND LAB: 14 simulations for Class 7 'Sound' -------------------- */

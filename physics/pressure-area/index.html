@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pressure = Force ÷ Area — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Rest a brick on sand on its largest, long or smallest face and stack more bricks. See how the same force makes more pressure on a smaller area and digs a deeper dent.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/pressure-area/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Pressure = Force ÷ Area — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Rest a brick on sand on its largest, long or smallest face and stack more bricks. See how the same force makes more pressure on a smaller area and digs a deeper dent.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/pressure-area/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="pressure-area">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Pressure</strong> is how concentrated a force is: the force acting on each square metre of surface. The same brick pushes on the sand with the same force (its weight) whichever face is down, but on a small face that force is squeezed into a small area, so the pressure is bigger and the brick sinks deeper.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">pressure = force ÷ area</code>
+            <p class="formula-note">P in pascal (Pa) = newton per square metre (N/m²) · 1 cm² = 0.0001 m²</p>
+            <code class="formula">weight F = m × g</code>
+            <p class="formula-note">a 3 kg brick weighs 3 × 9.8 = 29.4 N</p>
+            <ul>
+              <li>Same force, <strong>smaller area → more pressure</strong>.</li>
+              <li>Same area, <strong>more force → more pressure</strong>.</li>
+            </ul>
+            <p>Simplification: the brick is 23 × 11 × 7 cm with a mass of 3 kg. The dent depth uses a simple rule (depth in mm = P ÷ 300); real sand firms up as it is squeezed.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>School bags have wide straps so the weight spreads over more of your shoulder and hurts less.</li>
+              <li>A sharp knife has a very thin edge (tiny area), so a small push gives a huge pressure and cuts vegetables easily.</li>
+              <li>Camels have broad feet so they don't sink in the sand of the Thar desert.</li>
+              <li>Nails and drawing pins have pointed tips to go into wood or a board easily.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With one brick, work out the pressure on the largest face (253 cm²).<details><summary>Show answer</summary>Area = 0.0253 m². P = 29.4 ÷ 0.0253 ≈ 1162 Pa.</details></li>
+              <li>Stand the brick on its smallest end. How many times bigger is the pressure than on the largest face?<details><summary>Show answer</summary>253 ÷ 77 ≈ 3.3 times. The force is the same, the area is 3.3 times smaller.</details></li>
+              <li>Stack 2 bricks on the largest face. Is that more or less pressure than 1 brick on its end?<details><summary>Show answer</summary>Less: 2 bricks flat give about 2324 Pa, 1 brick on its end gives about 3818 Pa. Area matters a lot.</details></li>
+              <li>Why is it easier to walk on soft sand in flat sandals than in narrow heels?<details><summary>Show answer</summary>Flat sandals spread your weight over a larger area, so the pressure is lower and you sink less.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Force:</strong> a push or a pull, measured in newtons (N).</li>
+              <li><strong>Thrust:</strong> a force acting at right angles to a surface, like the brick's weight on the sand.</li>
+              <li><strong>Pascal (Pa):</strong> the SI unit of pressure, 1 N on 1 m².</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

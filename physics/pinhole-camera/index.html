@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pinhole Camera — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Make a pinhole camera: see how light travelling in straight lines forms an upside-down image, and how the box length and hole size change its size, sharpness and brightness.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/pinhole-camera/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Pinhole Camera — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Make a pinhole camera: see how light travelling in straight lines forms an upside-down image, and how the box length and hole size change its size, sharpness and brightness.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/pinhole-camera/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="pinhole-camera">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Light travels in <strong>straight lines</strong>. In a dark box with a tiny hole, light from the top of a candle can only reach the bottom of the screen, and light from the bottom can only reach the top. So a <strong>pinhole camera</strong> makes an image that is <strong>upside down</strong>, and left and right are swapped too (the image is turned through 180°).</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">image height = object height × v ÷ u</code>
+            <p class="formula-note">u: object to pinhole · v: pinhole to screen (the two triangles through the hole are similar)</p>
+            <ul>
+              <li>A longer box (bigger v) or a nearer object (smaller u) gives a <strong>bigger</strong> image.</li>
+              <li>A bigger hole lets in more light, so the image is <strong>brighter</strong>, but each point becomes a patch, so it is <strong>blurrier</strong>. Patch size ≈ d × (u + v) ÷ u.</li>
+            </ul>
+            <p>Simplification: brightness is shown relative to a 1 mm hole with u = 1 m and v = 20 cm. We ignore the spreading of light (diffraction) that makes extremely tiny holes blurry again.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>During a solar eclipse, gaps between leaves act as pinholes and throw many small images of the crescent Sun on the ground.</li>
+              <li>Our eye works like a camera: the pupil lets light in and an upside-down image forms on the retina. The brain turns it the right way up.</li>
+              <li>Old astronomers watched the Sun safely through a pinhole in a dark room (a "camera obscura", which means dark room).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Switch to the letter F. How does it look on the screen?<details><summary>Show answer</summary>Upside down and reversed left to right: the F is turned through 180°. Every ray crosses over at the hole.</details></li>
+              <li>With h = 20 cm, u = 100 cm and v = 20 cm, what is the image height? Check with the readout.<details><summary>Show answer</summary>20 × 20 ÷ 100 = 4 cm, five times smaller than the candle.</details></li>
+              <li>Move the candle closer to the pinhole. What happens to the image?<details><summary>Show answer</summary>It grows, because u gets smaller. At u = v it is the same size as the candle.</details></li>
+              <li>Change the pinhole from 0.5 mm to 10 mm. What do you gain and what do you lose?<details><summary>Show answer</summary>You gain brightness (more light gets in) but lose sharpness: each point of the candle lights a bigger patch, so the patches overlap and the image blurs.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Rectilinear propagation:</strong> light travels in straight lines.</li>
+              <li><strong>Inverted image:</strong> an image that is upside down.</li>
+              <li><strong>Screen:</strong> a surface (here tracing paper) on which an image can be caught.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

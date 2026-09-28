@@ -20,21 +20,20 @@
 ## Coverage (agents: update after every run)
 | Class | Physics | Chemistry | Mathematics | Biology |
 |---|---|---|---|---|
-| 7 | 26 (Sound 14, Heat 6, Motion 3, Electricity 3) | 0 | 0 | 0 |
-| 8 | 0 | 0 | 0 | 0 |
+| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 |
+| 8 | 1 (Force and pressure 1) | 0 | 0 | 0 |
 | 9 | 0 | 0 | 0 | 0 |
 | 10 | 0 | 0 | 0 | 0 |
 | 11 | 2 (projectile, pendulum) | 0 | 0 | 0 |
 | 12 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 28**
+**Total live simulations: 32**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
+- [~] **Class 8 · Physics · Force and pressure.** Branch `mechanics`. Done: pressure-area (bricks on sand, P = F ÷ A). Next: build `balanced-forces` (push/pull, tug of war in newtons, net force and which way the cart moves or whether it stays still) and `liquid-pressure` (bottle with holes at three depths, jets reach further from lower holes, P = h ρ g), then move this item to ✅ Done and start Class 8 · Friction. Started 2026-09-28.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 7 · Physics · Light.** Branch `optics`. Sims: light travels in a straight line (pinhole camera); plane mirror image and lateral inversion; Newton's colour disc / prism rainbow.
-- [ ] **Class 8 · Physics · Force and pressure.** Branch `mechanics`. Sims: push/pull and balanced/unbalanced forces; pressure = force ÷ area (bed of nails, school bag straps); liquid pressure with depth (holes in a bottle).
 - [ ] **Class 8 · Physics · Friction.** Branch `mechanics`. Sims: surface roughness vs sliding block; static vs sliding vs rolling friction; ball bearings and lubricants.
 - [ ] **Class 8 · Physics · Some natural phenomena.** Branch `electricity`. Sims: charging by rubbing (balloon and hair); electroscope; lightning and the lightning conductor.
 - [ ] **Class 7 · Geography · Earth's motions.** New subject `geography` (add it on first use). Sims: rotation, day and night and sunrise times across India; revolution and the seasons (tilted axis); time zones (IST vs world clocks).
@@ -64,5 +63,6 @@ _None yet._
 - [x] **Class 7 · Physics · Sound (Sound Lab).** 14 sims: vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string. Done 2026-09-25.
 - [x] **Class 7 · Physics · Heat.** 6 sims: hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze. Done 2026-09-27.
 - [x] **Class 7 · Physics · Motion and time.** 3 sims: speed-race, distance-time-graph, pendulum-clock. Done 2026-09-27.
+- [x] **Class 7 · Physics · Light.** 3 sims: pinhole-camera, plane-mirror, newtons-disc. Done 2026-09-28.
 - [x] **Class 7 · Physics · Electric current and its effects.** 3 sims: electric-circuit, heating-fuse, electromagnet. Done 2026-09-27.
 - [x] **Class 11 · Physics · Kinematics and oscillation basics.** 2 sims: projectile, pendulum. Done 2026-09-25.
