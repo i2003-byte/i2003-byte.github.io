@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="block pulled by a spring balance">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="10" y="120" width="300" height="16" rx="3" fill="#d6a760"/>
+  <rect x="50" y="80" width="70" height="40" rx="4" fill="#b7793a" stroke="#78350f" stroke-width="2"/>
+  <path d="M120 100l8-6 8 12 8-12 8 12 8-12 8 6" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="176" y="90" width="70" height="20" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/><path d="M214 90v20" stroke="#f87171" stroke-width="3"/>
+  <path d="M85 68H150" stroke="#f472b6" stroke-width="4"/><path d="M146 61l12 7-12 7z" fill="#f472b6"/>
+  <path d="M85 146H40" stroke="#34d399" stroke-width="4"/><path d="M44 139l-12 7 12 7z" fill="#34d399"/>
+  <text x="90" y="170" fill="#34d399" font-family="sans-serif" font-size="14" font-weight="700">friction</text>
+  <text x="235" y="40" fill="#e0e7ff" font-family="sans-serif" font-size="18" font-weight="700" text-anchor="middle">μs &gt; μk</text>
+</svg>

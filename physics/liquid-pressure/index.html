@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pressure in Liquids — Interactive Simulation | SimLab</title>
+  <meta name="description" content="A bottle with three holes at different depths: the deeper the hole, the greater the pressure (P = h ρ g) and the faster the jet. Change the level, the liquid and the stool height.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/liquid-pressure/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Pressure in Liquids — Interactive Simulation | SimLab">
+  <meta property="og:description" content="A bottle with three holes at different depths: the deeper the hole, the greater the pressure (P = h ρ g) and the faster the jet. Change the level, the liquid and the stool height.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/liquid-pressure/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="liquid-pressure">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A liquid presses on the bottom <em>and</em> on the walls of its container. The deeper you go, the more liquid there is above that point pushing down, so the <strong>pressure grows with depth</strong>. That is why the jet from the lowest hole comes out fastest. Denser liquids (like sea water) press harder at the same depth.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">P = h × ρ × g</code>
+            <p class="formula-note">h = depth below the surface (m) · ρ = density (kg/m³) · g = 9.8 m/s² · P in pascal (Pa)</p>
+            <code class="formula">jet speed v = √(2 g h)</code>
+            <p class="formula-note">the density cancels out, so water and kerosene leave a hole at the same depth equally fast</p>
+            <code class="formula">lands at R = 2 √(h × z)</code>
+            <p class="formula-note">z = height of the hole above the floor · the jet falls like a ball thrown sideways</p>
+            <p>Simplifications: the holes are tiny, there is no friction in them and no air resistance. The pressure shown is extra pressure from the liquid only (the air pressure on top is left out). With the tap off, the level falls as liquid runs out.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Dams such as the Bhakra Nangal dam are built much thicker at the bottom, where the water pressure is greatest.</li>
+              <li>Overhead water tanks are placed high on the roof so that water reaches the taps with more pressure.</li>
+              <li>Divers feel pressure on their ears growing as they swim deeper.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With water at a level of 28 cm, work out the pressure at hole C (4 cm above the base).<details><summary>Show answer</summary>Depth h = 24 cm = 0.24 m. P = 0.24 × 1000 × 9.8 ≈ 2352 Pa.</details></li>
+              <li>Switch to kerosene. Does the pressure at C go up or down? What about the jet speed?<details><summary>Show answer</summary>The pressure falls to about 1905 Pa because kerosene is less dense, but the jet speed stays about 2.17 m/s: it depends only on the depth.</details></li>
+              <li>Put the bottle on the floor (stool 0 cm). Which jet lands farthest now?<details><summary>Show answer</summary>Jet B. C is fastest, but it starts only 4 cm above the floor, so it hits the floor almost at once. On a tall stool, C lands farthest.</details></li>
+              <li>Turn the tap off. Why do the jets get shorter as the bottle empties?<details><summary>Show answer</summary>The level falls, so every hole is less deep, the pressure drops and the jets slow down. When the surface falls below a hole, that jet stops.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Depth:</strong> distance straight down from the liquid's surface.</li>
+              <li><strong>Density:</strong> mass of one cubic metre of a substance. Water: 1000 kg/m³.</li>
+              <li><strong>Pascal (Pa):</strong> 1 newton on each square metre.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -98,7 +98,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 
 ## Current content (update when it changes)
 - **Physics (live):**
-  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area
+  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area, balanced-forces, liquid-pressure; Class 8 Friction: friction-surfaces, rolling-vs-sliding
   - branch `optics` (Class 7 Light): pinhole-camera, plane-mirror, newtons-disc
   - branch `electricity` (Class 7 Electric current and its effects): electric-circuit, heating-fuse, electromagnet
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)

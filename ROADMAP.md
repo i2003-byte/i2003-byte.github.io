@@ -21,20 +21,19 @@
 | Class | Physics | Chemistry | Mathematics | Biology |
 |---|---|---|---|---|
 | 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 |
-| 8 | 1 (Force and pressure 1) | 0 | 0 | 0 |
+| 8 | 5 (Force and pressure 3, Friction 2) | 0 | 0 | 0 |
 | 9 | 0 | 0 | 0 | 0 |
 | 10 | 0 | 0 | 0 | 0 |
 | 11 | 2 (projectile, pendulum) | 0 | 0 | 0 |
 | 12 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 32**
+**Total live simulations: 36**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-- [~] **Class 8 · Physics · Force and pressure.** Branch `mechanics`. Done: pressure-area (bricks on sand, P = F ÷ A). Next: build `balanced-forces` (push/pull, tug of war in newtons, net force and which way the cart moves or whether it stays still) and `liquid-pressure` (bottle with holes at three depths, jets reach further from lower holes, P = h ρ g), then move this item to ✅ Done and start Class 8 · Friction. Started 2026-09-28.
+- [~] **Class 8 · Physics · Friction.** Branch `mechanics`. Done: friction-surfaces (spring balance on glass/tile/wood/cloth/sandpaper, static vs sliding, slow pull test), rolling-vs-sliding (30° ramp, block vs toy car on four floors, results table). Next: build `ball-bearings-lubricants` (a heavy lid or wheel hub turning with and without ball bearings, and a surface dry vs oiled vs powdered; show friction force and heat produced), then move this item to ✅ Done and start Class 8 · Some natural phenomena. Started 2026-09-28.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 8 · Physics · Friction.** Branch `mechanics`. Sims: surface roughness vs sliding block; static vs sliding vs rolling friction; ball bearings and lubricants.
 - [ ] **Class 8 · Physics · Some natural phenomena.** Branch `electricity`. Sims: charging by rubbing (balloon and hair); electroscope; lightning and the lightning conductor.
 - [ ] **Class 7 · Geography · Earth's motions.** New subject `geography` (add it on first use). Sims: rotation, day and night and sunrise times across India; revolution and the seasons (tilted axis); time zones (IST vs world clocks).
 - [ ] **Class 11 · Economics · Demand and supply.** New subject `economics` (add it on first use). Sims: demand curve (price vs quantity, ₹); supply curve and market equilibrium; price ceiling / floor and shortage or surplus.
@@ -64,5 +63,6 @@ _None yet._
 - [x] **Class 7 · Physics · Heat.** 6 sims: hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze. Done 2026-09-27.
 - [x] **Class 7 · Physics · Motion and time.** 3 sims: speed-race, distance-time-graph, pendulum-clock. Done 2026-09-27.
 - [x] **Class 7 · Physics · Light.** 3 sims: pinhole-camera, plane-mirror, newtons-disc. Done 2026-09-28.
+- [x] **Class 8 · Physics · Force and pressure.** 3 sims: pressure-area, balanced-forces, liquid-pressure. Done 2026-09-28.
 - [x] **Class 7 · Physics · Electric current and its effects.** 3 sims: electric-circuit, heating-fuse, electromagnet. Done 2026-09-27.
 - [x] **Class 11 · Physics · Kinematics and oscillation basics.** 2 sims: projectile, pendulum. Done 2026-09-25.

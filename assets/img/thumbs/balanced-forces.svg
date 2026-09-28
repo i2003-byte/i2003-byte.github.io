@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="trolley pulled from both sides">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M0 160H320" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="130" y="112" width="60" height="30" rx="5" fill="#b08850" stroke="#78350f" stroke-width="2"/><rect x="124" y="140" width="72" height="8" rx="2" fill="#94a3b8"/>
+  <circle cx="140" cy="153" r="6" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/><circle cx="180" cy="153" r="6" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/>
+  <path d="M124 136H70M196 136H250" stroke="#d6b27a" stroke-width="3"/>
+  <g stroke="#60a5fa" stroke-width="4" stroke-linecap="round" fill="none"><path d="M52 160l8-24-4-28M56 108l14 28M60 136l6 24"/></g><circle cx="52" cy="100" r="8" fill="#60a5fa"/>
+  <g stroke="#f472b6" stroke-width="4" stroke-linecap="round" fill="none"><path d="M268 160l-8-24 4-28M264 108l-14 28M260 136l-6 24"/></g><circle cx="268" cy="100" r="8" fill="#f472b6"/>
+  <path d="M130 80H80" stroke="#60a5fa" stroke-width="4"/><path d="M84 73l-12 7 12 7z" fill="#60a5fa"/>
+  <path d="M190 80H240" stroke="#f472b6" stroke-width="4"/><path d="M236 73l12 7-12 7z" fill="#f472b6"/>
+  <text x="160" y="40" fill="#e0e7ff" font-family="sans-serif" font-size="18" font-weight="700" text-anchor="middle">net force = 0?</text>
+</svg>

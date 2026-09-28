@@ -10,11 +10,11 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**32 live simulations** in Physics. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**36 live simulations** in Physics. Chemistry, Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
-| ⚙️ **Mechanics** (6) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area |
+| ⚙️ **Mechanics** (10) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area · Balanced and Unbalanced Forces · Pressure in Liquids · Friction on Different Surfaces · Rolling vs Sliding Friction |
 | 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (3, Class 7) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet |

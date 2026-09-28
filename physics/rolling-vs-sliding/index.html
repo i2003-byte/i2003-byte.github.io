@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rolling vs Sliding Friction — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Let a wooden block and a toy car go down the same ramp on to glass, tile, cloth or sand. Compare how far each runs and see why rolling friction is so much smaller.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/rolling-vs-sliding/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Rolling vs Sliding Friction — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Let a wooden block and a toy car go down the same ramp on to glass, tile, cloth or sand. Compare how far each runs and see why rolling friction is so much smaller.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/rolling-vs-sliding/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="rolling-vs-sliding">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When one body <strong>rolls</strong> over another, the friction is much smaller than when it <strong>slides</strong>. A wheel doesn't scrape its bumps across the floor; it lifts off them as it turns. That is why a toy car on wheels runs several times farther than a wooden block let go from the same height. On every surface, the rougher the floor, the sooner friction stops the object.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">on the ramp: a = g (sin θ − μ cos θ)</code>
+            <code class="formula">stopping distance d = v² ÷ (2 μ g)</code>
+            <p class="formula-note">v = speed at the foot of the ramp · μ = friction coefficient of the floor · g = 9.8 m/s²</p>
+            <ul>
+              <li>Rolling friction &lt; sliding friction &lt; static friction.</li>
+              <li>For a fair test, change only one thing at a time: the object <em>or</em> the floor, always from the same height.</li>
+            </ul>
+            <p>Simplifications: the ramp is 30° and made of wood, the object keeps its speed as it turns on to the floor, the car's wheels are treated as light and there is no air resistance. The μ values are typical classroom values, not measurements.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Suitcases have wheels, so pulling one through a railway station is easy.</li>
+              <li>Ball bearings in cycle hubs and ceiling fans replace sliding with rolling to cut friction.</li>
+              <li>Carrom players sprinkle powder on the board so the striker slides with less friction.</li>
+              <li>Sand on a road makes a cycle slow down quickly: a sandy road has high friction.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>From h = 20 cm on smooth tile, how far does the toy car run? And the block?<details><summary>Show answer</summary>The car runs about 146 cm, the block only about 32 cm: more than four times less.</details></li>
+              <li>Fill in the whole table from the same height. Which floor stops the car soonest?<details><summary>Show answer</summary>Sand, where the car runs only about 39 cm from 20 cm. Sand has the largest friction.</details></li>
+              <li>Halve the height to 10 cm. What happens to the distance on the floor?<details><summary>Show answer</summary>It halves too. The speed squared at the foot of the ramp is proportional to the height, and d = v² ÷ (2 μ g).</details></li>
+              <li>Why must the height stay the same while you compare surfaces?<details><summary>Show answer</summary>A different height gives a different starting speed, so you couldn't tell whether the surface or the speed caused the change. Keeping it the same makes it a fair test.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Rolling friction:</strong> friction when a body rolls over a surface.</li>
+              <li><strong>Sliding friction:</strong> friction when one surface slides over another.</li>
+              <li><strong>Fair test:</strong> an experiment where only one thing is changed at a time.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

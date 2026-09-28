@@ -273,6 +273,70 @@ SimLab.simulations = [
     dateAdded: '2026-09-28',
     prerequisites: ['speed-race']
   },
+  {
+    id: 'balanced-forces',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Balanced and Unbalanced Forces',
+    description:
+      'Two teams pull a loaded trolley from opposite sides. Change each pull and see when the forces balance, which way the net force acts and how the trolley speeds up or slows down.',
+    level: 'Beginner',
+    tags: ['force', 'net force', 'balanced forces', 'unbalanced forces', 'push and pull', 'tug of war', 'newton', 'force and pressure', 'class 8'],
+    thumbnail: '/assets/img/thumbs/balanced-forces.svg',
+    link: '/physics/balanced-forces/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['speed-race']
+  },
+  {
+    id: 'liquid-pressure',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Pressure in Liquids',
+    description:
+      'A bottle with three holes at different depths: the deeper the hole, the greater the pressure (P = h ρ g) and the faster the jet. Change the level, the liquid and the stool height.',
+    level: 'Beginner',
+    tags: ['pressure', 'liquid pressure', 'depth', 'density', 'hydrostatic', 'jets', 'torricelli', 'force and pressure', 'class 8'],
+    thumbnail: '/assets/img/thumbs/liquid-pressure.svg',
+    link: '/physics/liquid-pressure/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['pressure-area']
+  },
+  {
+    id: 'friction-surfaces',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Friction on Different Surfaces',
+    description:
+      'Pull a wooden block across glass, tile, wood, cloth and sandpaper with a spring balance. Find the force needed to start it moving and to keep it sliding.',
+    level: 'Beginner',
+    tags: ['friction', 'static friction', 'sliding friction', 'spring balance', 'surfaces', 'roughness', 'coefficient of friction', 'class 8'],
+    thumbnail: '/assets/img/thumbs/friction-surfaces.svg',
+    link: '/physics/friction-surfaces/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['balanced-forces']
+  },
+  {
+    id: 'rolling-vs-sliding',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Rolling vs Sliding Friction',
+    description:
+      'Let a wooden block and a toy car go down the same ramp on to glass, tile, cloth or sand. Compare how far each runs and see why rolling friction is so much smaller.',
+    level: 'Beginner',
+    tags: ['friction', 'rolling friction', 'sliding friction', 'ramp', 'incline', 'wheels', 'fair test', 'class 8'],
+    thumbnail: '/assets/img/thumbs/rolling-vs-sliding.svg',
+    link: '/physics/rolling-vs-sliding/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-28',
+    prerequisites: ['friction-surfaces']
+  },
 
   /* ---- ELECTRICITY: Class 7 'Electric current and its effects' ---------- */
   {
