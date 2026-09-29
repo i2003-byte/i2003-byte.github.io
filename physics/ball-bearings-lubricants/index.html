@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ball Bearings and Lubricants — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Spin a potter's wheel on a dry pivot, with powder, with oil or on ball bearings. See how long it keeps turning, how much heat friction makes and why machines are oiled.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/ball-bearings-lubricants/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Ball Bearings and Lubricants — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Spin a potter's wheel on a dry pivot, with powder, with oil or on ball bearings. See how long it keeps turning, how much heat friction makes and why machines are oiled.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/ball-bearings-lubricants/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ball-bearings-lubricants">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Friction always turns some of the energy of motion into <strong>heat</strong> and wears parts away. We can cut it down in two ways. A <strong>lubricant</strong> (oil, grease or a fine powder such as graphite) puts a thin slippery layer between the surfaces so their bumps do not lock together. <strong>Ball bearings</strong> go further: they change sliding into rolling, and rolling friction is far smaller than sliding friction.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">friction force = μ × N</code>
+            <code class="formula">heat made each second = friction force × rubbing speed</code>
+            <p class="formula-note">N = weight pressing on the pivot = (5 kg wheel + clay) × 9.8 N/kg · μ is 0.4 for dry metal and about 0.004 for ball bearings</p>
+            <ul>
+              <li>More weight on the pivot means more friction, so a heavily loaded wheel stops sooner.</li>
+              <li>Friction does not disappear with ball bearings; it just becomes about 100 times smaller.</li>
+            </ul>
+            <p>Simplification: the μ values are typical classroom values, friction acts at an average radius of 1 cm on the pivot, and a small air drag is added so the wheel always stops. Real wheels also lose energy in other ways.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Bicycle wheels, ceiling fans, mixer-grinders and car wheels all turn on ball bearings.</li>
+              <li>We put a few drops of oil on a squeaky door hinge or sewing machine; the squeak stops and the hinge turns easily.</li>
+              <li>Graphite powder is used in locks, and carrom players sprinkle powder on the board so the striker slides freely.</li>
+              <li>Engines need engine oil. Without it, the parts rub, get very hot and can seize up.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With 5 kg of clay at 120 rpm, spin the wheel on the dry pivot, then with oil, then on ball bearings. Compare the times in the results table.<details><summary>Show answer</summary>Dry: about 7 s. Oiled: about 32 s. Ball bearings: about 190 s (use the 4× speed button). The bearing wheel keeps turning more than 25 times as long.</details></li>
+              <li>Keep the dry pivot and raise the clay from 5 kg to 10 kg. Does it stop sooner or later?<details><summary>Show answer</summary>Sooner, about 5.3 s instead of 7.4 s. The extra weight presses the surfaces together harder, so friction goes up.</details></li>
+              <li>Turn on the motor with the dry pivot and 5 kg of clay. How much heat does friction make every second? What happens to the pivot's temperature?<details><summary>Show answer</summary>About 4.9 W (4.9 joules every second). The pivot warms steadily; after one minute it is about 13 °C above the room.</details></li>
+              <li>Keep the motor on and switch to ball bearings. Why is this better for the motor and for the electricity bill?<details><summary>Show answer</summary>Only about 0.05 W is wasted as heat, about 100 times less, so the motor needs much less power just to beat friction, and the parts do not wear out as fast.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Lubricant:</strong> a substance such as oil, grease or graphite powder that reduces friction between two surfaces.</li>
+              <li><strong>Ball bearing:</strong> a ring of hard steel balls between a turning part and a fixed part, so the parts roll instead of rub.</li>
+              <li><strong>Pivot:</strong> the point on which something turns.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

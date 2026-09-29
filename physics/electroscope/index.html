@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gold-Leaf Electroscope — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Bring a charged rod near a gold-leaf electroscope, touch the cap, or earth it with your finger. See charges move and the leaves open and close.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/electroscope/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Gold-Leaf Electroscope — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Bring a charged rod near a gold-leaf electroscope, touch the cap, or earth it with your finger. See charges move and the leaves open and close.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/electroscope/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="electroscope">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>An <strong>electroscope</strong> tells us whether an object is charged. It has a metal cap joined by a metal stem to two very thin leaves of gold (or aluminium foil) inside a jar. If the leaves get the same kind of charge, they <strong>repel</strong> each other and spread apart. The more charge, the wider they open. Charge can reach the leaves in two ways: by <strong>conduction</strong> (touching the cap with the charged rod) or by <strong>induction</strong> (just bringing the rod near, which pushes charges around inside the metal).</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">like charges repel · unlike charges attract</code>
+            <code class="formula">rod near: cap gets the opposite charge, leaves get the same charge as the rod</code>
+            <code class="formula">earthing: charge flows to or from the earth until the leaves are uncharged</code>
+            <ul>
+              <li>When the rod is taken away without touching, the charges spread back and the leaves close again.</li>
+              <li>When the rod touches the cap, some charge stays on the electroscope, so the leaves stay open.</li>
+              <li>The earth is so large that it can give or take any amount of charge. Our body connects the cap to it.</li>
+            </ul>
+            <p>Simplification: charges are in nanocoulombs (nC) and the leaf angle follows a simple rule that grows with the charge on the leaves. A rubbed rod is an insulator, so only half its charge passes on a touch.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>You can make an electroscope at home with a glass jar, a cardboard lid, a paper clip and two strips of aluminium foil.</li>
+              <li>Early scientists used electroscopes to discover that the air slowly conducts electricity, which led to the discovery of cosmic rays.</li>
+              <li>An earthing wire in a house works the same way as your finger here: it gives stray charge a safe path into the ground.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Slowly drag the polythene rod towards the cap without touching it, then move it away. What do the leaves do, and why?<details><summary>Show answer</summary>They open wider as the rod comes closer and close again when it goes away. The negative rod pushes electrons down to the leaves (both become negative and repel), and pulls positive charge up to the cap. Nothing was added, so the total charge stays zero.</details></li>
+              <li>Now touch the cap with the rod and take it away. Why do the leaves stay open?<details><summary>Show answer</summary>Some electrons passed from the rod to the electroscope, so it now has a real negative charge (−20 nC here). The leaves keep about −10 nC and stay open.</details></li>
+              <li>Charge by induction: hold the rod near the cap, put your finger on the cap, take the finger away, then move the rod away. What charge is left?<details><summary>Show answer</summary>A positive charge, opposite to the rod. While earthed, the rod pushed electrons out through your body into the earth. Once the finger was removed they could not come back.</details></li>
+              <li>How can the electroscope tell whether an unknown rod is positive or negative?<details><summary>Show answer</summary>First charge the electroscope negative. Bring the rod near: if the leaves open wider, the rod is negative; if they close a little, it is positive.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Electroscope:</strong> a device that detects electric charge.</li>
+              <li><strong>Induction:</strong> separating charges in an object by bringing a charged object near, without touching.</li>
+              <li><strong>Earthing:</strong> connecting an object to the earth so that charge can flow into or out of the ground.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

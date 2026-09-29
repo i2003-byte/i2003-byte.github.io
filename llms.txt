@@ -23,6 +23,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Pressure in Liquids](https://i2003-byte.github.io/physics/liquid-pressure/): A bottle with three holes at different depths: the deeper the hole, the greater the pressure (P = h ρ g) and the faster the jet. Change the level, the liquid and the stool height. (Beginner)
 - [Friction on Different Surfaces](https://i2003-byte.github.io/physics/friction-surfaces/): Pull a wooden block across glass, tile, wood, cloth and sandpaper with a spring balance. Find the force needed to start it moving and to keep it sliding. (Beginner)
 - [Rolling vs Sliding Friction](https://i2003-byte.github.io/physics/rolling-vs-sliding/): Let a wooden block and a toy car go down the same ramp on to glass, tile, cloth or sand. Compare how far each runs and see why rolling friction is so much smaller. (Beginner)
+- [Ball Bearings and Lubricants](https://i2003-byte.github.io/physics/ball-bearings-lubricants/): Spin a potter's wheel on a dry pivot, with powder, with oil or on ball bearings. See how long it keeps turning and how much heat friction makes. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
 - [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
@@ -60,6 +61,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Electric Circuits and Symbols](https://i2003-byte.github.io/physics/electric-circuit/): Build a battery, switch and bulb circuit, then redraw it with circuit symbols. See why a bulb lights only in a closed circuit. (Beginner)
 - [Heating Effect and the Fuse](https://i2003-byte.github.io/physics/heating-fuse/): Switch on appliances in a 220 V house circuit and watch the fuse wire heat up. Overload it or cause a short circuit and see the fuse melt to keep the house safe. (Beginner)
 - [Make an Electromagnet](https://i2003-byte.github.io/physics/electromagnet/): Wind wire round an iron nail, connect a battery and pick up pins. Change the turns, cells and core, and watch a compass needle turn. (Beginner)
+- [Charging by Rubbing](https://i2003-byte.github.io/physics/charging-by-rubbing/): Rub a balloon on hair, a comb through dry hair or a glass rod with silk. Watch electrons move, pick up paper bits and push or pull a charged balloon. (Beginner)
+- [Gold-Leaf Electroscope](https://i2003-byte.github.io/physics/electroscope/): Bring a charged rod near an electroscope, touch the cap or earth it with your finger. See charges move and the gold leaves open and close. (Beginner)
+- [Lightning and the Lightning Conductor](https://i2003-byte.github.io/physics/lightning-conductor/): Watch charge build up in a storm cloud until lightning strikes. Fit a lightning conductor, move a person to safety and time the thunder. (Beginner)
 - [Electric Fields](https://i2003-byte.github.io/physics/): Drop positive and negative charges and visualise field lines and equipotentials. (Advanced, coming soon)
 
 ### Thermodynamics

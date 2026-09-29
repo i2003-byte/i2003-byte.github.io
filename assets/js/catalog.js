@@ -337,6 +337,22 @@ SimLab.simulations = [
     dateAdded: '2026-09-28',
     prerequisites: ['friction-surfaces']
   },
+  {
+    id: 'ball-bearings-lubricants',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Ball Bearings and Lubricants',
+    description:
+      'Spin a potter\'s wheel on a dry pivot, with powder, with oil or on ball bearings. See how long it keeps turning and how much heat friction makes.',
+    level: 'Beginner',
+    tags: ['friction', 'ball bearings', 'lubricants', 'oil', 'grease', 'heat', 'wear', 'potter\'s wheel', 'class 8'],
+    thumbnail: '/assets/img/thumbs/ball-bearings-lubricants.svg',
+    link: '/physics/ball-bearings-lubricants/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: ['friction-surfaces', 'rolling-vs-sliding']
+  },
 
   /* ---- ELECTRICITY: Class 7 'Electric current and its effects' ---------- */
   {
@@ -386,6 +402,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-09-27',
     prerequisites: ['electric-circuit', 'heating-fuse']
+  },
+  {
+    id: 'charging-by-rubbing',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Charging by Rubbing',
+    description:
+      'Rub a balloon on hair, a comb through dry hair or a glass rod with silk. Watch electrons move, pick up paper bits and push or pull a charged balloon.',
+    level: 'Beginner',
+    tags: ['static electricity', 'charge', 'electrons', 'rubbing', 'attraction', 'repulsion', 'humidity', 'class 8'],
+    thumbnail: '/assets/img/thumbs/charging-by-rubbing.svg',
+    link: '/physics/charging-by-rubbing/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: []
+  },
+  {
+    id: 'electroscope',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Gold-Leaf Electroscope',
+    description:
+      'Bring a charged rod near an electroscope, touch the cap or earth it with your finger. See charges move and the gold leaves open and close.',
+    level: 'Beginner',
+    tags: ['electroscope', 'charge', 'induction', 'conduction', 'earthing', 'static electricity', 'class 8'],
+    thumbnail: '/assets/img/thumbs/electroscope.svg',
+    link: '/physics/electroscope/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: ['charging-by-rubbing']
+  },
+  {
+    id: 'lightning-conductor',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Lightning and the Lightning Conductor',
+    description:
+      'Watch charge build up in a storm cloud until lightning strikes. Fit a lightning conductor, move a person to safety and time the thunder.',
+    level: 'Beginner',
+    tags: ['lightning', 'thunder', 'lightning conductor', 'earthing', 'storm', 'safety', 'natural phenomena', 'class 8'],
+    thumbnail: '/assets/img/thumbs/lightning-conductor.svg',
+    link: '/physics/lightning-conductor/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: ['charging-by-rubbing', 'electroscope']
   },
 
   /* ---- OPTICS: Class 7 'Light' ------------------------------------------ */

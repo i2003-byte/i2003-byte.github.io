@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lightning and the Lightning Conductor — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch charge build up in a storm cloud until a lightning flash jumps to the ground. Fit a lightning conductor to a house, move a person to safety and time the thunder.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lightning-conductor/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Lightning and the Lightning Conductor — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch charge build up in a storm cloud until a lightning flash jumps to the ground. Fit a lightning conductor to a house, move a person to safety and time the thunder.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lightning-conductor/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lightning-conductor">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Inside a storm cloud, strong air currents rub ice and water particles together, and charges separate: the bottom of the cloud usually becomes <strong>negative</strong>. This pulls a <strong>positive</strong> charge on to the ground below, crowded on tall, pointed things. When the charges become very large, the air can no longer keep them apart. A spark jumps between the cloud and the ground: that is <strong>lightning</strong>. It takes the shortest path, so it usually strikes the tallest object nearby. A <strong>lightning conductor</strong> is a set of metal rods on top of a building joined by a thick copper strip to a metal plate buried in the earth. The flash strikes the rods and the current flows safely into the ground instead of through the walls.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">time for thunder = distance ÷ 343 m/s ≈ 3 s per km</code>
+            <code class="formula">distance in km ≈ seconds counted ÷ 3</code>
+            <p class="formula-note">light arrives almost at once; sound travels at about 343 m/s in air</p>
+            <ul>
+              <li>A flash carries about 5 to 20 coulombs of charge at around 100 million volts, with a current of about 30 000 amperes for a fraction of a second.</li>
+              <li>The flash heats the air to about 30 000 °C. The air expands suddenly and we hear this as thunder.</li>
+            </ul>
+            <p>Simplification: the picture is not to scale (real cloud bases are 1 to 2 km up) and the flash chooses its target with a simple rule: it jumps to whatever is closest once it is 15 m away. Engineers use a similar "rolling sphere" rule to place real conductors.</p>
+          </section>
+          <section>
+            <h3>🌍 Lightning safety</h3>
+            <ul>
+              <li>Go inside a building or a car with a metal roof. Stay away from open fields, hilltops, water and tall trees.</li>
+              <li>Never shelter under a lone tree: lightning often strikes the tree and can jump sideways to a person standing under it (a side flash).</li>
+              <li>Indoors, keep away from taps, wired phones and plugged-in appliances; unplug the TV and computer if you can.</li>
+              <li>If you are caught in the open, keep away from tall things, crouch low with your feet together and head tucked in, and move to shelter as soon as you can.</li>
+              <li>The India Meteorological Department and the Damini app give lightning warnings. Lightning kills more people in India than any other natural hazard, so these warnings matter.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Run 20 quick strikes a few times without the conductor, then turn the conductor on and clear the tally. What happens to the number of hits on the house?<details><summary>Show answer</summary>Without it, the roof is hit in about 4 of every 10 flashes. With the conductor the roof is not hit at all: the flash lands on the rods and flows down the copper strip into the earth.</details></li>
+              <li>Put the person under the tall tree and let several flashes happen. Why is this a dangerous place?<details><summary>Show answer</summary>The tree is the tallest thing around, so it gets struck about a third of the time. Each time, the current can jump from the tree to the person (a side flash).</details></li>
+              <li>Compare "standing in an open field" with "crouching low". Is crouching safe?<details><summary>Show answer</summary>Crouching makes the person a slightly smaller target (fewer hits over many flashes), but they are still struck sometimes. Nowhere outside is safe; the best plan is to get indoors.</details></li>
+              <li>Set your distance to 3 km. How long after the flash do you hear the thunder?<details><summary>Show answer</summary>About 8.7 s (3000 m ÷ 343 m/s). Counting about 9 seconds and dividing by 3 gives 3 km.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Lightning:</strong> a giant electric spark between a cloud and the ground or between clouds.</li>
+              <li><strong>Lightning conductor:</strong> metal rods on top of a building, joined to the earth by a thick metal strip, that carry lightning safely into the ground.</li>
+              <li><strong>Earthing:</strong> connecting something to the ground so that charge can flow away safely.</li>
+              <li><strong>Discharge:</strong> the sudden flow of charge that cancels a build-up of charge, such as a spark.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Charging by Rubbing — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Rub a balloon on hair, a comb through dry hair or a glass rod with silk. Watch electrons move, pick up bits of paper and push or pull a charged balloon.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/charging-by-rubbing/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Charging by Rubbing — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Rub a balloon on hair, a comb through dry hair or a glass rod with silk. Watch electrons move, pick up bits of paper and push or pull a charged balloon.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/charging-by-rubbing/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="charging-by-rubbing">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Everything is made of atoms, and atoms contain tiny negative particles called <strong>electrons</strong>. When you rub two different materials together, some electrons move from one to the other. The material that <em>gains</em> electrons gets a <strong>negative charge</strong>; the one that <em>loses</em> them is left with an equal <strong>positive charge</strong>. No charge is made or destroyed; it only moves. Charges at rest like this are called <strong>static electricity</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">like charges repel · unlike charges attract</code>
+            <code class="formula">charge on object = − charge on cloth</code>
+            <code class="formula">force F = k q₁ q₂ ÷ r²</code>
+            <p class="formula-note">q in coulombs (1 nC = 0.000 000 001 C) · r = distance in metres · k = 9 × 10⁹ N m²/C² · one electron carries 1.6 × 10⁻¹⁹ C</p>
+            <ul>
+              <li>A balloon, comb or polythene gains electrons and becomes negative; a glass rod rubbed with silk loses electrons and becomes positive.</li>
+              <li>A charged object also pulls on <em>uncharged</em> things such as paper bits, by pulling their charges slightly apart (induction).</li>
+              <li>Metals let charge flow through them, so a metal spoon held in your hand does not stay charged.</li>
+            </ul>
+            <p>Simplification: the charge amounts, the leak-away times and the field needed to lift paper (80 kV/m) are simple typical values. The hanging balloon keeps a fixed charge of −80 nC.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>After combing dry hair in winter, the comb picks up small bits of paper and your hair may stand up.</li>
+              <li>You may feel a small shock or hear a crackle when you take off a woollen sweater or touch a metal door handle.</li>
+              <li>On humid monsoon days these effects almost vanish, because moist air lets the charge leak away quickly.</li>
+              <li>Photocopiers and laser printers use static charges to hold toner powder on the paper.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Rub the balloon on the hair and bring it near the hanging balloon. Which way does it swing? Now choose the glass rod and silk and try again.<details><summary>Show answer</summary>The rubbed balloon is negative like the hanging one, so it pushes it away. The glass rod is positive, so it pulls the negative balloon closer. Like charges repel; unlike charges attract.</details></li>
+              <li>After rubbing, look at the charge on the balloon and on the hair. What do you notice?<details><summary>Show answer</summary>They are equal in size and opposite in sign. The electrons the balloon gained came from the hair.</details></li>
+              <li>Rub the steel spoon with wool. Can it pick up the paper bits?<details><summary>Show answer</summary>No. Metal is a conductor, so the charge flows away through your hand at once. The wool is still charged, though.</details></li>
+              <li>Charge the balloon, then change the humidity from a dry winter day to a monsoon day. What happens to the graph?<details><summary>Show answer</summary>On a dry day half the charge takes about 5 minutes to leak away; on a monsoon day it takes only about 7 seconds, so the charge line drops quickly to zero and the paper bits fall.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Electric charge:</strong> a property of matter; it comes in two kinds, positive and negative.</li>
+              <li><strong>Static electricity:</strong> electric charge that stays on an object instead of flowing.</li>
+              <li><strong>Conductor / insulator:</strong> a material that lets charge flow easily (metals) / one that does not (plastic, glass, rubber, dry hair).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
