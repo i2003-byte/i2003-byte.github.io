@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Demand Curve — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Set the price of mangoes and slide along the demand curve, then change incomes, apple prices or tastes and watch the whole curve shift. See spending and price elasticity at every point.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/economics/demand-curve/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="The Demand Curve — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Set the price of mangoes and slide along the demand curve, then change incomes, apple prices or tastes and watch the whole curve shift. See spending and price elasticity at every point.">
+  <meta property="og:url" content="https://i2003-byte.github.io/economics/demand-curve/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="demand-curve">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Demand</strong> is the amount of a good that buyers are willing and able to buy at each price. A table of prices and quantities is a <strong>demand schedule</strong>, and its graph is the <strong>demand curve</strong>. The <strong>law of demand</strong> says that, other things staying the same, when the price rises the quantity demanded falls, so the curve slopes down. Be careful with two different changes. A change in the <em>price of the good itself</em> moves you <strong>along</strong> the curve: a <em>change in quantity demanded</em>. A change in anything else (income, prices of related goods, tastes, number of buyers) <strong>shifts</strong> the whole curve: a <em>change in demand</em>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Qd = 400 − 2P + 3(I − 30) + 0.8(Pa − 150) + tastes</code>
+            <p class="formula-note">Qd in kg per day, P = price of mangoes (₹/kg), I = income (₹ thousand per month), Pa = price of apples (₹/kg)</p>
+            <code class="formula">spending (total expenditure) = P × Q</code>
+            <code class="formula">price elasticity e = (ΔQ ÷ ΔP) × (P ÷ Q) = −2 × P ÷ Q</code>
+            <ul>
+              <li>If |e| &gt; 1 demand is <strong>elastic</strong>: a price rise cuts spending. If |e| &lt; 1 it is <strong>inelastic</strong>: a price rise increases spending. At |e| = 1 spending is at its largest.</li>
+              <li><strong>Normal good:</strong> demand rises when income rises (mangoes here). <strong>Substitute:</strong> when apples get dearer, people buy more mangoes instead.</li>
+            </ul>
+            <p>Simplification: this is a made-up market with a straight-line demand curve and round numbers chosen to be easy to read. Real demand curves are measured from data and are usually curved. Economists draw price on the vertical axis, as here.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>When tomato prices jump in the monsoon, families buy fewer tomatoes and use more tamarind or curd for sourness: a move along the tomato demand curve.</li>
+              <li>At Diwali, demand for sweets and new clothes rises at every price: the whole curve shifts right.</li>
+              <li>Salt has very inelastic demand: even if its price doubled, people would buy almost the same amount.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Raise the price from ₹60 to ₹120 per kg. What happens to the quantity demanded? Does the curve move?<details><summary>Show answer</summary>Quantity demanded falls from 280 kg to 160 kg per day. The curve does not move; the point slides up along it. This is a change in quantity demanded.</details></li>
+              <li>Now keep the price at ₹100 and raise income to ₹50 000 a month. What happens?<details><summary>Show answer</summary>The whole curve shifts right by 60 kg: at ₹100 buyers now want 260 kg instead of 200 kg. This is an increase in demand, because mangoes are a normal good.</details></li>
+              <li>Go back to the starting market. At which price is spending largest? What is the elasticity there?<details><summary>Show answer</summary>At ₹100 per kg: 200 kg × ₹100 = ₹20 000 per day. The elasticity there is −1 (unit elastic). Above ₹100 demand is elastic and spending falls; below it demand is inelastic.</details></li>
+              <li>Make apples cheaper (₹70 per kg). Which way does the mango curve shift, and why?<details><summary>Show answer</summary>Left, by 64 kg at every price. Apples are a substitute for mangoes, so when apples get cheaper some buyers switch to apples.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Demand schedule:</strong> a table showing the quantity demanded at each price.</li>
+              <li><strong>Law of demand:</strong> other things being equal, quantity demanded falls as price rises.</li>
+              <li><strong>Substitute:</strong> a good that can be used in place of another (tea and coffee, mangoes and apples).</li>
+              <li><strong>Price elasticity of demand:</strong> how strongly the quantity demanded responds to a change in price.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -82,6 +82,37 @@ SimLab.subjects = [
     ]
   },
   {
+    id: 'geography',
+    name: 'Geography',
+    icon: '🌏',
+    color: '#2dd4bf',
+    tagline: 'Spin the Earth, chase the seasons and read the clocks of the world.',
+    description:
+      'Watch the Earth turn and go round the Sun, see why days are long in June ' +
+      'and short in December, and find out why India has one clock time.',
+    status: 'live',
+    branches: [
+      { id: 'earth-motions', name: "Earth's Motions" },
+      { id: 'climate', name: 'Weather & Climate' },
+      { id: 'maps', name: 'Maps' }
+    ]
+  },
+  {
+    id: 'economics',
+    name: 'Economics',
+    icon: '📈',
+    color: '#fb923c',
+    tagline: 'Prices, markets and money: see how buyers and sellers decide.',
+    description:
+      'Move prices, change incomes and watch demand and supply respond. ' +
+      'Simple models of real Indian markets, with every number in rupees.',
+    status: 'live',
+    branches: [
+      { id: 'markets', name: 'Demand & Supply' },
+      { id: 'money', name: 'Money & Interest' }
+    ]
+  },
+  {
     id: 'chemistry',
     name: 'Chemistry',
     icon: '⚗️',
@@ -824,6 +855,71 @@ SimLab.simulations = [
     featured: true,
     dateAdded: '2026-09-27',
     prerequisites: ['convection', 'radiation']
+  },
+
+  {
+    id: 'day-night-india',
+    subject: 'geography',
+    branch: 'earth-motions',
+    title: 'Day, Night and Sunrise Across India',
+    description:
+      'Spin the Earth seen from above the North Pole and watch the Sun rise in Dibrugarh almost two hours before Dwarka, all on one IST clock.',
+    level: 'Beginner',
+    tags: ['rotation', 'day and night', 'sunrise', 'sunset', 'longitude', 'ist', 'india', 'earth', 'class 7'],
+    thumbnail: '/assets/img/thumbs/day-night-india.svg',
+    link: '/geography/day-night-india/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-29',
+    prerequisites: ['seasons-revolution', 'time-zones']
+  },
+  {
+    id: 'seasons-revolution',
+    subject: 'geography',
+    branch: 'earth-motions',
+    title: 'Revolution and the Seasons',
+    description:
+      'Send the tilted Earth round the Sun. See how high the noon Sun climbs and how long the day lasts in Delhi, Kanyakumari or Sydney through the year.',
+    level: 'Beginner',
+    tags: ['revolution', 'seasons', 'tilt', 'axis', 'solstice', 'equinox', 'day length', 'tropic of cancer', 'class 7'],
+    thumbnail: '/assets/img/thumbs/seasons-revolution.svg',
+    link: '/geography/seasons-revolution/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: ['day-night-india', 'time-zones']
+  },
+  {
+    id: 'time-zones',
+    subject: 'geography',
+    branch: 'earth-motions',
+    title: 'Time Zones: IST and World Clocks',
+    description:
+      'Move the clock in India and watch day and night sweep across a world map. Why is IST 5 h 30 min ahead of Greenwich, and where is it already tomorrow?',
+    level: 'Beginner',
+    tags: ['time zones', 'ist', 'utc', 'gmt', 'longitude', 'greenwich', 'date line', 'world clock', 'class 7'],
+    thumbnail: '/assets/img/thumbs/time-zones.svg',
+    link: '/geography/time-zones/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-29',
+    prerequisites: ['day-night-india', 'seasons-revolution']
+  },
+  {
+    id: 'demand-curve',
+    subject: 'economics',
+    branch: 'markets',
+    title: 'The Demand Curve',
+    description:
+      'Set the price of mangoes and drag along the demand curve. Then change incomes, apple prices or tastes and watch the whole curve shift.',
+    level: 'Intermediate',
+    tags: ['demand', 'law of demand', 'demand schedule', 'price', 'elasticity', 'substitute', 'normal good', 'market', 'class 11'],
+    thumbnail: '/assets/img/thumbs/demand-curve.svg',
+    link: '/economics/demand-curve/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-29',
+    prerequisites: []
   },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */

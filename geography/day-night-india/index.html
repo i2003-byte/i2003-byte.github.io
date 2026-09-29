@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Day, Night and Sunrise Across India — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Spin the Earth seen from above the North Pole and watch the Sun rise in Dibrugarh almost two hours before Dwarka. Compare sunrise, sunset and day length for Indian cities on one IST clock.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/day-night-india/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Day, Night and Sunrise Across India — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Spin the Earth seen from above the North Pole and watch the Sun rise in Dibrugarh almost two hours before Dwarka. Compare sunrise, sunset and day length for Indian cities on one IST clock.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/day-night-india/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="day-night-india">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>The Earth spins on its axis once a day, from <strong>west to east</strong>. This spinning is called <strong>rotation</strong>. At any moment the half of the Earth facing the Sun has <strong>day</strong> and the other half has <strong>night</strong>. The line between them is the <strong>circle of illumination</strong>. Because the Earth turns towards the east, places in the east see the Sun first. India is about 2 950 km wide from west to east (from about 68° E to 97° E), so the Sun rises in Arunachal Pradesh and Assam nearly two hours before it rises in Gujarat. Yet the whole country uses one clock time, <strong>Indian Standard Time (IST)</strong>, set for the 82.5° E line of longitude that passes near Mirzapur in Uttar Pradesh.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">360° in 24 h → 15° per hour → 1° of longitude = 4 minutes</code>
+            <code class="formula">India's width ≈ 97° − 68° = 29° → 29 × 4 min ≈ 2 hours</code>
+            <code class="formula">cos H = (sin(−0.83°) − sin φ · sin δ) ÷ (cos φ · cos δ)</code>
+            <p class="formula-note">φ = latitude of the place, δ = latitude where the Sun is overhead that day, H = half the length of the day in degrees (÷ 15 gives hours)</p>
+            <ul>
+              <li>The −0.83° is there because sunrise is counted when the top edge of the Sun appears, and air bends sunlight a little. That is why even on the equinox the day is about 12 h 6 min, not exactly 12 h.</li>
+              <li>The simulation also adds the <em>equation of time</em>: the Sun runs up to about 16 minutes fast or slow compared with a clock during the year, because the Earth's orbit is an ellipse and its axis is tilted.</li>
+            </ul>
+            <p>Simplification: the Earth is drawn from above the North Pole with India as a simple patch between 8° N and 37° N and 68° E and 97° E, not its real outline. Hills and buildings, which hide the real sunrise, are ignored. Times match real almanacs to within a couple of minutes.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Tea gardens in Assam traditionally keep their own "chai bagan time", about one hour ahead of IST, to use the early daylight.</li>
+              <li>In June the Sun rises in Dibrugarh a little after 4:15 am but in Dwarka only after 6 am, so school timings differ from state to state.</li>
+              <li>India uses one time zone so that trains, banks and offices across the country run on the same clock.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Pick 21 March and set the time to 6 am. Which cities already have the Sun up, and which are still in the dark?<details><summary>Show answer</summary>At 6 am IST the Sun is already up in Dibrugarh, Port Blair and Kolkata (the eastern cities). Dwarka, Mumbai, Srinagar and Delhi are still waiting: in Dwarka the Sun rises only at about 6:59 am.</details></li>
+              <li>Look at the readout for the gap between sunrise in Dibrugarh and Dwarka. Why is it close to 104 minutes on 21 March?<details><summary>Show answer</summary>Dibrugarh is at about 94.9° E and Dwarka at 69.0° E, a difference of about 26°. At 4 minutes per degree that is about 104 minutes, so the Sun reaches Dibrugarh about 1 h 44 min earlier.</details></li>
+              <li>Choose Delhi and compare 21 June with 22 December. How long is the day each time?<details><summary>Show answer</summary>About 14 h on 21 June (sunrise about 5:24 am, sunset about 7:22 pm) and about 10 h 19 min on 22 December (sunrise about 7:11 am, sunset about 5:30 pm).</details></li>
+              <li>On 21 June, compare the length of the day in Chennai and Srinagar. Which is longer, and why?<details><summary>Show answer</summary>Srinagar's day is longer (about 14 h 26 min against about 12 h 54 min in Chennai). In June the northern half of the Earth leans towards the Sun, and places farther from the Equator get longer days. Watch the unlit wedge on the globe: it does not reach the high latitudes.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Rotation:</strong> the spinning of the Earth on its axis, once every 24 hours, from west to east.</li>
+              <li><strong>Axis:</strong> the imaginary line through the North and South Poles that the Earth spins around.</li>
+              <li><strong>Longitude:</strong> the angle east or west of the Prime Meridian at Greenwich; lines of longitude run from pole to pole.</li>
+              <li><strong>Indian Standard Time (IST):</strong> the single clock time used across India, based on 82.5° E and 5 h 30 min ahead of Greenwich.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

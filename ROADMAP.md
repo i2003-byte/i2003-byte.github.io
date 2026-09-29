@@ -18,24 +18,22 @@
 - **Approval:** **auto-approve.** Any topic that is part of the Class 7–12 India syllabus may go straight into 📋 Next. Out-of-scope ideas go to 💡 Proposed for a human to decide.
 
 ## Coverage (agents: update after every run)
-| Class | Physics | Chemistry | Mathematics | Biology |
-|---|---|---|---|---|
-| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 |
-| 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 |
-| 9 | 0 | 0 | 0 | 0 |
-| 10 | 0 | 0 | 0 | 0 |
-| 11 | 2 (projectile, pendulum) | 0 | 0 | 0 |
-| 12 | 0 | 0 | 0 | 0 |
+| Class | Physics | Chemistry | Mathematics | Biology | Geography | Economics |
+|---|---|---|---|---|---|---|
+| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 | 3 (Earth's motions 3) | 0 |
+| 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 |
+| 9 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 10 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 11 | 2 (projectile, pendulum) | 0 | 0 | 0 | 0 | 1 (Demand and supply 1) |
+| 12 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 40**
+**Total live simulations: 44**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-_None. Take the first 📋 Next item._
+- [ ] **Class 11 · Economics · Demand and supply.** Subject `economics` (live), branch `markets`. Started 2026-09-29. Done: demand-curve. Next: build `supply-equilibrium` (upward supply curve for the same mango market with shifters such as input costs and weather; demand from demand-curve's model Qd = 400 − 2P, equilibrium where they cross, excess demand/supply arrows and price adjustment), then `price-controls` (price ceiling and floor lines on the same market, shortage or surplus bars, examples: ration shops and MSP), then move the item to ✅ Done and take Class 11 · Computer Science · Numbers and logic.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 7 · Geography · Earth's motions.** New subject `geography` (add it on first use). Sims: rotation, day and night and sunrise times across India; revolution and the seasons (tilted axis); time zones (IST vs world clocks).
-- [ ] **Class 11 · Economics · Demand and supply.** New subject `economics` (add it on first use). Sims: demand curve (price vs quantity, ₹); supply curve and market equilibrium; price ceiling / floor and shortage or surplus.
 - [ ] **Class 11 · Computer Science · Numbers and logic.** New subject `computer-science` (add it on first use). Sims: binary counter and place values; logic gates builder (AND/OR/NOT, truth tables); sorting algorithm race (bubble vs selection vs merge).
 - [ ] **Class 9 · Physics · Motion.** Branch `mechanics`. Sims: distance vs displacement; velocity–time graph and area = distance; uniform circular motion.
 - [ ] **Class 9 · Physics · Force and laws of motion.** Branch `mechanics`. Sims: inertia (coin on card); F = ma cart lab; action–reaction (balloon rocket); build out the `collisions` placeholder (momentum conservation).
@@ -58,6 +56,7 @@ _None. Take the first 📋 Next item._
 _None yet._
 
 ## ✅ Done
+- [x] **Class 7 · Geography · Earth's motions.** 3 sims: day-night-india, seasons-revolution, time-zones. Done 2026-09-29.
 - [x] **Class 8 · Physics · Friction.** 3 sims: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants. Done 2026-09-29.
 - [x] **Class 8 · Physics · Some natural phenomena.** 3 sims: charging-by-rubbing, electroscope, lightning-conductor. Done 2026-09-29.
 - [x] **Class 7 · Physics · Sound (Sound Lab).** 14 sims: vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string. Done 2026-09-25.

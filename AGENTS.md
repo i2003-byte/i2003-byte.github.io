@@ -103,6 +103,8 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - branch `electricity`: Class 7 Electric current and its effects: electric-circuit, heating-fuse, electromagnet; Class 8 Some natural phenomena: charging-by-rubbing, electroscope, lightning-conductor
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
   - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
+- **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
+- **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve. Branch `money` is empty so far.
 - **Coming soon (catalog placeholders):** spring-mass, collisions, wave-interference, planetary-orbits, ray-optics, electric-fields.
 - **Subjects coming soon:** chemistry, mathematics, biology, astronomy (their folders exist).
 

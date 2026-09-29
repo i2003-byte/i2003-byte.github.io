@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="time-zones">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c4a6e"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="16" y="30" width="288" height="110" rx="4" fill="#0b3a66"/>
+  <g fill="#3f7d4a"><path d="M40 50l40-6 20 20-20 30-10 30-10-40z"/><path d="M130 45l50-4 70 6 10 30-30 20-20-8-10 14-18-10-20-20z"/><path d="M140 80l24 6 6 30-14 16-12-24z"/><path d="M250 110l30 -2 6 18-26 6z"/></g>
+  <rect x="16" y="30" width="110" height="110" fill="#020617" opacity=".55"/>
+  <g stroke="#ffffff" stroke-opacity=".2"><path d="M40 30v110M64 30v110M88 30v110M112 30v110M136 30v110M160 30v110M184 30v110M208 30v110M232 30v110M256 30v110M280 30v110"/></g>
+  <path d="M206 30v110" stroke="#fde68a" stroke-dasharray="4 3" stroke-width="2"/>
+  <circle cx="200" cy="85" r="7" fill="#fbbf24"/>
+  <g font-family="sans-serif" font-weight="700" text-anchor="middle"><rect x="30" y="152" width="80" height="34" rx="6" fill="#0f172a" stroke="#475569"/><text x="70" y="174" fill="#e2e8f0" font-size="14">3:30 am</text><rect x="120" y="152" width="80" height="34" rx="6" fill="#0369a1" opacity=".6" stroke="#fde68a"/><text x="160" y="174" fill="#fff" font-size="14">9:00 am</text><rect x="210" y="152" width="80" height="34" rx="6" fill="#0369a1" opacity=".6" stroke="#475569"/><text x="250" y="174" fill="#fff" font-size="14">12:30 pm</text></g>
+</svg>

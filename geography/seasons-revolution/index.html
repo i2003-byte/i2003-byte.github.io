@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Revolution and the Seasons — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Send the tilted Earth round the Sun and see how high the noon Sun climbs and how long the day lasts in Delhi, Kanyakumari, Leh or Sydney through the year. Set the tilt to zero to lose the seasons.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/seasons-revolution/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Revolution and the Seasons — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Send the tilted Earth round the Sun and see how high the noon Sun climbs and how long the day lasts in Delhi, Kanyakumari, Leh or Sydney through the year. Set the tilt to zero to lose the seasons.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/seasons-revolution/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="seasons-revolution">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>The Earth goes round the Sun once in about 365¼ days. This is called <strong>revolution</strong>. The Earth's axis is tilted by about <strong>23.5°</strong> and it always points the same way in space, towards the Pole Star. So around June the northern half of the Earth leans <em>towards</em> the Sun: the Sun climbs high at noon, its rays hit the ground more directly and the days are long. That is summer in India. Around December the northern half leans <em>away</em>: the Sun stays low, its rays spread out and the days are short. That is winter. The seasons are caused by the <strong>tilt</strong>, not by the distance from the Sun: the Earth is actually closest to the Sun in early January.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">latitude where the Sun is overhead: δ ≈ 23.5° × sin(360° × (284 + day number) ÷ 365)</code>
+            <code class="formula">height of the Sun at noon = 90° − (your latitude − δ), ignoring the sign</code>
+            <code class="formula">length of day: cos H = −tan(latitude) × tan δ, day = 2H ÷ 15 hours</code>
+            <p class="formula-note">δ goes from +23.5° (Tropic of Cancer, about 21 June) through 0° (equinoxes) to −23.5° (Tropic of Capricorn, about 22 December)</p>
+            <ul>
+              <li>Sunshine falling on 1 m² of flat ground is largest when the Sun is overhead; it is proportional to sin(Sun's height).</li>
+              <li>The Earth–Sun distance changes only from about 147.1 to 152.1 million km, a change of about 3 %.</li>
+            </ul>
+            <p>Simplification: the orbit picture is not to scale and the Earth is moved round it at an even speed (the real speed changes by about 3 %). Day lengths here ignore the bending of sunlight by air, which adds a few minutes. The Indian seasons shown are those used by the India Meteorological Department; in real life the monsoon also cools the summer.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>The Tropic of Cancer (23.5° N) passes through eight Indian states, including Gujarat, Madhya Pradesh and West Bengal. Places on it have the Sun exactly overhead at noon around 21 June.</li>
+              <li>Makar Sankranti in mid-January marks the time when the Sun is seen moving north again after the shortest days.</li>
+              <li>When it is winter in India, it is summer in Australia: cricket fans watch Test matches in Sydney in the Indian winter.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose Delhi. How high is the noon Sun on 21 June and on 22 December?<details><summary>Show answer</summary>About 85° on 21 June (nearly overhead) and only about 38° on 22 December. The low winter Sun spreads the same sunlight over more ground, so each square metre gets less heat (the sunshine readout falls from about 100 % to about 62 %).</details></li>
+              <li>Watch the "Distance from the Sun" readout. Is the Earth closer to the Sun in June or in January?<details><summary>Show answer</summary>In January (about 147 million km) — during India's winter. So distance cannot be the reason for the seasons; the tilt is.</details></li>
+              <li>Set the tilt to 0° and let the year run. What happens to the graph and to the seasons?<details><summary>Show answer</summary>Every place gets 12 hours of day on every date, and the noon Sun stays at the same height all year. With no tilt there would be no seasons.</details></li>
+              <li>Pick Tromsø in Norway and look at 21 June and 22 December. What is special?<details><summary>Show answer</summary>On 21 June the day lasts 24 hours (the midnight Sun), and on 22 December the Sun does not rise at all (polar night). Tromsø is north of the Arctic Circle.</details></li>
+              <li>Pick Kanyakumari on 21 June. The Sun is 75° high at noon, but in which direction is it?<details><summary>Show answer</summary>To the north! In June the Sun is overhead at the Tropic of Cancer, which is north of Kanyakumari, so the noon Sun is in the northern sky there.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Revolution:</strong> the movement of the Earth round the Sun, once a year.</li>
+              <li><strong>Solstice:</strong> about 21 June and 22 December, when the Sun is overhead at a tropic and the day is longest or shortest.</li>
+              <li><strong>Equinox:</strong> about 21 March and 23 September, when the Sun is overhead at the Equator and day and night are nearly equal everywhere.</li>
+              <li><strong>Tropic of Cancer / Capricorn:</strong> the latitudes 23.5° N and 23.5° S, the farthest the overhead Sun reaches.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

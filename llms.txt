@@ -75,6 +75,24 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Radiation: Black vs Shiny](https://i2003-byte.github.io/physics/radiation/): Race black, white and shiny cans in front of a heater. Which colour absorbs heat best, and which cools fastest? (Beginner)
 - [Sea and Land Breezes](https://i2003-byte.github.io/physics/sea-land-breeze/): Run a day at the seaside. Land heats and cools faster than water, so the breeze blows from the sea by day and from the land by night. (Beginner)
 
+## Geography
+
+Watch the Earth turn and go round the Sun, see why days are long in June and short in December, and find out why India has one clock time.
+
+### Earth's Motions
+
+- [Day, Night and Sunrise Across India](https://i2003-byte.github.io/geography/day-night-india/): Spin the Earth seen from above the North Pole and watch the Sun rise in Dibrugarh almost two hours before Dwarka, all on one IST clock. (Beginner)
+- [Revolution and the Seasons](https://i2003-byte.github.io/geography/seasons-revolution/): Send the tilted Earth round the Sun. See how high the noon Sun climbs and how long the day lasts in Delhi, Kanyakumari or Sydney through the year. (Beginner)
+- [Time Zones: IST and World Clocks](https://i2003-byte.github.io/geography/time-zones/): Move the clock in India and watch day and night sweep across a world map. Why is IST 5 h 30 min ahead of Greenwich, and where is it already tomorrow? (Beginner)
+
+## Economics
+
+Move prices, change incomes and watch demand and supply respond. Simple models of real Indian markets, with every number in rupees.
+
+### Demand & Supply
+
+- [The Demand Curve](https://i2003-byte.github.io/economics/demand-curve/): Set the price of mangoes and drag along the demand curve. Then change incomes, apple prices or tastes and watch the whole curve shift. (Intermediate)
+
 ## Chemistry (coming soon)
 
 Build molecules, balance reactions and watch gases behave. Chemistry simulations are on the way.

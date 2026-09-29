@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**40 live simulations** in Physics. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**44 live simulations** in Physics, Geography and Economics. Chemistry, Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -19,6 +19,8 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (6, Class 7–8) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor |
 | 💡 **Light** (3, Class 7) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc |
+| 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
+| 📈 **Economics: Demand and supply** (1, Class 11) | The Demand Curve |
 
 ## Features
 - **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs

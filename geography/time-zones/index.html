@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Time Zones: IST and World Clocks — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Move the clock in India and watch day and night sweep across a world map. Find out why IST is 5 h 30 min ahead of Greenwich, and where in the world it is already tomorrow.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/time-zones/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Time Zones: IST and World Clocks — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Move the clock in India and watch day and night sweep across a world map. Find out why IST is 5 h 30 min ahead of Greenwich, and where in the world it is already tomorrow.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/time-zones/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="time-zones">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>As the Earth turns, noon moves round the world from east to west, 15° of longitude every hour. If every town set its clock by its own Sun, clocks just a few hundred kilometres apart would disagree. So countries agree on <strong>standard time</strong>: one clock time for a whole region, set by one line of longitude called the <strong>standard meridian</strong>. The world is divided into about 24 <strong>time zones</strong>, each roughly 15° wide, counted from the <strong>Prime Meridian</strong> (0°) at Greenwich, London. India's standard meridian is 82.5° E, so <strong>IST is 5 hours 30 minutes ahead of Greenwich</strong> (UTC + 5:30). Across the <strong>International Date Line</strong> near 180°, the date changes by one day.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">15° of longitude = 1 hour, 1° = 4 minutes</code>
+            <code class="formula">IST − UTC = 82.5° × 4 min = 330 min = 5 h 30 min</code>
+            <code class="formula">time in a city = UTC + that city's offset</code>
+            <p class="formula-note">going east, clocks are ahead; going west, clocks are behind</p>
+            <ul>
+              <li>UTC (Coordinated Universal Time) is the world's reference clock; it is the same as GMT (Greenwich Mean Time) for everyday use.</li>
+              <li>Some zones are not whole hours: India is +5:30 and Nepal is +5:45.</li>
+            </ul>
+            <p>Simplification: the map uses rough outlines of the continents, and the clocks show standard time only. Many countries in Europe and North America move their clocks one hour forward in summer (daylight saving time), which is ignored here. Real time-zone borders follow country borders, not straight lines.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>An IPL or World Cup match that starts at 7:30 pm IST starts at 2:00 pm in London (in winter) and 11:00 pm in Tokyo.</li>
+              <li>Families calling relatives in the USA often call in the Indian morning or late evening, because it is the middle of the night there during the Indian day.</li>
+              <li>Airline tickets always give the local time at each airport, so a flight from Delhi to London can seem to take only a few hours on the clock.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set India to 5:30 am. What time is it in London, and why?<details><summary>Show answer</summary>Midnight (12:00 am). IST is 5 h 30 min ahead of UTC, so 5:30 am − 5 h 30 min = 12:00 am in London.</details></li>
+              <li>Compare with Tokyo, then with New York. How far ahead or behind India is each?<details><summary>Show answer</summary>Tokyo is 3 h 30 min ahead of India (UTC+9 against UTC+5:30). New York is 10 h 30 min behind (UTC−5).</details></li>
+              <li>Set India to 10:30 pm on Monday. Which cities are already on Tuesday?<details><summary>Show answer</summary>Tokyo (2 am Tuesday), Sydney (3 am) and Auckland (5 am) are already on Tuesday. Singapore is at 1 am Tuesday too. Cities to the west, like London and New York, are still on Monday.</details></li>
+              <li>Watch the yellow dot (where the Sun is overhead). At what IST time is it on the 82.5° E line?<details><summary>Show answer</summary>At 12 noon IST, because IST is set so that noon on the clock is noon by the Sun on 82.5° E (give or take a few minutes through the year).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Prime Meridian:</strong> the line of 0° longitude through Greenwich, London.</li>
+              <li><strong>Standard meridian:</strong> the line of longitude whose Sun time a country uses as its clock time.</li>
+              <li><strong>Time zone:</strong> a region that keeps the same standard time.</li>
+              <li><strong>International Date Line:</strong> a line near 180° longitude; crossing it westwards you add a day, eastwards you subtract one.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
