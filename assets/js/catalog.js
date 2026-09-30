@@ -1002,6 +1002,70 @@ SimLab.simulations = [
     dateAdded: '2026-09-30',
     prerequisites: ['binary-counter']
   },
+  {
+    id: 'sorting-race',
+    subject: 'computer-science',
+    branch: 'algorithms',
+    title: 'Sorting Race: Bubble, Selection and Merge',
+    description:
+      'Race bubble sort, selection sort and merge sort on the same bars, step by step, counting comparisons and swaps. See why n log n beats n² as the list grows.',
+    level: 'Intermediate',
+    tags: ['sorting', 'algorithms', 'bubble sort', 'selection sort', 'merge sort', 'comparisons', 'time complexity', 'big o', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/sorting-race.svg',
+    link: '/computer-science/sorting-race/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['binary-counter']
+  },
+  {
+    id: 'distance-displacement',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Distance and Displacement',
+    description:
+      'Walk to school, round a park or along a circular track and compare the path length (distance) with the straight arrow from start to finish (displacement). Draw your own path too.',
+    level: 'Beginner',
+    tags: ['distance', 'displacement', 'scalar', 'vector', 'average speed', 'average velocity', 'motion', 'class 9'],
+    thumbnail: '/assets/img/thumbs/distance-displacement.svg',
+    link: '/physics/distance-displacement/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['speed-race']
+  },
+  {
+    id: 'velocity-time-graph',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Velocity–Time Graph: Area = Distance',
+    description:
+      'Drive a metro train or a car through speeding up, steady running and braking. Read acceleration from the slope of the v–t graph and distance from the area under it.',
+    level: 'Intermediate',
+    tags: ['velocity-time graph', 'acceleration', 'retardation', 'area under graph', 'equations of motion', 'uniform acceleration', 'stopping distance', 'metro', 'motion', 'class 9'],
+    thumbnail: '/assets/img/thumbs/velocity-time-graph.svg',
+    link: '/physics/velocity-time-graph/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['distance-time-graph', 'distance-displacement']
+  },
+  {
+    id: 'circular-motion',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Uniform Circular Motion',
+    description:
+      'Whirl a stone on a string: the speed stays the same but the velocity arrow keeps turning along the tangent. Find v = 2πr ÷ T, then cut the string and watch it fly off straight.',
+    level: 'Beginner',
+    tags: ['uniform circular motion', 'circular motion', 'tangent', 'velocity', 'speed', 'acceleration', 'centripetal', 'motion', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/circular-motion.svg',
+    link: '/physics/circular-motion/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['distance-displacement']
+  },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Distance and Displacement — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Walk to school, round a park or along a circular track and compare the path length (distance) with the straight arrow from start to finish (displacement). Draw your own path and find average speed and velocity.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/distance-displacement/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Distance and Displacement — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Walk to school, round a park or along a circular track and compare the path length (distance) with the straight arrow from start to finish (displacement). Draw your own path and find average speed and velocity.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/distance-displacement/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="distance-displacement">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When something moves, we can ask two different questions. <strong>How much ground did it cover?</strong> That is the <strong>distance</strong>: the length of the actual path, measured along every bend and turn. <strong>How far is it now from where it started, and in which direction?</strong> That is the <strong>displacement</strong>: the straight arrow from the starting point to the final point. Distance only has a size, so it is a <strong>scalar</strong>. Displacement has a size <em>and</em> a direction, so it is a <strong>vector</strong>. Distance can never be less than the size of the displacement, and they are equal only when you move in one straight line without turning back. If you come back to the start, your displacement is zero, however far you walked.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">distance ≥ |displacement|</code>
+            <code class="formula">for Δx east and Δy north:  |displacement| = √(Δx² + Δy²)</code>
+            <code class="formula">average speed = total distance ÷ total time</code>
+            <code class="formula">average velocity = displacement ÷ total time   (a vector, in the direction of the displacement)</code>
+            <ul>
+              <li>Home to school: 400 m east then 300 m north. Distance = 700 m; displacement = √(400² + 300²) = 500 m, about 37° north of east.</li>
+              <li>Half a lap of a round track of radius r: distance = πr, displacement = 2r (straight across the diameter).</li>
+            </ul>
+            <p>Simplification: the walker moves at one steady speed and turns instantly at corners. The walk is sped up on screen so that every path plays in about 10 seconds, but the clock, readouts and graph use the real walking time.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>An auto-rickshaw meter charges for distance (every lane and turn), not for your displacement.</li>
+              <li>A batsman taking a quick single runs 22 yards and a double runs 44 yards, but after the double the batsman is back at the same crease: displacement zero.</li>
+              <li>An aeroplane's route from Delhi to Chennai is close to the displacement (about 1760 km), while the train travels a longer distance along the track (about 2180 km).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose "Round a square park". Pause after three sides. What are the distance and displacement?<details><summary>Show answer</summary>Distance = 300 m (three sides of 100 m). Displacement = 100 m, pointing due north, straight back along the fourth side to the start. After the full lap the distance is 400 m and the displacement is 0.</details></li>
+              <li>Choose "One lap of a round track". What is the displacement when the walker is exactly halfway?<details><summary>Show answer</summary>100 m, the diameter (2 × 50 m). The distance is half the circumference, π × 50 ≈ 157 m. This is when the displacement is largest.</details></li>
+              <li>For the walk to school at 1.5 m/s, find the average speed and the average velocity.<details><summary>Show answer</summary>Time = 700 ÷ 1.5 ≈ 467 s. Average speed = 700 ÷ 467 = 1.5 m/s. Average velocity = 500 ÷ 467 ≈ 1.07 m/s, about 37° north of east. Velocity is smaller because the displacement is shorter than the path.</details></li>
+              <li>On the "To the shop and back" walk, when does the displacement curve on the graph turn downward?<details><summary>Show answer</summary>At the shop (60 m, after 40 s). On the way back the distance keeps rising, but the displacement falls back to 0. Distance never decreases; displacement can.</details></li>
+              <li>Choose "Draw your own" and plan a path with a distance of more than 200 m but a displacement of exactly 0 m.<details><summary>Show answer</summary>Any closed loop works. Press "Clear my path", then tap (50, 0), (50, 60), (0, 60) and finally the start (0, 0) again: distance 220 m, displacement 0 m.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Scalar:</strong> a quantity with size only, such as distance, speed, mass or time.</li>
+              <li><strong>Vector:</strong> a quantity with size and direction, such as displacement, velocity or force.</li>
+              <li><strong>Position:</strong> where an object is, measured from a chosen reference point (here, the start).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

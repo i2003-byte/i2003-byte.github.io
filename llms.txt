@@ -24,6 +24,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Friction on Different Surfaces](https://i2003-byte.github.io/physics/friction-surfaces/): Pull a wooden block across glass, tile, wood, cloth and sandpaper with a spring balance. Find the force needed to start it moving and to keep it sliding. (Beginner)
 - [Rolling vs Sliding Friction](https://i2003-byte.github.io/physics/rolling-vs-sliding/): Let a wooden block and a toy car go down the same ramp on to glass, tile, cloth or sand. Compare how far each runs and see why rolling friction is so much smaller. (Beginner)
 - [Ball Bearings and Lubricants](https://i2003-byte.github.io/physics/ball-bearings-lubricants/): Spin a potter's wheel on a dry pivot, with powder, with oil or on ball bearings. See how long it keeps turning and how much heat friction makes. (Beginner)
+- [Distance and Displacement](https://i2003-byte.github.io/physics/distance-displacement/): Walk to school, round a park or along a circular track and compare the path length (distance) with the straight arrow from start to finish (displacement). Draw your own path too. (Beginner)
+- [Velocity–Time Graph: Area = Distance](https://i2003-byte.github.io/physics/velocity-time-graph/): Drive a metro train or a car through speeding up, steady running and braking. Read acceleration from the slope of the v–t graph and distance from the area under it. (Intermediate)
+- [Uniform Circular Motion](https://i2003-byte.github.io/physics/circular-motion/): Whirl a stone on a string: the speed stays the same but the velocity arrow keeps turning along the tangent. Find v = 2πr ÷ T, then cut the string and watch it fly off straight. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
 - [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
@@ -106,6 +109,10 @@ Count in binary, wire up logic gates and race sorting algorithms. The ideas insi
 ### Logic & Circuits
 
 - [Logic Gates and Truth Tables](https://i2003-byte.github.io/computer-science/logic-gates/): Flip input switches and light the lamp through AND, OR, NOT, NAND, NOR and XOR gates, join two gates together, and fill in the truth table as you go. (Beginner)
+
+### Algorithms
+
+- [Sorting Race: Bubble, Selection and Merge](https://i2003-byte.github.io/computer-science/sorting-race/): Race bubble sort, selection sort and merge sort on the same bars, step by step, counting comparisons and swaps. See why n log n beats n² as the list grows. (Intermediate)
 
 ## Chemistry (coming soon)
 

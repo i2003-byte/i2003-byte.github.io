@@ -22,19 +22,17 @@
 |---|---|---|---|---|---|---|---|
 | 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 | 3 (Earth's motions 3) | 0 | 0 |
 | 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
-| 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 9 | 3 (Motion 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 10 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 11 | 2 (projectile, pendulum) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 2 (Numbers and logic 2) |
+| 11 | 2 (projectile, pendulum) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 48**
+**Total live simulations: 52**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-- [ ] **Class 11 · Computer Science · Numbers and logic.** New subject `computer-science` (live, 💻, branches data / logic / algorithms). Started 2026-09-30. Done: binary-counter, logic-gates. Next: build `sorting-race` (branch `algorithms`: bars of random heights sorted side by side by bubble, selection and merge sort, step by step with comparisons and swaps counted, array sizes 8–64, same starting array for a fair race, comparison count vs n² and n log n), then move the item to ✅ Done and take Class 9 · Physics · Motion.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 9 · Physics · Motion.** Branch `mechanics`. Sims: distance vs displacement; velocity–time graph and area = distance; uniform circular motion.
 - [ ] **Class 9 · Physics · Force and laws of motion.** Branch `mechanics`. Sims: inertia (coin on card); F = ma cart lab; action–reaction (balloon rocket); build out the `collisions` placeholder (momentum conservation).
 - [ ] **Class 9 · Physics · Gravitation.** Branch `mechanics`. Sims: universal gravitation between two masses; free fall and g (mass vs weight on planets); buoyancy and Archimedes' principle.
 - [ ] **Class 9 · Physics · Work, energy and power.** Branch `mechanics`. Sims: work = F·s·cosθ; KE ↔ PE roller coaster; power race (lifting the same load at different speeds).
@@ -55,6 +53,8 @@
 _None yet._
 
 ## ✅ Done
+- [x] **Class 9 · Physics · Motion.** 3 sims: distance-displacement, velocity-time-graph, circular-motion. Done 2026-09-30.
+- [x] **Class 11 · Computer Science · Numbers and logic.** 3 sims: binary-counter, logic-gates, sorting-race. Done 2026-09-30.
 - [x] **Class 11 · Economics · Demand and supply.** 3 sims: demand-curve, supply-equilibrium, price-controls. Done 2026-09-30.
 - [x] **Class 7 · Geography · Earth's motions.** 3 sims: day-night-india, seasons-revolution, time-zones. Done 2026-09-29.
 - [x] **Class 8 · Physics · Friction.** 3 sims: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants. Done 2026-09-29.

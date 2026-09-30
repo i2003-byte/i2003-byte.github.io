@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Uniform Circular Motion — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Whirl a stone on a string and see its velocity arrow turn along the tangent while the speed stays the same. Find v = 2πr ÷ T, then cut the string and watch the stone fly off in a straight line.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/circular-motion/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Uniform Circular Motion — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Whirl a stone on a string and see its velocity arrow turn along the tangent while the speed stays the same. Find v = 2πr ÷ T, then cut the string and watch the stone fly off in a straight line.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/circular-motion/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="circular-motion">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When an object goes round a circle at a steady speed, it is in <strong>uniform circular motion</strong>. Its speed does not change, but its <strong>direction</strong> changes at every moment: at each point it is heading along the <strong>tangent</strong> to the circle (the line that just touches the circle there). Velocity means speed <em>and</em> direction, so a change of direction is a change of velocity. That is why uniform circular motion is an <strong>accelerated motion</strong>, even though the speed stays the same. Something must keep pulling the object towards the centre to keep turning it: here, the string. Cut the string and nothing turns the stone any more, so it carries on in a straight line along the tangent, exactly in the direction it was moving at that instant.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">speed v = circumference ÷ time for one round = 2πr ÷ T</code>
+            <code class="formula">r = 1 m, T = 2 s:  v = 2 × 3.14 × 1 ÷ 2 ≈ 3.14 m/s</code>
+            <code class="formula">rounds per minute = 60 ÷ T</code>
+            <code class="formula">Class 11: acceleration towards the centre a = v² ÷ r  (r = 1 m, v = 3.14 m/s → a ≈ 9.9 m/s²)</code>
+            <ul>
+              <li>The velocity arrow is always at right angles to the string (the radius).</li>
+              <li>The graph splits the velocity into an east–west part and a north–south part. Both keep changing like waves, while the speed line stays flat.</li>
+            </ul>
+            <p>Simplification: this is a top view of a stone whirled in a horizontal circle. Gravity, air resistance and the stretch of the string are ignored, and after the cut the stone keeps a steady velocity.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>An athlete running round a circular track, a giant wheel at a mela and the tip of a ceiling fan blade all move (nearly) in uniform circular motion.</li>
+              <li>In the hammer throw, the athlete whirls the hammer round and then lets go; it flies off along the tangent, just like the stone here.</li>
+              <li>Mud flies off a spinning bicycle wheel along the tangent, and sparks leave a grinding wheel in straight tangent lines.</li>
+              <li>The Earth goes round the Sun in a nearly circular orbit (r ≈ 150 million km, T ≈ 365 days) at about 30 km/s; the Sun's gravity is the "string".</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep r = 1 m and change T from 2 s to 1 s. What happens to the speed?<details><summary>Show answer</summary>It doubles, from about 3.14 m/s to 6.28 m/s: the stone covers the same 6.28 m circumference in half the time.</details></li>
+              <li>Cut the string when the stone is at the far right (east) of the circle. In which direction does it fly?<details><summary>Show answer</summary>Due north (up the screen), along the tangent, not outwards away from the centre. At that point the stone was moving north, and with no pull it simply keeps that velocity.</details></li>
+              <li>Look at the 8 velocity arrows round the circle. What is the same about them, and what is different?<details><summary>Show answer</summary>They all have the same length (the same speed), but each points in a different direction. So the velocity is different at every point, even though the speed is constant.</details></li>
+              <li>An athlete runs round a circular track of radius 50 m in 40 s. What is the speed?<details><summary>Show answer</summary>v = 2πr ÷ T = 2 × 3.14 × 50 ÷ 40 ≈ 7.85 m/s. After one full round the displacement is zero, but the distance is 314 m.</details></li>
+              <li>Switch on the Class 11 pull arrow. Double the speed by halving T. What happens to the pull needed?<details><summary>Show answer</summary>a = v² ÷ r, so doubling v makes the acceleration 4 times bigger. The string must pull 4 times harder, which is why a string may snap when you whirl a stone too fast.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Uniform circular motion:</strong> motion in a circle at constant speed.</li>
+              <li><strong>Tangent:</strong> a straight line that touches a circle at one point, at right angles to the radius there.</li>
+              <li><strong>Time period T:</strong> the time for one complete round.</li>
+              <li><strong>Centripetal ("centre-seeking") force:</strong> the pull towards the centre that keeps an object moving in a circle.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Velocity–Time Graph: Area = Distance — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drive a metro train or a car through speeding up, steady running and braking. Watch its velocity–time graph being drawn, read acceleration from the slope and find the distance from the shaded area.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/velocity-time-graph/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Velocity–Time Graph: Area = Distance — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drive a metro train or a car through speeding up, steady running and braking. Watch its velocity–time graph being drawn, read acceleration from the slope and find the distance from the shaded area.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/velocity-time-graph/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="velocity-time-graph">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>velocity–time graph</strong> tells the whole story of a trip along a straight road. Its <strong>height</strong> at any moment is the velocity. Its <strong>slope</strong> (how steeply it rises or falls) is the <strong>acceleration</strong>: a line going up means speeding up, a flat line means steady velocity, and a line going down means slowing down (retardation). Best of all, the <strong>area under the graph</strong> is the <strong>distance travelled</strong>. That is because distance = velocity × time, and a thin strip under the graph has height v and width Δt, so its area is v × Δt. Adding all the strips gives the total distance. Here the area is cut into a trapezium, a rectangle and a triangle, which are easy to work out.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">acceleration a = slope = (v − u) ÷ t        v = u + a t</code>
+            <code class="formula">distance = area under the v–t graph</code>
+            <code class="formula">trapezium: s = ½ (u + v) t  =  u t + ½ a t²</code>
+            <code class="formula">rectangle: s = v t          triangle (stopping): s = ½ v t</code>
+            <code class="formula">1 m/s = 3.6 km/h     (72 km/h = 20 m/s)</code>
+            <ul>
+              <li>Metro example: 0 → 20 m/s in 20 s (a = 1 m/s²) covers ½ × 20 × 20 = 200 m; 30 s at 20 m/s covers 600 m; braking at 1 m/s² takes 20 s and 200 m. Total 1000 m.</li>
+              <li>A negative slope is a negative acceleration (retardation). The area is still positive because the velocity is still forward.</li>
+            </ul>
+            <p>Simplification: each phase has a constant acceleration, and the changes between phases are instant. Real vehicles change their acceleration smoothly. The trip is sped up so that it plays in about 12 s on screen; the readouts use real time.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>A metro train between two stations about 1 km apart follows almost exactly this shape: speed up, run steady, brake smoothly into the next platform.</li>
+              <li>Stopping distance of a car = reaction distance (the flat part, before the brakes work) + braking distance (the triangle). This is why road-safety campaigns ask drivers to keep a gap.</li>
+              <li>Speed data from a GPS phone app can be turned into a v–t graph, and its area gives the distance of your run or cycle ride.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press "Metro between stations". Check the three area numbers yourself.<details><summary>Show answer</summary>Triangle (u = 0): ½ × 20 × 20 = 200 m. Rectangle: 20 × 30 = 600 m. Braking triangle: ½ × 20 × 20 = 200 m. Total = 1000 m = 1 km, in 70 s, so the average speed is about 14.3 m/s (51 km/h).</details></li>
+              <li>Press "Emergency stop at 72 km/h". The driver takes 1 s to react, then brakes at 6 m/s². How far does the car travel before stopping? What if it were going twice as fast?<details><summary>Show answer</summary>Reaction distance = 20 × 1 = 20 m. Braking time = 20 ÷ 6 ≈ 3.3 s, braking distance = ½ × 20 × 3.3 ≈ 33 m. Total ≈ 53 m. At 40 m/s the reaction distance doubles (40 m) but the braking distance becomes 4 times bigger (about 133 m), because both the height and the width of the triangle double.</details></li>
+              <li>Set u = 10 m/s, a = 2 m/s², t₁ = 5 s. Find v and the distance in phase 1 with the equations, then check the graph.<details><summary>Show answer</summary>v = 10 + 2 × 5 = 20 m/s. s = 10 × 5 + ½ × 2 × 25 = 75 m, which equals the trapezium area ½ × (10 + 20) × 5 = 75 m.</details></li>
+              <li>Press "Uniform velocity". What does the graph look like, and what is the acceleration?<details><summary>Show answer</summary>A flat horizontal line at 15 m/s (until the brakes come on at the end). Its slope is 0, so the acceleration is 0, and the area is a simple rectangle: 15 × 20 = 300 m.</details></li>
+              <li>Keep everything the same but double the braking value. What happens to the braking triangle?<details><summary>Show answer</summary>It keeps the same height but becomes half as wide, so its area (the braking distance) halves. Stronger brakes stop the vehicle in half the time and half the distance.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Velocity:</strong> speed in a stated direction. <strong>Uniform velocity:</strong> the same speed and direction all the time.</li>
+              <li><strong>Acceleration:</strong> the rate of change of velocity, in m/s² (metres per second, every second).</li>
+              <li><strong>Retardation (deceleration):</strong> acceleration that slows the object down.</li>
+              <li><strong>Uniformly accelerated motion:</strong> motion with constant acceleration; its v–t graph is a straight line.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="distance-displacement">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".07"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M50 160H250V50" fill="none" stroke="#60a5fa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 160L238 58" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M250 50l-22 2 10 16z" fill="#f472b6"/>
+  <circle cx="50" cy="160" r="8" fill="#4ade80"/><circle cx="250" cy="50" r="9" fill="#fbbf24" stroke="#0f172a" stroke-width="3"/>
+  <text x="150" y="182" font-family="sans-serif" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">400 m</text>
+  <text x="272" y="110" font-family="sans-serif" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle">300</text>
+  <text x="128" y="96" font-family="sans-serif" font-size="15" font-weight="700" fill="#f9a8d4" text-anchor="middle" transform="rotate(-28 128 96)">500 m</text>
+</svg>

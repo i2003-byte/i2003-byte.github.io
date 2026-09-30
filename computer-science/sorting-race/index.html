@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sorting Race: Bubble, Selection and Merge — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Race bubble sort, selection sort and merge sort on the same bars, step by step. Count comparisons and swaps, try shuffled, nearly sorted and reversed lists, and compare n² with n log n.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/computer-science/sorting-race/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Sorting Race: Bubble, Selection and Merge — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Race bubble sort, selection sort and merge sort on the same bars, step by step. Count comparisons and swaps, try shuffled, nearly sorted and reversed lists, and compare n² with n log n.">
+  <meta property="og:url" content="https://i2003-byte.github.io/computer-science/sorting-race/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="sorting-race">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>An <strong>algorithm</strong> is a precise list of steps that solves a problem. Sorting (putting things in order) can be done by many different algorithms, and some need far more work than others. A computer sorts by <strong>comparing</strong> two items and <strong>moving</strong> them, so we measure an algorithm by counting those steps. Here the same shuffled bars are given to three algorithms, and each gets one step per tick:</p>
+            <ul>
+              <li><strong>Bubble sort</strong> walks along the row comparing neighbours and swaps any pair that is the wrong way round. After each pass the largest remaining bar has "bubbled" to the end. If a pass makes no swap, the row is sorted and it stops early.</li>
+              <li><strong>Selection sort</strong> scans the unsorted part to find the smallest bar and swaps it to the front. It always scans everything, even if the row was already in order.</li>
+              <li><strong>Merge sort</strong> splits the row into halves, sorts each half the same way, then <em>merges</em> the two sorted halves by repeatedly taking the smaller of the two front bars. The shaded band shows the part being merged.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Selection sort comparisons = (n − 1) + (n − 2) + … + 1 = n(n − 1) ÷ 2</code>
+            <code class="formula">Bubble sort comparisons ≤ n(n − 1) ÷ 2   (only n − 1 if already sorted)</code>
+            <code class="formula">Merge sort comparisons ≤ about n × log₂ n</code>
+            <code class="formula">n = 64:   n(n − 1) ÷ 2 = 2016   but   n × log₂ n = 384</code>
+            <ul>
+              <li>Work that grows like <strong>n²</strong> becomes 4 times bigger when n doubles. Work that grows like <strong>n log n</strong> only becomes a little more than 2 times bigger.</li>
+              <li>log₂ n is how many times you can halve n before reaching 1: log₂ 64 = 6, because 64 → 32 → 16 → 8 → 4 → 2 → 1.</li>
+            </ul>
+            <p>Simplification: every comparison, swap or write counts as one step of equal time. Real computers take different times for these, and merge sort also needs extra memory for its copy of each half.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>A teacher arranging 40 answer sheets by roll number: picking out the lowest each time is selection sort; splitting the pile between two helpers and merging their sorted piles is merge sort.</li>
+              <li>Online shops sort lakhs of products by price in a fraction of a second, using n log n algorithms such as merge sort or quicksort. An n² algorithm would take hours.</li>
+              <li>Python's built-in <code>sorted()</code> uses Timsort, a mix of merge sort and insertion sort that is extra fast on nearly sorted data.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Race 16 shuffled bars a few times with "New shuffled array". Does selection sort's comparison count ever change?<details><summary>Show answer</summary>No. It is always 15 + 14 + … + 1 = 120, because selection sort scans the whole unsorted part every time, whatever the order. Bubble and merge sort counts change with the order.</details></li>
+              <li>Choose "Nearly sorted". Which algorithm wins now, and why?<details><summary>Show answer</summary>Bubble sort. One pass fixes the few swapped neighbours, and the next pass makes no swap, so it stops after about 2n comparisons. Selection sort still does all 120, and merge sort still writes every bar about log₂ n times.</details></li>
+              <li>Choose "Reversed". How many swaps does bubble sort make with 16 bars?<details><summary>Show answer</summary>120: every pair of bars is in the wrong order, so every comparison leads to a swap. This is the worst case for bubble sort. Selection sort needs only 8 swaps here.</details></li>
+              <li>Race only 8 bars several times. Does merge sort still win?<details><summary>Show answer</summary>Usually not. With so few bars, n(n − 1) ÷ 2 and n log₂ n are close (28 and 24), and merge sort also writes every bar once per level (24 writes), so selection sort often finishes first. Merge sort's advantage shows for large n.</details></li>
+              <li>Compare the selection sort comparisons for 32 and 64 bars. Then do the same for merge sort.<details><summary>Show answer</summary>Selection sort: 496 → 2016, about 4 times. Merge sort: at most 129 → 321 (always below n log₂ n = 160 → 384), about 2.5 times. Doubling n quadruples n² work but only a little more than doubles n log n work.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Comparison:</strong> checking which of two items is bigger. <strong>Swap:</strong> exchanging two items.</li>
+              <li><strong>Pass:</strong> one full walk along the unsorted part of the list.</li>
+              <li><strong>Divide and conquer:</strong> solving a problem by splitting it into smaller copies of itself, as merge sort does.</li>
+              <li><strong>Time complexity:</strong> how the number of steps grows with n, written O(n²) or O(n log n).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
