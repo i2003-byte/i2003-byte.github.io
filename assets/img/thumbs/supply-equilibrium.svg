@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="supply-equilibrium">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <g stroke="#94a3b8" stroke-width="2"><path d="M40 20v150h260"/></g>
+  <path d="M60 30L270 165" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M60 165L270 30" stroke="#fb923c" stroke-width="4" stroke-linecap="round"/>
+  <rect x="96" y="130" width="138" height="16" fill="#f87171" opacity=".3"/>
+  <path d="M40 138h250" stroke="#fbbf24" stroke-width="2" stroke-dasharray="7 4"/>
+  <path d="M56 136v-26" stroke="#f87171" stroke-width="3"/><path d="M56 104l-6 10h12z" fill="#f87171"/>
+  <path d="M40 97.5h125M165 97.5V170" stroke="#e2e8f0" stroke-dasharray="4 3" opacity=".6"/>
+  <circle cx="165" cy="97.5" r="8" fill="#a78bfa" stroke="#0f172a" stroke-width="2"/>
+  <text x="275" y="178" font-family="sans-serif" font-size="13" font-weight="700" fill="#38bdf8">D</text>
+  <text x="276" y="30" font-family="sans-serif" font-size="13" font-weight="700" fill="#fb923c">S</text>
+  <text x="46" y="16" font-family="sans-serif" font-size="12" fill="#e2e8f0">₹</text>
+</svg>

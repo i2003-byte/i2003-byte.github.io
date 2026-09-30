@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Logic Gates and Truth Tables — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Flip switches and light a lamp through AND, OR, NOT, NAND, NOR and XOR gates. Join two gates, read the Boolean expression and watch the truth table fill in, with staircase-light and burglar-alarm examples.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/computer-science/logic-gates/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Logic Gates and Truth Tables — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Flip switches and light a lamp through AND, OR, NOT, NAND, NOR and XOR gates. Join two gates, read the Boolean expression and watch the truth table fill in, with staircase-light and burglar-alarm examples.">
+  <meta property="og:url" content="https://i2003-byte.github.io/computer-science/logic-gates/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="logic-gates">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Inside a computer, decisions are made by <strong>logic gates</strong>: tiny circuits that take one or two inputs, each 0 (off, false) or 1 (on, true), and give an output of 0 or 1. The three basic gates are <strong>AND</strong> (1 only if all inputs are 1), <strong>OR</strong> (1 if any input is 1) and <strong>NOT</strong> (flips its input). Putting NOT after AND or OR gives <strong>NAND</strong> and <strong>NOR</strong>, and <strong>XOR</strong> (exclusive OR) gives 1 only when its inputs are different. A <strong>truth table</strong> lists the output for every possible combination of inputs, so it describes a gate or circuit completely. Joining gates builds bigger circuits; millions of them make adders, memory and whole processors.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">AND: Y = A · B     OR: Y = A + B     NOT: Y = A̅</code>
+            <code class="formula">NAND: Y = (A · B)̅     NOR: Y = (A + B)̅     XOR: Y = A ⊕ B</code>
+            <code class="formula">n inputs → 2ⁿ rows in the truth table</code>
+            <ul>
+              <li>In Boolean algebra "·" means AND and "+" means OR. Here 1 + 1 = 1, because "true OR true" is still just true.</li>
+              <li><strong>De Morgan's laws:</strong> (A · B)̅ = A̅ + B̅ and (A + B)̅ = A̅ · B̅. Check them by comparing truth tables.</li>
+              <li>NAND and NOR are <strong>universal gates</strong>: any circuit at all can be built from NAND gates alone (or NOR gates alone).</li>
+            </ul>
+            <p>Simplification: the gates switch instantly here. Real gates are made of transistors, take a few billionths of a second to switch, and use voltages (for example about 0 V for 0 and a few volts for 1).</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>A washing machine starts only if the lid is closed AND the start button is pressed.</li>
+              <li>A two-way staircase switch lets you turn the light on or off from either floor: it behaves like XOR.</li>
+              <li>A half adder, the circuit that adds two bits, uses XOR for the sum bit and AND for the carry bit.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the AND gate, how many of the four rows light the lamp? And with OR?<details><summary>Show answer</summary>AND lights it in only one row (A = 1, B = 1). OR lights it in three rows: every row except A = 0, B = 0.</details></li>
+              <li>Compare the NAND table with the AND table. What do you notice?<details><summary>Show answer</summary>Every output is flipped: NAND is 0 only in the row where AND is 1. The small circle (bubble) on the symbol means "then NOT".</details></li>
+              <li>Pick the staircase light (XOR). Start with both switches at 0. Flip A, then B. What happens to the lamp each time?<details><summary>Show answer</summary>Flipping A turns the lamp on (inputs differ). Flipping B then turns it off (inputs are the same again). Any single flip changes the light, which is exactly what you want on a staircase.</details></li>
+              <li>Choose the burglar alarm: (door OR window) AND armed. When does it ring? How many rows does the table have?<details><summary>Show answer</summary>It has 2³ = 8 rows. The alarm rings in 3 of them: when C (armed) is 1 and at least one of A (door) or B (window) is 1.</details></li>
+              <li>Build "Two gates" with NOT first and AND second. Which Boolean expression do you get? Describe when the lamp is on.<details><summary>Show answer</summary>Y = (NOT A) · C. The lamp is on only when A is 0 and C is 1, for example "light the porch lamp when it is NOT daytime AND someone is at the door".</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Logic gate:</strong> a circuit that gives a 0 or 1 output from its 0/1 inputs by a fixed rule.</li>
+              <li><strong>Truth table:</strong> a table of the output for every combination of inputs.</li>
+              <li><strong>Boolean expression:</strong> the gate's rule written with ·, + and bars, named after George Boole.</li>
+              <li><strong>Universal gate:</strong> a gate (NAND or NOR) from which all other gates can be built.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -113,6 +113,22 @@ SimLab.subjects = [
     ]
   },
   {
+    id: 'computer-science',
+    name: 'Computer Science',
+    icon: '💻',
+    color: '#f87171',
+    tagline: 'Bits, logic and algorithms: see how computers think.',
+    description:
+      'Count in binary, wire up logic gates and race sorting algorithms. ' +
+      'The ideas inside every phone and computer, one step at a time.',
+    status: 'live',
+    branches: [
+      { id: 'data', name: 'Numbers & Data' },
+      { id: 'logic', name: 'Logic & Circuits' },
+      { id: 'algorithms', name: 'Algorithms' }
+    ]
+  },
+  {
     id: 'chemistry',
     name: 'Chemistry',
     icon: '⚗️',
@@ -920,6 +936,71 @@ SimLab.simulations = [
     featured: true,
     dateAdded: '2026-09-29',
     prerequisites: []
+  },
+
+  {
+    id: 'supply-equilibrium',
+    subject: 'economics',
+    branch: 'markets',
+    title: 'Supply and Market Equilibrium',
+    description:
+      'Add sellers to the mango market, find where supply crosses demand, and press Play to watch a shortage or surplus push the price to equilibrium.',
+    level: 'Intermediate',
+    tags: ['supply', 'law of supply', 'equilibrium', 'shortage', 'surplus', 'excess demand', 'excess supply', 'market', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/supply-equilibrium.svg',
+    link: '/economics/supply-equilibrium/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['demand-curve']
+  },
+  {
+    id: 'price-controls',
+    subject: 'economics',
+    branch: 'markets',
+    title: 'Price Ceiling and Price Floor',
+    description:
+      'Put a price ceiling or a minimum support price on a wheat market and see the shortage, black market or surplus it creates, and what ration shops and procurement change.',
+    level: 'Intermediate',
+    tags: ['price ceiling', 'price floor', 'msp', 'minimum support price', 'ration shop', 'pds', 'black market', 'shortage', 'surplus', 'class 12'],
+    thumbnail: '/assets/img/thumbs/price-controls.svg',
+    link: '/economics/price-controls/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['supply-equilibrium']
+  },
+  {
+    id: 'binary-counter',
+    subject: 'computer-science',
+    branch: 'data',
+    title: 'Binary Counter and Place Values',
+    description:
+      'Tap lamps to switch bits on and off, count up in binary and watch carries ripple. See every number in decimal, octal and hexadecimal, with the divide-by-2 working.',
+    level: 'Beginner',
+    tags: ['binary', 'bits', 'byte', 'place value', 'number system', 'octal', 'hexadecimal', 'conversion', 'overflow', 'class 11'],
+    thumbnail: '/assets/img/thumbs/binary-counter.svg',
+    link: '/computer-science/binary-counter/',
+    status: 'live',
+    featured: true,
+    dateAdded: '2026-09-30',
+    prerequisites: []
+  },
+  {
+    id: 'logic-gates',
+    subject: 'computer-science',
+    branch: 'logic',
+    title: 'Logic Gates and Truth Tables',
+    description:
+      'Flip input switches and light the lamp through AND, OR, NOT, NAND, NOR and XOR gates, join two gates together, and fill in the truth table as you go.',
+    level: 'Beginner',
+    tags: ['logic gates', 'and', 'or', 'not', 'nand', 'nor', 'xor', 'truth table', 'boolean', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/logic-gates.svg',
+    link: '/computer-science/logic-gates/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-09-30',
+    prerequisites: ['binary-counter']
   },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */

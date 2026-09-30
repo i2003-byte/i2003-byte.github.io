@@ -92,6 +92,20 @@ Move prices, change incomes and watch demand and supply respond. Simple models o
 ### Demand & Supply
 
 - [The Demand Curve](https://i2003-byte.github.io/economics/demand-curve/): Set the price of mangoes and drag along the demand curve. Then change incomes, apple prices or tastes and watch the whole curve shift. (Intermediate)
+- [Supply and Market Equilibrium](https://i2003-byte.github.io/economics/supply-equilibrium/): Add sellers to the mango market, find where supply crosses demand, and press Play to watch a shortage or surplus push the price to equilibrium. (Intermediate)
+- [Price Ceiling and Price Floor](https://i2003-byte.github.io/economics/price-controls/): Put a price ceiling or a minimum support price on a wheat market and see the shortage, black market or surplus it creates, and what ration shops and procurement change. (Intermediate)
+
+## Computer Science
+
+Count in binary, wire up logic gates and race sorting algorithms. The ideas inside every phone and computer, one step at a time.
+
+### Numbers & Data
+
+- [Binary Counter and Place Values](https://i2003-byte.github.io/computer-science/binary-counter/): Tap lamps to switch bits on and off, count up in binary and watch carries ripple. See every number in decimal, octal and hexadecimal, with the divide-by-2 working. (Beginner)
+
+### Logic & Circuits
+
+- [Logic Gates and Truth Tables](https://i2003-byte.github.io/computer-science/logic-gates/): Flip input switches and light the lamp through AND, OR, NOT, NAND, NOR and XOR gates, join two gates together, and fill in the truth table as you go. (Beginner)
 
 ## Chemistry (coming soon)
 

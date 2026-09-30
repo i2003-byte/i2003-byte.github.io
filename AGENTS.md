@@ -104,7 +104,8 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
   - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
 - **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
-- **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve. Branch `money` is empty so far.
+- **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve, supply-equilibrium, price-controls. Branch `money` is empty so far.
+- **Computer Science (live):** branch `data` (Class 11 Numbers and logic): binary-counter; branch `logic`: logic-gates. Branch `algorithms` is empty so far (sorting-race planned).
 - **Coming soon (catalog placeholders):** spring-mass, collisions, wave-interference, planetary-orbits, ray-optics, electric-fields.
 - **Subjects coming soon:** chemistry, mathematics, biology, astronomy (their folders exist).
 

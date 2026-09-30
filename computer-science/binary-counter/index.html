@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Binary Counter and Place Values — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Tap lamps to switch bits on and off, count up in binary and watch carries ripple. See each number in decimal, octal and hexadecimal, with the divide-by-2 working and make-a-number challenges.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/computer-science/binary-counter/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Binary Counter and Place Values — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Tap lamps to switch bits on and off, count up in binary and watch carries ripple. See each number in decimal, octal and hexadecimal, with the divide-by-2 working and make-a-number challenges.">
+  <meta property="og:url" content="https://i2003-byte.github.io/computer-science/binary-counter/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="binary-counter">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Computers store everything as <strong>bits</strong>: tiny switches that are either off (<strong>0</strong>) or on (<strong>1</strong>). A row of bits makes a <strong>binary</strong> (base 2) number. It works just like our decimal (base 10) numbers, except that each place is worth <em>2 times</em> the place on its right instead of 10 times. So the places of an 8-bit number are worth 128, 64, 32, 16, 8, 4, 2 and 1. To read a binary number, add the place values of the bits that are 1. When you count up, the rightmost bit flips each time; when a 1 becomes 0 it <strong>carries</strong> into the next place, just like 9 + 1 = 10 in decimal. Because long rows of 0s and 1s are hard for people to read, programmers group bits into <strong>octal</strong> (groups of 3 bits, base 8) or <strong>hexadecimal</strong> (groups of 4 bits, base 16, digits 0–9 and A–F).</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">value = b₇×2⁷ + b₆×2⁶ + … + b₁×2¹ + b₀×2⁰</code>
+            <code class="formula">10101101₂ = 128 + 32 + 8 + 4 + 1 = 173₁₀</code>
+            <code class="formula">n bits hold 2ⁿ values: 0 to 2ⁿ − 1  (8 bits: 0 to 255)</code>
+            <code class="formula">1010 1101 → A D → AD₁₆  ·  010 101 101 → 2 5 5 → 255₈</code>
+            <ul>
+              <li><strong>Decimal → binary:</strong> divide by 2 again and again and write down each remainder. Read the remainders from the bottom up.</li>
+              <li><strong>Overflow:</strong> an n-bit counter that goes past 2ⁿ − 1 has no room for the carry and wraps back to 0.</li>
+            </ul>
+            <p>Simplification: only whole numbers from 0 upwards (unsigned integers) are shown. Real computers also store negative numbers (using two's complement) and fractions.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>One byte (8 bits) can store one English letter: "A" is stored as 65, which is 01000001.</li>
+              <li>Colours on a web page are written in hexadecimal: #FF9933 (the saffron of the flag) means red 255, green 153, blue 51.</li>
+              <li>An old 8-bit video game score counter that reached 255 would suddenly jump back to 0: an overflow.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Switch on only the lamps worth 64, 32 and 4. What number do you get? What is it in hexadecimal?<details><summary>Show answer</summary>64 + 32 + 4 = 100. In binary it is 01100100; the groups 0110 and 0100 give 6 and 4, so it is 64₁₆. In octal it is 144₈.</details></li>
+              <li>Set the value to 7 and press +1. How many bits change? Why?<details><summary>Show answer</summary>Four bits change: 00000111 becomes 00001000. The three 1s on the right each flip to 0 and carry, and the carry finally lands in the 8s place. This is just like 999 + 1 = 1000 in decimal.</details></li>
+              <li>Choose 4 bits and count up from 13. What happens after 15?<details><summary>Show answer</summary>15 is 1111, the largest 4-bit number. Adding 1 needs a fifth bit, which does not exist, so the counter overflows back to 0000.</details></li>
+              <li>Look at the rightmost bit while counting. What does it tell you about the number?<details><summary>Show answer</summary>It is 1 for odd numbers and 0 for even numbers, because every other place value is even.</details></li>
+              <li>Press "New challenge" a few times and make each number. Which lamp should you decide first?<details><summary>Show answer</summary>Start with the biggest place value that fits, switch it on, subtract it, and repeat with what is left. For 45: 32 fits (13 left), then 8 (5 left), then 4 (1 left), then 1, giving 00101101.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Bit:</strong> a binary digit, 0 or 1. <strong>Nibble:</strong> 4 bits. <strong>Byte:</strong> 8 bits.</li>
+              <li><strong>Base (radix):</strong> how many different digits a number system uses: 2, 8, 10 or 16.</li>
+              <li><strong>Most significant bit (MSB):</strong> the leftmost bit, with the largest place value.</li>
+              <li><strong>Overflow:</strong> a result too big to fit in the bits available.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

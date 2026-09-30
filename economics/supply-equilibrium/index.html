@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Supply and Market Equilibrium — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Add sellers to the mango market: see the supply curve, find where it crosses demand, and press Play to watch a shortage or surplus push the price to equilibrium. Shift supply with costs, cyclones and bumper crops.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/economics/supply-equilibrium/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Supply and Market Equilibrium — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Add sellers to the mango market: see the supply curve, find where it crosses demand, and press Play to watch a shortage or surplus push the price to equilibrium. Shift supply with costs, cyclones and bumper crops.">
+  <meta property="og:url" content="https://i2003-byte.github.io/economics/supply-equilibrium/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="supply-equilibrium">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Supply</strong> is the amount sellers are willing to sell at each price. The <strong>law of supply</strong> says that, other things staying the same, a higher price makes sellers offer more, so the supply curve slopes <em>up</em>. Put the supply curve on the same graph as the demand curve and they cross at one point, the <strong>equilibrium</strong>. At that price, buyers want exactly what sellers offer, so nothing pushes the price up or down. At any other price there is a gap. If the price is too low there is a <strong>shortage</strong> (excess demand): buyers compete and the price rises. If it is too high there is a <strong>surplus</strong> (excess supply): unsold mangoes pile up and sellers cut the price. Either way the market moves towards equilibrium.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Qd = 400 − 2P  (+ 80 in a festival week)</code>
+            <code class="formula">Qs = 3P − 50 − 3(c − 10) + harvest</code>
+            <p class="formula-note">Q in kg per day, P = price (₹/kg), c = cost of transport and labour (₹/kg), harvest = +90 bumper crop, −120 after a cyclone</p>
+            <code class="formula">Equilibrium: Qd = Qs  →  400 − 2P = 3P − 50  →  P* = ₹90, Q* = 220 kg</code>
+            <code class="formula">shortage = Qd − Qs (price below P*)  ·  surplus = Qs − Qd (price above P*)</code>
+            <ul>
+              <li>A change in <strong>costs, weather, technology or the number of sellers</strong> shifts the supply curve. Higher costs shift it up (left): sellers now want a higher price for each kilogram.</li>
+              <li>When a curve shifts, the old equilibrium becomes a shortage or a surplus, and the price moves to the new crossing point.</li>
+            </ul>
+            <p>Simplification: straight-line curves and invented round numbers. The speed of the price change (it moves faster when the gap is bigger) is a simple model too; real markets can adjust quickly or slowly, and prices may be sticky.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>After a cyclone hits the orchards of coastal Andhra Pradesh or Odisha, fewer mangoes reach the mandi and prices jump: supply shifted left.</li>
+              <li>When diesel becomes dearer, trucking fruit and vegetables costs more, and prices across the country creep up.</li>
+              <li>In a bumper onion year, prices in Lasalgaon can crash so low that farmers leave onions unsold: supply shifted right.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start at ₹40 per kg. How big is the shortage? Press Play. Where does the price stop?<details><summary>Show answer</summary>Buyers want 320 kg but sellers offer only 70 kg, a shortage of 250 kg. The price rises quickly at first, then more slowly as the gap closes, and settles at ₹90 with 220 kg traded.</details></li>
+              <li>Now set the starting price to ₹150. What is different?<details><summary>Show answer</summary>There is a surplus of 300 kg (400 offered, 100 wanted). The price falls instead of rising, and ends at the same ₹90. The equilibrium does not depend on where the price starts.</details></li>
+              <li>Choose "Cyclone damaged the orchards". What happens to the equilibrium?<details><summary>Show answer</summary>Supply shifts left by 120 kg. At the old price of ₹90 there is now a shortage, so the price rises to ₹114 and only 172 kg are sold.</details></li>
+              <li>Back in the starting market, raise transport and labour costs from ₹10 to ₹30 per kg. The supply curve moves up by ₹20. Does the price rise by ₹20?<details><summary>Show answer</summary>No. The new equilibrium is ₹102 and 196 kg, a rise of only ₹12. Buyers pay part of the extra cost and sellers absorb the rest, because at a higher price buyers buy less.</details></li>
+              <li>Pick a festival week and a bumper crop together. Which way does the price move?<details><summary>Show answer</summary>Both curves shift right. The quantity rises a lot (to 304 kg), but the price barely changes (₹88), because the demand push up and the supply push down almost cancel.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Law of supply:</strong> other things being equal, quantity supplied rises as price rises.</li>
+              <li><strong>Equilibrium:</strong> the price at which quantity demanded equals quantity supplied.</li>
+              <li><strong>Excess demand (shortage):</strong> Qd &gt; Qs at the current price.</li>
+              <li><strong>Excess supply (surplus):</strong> Qs &gt; Qd at the current price.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
