@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Free Fall and g on Different Worlds — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drop a heavy ball and a marble on the Moon, Mars, the Earth and Jupiter. Both land together, but g changes from world to world. See why mass stays the same while weight W = m g changes.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/free-fall-planets/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Free Fall and g on Different Worlds — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drop a heavy ball and a marble on the Moon, Mars, the Earth and Jupiter. Both land together, but g changes from world to world. See why mass stays the same while weight W = m g changes.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/free-fall-planets/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="free-fall-planets">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When only gravity acts on a falling object, we say it is in <strong>free fall</strong>. Every object in free fall speeds up by the same amount each second, whatever its mass: this steady acceleration is called the <strong>acceleration due to gravity, g</strong>. Near the Earth's surface g ≈ 9.8 m/s². A heavy iron ball is pulled harder than a marble, but it also needs more force to speed up, so the two effects cancel and both land together. On another world g is different, because g depends on that world's mass and radius. Your <strong>mass</strong> (how much matter you have) is the same everywhere, but your <strong>weight</strong> (the pull of gravity on you, W = m g) changes.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">g = G M ÷ R²     (M, R = mass and radius of the planet)</code>
+            <code class="formula">v = g t ,   h = ½ g t² ,   so  t = √(2h ÷ g)  and  v = √(2 g h)</code>
+            <code class="formula">weight  W = m g     (in newtons; mass m in kg)</code>
+            <code class="formula">Earth, h = 20 m:  t = √(40 ÷ 9.8) ≈ 2.0 s ,   v ≈ 19.8 m/s</code>
+            <ul>
+              <li>The falling time and the landing speed do not contain the mass m, so the heavy ball and the marble always land together.</li>
+              <li>The Moon's g is about one-sixth of the Earth's, so on the Moon you weigh about one-sixth as much, and a fall takes about 2.5 times as long (√6 ≈ 2.45).</li>
+              <li>Four times the height takes only twice the time, because h grows with t².</li>
+            </ul>
+            <p>Simplification: there is no air at all (as in a vacuum), so there is no air resistance. Each g is worked out from G M ÷ R² with rounded masses and radii; real g also varies slightly with place and height, and with the planet's spin. Jupiter has no solid surface, so its lane uses g at the cloud tops at its equator. The lanes are drawn to the same height scale.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>In 1971, astronaut David Scott dropped a hammer and a feather together on the Moon. With no air there, they hit the ground at the same moment.</li>
+              <li>On Earth a feather or a sheet of paper falls slowly only because air pushes back on it. Crumple the paper into a ball and it falls almost as fast as a stone.</li>
+              <li>A bathroom scale really measures weight but shows it in kg by dividing by 9.8. On the Moon it would show about one-sixth of your mass, even though your mass has not changed.</li>
+              <li>Chandrayaan-3's lander had to be designed for the Moon's weak gravity, about 1.6 m/s², when it touched down near the Moon's south pole in 2023.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drop from 20 m with a 1 kg ball, then with a 60 kg ball. Does the fall time on the Earth change?<details><summary>Show answer</summary>No. It stays about 2.0 s, and the marble still lands together with the ball. Free-fall time does not depend on mass.</details></li>
+              <li>On the Earth, how long does a 5 m drop take, and how long does a 20 m drop take?<details><summary>Show answer</summary>About 1.0 s and 2.0 s. Four times the height needs only twice the time.</details></li>
+              <li>Set the mass to 60 kg (roughly a person). What does the spring balance show on the Earth and on the Moon?<details><summary>Show answer</summary>About 589 N on the Earth and about 98 N on the Moon, roughly one-sixth. The mass is 60 kg on both.</details></li>
+              <li>Look at the v–t graph. What does the slope of each line tell you?<details><summary>Show answer</summary>The slope is the acceleration, g. Jupiter's line is steepest and the Moon's is the flattest. Each line is straight because g stays constant during the fall.</details></li>
+              <li>The Earth's radius were somehow doubled with its mass unchanged. What would g become?<details><summary>Show answer</summary>g = G M ÷ R², so doubling R makes g one quarter: about 2.45 m/s².</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Free fall:</strong> motion of an object under gravity alone.</li>
+              <li><strong>Acceleration due to gravity (g):</strong> the acceleration of a freely falling object; about 9.8 m/s² on the Earth.</li>
+              <li><strong>Mass:</strong> the amount of matter in an object, in kg; it is the same everywhere.</li>
+              <li><strong>Weight:</strong> the force with which a planet pulls an object, W = m g, in newtons; it changes from place to place.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1132,6 +1132,71 @@ SimLab.simulations = [
     prerequisites: ['balloon-rocket']
   },
 
+  {
+    id: 'universal-gravitation',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Universal Law of Gravitation',
+    description:
+      'Two students, two trucks, the Earth and an apple, the Moon, the Sun: see the equal and opposite pull F = G m₁ m₂ ÷ r² and the inverse-square law.',
+    level: 'Beginner',
+    tags: ['gravitation', 'universal law of gravitation', 'newton', 'inverse square law', 'force', 'moon', 'g constant', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/universal-gravitation.svg',
+    link: '/physics/universal-gravitation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['collisions']
+  },
+  {
+    id: 'free-fall-planets',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Free Fall and g on Different Worlds',
+    description:
+      'Drop a heavy ball and a marble on the Moon, Mars, the Earth and Jupiter. Both land together, g changes from world to world, and mass stays the same while weight W = m g changes.',
+    level: 'Beginner',
+    tags: ['free fall', 'acceleration due to gravity', 'g', 'mass and weight', 'weight', 'moon', 'planets', 'gravitation', 'class 9'],
+    thumbnail: '/assets/img/thumbs/free-fall-planets.svg',
+    link: '/physics/free-fall-planets/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['universal-gravitation']
+  },
+  {
+    id: 'buoyancy-archimedes',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: "Buoyancy and Archimedes' Principle",
+    description:
+      'Lower blocks into water, sea water, kerosene, glycerine or mercury. A spring balance and an overflow can show that upthrust equals the weight of liquid displaced, and why things sink or float.',
+    level: 'Beginner',
+    tags: ['buoyancy', 'upthrust', 'archimedes principle', 'floating', 'sinking', 'density', 'relative density', 'gravitation', 'class 9', 'class 8'],
+    thumbnail: '/assets/img/thumbs/buoyancy-archimedes.svg',
+    link: '/physics/buoyancy-archimedes/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['free-fall-planets']
+  },
+  {
+    id: 'work-done',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Work Done: W = F s cos θ',
+    description:
+      'Move a box with a force at any angle. Only the part of the force along the motion does work; see positive, zero and negative work and the area under a force–distance graph.',
+    level: 'Beginner',
+    tags: ['work', 'work done', 'joule', 'force', 'displacement', 'angle', 'negative work', 'work energy and power', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/work-done.svg',
+    link: '/physics/work-done/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['newtons-second-law']
+  },
+
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
     id: 'spring-mass',

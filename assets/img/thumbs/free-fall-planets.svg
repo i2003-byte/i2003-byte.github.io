@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="free-fall-planets">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#172554"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <g stroke="#334155" stroke-width="1"><path d="M80 20v170M160 20v170M240 20v170"/></g>
+  <rect x="8" y="172" width="64" height="8" rx="2" fill="#94a3b8"/><rect x="88" y="172" width="64" height="8" rx="2" fill="#c2410c"/><rect x="168" y="172" width="64" height="8" rx="2" fill="#15803d"/><rect x="248" y="172" width="64" height="8" rx="2" fill="#b45309"/>
+  <g fill="#64748b" stroke="#1e293b" stroke-width="1.5"><circle cx="34" cy="62" r="9"/><circle cx="114" cy="88" r="9"/><circle cx="194" cy="128" r="9"/><circle cx="274" cy="162" r="9"/></g>
+  <g fill="#22d3ee"><circle cx="54" cy="68" r="3.5"/><circle cx="134" cy="94" r="3.5"/><circle cx="214" cy="134" r="3.5"/><circle cx="294" cy="168" r="3.5"/></g>
+  <g font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle"><text x="40" y="30" fill="#cbd5e1">Moon</text><text x="120" y="30" fill="#f97316">Mars</text><text x="200" y="30" fill="#60a5fa">Earth</text><text x="280" y="30" fill="#f59e0b">Jupiter</text></g>
+</svg>

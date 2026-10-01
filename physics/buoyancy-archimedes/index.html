@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Buoyancy and Archimedes' Principle — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Lower iron, aluminium, plastic, ice or wood into water, sea water, kerosene, glycerine or mercury. A spring balance and an overflow can show that upthrust equals the weight of liquid displaced, and why things sink or float.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/buoyancy-archimedes/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Buoyancy and Archimedes' Principle — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Lower iron, aluminium, plastic, ice or wood into water, sea water, kerosene, glycerine or mercury. A spring balance and an overflow can show that upthrust equals the weight of liquid displaced, and why things sink or float.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/buoyancy-archimedes/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="buoyancy-archimedes">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Lift a bucket of water out of a well and it suddenly feels heavier as it leaves the water. That is because a liquid pushes up on anything placed in it. This upward push is called <strong>upthrust</strong> or the <strong>buoyant force</strong>. Here a block hangs from a spring balance. As you lower it into the overflow can, the balance reading drops: the block seems to lose weight. The liquid pushed out runs into the measuring cylinder. <strong>Archimedes' principle</strong> says the loss in weight is exactly equal to the weight of the liquid pushed aside. Compare the blue and green bars: they always match.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">upthrust  B = weight of liquid displaced = ρ_liquid × V_under × g</code>
+            <code class="formula">balance reading (apparent weight) = W − B</code>
+            <code class="formula">iron block in water: W = 7.9 × 200 g × 9.8 ≈ 15.5 N,  B = 200 g of water ≈ 1.96 N,  reading ≈ 13.5 N</code>
+            <code class="formula">relative density = density of the substance ÷ density of water</code>
+            <ul>
+              <li>Upthrust grows as more of the block goes under, then stays the same once it is fully under, however deep it goes.</li>
+              <li>A denser liquid gives more upthrust for the same volume: compare water, sea water and glycerine.</li>
+              <li>If the block is <strong>less dense</strong> than the liquid, it floats: it sinks only until the liquid displaced weighs as much as the whole block. The fraction under the surface is ρ_block ÷ ρ_liquid.</li>
+              <li>If the block is <strong>denser</strong> than the liquid, the upthrust can never match its weight, so it sinks.</li>
+            </ul>
+            <p>Simplification: the cylinder always shows the liquid pushed aside by the block at this moment, as if any overflow is poured back when you raise the block. The spring balance, string and hook are taken as weightless. Densities are typical values; g = 9.8 m/s².</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>A steel ship floats because its hollow hull pushes aside a huge volume of water whose weight equals the ship's weight. A solid steel block of the same mass would sink.</li>
+              <li>Ships float a little higher in sea water than in river water, because sea water is denser. Ships carry a load-line (Plimsoll) mark to show safe loading in each kind of water.</li>
+              <li>Submarines sink or rise by letting sea water into tanks or blowing it out, changing their weight while their volume stays the same.</li>
+              <li>A lactometer checks the purity of milk by how high it floats, and a hydrometer measures the density of liquids in the same way.</li>
+              <li>Icebergs float with about nine-tenths of their volume hidden under the sea.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Lower the iron block into water: half in, then fully in, then deeper. How does the balance reading change?<details><summary>Show answer</summary>15.5 N in air, about 14.5 N half in, about 13.5 N fully in, and still 13.5 N deeper down. Upthrust depends on the volume under the liquid, not the depth.</details></li>
+              <li>Keep the iron block fully in and change the liquid to kerosene, then glycerine. What happens to the upthrust?<details><summary>Show answer</summary>About 1.57 N in kerosene, 1.96 N in water and 2.47 N in glycerine. The denser the liquid, the bigger the upthrust.</details></li>
+              <li>Lower the teak wood block into water. Why does the balance drop to zero before the block is fully under?<details><summary>Show answer</summary>Wood (0.65 g/cm³) is less dense than water. Once 65% of it is under, it displaces 130 cm³ of water weighing as much as the whole block, so it floats and the string goes slack.</details></li>
+              <li>Put the ice block in water and then in kerosene, and let go each time. What do you see?<details><summary>Show answer</summary>Ice floats in water with 92% under, but sinks in kerosene (0.8 g/cm³), because ice is denser than kerosene.</details></li>
+              <li>Choose iron and mercury. Does iron sink?<details><summary>Show answer</summary>No. Mercury (13.6 g/cm³) is denser than iron (7.9 g/cm³), so iron floats in mercury with about 58% under.</details></li>
+              <li>A stone weighs 3.0 N in air and 1.8 N in water. What is its volume and relative density?<details><summary>Show answer</summary>Loss in weight = 1.2 N = weight of water displaced, so 1.2 ÷ 9.8 ≈ 0.122 kg of water, which is 122 cm³. Relative density = 3.0 ÷ 1.2 = 2.5.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Upthrust (buoyant force):</strong> the upward force a fluid exerts on an object placed in it.</li>
+              <li><strong>Archimedes' principle:</strong> an object wholly or partly immersed in a fluid feels an upthrust equal to the weight of the fluid it displaces.</li>
+              <li><strong>Density:</strong> mass per unit volume, ρ = m ÷ V (g/cm³ or kg/m³).</li>
+              <li><strong>Relative density:</strong> the density of a substance ÷ the density of water; it has no unit.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

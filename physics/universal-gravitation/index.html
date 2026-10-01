@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Universal Law of Gravitation — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Two students, two trucks, the Earth and an apple, the Moon, the Sun: see the equal and opposite pull F = G m₁ m₂ ÷ r², and how doubling the distance makes it four times weaker.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/universal-gravitation/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Universal Law of Gravitation — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Two students, two trucks, the Earth and an apple, the Moon, the Sun: see the equal and opposite pull F = G m₁ m₂ ÷ r², and how doubling the distance makes it four times weaker.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/universal-gravitation/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="universal-gravitation">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every object in the universe pulls every other object towards itself. This pull is called <strong>gravitation</strong>. Newton's <strong>universal law of gravitation</strong> says the force grows with the product of the two masses and falls with the <strong>square of the distance</strong> between their centres. The same law that makes an apple fall also keeps the Moon going round the Earth and the Earth going round the Sun. Between everyday objects the pull is far too tiny to notice; it only becomes large when at least one body is as heavy as a planet or a star.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">F = G m₁ m₂ ÷ r²</code>
+            <code class="formula">G = 6.67 × 10⁻¹¹ N m² kg⁻²  (the universal gravitational constant)</code>
+            <code class="formula">two students: 6.67 × 10⁻¹¹ × 50 × 60 ÷ 1² ≈ 2.0 × 10⁻⁷ N</code>
+            <ul>
+              <li>Double one mass: F doubles. Double both masses: F becomes 4 times.</li>
+              <li>Double the distance: F becomes ¼. Three times the distance: F becomes ⅑. This is the <strong>inverse-square law</strong>.</li>
+              <li>The two bodies pull each other with <strong>equal and opposite</strong> forces (Newton's third law). The lighter body gets the bigger acceleration, a = F ÷ m, so the apple falls towards the Earth, while the Earth's own movement towards the apple is far too small to measure.</li>
+              <li>r is measured between the <strong>centres</strong> of the bodies. For an apple on the ground, r is the Earth's radius, 6371 km.</li>
+            </ul>
+            <p>Simplification: the bodies are treated as spheres (or points), with their mass acting at the centre. The drawing is not to scale; the sizes only hint at which body is heavier. Masses and distances are rounded real values.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>The Earth's pull on you is your <strong>weight</strong>. Your pull on the Earth is exactly as big, but the Earth is so heavy that it does not move noticeably.</li>
+              <li>The Moon's pull on the oceans causes <strong>tides</strong>; at places like the Gulf of Khambhat the sea level rises and falls by several metres twice a day.</li>
+              <li>The Sun's gravity keeps all the planets in their orbits; the Earth's gravity keeps the Moon and satellites such as those launched by ISRO in their orbits.</li>
+              <li>Two students sitting next to each other do attract each other, but with less force than the weight of a speck of dust.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose the two students. Set the distance to 2×, then 3×. What happens to the force each time?<details><summary>Show answer</summary>It becomes ¼ (0.25×), then ⅑ (about 0.111×) of the starting value. The graph's marked points show ÷4 and ÷9.</details></li>
+              <li>Keep r at 1× and make m₁ 2× and m₂ 3×. How many times bigger is the force?<details><summary>Show answer</summary>2 × 3 = 6 times. The force is proportional to the product of the masses.</details></li>
+              <li>Choose the Earth and the Moon. Compare the two accelerations in the readouts. Which is bigger and why?<details><summary>Show answer</summary>The Moon's acceleration (about 0.0027 m/s²) is about 81 times the Earth's, because the forces are equal and the Earth's mass is about 81 times the Moon's.</details></li>
+              <li>Choose the Earth and an apple. The force is about 0.98 N. What is this force called?<details><summary>Show answer</summary>It is the apple's weight. 0.98 N ÷ 0.1 kg = 9.8 m/s², which is g, the acceleration due to gravity at the Earth's surface.</details></li>
+              <li>If the distance between two bodies is halved and both masses are doubled, how does the force change?<details><summary>Show answer</summary>Masses: 2 × 2 = 4 times. Distance: ÷ (½)² = 4 times. Total: 16 times the original force.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Gravitation:</strong> the force of attraction between any two objects that have mass.</li>
+              <li><strong>Gravity:</strong> the gravitational pull of the Earth (or another planet) on objects near it.</li>
+              <li><strong>Universal gravitational constant G:</strong> the force between two 1 kg masses 1 m apart, 6.67 × 10⁻¹¹ N; it is the same everywhere in the universe.</li>
+              <li><strong>Inverse-square law:</strong> a quantity that falls as 1 ÷ distance².</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

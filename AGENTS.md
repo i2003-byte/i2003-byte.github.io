@@ -101,7 +101,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 
 ## Current content (update when it changes)
 - **Physics (live):**
-  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area, balanced-forces, liquid-pressure; Class 8 Friction: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants; Class 9 Motion: distance-displacement, velocity-time-graph, circular-motion; Class 9 Force and laws of motion: inertia-coin-card, newtons-second-law, balloon-rocket, collisions
+  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area, balanced-forces, liquid-pressure; Class 8 Friction: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants; Class 9 Motion: distance-displacement, velocity-time-graph, circular-motion; Class 9 Force and laws of motion: inertia-coin-card, newtons-second-law, balloon-rocket, collisions; Class 9 Gravitation: universal-gravitation, free-fall-planets, buoyancy-archimedes; Class 9 Work, energy and power: work-done
   - branch `optics` (Class 7 Light): pinhole-camera, plane-mirror, newtons-disc
   - branch `electricity`: Class 7 Electric current and its effects: electric-circuit, heating-fuse, electromagnet; Class 8 Some natural phenomena: charging-by-rubbing, electroscope, lightning-conductor
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
@@ -117,4 +117,5 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Grid/flex children that scroll sideways need `min-width: 0`, or phones zoom out.
 - Share-link numbers are written with `String(parseFloat(x.toFixed(d)))`. Never strip zeros with a regex (350 would become 35).
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
+- `tools/browser-test.mjs` does not press Play, so an error inside `update` passes it. Press Play (and wait) when screenshotting time-based sims.
 - `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

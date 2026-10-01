@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Work Done: W = F s cos θ — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Move a box along the floor with a force at any angle. See why only the part of the force along the motion does work, how work can be positive, zero or negative, and why work is the area under a force–distance graph.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/work-done/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Work Done: W = F s cos θ — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Move a box along the floor with a force at any angle. See why only the part of the force along the motion does work, how work can be positive, zero or negative, and why work is the area under a force–distance graph.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/work-done/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="work-done">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In science, <strong>work</strong> is done only when a force moves an object, and only the part of the force <strong>along the direction of motion</strong> counts. Here a box moves along the floor and one force F acts on it at an angle θ. The force is split into two parts: F cos θ along the motion (this does the work) and F sin θ across the motion (this does no work at all). When the force helps the motion the work is <strong>positive</strong>; when it is at right angles to the motion it is <strong>zero</strong>; when it acts against the motion, like friction or brakes, the work is <strong>negative</strong>. On the chart, work is the shaded area under the force–distance line.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">W = F × s × cos θ        (1 joule = 1 newton × 1 metre)</code>
+            <code class="formula">θ = 0°: W = F s     θ = 90°: W = 0     θ = 180°: W = −F s</code>
+            <code class="formula">40 N at 60° over 5 m:  W = 40 × 5 × 0.5 = 100 J</code>
+            <ul>
+              <li>For Class 9, where the force and the motion are along the same line, this is simply W = F × s.</li>
+              <li>cos 0° = 1, cos 60° = 0.5, cos 90° = 0, cos 180° = −1.</li>
+              <li>Work is a scalar: it has a size and a sign, but no direction.</li>
+              <li>Work done = area under the force–displacement graph.</li>
+            </ul>
+            <p>Simplification: the box moves at a steady 1 m/s and we only work out the work done by this one force. Whatever else keeps the box moving (another push, or its own motion) is left out of the picture.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Pulling a trolley bag at a railway station by a slanted handle: part of your pull only lifts the handle, so you do less work per metre than the full pull suggests.</li>
+              <li>A coolie (porter) carrying a heavy load on the head while walking on level ground does no work on the load in the scientific sense: the upward supporting force is at 90° to the motion. (The person still gets tired, because muscles use energy just to hold the load.)</li>
+              <li>Friction on a sliding carrom striker does negative work, which is why the striker slows down and stops.</li>
+              <li>Pushing hard against a wall that does not move does no work on the wall, because the displacement is zero.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With F = 40 N and s = 5 m, compare θ = 0° and θ = 60°.<details><summary>Show answer</summary>200 J at 0° and 100 J at 60°, because cos 60° = 0.5. Only half the pull is along the motion.</details></li>
+              <li>Press "Porter holding up a 200 N load, walking". Why is the work zero even though the force is big?<details><summary>Show answer</summary>The force is straight up and the motion is sideways, so θ = 90° and cos θ = 0. There is no part of the force along the motion.</details></li>
+              <li>Press "Friction on a sliding box". What is the sign of the work, and what does that mean?<details><summary>Show answer</summary>W = 30 × 4 × (−1) = −120 J. Negative work means the force takes energy away from the moving box.</details></li>
+              <li>At what angle does a 100 N force do the same work over 5 m as a 50 N force pulling straight along?<details><summary>Show answer</summary>50 × 5 = 250 J. So 100 × 5 × cos θ = 250 gives cos θ = 0.5, θ = 60°.</details></li>
+              <li>A 40 kg box is lifted straight up through 1.5 m at a steady speed. How much work does the lifting force do?<details><summary>Show answer</summary>The force equals the weight, 40 × 9.8 = 392 N, and it is along the motion, so W = 392 × 1.5 ≈ 588 J.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Work:</strong> the product of a force and the distance moved along the direction of the force.</li>
+              <li><strong>Joule (J):</strong> the work done when a force of 1 N moves an object through 1 m along the force.</li>
+              <li><strong>Positive / negative work:</strong> the force acts with / against the direction of motion.</li>
+              <li><strong>Component of a force:</strong> the part of a force that acts along a chosen direction.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
