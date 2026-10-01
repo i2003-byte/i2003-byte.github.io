@@ -930,7 +930,15 @@
       .sort(function (a, b) { return (S.isLive(b) ? 1 : 0) - (S.isLive(a) ? 1 : 0); })
       .slice(0, 4);
 
-    var html = '';
+    // Feedback box: opens a prefilled GitHub issue (agents triage these; see FEEDBACK.md)
+    var issueBase = S.site.github + '/issues/new?template=';
+    var html = '<section class="card feedback-band" aria-labelledby="fb-h">' +
+      '<div><h2 id="fb-h">💬 How was this simulation?</h2>' +
+      '<p class="muted small">Ideas to improve it, a topic you want next, or something that looks wrong. Every suggestion is read.</p></div>' +
+      '<div class="feedback-actions">' +
+        '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + esc(issueBase + 'feedback.md&title=' + encodeURIComponent('Feedback: ' + entry.title)) + '">Suggest an improvement</a>' +
+        '<a class="btn" target="_blank" rel="noopener" href="' + esc(issueBase + 'bug-report.md&title=' + encodeURIComponent('Problem: ' + entry.title)) + '">Report a problem</a>' +
+      '</div></section>';
     if (prev || next) {
       html += '<nav class="sim-pager" aria-label="More simulations in this topic">' +
         (prev ? '<a class="pager-link prev" href="' + esc(prev.link) + '"><span class="k">← Previous</span><span class="t">' + esc(prev.title) + '</span></a>' : '<span class="pager-link is-empty"></span>') +

@@ -208,7 +208,7 @@ if (HOOK) { // commit messages about to be pushed
 }
 
 /* ---------- 10. Required files ---------- */
-for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md', 'ROADMAP.md', 'PROGRESS.md'])
+for (const f of ['.nojekyll', '404.html', 'index.html', 'assets/img/favicon.svg', 'assets/img/og-image.png', 'AGENTS.md', 'README.md', 'ROADMAP.md', 'PROGRESS.md', 'FEEDBACK.md'])
   if (!exists(f)) err(`missing required file: ${f}`);
 
 report();

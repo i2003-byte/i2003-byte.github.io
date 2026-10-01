@@ -13,6 +13,18 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-01 · request · Visitor feedback via GitHub Issues
+- Built/changed:
+  - feedback box ("💬 How was this simulation?") on every simulation page
+  - `feedback.md` issue template
+  - `FEEDBACK.md` log
+  - `.claude/skills/feedback-triage`, wired into roadmap-run (step 1) and site-maintenance
+  - AGENTS.md rule
+- Checks: ✅ check.mjs passed · ✅ browser-test
+- Roadmap: unchanged
+- Next time: each run starts by triaging new issues (valid ideas go near the top of 📋 Next), then builds as usual
+- Problems/notes: runs can read issues but cannot close them; FEEDBACK.md records what is handled
+
 ## 2026-10-01 · routine · Class 9 · Physics · Force and laws of motion (finished)
 - Built/changed: `physics/inertia-coin-card` (side view of a card on a glass with a ₹5 coin, eraser or plastic counter stacked 1–5 high; the flick sends the card off at v, friction can give the object at most μg; slips, rides along or drops in, decided by v t − ½μg t² = L/2 and the glass mouth; slow motion ×10/×30, real-time clock, card vs coin speed graph in ms, √(μgL) threshold readout), `physics/newtons-second-law` (cart + 0–5 kg of bricks pulled by a spring balance, air track / smooth / rough floor with static check, a = (F − f) ÷ m headline, ticker tape with a dot every 0.2 s and the previous run's tape faded underneath, v–t graph, momentum readout), `physics/balloon-rocket` (balloon on a straw and 5 m string, thrust = ṁu with ṁ = ρAu, three nozzle sizes, 1–6 L of air, air drag and string friction or ideal mode; equal and opposite action/reaction arrows, momentum bars and graph of balloon vs air thrown back, equal in ideal mode), `physics/collisions` (built out the placeholder: two carts with masses, velocities and e = 1 / 0.5 / 0 (Velcro), momentum and KE before/after bars, impulse flash, five preset buttons); 3 new thumbnails (collisions kept its existing one), catalog, README, AGENTS, ROADMAP
 - Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages + /physics/ + / at phone + desktop); combined canvas screenshots reviewed: fixed overlapping action/reaction labels and the footnote over the momentum label (balloon), cart labels too wide for small carts, bar totals running off the right edge and two speed labels on stuck carts (collisions), and a cut-off subtitle on phones (inertia)

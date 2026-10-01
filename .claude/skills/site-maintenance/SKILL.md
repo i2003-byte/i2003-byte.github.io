@@ -28,6 +28,9 @@ node tools/browser-test.mjs          # ALL pages, phone and desktop (skips itsel
 - **Queue:** if 📋 Next has fewer than 8 items, evolve it (see `roadmap-run` skill, step 6): add Class 7–12 India syllabus topics, auto-approved.
 - **Accuracy:** coverage table and total match the live simulation count in `catalog.js`; ✅ Done matches reality.
 
+## 2b. Feedback
+Run `.claude/skills/feedback-triage/SKILL.md` to catch anything the daily runs missed. Also note in the `PROGRESS.md` entry any open issues the owner could close on GitHub (already handled in `FEEDBACK.md`).
+
 ## 3. Consistency
 - `README.md` "What's inside" (titles, counts, total) matches the catalog.
 - `AGENTS.md` "Current content" matches the catalog.

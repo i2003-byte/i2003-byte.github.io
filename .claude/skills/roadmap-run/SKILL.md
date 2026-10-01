@@ -18,8 +18,9 @@ Never work from an old branch. Other sessions may have pushed since.
 
 ## 1. Orient (read only these)
 1. `PROGRESS.md`: the top 3 entries. What happened last, and any problems to handle first?
-2. `ROADMAP.md`: 🔨 In progress, then 📋 Next.
-3. Decide the work:
+2. **Feedback:** run `.claude/skills/feedback-triage/SKILL.md`. It's quick when there are no new issues. Valid ideas land near the top of 📋 Next.
+3. `ROADMAP.md`: 🔨 In progress, then 📋 Next.
+4. Decide the work:
    - If the last entry reports a **problem** (failed check, broken page), fix that first. It counts as this run's work if it is big.
    - Else if **🔨 In progress** has an item, **resume** it using its "Next:" note.
    - Else take the **first item in 📋 Next**. Move it to 🔨 In progress with today's date before building.

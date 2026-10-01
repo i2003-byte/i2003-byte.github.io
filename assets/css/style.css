@@ -1364,3 +1364,9 @@ input[type='range']:focus-visible::-moz-range-thumb { box-shadow: var(--focus); 
   .hero-pill { margin-bottom: var(--space-4); }
   .stats-strip { margin-top: var(--space-5); }
 }
+
+/* Feedback box at the bottom of simulation pages */
+.feedback-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-6); padding: var(--space-5); }
+.feedback-band h2 { font-size: var(--fs-lg); margin: 0 0 var(--space-1); }
+.feedback-band p { margin: 0; }
+.feedback-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
