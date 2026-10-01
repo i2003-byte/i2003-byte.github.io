@@ -1067,6 +1067,71 @@ SimLab.simulations = [
     prerequisites: ['distance-displacement']
   },
 
+  {
+    id: 'inertia-coin-card',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Inertia: Coin on a Card',
+    description:
+      'Flick a card from under a coin sitting on a glass. A quick flick leaves the coin behind to drop in; a slow pull drags it along. See Newton’s first law in slow motion.',
+    level: 'Beginner',
+    tags: ['inertia', 'newton first law', 'first law of motion', 'friction', 'coin and card', 'force and laws of motion', 'class 9'],
+    thumbnail: '/assets/img/thumbs/inertia-coin-card.svg',
+    link: '/physics/inertia-coin-card/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['balanced-forces']
+  },
+  {
+    id: 'newtons-second-law',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: "Newton's Second Law: F = ma Cart Lab",
+    description:
+      'Pull a cart with a steady force, load it with bricks and change the track. A ticker tape and a speed graph show that acceleration = net force ÷ mass.',
+    level: 'Beginner',
+    tags: ['newton second law', 'f = ma', 'acceleration', 'net force', 'mass', 'momentum', 'ticker tape', 'friction', 'force and laws of motion', 'class 9'],
+    thumbnail: '/assets/img/thumbs/newtons-second-law.svg',
+    link: '/physics/newtons-second-law/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['inertia-coin-card', 'velocity-time-graph']
+  },
+  {
+    id: 'balloon-rocket',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Action and Reaction: Balloon Rocket',
+    description:
+      'Release a balloon on a string: it pushes air back and the air pushes it forward with an equal force. Compare the momentum of the balloon and of the air it throws out.',
+    level: 'Beginner',
+    tags: ['newton third law', 'action and reaction', 'balloon rocket', 'thrust', 'rocket', 'momentum', 'conservation of momentum', 'force and laws of motion', 'class 9'],
+    thumbnail: '/assets/img/thumbs/balloon-rocket.svg',
+    link: '/physics/balloon-rocket/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['newtons-second-law']
+  },
+  {
+    id: 'collisions',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Collisions and Momentum',
+    description:
+      'Crash two carts on a smooth track, bouncy, partly bouncy or sticky. Bars show that total momentum is always conserved, while kinetic energy is kept only in elastic collisions.',
+    level: 'Intermediate',
+    tags: ['collisions', 'momentum', 'conservation of momentum', 'elastic', 'inelastic', 'impulse', 'kinetic energy', 'force and laws of motion', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/collisions.svg',
+    link: '/physics/collisions/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-01',
+    prerequisites: ['balloon-rocket']
+  },
+
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
     id: 'spring-mass',
@@ -1082,21 +1147,6 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-15',
     prerequisites: ['pendulum']
-  },
-  {
-    id: 'collisions',
-    subject: 'physics',
-    branch: 'mechanics',
-    title: 'Collisions',
-    description: 'Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved?',
-    level: 'Intermediate',
-    tags: ['momentum', 'energy', 'elastic', 'inelastic', 'impulse'],
-    thumbnail: '/assets/img/thumbs/collisions.svg',
-    link: '/physics/collisions/',
-    status: 'coming-soon',
-    featured: false,
-    dateAdded: '2026-10-20',
-    prerequisites: []
   },
   {
     id: 'wave-interference',

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="inertia-coin-card">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#134e4a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect x="0" y="178" width="320" height="22" fill="#a16207" fill-opacity=".5"/>
+  <path d="M120 70L130 178H190L200 70" fill="#7dd3fc" fill-opacity=".14" stroke="#7dd3fc" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="188" y="62" width="110" height="6" rx="2" fill="#f59e0b"/>
+  <rect x="143" y="44" width="34" height="5" rx="2" fill="#cbd5e1"/>
+  <path d="M160 56v10" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 3"/>
+  <path d="M232 46h44" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M272 38l12 8l-12 8z" fill="#f472b6"/>
+  <text x="70" y="40" font-family="sans-serif" font-size="18" font-weight="700" fill="#e2e8f0" text-anchor="middle">Flick!</text>
+</svg>

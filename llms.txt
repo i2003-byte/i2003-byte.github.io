@@ -27,8 +27,11 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Distance and Displacement](https://i2003-byte.github.io/physics/distance-displacement/): Walk to school, round a park or along a circular track and compare the path length (distance) with the straight arrow from start to finish (displacement). Draw your own path too. (Beginner)
 - [Velocity–Time Graph: Area = Distance](https://i2003-byte.github.io/physics/velocity-time-graph/): Drive a metro train or a car through speeding up, steady running and braking. Read acceleration from the slope of the v–t graph and distance from the area under it. (Intermediate)
 - [Uniform Circular Motion](https://i2003-byte.github.io/physics/circular-motion/): Whirl a stone on a string: the speed stays the same but the velocity arrow keeps turning along the tangent. Find v = 2πr ÷ T, then cut the string and watch it fly off straight. (Beginner)
+- [Inertia: Coin on a Card](https://i2003-byte.github.io/physics/inertia-coin-card/): Flick a card from under a coin sitting on a glass. A quick flick leaves the coin behind to drop in; a slow pull drags it along. See Newton’s first law in slow motion. (Beginner)
+- [Newton's Second Law: F = ma Cart Lab](https://i2003-byte.github.io/physics/newtons-second-law/): Pull a cart with a steady force, load it with bricks and change the track. A ticker tape and a speed graph show that acceleration = net force ÷ mass. (Beginner)
+- [Action and Reaction: Balloon Rocket](https://i2003-byte.github.io/physics/balloon-rocket/): Release a balloon on a string: it pushes air back and the air pushes it forward with an equal force. Compare the momentum of the balloon and of the air it throws out. (Beginner)
+- [Collisions and Momentum](https://i2003-byte.github.io/physics/collisions/): Crash two carts on a smooth track, bouncy, partly bouncy or sticky. Bars show that total momentum is always conserved, while kinetic energy is kept only in elastic collisions. (Intermediate)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
-- [Collisions](https://i2003-byte.github.io/physics/): Smash carts together and compare elastic and inelastic collisions. Is momentum always conserved? (Intermediate, coming soon)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
 
 ### Sound Lab

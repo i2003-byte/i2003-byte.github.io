@@ -98,7 +98,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 
 ## Current content (update when it changes)
 - **Physics (live):**
-  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area, balanced-forces, liquid-pressure; Class 8 Friction: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants; Class 9 Motion: distance-displacement, velocity-time-graph, circular-motion
+  - branch `mechanics`: projectile, pendulum; Class 7 Motion and time: speed-race, distance-time-graph, pendulum-clock; Class 8 Force and pressure: pressure-area, balanced-forces, liquid-pressure; Class 8 Friction: friction-surfaces, rolling-vs-sliding, ball-bearings-lubricants; Class 9 Motion: distance-displacement, velocity-time-graph, circular-motion; Class 9 Force and laws of motion: inertia-coin-card, newtons-second-law, balloon-rocket, collisions
   - branch `optics` (Class 7 Light): pinhole-camera, plane-mirror, newtons-disc
   - branch `electricity`: Class 7 Electric current and its effects: electric-circuit, heating-fuse, electromagnet; Class 8 Some natural phenomena: charging-by-rubbing, electroscope, lightning-conductor
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
@@ -106,7 +106,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
 - **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve, supply-equilibrium, price-controls. Branch `money` is empty so far.
 - **Computer Science (live):** branch `data` (Class 11 Numbers and logic): binary-counter; branch `logic`: logic-gates; branch `algorithms`: sorting-race.
-- **Coming soon (catalog placeholders):** spring-mass, collisions, wave-interference, planetary-orbits, ray-optics, electric-fields.
+- **Coming soon (catalog placeholders):** spring-mass, wave-interference, planetary-orbits, ray-optics, electric-fields.
 - **Subjects coming soon:** chemistry, mathematics, biology, astronomy (their folders exist).
 
 ## Gotchas

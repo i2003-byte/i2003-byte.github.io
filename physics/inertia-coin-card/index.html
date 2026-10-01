@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Inertia: Coin on a Card — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Flick a card from under a coin on a glass. A quick flick leaves the coin behind to drop in; a slow pull drags it along. See Newton&#x27;s first law and why mass does not matter here.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/inertia-coin-card/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Inertia: Coin on a Card — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Flick a card from under a coin on a glass. A quick flick leaves the coin behind to drop in; a slow pull drags it along. See Newton&#x27;s first law and why mass does not matter here.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/inertia-coin-card/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="inertia-coin-card">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every object resists a change in its state of rest or motion. This "laziness" is called <strong>inertia</strong>, and Newton's <strong>first law of motion</strong> says it plainly: an object stays at rest, or keeps moving in a straight line at a steady speed, unless an unbalanced force acts on it. The coin on the card is at rest. The only sideways force that can move it is <strong>friction</strong> from the card, and friction can give it only a small acceleration (at most μg, about 3 m/s² for a coin on card). If you flick the card fast, it is pulled out from under the coin in a few thousandths of a second. In that short time friction moves the coin by less than a millimetre, so the coin stays where it was and simply drops into the glass. If you pull slowly, friction has plenty of time to bring the coin up to the card's speed, and the coin rides away with the card.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">largest acceleration friction can give: a = μ g   (coin: 0.3 × 9.8 ≈ 2.9 m/s²)</code>
+            <code class="formula">card slides L/2 under the coin when  v t − ½ μ g t² = L/2</code>
+            <code class="formula">this has an answer only if  v &gt; √(μ g L)   (coin, L = 10 cm: v &gt; 0.54 m/s)</code>
+            <code class="formula">quick flick v = 2 m/s: t ≈ 25 ms, coin moves ½ × 2.9 × 0.025² ≈ 0.9 mm</code>
+            <ul>
+              <li>The mass of the coin does not appear in these formulas. A heavier stack has more inertia, but it also presses harder, so friction is bigger in the same proportion. Try the stack slider.</li>
+              <li>A grippier object (bigger μ) needs a faster flick; a slippery one stays behind even with a gentle flick.</li>
+            </ul>
+            <p>Simplification: the card shoots off at a steady speed right after the flick (the finger's push is treated as instant), the object starts at the middle of the card, and the same μ is used for sliding and for gripping. The scene runs in slow motion; the clock and the graph show real time.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>When a bus starts suddenly, standing passengers fall backwards: their feet move with the bus, but the upper body tends to stay at rest.</li>
+              <li>When the bus brakes hard, passengers lurch forward because their bodies tend to keep moving. Seat belts provide the force that stops you.</li>
+              <li>Beating a carpet or a durrie with a stick makes the carpet move suddenly; the dust stays behind and falls out.</li>
+              <li>A magician pulls a tablecloth quickly from under plates and glasses. Same trick as the coin and the card, done fast and with smooth cloth.</li>
+              <li>Shaking a wet umbrella or a mango tree branch: the branch moves suddenly, the drops and ripe fruit keep their state and fly off.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Use the "Slow pull" preset. Where does the coin end up, and why?<details><summary>Show answer</summary>It moves away with the card and falls off the side of the glass with it. At 0.3 m/s the card is slower than the 0.54 m/s needed, so friction brings the coin up to the card's speed before the card's edge reaches it.</details></li>
+              <li>Find the slowest flick that still drops the coin into the glass.<details><summary>Show answer</summary>Just above about 0.56 m/s. Between about 0.54 and 0.56 m/s the card does leave the coin behind, but only after dragging it about 3 cm, so it misses the mouth of the glass.</details></li>
+              <li>Change the stack from 1 coin to 5 coins with the same flick. Does anything change?<details><summary>Show answer</summary>No. Five coins have five times the inertia, but they also press five times harder, so friction is five times bigger. The acceleration μg stays the same, so the motion is the same.</details></li>
+              <li>Swap the coin for the rubber eraser at 0.65 m/s. What happens and why?<details><summary>Show answer</summary>It is dragged along. Rubber grips the card (μ ≈ 0.7), so friction can accelerate it at about 6.9 m/s², and it needs a flick faster than √(0.7 × 9.8 × 0.1) ≈ 0.83 m/s.</details></li>
+              <li>Watch the graph for a quick flick. Why does the coin's line rise only a little?<details><summary>Show answer</summary>Its slope is the friction acceleration μg, which is small, and the card is under the coin for only about 25 ms. So the coin reaches only about 0.07 m/s before the card is gone. Then it falls straight down into the glass.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Inertia:</strong> the tendency of an object to keep its state of rest or of uniform motion. Mass is the measure of inertia.</li>
+              <li><strong>Newton's first law:</strong> an object stays at rest or in uniform straight-line motion unless an unbalanced force acts on it.</li>
+              <li><strong>Coefficient of friction μ:</strong> a number for how grippy two surfaces are; friction can be at most μ × weight.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

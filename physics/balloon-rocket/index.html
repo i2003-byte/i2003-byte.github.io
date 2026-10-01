@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Action and Reaction: Balloon Rocket — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Release a balloon taped to a straw on a string. Air is pushed back, the balloon is pushed forward with an equal force. Compare momentum bars and see Newton&#x27;s third law at work.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/balloon-rocket/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Action and Reaction: Balloon Rocket — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Release a balloon taped to a straw on a string. Air is pushed back, the balloon is pushed forward with an equal force. Compare momentum bars and see Newton&#x27;s third law at work.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/balloon-rocket/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="balloon-rocket">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Newton's <strong>third law of motion</strong>: whenever one object pushes on another, the second pushes back on the first with a force of the <strong>same size</strong> in the <strong>opposite direction</strong>. The stretched rubber of the balloon squeezes the air and pushes it out of the neck backwards (the <strong>action</strong>). At the same moment the air pushes the balloon forwards (the <strong>reaction</strong>). The two forces act on <em>different</em> objects, so they do not cancel: the air rushes one way and the balloon moves the other way. Because the forces are equal and act for the same time, the air and the balloon get equal and opposite momentum. In the ideal case (no drag, no friction) the momentum bars stay exactly equal, so the total momentum stays zero, just as it was before release. This is how rockets and jet engines work.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">force on balloon = − force on air   (equal size, opposite direction)</code>
+            <code class="formula">air thrown out per second  ṁ = ρ × (area of neck) × u</code>
+            <code class="formula">push (thrust)  F = ṁ × u      neck 5 mm, u = 30 m/s: ṁ ≈ 2.8 g/s, F ≈ 0.085 N</code>
+            <code class="formula">ideal: momentum of balloon forward = momentum of air backward (total stays 0)</code>
+            <ul>
+              <li>4 L of air has a mass of about 4.8 g, so the balloon (5 g of rubber, straw and tape) more than doubles its mass when blown up.</li>
+              <li>With drag and friction switched on, some momentum goes to the room's air and the string, so the balloon ends up with much less than the jet.</li>
+            </ul>
+            <p>Simplification: air leaves at a steady 30 m/s relative to the balloon until it is empty, its density is taken as 1.2 g per litre, the balloon is treated as a sphere for air drag, and the straw rubs on the string with a small fixed force. Real balloons push harder when nearly empty and wobble about. The balloon is drawn bigger than the scale of the string.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>ISRO's rockets (PSLV, GSLV, LVM3) throw hot gas downwards at about 2–4 km/s; the gas pushes the rocket up. No air is needed to push against, which is why rockets work in space.</li>
+              <li>When you jump from a boat to the bank, the boat moves backwards.</li>
+              <li>A gun or a Diwali cracker launcher recoils (kicks back) when it fires.</li>
+              <li>When you swim, you push the water backwards and the water pushes you forwards.</li>
+              <li>A garden hose or a fire hose jerks backwards when water spurts out fast.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Look at the two force arrows while the air is rushing out. How do they compare?<details><summary>Show answer</summary>They are always the same length and point in opposite directions: the push of the balloon on the air equals the push of the air on the balloon. One acts on the air, the other on the balloon.</details></li>
+              <li>Switch on "Ideal" and compare the two momentum lines on the graph.<details><summary>Show answer</summary>They lie exactly on top of each other. The balloon gains forward momentum at exactly the rate the air gains backward momentum, so the total stays zero.</details></li>
+              <li>With drag on, try 1 L of air with the balloon neck. Does it reach the end of the 5 m string?<details><summary>Show answer</summary>No. It runs out of air after about 0.4 s and air drag and friction stop it after about 3.5 m.</details></li>
+              <li>Compare the narrow straw and the wide tube with 4 L of air. Which gives the bigger push, and why?<details><summary>Show answer</summary>The wide tube. More air leaves every second, so the thrust F = ṁ u is about 5 times bigger than the straw's (7² ÷ 3² ≈ 5.4). But the air runs out sooner.</details></li>
+              <li>Why is 6 L not faster than 4 L at the end of the string?<details><summary>Show answer</summary>The push is the same, but the extra air makes the balloon heavier and bigger. A heavier balloon speeds up less (F = m a) and a bigger one feels more air drag.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Action and reaction:</strong> the pair of equal and opposite forces two objects exert on each other.</li>
+              <li><strong>Thrust:</strong> the forward push on a rocket or jet from the gas it throws backwards.</li>
+              <li><strong>Conservation of momentum:</strong> when no outside force acts, the total momentum of a system stays the same.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Collisions and Momentum — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Crash two carts on a smooth track: bouncy, partly bouncy or sticky. Bars show that total momentum is always conserved, while kinetic energy is kept only in elastic collisions.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/collisions/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Collisions and Momentum — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Crash two carts on a smooth track: bouncy, partly bouncy or sticky. Bars show that total momentum is always conserved, while kinetic energy is kept only in elastic collisions.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/collisions/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="collisions">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Momentum</strong> is mass × velocity. It has a direction: here, motion to the right counts as positive and motion to the left as negative. When two carts collide, each pushes the other with an equal and opposite force for the same short time (Newton's third law). So whatever momentum A loses, B gains. The <strong>total momentum</strong> after the collision is exactly the same as before. This is the <strong>law of conservation of momentum</strong>, and it holds for every collision, bouncy or sticky, as long as no outside force (like friction) acts. <strong>Kinetic energy</strong> is a different story: in an <strong>elastic</strong> collision it is kept, but in an <strong>inelastic</strong> one some of it becomes heat, sound and a dent. When the carts stick together, the largest possible share is lost.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">momentum p = m v       (kg·m/s, direction matters)</code>
+            <code class="formula">m_A u_A + m_B u_B = m_A v_A + m_B v_B    (total before = total after)</code>
+            <code class="formula">kinetic energy KE = ½ m v²    (kept only in an elastic collision)</code>
+            <code class="formula">stuck together:  v = (m_A u_A + m_B u_B) ÷ (m_A + m_B)</code>
+            <code class="formula">impulse on A = m_A (v_A − u_A) = − impulse on B</code>
+            <ul>
+              <li>u stands for the velocity before and v for the velocity after the collision.</li>
+              <li>The "e" in the menu (coefficient of restitution) is the speed at which the carts separate divided by the speed at which they approached: 1 for perfectly bouncy, 0 for stuck together.</li>
+            </ul>
+            <p>Simplification: the track is perfectly smooth and level, the collision happens in an instant, and the carts move only along the track.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Indian Railways wagons couple when one rolls into another and the couplers lock; the pair then rolls on more slowly together.</li>
+              <li>On a carrom board, a striker hitting a coin of similar mass head-on stops and the coin moves off: nearly the "equal carts" case.</li>
+              <li>In a road accident, crumple zones of a car make the collision inelastic on purpose, turning kinetic energy into bending metal instead of injuring people.</li>
+              <li>Snooker and billiard balls collide almost elastically; a cricket ball hitting the bat is partly elastic.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press "Equal carts, B at rest". What happens to A and B?<details><summary>Show answer</summary>A stops dead and B moves off at 2 m/s, A's old velocity. In an elastic collision between equal masses the velocities are swapped.</details></li>
+              <li>Press "Light hits heavy". Why does A bounce backwards?<details><summary>Show answer</summary>B is 4 times heavier. To keep the total momentum at 2 kg·m/s and the energy at 2 J, B moves off at 0.8 m/s (3.2 kg·m/s), so A must have −1.2 kg·m/s: it rebounds at 1.2 m/s.</details></li>
+              <li>Press "Railway wagons couple". What fraction of the kinetic energy is lost?<details><summary>Show answer</summary>Half. The joined wagons move at 0.5 m/s (momentum 4 kg·m/s is kept), so KE drops from 2 J to 1 J.</details></li>
+              <li>Press "Head-on, stick together". The carts had 4.5 J of kinetic energy. Where did the momentum go?<details><summary>Show answer</summary>Nowhere: the total momentum was zero before (+3 and −3 kg·m/s) and it is zero after, when both carts stop. All the kinetic energy became heat and sound.</details></li>
+              <li>A 50 g bullet at 400 m/s hits and sticks in a 4.95 kg wooden block at rest. How fast does the block move?<details><summary>Show answer</summary>Total momentum = 0.05 × 400 = 20 kg·m/s. After, the mass is 5 kg, so v = 20 ÷ 5 = 4 m/s.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Momentum:</strong> mass × velocity, with direction.</li>
+              <li><strong>Elastic collision:</strong> both momentum and kinetic energy are conserved.</li>
+              <li><strong>Inelastic collision:</strong> momentum is conserved but some kinetic energy turns into other forms.</li>
+              <li><strong>Impulse:</strong> force × time = change in momentum.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

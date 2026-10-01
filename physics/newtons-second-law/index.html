@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Newton's Second Law: F = ma Cart Lab — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Pull a cart with a steady force, load it with bricks and change the track. The ticker tape and speed graph show a = F ÷ m: more force, more acceleration; more mass, less.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/newtons-second-law/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Newton's Second Law: F = ma Cart Lab — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Pull a cart with a steady force, load it with bricks and change the track. The ticker tape and speed graph show a = F ÷ m: more force, more acceleration; more mass, less.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/newtons-second-law/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="newtons-second-law">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Newton's <strong>second law of motion</strong> tells you how much an object speeds up when an unbalanced force acts on it: the <strong>acceleration</strong> is bigger when the net force is bigger, and smaller when the mass is bigger. In one line, <strong>F = m a</strong>. Here a spring balance pulls a cart with a steady force. Friction from the track pulls back, so only the difference, the <strong>net force</strong>, speeds the cart up. A ticker-timer marks the paper tape every 0.2 s. Because the cart goes a little faster in each interval, the gaps between the dots keep growing by the same amount: that is what uniform acceleration looks like on paper.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">net force  F_net = F − f ,   friction f = μ m g</code>
+            <code class="formula">acceleration  a = F_net ÷ m      (1 N = 1 kg × 1 m/s²)</code>
+            <code class="formula">from rest:  v = a t ,   s = ½ a t² ,   momentum p = m v</code>
+            <code class="formula">F = 6 N, m = 2 kg, no friction: a = 3 m/s², after 1 s v = 3 m/s and s = 1.5 m</code>
+            <ul>
+              <li>Double the force with the same mass: the acceleration doubles.</li>
+              <li>Double the mass with the same force: the acceleration halves.</li>
+              <li>The momentum form of the law: force = rate of change of momentum. With a steady force, p grows by F every second.</li>
+              <li>On the tape, each gap is longer than the one before by a × (0.2 s)².</li>
+            </ul>
+            <p>Simplification: the pull stays exactly the same all the way, the wheels' own turning and air drag are ignored, and friction is a fixed μ m g once the cart is moving (the same value decides whether it can start).</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>An empty luggage trolley at a railway station speeds up easily; the same push on a fully loaded one hardly gets it going.</li>
+              <li>A loaded truck needs a much bigger engine force than a scooter to pick up speed at the same rate.</li>
+              <li>A fast bowler's long run-up and a hard push give the ball a big change in momentum; a fielder pulls the hands back while catching so the ball's momentum is removed over a longer time, with a smaller force.</li>
+              <li>Pushing a stalled car: at first nothing happens until your push beats friction, then it starts to roll and keeps speeding up while you push.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>On the air track, run F = 6 N with a 2 kg cart, then with a 4 kg cart. Compare the two tapes.<details><summary>Show answer</summary>The acceleration drops from 3 m/s² to 1.5 m/s². The second tape's dots are closer together, and the cart takes √2 ≈ 1.4 times as long to reach the end.</details></li>
+              <li>Keep m = 2 kg and pull with 3 N, then 12 N. How do the accelerations compare?<details><summary>Show answer</summary>1.5 m/s² and 6 m/s²: four times the force gives four times the acceleration.</details></li>
+              <li>Choose the rough floor with a 6 kg cart and pull with 8 N. Why does nothing move?<details><summary>Show answer</summary>Friction can be as big as μ m g = 0.15 × 6 × 9.8 ≈ 8.8 N. Your 8 N pull is less than that, so the forces balance and the net force is zero. Pull with 12 N and the net force is 3.2 N, so a ≈ 0.53 m/s².</details></li>
+              <li>A 1500 kg car speeds up from 0 to 20 m/s in 10 s. What net force does it need?<details><summary>Show answer</summary>a = 20 ÷ 10 = 2 m/s², so F = m a = 1500 × 2 = 3000 N.</details></li>
+              <li>Look at the momentum readout on the air track with F = 6 N. How much does it grow every second?<details><summary>Show answer</summary>6 kg·m/s every second, whatever the mass, because force equals the rate of change of momentum.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Net (unbalanced) force:</strong> what is left when all the forces on an object are added, taking direction into account.</li>
+              <li><strong>Newton (N):</strong> the force that gives a 1 kg mass an acceleration of 1 m/s².</li>
+              <li><strong>Momentum:</strong> mass × velocity; a measure of how much motion an object has.</li>
+              <li><strong>Ticker-timer:</strong> a device that marks dots on a moving paper tape at equal time intervals.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
