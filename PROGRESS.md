@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-02 · request · Weekly capabilities
+- Built/changed: new 🧩 Capabilities list in `ROADMAP.md` (8 starter ideas: quizzes, printable worksheet, embed, offline, keyboard shortcuts, class filter, teacher guide, accessibility pass); `site-maintenance` skill step 5b (after a fully green maintenance, build ONE capability per week, separate commit, all-pages browser test, drop it if it fails); AGENTS.md roadmap workflow note. Tag `before-capabilities` marks the site just before this.
+- Checks: ✅ check.mjs passed
+- Roadmap: unchanged for simulations
+- Next time: daily runs as usual (they never take capability items); the next weekly run builds "Check your understanding"
+- Problems/notes: capabilities with outside services, tracking, data collection, accounts, ads, redesigns or removals go to 💡 Proposed for a human
+
 ## 2026-10-02 · routine · Class 9 · Physics · Work, energy and power (finished) + Class 10 · Light: reflection and refraction (part 1)
 - Built/changed: `physics/energy-roller-coaster` (cart released from 5–40 m on a track with an 18 m hump; arc-length dynamics with speed corrected from the energy total; PE / KE / heat / total bars and graph, no / low / high friction, "start height" and "highest it can now reach" lines, cart settles in a valley with friction), `physics/power-race` (walker, runner and motor lift raise the same mass the same height; W = m g h, P = W ÷ t bars, work–time graph whose slope is power, hp, and a 1 h/day × 30 days kWh and ₹ bill line), `physics/ray-optics` (built out the placeholder as "Spherical Mirrors: Ray Diagrams": concave/convex, drag the object, P/F/C, three standard rays plus optional pole ray, mirror formula with New Cartesian signs, nature and position of the image, buttons for each textbook object position), `physics/refraction-glass-slab` (water / acrylic / crown glass / dense flint / diamond slab, drag the ray, i, r, e arcs, lateral shift, speed c ÷ n, record readings onto a sin i vs sin r chart whose slope is n); 3 new thumbnails and a new mirror thumbnail for ray-optics, catalog, README, AGENTS, ROADMAP. `common.js`: graph series can now use any CSS colour variable (e.g. `--danger`), not only `--sim-1..4`
 - Feedback: no open issues

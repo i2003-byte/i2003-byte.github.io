@@ -1,11 +1,11 @@
 ---
 name: site-maintenance
-description: Weekly SimLab health check and repair. Run all checks and browser tests, fix regressions, unstick the roadmap, tidy tracking files, record lessons learned. Use for the weekly maintenance routine or when asked to "check the site" or "do maintenance".
+description: Weekly SimLab health check and repair. Run all checks and browser tests, fix regressions, unstick the roadmap, tidy tracking files, record lessons learned, then add one site capability from the roadmap. Use for the weekly maintenance routine or when asked to "check the site" or "do maintenance".
 ---
 
 # Weekly site maintenance
 
-Goal: keep the site healthy and the harness accurate, so the daily builders keep working unattended. Build **no new simulations** in this run. Fix and tidy only.
+Goal: keep the site healthy and the harness accurate, so the daily builders keep working unattended. Build **no new simulations** in this run. Fix and tidy first; then, only if everything is green, add **one** site capability (step 5b).
 
 ## 0. Start from the latest `main`
 ```bash
@@ -46,12 +46,25 @@ Run `.claude/skills/feedback-triage/SKILL.md` to catch anything the daily runs m
 - `PROGRESS.md`: keep the latest ~30 entries and delete older ones (git history keeps them).
 - Remove stray files (screenshots, temp files) accidentally committed.
 
+## 5b. One new capability (only if steps 1–5 ended fully green)
+Capabilities are site features beyond new simulations (see `ROADMAP.md` → 🧩 Capabilities).
+1. **Commit the maintenance work first** (separate commit), so the capability can be undone on its own.
+2. **Review and refresh the list.** From this week's feedback, the screenshot review and anything you noticed, add or reorder ideas. Keep about 8 items.
+   - **Auto-approved:** additive or opt-in features that work on every page without changing how existing simulations behave, use only plain HTML/CSS/JS, and add no outside services.
+   - **Never auto-approved** (put in 💡 Proposed with a reason): outside services or scripts, analytics or tracking, accounts or logins, collecting any visitor data, ads or payments, a visual redesign, removing or renaming existing features, changing the engine's existing API.
+3. **Build the top item only.** One per week, however small. If it is too big for one run, build a working first part that ships safely and leave a "Next:" note on the item.
+   - Shared code (`common.js`, `nav.js`, `style.css`) affects every page: keep changes small, opt-in, and backward compatible.
+   - Update `_template/`, the `add-simulation` skill and `AGENTS.md` (cheat-sheet, Where things are) if daily builders must use or know the feature.
+4. **Prove it didn't break anything:** `node tools/check.mjs --write` and `node tools/browser-test.mjs` on **all pages**, phone and desktop, plus a screenshot of 3 pages showing the feature.
+5. **If anything fails and you can't fix it safely, drop the capability** (`git reset --hard` to the maintenance commit), leave the item in the list with a note, and write **NEEDS HUMAN** in `PROGRESS.md`. Never push a half-working capability.
+6. Commit it separately: `Add capability: <name>`. Move the item to ✅ Done (under a "Capabilities" line).
+
 ## 6. Ship and log
-1. Add a `PROGRESS.md` entry at the top: kind `maintenance`, listing what was checked, fixed, learned, and anything a human should look at.
+1. Add a `PROGRESS.md` entry at the top: kind `maintenance`, listing what was checked, fixed, learned, the capability added (or why none), and anything a human should look at.
 2. Push:
 ```bash
 node tools/check.mjs --write
-git add -A && git commit -m "Weekly maintenance: <short summary>"
+git add -A && git commit -m "Weekly maintenance: log"   # only if anything is left uncommitted
 git push origin HEAD:main
 ```
 Never bypass the pre-push hook. If something can't be fixed safely, don't push a risky change. Describe it in `PROGRESS.md` under "Problems/notes" with **NEEDS HUMAN**, so the owner sees it.

@@ -52,6 +52,9 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Anything else goes to 💡 Proposed.
 - Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
 - **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, tidy, and record lessons.
+  - Then, only if all green, it builds **one** site capability per week from `ROADMAP.md` → 🧩 Capabilities (quizzes, worksheets, offline, embeds…).
+  - Capabilities must be additive and plain HTML/CSS/JS. Outside services, tracking, data collection, accounts, ads, redesigns or removals go to 💡 Proposed for a human.
+  - Daily runs build simulations only; they never take capability items.
 - **Learn from mistakes:** whenever you fix a non-obvious bug or a blocked push, add a one-line lesson to **Gotchas** below. Keep it at about 20 lines or fewer.
 - **Visitor feedback** arrives as GitHub Issues (the feedback box on every simulation page).
   - Runs triage it with `.claude/skills/feedback-triage/SKILL.md` and log decisions in `FEEDBACK.md`.
