@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-02 · request · Capabilities chosen weekly, no fixed list
+- Built/changed: removed the starter list from `ROADMAP.md` → 🧩 Capabilities (now a log of done/skipped ideas); `site-maintenance` step 5b picks one idea fresh each week and skips anything costly, disruptive or platform-heavy (adding none is fine); AGENTS.md note updated
+- Checks: ✅ check.mjs passed
+- Roadmap: unchanged for simulations
+- Next time: weekly run follows the new step 5b
+- Problems/notes: none
+
 ## 2026-10-02 · request · Weekly capabilities
 - Built/changed: new 🧩 Capabilities list in `ROADMAP.md` (8 starter ideas: quizzes, printable worksheet, embed, offline, keyboard shortcuts, class filter, teacher guide, accessibility pass); `site-maintenance` skill step 5b (after a fully green maintenance, build ONE capability per week, separate commit, all-pages browser test, drop it if it fails); AGENTS.md roadmap workflow note. Branch `before-capabilities` keeps the site exactly as it was just before this (download: /archive/refs/heads/before-capabilities.zip).
 - Checks: ✅ check.mjs passed

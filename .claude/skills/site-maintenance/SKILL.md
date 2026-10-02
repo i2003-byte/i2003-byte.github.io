@@ -1,6 +1,6 @@
 ---
 name: site-maintenance
-description: Weekly SimLab health check and repair. Run all checks and browser tests, fix regressions, unstick the roadmap, tidy tracking files, record lessons learned, then add one site capability from the roadmap. Use for the weekly maintenance routine or when asked to "check the site" or "do maintenance".
+description: Weekly SimLab health check and repair. Run all checks and browser tests, fix regressions, unstick the roadmap, tidy tracking files, record lessons learned, then add one well-chosen site capability (or none). Use for the weekly maintenance routine or when asked to "check the site" or "do maintenance".
 ---
 
 # Weekly site maintenance
@@ -47,17 +47,20 @@ Run `.claude/skills/feedback-triage/SKILL.md` to catch anything the daily runs m
 - Remove stray files (screenshots, temp files) accidentally committed.
 
 ## 5b. One new capability (only if steps 1–5 ended fully green)
-Capabilities are site features beyond new simulations (see `ROADMAP.md` → 🧩 Capabilities).
+Capabilities are site features beyond new simulations. There is **no fixed list**: choose one fresh each week.
 1. **Commit the maintenance work first** (separate commit), so the capability can be undone on its own.
-2. **Review and refresh the list.** From this week's feedback, the screenshot review and anything you noticed, add or reorder ideas. Keep about 8 items.
-   - **Auto-approved:** additive or opt-in features that work on every page without changing how existing simulations behave, use only plain HTML/CSS/JS, and add no outside services.
-   - **Never auto-approved** (put in 💡 Proposed with a reason): outside services or scripts, analytics or tracking, accounts or logins, collecting any visitor data, ads or payments, a visual redesign, removing or renaming existing features, changing the engine's existing API.
-3. **Build the top item only.** One per week, however small. If it is too big for one run, build a working first part that ships safely and leave a "Next:" note on the item.
-   - Shared code (`common.js`, `nav.js`, `style.css`) affects every page: keep changes small, opt-in, and backward compatible.
-   - Update `_template/`, the `add-simulation` skill and `AGENTS.md` (cheat-sheet, Where things are) if daily builders must use or know the feature.
-4. **Prove it didn't break anything:** `node tools/check.mjs --write` and `node tools/browser-test.mjs` on **all pages**, phone and desktop, plus a screenshot of 3 pages showing the feature.
-5. **If anything fails and you can't fix it safely, drop the capability** (`git reset --hard` to the maintenance commit), leave the item in the list with a note, and write **NEEDS HUMAN** in `PROGRESS.md`. Never push a half-working capability.
-6. Commit it separately: `Add capability: <name>`. Move the item to ✅ Done (under a "Capabilities" line).
+2. **Find candidates** from this week's feedback, the screenshot review, gaps you noticed while checking pages, and what would most help Class 7–12 students and teachers. Read `ROADMAP.md` → 🧩 Capabilities first so you don't repeat a done or skipped idea.
+3. **Qualify each candidate. Skip it if any answer is "yes":**
+   - **Too costly:** would it take a large share of this run, touch many simulation files one by one, or need ongoing per-simulation work from the daily builders?
+   - **Disruptive:** could it change how existing simulations look or behave, break share links, move or rename things, or need a redesign?
+   - **Platform-heavy:** does it need a framework, build step, server, outside service or script, accounts, tracking or data collection, ads or payments, or a change to the engine's existing API?
+   - **Low value:** is it nice-to-have rather than something students or teachers would notice and use?
+   Pick the best candidate that passes. If none passes, add none this week and say so in `PROGRESS.md`. That is a fine outcome.
+   Ideas that are valuable but fail only the platform test go to 💡 Proposed with a one-line reason, for a human.
+4. **Build it** small, additive and backward compatible: plain HTML/CSS/JS, mostly in shared code (`common.js`, `nav.js`, `style.css`) so every page gets it at once. Update `_template/`, the `add-simulation` skill and `AGENTS.md` only if daily builders must know about it.
+5. **Prove it didn't break anything:** `node tools/check.mjs --write` and `node tools/browser-test.mjs` on **all pages**, phone and desktop, plus a screenshot of 3 pages showing the feature.
+6. **If anything fails and you can't fix it safely, drop it** (`git reset --hard` to the maintenance commit), log it as skipped with the reason, and write **NEEDS HUMAN** in `PROGRESS.md` if a person should look. Never push a half-working capability.
+7. Commit it separately: `Add capability: <name>`. Log it in `ROADMAP.md` → 🧩 Capabilities (done or skipped, with date and one line).
 
 ## 6. Ship and log
 1. Add a `PROGRESS.md` entry at the top: kind `maintenance`, listing what was checked, fixed, learned, the capability added (or why none), and anything a human should look at.

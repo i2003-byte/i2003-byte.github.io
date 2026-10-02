@@ -49,16 +49,9 @@
 ## 💡 Proposed (needs a human decision; only for ideas outside the Class 7–12 India syllabus)
 _None yet._
 
-## 🧩 Capabilities (site features beyond new simulations; the weekly maintenance run builds ONE per week, from the top)
-<!-- Format: - [ ] **Name.** What it adds and why. Touches: <files>. Auto-approved: additive, opt-in or per-page, no outside services, no data collection. Anything else goes to 💡 Proposed. -->
-- [ ] **Check your understanding.** 3–4 multiple-choice questions at the end of each Learn panel with instant feedback and a short explanation; questions live in the page HTML, a small shared script in `common.js` handles them. Start with the 10 most-visited-looking simulations (featured ones), then the daily builder adds questions to every new simulation. Touches: `common.js`, `style.css`, `_template/index.html`, add-simulation skill.
-- [ ] **Printable worksheet.** A "🖨 Print worksheet" button that prints the Learn panel, the current canvas picture, the readouts and blank answer lines (print stylesheet only, nothing new to maintain per page). Touches: `common.js`, `style.css`.
-- [ ] **Embed for teachers.** "Embed" in the share menu gives an `<iframe>` code; `?embed=1` hides the header, footer and Learn panel so the simulation fits a school website or slide. Touches: `common.js`, `nav.js`, `style.css`.
-- [ ] **Works offline.** A service worker that caches pages already visited, so a simulation opened once still works in a classroom with no internet. Network first for HTML so updates still arrive. Touches: new `sw.js`, `nav.js`, check.mjs (cache list sanity).
-- [ ] **Keyboard shortcuts.** Space = play/pause, R = reset, F = fullscreen, ? = shortcut help; ignored while typing in a field. Touches: `common.js`.
-- [ ] **Search and filter by class.** Class 7–12 chips on `/simulations/` and in search results, using each simulation's `level`. Touches: `subject.js`, `nav.js`.
-- [ ] **Teacher guide per subject.** One page per subject listing simulations by class and chapter with a one-line classroom activity each, generated from the catalog. Touches: `subject.js`, new section on subject pages.
-- [ ] **Accessibility pass.** Text alternative for each canvas state (live region describing key readouts), larger-text check at 200 % zoom, colour-blind-safe check of `--sim-1..4`. Touches: `common.js`, `style.css`.
+## 🧩 Capabilities (site features beyond new simulations; chosen fresh by each weekly maintenance run, ONE per week)
+<!-- No fixed list. Each weekly run picks one idea and logs it here as Done or Skipped (with the reason). Format: - [x] **Name** (YYYY-MM-DD). What it adds. | - [ ] skipped: **Name**. Reason. -->
+_None yet._
 
 ## ✅ Done
 - [x] **Class 9 · Physics · Work, energy and power.** 3 sims: work-done, energy-roller-coaster, power-race. Done 2026-10-02.
