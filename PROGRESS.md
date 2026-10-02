@@ -14,7 +14,7 @@
 -->
 
 ## 2026-10-02 · request · Weekly capabilities
-- Built/changed: new 🧩 Capabilities list in `ROADMAP.md` (8 starter ideas: quizzes, printable worksheet, embed, offline, keyboard shortcuts, class filter, teacher guide, accessibility pass); `site-maintenance` skill step 5b (after a fully green maintenance, build ONE capability per week, separate commit, all-pages browser test, drop it if it fails); AGENTS.md roadmap workflow note. Tag `before-capabilities` marks the site just before this.
+- Built/changed: new 🧩 Capabilities list in `ROADMAP.md` (8 starter ideas: quizzes, printable worksheet, embed, offline, keyboard shortcuts, class filter, teacher guide, accessibility pass); `site-maintenance` skill step 5b (after a fully green maintenance, build ONE capability per week, separate commit, all-pages browser test, drop it if it fails); AGENTS.md roadmap workflow note. Branch `before-capabilities` keeps the site exactly as it was just before this (download: /archive/refs/heads/before-capabilities.zip).
 - Checks: ✅ check.mjs passed
 - Roadmap: unchanged for simulations
 - Next time: daily runs as usual (they never take capability items); the next weekly run builds "Check your understanding"
