@@ -280,7 +280,7 @@
     ctx.beginPath(); ctx.rect(pad.l, pad.t, pw, ph); ctx.clip();
     var colors = [c.s1, c.s2, c.s3, c.s4];
     (o.series || [{}]).forEach(function (s, i) {
-      ctx.strokeStyle = s.color ? (c[s.color] || s.color) : colors[i % 4];
+      ctx.strokeStyle = s.color ? (c[s.color] || (s.color.indexOf('--') === 0 ? getComputedStyle(document.body).getPropertyValue(s.color).trim() : s.color)) : colors[i % 4];
       ctx.lineWidth = 2; ctx.lineJoin = 'round';
       ctx.beginPath();
       var started = false;

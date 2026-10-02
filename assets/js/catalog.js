@@ -1197,6 +1197,71 @@ SimLab.simulations = [
     prerequisites: ['newtons-second-law']
   },
 
+  {
+    id: 'energy-roller-coaster',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Roller Coaster: Potential and Kinetic Energy',
+    description:
+      'Release a cart from any height and watch PE turn into KE and back. Live energy bars show the total staying constant, and friction turning some of it into heat.',
+    level: 'Beginner',
+    tags: ['energy', 'potential energy', 'kinetic energy', 'conservation of energy', 'roller coaster', 'friction', 'heat', 'work energy and power', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/energy-roller-coaster.svg',
+    link: '/physics/energy-roller-coaster/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['work-done']
+  },
+  {
+    id: 'power-race',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Power Race: Same Work, Different Time',
+    description:
+      'A walker, a runner and a motor lift raise the same mass up the same height. Same work, different power: P = W ÷ t in watts and horsepower, plus kWh and the electricity bill in ₹.',
+    level: 'Beginner',
+    tags: ['power', 'watt', 'horsepower', 'kilowatt hour', 'kwh', 'electricity bill', 'work', 'work energy and power', 'class 9'],
+    thumbnail: '/assets/img/thumbs/power-race.svg',
+    link: '/physics/power-race/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['work-done']
+  },
+  {
+    id: 'ray-optics',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Spherical Mirrors: Ray Diagrams',
+    description:
+      'Drag an object in front of a concave or convex mirror and watch the standard rays find the image. Check 1/v + 1/u = 1/f, the magnification and the nature of the image.',
+    level: 'Intermediate',
+    tags: ['light', 'mirror', 'concave mirror', 'convex mirror', 'reflection', 'ray diagram', 'mirror formula', 'magnification', 'focal length', 'class 10'],
+    thumbnail: '/assets/img/thumbs/ray-optics.svg',
+    link: '/physics/ray-optics/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['plane-mirror']
+  },
+  {
+    id: 'refraction-glass-slab',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Refraction through a Glass Slab',
+    description:
+      "Shine a ray into a glass, water, acrylic or diamond slab. Measure i, r and e, see the lateral shift and verify Snell's law on a sin i against sin r graph.",
+    level: 'Intermediate',
+    tags: ['light', 'refraction', 'snell', "snell's law", 'refractive index', 'glass slab', 'lateral shift', 'class 10'],
+    thumbnail: '/assets/img/thumbs/refraction-glass-slab.svg',
+    link: '/physics/refraction-glass-slab/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['ray-optics']
+  },
+
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
     id: 'spring-mass',
@@ -1242,21 +1307,6 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-11-01',
     prerequisites: ['projectile']
-  },
-  {
-    id: 'ray-optics',
-    subject: 'physics',
-    branch: 'optics',
-    title: 'Ray Optics',
-    description: 'Bend light with lenses and mirrors. Find focal points and form images.',
-    level: 'Beginner',
-    tags: ['light', 'lens', 'mirror', 'refraction', 'reflection', 'focal length'],
-    thumbnail: '/assets/img/thumbs/ray-optics.svg',
-    link: '/physics/ray-optics/',
-    status: 'coming-soon',
-    featured: false,
-    dateAdded: '2026-11-05',
-    prerequisites: []
   },
   {
     id: 'electric-fields',

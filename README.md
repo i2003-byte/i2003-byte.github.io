@@ -10,15 +10,15 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**60 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**64 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
-| ⚙️ **Mechanics** (22) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area · Balanced and Unbalanced Forces · Pressure in Liquids · Friction on Different Surfaces · Rolling vs Sliding Friction · Ball Bearings and Lubricants · Distance and Displacement · Velocity–Time Graph: Area = Distance · Uniform Circular Motion · Inertia: Coin on a Card · Newton's Second Law: F = ma Cart Lab · Action and Reaction: Balloon Rocket · Collisions and Momentum · Universal Law of Gravitation · Free Fall and g on Different Worlds · Buoyancy and Archimedes' Principle · Work Done: W = F s cos θ |
+| ⚙️ **Mechanics** (24) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area · Balanced and Unbalanced Forces · Pressure in Liquids · Friction on Different Surfaces · Rolling vs Sliding Friction · Ball Bearings and Lubricants · Distance and Displacement · Velocity–Time Graph: Area = Distance · Uniform Circular Motion · Inertia: Coin on a Card · Newton's Second Law: F = ma Cart Lab · Action and Reaction: Balloon Rocket · Collisions and Momentum · Universal Law of Gravitation · Free Fall and g on Different Worlds · Buoyancy and Archimedes' Principle · Work Done: W = F s cos θ · Roller Coaster: Potential and Kinetic Energy · Power Race: Same Work, Different Time |
 | 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (6, Class 7–8) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor |
-| 💡 **Light** (3, Class 7) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc |
+| 💡 **Light** (5, Class 7 and 10) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |

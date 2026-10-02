@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Refraction through a Glass Slab — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shine a ray into a glass, water, acrylic or diamond slab. See it bend towards the normal going in and away coming out, measure the angles, find the lateral shift and verify Snell's law with a sin i against sin r graph.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/refraction-glass-slab/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Refraction through a Glass Slab — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shine a ray into a glass, water, acrylic or diamond slab. See it bend towards the normal going in and away coming out, measure the angles, find the lateral shift and verify Snell's law with a sin i against sin r graph.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/refraction-glass-slab/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="refraction-glass-slab">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Light travels more slowly in glass and water than in air. When a ray crosses a surface at an angle, this change of speed makes it change direction: this is <strong>refraction</strong>. Going from air into the slab (into a denser medium) the ray bends <strong>towards the normal</strong>; coming out into air it bends <strong>away from the normal</strong>. Because the two faces of a slab are parallel, the second bend exactly undoes the first: the ray comes out <strong>parallel</strong> to the incoming ray, just shifted sideways. For each material, sin i ÷ sin r is always the same number, the <strong>refractive index</strong> n. That is <strong>Snell's law</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">sin i ÷ sin r = n   (Snell's law)          n = c ÷ v</code>
+            <code class="formula">e = i     lateral shift  d = t sin(i − r) ÷ cos r</code>
+            <code class="formula">Glass n = 1.52, i = 40°:  sin r = 0.643 ÷ 1.52 = 0.423 → r ≈ 25.0°</code>
+            <ul>
+              <li>Angles are always measured from the <strong>normal</strong>, the line at 90° to the surface.</li>
+              <li>The incident ray, the refracted ray and the normal all lie in one plane.</li>
+              <li>A ray along the normal (i = 0°) goes straight through without bending.</li>
+              <li>Refractive indices: water 1.33, acrylic 1.49, crown glass 1.52, dense flint glass 1.65, diamond 2.42. A bigger n means slower light and more bending.</li>
+              <li>The lateral shift grows with the thickness of the slab and with the angle of incidence.</li>
+            </ul>
+            <p>Simplifications: the light has one colour (real white light splits slightly into colours), and the weak reflected rays at each face are not drawn.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Letters seen through a thick glass block on a table look shifted and raised.</li>
+              <li>A pool or a bucket of water looks shallower than it really is, and a straight stick dipped in water looks bent.</li>
+              <li>Diamonds sparkle partly because their very high refractive index bends light strongly.</li>
+              <li>In the school lab, you trace this with pins on paper: incident pins, then emergent pins seen through the slab.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Crown glass, i = 40°. Check r and the ratio sin i ÷ sin r.<details><summary>Show answer</summary>r ≈ 25.0°, and sin 40° ÷ sin 25.0° = 0.643 ÷ 0.423 ≈ 1.52, the refractive index of the glass.</details></li>
+              <li>Record readings at 20°, 40°, 60° and 80°. What shape do the points make on the chart?<details><summary>Show answer</summary>A straight line through the origin. Its slope is n, which is Snell's law: sin i = n × sin r.</details></li>
+              <li>Keep i = 60° and change the slab from water to diamond. What happens to r?<details><summary>Show answer</summary>Water: r ≈ 40.6°. Diamond: r ≈ 21.0°. The bigger the refractive index, the more the ray bends towards the normal.</details></li>
+              <li>Double the thickness from 5 cm to 10 cm. What happens to the lateral shift?<details><summary>Show answer</summary>It doubles too: d = t sin(i − r) ÷ cos r is proportional to t, while the angles do not change.</details></li>
+              <li>How fast does light travel in crown glass?<details><summary>Show answer</summary>v = c ÷ n = 3 × 10⁸ ÷ 1.52 ≈ 1.97 × 10⁸ m/s, about two thirds of its speed in air.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Refraction:</strong> the bending of light as it passes from one medium into another.</li>
+              <li><strong>Normal:</strong> the line at right angles to the surface at the point where the ray strikes.</li>
+              <li><strong>Refractive index (n):</strong> the speed of light in air (vacuum) ÷ its speed in the medium.</li>
+              <li><strong>Angle of emergence (e):</strong> the angle between the outgoing ray and the normal at the second face.</li>
+              <li><strong>Lateral shift:</strong> the sideways distance between the incident ray (continued) and the emergent ray.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Power Race: Same Work, Different Time — Interactive Simulation | SimLab</title>
+  <meta name="description" content="A walker, a runner and a motor lift raise the same mass to the same height. They all do the same work, but the fastest has the most power. Work out P = W ÷ t in watts, horsepower, kWh and the electricity bill in rupees.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/power-race/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Power Race: Same Work, Different Time — Interactive Simulation | SimLab">
+  <meta property="og:description" content="A walker, a runner and a motor lift raise the same mass to the same height. They all do the same work, but the fastest has the most power. Work out P = W ÷ t in watts, horsepower, kWh and the electricity bill in rupees.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/power-race/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="power-race">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Lifting a mass m through a height h always needs the same <strong>work</strong>, W = m g h, whoever or whatever does it. What differs is <strong>how fast</strong> the work is done. <strong>Power</strong> is the rate of doing work: the work done each second. Here a walker, a runner and a motor lift all raise the same mass to the same floor. They do equal work, but the one who finishes first has the greatest power. On the work–time graph each lifter gives a straight line, and the steeper line means more power. Electricity companies sell energy in a bigger unit, the <strong>kilowatt hour</strong> (kWh), which is the "unit" printed on your electricity bill.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">P = W ÷ t        1 watt (W) = 1 joule per second</code>
+            <code class="formula">1 kW = 1000 W     1 horsepower (hp) ≈ 746 W</code>
+            <code class="formula">1 kWh = 1 kW × 1 h = 1000 × 3600 J = 3.6 × 10⁶ J = 1 unit</code>
+            <code class="formula">50 kg up 9 m:  W = 50 × 9.8 × 9 = 4410 J;  in 30 s, P = 147 W</code>
+            <ul>
+              <li>Energy used = power × time. A 1 kW motor running 1 hour a day for 30 days uses 30 kWh.</li>
+              <li>Bill = units (kWh) × rate in ₹ per unit.</li>
+              <li>Average power = total work ÷ total time.</li>
+            </ul>
+            <p>Simplifications: each lifter moves up at a steady speed, the motor wastes no energy (real motors are perhaps 70–90% efficient), and only the work of lifting the mass is counted, not the extra energy people use to move their arms and legs.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Ratings printed on appliances: a ceiling fan about 50–75 W, an LED bulb 9 W, an electric iron 1000 W, a geyser 2000 W.</li>
+              <li>Water pumps that fill rooftop tanks are rated in horsepower, often 0.5 hp or 1 hp.</li>
+              <li>A goods lift in a building and a porter on the stairs can carry the same sack up; the lift does it faster because it has more power.</li>
+              <li>Engines of cars and tractors are compared by power in kW or hp.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the starting values, find the power of the walker and of the runner.<details><summary>Show answer</summary>W = 50 × 9.8 × 9 = 4410 J. Walker: 4410 ÷ 30 = 147 W. Runner: 4410 ÷ 10 = 441 W. The runner is three times as powerful because the time is one third.</details></li>
+              <li>How long does a 1 kW motor take for the same job?<details><summary>Show answer</summary>t = W ÷ P = 4410 ÷ 1000 ≈ 4.4 s.</details></li>
+              <li>A 50 kg student runs up 45 steps, each 15 cm high, in 9 s. What is the power?<details><summary>Show answer</summary>Height = 45 × 0.15 = 6.75 m, W = 50 × 9.8 × 6.75 ≈ 3308 J, P = 3308 ÷ 9 ≈ 368 W.</details></li>
+              <li>A 2 kW geyser is used for 30 minutes every day for 30 days. At ₹8 per unit, what is the cost?<details><summary>Show answer</summary>Energy = 2 kW × 0.5 h × 30 = 30 kWh (units). Cost = 30 × 8 = ₹240.</details></li>
+              <li>Make the height 18 m. Does the work change? Does the ratio of the walker's and the runner's power change?<details><summary>Show answer</summary>The work doubles, so both powers double. Their ratio stays t₁ ÷ t₂, because both do the same work.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Power:</strong> the rate of doing work, or of using energy.</li>
+              <li><strong>Watt (W):</strong> the power when 1 joule of work is done each second.</li>
+              <li><strong>Kilowatt hour (kWh):</strong> the energy used by a 1 kW device in 1 hour; the commercial unit of electrical energy.</li>
+              <li><strong>Horsepower (hp):</strong> an older unit of power, about 746 W.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

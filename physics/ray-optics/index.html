@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Spherical Mirrors: Ray Diagrams — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag an object in front of a concave or convex mirror and watch the standard rays find the image. Check the mirror formula 1/v + 1/u = 1/f, the magnification and the nature of the image for every position.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/ray-optics/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Spherical Mirrors: Ray Diagrams — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag an object in front of a concave or convex mirror and watch the standard rays find the image. Check the mirror formula 1/v + 1/u = 1/f, the magnification and the nature of the image for every position.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/ray-optics/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ray-optics">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>spherical mirror</strong> is part of a hollow sphere. If the inside is shiny it is <strong>concave</strong> and brings parallel rays together at the <strong>principal focus F</strong>. If the outside is shiny it is <strong>convex</strong> and spreads parallel rays out as if they came from F behind it. To find the image of a point, follow any two rays from it after reflection: where they meet is the <strong>real</strong> image (it can be caught on a screen); if they only seem to meet behind the mirror, the image is <strong>virtual</strong>. Move the object along the axis and watch the image change size, side and direction.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">1/v + 1/u = 1/f        m = h′ ÷ h = −v ÷ u        R = 2f</code>
+            <code class="formula">Concave, f = −15 cm, u = −40 cm:  1/v = −1/15 + 1/40 → v = −24 cm, m = −0.6</code>
+            <ul>
+              <li><strong>Sign convention</strong> (New Cartesian): measure from the pole P; distances in the direction of the incoming light (to the right here) are +, against it are −; heights above the axis are +.</li>
+              <li>So the object distance u is always negative, f is negative for a concave mirror and positive for a convex one, and a negative v means a real image in front of the mirror.</li>
+              <li>The four useful rays: parallel to the axis → through F; through F → parallel; through C → straight back; at P → reflected at an equal angle to the axis.</li>
+              <li>Concave mirror: object beyond C → image between F and C (smaller, real, inverted); at C → at C (same size); between C and F → beyond C (bigger); at F → at infinity; between F and P → behind the mirror (bigger, virtual, erect).</li>
+              <li>Convex mirror: the image is always virtual, erect, smaller and between P and F behind the mirror.</li>
+            </ul>
+            <p>Simplification: as in textbook diagrams, the rays are drawn bending at the line through the pole (this is exact only for rays close to the axis), and heights are stretched compared with distances so small objects are easy to see.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Concave: shaving and make-up mirrors (object inside F gives an enlarged, upright image), a dentist's mirror, torch and headlight reflectors (bulb at F sends out a parallel beam), solar cookers.</li>
+              <li>Convex: rear-view mirrors on scooters, cars and buses (a wide field of view with upright images), mirrors at sharp turns on hill roads, and security mirrors in shops.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Concave mirror, f = 15 cm, object 40 cm away. Find v and m and check the diagram.<details><summary>Show answer</summary>1/v = 1/f − 1/u = −1/15 + 1/40 = −1/24, so v = −24 cm (real, in front). m = −v/u = −(−24)/(−40) = −0.6: inverted and diminished.</details></li>
+              <li>Press "At C". What is special about the image?<details><summary>Show answer</summary>It is also at C, the same size as the object (m = −1), real and inverted.</details></li>
+              <li>Concave mirror, f = 15 cm, object 10 cm away. Where is the image and how big?<details><summary>Show answer</summary>1/v = −1/15 + 1/10 = 1/30, so v = +30 cm (behind the mirror, virtual). m = −30 ÷ (−10) = +3: erect and three times as big. This is how a make-up mirror works.</details></li>
+              <li>Switch to a convex mirror and drag the object from far away to very close. Does the image ever become real or inverted?<details><summary>Show answer</summary>No. It stays virtual, erect and smaller, always between P and F behind the mirror. It grows only as the object comes closer.</details></li>
+              <li>Press "At F". Why is no image drawn?<details><summary>Show answer</summary>All reflected rays come out parallel, so they meet only "at infinity". 1/v = 1/f − 1/u = 0.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Pole (P):</strong> the centre of the mirror's surface.</li>
+              <li><strong>Centre of curvature (C):</strong> the centre of the sphere the mirror is part of; R = PC.</li>
+              <li><strong>Principal focus (F) and focal length (f):</strong> where rays parallel to the axis meet (or seem to come from); f = PF = R ÷ 2.</li>
+              <li><strong>Real / virtual image:</strong> formed where rays really meet / only seem to meet.</li>
+              <li><strong>Magnification (m):</strong> image height ÷ object height.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
