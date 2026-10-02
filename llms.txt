@@ -68,6 +68,10 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Newton's Colour Disc](https://i2003-byte.github.io/physics/newtons-disc/): Spin a disc painted with the seven colours of the rainbow and watch them merge into a whitish grey. Try other colour pairs and find out how fast the disc must spin to fool your eye. (Beginner)
 - [Spherical Mirrors: Ray Diagrams](https://i2003-byte.github.io/physics/ray-optics/): Drag an object in front of a concave or convex mirror and watch the standard rays find the image. Check 1/v + 1/u = 1/f, the magnification and the nature of the image. (Intermediate)
 - [Refraction through a Glass Slab](https://i2003-byte.github.io/physics/refraction-glass-slab/): Shine a ray into a glass, water, acrylic or diamond slab. Measure i, r and e, see the lateral shift and verify Snell's law on a sin i against sin r graph. (Intermediate)
+- [Convex and Concave Lenses: Ray Diagrams](https://i2003-byte.github.io/physics/lens-images/): Drag an object in front of a convex or concave lens and watch the standard rays find the image. Check 1/v − 1/u = 1/f, the magnification and the power in dioptres. (Intermediate)
+- [Human Eye: Power of Accommodation](https://i2003-byte.github.io/physics/eye-accommodation/): Bring an object closer to a model eye and watch the ciliary muscles thicken the lens to keep the image on the retina, until the near point. (Intermediate)
+- [Myopia and Hypermetropia: Correcting Vision](https://i2003-byte.github.io/physics/eye-defects/): See why a short-sighted eye blurs the blackboard and a long-sighted eye blurs a book, then add concave or convex glasses and find their power. (Intermediate)
+- [Dispersion by a Prism and the Blue Sky](https://i2003-byte.github.io/physics/prism-dispersion/): Split white light into VIBGYOR with a glass prism, recombine it with a second prism, and see how scattering makes the sky blue and sunsets red. (Intermediate)
 
 ### Electricity & Magnetism
 

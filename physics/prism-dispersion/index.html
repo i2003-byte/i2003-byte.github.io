@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dispersion by a Prism and the Blue Sky — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Split white light into VIBGYOR with a glass prism, recombine it with a second prism, then see how scattering makes the sky blue and the setting Sun red.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/prism-dispersion/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Dispersion by a Prism and the Blue Sky — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Split white light into VIBGYOR with a glass prism, recombine it with a second prism, then see how scattering makes the sky blue and the setting Sun red.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/prism-dispersion/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="prism-dispersion">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>White sunlight is a mixture of colours. Glass slows violet light a little more than red light, so its <strong>refractive index</strong> is a little bigger for violet. When white light passes through a <strong>prism</strong>, each colour bends by a slightly different angle and they fan out into a <strong>spectrum</strong>: VIBGYOR, with violet bent the most and red the least. This splitting is <strong>dispersion</strong>. Turn on the second, upside-down prism and the colours bend back and mix into white again, as Isaac Newton showed. Switch to the sky mode to see a different effect, <strong>scattering</strong>: tiny air molecules throw blue light around far more than red, which is why the sky is blue and the setting Sun is red.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Snell's law at each face: n₁ sin θ₁ = n₂ sin θ₂        Deviation δ = i + e − A</code>
+            <code class="formula">Crown glass: n(red) ≈ 1.513, n(violet) ≈ 1.530        Rayleigh scattering ∝ 1/λ⁴</code>
+            <ul>
+              <li>The <strong>angle of the prism</strong> A is the angle between its two refracting faces (60° here).</li>
+              <li><strong>Angle of deviation</strong> δ: the angle between the incoming ray and the outgoing ray. It is larger for violet than for red.</li>
+              <li>Flint glass is more dispersive than crown glass; water is less.</li>
+              <li>Blue light (450 nm) is scattered about (650 ÷ 450)⁴ ≈ 4.4 times more than red light (650 nm).</li>
+              <li>Particles much bigger than the wavelength (water drops in clouds, fog, dust) scatter all colours about equally, so they look white or grey.</li>
+            </ul>
+            <p>Simplification: the rays are traced exactly with Snell's law, but the "exaggerate" switch multiplies the difference in refractive index by 4 because the real spread is only a degree or two. The sky colours use just three wavelengths and ignore dust and the way our eyes see colour.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li><strong>Rainbow:</strong> raindrops act like tiny prisms. Each drop refracts, reflects inside and refracts sunlight again; you see a rainbow with the Sun behind you.</li>
+              <li><strong>Blue sky, red sunrise and sunset:</strong> at noon sunlight crosses little air; at sunset it crosses about 38 times more, losing most of its blue on the way.</li>
+              <li><strong>Danger signals are red:</strong> red light is scattered least by fog and smoke, so it can be seen from far away.</li>
+              <li>Astronauts see a black sky even in daytime: there is no air to scatter light.</li>
+              <li>Stars twinkle because of a related effect: <strong>atmospheric refraction</strong> by moving layers of warm and cool air.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Read the deviation of red and violet. Which colour bends most, and why?<details><summary>Show answer</summary>Violet. Glass has a higher refractive index for violet light, so violet light bends more at each face.</details></li>
+              <li>Change crown glass to flint glass. What happens to the spread?<details><summary>Show answer</summary>It grows: flint glass is more dispersive (its refractive index changes more with colour).</details></li>
+              <li>Turn on the second prism. What reaches the screen, and what does it prove?<details><summary>Show answer</summary>White light. The colours were already in the sunlight; the first prism only separated them and the second one recombines them.</details></li>
+              <li>In sky mode, move the Sun from 75° to 1°. Why does the Sun turn orange-red?<details><summary>Show answer</summary>Near the horizon sunlight passes through much more air, and the blue part is scattered out of the beam on the way, so mostly red and orange reach you.</details></li>
+              <li>Choose "No air". Why is the sky black?<details><summary>Show answer</summary>With nothing to scatter it, sunlight only travels straight from the Sun; no light comes to you from other parts of the sky.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Dispersion:</strong> splitting of white light into its colours.</li>
+              <li><strong>Spectrum:</strong> the band of colours VIBGYOR.</li>
+              <li><strong>Angle of deviation:</strong> how much the prism turns a ray.</li>
+              <li><strong>Scattering:</strong> light sent off in all directions by small particles.</li>
+              <li><strong>Tyndall effect:</strong> scattering that makes a beam of light visible in smoke, mist or a dusty room.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

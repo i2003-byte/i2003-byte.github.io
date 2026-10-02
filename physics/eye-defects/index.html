@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Myopia and Hypermetropia: Correcting Vision — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See why a short-sighted eye blurs the blackboard and a long-sighted eye blurs a book, then put on concave or convex glasses and find their power in dioptres.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/eye-defects/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Myopia and Hypermetropia: Correcting Vision — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See why a short-sighted eye blurs the blackboard and a long-sighted eye blurs a book, then put on concave or convex glasses and find their power in dioptres.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/eye-defects/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="eye-defects">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a healthy eye the image of anything from about 25 cm to far away falls exactly on the retina. Two common <strong>refractive defects</strong> spoil this. In <strong>myopia</strong> (short-sightedness) the eye bends light too much, or the eyeball is too long, so light from far objects meets <em>in front of</em> the retina: far things look blurred but near things are fine. In <strong>hypermetropia</strong> (long-sightedness) the eye bends light too little, or the eyeball is too short, so light from near objects would meet <em>behind</em> the retina: near things look blurred. Spectacles fix both by adding or taking away a little power before the light enters the eye.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Myopia: concave lens with f = −(far point)        e.g. far point 1 m → f = −100 cm, P = −1 D</code>
+            <code class="formula">Hypermetropia: convex lens with 1/f = 1/25 − 1/(near point)        e.g. near point 1 m → f = +33 cm, P = +3 D</code>
+            <ul>
+              <li>The <strong>concave lens</strong> makes light from a very far object spread out as if it came from the eye's far point, which the eye can see.</li>
+              <li>The <strong>convex lens</strong> makes light from a book at 25 cm look as if it came from the eye's near point.</li>
+              <li>With u = −25 cm and v = −(near point), the lens formula 1/v − 1/u = 1/f gives the rule above.</li>
+              <li><strong>Presbyopia</strong> (old age) can bring both problems at once; <strong>bifocal</strong> lenses have a concave upper part for far and a convex lower part for reading.</li>
+            </ul>
+            <p>Simplification: the eye is a "reduced eye" (one lens, retina 2.3 cm behind it, 4 D of accommodation), the glasses are treated as touching the eye, distances outside the eye use a logarithmic scale, and the spread of rays at the retina is drawn 3 times bigger so you can see it. Real prescriptions are found by an eye test.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Many students in India find the blackboard blurred: often the first sign of myopia. An eye check at school catches it.</li>
+              <li>A prescription like "−2.00 D" means a concave lens of focal length 50 cm; "+1.50 D" is a convex lens of 67 cm.</li>
+              <li>Contact lenses and laser surgery (which reshapes the cornea) correct the same defects.</li>
+              <li>Cataract makes the lens cloudy; it is treated by replacing the lens with an artificial one, not by spectacles.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Myopia, far point 1 m, object at 6 m. Where do the rays meet? Now switch on the glasses.<details><summary>Show answer</summary>Without glasses they meet in front of the retina (blurred). The −1 D concave lens makes the light appear to come from 1 m away, so the eye focuses it on the retina.</details></li>
+              <li>A student can see clearly only up to 80 cm. What lens do they need?<details><summary>Show answer</summary>Concave, f = −80 cm, P = 100 ÷ (−80) = −1.25 D.</details></li>
+              <li>Hypermetropia, near point 1 m. Can this person read a book at 25 cm? What about with glasses?<details><summary>Show answer</summary>Without glasses the rays would meet behind the retina (blurred). With the +3 D convex lens, the book's image is formed at 1 m, which they can see clearly.</details></li>
+              <li>A person's near point is 50 cm. Find the power of their reading glasses.<details><summary>Show answer</summary>1/f = 1/25 − 1/50 = 1/50, so f = +50 cm and P = +2 D.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Myopia:</strong> near-sightedness; far point closer than infinity; corrected by a concave lens.</li>
+              <li><strong>Hypermetropia:</strong> far-sightedness; near point farther than 25 cm; corrected by a convex lens.</li>
+              <li><strong>Far point / near point:</strong> the farthest and nearest points the eye can see clearly.</li>
+              <li><strong>Dioptre (D):</strong> unit of lens power, 1/f with f in metres.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

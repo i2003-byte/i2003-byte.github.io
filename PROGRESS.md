@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-02 · routine · Class 10 Light (finished) + Human eye and the colourful world
+- Built/changed: `lens-images` (convex/concave lens ray diagrams, lens formula, m = v/u, power in D, uses for each object position); `eye-accommodation` (reduced eye, ciliary muscles, near point, ages); `eye-defects` (myopia/hypermetropia with concave/convex glasses, power in D); `prism-dispersion` (exact Snell ray trace through a prism for 7 colours, Newton's second prism, plus a sky mode for Rayleigh scattering and red sunsets). Catalog, thumbnails, README, AGENTS updated.
+- Checks: ✅ check.mjs passed · ✅ browser-test (4 pages, phone + desktop) · combined screenshot reviewed at 375px and 1366px
+- Roadmap: Class 10 Light: reflection and refraction → Done; Class 10 Human eye and the colourful world → Done
+- Next time: take the next 📋 Next item: Class 10 · Physics · Electricity (Ohm's law, series/parallel, power bill)
+- Problems/notes: eye sims draw the ray spread at the retina 3× larger so the blur is visible (stated in the Learn panels); prism "exaggerate" (on by default) multiplies the index difference by 4
+
 ## 2026-10-02 · request · Weekly harness health check
 - Built/changed: `site-maintenance` step 4b (settings valid, pre-push hook still blocks a bad push, referenced files exist, skills agree, CI green, daily runs happening, AGENTS.md stays short); AGENTS.md roadmap note and a Gotcha (tags cannot be pushed; use a branch)
 - Checks: ✅ check.mjs passed · harness tested by hand: hook exit 2 on a bad file and 0 otherwise, settings valid, all references exist, CI and Pages green

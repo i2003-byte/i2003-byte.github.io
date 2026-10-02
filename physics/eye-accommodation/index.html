@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Human Eye: Power of Accommodation — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Move an object towards a model eye and watch the ciliary muscles change the eye lens to keep the image sharp on the retina, until it reaches the near point. See the power needed in dioptres.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/eye-accommodation/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Human Eye: Power of Accommodation — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Move an object towards a model eye and watch the ciliary muscles change the eye lens to keep the image sharp on the retina, until it reaches the near point. See the power needed in dioptres.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/eye-accommodation/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="eye-accommodation">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Your eye works like a camera: the <strong>cornea</strong> and the <strong>eye lens</strong> together form a real, inverted image on the <strong>retina</strong>, the light-sensitive screen at the back. But the distance from lens to retina cannot change (about 2.3 cm). So to see both far and near things sharply, the eye changes the <em>focal length of its lens</em>. The <strong>ciliary muscles</strong> do this. Relaxed, they let the lens become thin (weak, long focal length) for far objects; contracted, they let the lens bulge (strong, short focal length) for near objects. This ability is called the <strong>power of accommodation</strong>. Bring the object closer and watch the lens thicken until it can bulge no more: that is the <strong>near point</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">1/v − 1/u = 1/f  with v = 2.3 cm fixed  →  P needed = 100/2.3 + 100/d ≈ 43.5 D + 100/d  (d in cm)</code>
+            <code class="formula">Object at 25 cm: P = 43.5 + 4 = 47.5 D        Object very far: P = 43.5 D</code>
+            <ul>
+              <li><strong>Far point:</strong> the farthest point seen clearly; for a normal eye it is at infinity.</li>
+              <li><strong>Near point</strong> (least distance of distinct vision): the closest point seen clearly; about <strong>25 cm</strong> for a young adult.</li>
+              <li>Power of accommodation = most power − least power = 100/(near point in cm) dioptres, about 4 D for a near point of 25 cm.</li>
+              <li>The near point moves away with age as the lens stiffens: a child can focus at about 7–10 cm, but many people over 45 need reading glasses (<strong>presbyopia</strong>).</li>
+            </ul>
+            <p>Simplification: this is a "reduced eye" with one lens doing all the focusing and a fixed 2.3 cm to the retina. In a real eye the cornea gives about two-thirds of the power and the lens changes the rest. The distances outside the eye are drawn on a squashed (logarithmic) scale, the spread of rays at the retina is drawn 3 times bigger so you can see it, and the ages are rough averages.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Read a book for a long time and your eyes feel tired: the ciliary muscles have been contracted all along. Looking far away (the "20-20-20" habit) lets them relax.</li>
+              <li>Grandparents often hold a newspaper at arm's length: their near point has moved far away.</li>
+              <li>A camera focuses by moving its lens; a fish's eye also moves its lens. Our eye changes the lens shape instead.</li>
+              <li>The pupil (the hole in the coloured iris) only controls how much light comes in; it does not focus.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press "6 m (far)" and then "25 cm". How much extra power did the eye add?<details><summary>Show answer</summary>About 4 D: from 43.6 D to 47.5 D. That is all a young adult eye can add, so 25 cm is its near point.</details></li>
+              <li>Drag the object to 10 cm with the young adult eye. What happens to the image and why?<details><summary>Show answer</summary>The eye would need 43.5 + 10 = 53.5 D but can reach only 47.5 D. The rays would meet behind the retina, so the letters look blurred.</details></li>
+              <li>Switch to the older person. Can they read a phone held at 30 cm?<details><summary>Show answer</summary>No. Their power of accommodation is only about 1 D, so their near point is 1 m. They need convex reading glasses.</details></li>
+              <li>What is the focal length of the eye when it looks at a far object?<details><summary>Show answer</summary>f = 100 ÷ 43.5 ≈ 2.3 cm, exactly the lens-to-retina distance, so parallel rays meet on the retina.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Retina:</strong> the light-sensitive layer of rods and cones; it sends signals through the optic nerve to the brain.</li>
+              <li><strong>Ciliary muscles:</strong> the ring of muscles that changes the shape of the eye lens.</li>
+              <li><strong>Accommodation:</strong> the eye's ability to change its focal length.</li>
+              <li><strong>Presbyopia:</strong> loss of accommodation with age.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1261,6 +1261,70 @@ SimLab.simulations = [
     dateAdded: '2026-10-02',
     prerequisites: ['ray-optics']
   },
+  {
+    id: 'lens-images',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Convex and Concave Lenses: Ray Diagrams',
+    description:
+      'Drag an object in front of a convex or concave lens and watch the standard rays find the image. Check 1/v − 1/u = 1/f, the magnification and the power in dioptres.',
+    level: 'Intermediate',
+    tags: ['light', 'lens', 'convex lens', 'concave lens', 'refraction', 'ray diagram', 'lens formula', 'magnification', 'power of a lens', 'dioptre', 'class 10'],
+    thumbnail: '/assets/img/thumbs/lens-images.svg',
+    link: '/physics/lens-images/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['refraction-glass-slab']
+  },
+  {
+    id: 'eye-accommodation',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Human Eye: Power of Accommodation',
+    description:
+      'Bring an object closer to a model eye and watch the ciliary muscles thicken the lens to keep the image on the retina, until the near point.',
+    level: 'Intermediate',
+    tags: ['human eye', 'eye', 'accommodation', 'ciliary muscles', 'near point', 'far point', 'retina', 'presbyopia', 'class 10'],
+    thumbnail: '/assets/img/thumbs/eye-accommodation.svg',
+    link: '/physics/eye-accommodation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['lens-images']
+  },
+  {
+    id: 'eye-defects',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Myopia and Hypermetropia: Correcting Vision',
+    description:
+      'See why a short-sighted eye blurs the blackboard and a long-sighted eye blurs a book, then add concave or convex glasses and find their power.',
+    level: 'Intermediate',
+    tags: ['human eye', 'myopia', 'hypermetropia', 'short sight', 'long sight', 'spectacles', 'defects of vision', 'corrective lens', 'dioptre', 'class 10'],
+    thumbnail: '/assets/img/thumbs/eye-defects.svg',
+    link: '/physics/eye-defects/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['eye-accommodation']
+  },
+  {
+    id: 'prism-dispersion',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Dispersion by a Prism and the Blue Sky',
+    description:
+      'Split white light into VIBGYOR with a glass prism, recombine it with a second prism, and see how scattering makes the sky blue and sunsets red.',
+    level: 'Intermediate',
+    tags: ['light', 'dispersion', 'prism', 'spectrum', 'vibgyor', 'rainbow', 'scattering', 'blue sky', 'sunset', 'tyndall effect', 'class 10'],
+    thumbnail: '/assets/img/thumbs/prism-dispersion.svg',
+    link: '/physics/prism-dispersion/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-02',
+    prerequisites: ['refraction-glass-slab']
+  },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {

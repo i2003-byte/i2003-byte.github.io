@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="eye-defects">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1917"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <circle cx="232" cy="100" r="60" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+  <path d="M286 64a60 60 0 0 1 0 72" stroke="#f87171" stroke-width="5" fill="none"/>
+  <ellipse cx="204" cy="100" rx="12" ry="28" fill="#38bdf8" fill-opacity="0.3" stroke="#38bdf8" stroke-width="3"/>
+  <path d="M132 60h14q-6 40 0 80h-14q6 -40 0 -80z" fill="#a78bfa" fill-opacity="0.25" stroke="#a78bfa" stroke-width="3"/>
+  <path d="M20 88H139L204 82L289 100M20 112H139L204 118L289 100" stroke="#f472b6" stroke-width="2.5" fill="none"/>
+  <circle cx="289" cy="100" r="5" fill="#4ade80"/>
+  <text x="70" y="70" font-family="sans-serif" font-size="22" font-weight="700" fill="#e2e8f0" text-anchor="middle">−1 D</text>
+</svg>

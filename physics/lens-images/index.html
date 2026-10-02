@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Convex and Concave Lenses: Ray Diagrams — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag an object in front of a convex or concave lens and watch the three standard rays find the image. Check the lens formula 1/v − 1/u = 1/f, the magnification m = v/u and the power in dioptres.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lens-images/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Convex and Concave Lenses: Ray Diagrams — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag an object in front of a convex or concave lens and watch the three standard rays find the image. Check the lens formula 1/v − 1/u = 1/f, the magnification m = v/u and the power in dioptres.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lens-images/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lens-images">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>lens</strong> is a piece of glass with curved faces. A <strong>convex</strong> lens is thicker in the middle and bends parallel rays together to meet at its <strong>principal focus</strong>; a <strong>concave</strong> lens is thinner in the middle and spreads them out as if they came from a focus on the incoming side. A lens has a focus on <em>each</em> side, F₁ and F₂, at the same distance f from the <strong>optical centre O</strong>. Drag the object and follow the rays: where they meet is a <strong>real</strong> image you can catch on a screen; if they only seem to meet on the object's side, the image is <strong>virtual</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">1/v − 1/u = 1/f        m = h′ ÷ h = v ÷ u        P = 1 ÷ f (f in metres)</code>
+            <code class="formula">Convex, f = +15 cm, u = −40 cm:  1/v = 1/15 − 1/40 → v = +24 cm, m = −0.6</code>
+            <ul>
+              <li><strong>Sign convention</strong> (New Cartesian): measure from O; distances in the direction of the light (to the right) are +, against it are −; heights above the axis are +. So u is negative, f is + for a convex lens and − for a concave lens, and + v means a real image on the far side.</li>
+              <li><strong>Power</strong> is measured in <strong>dioptres (D)</strong>: a convex lens of f = 0.25 m has P = +4 D; a concave lens of f = −0.5 m has P = −2 D.</li>
+              <li>The three useful rays: parallel to the axis → through F₂ (or seems to come from F₁ for a concave lens); through O → straight on; through F₁ (or heading for F₂) → comes out parallel.</li>
+            </ul>
+            <p><strong>Images formed by a convex lens</strong></p>
+            <ul>
+              <li>Object at infinity → tiny point image at F₂, real and inverted.</li>
+              <li>Beyond 2F₁ → between F₂ and 2F₂: diminished, real, inverted.</li>
+              <li>At 2F₁ → at 2F₂: same size, real, inverted.</li>
+              <li>Between F₁ and 2F₁ → beyond 2F₂: enlarged, real, inverted.</li>
+              <li>At F₁ → at infinity: highly enlarged.</li>
+              <li>Between F₁ and O → on the same side as the object: enlarged, virtual, erect.</li>
+              <li>A concave lens always gives a virtual, erect, diminished image between F₁ and O.</li>
+            </ul>
+            <p>Simplification: this is a thin lens, so the rays are drawn bending once at the line through O (exact only for rays close to the axis), and heights are stretched compared with distances.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li><strong>Camera and your eye:</strong> a far object gives a small, inverted, real image on the film, sensor or retina.</li>
+              <li><strong>Projector:</strong> the slide sits just beyond F, so a big real image falls on a far screen (the slide is put in upside down).</li>
+              <li><strong>Magnifying glass:</strong> hold the lens so that the page is inside F to see an enlarged, upright, virtual image.</li>
+              <li><strong>Spectacles:</strong> convex lenses for long sight and reading glasses, concave lenses for short sight. Opticians write their power in dioptres, like −1.5 D.</li>
+              <li>Door peepholes use a concave lens to show a small, upright, wide view of the corridor.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Convex lens, f = 15 cm, object 40 cm away. Find v and m.<details><summary>Show answer</summary>1/v = 1/f + 1/u = 1/15 − 1/40 = 5/120, so v = +24 cm (real, on the other side). m = v/u = 24 ÷ (−40) = −0.6: inverted and smaller.</details></li>
+              <li>Press "At 2F₁". What do you notice?<details><summary>Show answer</summary>The image is at 2F₂, the same size as the object (m = −1), real and inverted. This is used in photocopiers.</details></li>
+              <li>Convex lens, f = 10 cm, object 5 cm away. Where is the image and how big is it?<details><summary>Show answer</summary>1/v = 1/10 − 1/5 = −1/10, so v = −10 cm: on the object's side, virtual. m = −10 ÷ (−5) = +2: upright and twice as tall. A magnifying glass.</details></li>
+              <li>Switch to a concave lens and drag the object from far to near. Does the image ever become real?<details><summary>Show answer</summary>No. It is always virtual, erect and smaller, and stays between F₁ and O.</details></li>
+              <li>What is the power of a concave lens of focal length 25 cm?<details><summary>Show answer</summary>f = −0.25 m, so P = 1 ÷ (−0.25) = −4 D.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Optical centre (O):</strong> the centre of the lens; a ray through it is not bent.</li>
+              <li><strong>Principal focus (F₁, F₂) and focal length (f):</strong> where rays parallel to the axis meet, or seem to come from; f = OF.</li>
+              <li><strong>2F:</strong> the point at twice the focal length, where object and image are the same size.</li>
+              <li><strong>Power (P):</strong> how strongly a lens bends light, 1/f in dioptres (D).</li>
+              <li><strong>Magnification (m):</strong> image height ÷ object height = v ÷ u.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

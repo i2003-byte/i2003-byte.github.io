@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**64 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**68 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -18,7 +18,7 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (6, Class 7–8) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor |
-| 💡 **Light** (5, Class 7 and 10) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab |
+| 💡 **Light** (9, Class 7 and 10) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab · Convex and Concave Lenses: Ray Diagrams · Human Eye: Power of Accommodation · Myopia and Hypermetropia: Correcting Vision · Dispersion by a Prism and the Blue Sky |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
