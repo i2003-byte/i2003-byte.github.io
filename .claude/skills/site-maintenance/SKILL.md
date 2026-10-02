@@ -42,6 +42,15 @@ Run `.claude/skills/feedback-triage/SKILL.md` to catch anything the daily runs m
 - Keep Gotchas at about 20 lines or fewer. Merge similar lessons and delete ones that no longer apply.
 - If a skill's steps caused a problem, fix the skill (`.claude/skills/*/SKILL.md`).
 
+## 4b. Harness health (prove the safety nets still work)
+Quick tests, a few seconds each. Fix anything broken before step 5b.
+- **Settings:** `node -e 'JSON.parse(require("fs").readFileSync(".claude/settings.json"))'` succeeds, and the attribution is still the generic `Co-Authored-By: Claude <noreply@anthropic.com>`.
+- **Pre-push hook blocks bad pushes:** create a temp file containing a model name, run `echo '{"tool_input":{"command":"git push origin HEAD:main"}}' | node tools/check.mjs --hook`, expect exit code **2**, then delete the file. Without it, expect exit 0.
+- **References:** every file path named in `AGENTS.md`, `CLAUDE.md` and `.claude/skills/*/SKILL.md` exists, and the skills agree with each other and with AGENTS.md (e.g. simulations per run, approved subjects).
+- **CI:** the latest "Site check" runs on `main` are green: `curl -sS "https://api.github.com/repos/i2003-byte/i2003-byte.github.io/actions/runs?branch=main&per_page=10"` (look at `name` and `conclusion`).
+- **Daily runs are happening:** `PROGRESS.md` has routine entries from the last 2 days. If not, write **NEEDS HUMAN** (the owner checks the routines).
+- **Size:** AGENTS.md stays short (Gotchas about 20 lines or fewer, Current content is a list, not prose) so every run stays cheap to start.
+
 ## 5. Tidy
 - `PROGRESS.md`: keep the latest ~30 entries and delete older ones (git history keeps them).
 - Remove stray files (screenshots, temp files) accidentally committed.

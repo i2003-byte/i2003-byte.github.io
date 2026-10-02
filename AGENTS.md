@@ -51,7 +51,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - **Auto-approve:** agents may add Class 7–12 India syllabus topics straight to 📋 Next. This includes the approved **new subjects**: Economics, Geography, Computer Science. Languages are out of scope for now.
 - Anything else goes to 💡 Proposed.
 - Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
-- **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, tidy, and record lessons.
+- **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, test that the harness itself still works (hook, CI, settings, references), tidy, and record lessons.
   - Then, only if all green, it may add **one** site capability per week. There is no fixed list: it picks one fresh and logs it in `ROADMAP.md` → 🧩 Capabilities.
   - It skips anything costly, disruptive to existing simulations, or platform-heavy (frameworks, servers, outside services, tracking, accounts, ads, engine API changes). Adding none is fine.
   - Daily runs build simulations only; they never take capability items.
@@ -121,4 +121,5 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Share-link numbers are written with `String(parseFloat(x.toFixed(d)))`. Never strip zeros with a regex (350 would become 35).
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
 - `tools/browser-test.mjs` does not press Play, so an error inside `update` passes it. Press Play (and wait) when screenshotting time-based sims.
+- Sessions cannot push git tags (HTTP 403). For a backup marker, push a branch instead (e.g. `before-capabilities`).
 - `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

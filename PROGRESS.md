@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-02 · request · Weekly harness health check
+- Built/changed: `site-maintenance` step 4b (settings valid, pre-push hook still blocks a bad push, referenced files exist, skills agree, CI green, daily runs happening, AGENTS.md stays short); AGENTS.md roadmap note and a Gotcha (tags cannot be pushed; use a branch)
+- Checks: ✅ check.mjs passed · harness tested by hand: hook exit 2 on a bad file and 0 otherwise, settings valid, all references exist, CI and Pages green
+- Roadmap: unchanged
+- Next time: weekly run follows step 4b
+- Problems/notes: none
+
 ## 2026-10-02 · request · Capabilities chosen weekly, no fixed list
 - Built/changed: removed the starter list from `ROADMAP.md` → 🧩 Capabilities (now a log of done/skipped ideas); `site-maintenance` step 5b picks one idea fresh each week and skips anything costly, disruptive or platform-heavy (adding none is fine); AGENTS.md note updated
 - Checks: ✅ check.mjs passed
