@@ -85,7 +85,7 @@ for (const vp of VIEWPORTS) {
       await page.waitForTimeout(400);
       // Exercise simulations
       if (await page.$('#sim-canvas')) {
-        const play = await page.$('[data-act="play"]');
+        const play = await page.$('[data-act="play"]:visible');
         if (play) await play.click();
         for (const b of await page.$$('[data-btn]')) { await b.click().catch(() => {}); await page.waitForTimeout(60); }
         for (const r of await page.$$('#sim-controls input[type=range]')) { await r.focus(); await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowLeft'); }
