@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-03 · fix · Phone experience: simulation stays in view
+- Built/changed: `style.css` + `common.js` (all simulations at once): on phones and tablets the canvas is pinned under the header while controls, readouts and buttons scroll beneath it, so every slider change is seen live; small Play/Pause + Restart buttons beside the status line; canvas height capped at 46% of the screen at full width; compact title on phones (2-line description, no repeated breadcrumb); keyboard tips hidden on touch screens; "Copy share link" → "Share link" so the buttons fit one row. Desktop layout unchanged.
+- Checks: ✅ check.mjs passed · ✅ browser-test (all pages, phone + desktop); screenshots reviewed at 390×844 and 360×640 (projectile, guitar-string, sorting-race, demand-curve) and 1366 desktop
+- Roadmap: unchanged
+- Next time: weekly maintenance should look at the phone screenshots while scrolled to the controls (canvas pinned)
+- Problems/notes: the sorting-race legend line is a little clipped at its ends on narrow phones (sim-specific, small)
+
 ## 2026-10-03 · routine · Class 10 Electricity (finished) + Magnetic effects of current (started)
 - Built/changed: `ohms-law` (record V–I readings for nichrome/constantan/manganin, least-squares line through O gives R; R = ρL/A with length and thickness; non-Ohmic torch bulb that burns out above 3.8 V); `series-parallel` (2 or 3 resistors, moving charges with speed ∝ current, V and I for each, break R₂); `power-bill` (7 home appliances × hours a day, meter runs a month, units and ₹ per appliance, LED vs 60 W bulbs); `magnetic-field-lines` (traced field lines for one bar magnet, attracting and repelling pairs with neutral point, straight wire with circles every 5 μT, iron filings, draggable compass). Catalog, thumbnails, README, AGENTS updated.
 - Checks: ✅ check.mjs passed · ✅ browser-test (4 pages, phone + desktop) · combined screenshots of 15 states reviewed at 375px and 1366px (fixed graph caption overlap, series layout, cut-off footnotes)

@@ -27,7 +27,7 @@
     autoplay: true,
 
     // 1) PARAMETERS → sliders. Values are available as sim.p.<id>.
-    //    They are saved in the URL, so "Copy share link" reproduces the setup.
+    //    They are saved in the URL, so "Share link" reproduces the setup.
     //    Types: range (default), select ({options:[{value,label}]}), toggle.
     params: [
       { id: 'gravity', label: 'Gravity', min: 1, max: 25, step: 0.1, value: 9.8, unit: 'm/s²',

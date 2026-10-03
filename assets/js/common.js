@@ -492,7 +492,7 @@
         '<div class="sim-tools">' +
           (cfg.audio ? '<button class="btn" type="button" data-act="sound" aria-pressed="false">' + icon('mute') + '<span>Sound off</span></button>' : '') +
           '<button class="btn" type="button" data-act="fullscreen">' + icon('expand') + '<span>Fullscreen</span></button>' +
-          '<button class="btn" type="button" data-act="share">' + icon('link') + '<span>Copy share link</span></button>' +
+          '<button class="btn" type="button" data-act="share">' + icon('link') + '<span>Share link</span></button>' +
         '</div>' +
       '</div>';
 
@@ -534,7 +534,15 @@
           '<div class="sim-canvas-wrap"' + (cfg.mobileAspect ? ' style="--mobile-aspect:' + esc(cfg.mobileAspect) + '"' : '') + '>' +
             '<canvas id="sim-canvas" role="img" aria-label="' + esc(cfg.ariaLabel || entry.title + ' simulation') + '"></canvas>' +
           '</div>' +
-          '<div class="sim-status"><span class="led" aria-hidden="true"></span><span data-status>Paused</span></div>' +
+          '<div class="sim-status"><span class="led" aria-hidden="true"></span><span data-status>Paused</span>' +
+            // Phone/tablet: play + restart stay next to the pinned canvas while the controls scroll
+            (hasTransport
+              ? '<span class="status-mini">' +
+                  '<button class="btn" type="button" data-act="play" data-mini aria-label="Play"></button>' +
+                  '<button class="btn" type="button" data-act="reset" aria-label="Restart simulation">' + icon('reset') + '</button>' +
+                '</span>'
+              : '') +
+          '</div>' +
         '</div>' +
         '<aside class="sim-panel" aria-label="Simulation controls">' +
           transportPanel + buttonsPanel + paramsPanel + readoutsPanel +
@@ -555,7 +563,7 @@
     sim.ctx = sim.canvas.getContext('2d');
     sim.stage = $('#sim-stage');
     var statusEl = $('[data-status]'), statusWrap = $('.sim-status');
-    var playBtn = $('[data-act="play"]');
+    var playBtn = $('.sim-panel [data-act="play"]'), miniPlay = $('[data-mini]');
 
     /* ---------- controls ---------- */
     var controlsEl = $('#sim-controls');
@@ -695,6 +703,10 @@
       if (playBtn) {
         playBtn.innerHTML = on ? icon('pause') + '<span>Pause</span>' : icon('play') + '<span>' + esc(cfg.playLabel || 'Play') + '</span>';
         playBtn.setAttribute('aria-pressed', String(!!on));
+      }
+      if (miniPlay) {
+        miniPlay.innerHTML = icon(on ? 'pause' : 'play');
+        miniPlay.setAttribute('aria-label', on ? 'Pause' : (cfg.playLabel || 'Play'));
       }
       statusWrap.classList.toggle('is-running', sim.running);
       if (cfg.onRunChange) cfg.onRunChange(sim, sim.running);
