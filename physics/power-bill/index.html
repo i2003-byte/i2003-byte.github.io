@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electric Power and the Electricity Bill — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Set how long your fans, fridge, AC and geyser run each day, watch the meter count units for a month and work out the bill in rupees with P = VI and E = P × t.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/power-bill/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Electric Power and the Electricity Bill — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Set how long your fans, fridge, AC and geyser run each day, watch the meter count units for a month and work out the bill in rupees with P = VI and E = P × t.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/power-bill/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="power-bill">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Electric power</strong> is how fast an appliance uses electrical energy, measured in watts (W). A 2000 W geyser uses energy about 200 times faster than a 9 W LED bulb. The <strong>energy</strong> used depends on both the power and how long the appliance runs.</p>
+            <p>Your electricity company does not count joules, which are far too small. It counts <strong>units</strong>: 1 unit is 1 kilowatt-hour (kWh), the energy a 1000 W appliance uses in one hour. The meter outside your home adds up the units, and the bill is units × rate.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">P = V I = I² R = V² ÷ R</code>
+            <p class="formula-note">1 W = 1 V × 1 A. A 1000 W iron on 220 V draws I = 1000 ÷ 220 ≈ 4.5 A and has R = 220² ÷ 1000 ≈ 48 Ω</p>
+            <code class="formula">Energy E = P × t,  1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J</code>
+            <code class="formula">Heat produced H = I² R t  (Joule's law of heating)</code>
+            <ul>
+              <li>Units per day = (watts × hours) ÷ 1000, added up for every appliance.</li>
+              <li>Bill = units × rate in ₹ per unit.</li>
+              <li>Big-wattage appliances (AC, geyser, iron) cost the most even when used for a short time.</li>
+            </ul>
+            <p>Simplification: one flat rate per unit. Real tariffs in India use slabs (each block of units costs more than the one before) and add fixed charges and taxes. Wattages are typical values; the fridge figure is its average power over the hours its compressor runs.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A 9 W LED gives about the same light as a 60 W filament bulb. The rest of the filament bulb's energy becomes heat.</li>
+              <li>A star rating label (BEE) on an AC or fridge tells you how efficient it is; more stars means fewer units for the same job.</li>
+              <li>The heating effect (H = I²Rt) is useful in irons, geysers and toasters, but is wasted energy in fans, motors and wires.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the default settings, how many units does the home use in 30 days, and what is the bill at ₹7?<details><summary>Show answer</summary>About 5.47 units a day, so about 164 units in 30 days, and a bill of about ₹1149.</details></li>
+              <li>Swap the LEDs for old 60 W bulbs. How much more does the month cost?<details><summary>Show answer</summary>The bulbs go from 45 W to 300 W. That is 1.53 kWh more each day, about 46 more units a month, or about ₹321 extra.</details></li>
+              <li>Run the AC for 8 hours a day. Which appliance now uses the most?<details><summary>Show answer</summary>The AC: 1500 W × 8 h = 12 units a day, 360 units a month. It costs more than everything else put together.</details></li>
+              <li>Press Play, then halfway through the month switch the geyser off. What happens to the graph?<details><summary>Show answer</summary>The line becomes less steep. Its slope is the number of units used per day.</details></li>
+              <li>A 2000 W geyser runs for 30 minutes. How much energy is that in units and in joules?<details><summary>Show answer</summary>2 kW × 0.5 h = 1 kWh = 1 unit = 3.6 × 10⁶ J.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Power:</strong> energy used per second, in watts (W).</li>
+              <li><strong>Kilowatt-hour (unit):</strong> the energy used by 1 kW in 1 hour, 3.6 MJ.</li>
+              <li><strong>Power rating:</strong> the power an appliance uses at its rated voltage (220 V in India).</li>
+              <li><strong>Tariff:</strong> the price charged per unit of electricity.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

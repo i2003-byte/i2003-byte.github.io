@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="electricity meter and bill">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="24" y="30" width="130" height="140" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <rect x="38" y="54" width="102" height="34" rx="5" fill="#0b1f12" stroke="#14532d" stroke-width="2"/>
+  <text x="89" y="78" fill="#4ade80" font-family="monospace" font-size="20" font-weight="700" text-anchor="middle">0164.1</text>
+  <circle cx="89" cy="112" r="7" fill="#ef4444"/>
+  <text x="89" y="152" fill="#22d3ee" font-family="sans-serif" font-size="22" font-weight="800" text-anchor="middle">₹1149</text>
+  <g><rect x="176" y="42" width="40" height="18" rx="4" fill="#38bdf8"/><rect x="176" y="70" width="70" height="18" rx="4" fill="#38bdf8"/><rect x="176" y="98" width="120" height="18" rx="4" fill="#fbbf24"/><rect x="176" y="126" width="56" height="18" rx="4" fill="#38bdf8"/><rect x="176" y="154" width="24" height="18" rx="4" fill="#38bdf8"/></g>
+</svg>

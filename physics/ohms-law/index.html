@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ohm's Law and Resistivity — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Record voltmeter and ammeter readings for nichrome, constantan and manganin wires, plot the V–I graph and find R. See how length and thickness change resistance, and why a bulb is not Ohmic.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/ohms-law/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Ohm's Law and Resistivity — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Record voltmeter and ammeter readings for nichrome, constantan and manganin wires, plot the V–I graph and find R. See how length and thickness change resistance, and why a bulb is not Ohmic.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/ohms-law/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ohms-law">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Push harder and more charge flows. For a metal wire kept at the same temperature, the current <em>I</em> through it is <strong>directly proportional</strong> to the potential difference <em>V</em> across it. Double the voltage and the current doubles. This is <strong>Ohm's law</strong>, found by Georg Simon Ohm in 1827.</p>
+            <p>The ratio <em>V</em>/<em>I</em> stays the same for that wire. We call it the wire's <strong>resistance</strong> <em>R</em>, measured in ohms (Ω). So a V–I graph of a metal wire is a <strong>straight line through the origin</strong>, and a steeper line means a smaller resistance.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">V = I × R</code>
+            <p class="formula-note">1 Ω is the resistance of a conductor that lets 1 A flow when 1 V is applied</p>
+            <code class="formula">R = ρ × L ÷ A,  where A = π d² ÷ 4</code>
+            <p class="formula-note">ρ (rho) is the resistivity of the material in Ω m. Nichrome 100 × 10⁻⁸, constantan 49 × 10⁻⁸, manganin 44 × 10⁻⁸, copper only 1.62 × 10⁻⁸</p>
+            <ul>
+              <li>The <strong>ammeter</strong> goes in series (all the current passes through it). The <strong>voltmeter</strong> goes in parallel, across the wire.</li>
+              <li>Longer wire → more resistance (R ∝ L). Thicker wire → less resistance (R ∝ 1/A).</li>
+              <li>Resistance depends on the material and temperature, not on the voltage you apply.</li>
+            </ul>
+            <p>Simplification: the wires are assumed to stay at room temperature. In a real lab, a large current heats the wire and its resistance rises a little, so keep currents small. The torch bulb uses a simple classroom model of a hot filament, not data for a real bulb.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Heater, iron and toaster coils use nichrome: high resistivity, and it does not oxidise (burn) when red hot.</li>
+              <li>Connecting wires and house wiring use copper or aluminium, which have very low resistivity, so they waste little energy.</li>
+              <li>A filament bulb does not obey Ohm's law: its tungsten filament gets about 2000 °C hotter when lit, so its resistance is many times larger than when cold.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With 1 m of 0.3 mm nichrome, record readings at 1.5, 3, 4.5 and 6 V. What shape is the graph, and what is R?<details><summary>Show answer</summary>A straight line through the origin. Every reading gives V/I ≈ 14.1 Ω, and the slope gives the same R.</details></li>
+              <li>Double the length to 2 m. What happens to the current at 3 V?<details><summary>Show answer</summary>It halves, from about 0.21 A to about 0.11 A, because R doubles to about 28.3 Ω. The line on the graph is less steep.</details></li>
+              <li>Go back to 1 m and double the thickness to 0.6 mm. By how much does R change?<details><summary>Show answer</summary>The area is π d²/4, so doubling d makes the area 4 times larger. R becomes one quarter: about 3.5 Ω.</details></li>
+              <li>Switch to the torch bulb and press “Fill 5 readings”. Is the graph a straight line? Work out V/I at 1 V and at 2.5 V.<details><summary>Show answer</summary>No, it bends over. At 1 V, V/I ≈ 1 ÷ 0.173 ≈ 5.8 Ω; at 2.5 V it is 2.5 ÷ 0.3 ≈ 8.3 Ω. The hotter filament has more resistance.</details></li>
+              <li>A nichrome wire and a manganin wire have the same length and thickness. Which gives the steeper V–I line?<details><summary>Show answer</summary>Manganin. Its resistivity (44 × 10⁻⁸ Ω m) is less than nichrome's (100 × 10⁻⁸ Ω m), so its resistance is smaller and more current flows for each volt.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Potential difference (V):</strong> the work done to move 1 coulomb of charge between two points, in volts.</li>
+              <li><strong>Current (I):</strong> the charge flowing per second, in amperes.</li>
+              <li><strong>Resistance (R):</strong> how strongly a conductor opposes the current, in ohms.</li>
+              <li><strong>Resistivity (ρ):</strong> the resistance of a 1 m long, 1 m² cross-section piece of a material; it depends only on the material and temperature.</li>
+              <li><strong>Ohmic conductor:</strong> one whose V–I graph is a straight line through the origin.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

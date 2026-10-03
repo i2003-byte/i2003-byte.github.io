@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="resistors in series and parallel">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <g fill="none" stroke="#cbd5e1" stroke-width="3" stroke-linejoin="round">
+    <path d="M40 40H280V170H175M145 170H40V40"/>
+    <path d="M90 100H230M90 40V170M230 40V170"/>
+  </g>
+  <g fill="none" stroke-width="3" stroke-linejoin="round">
+    <path d="M120 40l5-9 10 18 10-18 10 18 10-18 10 18 10-18 5 9" stroke="#38bdf8"/>
+    <path d="M120 100l5-9 10 18 10-18 10 18 10-18 10 18 10-18 5 9" stroke="#f472b6"/>
+  </g>
+  <line x1="152" y1="156" x2="152" y2="184" stroke="#f1f5f9" stroke-width="3"/><line x1="166" y1="163" x2="166" y2="177" stroke="#f1f5f9" stroke-width="6"/>
+  <g fill="#fbbf24"><circle cx="60" cy="40" r="4"/><circle cx="260" cy="40" r="4"/><circle cx="250" cy="100" r="4"/><circle cx="70" cy="100" r="4"/><circle cx="90" cy="140" r="4"/><circle cx="230" cy="80" r="4"/></g>
+</svg>

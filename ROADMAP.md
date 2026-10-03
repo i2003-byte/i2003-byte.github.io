@@ -23,18 +23,17 @@
 | 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 0 | 0 | 0 | 3 (Earth's motions 3) | 0 | 0 |
 | 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 0 | 0 | 0 | 0 | 0 | 0 |
-| 10 | 6 (Light: reflection and refraction 3, Human eye and the colourful world 3) | 0 | 0 | 0 | 0 | 0 | 0 |
+| 10 | 10 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 1) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 11 | 2 (projectile, pendulum) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 68**
+**Total live simulations: 72**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
+- [~] **Class 10 · Physics · Magnetic effects of current.** Branch `electricity`. Done: magnetic-field-lines (bar magnet, two magnets, straight wire with right-hand thumb rule). Next: (1) circular loop and solenoid field with the right-hand thumb rule (`solenoid-field`); (2) electric motor and generator with Fleming's rules (`motor-generator`, could also show electromagnetic induction / galvanometer kick). Started 2026-10-03.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 10 · Physics · Electricity.** Branch `electricity`. Sims: Ohm's law V–I graph; resistors in series and parallel; heating effect and electric power bill (₹ per unit).
-- [ ] **Class 10 · Physics · Magnetic effects of current.** Branch `electricity`. Sims: magnetic field lines of a bar magnet and wire; right-hand thumb rule / solenoid; electric motor and generator.
 - [ ] **Class 11 · Physics · Oscillations.** Branch `mechanics`. Sims: build out the `spring-mass` placeholder (SHM); SHM as a projection of circular motion; damped and forced oscillation / resonance.
 - [ ] **Class 11 · Physics · Gravitation.** Branch `mechanics`. Sims: build out the `planetary-orbits` placeholder (Kepler's laws); escape velocity launcher; satellite orbits and geostationary height.
 - [ ] **Class 11 · Physics · Waves.** Branch `waves`. Sims: transverse vs longitudinal waves; standing waves on a string (harmonics); beats and the Doppler effect.
@@ -52,6 +51,7 @@ _None yet._
 _None yet._
 
 ## ✅ Done
+- [x] **Class 10 · Physics · Electricity.** 3 sims: ohms-law (with resistivity and a non-Ohmic bulb), series-parallel, power-bill. Done 2026-10-03.
 - [x] **Class 10 · Physics · Human eye and the colourful world.** 3 sims: eye-accommodation, eye-defects, prism-dispersion (prism dispersion and Rayleigh scattering in one, with a mode switch). Done 2026-10-02.
 - [x] **Class 10 · Physics · Light: reflection and refraction.** 3 sims: ray-optics (spherical mirrors), refraction-glass-slab, lens-images. Done 2026-10-02.
 - [x] **Class 9 · Physics · Work, energy and power.** 3 sims: work-done, energy-roller-coaster, power-race. Done 2026-10-02.

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="Ohm's law V-I graph">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <line x1="60" y1="170" x2="295" y2="170" stroke="#94a3b8" stroke-width="2"/><line x1="60" y1="170" x2="60" y2="25" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="60" y1="170" x2="285" y2="40" stroke="#a78bfa" stroke-width="3"/>
+  <path d="M60 170Q140 70 285 95" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="6 5"/>
+  <g fill="#22d3ee" stroke="#0c1a3a" stroke-width="2"><circle cx="105" cy="144" r="6"/><circle cx="150" cy="118" r="6"/><circle cx="195" cy="92" r="6"/><circle cx="240" cy="66" r="6"/></g>
+  <text x="290" y="188" fill="#cbd5e1" font-family="sans-serif" font-size="14" text-anchor="end">V</text>
+  <text x="44" y="34" fill="#cbd5e1" font-family="sans-serif" font-size="14">I</text>
+  <text x="80" y="48" fill="#f1f5f9" font-family="sans-serif" font-size="22" font-weight="700">V = IR</text>
+</svg>

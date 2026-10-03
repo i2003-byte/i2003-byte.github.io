@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Resistors in Series and Parallel — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Join two or three resistors in series or in parallel. Watch the current split or stay the same, see the voltage shared, and check R = R₁ + R₂ + R₃ and 1/R = 1/R₁ + 1/R₂ + 1/R₃.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/series-parallel/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Resistors in Series and Parallel — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Join two or three resistors in series or in parallel. Watch the current split or stay the same, see the voltage shared, and check R = R₁ + R₂ + R₃ and 1/R = 1/R₁ + 1/R₂ + 1/R₃.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/series-parallel/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="series-parallel">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Resistors can be joined in two basic ways. In <strong>series</strong> they sit one after another, so the same charges pass through every one of them: the <strong>current is the same</strong> everywhere and the battery's voltage is <strong>shared</strong> between them. In <strong>parallel</strong> each resistor has its own path between the same two points, so each gets the <strong>full voltage</strong> and the battery's current <strong>splits</strong> between the paths.</p>
+            <p>Adding resistors in series makes the total resistance bigger. Adding them in parallel gives the current more paths, so the total resistance becomes <em>smaller than the smallest one</em>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Series: R = R₁ + R₂ + R₃</code>
+            <p class="formula-note">same current I = V ÷ R through each; V = V₁ + V₂ + V₃, with Vₖ = I Rₖ</p>
+            <code class="formula">Parallel: 1/R = 1/R₁ + 1/R₂ + 1/R₃</code>
+            <p class="formula-note">same voltage V across each; I = I₁ + I₂ + I₃, with Iₖ = V ÷ Rₖ</p>
+            <ul>
+              <li>In series, the biggest resistor takes the biggest share of the voltage.</li>
+              <li>In parallel, the smallest resistor carries the biggest current.</li>
+              <li>For two resistors in parallel, R = R₁R₂ ÷ (R₁ + R₂). Two equal resistors in parallel give half of one.</li>
+            </ul>
+            <p>Simplification: the battery, wires and meters are ideal (no resistance of their own), so the full battery voltage reaches the resistors.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Everything in your home is wired in parallel: each appliance gets the full 220 V and can be switched on and off on its own.</li>
+              <li>Cheap decorative “serial” lights are in series: when one bulb fails, the whole string goes dark.</li>
+              <li>Switching on more appliances adds more parallel paths, so the total resistance falls and the current from the mains rises. That is why overloading blows a fuse.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In series with 6 V and R₁ = 5, R₂ = 10, R₃ = 15 Ω, find R, I and the voltage across each.<details><summary>Show answer</summary>R = 30 Ω, I = 6 ÷ 30 = 0.2 A. V₁ = 1 V, V₂ = 2 V, V₃ = 3 V, which add up to 6 V.</details></li>
+              <li>Switch to parallel with the same resistors. What is the total current, and which resistor carries the most?<details><summary>Show answer</summary>1/R = 1/5 + 1/10 + 1/15, so R ≈ 2.73 Ω and I = 2.2 A. R₁ (5 Ω) carries the most: 1.2 A, then 0.6 A and 0.4 A.</details></li>
+              <li>Turn on “Break R₂” in series and then in parallel. What is different?<details><summary>Show answer</summary>In series all the current stops, and the full 6 V appears across the gap. In parallel only R₂'s branch stops; the other two carry the same current as before.</details></li>
+              <li>In parallel, untick R₃ and set R₁ = R₂ = 10 Ω. What is R?<details><summary>Show answer</summary>5 Ω: two equal resistors in parallel give half of one.</details></li>
+              <li>Is the parallel total ever larger than the smallest resistor? Try a few values.<details><summary>Show answer</summary>Never. Each new path lets more current flow, so R is always less than the smallest single resistance.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Series:</strong> components joined end to end in a single path.</li>
+              <li><strong>Parallel:</strong> components joined between the same two points, each in its own branch.</li>
+              <li><strong>Equivalent resistance:</strong> the single resistance that would draw the same current from the battery.</li>
+              <li><strong>Junction:</strong> a point where the current splits or joins; the current in equals the current out.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

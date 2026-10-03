@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="magnetic field lines of a bar magnet">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1a3a"/><stop offset="1" stop-color="#15315f"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs><rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <g fill="none" stroke="#7dd3fc" stroke-width="2">
+    <path d="M205 100C255 100 300 60 300 20"/><path d="M115 100C65 100 20 60 20 20"/>
+    <path d="M205 92C240 40 80 40 115 92"/><path d="M205 108C240 160 80 160 115 108"/>
+    <path d="M205 86C260 -10 60 -10 115 86"/><path d="M205 114C260 210 60 210 115 114"/>
+    <path d="M205 100C255 100 300 140 300 180"/><path d="M115 100C65 100 20 140 20 180"/>
+  </g>
+  <rect x="100" y="86" width="60" height="28" rx="3" fill="#2563eb"/><rect x="160" y="86" width="60" height="28" rx="3" fill="#dc2626"/>
+  <text x="130" y="106" fill="#fff" font-family="sans-serif" font-size="17" font-weight="800" text-anchor="middle">S</text>
+  <text x="190" y="106" fill="#fff" font-family="sans-serif" font-size="17" font-weight="800" text-anchor="middle">N</text>
+  <circle cx="160" cy="34" r="16" fill="#0f172a" stroke="#e2e8f0" stroke-width="2"/>
+  <path d="M146 34l14-5v10z" fill="#ef4444"/><path d="M174 34l-14-5v10z" fill="#e2e8f0"/>
+</svg>

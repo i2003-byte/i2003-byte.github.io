@@ -1325,6 +1325,70 @@ SimLab.simulations = [
     dateAdded: '2026-10-02',
     prerequisites: ['refraction-glass-slab']
   },
+  {
+    id: 'ohms-law',
+    subject: 'physics',
+    branch: 'electricity',
+    title: "Ohm's Law and Resistivity",
+    description:
+      'Record voltmeter and ammeter readings for nichrome, constantan and manganin wires, plot the V–I graph and find R. See how length and thickness change resistance, and why a bulb is not Ohmic.',
+    level: 'Intermediate',
+    tags: ['ohms law', 'resistance', 'resistivity', 'v-i graph', 'ammeter', 'voltmeter', 'nichrome', 'current', 'potential difference', 'class 10'],
+    thumbnail: '/assets/img/thumbs/ohms-law.svg',
+    link: '/physics/ohms-law/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['electric-circuit']
+  },
+  {
+    id: 'series-parallel',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Resistors in Series and Parallel',
+    description:
+      'Join two or three resistors in series or in parallel. Watch the current split or stay the same, see the voltage shared, and check R = R₁ + R₂ + R₃ and 1/R = 1/R₁ + 1/R₂ + 1/R₃.',
+    level: 'Intermediate',
+    tags: ['series', 'parallel', 'resistors', 'equivalent resistance', 'current', 'voltage', 'circuit', 'class 10'],
+    thumbnail: '/assets/img/thumbs/series-parallel.svg',
+    link: '/physics/series-parallel/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['ohms-law']
+  },
+  {
+    id: 'power-bill',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Electric Power and the Electricity Bill',
+    description:
+      'Set how long your fans, fridge, AC and geyser run each day, watch the meter count units for a month and work out the bill in rupees with P = VI and E = P × t.',
+    level: 'Beginner',
+    tags: ['electric power', 'energy', 'kilowatt hour', 'unit', 'electricity bill', 'heating effect', 'joule', 'watt', 'class 10'],
+    thumbnail: '/assets/img/thumbs/power-bill.svg',
+    link: '/physics/power-bill/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['ohms-law', 'heating-fuse']
+  },
+  {
+    id: 'magnetic-field-lines',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Magnetic Field Lines: Magnets and a Wire',
+    description:
+      'See field lines round a bar magnet, two magnets that attract or repel, and a straight wire carrying current. Sprinkle iron filings, drag a compass and test the right-hand thumb rule.',
+    level: 'Intermediate',
+    tags: ['magnetic field', 'field lines', 'bar magnet', 'compass', 'iron filings', 'right hand thumb rule', 'oersted', 'current', 'class 10'],
+    thumbnail: '/assets/img/thumbs/magnetic-field-lines.svg',
+    link: '/physics/magnetic-field-lines/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['electromagnet']
+  },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {

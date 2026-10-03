@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Magnetic Field Lines: Magnets and a Wire — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See field lines round a bar magnet, two magnets that attract or repel, and a straight wire carrying current. Sprinkle iron filings, drag a compass and test the right-hand thumb rule.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/magnetic-field-lines/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Magnetic Field Lines: Magnets and a Wire — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See field lines round a bar magnet, two magnets that attract or repel, and a straight wire carrying current. Sprinkle iron filings, drag a compass and test the right-hand thumb rule.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/magnetic-field-lines/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="magnetic-field-lines">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A magnet affects the space around it: this region is its <strong>magnetic field</strong>. We picture it with <strong>field lines</strong>. A small compass placed anywhere points along the line through that spot, and its north end shows the direction of the field.</p>
+            <p>In 1820 Hans Christian Ørsted noticed that a compass needle moves when current flows in a nearby wire. So an <strong>electric current also makes a magnetic field</strong>. Around a straight wire the lines are circles, and their direction is given by the <strong>right-hand thumb rule</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <ul>
+              <li>Outside a magnet, field lines go from the <strong>N pole to the S pole</strong>. Inside the magnet they go from S to N, so every line is a closed loop.</li>
+              <li>Lines are <strong>closer together where the field is stronger</strong> (near the poles).</li>
+              <li>Two field lines <strong>never cross</strong>: if they did, a compass there would have to point two ways at once.</li>
+              <li><strong>Right-hand thumb rule:</strong> hold the wire in your right hand with the thumb along the current. Your curled fingers show the direction of the field lines.</li>
+            </ul>
+            <code class="formula">B = μ₀ I ÷ (2π r) = 2 × 10⁻⁷ × I ÷ r  tesla</code>
+            <p class="formula-note">For a long straight wire: the field doubles if the current doubles, and halves if you go twice as far away. (This formula is Class 12; in Class 10 just remember B ∝ I and B gets weaker with distance.)</p>
+            <p>Simplification: each bar magnet is modelled as two poles near its ends, and the Earth's own field (about 45 μT in India) is left out. Field strength for the magnets is shown relative to the field one magnet-length beyond the N end of a single magnet.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Sprinkle iron filings on a sheet of paper over a magnet and tap it gently: the filings line up along the field lines.</li>
+              <li>A navigation compass works because the Earth behaves like a giant magnet whose S pole is near the geographic North.</li>
+              <li>Power cables carry large currents, so a compass held close to one may not point north.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drag the compass all round the single bar magnet. Where does its N end point at each end of the magnet?<details><summary>Show answer</summary>Near the N pole it points away from the magnet; near the S pole it points towards the magnet. Along the side, it points from the N end towards the S end.</details></li>
+              <li>Choose “N facing N”. What happens to the field at the middle, between the two magnets?<details><summary>Show answer</summary>The two fields cancel, so there is a neutral point with no field. The compass there has nothing to line up with, and the lines bend away from each other.</details></li>
+              <li>Choose “N facing S”. How do the lines in the gap look compared with the single magnet?<details><summary>Show answer</summary>They go straight across the gap from N to S and are packed closely, so the field in the gap is strong and nearly uniform.</details></li>
+              <li>Switch to the wire with 5 A out of the screen. Put the compass 5 cm from the wire (a quarter of the short side). What is B? Now double the current.<details><summary>Show answer</summary>B = 2 × 10⁻⁷ × 5 ÷ 0.05 = 20 μT. With 10 A it becomes 40 μT, and twice as many circles appear.</details></li>
+              <li>Reverse the current. What happens to the compass and the circles?<details><summary>Show answer</summary>The circles stay the same, but the field now runs clockwise, so the compass needle turns round to point the opposite way.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Magnetic field:</strong> the region round a magnet or a current where a magnetic force can be felt.</li>
+              <li><strong>Field line:</strong> the path a free north pole would follow; its tangent gives the field direction.</li>
+              <li><strong>Neutral point:</strong> a point where fields cancel and the total field is zero.</li>
+              <li><strong>Tesla (T):</strong> the SI unit of magnetic field; 1 μT is a millionth of a tesla.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
