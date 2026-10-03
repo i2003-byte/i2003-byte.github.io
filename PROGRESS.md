@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-03 · routine · Class 10 Magnetic effects of current (finished) + Class 11 Oscillations (started)
+- Built/changed: `solenoid-field` (cut-away view of a circular loop or solenoid; exact 3-D field of every turn from elliptic integrals, checked against a numerical Biot–Savart sum; N/S ends by the clock rule; draggable compass; centre B vs μ₀NI/2r or μ₀nI); `motor-generator` (end-on coil between magnets: DC motor with back emf and split ring, AC generator with slip rings, DC generator with split ring; F = BIl and velocity arrows, side view of rings and brushes, meter and bulb; 50× slow motion, graph in real ms, 3000 rpm = 50 Hz); `spring-mass` (placeholder built out: horizontal spring on a smooth table, Hooke's law, T = 2π√(m/k), measured period, energy bars, damping, drag the block); `shm-circular` (reference circle, shadow on the diameter, block on a spring in step, paper-strip trace, x/A, v/Aω, a/Aω² graph). Catalog, thumbnails (new spring-mass thumb), README, AGENTS updated.
+- Checks: ✅ check.mjs passed · ✅ browser-test (4 pages, phone + desktop) · combined screenshots reviewed at 375px, 360×640 and 1366px, light and dark (fixed: phone horizontal scroll from long graph legend, hidden circuit panel on phones, label clashes)
+- Roadmap: Class 10 Magnetic effects of current → Done; Class 11 Oscillations → In progress (2 of 3)
+- Next time: finish Oscillations with `resonance` (damped and forced oscillation), then Class 11 Gravitation (build out `planetary-orbits`)
+- Problems/notes: feedback: no open issues. Motor no-load speed is set by back emf (≈ proportional to V; a stronger magnet gives more starting torque but a lower top speed), explained in Learn. On 640px-tall phones the shm-circular paper strip is hidden (not enough height)
+
 ## 2026-10-03 · fix · Phone experience: simulation stays in view
 - Built/changed: `style.css` + `common.js` (all simulations at once): on phones and tablets the canvas is pinned under the header while controls, readouts and buttons scroll beneath it, so every slider change is seen live; small Play/Pause + Restart buttons beside the status line; canvas height capped at 46% of the screen at full width; compact title on phones (2-line description, no repeated breadcrumb); keyboard tips hidden on touch screens; "Copy share link" → "Share link" so the buttons fit one row. Desktop layout unchanged.
 - Checks: ✅ check.mjs passed · ✅ browser-test (all pages, phone + desktop); screenshots reviewed at 390×844 and 360×640 (projectile, guitar-string, sorting-race, demand-curve) and 1366 desktop

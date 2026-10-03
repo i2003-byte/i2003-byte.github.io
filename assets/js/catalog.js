@@ -1389,23 +1389,71 @@ SimLab.simulations = [
     dateAdded: '2026-10-03',
     prerequisites: ['electromagnet']
   },
-
-  /* ---- Placeholders: planned simulations (coming soon) ---------------- */
+  {
+    id: 'solenoid-field',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Magnetic Field of a Loop and a Solenoid',
+    description:
+      "See the magnetic field of a current-carrying circular loop and a solenoid in a cut-away view. Change the turns, current and size, find the N and S ends and measure the field with a compass.",
+    level: 'Intermediate',
+    tags: ['solenoid', 'circular loop', 'magnetic field', 'right hand thumb rule', 'clock rule', 'electromagnet', 'field lines', 'class 10'],
+    thumbnail: '/assets/img/thumbs/solenoid-field.svg',
+    link: '/physics/solenoid-field/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['magnetic-field-lines']
+  },
+  {
+    id: 'motor-generator',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Electric Motor and Generator',
+    description:
+      "Watch a coil turn between magnets as a DC motor, then turn it yourself as an AC or DC generator. See the split ring and slip rings at work and test Fleming's left- and right-hand rules.",
+    level: 'Intermediate',
+    tags: ['electric motor', 'generator', 'dynamo', 'electromagnetic induction', 'fleming', 'commutator', 'split ring', 'slip rings', 'ac', 'dc', 'class 10'],
+    thumbnail: '/assets/img/thumbs/motor-generator.svg',
+    link: '/physics/motor-generator/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['solenoid-field']
+  },
   {
     id: 'spring-mass',
     subject: 'physics',
     branch: 'mechanics',
     title: 'Spring–Mass Oscillator',
-    description: "Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion.",
-    level: 'Beginner',
-    tags: ['hooke', 'spring', 'oscillation', 'harmonic', 'energy'],
+    description: "Pull a block on a spring and let it go. Explore Hooke's law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping.",
+    level: 'Intermediate',
+    tags: ['hooke', 'spring', 'oscillation', 'simple harmonic motion', 'shm', 'period', 'energy', 'damping', 'class 11'],
     thumbnail: '/assets/img/thumbs/spring-mass.svg',
     link: '/physics/spring-mass/',
-    status: 'coming-soon',
+    status: 'live',
     featured: false,
-    dateAdded: '2026-10-15',
+    dateAdded: '2026-10-03',
     prerequisites: ['pendulum']
   },
+  {
+    id: 'shm-circular',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'SHM and Uniform Circular Motion',
+    description:
+      "Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a.",
+    level: 'Advanced',
+    tags: ['shm', 'simple harmonic motion', 'circular motion', 'phase', 'angular frequency', 'oscillation', 'reference circle', 'class 11'],
+    thumbnail: '/assets/img/thumbs/shm-circular.svg',
+    link: '/physics/shm-circular/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-03',
+    prerequisites: ['spring-mass', 'circular-motion']
+  },
+
+  /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
     id: 'wave-interference',
     subject: 'physics',

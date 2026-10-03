@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Magnetic Field of a Loop and a Solenoid — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See the magnetic field of a current-carrying circular loop and a solenoid in a cut-away view. Change the turns, current and size, find the N and S ends and measure the field with a compass.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/solenoid-field/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Magnetic Field of a Loop and a Solenoid — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See the magnetic field of a current-carrying circular loop and a solenoid in a cut-away view. Change the turns, current and size, find the N and S ends and measure the field with a compass.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/solenoid-field/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="solenoid-field">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Bend a current-carrying wire into a <strong>circle</strong> and the field circles from every bit of the wire all point the same way through the middle. So the field inside a loop is much stronger than round a straight wire. Wind many turns one after another along a tube and you get a <strong>solenoid</strong>. Inside it the field lines are <strong>straight, parallel and evenly spaced</strong>: the field is uniform. Outside, the solenoid behaves just like a bar magnet with a north and a south end.</p>
+            <p>The picture is a <strong>cut-away view</strong>: imagine slicing the coil along its axis. Each turn then shows up as two dots, where the wire passes through the slice going one way at the top (⊙ out of the screen) and the other way at the bottom (⊗ into the screen).</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <ul>
+              <li><strong>Right-hand thumb rule:</strong> thumb along the current in any small piece of wire, fingers curl along the field round it. Inside the loop, all these curls point the same way.</li>
+              <li><strong>Which end is north?</strong> Look at one end of the coil. If the current flows <strong>anticlockwise</strong>, that end is a <strong>north</strong> pole; if clockwise, it is a south pole. (Or curl the fingers of your right hand along the current: your thumb points to the N end.)</li>
+              <li>The field gets stronger with <strong>more turns</strong> and <strong>more current</strong>.</li>
+            </ul>
+            <code class="formula">Centre of a loop of N turns:  B = μ₀ N I ÷ (2r)</code>
+            <code class="formula">Inside a long solenoid:  B = μ₀ n I,  where n = N ÷ length</code>
+            <p class="formula-note">μ₀ = 4π × 10⁻⁷ T m/A. These formulas are Class 12; in Class 10 just remember that B grows with N and I. A smaller loop gives a stronger field at its centre. For a solenoid, only the turns per metre matter, not the radius, as long as it is long and thin.</p>
+            <p>The simulation computes the exact field of every turn (each turn is treated as a perfect circle, and the coil is in air with no iron core). That is why the centre value is a little <em>less</em> than μ₀nI for a short, fat solenoid: the formula assumes an endlessly long one.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Put a soft iron rod inside a solenoid and you have an <strong>electromagnet</strong>: used in electric bells, cranes in scrap yards and relays.</li>
+              <li>The uniform field inside a huge solenoid is used in hospital <strong>MRI scanners</strong>.</li>
+              <li>Loudspeakers, door locks and car starters all use small coils of wire.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drag the compass through the inside of the solenoid, then round the outside. How does the field inside compare with the field near the ends?<details><summary>Show answer</summary>Inside, the compass keeps pointing the same way and the field hardly changes: it is uniform. Outside, the lines spread out like those of a bar magnet, and the field is much weaker.</details></li>
+              <li>Choose the circular loop with 10 turns, 2 A and r = 5 cm. What is B at the centre?<details><summary>Show answer</summary>B = 4π × 10⁻⁷ × 10 × 2 ÷ (2 × 0.05) ≈ 2.5 × 10⁻⁴ T = 251 μT.</details></li>
+              <li>Set the solenoid to 30 turns, 10 cm long, 2 A. Predict B with μ₀nI, then compare with the simulation for r = 1.5 cm and r = 6 cm.<details><summary>Show answer</summary>n = 30 ÷ 0.10 = 300 turns per metre, so μ₀nI ≈ 754 μT. A thin coil (r = 1.5 cm) gives about 720 μT, close to this. A fat coil (r = 6 cm) is not “long” compared with its width, so its centre field is only about 480 μT.</details></li>
+              <li>Reverse the current. What happens to the poles and the compass?<details><summary>Show answer</summary>The N and S ends swap, every field line reverses, and the compass needle turns round.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Solenoid:</strong> a coil of many circular turns of insulated wire wound close together on a tube.</li>
+              <li><strong>Uniform field:</strong> a field with the same strength and direction everywhere in a region; its lines are parallel and evenly spaced.</li>
+              <li><strong>Electromagnet:</strong> a solenoid with a soft iron core; it is a magnet only while current flows.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

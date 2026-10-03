@@ -37,7 +37,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Work Done: W = F s cos θ](https://i2003-byte.github.io/physics/work-done/): Move a box with a force at any angle. Only the part of the force along the motion does work; see positive, zero and negative work and the area under a force–distance graph. (Beginner)
 - [Roller Coaster: Potential and Kinetic Energy](https://i2003-byte.github.io/physics/energy-roller-coaster/): Release a cart from any height and watch PE turn into KE and back. Live energy bars show the total staying constant, and friction turning some of it into heat. (Beginner)
 - [Power Race: Same Work, Different Time](https://i2003-byte.github.io/physics/power-race/): A walker, a runner and a motor lift raise the same mass up the same height. Same work, different power: P = W ÷ t in watts and horsepower, plus kWh and the electricity bill in ₹. (Beginner)
-- [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/): Stretch a spring, release the mass and explore Hooke's law and simple harmonic motion. (Beginner, coming soon)
+- [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/spring-mass/): Pull a block on a spring and let it go. Explore Hooke's law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping. (Intermediate)
+- [SHM and Uniform Circular Motion](https://i2003-byte.github.io/physics/shm-circular/): Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a. (Advanced)
 - [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
 
 ### Sound Lab
@@ -85,6 +86,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Resistors in Series and Parallel](https://i2003-byte.github.io/physics/series-parallel/): Join two or three resistors in series or in parallel. Watch the current split or stay the same, see the voltage shared, and check R = R₁ + R₂ + R₃ and 1/R = 1/R₁ + 1/R₂ + 1/R₃. (Intermediate)
 - [Electric Power and the Electricity Bill](https://i2003-byte.github.io/physics/power-bill/): Set how long your fans, fridge, AC and geyser run each day, watch the meter count units for a month and work out the bill in rupees with P = VI and E = P × t. (Beginner)
 - [Magnetic Field Lines: Magnets and a Wire](https://i2003-byte.github.io/physics/magnetic-field-lines/): See field lines round a bar magnet, two magnets that attract or repel, and a straight wire carrying current. Sprinkle iron filings, drag a compass and test the right-hand thumb rule. (Intermediate)
+- [Magnetic Field of a Loop and a Solenoid](https://i2003-byte.github.io/physics/solenoid-field/): See the magnetic field of a current-carrying circular loop and a solenoid in a cut-away view. Change the turns, current and size, find the N and S ends and measure the field with a compass. (Intermediate)
+- [Electric Motor and Generator](https://i2003-byte.github.io/physics/motor-generator/): Watch a coil turn between magnets as a DC motor, then turn it yourself as an AC or DC generator. See the split ring and slip rings at work and test Fleming's left- and right-hand rules. (Intermediate)
 - [Electric Fields](https://i2003-byte.github.io/physics/): Drop positive and negative charges and visualise field lines and equipotentials. (Advanced, coming soon)
 
 ### Thermodynamics

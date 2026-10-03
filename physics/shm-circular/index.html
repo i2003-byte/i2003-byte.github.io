@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SHM and Uniform Circular Motion — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/shm-circular/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="SHM and Uniform Circular Motion — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/shm-circular/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="shm-circular">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Shine a light from above on a ball going round a circle at a steady speed. Its <strong>shadow</strong> on the floor slides back and forth along a straight line, fast in the middle and slow at the ends. That back-and-forth motion is exactly <strong>simple harmonic motion (SHM)</strong>, the same motion as a block on a spring.</p>
+            <p>This link is very useful: the radius of the circle is the <strong>amplitude</strong>, the time for one turn is the <strong>period</strong>, and the angle of the point is the <strong>phase</strong>. Everything about SHM can be read off the circle.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">θ = ωt + φ,   ω = 2π ÷ T = 2πf</code>
+            <code class="formula">x = A cos(ωt + φ)    v = −Aω sin(ωt + φ)    a = −ω² x</code>
+            <p class="formula-note">The point P has speed Aω along the tangent and a centripetal acceleration Aω² towards the centre. The shadow only gets the horizontal part of each. So v<sub>max</sub> = Aω (at x = 0) and a<sub>max</sub> = Aω² (at x = ±A).</p>
+            <p><strong>a = −ω²x</strong> is the test for SHM: the acceleration is proportional to the displacement and points the other way, back to the centre. On the graph, v is a quarter cycle ahead of x, and a is exactly opposite to x.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In a sewing machine or a car engine, a wheel turning in a circle drives a needle or piston up and down: circular motion becomes nearly simple harmonic motion.</li>
+              <li>Seen edge-on from Earth, Jupiter's moons appear to swing from side to side of the planet in SHM, because they really go round it in near-circles.</li>
+              <li>AC electricity is described with the same rotating picture (phasors) in Class 12.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With A = 10 cm and T = 3 s, find ω, the top speed and the biggest acceleration of the shadow.<details><summary>Show answer</summary>ω = 2π ÷ 3 ≈ 2.09 rad/s. v<sub>max</sub> = Aω ≈ 20.9 cm/s, at the centre. a<sub>max</sub> = Aω² ≈ 43.9 cm/s², at the ends.</details></li>
+              <li>Pause when P is at the top of the circle (θ = 90°). Where is the shadow, and what are its v and a?<details><summary>Show answer</summary>The shadow is at x = 0. P's velocity points straight left, so the shadow moves at the full speed Aω. P's acceleration points straight down, which has no horizontal part, so the shadow's acceleration is zero.</details></li>
+              <li>Set the phase φ to 90°. How does the start change?<details><summary>Show answer</summary>Now P starts at the top, so the shadow starts at the centre moving left, instead of at the right end at rest. The motion is the same, just shifted by a quarter period.</details></li>
+              <li>Look at the graph. Which curve reaches its peak first, x or v?<details><summary>Show answer</summary>v peaks a quarter period before x does: v leads x by 90°. a is always the mirror image of x (a = −ω²x).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Reference circle:</strong> the circle whose shadow gives the SHM.</li>
+              <li><strong>Angular frequency (ω):</strong> the angle turned per second, in rad/s.</li>
+              <li><strong>Phase:</strong> the angle ωt + φ that tells where in its cycle the motion is; φ is the starting phase.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

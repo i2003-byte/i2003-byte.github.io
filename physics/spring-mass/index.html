@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Spring–Mass Oscillator — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Pull a block on a spring and let it go. Explore Hooke&#x27;s law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/spring-mass/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Spring–Mass Oscillator — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Pull a block on a spring and let it go. Explore Hooke&#x27;s law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/spring-mass/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="spring-mass">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Pull the block and let go. The stretched spring pulls it back towards the middle, it overshoots, the squashed spring pushes it back, and so on. The force always points back towards the <strong>equilibrium position</strong> (x = 0) and grows in step with how far the block is from it. Any motion with this kind of force is called <strong>simple harmonic motion (SHM)</strong>.</p>
+            <p>Energy keeps changing form: at the ends it is all stored in the spring (potential energy), at the middle it is all kinetic energy. Without friction the total stays the same, so the block swings for ever with the same <strong>amplitude</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Hooke's law:  F = −k x</code>
+            <code class="formula">Period:  T = 2π √(m ÷ k)      Frequency:  f = 1 ÷ T</code>
+            <code class="formula">Energy:  ½ m v² + ½ k x² = ½ k A²</code>
+            <p class="formula-note">k is the spring constant in N/m: the force needed to stretch the spring by 1 m. The minus sign means the force is opposite to the displacement. Notice that the period does <strong>not</strong> depend on the amplitude: big swings and small swings take the same time.</p>
+            <p>Simplifications: the spring has no mass and obeys Hooke's law exactly, and the table has no friction. The damping slider adds a drag force −bv, like air resistance.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The shock absorbers on a scooter or auto-rickshaw are springs with damping, so the ride does not keep bouncing after a pothole.</li>
+              <li>A spring balance at a vegetable shop uses Hooke's law: the stretch is proportional to the weight.</li>
+              <li>Atoms in a solid vibrate as if joined by tiny springs; this is how sound and heat travel through solids.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With k = 20 N/m and m = 0.5 kg, work out T, then check the measured period.<details><summary>Show answer</summary>T = 2π √(0.5 ÷ 20) = 2π × 0.158 ≈ 0.99 s.</details></li>
+              <li>Change the amplitude from 10 cm to 20 cm. Does the period change?<details><summary>Show answer</summary>No. The block goes twice as far but also moves twice as fast, so each swing still takes about 0.99 s. The energy, though, becomes four times as much, because it depends on A².</details></li>
+              <li>How must you change the mass to double the period?<details><summary>Show answer</summary>Make it four times as big (0.5 kg → 2 kg), because T depends on √m. Making the spring four times weaker does the same.</details></li>
+              <li>Where is the block fastest, and where is the force largest? Watch the arrows.<details><summary>Show answer</summary>Fastest at x = 0, where there is no force at all. The force (and the acceleration) is largest at the turning points ±A, where the block stops for an instant. Here v_max = ωA = √(20 ÷ 0.5) × 0.10 ≈ 0.63 m/s.</details></li>
+              <li>Turn the damping up to 0.5 kg/s. What happens to the amplitude and the total energy?<details><summary>Show answer</summary>Both die away: each swing is a bit smaller than the one before, and the lost energy becomes heat in the air. The period stays almost the same.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Amplitude (A):</strong> the largest displacement from the equilibrium position.</li>
+              <li><strong>Period (T):</strong> the time for one complete back-and-forth oscillation.</li>
+              <li><strong>Restoring force:</strong> a force that always acts back towards the equilibrium position.</li>
+              <li><strong>Damping:</strong> the gradual loss of energy that makes oscillations die away.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

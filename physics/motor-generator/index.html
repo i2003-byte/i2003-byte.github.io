@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electric Motor and Generator — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch a coil turn between magnets as a DC motor, then turn it yourself as an AC or DC generator. See the split ring and slip rings at work and test Fleming&#x27;s left- and right-hand rules.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/motor-generator/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Electric Motor and Generator — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch a coil turn between magnets as a DC motor, then turn it yourself as an AC or DC generator. See the split ring and slip rings at work and test Fleming&#x27;s left- and right-hand rules.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/motor-generator/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="motor-generator">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A wire carrying current across a magnetic field feels a <strong>force</strong>. In an <strong>electric motor</strong> the two long sides of a coil carry current in opposite directions, so one side is pushed up and the other down: the coil turns. Electrical energy becomes kinetic energy.</p>
+            <p>Run it backwards and you have a <strong>generator</strong>. Turn the coil by hand, with water or with steam, and its sides cut across the field lines. This <strong>induces</strong> a current: kinetic energy becomes electrical energy. This is <strong>electromagnetic induction</strong>, found by Michael Faraday in 1831.</p>
+            <p>You are looking along the axle, so you see the coil edge-on: AB and CD are its two long sides, and ⊙ / ⊗ show current coming out of or going into the screen. The panel beside it shows the rings and brushes that connect the spinning coil to the outside circuit.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <ul>
+              <li><strong>Fleming's left-hand rule (motor):</strong> stretch the thumb, first finger and middle finger of your left hand at right angles. First finger = Field, seCond finger = Current, thuMb = Motion (force).</li>
+              <li><strong>Fleming's right-hand rule (generator):</strong> the same fingers of the right hand: thumb = motion of the wire, first finger = field, middle finger = induced current.</li>
+              <li><strong>Split ring (commutator):</strong> every half turn it swaps the connections to the coil. In a motor this keeps the turning force one way round; in a generator it makes the output flow one way (DC).</li>
+              <li><strong>Slip rings:</strong> each end of the coil always connects to the same wire, so the output reverses every half turn: <strong>alternating current (AC)</strong>.</li>
+            </ul>
+            <code class="formula">Force on one side:  F = B I l      Generator peak emf:  ε₀ = N B A ω</code>
+            <p class="formula-note">l = length of a side (5 cm here), A = area of the coil (5 cm × 4 cm), ω = 2π × turns per second. These formulas are Class 12; in Class 10 just remember that a stronger magnet, more turns and faster turning all give a bigger current.</p>
+            <p>Simplifications: the field is uniform, the coil has a resistance of 5 Ω and the generator lights a 10 Ω bulb. The spinning motor coil also works as a generator: it makes a <strong>back emf</strong> that pushes against the battery, so the motor settles at a top speed instead of speeding up for ever. The picture runs <strong>50 times slower</strong> than real life so you can follow the coil.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Motors run ceiling fans, mixer-grinders, washing machines, water pumps and electric scooters.</li>
+              <li>Power stations at Bhakra Nangal (water) or Vindhyachal (coal) spin huge generators. India's mains supply is AC at <strong>50 Hz</strong>: the current changes direction 100 times a second.</li>
+              <li>A bicycle dynamo is a small generator turned by the wheel.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In the motor, watch the coil when it stands upright (θ = 90°). What is the force doing, and what does the split ring do there?<details><summary>Show answer</summary>Both forces still act, but they now pull along the coil, so there is no turning effect. Just then the brushes cross the gaps in the split ring and the current in the coil reverses, so after the coil swings past (by its own momentum) the forces turn it the same way again.</details></li>
+              <li>Double the battery voltage from 6 V to 12 V. What happens to the top speed?<details><summary>Show answer</summary>It roughly doubles, from about 1500 rpm to about 3000 rpm. The motor speeds up until its back emf nearly matches the battery voltage.</details></li>
+              <li>Switch to the AC generator at 3000 rpm with N = 100 and B = 0.3 T. Find the peak emf from the graph and check it with ε₀ = NBAω.<details><summary>Show answer</summary>ω = 2π × 50 = 314 rad/s, so ε₀ = 100 × 0.3 × 0.002 × 314 ≈ 18.8 V. The graph repeats every 20 ms: that is 50 Hz.</details></li>
+              <li>When is the output of the generator largest: when the coil is upright or lying flat (along the field)?<details><summary>Show answer</summary>Lying flat (θ = 0° or 180°). Then the sides move straight across the field lines and cut them fastest. When the coil is upright, the sides move along the field lines, cut none and the emf is zero.</details></li>
+              <li>Compare the AC and DC generators on the graph.<details><summary>Show answer</summary>The AC output goes positive then negative each turn. The split ring flips the negative half over, so the DC output always stays positive, though it still rises and falls.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Armature:</strong> the coil that turns, usually wound on a soft iron core.</li>
+              <li><strong>Brushes:</strong> carbon blocks that press on the rings to carry current in and out.</li>
+              <li><strong>Electromagnetic induction:</strong> making a current by changing the magnetic field through a coil, for example by turning the coil.</li>
+              <li><strong>rpm:</strong> revolutions per minute.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
