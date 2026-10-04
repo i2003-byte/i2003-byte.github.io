@@ -1452,6 +1452,66 @@ SimLab.simulations = [
     dateAdded: '2026-10-03',
     prerequisites: ['spring-mass', 'circular-motion']
   },
+  {
+    id: 'resonance',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Forced Oscillations and Resonance',
+    description: 'Shake the top of a spring with a motor and find the frequency where the block swings hugely. Plot the resonance curve and see how damping shapes the peak.',
+    level: 'Advanced',
+    tags: ['resonance', 'forced oscillation', 'natural frequency', 'damping', 'driving frequency', 'shm', 'spring', 'class 11'],
+    thumbnail: '/assets/img/thumbs/resonance.svg',
+    link: '/physics/resonance/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-04',
+    prerequisites: ['spring-mass']
+  },
+  {
+    id: 'planetary-orbits',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: "Planetary Orbits and Kepler's Laws",
+    description: "Launch a planet around a star and see Kepler's three laws: elliptical orbits, equal areas in equal times, and T² ∝ a³. Try Earth, Mars, Mercury and Halley's comet.",
+    level: 'Advanced',
+    tags: ['gravity', 'orbit', 'kepler', 'planets', 'newton', 'space', 'ellipse', 'equal areas', 'comet', 'class 11'],
+    thumbnail: '/assets/img/thumbs/planetary-orbits.svg',
+    link: '/physics/planetary-orbits/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-04',
+    prerequisites: ['universal-gravitation', 'circular-motion']
+  },
+  {
+    id: 'escape-velocity',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Escape Velocity Launcher',
+    description: 'Fire a probe straight up from Earth, the Moon, Mars or Jupiter. Below the escape speed it falls back; at √(2gR) it never returns. Watch kinetic, potential and total energy.',
+    level: 'Intermediate',
+    tags: ['escape velocity', 'escape speed', 'gravitational potential energy', 'rocket', 'gravity', 'moon', 'mars', 'jupiter', 'class 11'],
+    thumbnail: '/assets/img/thumbs/escape-velocity.svg',
+    link: '/physics/escape-velocity/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-04',
+    prerequisites: ['free-fall-planets', 'universal-gravitation']
+  },
+  {
+    id: 'satellite-orbits',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Satellites and Geostationary Orbit',
+    description: 'Put a satellite in orbit around the turning Earth. See how speed and period change with height, and find the geostationary height where it stays above India.',
+    level: 'Intermediate',
+    tags: ['satellite', 'orbit', 'geostationary', 'orbital speed', 'isro', 'iss', 'gps', 'kepler', 'gravity', 'class 11'],
+    thumbnail: '/assets/img/thumbs/satellite-orbits.svg',
+    link: '/physics/satellite-orbits/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-04',
+    prerequisites: ['planetary-orbits', 'circular-motion']
+  },
 
   /* ---- Placeholders: planned simulations (coming soon) ---------------- */
   {
@@ -1468,21 +1528,6 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-25',
     prerequisites: []
-  },
-  {
-    id: 'planetary-orbits',
-    subject: 'physics',
-    branch: 'mechanics',
-    title: 'Planetary Orbits',
-    description: "Place planets around a star and explore Newton's gravitation and Kepler's laws.",
-    level: 'Advanced',
-    tags: ['gravity', 'orbit', 'kepler', 'planets', 'newton', 'space'],
-    thumbnail: '/assets/img/thumbs/planetary-orbits.svg',
-    link: '/physics/planetary-orbits/',
-    status: 'coming-soon',
-    featured: false,
-    dateAdded: '2026-11-01',
-    prerequisites: ['projectile']
   },
   {
     id: 'electric-fields',

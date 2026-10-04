@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Planetary Orbits and Kepler&#x27;s Laws — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Launch a planet around a star and see Kepler&#x27;s three laws: elliptical orbits, equal areas in equal times, and T² ∝ a³. Try Earth, Mars, Mercury and Halley&#x27;s comet.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/planetary-orbits/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Planetary Orbits and Kepler&#x27;s Laws — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Launch a planet around a star and see Kepler&#x27;s three laws: elliptical orbits, equal areas in equal times, and T² ∝ a³. Try Earth, Mars, Mercury and Halley&#x27;s comet.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/planetary-orbits/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="planetary-orbits">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The Sun's gravity pulls every planet towards it. A planet does not fall in because it is also moving sideways very fast. The pull keeps bending its path, so it goes round and round. Newton showed that this one rule, gravity weakening as 1/r², explains the three laws that Johannes Kepler had found from careful observations of Mars:</p>
+            <ol>
+              <li><strong>Law of orbits:</strong> every planet moves on an ellipse with the Sun at one focus (a circle is a special ellipse).</li>
+              <li><strong>Law of areas:</strong> the line from the Sun to the planet sweeps out equal areas in equal times. So the planet moves fastest when it is closest (perihelion) and slowest when farthest (aphelion).</li>
+              <li><strong>Law of periods:</strong> T² is proportional to a³, where a is the semi-major axis.</li>
+            </ol>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Gravity:  F = G M m ÷ r²</code>
+            <code class="formula">Circular speed:  v = √(GM ÷ r)      Escape speed:  v = √(2GM ÷ r)</code>
+            <code class="formula">Kepler 3:  T² = (4π² ÷ GM) a³   →   T² = a³  (T in years, a in AU, Sun's mass)</code>
+            <code class="formula">Ellipse:  r_peri = a(1 − e),   r_aph = a(1 + e),   area = π a b</code>
+            <p class="formula-note">e is the eccentricity: 0 for a circle, close to 1 for a long, thin ellipse. Angular momentum is conserved, so r × v is the same at perihelion and aphelion. With a star of mass M (in solar masses), T² ÷ a³ = 1 ÷ M.</p>
+            <p>How the simulation works: the planet is pushed by Newton's law of gravity in small time steps. The dashed curve is the exact ellipse worked out from the starting distance and speed. Each finished orbit is cut into 12 equal-time sectors; compare "Last sector area" with πab ÷ 12. Simplifications: the star does not move, and the other planets' pulls are ignored.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Earth's orbit is nearly a circle (e = 0.017). We are closest to the Sun in early January. Seasons come from the tilt of Earth's axis, not from this distance.</li>
+              <li>Halley's comet has e ≈ 0.97. It races past the Sun every 75 to 76 years and spends most of its time far beyond Neptune. It will next be seen in 2061.</li>
+              <li>ISRO's Mars Orbiter Mission (Mangalyaan) travelled to Mars on a half-ellipse that touched Earth's orbit at one end and Mars's orbit at the other.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start like Earth. What shape is the orbit, and what is the period?<details><summary>Show answer</summary>Almost a perfect circle (e ≈ 0) with T = 1.000 year. 29.78 km/s is just the circular speed √(GM ÷ r) at 1 AU.</details></li>
+              <li>Start like Mars and read a and T. Check Kepler's third law.<details><summary>Show answer</summary>a ≈ 1.524 AU and T ≈ 1.88 years. 1.524³ = 3.54 and 1.88² = 3.54, so T² ÷ a³ = 1.</details></li>
+              <li>Watch the shaded sectors for the default orbit (36 km/s). Why are some long and thin and others short and wide?<details><summary>Show answer</summary>Each sector takes the same time and has the same area. Near the Sun the planet is fast, so the sector is long and thin. Far away it is slow, so the sector is short and wide. Compare "Last sector area" with πab ÷ 12.</details></li>
+              <li>At 1 AU, raise the speed slowly. At what speed does the orbit stop being an ellipse?<details><summary>Show answer</summary>At the escape speed √2 × 29.78 ≈ 42.1 km/s. At this speed the path becomes a parabola; above it, a hyperbola, and the planet never comes back.</details></li>
+              <li>Make the star 2 M☉ with the same start. What happens to the period of a circular orbit?<details><summary>Show answer</summary>The circular speed becomes √2 times bigger (42.1 km/s at 1 AU) and T² = a³ ÷ 2, so T ≈ 0.71 years. A heavier star means faster orbits.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Focus (plural foci):</strong> one of two special points inside an ellipse. The Sun sits at one of them; the other is empty.</li>
+              <li><strong>Semi-major axis (a):</strong> half the longest width of the ellipse; the average of the nearest and farthest distances.</li>
+              <li><strong>Perihelion / aphelion:</strong> the nearest and farthest points of an orbit from the Sun.</li>
+              <li><strong>AU (astronomical unit):</strong> the average Earth–Sun distance, about 1.5 × 10⁸ km.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

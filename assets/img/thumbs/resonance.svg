@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="spring driven by a motor and a resonance curve">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#134e4a"/><stop offset="1" stop-color="#0f172a"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="40" cy="30" r="13" fill="#334155" stroke="#94a3b8" stroke-width="2"/><path d="M40 30L48 24L64 28" stroke="#fbbf24" stroke-width="2.5" fill="none"/>
+  <rect x="56" y="26" width="28" height="7" rx="3" fill="#fbbf24"/>
+  <polyline points="70,33 70,40 61,46 79,52 61,58 79,64 61,70 79,76 61,82 79,88 61,94 79,100 70,106 70,112" fill="none" stroke="#5eead4" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="55" y="112" width="30" height="30" rx="5" fill="#fb923c"/>
+  <path d="M120 170H305M120 170V30" stroke="#e2e8f0" stroke-width="2"/>
+  <path d="M120 160C170 158 190 150 205 120C215 90 220 42 228 42C236 42 240 90 250 125C262 155 280 162 305 164" fill="none" stroke="#a78bfa" stroke-width="3"/>
+  <path d="M228 40V170" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="180" cy="153" r="4" fill="#f472b6"/><circle cx="215" cy="85" r="4" fill="#f472b6"/><circle cx="228" cy="43" r="4" fill="#f472b6"/><circle cx="262" cy="150" r="4" fill="#f472b6"/>
+  <text x="228" y="188" fill="#fbbf24" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">f = f₀</text>
+</svg>

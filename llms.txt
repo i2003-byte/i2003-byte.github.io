@@ -39,7 +39,10 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Power Race: Same Work, Different Time](https://i2003-byte.github.io/physics/power-race/): A walker, a runner and a motor lift raise the same mass up the same height. Same work, different power: P = W ÷ t in watts and horsepower, plus kWh and the electricity bill in ₹. (Beginner)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/spring-mass/): Pull a block on a spring and let it go. Explore Hooke's law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping. (Intermediate)
 - [SHM and Uniform Circular Motion](https://i2003-byte.github.io/physics/shm-circular/): Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a. (Advanced)
-- [Planetary Orbits](https://i2003-byte.github.io/physics/): Place planets around a star and explore Newton's gravitation and Kepler's laws. (Advanced, coming soon)
+- [Forced Oscillations and Resonance](https://i2003-byte.github.io/physics/resonance/): Shake the top of a spring with a motor and find the frequency where the block swings hugely. Plot the resonance curve and see how damping shapes the peak. (Advanced)
+- [Planetary Orbits and Kepler's Laws](https://i2003-byte.github.io/physics/planetary-orbits/): Launch a planet around a star and see Kepler's three laws: elliptical orbits, equal areas in equal times, and T² ∝ a³. Try Earth, Mars, Mercury and Halley's comet. (Advanced)
+- [Escape Velocity Launcher](https://i2003-byte.github.io/physics/escape-velocity/): Fire a probe straight up from Earth, the Moon, Mars or Jupiter. Below the escape speed it falls back; at √(2gR) it never returns. Watch kinetic, potential and total energy. (Intermediate)
+- [Satellites and Geostationary Orbit](https://i2003-byte.github.io/physics/satellite-orbits/): Put a satellite in orbit around the turning Earth. See how speed and period change with height, and find the geostationary height where it stays above India. (Intermediate)
 
 ### Sound Lab
 

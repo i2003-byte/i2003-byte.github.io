@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="Earth from above with a geostationary satellite over India">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1026"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="160" cy="100" r="86" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="7 5"/>
+  <circle cx="160" cy="100" r="44" fill="none" stroke="#94a3b8" stroke-opacity=".5"/>
+  <circle cx="160" cy="100" r="30" fill="#1d4ed8"/><path d="M148 72q12 10 24 0l-12 20z" fill="#22c55e"/>
+  <path d="M160 70V60" stroke="#f472b6" stroke-width="3"/><path d="M160 60V22" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <rect x="148" y="11" width="24" height="6" rx="1.5" fill="#93c5fd"/><rect x="155" y="9" width="10" height="10" rx="2" fill="#fbbf24"/>
+  <circle cx="191" cy="69" r="4" fill="#cbd5e1"/>
+  <text x="250" y="185" fill="#e2e8f0" font-family="sans-serif" font-size="14" font-weight="700" text-anchor="middle">T = 24 h</text>
+</svg>

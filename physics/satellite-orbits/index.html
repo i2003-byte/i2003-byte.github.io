@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Satellites and Geostationary Orbit — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Put a satellite in orbit around the turning Earth. See how speed and period change with height, and find the geostationary height where it stays above India.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/satellite-orbits/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Satellites and Geostationary Orbit — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Put a satellite in orbit around the turning Earth. See how speed and period change with height, and find the geostationary height where it stays above India.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/satellite-orbits/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="satellite-orbits">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A satellite is always falling towards the Earth, but it also moves sideways so fast that the Earth's curved surface falls away beneath it just as fast. Gravity provides exactly the centripetal force needed to keep it on a circle. The higher the orbit, the weaker the pull, so the slower the satellite moves and the longer it takes to go round.</p>
+            <p>At one special height, 35 786 km above the equator, a satellite takes exactly one day to go round, the same time as the Earth takes to turn. Seen from the ground it hangs still in the sky. This is the <strong>geostationary orbit</strong>, used by communication and weather satellites like ISRO's GSAT and INSAT series.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Gravity = centripetal force:  GMm ÷ r² = m v² ÷ r</code>
+            <code class="formula">Orbital speed:  v = √(GM ÷ r)      Period:  T = 2π √(r³ ÷ GM)</code>
+            <code class="formula">Geostationary:  r = (GM T² ÷ 4π²)^⅓ = 42 164 km,  h = r − R = 35 786 km</code>
+            <p class="formula-note">r = R + h is measured from the centre of the Earth (R = 6378 km at the equator, GM = 3.986 × 10¹⁴ m³/s²). For geostationary orbits T is one turn of the Earth relative to the stars, 23 h 56 min (the sidereal day). The orbit must be above the equator and go the same way the Earth turns.</p>
+            <p>Simplifications: perfect circular orbits above the equator, no air drag, and the Earth is a sphere. The ground station is drawn on the equator at India's longitude. Time runs at 1 hour per second.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The International Space Station, about 400 km up, goes round in about 92 minutes, so astronauts see 16 sunrises a day.</li>
+              <li>GSAT satellites in geostationary orbit carry TV and phone signals. Dish antennas on rooftops can stay fixed because the satellite does not move in the sky.</li>
+              <li>India's NavIC navigation system uses satellites at geostationary height, some tilted to the equator, so they always stay over the Indian region.</li>
+              <li>Astronauts float in the ISS not because gravity is absent (it is about 90% of the value on the ground) but because they and the station are falling together.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose the ISS preset. Find the speed and period.<details><summary>Show answer</summary>v ≈ 7.66 km/s and T ≈ 1 h 33 min (about 92.7 minutes).</details></li>
+              <li>Choose the geostationary preset and watch for a whole day. Where does the satellite stay?<details><summary>Show answer</summary>Always right above India's longitude. Its period is 23 h 56 min, the same as the Earth's turn, so the drift is 0° per day.</details></li>
+              <li>Use the formula to show that the geostationary height is about 35 800 km.<details><summary>Show answer</summary>r³ = GM T² ÷ 4π² = 3.986 × 10¹⁴ × 86 164² ÷ 39.48 ≈ 7.50 × 10²² m³, so r ≈ 4.216 × 10⁷ m = 42 164 km. Subtract R = 6378 km to get h ≈ 35 786 km.</details></li>
+              <li>The GPS orbit is at 20 200 km. How many times a day does a GPS satellite go round?<details><summary>Show answer</summary>Twice: T ≈ 11 h 58 min, half a sidereal day.</details></li>
+              <li>Compare the speed and "gravity there" for the ISS and the geostationary orbit.<details><summary>Show answer</summary>ISS: 7.66 km/s, g ≈ 8.7 m/s². Geostationary: 3.07 km/s, g ≈ 0.22 m/s². Higher orbits are slower because the pull is weaker.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Orbital speed:</strong> the speed needed to stay on a circular orbit at a given height.</li>
+              <li><strong>Geostationary orbit:</strong> a circular orbit above the equator with a period equal to one turn of the Earth, so the satellite seems fixed in the sky.</li>
+              <li><strong>Low Earth orbit:</strong> orbits from about 200 to 2000 km high, used by the ISS and many Earth-imaging satellites.</li>
+              <li><strong>Sidereal day:</strong> the time for the Earth to turn once relative to the stars, 23 h 56 min 4 s.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

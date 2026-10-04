@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Forced Oscillations and Resonance — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shake the top of a spring with a motor and find the frequency where the block swings hugely. Plot the resonance curve and see how damping shapes the peak.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/resonance/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Forced Oscillations and Resonance — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shake the top of a spring with a motor and find the frequency where the block swings hugely. Plot the resonance curve and see how damping shapes the peak.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/resonance/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="resonance">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every spring, swing, bridge or guitar string has its own <strong>natural frequency</strong> f₀: the rate at which it oscillates if you disturb it and leave it alone. Here a motor keeps shaking the top of the spring at a <strong>driving frequency</strong> that you choose. This gives <strong>forced oscillations</strong>.</p>
+            <p>After a short wobble at the start, the block settles down and oscillates at the <em>motor's</em> frequency, not its own. How big the swing becomes depends on how close the two frequencies are. When the driving frequency matches the natural frequency, each push arrives at just the right moment and the amplitude becomes very large. This is <strong>resonance</strong>. Damping (friction) decides how tall and sharp the peak is.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Natural frequency:  f₀ = (1 ÷ 2π) √(k ÷ m)</code>
+            <code class="formula">Equation:  m a = −k (x − a₀ sin ωt) − b v</code>
+            <code class="formula">Steady amplitude:  A = (k a₀ ÷ m) ÷ √((ω₀² − ω²)² + (bω ÷ m)²)</code>
+            <p class="formula-note">ω = 2πf is the angular driving frequency and ω₀ = 2πf₀. The motor moves the top of the spring by a₀ = 1 cm, which acts like a driving force of k·a₀. At resonance with light damping, A ≈ k a₀ ÷ (b ω₀), so halving the damping doubles the peak. Far below f₀ the block simply follows the motor (A ≈ a₀). Far above f₀ it hardly moves.</p>
+            <p>Simplifications: the mass is 1 kg, the spring has no mass and obeys Hooke's law, and damping is a drag force −bv. Gravity only shifts the rest position of a hanging spring, so x is measured from that rest position. A point is added to the curve when the measured amplitude stops changing from one cycle to the next.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Pushing a friend on a swing: small pushes at the swing's own rhythm make it go very high. Pushing at the wrong rhythm does little.</li>
+              <li>Tuning a radio or a TV: the circuit's natural frequency is changed until it matches one station's frequency, which it then picks up strongly.</li>
+              <li>Soldiers marching across a bridge are told to break step, so their regular footsteps do not drive the bridge at its natural frequency.</li>
+              <li>A tabla, sitar or guitar body resonates with the string, which makes the sound much louder.</li>
+              <li>Engineers add dampers to tall buildings and keep machine speeds away from the natural frequency of their mountings, so they do not shake themselves apart.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With k = 40 N/m and m = 1 kg, work out f₀. Check it in the readouts.<details><summary>Show answer</summary>f₀ = √(40 ÷ 1) ÷ 2π = 6.32 ÷ 6.28 ≈ 1.01 Hz.</details></li>
+              <li>Collect points: set the driving frequency to 0.4, 0.8, 1.0, 1.2 and 1.6 Hz, waiting each time until the state says "steady" (4× speed helps). What shape do the points make?<details><summary>Show answer</summary>A peak, the resonance curve: small at low and high frequencies and tallest near 1.0 Hz. The points sit on the formula curve.</details></li>
+              <li>Press "Jump to resonance" with damping 1 kg/s. How big is the amplitude, and how many times the motor's 1 cm is that?<details><summary>Show answer</summary>A ≈ k a₀ ÷ (b ω₀) = 0.4 ÷ (1 × 6.32) ≈ 0.063 m = 6.3 cm, about 6 times the motor's movement.</details></li>
+              <li>Change the damping to "Light" (0.5) and then "Heavy" (4). What happens to the peak?<details><summary>Show answer</summary>Light damping gives a tall, sharp peak (about 12.6 cm). Heavy damping gives a low, broad peak (about 1.6 cm). Damping is why real bridges and buildings survive.</details></li>
+              <li>Watch the graph at 0.4 Hz, at f₀ and at 2 Hz. Is the block in step with the top of the spring?<details><summary>Show answer</summary>At low frequency it moves in step with the motor (lag near 0°). At resonance it lags by 90°. At high frequency it moves opposite to the motor (lag near 180°).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Free oscillation:</strong> oscillation at the natural frequency after a single disturbance.</li>
+              <li><strong>Forced oscillation:</strong> oscillation at the frequency of an outside periodic force.</li>
+              <li><strong>Resonance:</strong> the large amplitude reached when the driving frequency is close to the natural frequency.</li>
+              <li><strong>Damping:</strong> loss of energy (to air, friction, heat) that limits the amplitude.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

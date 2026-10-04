@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Escape Velocity Launcher — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Fire a probe straight up from Earth, the Moon, Mars or Jupiter. Below the escape speed it falls back; at √(2gR) it never returns. Watch kinetic, potential and total energy.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/escape-velocity/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Escape Velocity Launcher — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Fire a probe straight up from Earth, the Moon, Mars or Jupiter. Below the escape speed it falls back; at √(2gR) it never returns. Watch kinetic, potential and total energy.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/escape-velocity/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="escape-velocity">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Throw a ball up and it comes back. Throw it faster and it goes higher before it comes back. Gravity gets weaker as you go farther from a planet, so there is a special speed at which the ball keeps slowing down but <em>never</em> quite stops and never returns. This is the <strong>escape speed</strong> (often called escape velocity).</p>
+            <p>The energy bars show why. Kinetic energy (KE) is positive. Gravitational potential energy (PE) is negative near a planet and rises towards zero far away. If the total is negative, the probe is trapped and must fall back. If the total is zero or more, it escapes.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">PE per kg:  −GM ÷ r      KE per kg:  ½ v²</code>
+            <code class="formula">Escape speed:  v_e = √(2GM ÷ R) = √(2 g R)</code>
+            <code class="formula">Highest point (v &lt; v_e):  h = R v² ÷ (2gR − v²)</code>
+            <p class="formula-note">For Earth, g = 9.8 m/s² and R = 6371 km, so v_e = √(2 × 9.8 × 6.371 × 10⁶) ≈ 11.2 km/s. The escape speed does not depend on the mass of the object or on the direction of launch (if nothing gets in the way). For small speeds the formula for h becomes the familiar v² ÷ 2g.</p>
+            <p>Simplifications: no air resistance, the planet does not spin, and the probe gets all its speed at the start (like a cannon shell, not a rocket). The probe moves in a straight line from the planet's centre. Time is sped up so every flight takes a few seconds.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Real rockets, like ISRO's PSLV and LVM3, do not need 11.2 km/s at launch. Their engines keep pushing for many minutes, and the energy they give is what counts.</li>
+              <li>The Moon's escape speed is only 2.4 km/s, so it could not hold on to an atmosphere: gas molecules moving fast enough slowly leaked away into space.</li>
+              <li>Chandrayaan-3 did not get escape speed in one go. Its engine raised it step by step into longer and longer ellipses around the Earth until it could travel to the Moon and be captured by the Moon's gravity.</li>
+              <li>A black hole is so compact that its escape speed is more than the speed of light, so not even light can get out.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>On Earth, launch at 10 km/s. How high does it go? Check the formula.<details><summary>Show answer</summary>h = R v² ÷ (2gR − v²) = 6371 × 100 ÷ (125.1 − 100) ≈ 25 400 km, about 4 times Earth's radius, much higher than v² ÷ 2g = 5100 km, because gravity gets weaker with height.</details></li>
+              <li>Press "90% of escape speed". Does the probe go 90% of the way to "infinity"?<details><summary>Show answer</summary>No. It reaches about 4.3 Earth radii (≈ 27 000 km) and falls back. Total energy is still negative.</details></li>
+              <li>Press "Set to escape speed". Watch the total energy bar and the speed graph.<details><summary>Show answer</summary>The total stays at zero. The speed keeps falling but never reaches zero, so the probe never comes back.</details></li>
+              <li>Switch to the Moon and launch at 2.0 km/s, then Jupiter at 2.0 km/s. Explain the difference.<details><summary>Show answer</summary>On the Moon (v_e = 2.38 km/s) the probe climbs about 4 200 km. On Jupiter (v_e = 60.2 km/s) it rises only about 80 km, because Jupiter's gravity is much stronger.</details></li>
+              <li>Does a heavier probe need a bigger escape speed?<details><summary>Show answer</summary>No. Both its kinetic energy and its potential energy are proportional to its mass, so the mass cancels. A heavier probe needs more energy, but the same speed.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Escape speed:</strong> the smallest launch speed that lets an object get away from a planet's gravity for ever (ignoring air).</li>
+              <li><strong>Gravitational potential energy:</strong> energy due to position in a gravitational field; taken as zero very far away, so it is negative near a planet.</li>
+              <li><strong>Bound / unbound:</strong> total energy below zero (trapped) or at or above zero (free).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

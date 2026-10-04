@@ -24,17 +24,16 @@
 | 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 10 | 12 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 3) | 0 | 0 | 0 | 0 | 0 | 0 |
-| 11 | 4 (projectile, pendulum, Oscillations 2) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
+| 11 | 8 (projectile, pendulum, Oscillations 3, Gravitation 3) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 76**
+**Total live simulations: 80**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-- [~] **Class 11 · Physics · Oscillations.** Branch `mechanics`. Done: spring-mass (horizontal spring, Hooke's law, energy bars, damping), shm-circular (reference circle, shadow, block in step, paper strip, x/v/a graph). Next: damped and forced oscillation / resonance (`resonance`: driving frequency slider, amplitude vs driving frequency curve, Barton's pendulums or a bridge example). Started 2026-10-03.
+_None. The next run takes the first 📋 Next item._
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 11 · Physics · Gravitation.** Branch `mechanics`. Sims: build out the `planetary-orbits` placeholder (Kepler's laws); escape velocity launcher; satellite orbits and geostationary height.
 - [ ] **Class 11 · Physics · Waves.** Branch `waves`. Sims: transverse vs longitudinal waves; standing waves on a string (harmonics); beats and the Doppler effect.
 - [ ] **Class 12 · Physics · Electric charges and fields.** Branch `electricity`. Sims: build out the `electric-fields` placeholder (field lines); Coulomb's law explorer; electric dipole in a uniform field.
 - [ ] **Class 12 · Physics · Wave optics.** Branch `optics`. Sims: build out the `wave-interference` placeholder; Young's double-slit fringes; single-slit diffraction.
@@ -52,6 +51,8 @@ _None yet._
 - [x] **Class filter** (2026-10-04). Subject pages and All Simulations can be filtered by school class (Class 7–12, from the `class N` catalog tags, shareable as `?class=9`); `check.mjs` requires a class tag on live simulations.
 
 ## ✅ Done
+- [x] **Class 11 · Physics · Gravitation.** 3 sims: planetary-orbits (placeholder built out: Kepler's three laws, equal-time sectors, Earth/Mercury/Mars/Halley), escape-velocity (Earth, Moon, Mars, Jupiter; energy bars), satellite-orbits (orbital speed and period vs height, geostationary orbit above India). Done 2026-10-04.
+- [x] **Class 11 · Physics · Oscillations.** 3 sims: spring-mass, shm-circular, resonance (driven spring, resonance curve with measured points, damping). Done 2026-10-04.
 - [x] **Class 10 · Physics · Magnetic effects of current.** 3 sims: magnetic-field-lines, solenoid-field (exact loop/solenoid field, cut-away view), motor-generator (DC motor with back emf, AC and DC generators, split ring and slip rings). Done 2026-10-03.
 - [x] **Class 10 · Physics · Electricity.** 3 sims: ohms-law (with resistivity and a non-Ohmic bulb), series-parallel, power-bill. Done 2026-10-03.
 - [x] **Class 10 · Physics · Human eye and the colourful world.** 3 sims: eye-accommodation, eye-defects, prism-dispersion (prism dispersion and Rayleigh scattering in one, with a mode switch). Done 2026-10-02.
