@@ -30,7 +30,7 @@ cp -r _template <subject>/<id>
   - an activity with no Play button → `physics/who-can-hear/sim.js` (`transport:false`)
   - sound → `physics/frequency-pitch/sim.js` (`audio:true`, `voice()`)
   - drag interaction → `pointer: {down, move, up}` in `physics/water-xylophone/sim.js`
-- Draw responsively from `sim.width` / `sim.height`, test both below and above 560px wide, and use `mobileAspect` if a phone needs a taller canvas.
+- Draw responsively from `sim.width` / `sim.height` and test both below and above 560px wide. `mobileAspect` asks for a taller phone canvas, but phones cap it at 46% of the screen (often about 343×340), so pick layouts by height too and check a screenshot at 375×740.
 - Use `sim.colors` (theme-aware), never fixed colours for text or axes.
 - Give it an `ariaLabel`.
 

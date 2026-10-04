@@ -41,6 +41,8 @@
 - [ ] **Class 7 · Chemistry · Acids, bases and salts.** Subject `chemistry` (make the subject live on first use). Sims: natural indicators (turmeric, litmus, china rose); neutralisation titration; pH scale of everyday substances.
 - [ ] **Class 9 · Chemistry · Matter in our surroundings.** Subject `chemistry`. Sims: particles in solids, liquids and gases; evaporation and cooling vs temperature, humidity and wind; change of state heating curve.
 - [ ] **Class 7 · Mathematics · Lines, angles and triangles.** Subject `mathematics` (make it live on first use). Sims: angle pairs with parallel lines; angle sum of a triangle; Pythagoras by rearrangement.
+- [ ] **Class 12 · Physics · Current electricity.** Branch `electricity`. Sims: drift velocity of electrons in a wire; Kirchhoff's laws in a two-loop circuit; Wheatstone bridge and meter bridge balance.
+- [ ] **Class 11 · Physics · Kinetic theory of gases.** Branch `thermodynamics`. Sims: gas molecules in a box (pressure from collisions); Boyle's and Charles's laws with a piston; speed distribution of molecules vs temperature.
 
 ## 💡 Proposed (needs a human decision; only for ideas outside the Class 7–12 India syllabus)
 _None yet._

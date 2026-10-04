@@ -27,7 +27,7 @@ SimLab is a free collection of interactive science simulations for school studen
 - **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs
 - **For classrooms:**
   - Fullscreen mode
-  - **Copy share link** saves every setting in the URL, so a whole class can open the same experiment
+  - **Share link** saves every setting in the URL, so a whole class can open the same experiment
 - **See and hear it:** sound simulations generate real tones. Sound is off until you switch it on.
 - **Works everywhere:** phone and desktop layouts, light and dark themes, keyboard shortcuts, screen-reader labels and reduced-motion support
 - **Fast and simple:**

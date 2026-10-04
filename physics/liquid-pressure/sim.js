@@ -149,9 +149,20 @@
 
       // panel: pressure and jet speed for each hole
       var px2 = wide ? W * 0.64 : 14, py = wide ? top + 10 : sc.y + sc.h + 34, pw = wide ? W * 0.34 : W - 28, ph = wide ? H - py - 10 : H - py - 6;
-      D.text(ctx, 'Pressure on the wall at each hole', px2, py, { color: c.text, size: 12, weight: 700, fit: W });
       var Pmax = 1025 * g * 0.26, rowH = Math.min(52, (ph - 18) / 3);
-      J.forEach(function (j, i) {
+      var compact = rowH < 40;
+      if (compact) {   // short phone canvas: one line per hole, no heading
+        rowH = Math.min(26, (ph + 6) / 3);
+        J.forEach(function (j, i) {
+          var y = py - 4 + i * rowH, labW = 66, valW = 118, bw2 = Math.max(20, pw - labW - valW);
+          D.text(ctx, j.n + ' · ' + M.fmt(j.h, 0) + ' cm', px2, y + 5, { color: c.text, size: 11, weight: 700 });
+          D.roundRect(ctx, px2 + labW, y, bw2, 9, 3, D.alpha(c.muted, 0.18));
+          D.roundRect(ctx, px2 + labW, y, Math.max(2, bw2 * Math.min(1, j.P / Pmax)), 9, 3, c.warning);
+          D.text(ctx, j.on ? M.fmt(j.P, 0) + ' Pa · lands ' + M.fmt(j.R, 0) + ' cm' : 'no jet', px2 + labW + bw2 + 6, y + 5, { color: c.muted, size: 10, fit: W });
+        });
+      }
+      if (!compact) D.text(ctx, 'Pressure on the wall at each hole', px2, py, { color: c.text, size: 12, weight: 700, fit: W });
+      if (!compact) J.forEach(function (j, i) {
         var y = py + 16 + i * rowH;
         D.text(ctx, j.n + ' · depth ' + M.fmt(j.h, 0) + ' cm', px2, y + 6, { color: c.text, size: 11, weight: 700 });
         D.roundRect(ctx, px2, y + 14, pw, 10, 3, D.alpha(c.muted, 0.18));

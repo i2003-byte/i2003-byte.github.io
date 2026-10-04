@@ -101,7 +101,9 @@
       var Ts = p.cut || q.mode === 'float' ? (Math.abs(shown.under - q.under) < 0.05 ? 0 : Math.max(0, q.Wt - Bs)) : Math.max(0, q.Wt - Bs);
       D.clear(ctx, W, H, c.bg);
 
-      var panelH = narrow ? 118 : 0, panelW = narrow ? 0 : Math.min(300, W * 0.38);
+      // bars go under the scene only when the canvas is tall (phones pin a short, wide canvas)
+      var stack = narrow && H > W * 1.15;
+      var panelH = stack ? 118 : 0, panelW = stack ? 0 : Math.min(300, Math.max(150, W * 0.38));
       var sceneW = W - panelW, sceneH = H - panelH;
       var BAL = narrow ? 92 : 104, top = 34;
       var k = Math.min((sceneH - top - BAL - 34) / 27, (sceneW - 24) / 24);
@@ -182,29 +184,33 @@
       // ---- comparison bars ----
       var Wd = q.l.rho * shown.under * AREA * 1e-3 * g;
       var px0, py0, pw, rowH;
-      if (narrow) { px0 = 14; py0 = H - panelH + 8; pw = W - 28; rowH = 26; }
-      else { px0 = Math.min(sceneW + 6, canX + 24 * k + 40); py0 = top + 20; pw = panelW - 20; rowH = 46; }
+      if (stack) { px0 = 14; py0 = H - panelH + 8; pw = W - 28; rowH = 26; }
+      else { px0 = Math.min(sceneW + 6, canX + 24 * k + 40); py0 = top + 20; pw = Math.min(panelW - 20, W - px0 - 8); rowH = narrow ? 40 : 46; }
       var rows = [
         { lab: 'Weight in air W', v: q.Wt, col: c.muted },
         { lab: 'Balance reading', v: Ts, col: c.danger },
-        { lab: 'Upthrust (loss in weight)', v: p.cut || q.mode === 'float' ? Bs : q.Wt - Ts, col: c.s1 },
-        { lab: 'Weight of liquid displaced', v: Wd, col: c.s3 }
+        { lab: narrow && !stack ? 'Upthrust (loss)' : 'Upthrust (loss in weight)', v: p.cut || q.mode === 'float' ? Bs : q.Wt - Ts, col: c.s1 },
+        { lab: narrow && !stack ? 'Liquid displaced (weight)' : 'Weight of liquid displaced', v: Wd, col: c.s3 }
       ];
       var scaleN = Math.max(q.Wt, Wd, 0.01);
-      if (!narrow) D.text(ctx, 'Forces (N)', px0, py0 - 16, { color: c.muted, size: 12, weight: 700 });
+      if (!stack) D.text(ctx, 'Forces (N)', px0, py0 - 16, { color: c.muted, size: 12, weight: 700 });
       rows.forEach(function (r, i) {
-        var y = py0 + i * rowH, labW = narrow ? Math.min(150, pw * 0.48) : 0;
-        var bx0 = narrow ? px0 + labW : px0, by = narrow ? y + 4 : y + 16, bwid = narrow ? pw - labW - 50 : pw - 56;
-        D.text(ctx, r.lab, px0, narrow ? y + 9 : y + 6, { color: c.muted, size: narrow ? 10 : 11, weight: 600 });
+        var y = py0 + i * rowH, labW = stack ? Math.min(150, pw * 0.48) : 0;
+        var bx0 = stack ? px0 + labW : px0, by = stack ? y + 4 : y + 16, bwid = stack ? pw - labW - 50 : pw - 56;
+        D.text(ctx, r.lab, px0, stack ? y + 9 : y + 6, { color: c.muted, size: narrow ? 10 : 11, weight: 600, fit: W });
         D.roundRect(ctx, bx0, by, bwid, 10, 3, D.alpha(c.muted, 0.15));
         D.roundRect(ctx, bx0, by, Math.max(0, bwid * Math.min(1, r.v / scaleN)), 10, 3, r.col);
         D.text(ctx, M.fmt(r.v, 2), bx0 + bwid + 6, by + 5, { color: c.text, size: narrow ? 10.5 : 11.5, weight: 700 });
       });
-      var noteY = narrow ? py0 + rows.length * rowH : py0 + rows.length * rowH + 8;
+      var noteY = stack ? py0 + rows.length * rowH : py0 + rows.length * rowH + 8;
       var note = q.mode === 'air' && !p.cut ? 'Lower the block into the liquid' :
         (q.mode === 'float' ? (p.cut ? 'Floating: upthrust = weight' : 'Floating: string slack, upthrust = weight') :
         p.cut ? 'Sunk: resting on the bottom' : 'Upthrust = weight of liquid displaced');
-      D.text(ctx, note, narrow ? W / 2 : px0, noteY, { color: c.s3, size: narrow ? 10.5 : 11.5, weight: 700, align: narrow ? 'center' : 'left', fit: W });
+      if (narrow && !stack) {   // side panel on a phone: wrap the note onto two lines
+        var words = note.split(' '), half = Math.ceil(words.length / 2);
+        D.text(ctx, words.slice(0, half).join(' '), px0, noteY, { color: c.s3, size: 10.5, weight: 700, fit: W });
+        D.text(ctx, words.slice(half).join(' '), px0, noteY + 14, { color: c.s3, size: 10.5, weight: 700, fit: W });
+      } else D.text(ctx, note, stack ? W / 2 : px0, noteY, { color: c.s3, size: narrow ? 10.5 : 11.5, weight: 700, align: stack ? 'center' : 'left', fit: W });
 
       var head = 'Archimedes: upthrust = weight of liquid pushed aside';
       var hs = narrow ? 11.5 : 13;

@@ -145,7 +145,7 @@
         var txt = 'A: ' + sim.p.speedA + ' km/h = ' + M.fmt(pl.va, 2) + ' m/s   ·   B: ' + sim.p.speedB + ' km/h = ' + M.fmt(pl.vb, 2) + ' m/s';
         D.text(ctx, txt, W / 2, yn, { color: c.muted, size: narrow ? 11 : 13, align: 'center', fit: W });
       }
-      if (!sim.running && s.t === 0) D.text(ctx, 'Press “Start race”', W / 2, Math.min(H - 12, yn + 24), { color: c.faint, size: 12, align: 'center' });
+      if (!sim.running && s.t === 0 && yn + 24 < H - 6) D.text(ctx, 'Press “Start race”', W / 2, yn + 24, { color: c.faint, size: 12, align: 'center' });
     }
   });
 

@@ -122,5 +122,5 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
 - `tools/browser-test.mjs` does not press Play, so an error inside `update` passes it. Press Play (and wait) when screenshotting time-based sims.
 - Sessions cannot push git tags (HTTP 403). For a backup marker, push a branch instead (e.g. `before-capabilities`).
-- On phones and tablets (< 1024px) the canvas is pinned under the header while the controls scroll, and its height is capped at 46% of the screen. Draw so the sim still reads well when it is wider than `mobileAspect`.
+- On phones and tablets (< 1024px) the canvas is pinned under the header while the controls scroll, and its height is capped at 46% of the screen, so a phone canvas is often wide and short (about 343×340). Choose layouts by height as well as width (e.g. stack a panel under the scene only if `H > W * 1.15`), and size labels to the room they get, or rows overlap.
 - `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

@@ -166,10 +166,12 @@
       D.circle(ctx, X(sLon), Y(dd), narrow ? 5 : 7, '#fbbf24', '#fff7cc', 2);
 
       // city pins
+      var dLon = CITIES.filter(function (ct) { return ct.id === 'delhi'; })[0].lon;
+      var crowded = Math.abs(X(sel.lon) - X(dLon)) < 80;   // labels would overlap: put New Delhi's below its pin
       CITIES.forEach(function (ct) {
         var on = ct.id === sel.id || ct.id === 'delhi';
         D.circle(ctx, X(ct.lon), Y(ct.lat), on ? 4.5 : 3, on ? (ct.id === 'delhi' ? '#fde68a' : '#f472b6') : '#fff', '#000', 1);
-        if (on) D.text(ctx, ct.name, X(ct.lon), Y(ct.lat) - 11, { color: '#fff', size: 10, weight: 700, align: 'center', bg: 'rgba(0,0,0,0.55)', pad: 2, fit: W });
+        if (on) D.text(ctx, ct.name, X(ct.lon), Y(ct.lat) + (crowded && ct.id === 'delhi' ? 12 : -11), { color: '#fff', size: 10, weight: 700, align: 'center', bg: 'rgba(0,0,0,0.55)', pad: 2, fit: W });
       });
 
       // ---- clock cards

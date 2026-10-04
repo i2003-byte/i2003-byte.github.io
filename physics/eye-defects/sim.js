@@ -129,9 +129,10 @@
         var x = dToX(L, d); D.line(ctx, x, ys - 4, x, ys + 4, c.axis, 1);
         D.text(ctx, d >= 100 ? d / 100 + ' m' : d + ' cm', x, ys + 13, { color: c.faint, size: 10, align: 'center', fit: W });
       });
+      // on a short canvas the caption goes above the band, clear of the message
       var xa = s.myo ? dToX(L, s.far) : L.xL - 10, xb = dToX(L, s.near);
       ctx.save(); ctx.fillStyle = D.alpha(c.success, 0.14); ctx.fillRect(xa, ys - 7, xb - xa, 14); ctx.restore();
-      D.text(ctx, 'clear without glasses', (Math.max(xa, L.xL) + xb) / 2, ys + 26, { color: c.success, size: 10, weight: 700, align: 'center', fit: W });
+      D.text(ctx, 'clear without glasses', (Math.max(xa, L.xL) + xb) / 2, ys + 26 > H - 26 ? ys - 14 : ys + 26, { color: c.success, size: 10, weight: 700, align: 'center', fit: W });
       D.line(ctx, 8, L.y0, W - 8, L.y0, D.alpha(c.axis, 0.5), 1, [2, 4]);
 
       var tense = M.clamp((s.P - s.Pmin) / AMP, 0, 1);

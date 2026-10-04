@@ -167,8 +167,8 @@
       ctx.save(); ctx.strokeStyle = c.ink; ctx.lineWidth = 2; ctx.beginPath();
       ctx.arc(gx, gy, R + 10, Math.PI * 0.62, Math.PI * 0.88); ctx.stroke(); ctx.restore();
       var ae = Math.PI * 0.62; D.arrow(ctx, gx + (R + 10) * Math.cos(ae + 0.06), gy + (R + 10) * Math.sin(ae + 0.06), gx + (R + 10) * Math.cos(ae), gy + (R + 10) * Math.sin(ae), c.ink, 2, 8);
-      D.text(ctx, 'spins west → east', gx - R * 0.55, gy + R + 16, { color: c.muted, size: 10, align: 'center', fit: W });
-      D.text(ctx, 'sunrise side', gx + R * 0.35, gy + R + 16, { color: '#fbbf24', size: 10, weight: 600, align: 'center', fit: W });
+      D.text(ctx, 'spins west → east', gx - R * 0.7, gy + R + 16, { color: c.muted, size: 10, align: 'center', fit: W });
+      D.text(ctx, 'sunrise side', gx + R * 0.62, gy + R + 16, { color: '#fbbf24', size: 10, weight: 600, align: 'center', fit: W });
       D.text(ctx, 'Seen from above the North Pole', narrow ? W / 2 : gx, 12, { color: c.muted, size: 11, align: 'center', fit: W });
 
       // ---- daylight bars (IST)
@@ -180,11 +180,14 @@
         D.line(ctx, X(hr), top, X(hr), top + rows * rowH, c.grid, 1);
         D.text(ctx, hr === 0 || hr === 24 ? '12 am' : hr === 12 ? 'noon' : clock(hr).replace(':00', ''), X(hr), top + rows * rowH + 10, { color: c.muted, size: 10, align: 'center', fit: W });
       }
+      // short phone canvas: fit names to the rows; if rows are too tight, label every other city (and the chosen one)
+      var fs = Math.min(narrow ? 10 : 11, rowH - 1), tight = fs < 8, selI = CITIES.indexOf(sel);
       CITIES.forEach(function (ct, i) {
         var s = sun(ct, n), y = top + i * rowH, hb = rowH * 0.62, on = ct.id === sel.id;
         D.roundRect(ctx, X(0), y + (rowH - hb) / 2, X(24) - X(0), hb, 3, 'rgba(15,23,42,0.85)');
         D.roundRect(ctx, X(s.rise), y + (rowH - hb) / 2, X(s.set) - X(s.rise), hb, 3, on ? '#fbbf24' : 'rgba(251,191,36,0.55)');
-        D.text(ctx, ct.name, x0 - 6, y + rowH / 2, { color: on ? c.ink : c.muted, size: narrow ? 10 : 11, weight: on ? 700 : 500, align: 'right' });
+        if (!tight || on || (i % 2 === 0 && Math.abs(i - selI) > 1))
+          D.text(ctx, ct.name, x0 - 6, y + rowH / 2, { color: on ? c.ink : c.muted, size: tight ? 8.5 : fs, weight: on ? 700 : 500, align: 'right' });
         if (!narrow || on) {
           D.text(ctx, clock(s.rise).replace(' am', ''), X(s.rise) + 3, y + rowH / 2, { color: '#111827', size: 9, weight: 600 });
           D.text(ctx, clock(s.set).replace(' pm', ''), X(s.set) - 3, y + rowH / 2, { color: '#111827', size: 9, weight: 600, align: 'right' });
