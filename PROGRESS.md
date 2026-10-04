@@ -13,6 +13,17 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-04 · maintenance · Weekly health check + Class filter
+- Built/changed: phone layouts fixed where the pinned, height-capped canvas squeezed the drawing: `buoyancy-archimedes` (force bars beside the scene unless the canvas is tall), `liquid-pressure` (one line per hole on short canvases), `day-night-india` (city names fit the rows), `eye-defects` (caption no longer under the message), `speed-race` (start prompt only when there is room), `time-zones` (New Delhi label moves below its pin when a nearby city is chosen). README "Share link" wording. Roadmap 📋 Next refilled to 9 (Class 12 Current electricity, Class 11 Kinetic theory of gases).
+- Capability: **Class filter** on subject pages and All Simulations (Class 7–12 from `class N` catalog tags, `?class=9` in the URL). Added `class 11` to projectile and pendulum; `check.mjs` now requires a class tag on live sims; add-simulation skill and AGENTS recipe updated.
+- Checks: ✅ check.mjs passed · ✅ browser-test all 89 pages, phone + desktop (before and after the capability) · canvas contact sheet of all 76 sims at 375px plus 8 page screenshots (top and scrolled) reviewed · science spot-check: solenoid-field loop field matches μ₀I/2r at the centre and μ₀Ia²/2(a²+z²)^3/2 on the axis exactly; spring-mass T = 2π√(m/k); motor-generator 3000 rpm = 50 Hz
+- Harness: settings.json valid with generic attribution · pre-push hook exits 2 with a model name in a file, 0 without · referenced files exist · skills agree (4 sims per run) · CI "Site check" green on main · daily runs present (10-02, 10-03)
+- Feedback: no open issues
+- Lessons: Gotchas line on the short, wide phone canvas (choose layouts by height too); add-simulation skill no longer implies `mobileAspect` gives a tall phone canvas
+- Roadmap: 🔨 Class 11 Oscillations (started 10-03) not stuck; next is `resonance`
+- Next time: small phone nits seen but not fixed: distance-displacement header banner clipped at the edges, velocity-time-graph area formula clipped on the right, sorting-race legend ends; liquid-pressure landing letters slightly cut at the bottom on desktop
+- Problems/notes: none
+
 ## 2026-10-03 · routine · Class 10 Magnetic effects of current (finished) + Class 11 Oscillations (started)
 - Built/changed: `solenoid-field` (cut-away view of a circular loop or solenoid; exact 3-D field of every turn from elliptic integrals, checked against a numerical Biot–Savart sum; N/S ends by the clock rule; draggable compass; centre B vs μ₀NI/2r or μ₀nI); `motor-generator` (end-on coil between magnets: DC motor with back emf and split ring, AC generator with slip rings, DC generator with split ring; F = BIl and velocity arrows, side view of rings and brushes, meter and bulb; 50× slow motion, graph in real ms, 3000 rpm = 50 Hz); `spring-mass` (placeholder built out: horizontal spring on a smooth table, Hooke's law, T = 2π√(m/k), measured period, energy bars, damping, drag the block); `shm-circular` (reference circle, shadow on the diameter, block on a spring in step, paper-strip trace, x/A, v/Aω, a/Aω² graph). Catalog, thumbnails (new spring-mass thumb), README, AGENTS updated.
 - Checks: ✅ check.mjs passed · ✅ browser-test (4 pages, phone + desktop) · combined screenshots reviewed at 375px, 360×640 and 1366px, light and dark (fixed: phone horizontal scroll from long graph legend, hidden circuit panel on phones, label clashes)
