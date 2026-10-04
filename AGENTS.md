@@ -82,7 +82,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   2. Edit `index.html`: set `data-sim`, the `<title>`, meta and og/canonical URLs, and the Learn section.
   3. Write `sim.js` with `SimLab.createSim({...})`.
   4. Add the thumbnail SVG.
-  5. Add the catalog entry (`status: 'live'`).
+  5. Add the catalog entry (`status: 'live'`, plus a `'class N'` tag for the Class filter).
   6. Run `node tools/check.mjs --write`.
 - **Add a subject.**
   1. `mkdir <id>`, then copy `physics/index.html` into it and change `data-subject`, `<title>` and meta.

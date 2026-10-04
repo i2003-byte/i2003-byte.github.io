@@ -209,7 +209,7 @@ SimLab.subjects = [
      title: 'Projectile Motion',
      description: 'One or two sentences.', // shown on cards and in search
      level: 'Beginner',                    // 'Beginner' | 'Intermediate' | 'Advanced'
-     tags: ['gravity', 'kinematics'],      // extra search keywords
+     tags: ['gravity', 'kinematics', 'class 11'],   // search keywords; 'class N' tags drive the Class filter
      thumbnail: '/assets/img/thumbs/projectile.svg',
      link: '/physics/projectile/',         // root-relative URL of the page
      status: 'live',                       // 'live' or 'coming-soon'
@@ -228,7 +228,7 @@ SimLab.simulations = [
       'Launch a ball at any angle and speed. Trace its parabola and measure ' +
       'time of flight, maximum height and range.',
     level: 'Beginner',
-    tags: ['gravity', 'kinematics', 'parabola', 'range', 'trajectory', 'cannon', 'motion'],
+    tags: ['gravity', 'kinematics', 'parabola', 'range', 'trajectory', 'cannon', 'motion', 'class 11'],
     thumbnail: '/assets/img/thumbs/projectile.svg',
     link: '/physics/projectile/',
     status: 'live',
@@ -245,7 +245,7 @@ SimLab.simulations = [
       'Swing a pendulum, add damping and watch energy flow between kinetic and ' +
       'potential. See how the period depends on length and gravity.',
     level: 'Intermediate',
-    tags: ['oscillation', 'harmonic', 'period', 'energy', 'gravity', 'damping', 'swing'],
+    tags: ['oscillation', 'harmonic', 'period', 'energy', 'gravity', 'damping', 'swing', 'class 11'],
     thumbnail: '/assets/img/thumbs/pendulum.svg',
     link: '/physics/pendulum/',
     status: 'live',

@@ -26,6 +26,7 @@ SimLab is a free collection of interactive science simulations for school studen
 ## Features
 - **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs
 - **For classrooms:**
+  - Filter simulations by class (7–12), topic or level
   - Fullscreen mode
   - **Share link** saves every setting in the URL, so a whole class can open the same experiment
 - **See and hear it:** sound simulations generate real tones. Sound is off until you switch it on.

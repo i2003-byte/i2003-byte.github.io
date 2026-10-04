@@ -49,7 +49,7 @@ _None yet._
 
 ## 🧩 Capabilities (site features beyond new simulations; chosen fresh by each weekly maintenance run, ONE per week)
 <!-- No fixed list. Each weekly run picks one idea and logs it here as Done or Skipped (with the reason). Format: - [x] **Name** (YYYY-MM-DD). What it adds. | - [ ] skipped: **Name**. Reason. -->
-_None yet._
+- [x] **Class filter** (2026-10-04). Subject pages and All Simulations can be filtered by school class (Class 7–12, from the `class N` catalog tags, shareable as `?class=9`); `check.mjs` requires a class tag on live simulations.
 
 ## ✅ Done
 - [x] **Class 10 · Physics · Magnetic effects of current.** 3 sims: magnetic-field-lines, solenoid-field (exact loop/solenoid field, cut-away view), motor-generator (DC motor with back emf, AC and DC generators, split ring and slip rings). Done 2026-10-03.

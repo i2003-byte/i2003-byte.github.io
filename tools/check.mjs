@@ -120,6 +120,7 @@ for (const m of simulations) {
     if (!exists(`${dir}/index.html`)) err(`${where}: missing ${dir}/index.html (copy /_template/)`);
     else if (!fs.readFileSync(path.join(ROOT, dir, 'index.html'), 'utf8').includes(`data-sim="${m.id}"`)) err(`${dir}/index.html: must contain data-sim="${m.id}"`);
     if (!exists(`${dir}/sim.js`)) err(`${where}: missing ${dir}/sim.js`);
+    if (!(m.tags || []).some((t) => /^class (7|8|9|10|11|12)$/.test(t))) err(`${where}: add a 'class N' tag (7–12) so the Class filter can find it`);
   } else if (exists(`${m.subject}/${m.id}/index.html`)) {
     warn(`${where}: folder exists but status is "coming-soon" — set status: 'live' when it is ready`);
   }

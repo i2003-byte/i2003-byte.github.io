@@ -40,9 +40,10 @@ Create `assets/img/thumbs/<id>.svg`: 320×200, a dark gradient background plus a
 ## 6. Catalog entry (`assets/js/catalog.js`, `SIMULATIONS` array)
 ```js
 { id, subject, branch, title, description, level: 'Beginner'|'Intermediate'|'Advanced',
-  tags: [...], thumbnail: '/assets/img/thumbs/<id>.svg', link: '/<subject>/<id>/',
+  tags: [..., 'class 9'], thumbnail: '/assets/img/thumbs/<id>.svg', link: '/<subject>/<id>/',
   status: 'live', featured: false, dateAdded: 'YYYY-MM-DD', prerequisites: [...] }
 ```
+- Add a `'class N'` tag (7–12) for each school class the sim serves. It drives the Class filter on subject pages; `check.mjs` fails without it.
 
 ## 7. Verify and ship
 ```bash

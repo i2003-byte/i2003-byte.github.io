@@ -9,7 +9,7 @@
 
    URL parameters (shareable, kept in sync while filtering):
      ?branch=optics     (subject page)   ?subject=physics  (all page)
-     ?level=Beginner    ?q=pendulum
+     ?level=Beginner    ?class=9    ?q=pendulum
    ===================================================================== */
 (function () {
   'use strict';
@@ -40,10 +40,20 @@
   var state = {
     group: params.get(groupKey) || '',
     level: params.get('level') || '',
+    cls: params.get('class') || '',
     q: params.get('q') || ''
   };
   if (state.group && !groups.some(function (g) { return g.id === state.group; })) state.group = '';
   if (state.level && S.LEVELS.indexOf(state.level) === -1) state.level = '';
+
+  /* School class (7–12) comes from the 'class N' tags in catalog.js; a sim can belong to more than one */
+  function classesOf(sim) {
+    return (sim.tags || []).map(function (t) { var m = /^class (\d+)$/.exec(t); return m ? m[1] : ''; }).filter(Boolean);
+  }
+  var CLASSES = ['7', '8', '9', '10', '11', '12'].filter(function (c) {
+    return pool.some(function (s) { return S.isLive(s) && classesOf(s).indexOf(c) !== -1; });
+  });
+  if (state.cls && CLASSES.indexOf(state.cls) === -1) state.cls = '';
 
   /* -------------------------------------------------------------------
      Banner
@@ -54,7 +64,7 @@
     ? '<section class="subject-banner reveal" style="--accent:var(--primary)">' +
         '<span class="subject-icon" aria-hidden="true">🧪</span>' +
         '<h1>All Simulations</h1>' +
-        '<p>Every simulation in the lab, across every subject. Filter by subject or level, or search for a topic.</p>' +
+        '<p>Every simulation in the lab, across every subject. Filter by subject, class or level, or search for a topic.</p>' +
         '<div class="banner-stats"><span class="badge">' + liveCount + ' live</span>' + (soonCount ? '<span class="badge badge-soon">' + soonCount + ' coming soon</span>' : '') +
         '<span class="badge">' + S.subjects.length + ' subjects</span></div>' +
       '</section>'
@@ -87,6 +97,7 @@
         '<div><label class="sr-only" for="filter-q">Search ' + (ALL ? 'all simulations' : esc(subj.name)) + '</label>' +
           '<input class="input" type="search" id="filter-q" placeholder="Search ' + (ALL ? 'simulations' : esc(subj.name)) + '…" value="' + esc(state.q) + '"></div>' +
         '<div><h2 id="f-group">' + (ALL ? 'Subject' : 'Topic') + '</h2><div class="filter-list" role="group" aria-labelledby="f-group" id="group-filters"></div></div>' +
+        (CLASSES.length ? '<div><h2 id="f-class">Class</h2><div class="filter-list" role="group" aria-labelledby="f-class" id="class-filters"></div></div>' : '') +
         '<div><h2 id="f-level">Level</h2><div class="filter-list" role="group" aria-labelledby="f-level" id="level-filters"></div></div>' +
         '<button class="btn btn-sm btn-ghost" type="button" id="clear-filters" hidden>Clear filters</button>' +
       '</aside>' +
@@ -94,11 +105,12 @@
     '</div>' +
     (ALL ? '' : '<section class="section-tight" aria-labelledby="rel-h"><div class="section-head"><h2 id="rel-h">Related subjects</h2></div><div class="related-row" id="related-subjects"></div></section>');
 
-  var qInput = $('#filter-q'), groupEl = $('#group-filters'), levelEl = $('#level-filters'), results = $('#results'), clearBtn = $('#clear-filters');
+  var qInput = $('#filter-q'), groupEl = $('#group-filters'), levelEl = $('#level-filters'), classEl = $('#class-filters'), results = $('#results'), clearBtn = $('#clear-filters');
 
   function matches(sim, ignore) {
     if (ignore !== 'group' && state.group && sim[groupKey] !== state.group) return false;
     if (ignore !== 'level' && state.level && sim.level !== state.level) return false;
+    if (ignore !== 'cls' && state.cls && classesOf(sim).indexOf(state.cls) === -1) return false;
     if (state.q) {
       var hay = [sim.title, sim.description, sim.level, (sim.tags || []).join(' '),
         (S.getBranch(sim.subject, sim.branch) || {}).name, (S.getSubject(sim.subject) || {}).name].join(' ').toLowerCase();
@@ -122,12 +134,18 @@
     levelEl.innerHTML = btn('', 'All levels', baseL.length, !state.level, 'level') + S.LEVELS.map(function (l) {
       return btn(l, l, baseL.filter(function (s) { return s.level === l; }).length, state.level === l, 'level');
     }).join('');
-    clearBtn.hidden = !(state.group || state.level || state.q);
+    if (classEl) {
+      var baseC = pool.filter(function (s) { return matches(s, 'cls'); });
+      classEl.innerHTML = btn('', 'All classes', baseC.length, !state.cls, 'cls') + CLASSES.map(function (c) {
+        return btn(c, 'Class ' + c, baseC.filter(function (s) { return classesOf(s).indexOf(c) !== -1; }).length, state.cls === c, 'cls');
+      }).join('');
+    }
+    clearBtn.hidden = !(state.group || state.level || state.cls || state.q);
   }
 
   function renderResults() {
     var visibleGroups = groups.filter(function (g) { return !state.group || g.id === state.group; });
-    var filtering = !!(state.level || state.q);
+    var filtering = !!(state.level || state.cls || state.q);
     var html = '', total = 0;
 
     visibleGroups.forEach(function (g) {
@@ -161,6 +179,7 @@
   function syncUrl() {
     var q = new URLSearchParams();
     if (state.group) q.set(groupKey, state.group);
+    if (state.cls) q.set('class', state.cls);
     if (state.level) q.set('level', state.level);
     if (state.q) q.set('q', state.q);
     var s = q.toString();
@@ -179,7 +198,7 @@
       return;
     }
     if (e.target.closest('[data-clear]') || e.target === clearBtn) {
-      state.group = state.level = state.q = ''; qInput.value = ''; update();
+      state.group = state.level = state.cls = state.q = ''; qInput.value = ''; update();
     }
   });
   var qTimer;
