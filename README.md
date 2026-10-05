@@ -10,11 +10,12 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**80 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**84 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
 | ⚙️ **Mechanics** (30) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area · Balanced and Unbalanced Forces · Pressure in Liquids · Friction on Different Surfaces · Rolling vs Sliding Friction · Ball Bearings and Lubricants · Distance and Displacement · Velocity–Time Graph: Area = Distance · Uniform Circular Motion · Inertia: Coin on a Card · Newton's Second Law: F = ma Cart Lab · Action and Reaction: Balloon Rocket · Collisions and Momentum · Universal Law of Gravitation · Free Fall and g on Different Worlds · Buoyancy and Archimedes' Principle · Work Done: W = F s cos θ · Roller Coaster: Potential and Kinetic Energy · Power Race: Same Work, Different Time · Spring–Mass Oscillator · SHM and Uniform Circular Motion · Forced Oscillations and Resonance · Planetary Orbits and Kepler's Laws · Escape Velocity Launcher · Satellites and Geostationary Orbit |
+| 🌊 **Waves** (4, Class 11) | Transverse and Longitudinal Waves · Standing Waves on a String · Beats · Doppler Effect |
 | 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (12, Class 7, 8 and 10) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor · Ohm's Law and Resistivity · Resistors in Series and Parallel · Electric Power and the Electricity Bill · Magnetic Field Lines: Magnets and a Wire · Magnetic Field of a Loop and a Solenoid · Electric Motor and Generator |

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="a transverse wave on beads above a longitudinal wave of coils">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <polyline points="30.0,60.0 32.2,57.3 34.3,54.6 36.5,52.0 38.7,49.4 40.8,47.0 43.0,44.7 45.2,42.6 47.3,40.7 49.5,39.0 51.7,37.5 53.8,36.2 56.0,35.3 58.2,34.6 60.3,34.1 62.5,34.0 64.7,34.1 66.8,34.6 69.0,35.3 71.2,36.2 73.3,37.5 75.5,39.0 77.7,40.7 79.8,42.6 82.0,44.7 84.2,47.0 86.3,49.4 88.5,52.0 90.7,54.6 92.8,57.3 95.0,60.0 97.2,62.7 99.3,65.4 101.5,68.0 103.7,70.6 105.8,73.0 108.0,75.3 110.2,77.4 112.3,79.3 114.5,81.0 116.7,82.5 118.8,83.8 121.0,84.7 123.2,85.4 125.3,85.9 127.5,86.0 129.7,85.9 131.8,85.4 134.0,84.7 136.2,83.8 138.3,82.5 140.5,81.0 142.7,79.3 144.8,77.4 147.0,75.3 149.2,73.0 151.3,70.6 153.5,68.0 155.7,65.4 157.8,62.7 160.0,60.0 162.2,57.3 164.3,54.6 166.5,52.0 168.7,49.4 170.8,47.0 173.0,44.7 175.2,42.6 177.3,40.7 179.5,39.0 181.7,37.5 183.8,36.2 186.0,35.3 188.2,34.6 190.3,34.1 192.5,34.0 194.7,34.1 196.8,34.6 199.0,35.3 201.2,36.2 203.3,37.5 205.5,39.0 207.7,40.7 209.8,42.6 212.0,44.7 214.2,47.0 216.3,49.4 218.5,52.0 220.7,54.6 222.8,57.3 225.0,60.0 227.2,62.7 229.3,65.4 231.5,68.0 233.7,70.6 235.8,73.0 238.0,75.3 240.2,77.4 242.3,79.3 244.5,81.0 246.7,82.5 248.8,83.8 251.0,84.7 253.2,85.4 255.3,85.9 257.5,86.0 259.7,85.9 261.8,85.4 264.0,84.7 266.2,83.8 268.3,82.5 270.5,81.0 272.7,79.3 274.8,77.4 277.0,75.3 279.2,73.0 281.3,70.6 283.5,68.0 285.7,65.4 287.8,62.7 290.0,60.0" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="30.0" cy="60.0" r="4.5" fill="#38bdf8"/>
+  <circle cx="50.0" cy="38.6" r="4.5" fill="#38bdf8"/>
+  <circle cx="70.0" cy="35.7" r="4.5" fill="#38bdf8"/>
+  <circle cx="90.0" cy="53.8" r="4.5" fill="#38bdf8"/>
+  <circle cx="110.0" cy="77.2" r="4.5" fill="#38bdf8"/>
+  <circle cx="130.0" cy="85.8" r="4.5" fill="#38bdf8"/>
+  <circle cx="150.0" cy="72.1" r="4.5" fill="#38bdf8"/>
+  <circle cx="170.0" cy="47.9" r="4.5" fill="#f87171"/>
+  <circle cx="190.0" cy="34.2" r="4.5" fill="#38bdf8"/>
+  <circle cx="210.0" cy="42.8" r="4.5" fill="#38bdf8"/>
+  <circle cx="230.0" cy="66.2" r="4.5" fill="#38bdf8"/>
+  <circle cx="250.0" cy="84.3" r="4.5" fill="#38bdf8"/>
+  <circle cx="270.0" cy="81.4" r="4.5" fill="#38bdf8"/>
+  <circle cx="290.0" cy="60.0" r="4.5" fill="#38bdf8"/>
+  <path d="M30.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M38.5 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M46.8 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M54.7 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M62.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M69.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M75.3 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M80.9 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M86.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M91.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M95.7 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M100.4 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M105.4 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M110.7 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M116.6 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M123.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M130.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M137.7 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M145.7 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M154.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M162.6 130V175" stroke="#f87171" stroke-width="2.4"/>
+  <path d="M171.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M179.2 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M187.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M194.3 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M201.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M207.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M212.6 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M217.6 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M222.4 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M227.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M231.9 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M237.0 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M242.4 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M248.5 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M255.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M262.3 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M270.1 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M278.2 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+  <path d="M286.6 130V175" stroke="#a78bfa" stroke-width="2.4"/>
+</svg>

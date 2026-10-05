@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Standing Waves on a String — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shake a stretched string with a vibrator and find the frequencies where it swings in 1, 2, 3 or more loops. See nodes, antinodes and the laws of a vibrating string.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/standing-waves/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Standing Waves on a String — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shake a stretched string with a vibrator and find the frequencies where it swings in 1, 2, 3 or more loops. See nodes, antinodes and the laws of a vibrating string.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/standing-waves/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="standing-waves">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A vibrator at one end sends waves along a stretched string. They reflect from the pulley at the far end and travel back. The forward and reflected waves <strong>superpose</strong> (add up). At most frequencies they get in each other's way and the string hardly moves. But at certain frequencies the reflections add up perfectly and the string swings strongly in loops. This is a <strong>standing wave</strong>.</p>
+            <p>In a standing wave some points never move: these are <strong>nodes</strong> (N). Halfway between them are <strong>antinodes</strong> (A), which swing the most. Both ends of the string are nodes, so a whole number of half-wavelengths must fit on the string. That is why only some frequencies work: the <strong>fundamental</strong> f₁ and its whole-number multiples, the <strong>harmonics</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Wave speed on a string:  v = √(T ÷ μ)</code>
+            <code class="formula">Fitting loops:  L = n × λ ÷ 2</code>
+            <code class="formula">Allowed frequencies:  fₙ = n v ÷ 2L = (n ÷ 2L) √(T ÷ μ),  n = 1, 2, 3 …</code>
+            <p class="formula-note">T is the tension (here the weight Mg of the hanging mass, with g = 9.8 m/s²) and μ is the mass of one metre of string in kg/m. These give the laws of a vibrating string: the fundamental frequency is inversely proportional to the length, proportional to √T, and inversely proportional to √μ. Neighbouring nodes are λ ÷ 2 apart.</p>
+            <p>Simplifications: the vibrator moves sideways, so the string vibrates at the vibrator's frequency. A little damping is included so that the peaks have a finite height. The sideways movement is enlarged and the motion is shown slowed down to under one swing per second; the real string vibrates f times a second.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The strings of a sitar, veena, violin or guitar vibrate as standing waves. Pressing a string on a fret shortens L and raises the note.</li>
+              <li>Turning a tuning peg increases the tension, which raises the frequency. Thick strings (large μ) give the low notes.</li>
+              <li>The sonometer in a school lab uses a wire over two bridges and a hanging mass to check these laws.</li>
+              <li>Air columns in a flute or a bottle also form standing waves; that is how wind instruments make their notes.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With M = 1 kg, μ = 1 g/m and L = 1 m, work out v and f₁. Then press "Fundamental".<details><summary>Show answer</summary>T = 1 × 9.8 = 9.8 N, μ = 0.001 kg/m, so v = √(9.8 ÷ 0.001) = √9800 ≈ 99 m/s and f₁ = 99 ÷ 2 ≈ 49.5 Hz. The string makes one loop.</details></li>
+              <li>Press "Harmonic n = 3". What is the frequency, how many loops do you see, and what is λ?<details><summary>Show answer</summary>f₃ = 3 × 49.5 ≈ 148.5 Hz, 3 loops, and λ = 2L ÷ 3 ≈ 0.67 m.</details></li>
+              <li>Set f = 99 Hz (2 loops). Now change the mass to 4 kg. How many loops are there now, and why?<details><summary>Show answer</summary>One loop. Four times the tension doubles v (√4 = 2), so f₁ becomes 99 Hz and the vibrator now matches the fundamental.</details></li>
+              <li>Move the frequency slowly between two harmonics and watch the lower graph. What happens to the string?<details><summary>Show answer</summary>Between the peaks the string barely moves: the reflected waves do not add up in step, so no steady loops form.</details></li>
+              <li>A guitarist wants a string to sound one octave higher (double frequency) without changing its length. By how much must the tension change?<details><summary>Show answer</summary>f ∝ √T, so the tension must become 4 times as large. Try 1 kg → 4 kg here.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Node:</strong> a point on a standing wave that stays still.</li>
+              <li><strong>Antinode:</strong> a point that swings with the largest amplitude.</li>
+              <li><strong>Fundamental (first harmonic):</strong> the lowest frequency, with one loop.</li>
+              <li><strong>Harmonics:</strong> the frequencies 2f₁, 3f₁, … with 2, 3, … loops.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

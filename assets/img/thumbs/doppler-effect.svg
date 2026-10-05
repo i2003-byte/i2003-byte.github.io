@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="a moving vehicle with sound wavefronts crowded in front and spread out behind">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern></defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M0 112H320" stroke="#94a3b8" stroke-opacity=".5" stroke-width="16"/>
+  <circle cx="60" cy="112" r="186" fill="none" stroke="#38bdf8" stroke-opacity="0.95" stroke-width="2.5"/>
+  <circle cx="82" cy="112" r="156" fill="none" stroke="#38bdf8" stroke-opacity="0.90" stroke-width="2.5"/>
+  <circle cx="104" cy="112" r="126" fill="none" stroke="#38bdf8" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="126" cy="112" r="96" fill="none" stroke="#38bdf8" stroke-opacity="0.80" stroke-width="2.5"/>
+  <circle cx="148" cy="112" r="66" fill="none" stroke="#38bdf8" stroke-opacity="0.75" stroke-width="2.5"/>
+  <circle cx="170" cy="112" r="36" fill="none" stroke="#38bdf8" stroke-opacity="0.70" stroke-width="2.5"/>
+  <circle cx="192" cy="112" r="6" fill="none" stroke="#38bdf8" stroke-opacity="0.65" stroke-width="2.5"/>
+  <rect x="186" y="104" width="34" height="16" rx="4" fill="#e2e8f0" stroke="#ef4444" stroke-width="2"/><circle cx="210" cy="101" r="3.5" fill="#3b82f6"/>
+  <path d="M226 96H252" stroke="#fbbf24" stroke-width="3"/><path d="M258 96L248 90V102Z" fill="#fbbf24"/>
+  <circle cx="290" cy="150" r="6" fill="#fbbf24"/><rect x="284" y="157" width="12" height="16" rx="3" fill="#fbbf24"/>
+</svg>

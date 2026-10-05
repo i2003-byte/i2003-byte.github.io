@@ -63,6 +63,10 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 ### Waves
 
+- [Transverse and Longitudinal Waves](https://i2003-byte.github.io/physics/wave-types/): Watch one vibrator send a transverse wave along a string and a longitudinal wave along a slinky. See crests, troughs, compressions and rarefactions, and check that v = fλ. (Intermediate)
+- [Standing Waves on a String](https://i2003-byte.github.io/physics/standing-waves/): Shake a stretched string with a vibrator and find the frequencies where it swings in 1, 2, 3 or more loops. See nodes, antinodes and the laws of a vibrating string. (Advanced)
+- [Beats](https://i2003-byte.github.io/physics/beats/): Sound two tuning forks of nearly the same frequency and hear the loudness swell and fade. Count the beats, see why they happen and use them to tune an instrument. (Intermediate)
+- [Doppler Effect](https://i2003-byte.github.io/physics/doppler-effect/): Hear the pitch of a siren rise and fall as a vehicle drives past you. See the sound waves bunch up in front of it and spread out behind, and check the Doppler formula. (Advanced)
 - [Wave Interference](https://i2003-byte.github.io/physics/): Two sources, one pond. See constructive and destructive interference patterns form. (Intermediate, coming soon)
 
 ### Optics

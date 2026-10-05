@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Beats — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Sound two tuning forks of nearly the same frequency and hear the loudness swell and fade. Count the beats, see why they happen and use them to tune an instrument.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/beats/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Beats — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Sound two tuning forks of nearly the same frequency and hear the loudness swell and fade. Count the beats, see why they happen and use them to tune an instrument.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/beats/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="beats">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When two sounds of <strong>nearly the same frequency</strong> are played together, you hear one tone whose loudness rises and falls regularly: <strong>wah… wah… wah</strong>. These are <strong>beats</strong>.</p>
+            <p>The top panel shows why. Fork B vibrates a little faster than fork A, so B's wave slowly slides past A's. When their crests line up, the waves add up and the sound is loud. Half a beat later, the crests of one line up with the troughs of the other, the waves cancel and the sound is quiet. This happens |f₁ − f₂| times every second.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Beat frequency:  f_beat = |f₁ − f₂|</code>
+            <code class="formula">Time for one beat:  T_beat = 1 ÷ |f₁ − f₂|</code>
+            <code class="formula">Together:  y = 2a cos(π(f₁ − f₂)t) × sin(π(f₁ + f₂)t)</code>
+            <p class="formula-note">The sound you hear has the average frequency (f₁ + f₂) ÷ 2, and its loudness follows the outline 2a |cos(π(f₁ − f₂)t)|. That outline reaches a maximum twice in each of its own cycles, so there are |f₁ − f₂| loud moments per second, not half that.</p>
+            <p>Simplifications: both forks are equally loud and keep sounding at a steady volume. The top window keeps fork A's wave still so you can see B slide past it. With sound turned on, the two tones are played together and you hear real beats.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Musicians tune a tanpura, sitar or guitar string against a reference note: they adjust the string until the beats slow down and disappear.</li>
+              <li>Harmonium and accordion makers sometimes tune two reeds slightly apart on purpose, so the beats give a shimmering sound.</li>
+              <li>In the lab, beats with a fork of known frequency are used to find the frequency of an unknown fork.</li>
+              <li>The pulsing hum near two similar machines, such as two ceiling fans or two engines of an aircraft, is often a beat.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With f₁ = 256 Hz and f₂ = 260 Hz, how many beats per second do you get, and how long is one beat?<details><summary>Show answer</summary>|256 − 260| = 4 beats per second; one beat lasts 1 ÷ 4 = 0.25 s.</details></li>
+              <li>Press the "Same as A" preset. What happens to the beats?<details><summary>Show answer</summary>They disappear: the waves stay in step all the time, so the loudness is steady. This is how musicians know a string is in tune.</details></li>
+              <li>A fork of 256 Hz and an unknown fork give 4 beats per second. A little wax on the unknown fork (which lowers its frequency) makes it 2 beats per second. What was the unknown frequency?<details><summary>Show answer</summary>It was 252 Hz or 260 Hz. Lowering it reduced the beats, so it must have been above 256: 260 Hz (with wax it is about 258 Hz). Try it with the sliders.</details></li>
+              <li>Set f₂ = 276 Hz. Can you still count the beats?<details><summary>Show answer</summary>20 beats per second are too fast to count. The ear holds a sound for about a tenth of a second, so above roughly 10 per second the beats blur into a rough sound, and further apart you hear two separate notes.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Superposition:</strong> when two waves meet, their displacements add up.</li>
+              <li><strong>In phase:</strong> crest meets crest, so the waves reinforce each other.</li>
+              <li><strong>Out of phase:</strong> crest meets trough, so the waves cancel.</li>
+              <li><strong>Beat frequency:</strong> the number of loud moments per second, |f₁ − f₂|.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

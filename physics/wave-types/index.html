@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Transverse and Longitudinal Waves — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch one vibrator send a transverse wave along a string and a longitudinal wave along a slinky. See crests, troughs, compressions and rarefactions, and check that v = fλ.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/wave-types/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Transverse and Longitudinal Waves — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch one vibrator send a transverse wave along a string and a longitudinal wave along a slinky. See crests, troughs, compressions and rarefactions, and check that v = fλ.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/wave-types/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="wave-types">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>wave</strong> carries energy from one place to another, but the particles of the medium do not travel with it. Each particle only <strong>oscillates about its own rest position</strong>, a little later than the one before it. Follow the red particle: it never moves along with the wave.</p>
+            <p>In a <strong>transverse wave</strong> the particles move at right angles to the direction the wave travels (up and down on a string). The high points are <strong>crests</strong> and the low points are <strong>troughs</strong>. In a <strong>longitudinal wave</strong> the particles move back and forth along the direction the wave travels (a slinky pushed in and out, or air carrying sound). Crowded regions are <strong>compressions</strong> and spread-out regions are <strong>rarefactions</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">Wave speed:  v = f λ</code>
+            <code class="formula">Time period:  T = 1 ÷ f</code>
+            <code class="formula">Displacement:  y = A sin(2πf (t − x ÷ v))</code>
+            <p class="formula-note">λ (wavelength) is the distance between two neighbouring crests, or two neighbouring compressions. A crest and the next trough, or a compression and the next rarefaction, are λ ÷ 2 apart. The wave moves forward by one wavelength in one time period. The fastest a particle moves is 2πfA, which has nothing to do with the wave speed v.</p>
+            <p>Simplifications: the row is 2 m long and has no friction, so the amplitude stays the same. The wave speed is set by the medium, so here you choose it directly. The transverse row is drawn to scale unless the canvas is short. Frequency, speed and amplitude are limited so that coils in the longitudinal row never pass through each other.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Sound in air is longitudinal: a loudspeaker cone pushes the air into compressions and rarefactions.</li>
+              <li>A "Mexican wave" in a cricket stadium is transverse: each person only stands up and sits down, but the wave runs round the ground.</li>
+              <li>Earthquakes send out both kinds. Longitudinal P waves arrive first; transverse S waves cannot travel through liquids, which is how we know Earth's outer core is liquid.</li>
+              <li>Light is a transverse wave, but it needs no particles at all: it is made of changing electric and magnetic fields.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With f = 1 Hz and v = 2 m/s, what is the wavelength? Now double the frequency. What happens to λ?<details><summary>Show answer</summary>λ = v ÷ f = 2 ÷ 1 = 2 m. At 2 Hz, λ = 1 m: in the same medium a higher frequency gives a shorter wavelength.</details></li>
+              <li>Press Reset and Play. How long does the wave take to reach the red particle at 1 m?<details><summary>Show answer</summary>t = distance ÷ speed = 1 ÷ 2 = 0.5 s. The graph stays flat until then.</details></li>
+              <li>Watch the red particle for a few seconds. Does it travel along with the wave?<details><summary>Show answer</summary>No. It moves up and down (or to and fro) about the same place. Only the wave shape, and the energy, move along.</details></li>
+              <li>At A = 6 cm and f = 1 Hz, compare the particle's top speed with the wave speed.<details><summary>Show answer</summary>Top speed = 2πfA = 2 × 3.14 × 1 × 0.06 ≈ 0.38 m/s, while the wave moves at 2 m/s. They are different things.</details></li>
+              <li>In the longitudinal row, how far is a compression from the next rarefaction?<details><summary>Show answer</summary>Half a wavelength, λ ÷ 2. Two compressions are a full λ apart.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Amplitude (A):</strong> the largest displacement of a particle from its rest position.</li>
+              <li><strong>Wavelength (λ):</strong> the length of one complete wave.</li>
+              <li><strong>Frequency (f):</strong> the number of oscillations per second, in hertz (Hz).</li>
+              <li><strong>Mechanical wave:</strong> a wave that needs a medium (string, spring, air, water) to travel.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
