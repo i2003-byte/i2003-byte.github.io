@@ -25,17 +25,15 @@
 | 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 10 | 12 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 11 | 12 (projectile, pendulum, Oscillations 3, Gravitation 3, Waves 4) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
-| 12 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 12 | 4 (Electric charges and fields 3, Wave optics 1) | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 84**
+**Total live simulations: 88**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-_None. The next run takes the first 📋 Next item._
+- [~] **Class 12 · Physics · Wave optics.** Done: wave-interference (placeholder built out, branch `waves`: two-source ripple tank, path difference probe, bright/calm lines, screen pattern). Next: Young's double-slit fringes (`youngs-double-slit`, branch `optics`: slit separation, screen distance, colour of light, β = λD/d, fringe pattern on a screen); single-slit diffraction (`single-slit-diffraction`, branch `optics`: central maximum width 2λD/a, compare with double slit). Started 2026-10-06.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 12 · Physics · Electric charges and fields.** Branch `electricity`. Sims: build out the `electric-fields` placeholder (field lines); Coulomb's law explorer; electric dipole in a uniform field.
-- [ ] **Class 12 · Physics · Wave optics.** Branch `optics`. Sims: build out the `wave-interference` placeholder; Young's double-slit fringes; single-slit diffraction.
 - [ ] **Class 7 · Chemistry · Acids, bases and salts.** Subject `chemistry` (make the subject live on first use). Sims: natural indicators (turmeric, litmus, china rose); neutralisation titration; pH scale of everyday substances.
 - [ ] **Class 9 · Chemistry · Matter in our surroundings.** Subject `chemistry`. Sims: particles in solids, liquids and gases; evaporation and cooling vs temperature, humidity and wind; change of state heating curve.
 - [ ] **Class 7 · Mathematics · Lines, angles and triangles.** Subject `mathematics` (make it live on first use). Sims: angle pairs with parallel lines; angle sum of a triangle; Pythagoras by rearrangement.
@@ -50,6 +48,7 @@ _None yet._
 - [x] **Class filter** (2026-10-04). Subject pages and All Simulations can be filtered by school class (Class 7–12, from the `class N` catalog tags, shareable as `?class=9`); `check.mjs` requires a class tag on live simulations.
 
 ## ✅ Done
+- [x] **Class 12 · Physics · Electric charges and fields.** 3 sims: coulombs-law (force vs distance with inverse-square graph, media, three-charge vector sum), electric-fields (placeholder built out: draggable charges, field lines, equipotentials, test point E and V), electric-dipole (pivoted dipole in a uniform field, torque, U = −pE cos θ, stable and unstable equilibrium). Done 2026-10-06.
 - [x] **Class 11 · Physics · Waves.** 4 sims: wave-types (transverse and longitudinal rows from one vibrator, v = fλ), standing-waves (Melde-style string, harmonics, nodes and antinodes, response curve), beats (two forks, real audio beats, loudness envelope), doppler-effect (siren driving past a listener, wavefronts, heard pitch vs time). Done 2026-10-05.
 - [x] **Class 11 · Physics · Gravitation.** 3 sims: planetary-orbits (placeholder built out: Kepler's three laws, equal-time sectors, Earth/Mercury/Mars/Halley), escape-velocity (Earth, Moon, Mars, Jupiter; energy bars), satellite-orbits (orbital speed and period vs height, geostationary orbit above India). Done 2026-10-04.
 - [x] **Class 11 · Physics · Oscillations.** 3 sims: spring-mass, shm-circular, resonance (driven spring, resonance curve with measured points, damping). Done 2026-10-04.

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wave Interference: Two Sources in a Ripple Tank — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Two dippers make circular ripples in a tank. Watch bright and calm bands form where the waves add and cancel, move a probe to measure the path difference, and see the pattern on a screen.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/wave-interference/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Wave Interference: Two Sources in a Ripple Tank — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Two dippers make circular ripples in a tank. Watch bright and calm bands form where the waves add and cancel, move a probe to measure the path difference, and see the pattern on a screen.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/wave-interference/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="wave-interference">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When two waves reach the same place, the disturbances simply <strong>add up</strong> (the <strong>principle of superposition</strong>). Where a crest meets a crest, the water rises twice as high: <strong>constructive interference</strong>. Where a crest meets a trough, they cancel and the water stays calm: <strong>destructive interference</strong>.</p>
+            <p>Two dippers moving up and down together are <strong>coherent sources</strong>: same wavelength and a fixed phase difference. Their ripples make a steady pattern of lively and calm lines that fan out from between the sources. The same idea, with light waves, gives the bright and dark fringes of Young's double-slit experiment.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">bright (big waves):  r₂ − r₁ = 0, ±λ, ±2λ, …  = m λ</code>
+            <code class="formula">calm (no waves):  r₂ − r₁ = ±λ/2, ±3λ/2, …  = (m + ½) λ</code>
+            <p class="formula-note">r₂ − r₁ is the <strong>path difference</strong>: how much farther one wave has travelled. For sources in opposite step (phase π) the two rules swap.</p>
+            <code class="formula">band spacing on a far screen  β ≈ λ D ÷ d       v = f λ</code>
+            <p class="formula-note">D is the distance to the screen and d the distance between the sources. Bigger λ or smaller d spreads the pattern out. This formula needs D much bigger than d; the yellow screen at the right always shows the exact pattern.</p>
+            <p>Simplifications: each wave weakens as 1 ÷ √r as it spreads out in a circle, the edges of the tank do not reflect, and the ripples move at 25 cm/s. The motion is shown slowed down to about one wave a second (a real tank ripples at about 5–25 Hz).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Two speakers playing the same note: walk across the room and the sound gets loud and quiet in turn.</li>
+              <li>Noise-cancelling headphones play a copy of the outside noise in opposite step, so the two cancel at your ear.</li>
+              <li>The colours of a soap bubble and of oil on a wet road come from light waves reflected from two surfaces interfering.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drag the probe onto the middle line, straight across from between the sources. What is the path difference, and is the water lively or calm there?<details><summary>Show answer</summary>r₂ − r₁ = 0, so the crests always arrive together: a bright (antinodal) line, the central maximum.</details></li>
+              <li>Turn on “Mark bright and calm lines”. Move the probe onto the first dashed line. What is the path difference?<details><summary>Show answer</summary>About ±0.5 λ: one wave travels half a wavelength farther, so a crest from one meets a trough from the other. The water there hardly moves.</details></li>
+              <li>With λ = 2 cm, how many bright lines do you expect for d = 6 cm? Check the readout.<details><summary>Show answer</summary>The path difference can be at most d = 3λ, so the bright lines are m = 0, ±1, ±2, ±3: 7 lines (the outermost ones run along the line of the sources).</details></li>
+              <li>Double the wavelength. Then halve the distance between the sources. What happens to the bands on the screen each time?<details><summary>Show answer</summary>Both spread the bands out (β ≈ λD/d gets bigger), and there are fewer bright lines. To see interference clearly with light, whose λ is tiny, the slits must be very close together.</details></li>
+              <li>Switch the dippers to “opposite step”. What happens on the middle line?<details><summary>Show answer</summary>It becomes calm. A crest from one source now always meets a trough from the other on the middle line, so bright and calm lines swap places.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Coherent sources:</strong> sources with the same frequency and a constant phase difference.</li>
+              <li><strong>Path difference:</strong> the difference between the distances travelled by the two waves to a point.</li>
+              <li><strong>Antinodal line:</strong> a line of strong waves (constructive interference). <strong>Nodal line:</strong> a line of calm water (destructive interference).</li>
+              <li><strong>Fringe width (β):</strong> the distance between neighbouring bright (or dark) bands on a screen.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

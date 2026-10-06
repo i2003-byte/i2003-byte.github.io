@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electric Fields: Field Lines and Equipotentials — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag positive and negative charges and watch their electric field lines and equipotential lines change. Add charges, read E and V at a test point and see superposition at work.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/electric-fields/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Electric Fields: Field Lines and Equipotentials — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag positive and negative charges and watch their electric field lines and equipotential lines change. Add charges, read E and V at a test point and see superposition at work.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/electric-fields/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="electric-fields">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every electric charge changes the space around it. Put another charge anywhere in that space and it feels a force. We call this region the <strong>electric field</strong>, and describe it at each point by the force on a tiny <strong>+1 C test charge</strong>: E = F ÷ q₀.</p>
+            <p>With many charges, the field at a point is simply the <strong>vector sum</strong> of the fields of each charge on its own. This is the <strong>principle of superposition</strong>, and it is all this simulation does.</p>
+            <p>We picture the field with <strong>field lines</strong> and the <strong>potential</strong> with <strong>equipotential lines</strong> (dashed green): every point on one of them is at the same potential V.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">E = k q ÷ r²     V = k q ÷ r     k = 1 ÷ (4π ε₀) = 9 × 10⁹ N m² C⁻²</code>
+            <p class="formula-note">E is a vector (it points away from + and towards −); V is a plain number with a sign. For many charges, add the E vectors and add the V numbers.</p>
+            <ul>
+              <li>Field lines <strong>start on positive charges and end on negative charges</strong> (or go off to infinity).</li>
+              <li>Where lines are <strong>crowded</strong>, the field is <strong>strong</strong>.</li>
+              <li>Two field lines <strong>never cross</strong>: the field has only one direction at a point.</li>
+              <li>Field lines always cross equipotential lines at <strong>right angles</strong>, and point from high V to low V.</li>
+              <li>The number of lines leaving a charge is proportional to its charge: here 10 lines for every q.</li>
+            </ul>
+            <p>Simplifications: the charges are points, lying in one flat plane, in vacuum (or air). Drawing scale: the short side of the picture is 20 cm. Equipotentials are drawn at ±¼, ½, 1, 2 and 4 times V₀ = k q ÷ 2 cm (and at 0 V when there are both signs).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A photocopier and a laser printer use charged drums to hold toner powder exactly where the field pulls it.</li>
+              <li>Electrostatic precipitators in thermal power plant chimneys charge smoke particles and pull them out with a strong field.</li>
+              <li>Under a thundercloud the field near the ground can reach several thousand N/C, which is why lightning conductors are pointed and earthed.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose “One positive charge” with q = 10 nC. Drag the test point to about 5 cm from it (a quarter of the short side). What is E? Now go to 10 cm.<details><summary>Show answer</summary>E = 9 × 10⁹ × 10 × 10⁻⁹ ÷ 0.05² = 36 kN/C. At 10 cm it is a quarter of that, 9 kN/C: double the distance, one-fourth the field (inverse-square law). V only halves, from 1.8 kV to 0.9 kV.</details></li>
+              <li>Choose the dipole and put the test point anywhere on the vertical line exactly midway between the charges. What are V and the direction of E?<details><summary>Show answer</summary>V = 0 everywhere on that line (the + and − contributions cancel), but E is not zero: it points parallel to the dipole, from the + side towards the − side.</details></li>
+              <li>Choose “Two equal + charges”. Where is the field zero?<details><summary>Show answer</summary>Exactly midway between them: the two fields are equal and opposite there. This is a neutral point. Notice no field line passes through it and the lines bend away from each other.</details></li>
+              <li>Choose “+2q and −q”. Count the lines leaving +2q and the lines ending on −q.<details><summary>Show answer</summary>20 lines leave +2q but only 10 can end on −q. The other 10 go off to far away, because the total charge (+q) is positive: from far away the pair looks like a single +q charge.</details></li>
+              <li>Switch to “Arrows on a grid” and drag one charge around. Why are the arrows never along a dashed green line?<details><summary>Show answer</summary>Moving a charge along an equipotential needs no work, so the field can have no part along it. E is always perpendicular to equipotentials.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Electric field (E):</strong> force per unit positive test charge, in N/C (same as V/m).</li>
+              <li><strong>Electric potential (V):</strong> work done per unit positive charge to bring it from infinity to that point, in volts.</li>
+              <li><strong>Equipotential surface:</strong> a surface on which V is the same everywhere.</li>
+              <li><strong>Superposition:</strong> the total field is the vector sum of the fields of all the charges.</li>
+              <li><strong>Nanocoulomb (nC):</strong> 10⁻⁹ C, a typical charge on a rubbed balloon or comb.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

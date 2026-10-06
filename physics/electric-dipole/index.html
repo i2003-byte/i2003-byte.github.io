@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Electric Dipole in a Uniform Field — Interactive Simulation | SimLab</title>
+  <meta name="description" content="A dipole on a pivot swings in a uniform electric field. See the two equal and opposite forces, the torque p × E, the potential energy and the stable and unstable positions.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/electric-dipole/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Electric Dipole in a Uniform Field — Interactive Simulation | SimLab">
+  <meta property="og:description" content="A dipole on a pivot swings in a uniform electric field. See the two equal and opposite forces, the torque p × E, the potential energy and the stable and unstable positions.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/electric-dipole/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="electric-dipole">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>An <strong>electric dipole</strong> is a pair of equal and opposite charges, +q and −q, a small distance 2a apart. Its strength and direction are given by the <strong>dipole moment</strong> p = q × 2a, a vector that points from −q to +q. Water molecules and many other molecules behave like tiny dipoles.</p>
+            <p>In a <strong>uniform</strong> field the + end is pushed along E and the − end is pushed the opposite way with exactly the same force. So the <strong>net force is zero</strong> and the dipole does not move as a whole. But the two forces act along different lines, so they form a <strong>couple</strong> that turns the dipole until p lines up with E.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">p = q × 2a     τ = p E sin θ  (τ = p × E)     U = −p E cos θ</code>
+            <p class="formula-note">θ is the angle between p and E. The torque is biggest at θ = 90° and zero at 0° and 180°. The energy is lowest (−pE) at θ = 0° and highest (+pE) at θ = 180°; the work needed to turn the dipole from 0° to 180° is 2pE.</p>
+            <ul>
+              <li><strong>θ = 0°</strong> (p along E): <strong>stable equilibrium</strong>. Turn it a little and the torque pulls it back.</li>
+              <li><strong>θ = 180°</strong> (p against E): <strong>unstable equilibrium</strong>. The smallest nudge and it flips right round.</li>
+            </ul>
+            <code class="formula">T = 2π √(I ÷ pE)   for small swings</code>
+            <p class="formula-note">Near θ = 0 the dipole swings like a pendulum: the restoring torque pE sin θ ≈ pE θ plays the part of mgL θ.</p>
+            <p>Simplifications: the rod has no mass and carries a 1 g ball at each end, so I = 2 m a². The field is perfectly uniform (as between two large parallel plates) and the balls' own fields on each other are ignored. Air drag is a simple torque proportional to the turning speed.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A microwave oven makes an electric field that reverses billions of times a second. Water molecules (dipoles) keep trying to turn with it, and this jostling heats the food.</li>
+              <li>In a liquid-crystal display (LCD) on a phone or calculator, a small voltage turns rod-shaped molecules, which changes how light passes through.</li>
+              <li>A charged comb attracts small bits of paper because its field turns the molecules of the paper into lined-up dipoles. In a non-uniform field a dipole feels a net force.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the starting values (q = 20 nC, 2a = 4 cm, E = 50 kN/C), find p and the biggest possible torque.<details><summary>Show answer</summary>p = 20 × 10⁻⁹ × 0.04 = 8 × 10⁻¹⁰ C·m. The biggest torque, at 90°, is pE = 8 × 10⁻¹⁰ × 5 × 10⁴ = 4 × 10⁻⁵ N·m = 40 μN·m.</details></li>
+              <li>Press “Start at 90°” with no air drag. How far does it swing, and where does it move fastest?<details><summary>Show answer</summary>It swings from +90° to −90° and back, and moves fastest as it passes θ = 0, where U is lowest (the dot at the bottom of the U curve). Energy changes between potential and kinetic, like a pendulum.</details></li>
+              <li>Press “Nudge from 180°”. Why does a dipole pointing exactly against the field not stay there?<details><summary>Show answer</summary>At 180° the torque is zero, so it can balance, but U is at its highest. Any tiny tilt gives a torque that turns it further away, so it flips over. This is an unstable equilibrium.</details></li>
+              <li>Read the net force on the dipole at different angles. Why is it always 0?<details><summary>Show answer</summary>The field is the same at both ends, so the forces +qE and −qE are equal and opposite. A uniform field only turns a dipole; it never pulls it along.</details></li>
+              <li>Make E four times bigger. What happens to the small-swing period?<details><summary>Show answer</summary>T = 2π √(I/pE), so four times the field gives half the period: about 0.89 s becomes 0.44 s.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Dipole moment (p):</strong> q × 2a, in coulomb metre (C·m), pointing from − to +.</li>
+              <li><strong>Couple:</strong> two equal and opposite forces along different lines; it turns a body without moving it along.</li>
+              <li><strong>Torque (τ):</strong> the turning effect of forces, in newton metre (N·m).</li>
+              <li><strong>Uniform field:</strong> a field with the same size and direction everywhere, like the one between two large charged plates.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="a tilted dipole between charged plates with forces and a torque arrow">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1b4b"/><stop offset="1" stop-color="#3b0764"/></linearGradient></defs><rect width="320" height="200" fill="url(#bg)"/>
+  <rect x="8" y="16" width="12" height="168" rx="3" fill="#ef4444"/><rect x="300" y="16" width="12" height="168" rx="3" fill="#3b82f6"/>
+  <g stroke="#c4b5fd" stroke-opacity=".5" stroke-width="1.5"><path d="M26 45H294M26 80H294M26 115H294M26 150H294"/></g>
+  <path d="M110 140L210 60" stroke="#cbd5e1" stroke-width="5"/>
+  <g stroke="#f59e0b" stroke-width="4" fill="#f59e0b"><path d="M210 60H255"/><path d="M265 60l-12-6v12z" stroke="none"/><path d="M110 140H65"/><path d="M55 140l12-6v12z" stroke="none"/></g>
+  <path d="M206 120A60 60 0 0 1 174 152" fill="none" stroke="#f87171" stroke-width="3"/><path d="M166 156l14-1-6-10z" fill="#f87171"/>
+  <circle cx="160" cy="100" r="5" fill="#fff"/>
+  <circle cx="210" cy="60" r="15" fill="#ef4444" stroke="#fff" stroke-width="2"/><text x="210" y="61" fill="#fff" font-family="sans-serif" font-size="20" font-weight="800" text-anchor="middle" dominant-baseline="central">+</text>
+  <circle cx="110" cy="140" r="15" fill="#3b82f6" stroke="#fff" stroke-width="2"/><text x="110" y="140" fill="#fff" font-family="sans-serif" font-size="22" font-weight="800" text-anchor="middle" dominant-baseline="central">−</text>
+</svg>

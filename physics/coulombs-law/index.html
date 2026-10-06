@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Coulomb's Law: Force Between Charges — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Change two charges, the distance between them and the medium, and see the equal and opposite forces with an inverse-square graph. Add a third charge to add forces as vectors.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/coulombs-law/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Coulomb's Law: Force Between Charges — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Change two charges, the distance between them and the medium, and see the equal and opposite forces with an inverse-square graph. Add a third charge to add forces as vectors.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/coulombs-law/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="coulombs-law">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Like charges <strong>repel</strong> and unlike charges <strong>attract</strong>. In 1785 Charles-Augustin de Coulomb measured how strong this force is with a sensitive twisting balance. He found that the force between two small charged bodies:</p>
+            <ul>
+              <li>is proportional to the product of the charges, q₁ × q₂;</li>
+              <li>is inversely proportional to the square of the distance between them, 1 ÷ r²;</li>
+              <li>acts along the line joining them, and is equal and opposite on the two charges (Newton's third law).</li>
+            </ul>
+            <p>It looks just like Newton's law of gravitation, but it is enormously stronger: between a proton and an electron the electric force is about 10³⁹ times the gravitational pull.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">F = k q₁ q₂ ÷ (K r²)     k = 1 ÷ (4π ε₀) = 9 × 10⁹ N m² C⁻²</code>
+            <p class="formula-note">K is the dielectric constant of the medium (1 for vacuum, almost exactly 1 for air). The same charges in water feel only 1/80 of the force they feel in air. In this simulation F &gt; 0 means repulsion and F &lt; 0 means attraction.</p>
+            <code class="formula">F on q₃ = F₁₃ + F₂₃   (add as vectors)</code>
+            <p class="formula-note">Principle of superposition: each pair of charges acts as if the others were not there, and the forces are added like vectors (parallelogram law).</p>
+            <p>Simplifications: the charges are points (tiny spheres), held still, and nothing else is nearby. Glass is given as K ≈ 6; real glasses range from about 4 to 10. Force arrows in the two-charge picture are drawn to scale with full length = the force at 8 cm; closer charges go off that scale.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Salt dissolves easily in water because water (K ≈ 80) weakens the attraction between Na⁺ and Cl⁻ ions about 80 times.</li>
+              <li>A comb rubbed in dry hair picks up bits of paper: the charges are tiny (around a nanocoulomb), but the pieces are very light.</li>
+              <li>A microcoulomb is a big charge in everyday life: two 1 μC charges 10 cm apart push with about 0.9 N, about the weight of a small apple (90 g).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With q₁ = +2 μC, q₂ = −3 μC and r = 10 cm in air, work out F before you look.<details><summary>Show answer</summary>F = 9 × 10⁹ × 2 × 10⁻⁶ × 3 × 10⁻⁶ ÷ 0.1² = 5.4 N, attraction. That is about the weight of 0.55 kg.</details></li>
+              <li>Drag q₂ from 10 cm to 20 cm. What happens to F? What about 30 cm?<details><summary>Show answer</summary>At 20 cm F is one-fourth, 1.35 N. At 30 cm it is one-ninth, 0.6 N. The orange marker on the graph always sits at one-fourth of the blue one.</details></li>
+              <li>Double q₁ to +4 μC. Then make both charges negative. What changes?<details><summary>Show answer</summary>Doubling one charge doubles the force (10.8 N). With two negative charges the size is the same as with two positive charges, but the force becomes repulsion.</details></li>
+              <li>Change the medium to water. Why are the forces now so much smaller?<details><summary>Show answer</summary>Water molecules are polar. They turn so that their ends partly cover each charge, which weakens the field. F becomes 5.4 ÷ 80 ≈ 0.068 N.</details></li>
+              <li>Choose three charges and set q₁ = q₂ = +2 μC, q₃ = +1 μC. Drag q₃ onto the line straight above the middle of q₁ and q₂. Which way is the net force?<details><summary>Show answer</summary>Straight up. F₁₃ and F₂₃ are equal in size, and their sideways parts cancel, leaving only the upward parts.</details></li>
+              <li>In three-charge mode with q₁ = +2 μC and q₂ = +2 μC, where can q₃ feel no force at all?<details><summary>Show answer</summary>Exactly midway between q₁ and q₂, where the two pushes are equal and opposite. (With +2 μC and −2 μC there is no such point between them: both forces point the same way.)</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Coulomb (C):</strong> the SI unit of charge. 1 μC = 10⁻⁶ C. One electron carries 1.6 × 10⁻¹⁹ C.</li>
+              <li><strong>Permittivity of free space (ε₀):</strong> 8.85 × 10⁻¹² C² N⁻¹ m⁻²; k = 1 ÷ (4π ε₀).</li>
+              <li><strong>Dielectric constant (K):</strong> how many times weaker the force is in a medium than in vacuum.</li>
+              <li><strong>Superposition:</strong> the total force is the vector sum of the separate forces.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

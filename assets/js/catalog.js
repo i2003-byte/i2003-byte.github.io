@@ -1578,31 +1578,64 @@ SimLab.simulations = [
     id: 'wave-interference',
     subject: 'physics',
     branch: 'waves',
-    title: 'Wave Interference',
-    description: 'Two sources, one pond. See constructive and destructive interference patterns form.',
+    title: 'Wave Interference: Two Sources in a Ripple Tank',
+    description:
+      'Two dippers make circular ripples in a tank. Watch bright and calm bands form where the waves add and cancel, move a probe to measure the path difference, and see the pattern on a screen.',
     level: 'Intermediate',
-    tags: ['waves', 'interference', 'superposition', 'wavelength', 'ripple tank'],
+    tags: ['waves', 'interference', 'superposition', 'wavelength', 'ripple tank', 'path difference', 'coherent sources', 'wave optics', 'class 11', 'class 12'],
     thumbnail: '/assets/img/thumbs/wave-interference.svg',
     link: '/physics/wave-interference/',
-    status: 'coming-soon',
+    status: 'live',
     featured: false,
-    dateAdded: '2026-10-25',
-    prerequisites: []
+    dateAdded: '2026-10-06',
+    prerequisites: ['wave-types']
+  },
+  {
+    id: 'coulombs-law',
+    subject: 'physics',
+    branch: 'electricity',
+    title: "Coulomb's Law: Force Between Charges",
+    description:
+      "Change two charges, the distance between them and the medium, and see the equal and opposite forces with an inverse-square graph. Add a third charge to add forces as vectors.",
+    level: 'Intermediate',
+    tags: ['coulomb', 'charge', 'electrostatic force', 'inverse square', 'dielectric constant', 'superposition', 'vectors', 'class 12'],
+    thumbnail: '/assets/img/thumbs/coulombs-law.svg',
+    link: '/physics/coulombs-law/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-06',
+    prerequisites: ['charging-by-rubbing', 'universal-gravitation']
   },
   {
     id: 'electric-fields',
     subject: 'physics',
     branch: 'electricity',
-    title: 'Electric Fields',
-    description: 'Drop positive and negative charges and visualise field lines and equipotentials.',
+    title: 'Electric Fields: Field Lines and Equipotentials',
+    description: 'Drag positive and negative charges and watch their electric field lines and equipotential lines change. Add charges, read E and V at a test point and see superposition at work.',
     level: 'Advanced',
-    tags: ['charge', 'coulomb', 'field lines', 'potential', 'electrostatics'],
+    tags: ['charge', 'coulomb', 'field lines', 'potential', 'equipotential', 'electrostatics', 'superposition', 'class 12'],
     thumbnail: '/assets/img/thumbs/electric-fields.svg',
     link: '/physics/electric-fields/',
-    status: 'coming-soon',
+    status: 'live',
     featured: false,
-    dateAdded: '2026-11-10',
-    prerequisites: []
+    dateAdded: '2026-10-06',
+    prerequisites: ['coulombs-law']
+  },
+  {
+    id: 'electric-dipole',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Electric Dipole in a Uniform Field',
+    description:
+      'A dipole on a pivot swings in a uniform electric field. See the two equal and opposite forces, the torque p × E, the potential energy and the stable and unstable positions.',
+    level: 'Advanced',
+    tags: ['dipole', 'dipole moment', 'torque', 'uniform field', 'potential energy', 'electrostatics', 'class 12'],
+    thumbnail: '/assets/img/thumbs/electric-dipole.svg',
+    link: '/physics/electric-dipole/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-06',
+    prerequisites: ['electric-fields']
   }
 ];
 
