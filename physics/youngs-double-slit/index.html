@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Young's Double-Slit Experiment: Interference Fringes — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Light from two narrow slits overlaps on a screen and makes bright and dark fringes. Change the colour, slit gap and screen distance, measure the fringe width β = λD/d, try white light and cover one slit.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/youngs-double-slit/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Young's Double-Slit Experiment: Interference Fringes — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Light from two narrow slits overlaps on a screen and makes bright and dark fringes. Change the colour, slit gap and screen distance, measure the fringe width β = λD/d, try white light and cover one slit.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/youngs-double-slit/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="youngs-double-slit">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>Two ordinary lamps never make a steady interference pattern, because their light waves change phase at random. In 1801 Thomas Young solved this by letting light from <strong>one</strong> narrow slit S fall on <strong>two</strong> slits S₁ and S₂. The two slits copy the same wave, so they are <strong>coherent sources</strong>.</p>
+            <p>On the screen, the waves from S₁ and S₂ travel slightly different distances. Where the <strong>path difference</strong> is a whole number of wavelengths, crest meets crest and the screen is bright. Where it is an odd number of half wavelengths, crest meets trough and the screen is dark. The result is a row of equally spaced <strong>fringes</strong>, and it proved that light is a wave.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">path difference  S₂P − S₁P ≈ d y ÷ D</code>
+            <code class="formula">bright: d y ÷ D = nλ  →  yₙ = nλD ÷ d      dark: d y ÷ D = (n + ½)λ</code>
+            <code class="formula">fringe width  β = λD ÷ d      angular fringe width  θ = λ ÷ d</code>
+            <code class="formula">I = 4I₀ cos²(π d y ÷ λD)</code>
+            <p class="formula-note">d is the distance between the slits, D the distance to the screen, y the height of P above the centre O, and I₀ the brightness from one slit alone. Example: λ = 600 nm, d = 0.3 mm, D = 1.5 m gives β = 600 × 10⁻⁹ × 1.5 ÷ 0.0003 = 3 mm.</p>
+            <p>Simplifications: the formulas use small angles (D is thousands of times bigger than d). The drawing at the left is not to scale and its waves are slowed down; the screen strip at the right is to scale in mm. The “slit width” choice adds the single-slit envelope (sin b ÷ b)², b = π a y ÷ λD. Colours of wavelengths are approximate.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Shine a laser pointer through two scratches on a sooty glass slide and you see these fringes on a far wall.</li>
+              <li>The rainbow colours on a CD or DVD and on a soap film come from light waves interfering.</li>
+              <li>Interference is used to measure lengths to a fraction of a wavelength, for example in the LIGO detectors (with a partner detector planned in India) that sense gravitational waves.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the starting settings, drag P to the first bright fringe above O. How far up is it, and what is the path difference?<details><summary>Show answer</summary>About 3.0 mm = β. The path difference is d y ÷ D = 0.3 mm × 3 mm ÷ 1.5 m = 600 nm, exactly one wavelength.</details></li>
+              <li>Double the slit gap d to 0.6 mm. What happens to the fringes?<details><summary>Show answer</summary>β halves to 1.5 mm: the fringes crowd together. Slits farther apart give narrower fringes.</details></li>
+              <li>Compare red light (650 nm) and blue light (470 nm). Which gives wider fringes?<details><summary>Show answer</summary>Red: β = 3.25 mm against 2.35 mm for blue, because β is proportional to λ.</details></li>
+              <li>Switch on white light. What colour is the central fringe, and what do the others look like?<details><summary>Show answer</summary>The centre is white, because the path difference is zero for every colour. Beside it the fringes are coloured, with violet/blue on the inside edge and red on the outside, and after a few fringes the colours overlap and wash out.</details></li>
+              <li>Cover slit S₁. What happens to the fringes and the brightness?<details><summary>Show answer</summary>The fringes vanish and the screen is evenly lit at 25 % of the brightest fringe. With both slits the bright fringes reach 4 times one slit's brightness and the dark ones 0, so the light is only moved around: the average is 2 times one slit, as energy requires.</details></li>
+              <li>Set the slit width to 0.1 mm (keep d = 0.3 mm, 600 nm, D = 1.5 m). Which bright fringe goes missing?<details><summary>Show answer</summary>The third one, at 9 mm. There each slit on its own sends no light (a y ÷ D = λ, the first single-slit dark band), and since d = 3a it falls exactly on bright fringe n = 3.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Coherent sources:</strong> sources with the same wavelength and a constant phase difference.</li>
+              <li><strong>Fringe width (β):</strong> the distance between two neighbouring bright (or dark) fringes.</li>
+              <li><strong>Path difference:</strong> the extra distance one wave travels to reach a point.</li>
+              <li><strong>Central maximum:</strong> the bright fringe at O, where the path difference is zero.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

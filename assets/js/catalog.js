@@ -135,10 +135,11 @@ SimLab.subjects = [
     color: '#f472b6',
     tagline: 'Atoms, bonds and reactions you can build and break.',
     description:
-      'Build molecules, balance reactions and watch gases behave. ' +
-      'Chemistry simulations are on the way.',
-    status: 'coming-soon',
+      'Test everyday solutions with natural indicators, neutralise acids with bases ' +
+      'and watch reactions happen. More chemistry simulations are on the way.',
+    status: 'live',
     branches: [
+      { id: 'acids-bases', name: 'Acids, Bases & Salts' },
       { id: 'atoms', name: 'Atomic Structure' },
       { id: 'bonding', name: 'Bonding' },
       { id: 'reactions', name: 'Reactions' },
@@ -1636,6 +1637,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-06',
     prerequisites: ['electric-fields']
+  },
+  {
+    id: 'youngs-double-slit',
+    subject: 'physics',
+    branch: 'optics',
+    title: "Young's Double-Slit Experiment: Interference Fringes",
+    description:
+      'Light from two narrow slits overlaps on a screen and makes bright and dark fringes. Change the colour, slit gap and screen distance, measure the fringe width β = λD/d, try white light and cover one slit.',
+    level: 'Advanced',
+    tags: ['interference', 'young', 'double slit', 'fringe width', 'coherent sources', 'path difference', 'wave optics', 'light', 'class 12'],
+    thumbnail: '/assets/img/thumbs/youngs-double-slit.svg',
+    link: '/physics/youngs-double-slit/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-07',
+    prerequisites: ['wave-interference']
+  },
+  {
+    id: 'single-slit-diffraction',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Single-Slit Diffraction: Light Spreading Through a Slit',
+    description:
+      'Light through one narrow slit spreads out into a wide central bright band with faint bands beside it. Change the slit width, colour and screen distance, find the dark bands at a sin θ = nλ and compare with two slits.',
+    level: 'Advanced',
+    tags: ['diffraction', 'single slit', 'central maximum', 'huygens', 'wave optics', 'light', 'class 12'],
+    thumbnail: '/assets/img/thumbs/single-slit-diffraction.svg',
+    link: '/physics/single-slit-diffraction/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-07',
+    prerequisites: ['youngs-double-slit']
+  },
+  {
+    id: 'natural-indicators',
+    subject: 'chemistry',
+    branch: 'acids-bases',
+    title: 'Natural Indicators: Litmus, Turmeric and China Rose',
+    description:
+      'Test lemon juice, vinegar, soap water, baking soda and more with litmus paper, turmeric paper and china rose solution. Watch the colours change and work out which solutions are acidic, basic or neutral.',
+    level: 'Beginner',
+    tags: ['acids', 'bases', 'indicator', 'litmus', 'turmeric', 'china rose', 'hibiscus', 'neutral', 'class 7'],
+    thumbnail: '/assets/img/thumbs/natural-indicators.svg',
+    link: '/chemistry/natural-indicators/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-07',
+    prerequisites: []
+  },
+  {
+    id: 'neutralisation',
+    subject: 'chemistry',
+    branch: 'acids-bases',
+    title: 'Neutralisation: Acid Meets Base',
+    description:
+      'Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping.',
+    level: 'Beginner',
+    tags: ['neutralisation', 'neutralization', 'acid', 'base', 'salt', 'phenolphthalein', 'titration', 'burette', 'ph', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/neutralisation.svg',
+    link: '/chemistry/neutralisation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-07',
+    prerequisites: ['natural-indicators']
   }
 ];
 

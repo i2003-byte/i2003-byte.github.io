@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="youngs-double-slit">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="30" cy="100" r="9" fill="#f97316"/>
+  <path d="M70 20V97M70 103V180" stroke="#94a3b8" stroke-width="4"/>
+  <path d="M130 20V80M130 86V114M130 120V180" stroke="#94a3b8" stroke-width="4"/>
+  <path d="M142 78A14 14 0 0 1 142 88" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M142 112A14 14 0 0 1 142 122" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M155 72A28 28 0 0 1 155 94" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M155 106A28 28 0 0 1 155 128" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M167 67A42 42 0 0 1 167 99" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M167 101A42 42 0 0 1 167 133" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M180 61A56 56 0 0 1 180 105" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M180 95A56 56 0 0 1 180 139" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M193 55A70 70 0 0 1 193 111" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M193 89A70 70 0 0 1 193 145" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M205 50A84 84 0 0 1 205 116" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M205 84A84 84 0 0 1 205 150" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M218 44A98 98 0 0 1 218 122" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M218 78A98 98 0 0 1 218 156" fill="none" stroke="#fb923c" stroke-opacity=".55" stroke-width="2"/>
+  <rect x="262" y="14" width="40" height="12" rx="3" fill="#f97316" fill-opacity="20e-2"/>
+  <rect x="262" y="34" width="40" height="12" rx="3" fill="#f97316" fill-opacity="40e-2"/>
+  <rect x="262" y="54" width="40" height="12" rx="3" fill="#f97316" fill-opacity="60e-2"/>
+  <rect x="262" y="74" width="40" height="12" rx="3" fill="#f97316" fill-opacity="80e-2"/>
+  <rect x="262" y="94" width="40" height="12" rx="3" fill="#f97316" fill-opacity="100e-2"/>
+  <rect x="262" y="114" width="40" height="12" rx="3" fill="#f97316" fill-opacity="80e-2"/>
+  <rect x="262" y="134" width="40" height="12" rx="3" fill="#f97316" fill-opacity="60e-2"/>
+  <rect x="262" y="154" width="40" height="12" rx="3" fill="#f97316" fill-opacity="40e-2"/>
+  <rect x="262" y="174" width="40" height="12" rx="3" fill="#f97316" fill-opacity="20e-2"/>
+</svg>

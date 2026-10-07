@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="natural-indicators">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="20" y="150" width="280" height="10" rx="4" fill="#7c5a3a"/>
+  <path d="M40 40V140A16 16 0 0 0 72 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M42 90V140A14 14 0 0 0 70 140V90Z" fill="#c0267a" fill-opacity=".85"/>
+  <path d="M82 40V140A16 16 0 0 0 114 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M84 90V140A14 14 0 0 0 112 140V90Z" fill="#dc2626" fill-opacity=".85"/>
+  <path d="M124 40V140A16 16 0 0 0 156 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M126 90V140A14 14 0 0 0 154 140V90Z" fill="#facc15" fill-opacity=".85"/>
+  <path d="M166 40V140A16 16 0 0 0 198 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M168 90V140A14 14 0 0 0 196 140V90Z" fill="#b42318" fill-opacity=".85"/>
+  <path d="M208 40V140A16 16 0 0 0 240 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M210 90V140A14 14 0 0 0 238 140V90Z" fill="#16a34a" fill-opacity=".85"/>
+  <path d="M250 40V140A16 16 0 0 0 282 140V40" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M252 90V140A14 14 0 0 0 280 140V90Z" fill="#3b82f6" fill-opacity=".85"/>
+</svg>

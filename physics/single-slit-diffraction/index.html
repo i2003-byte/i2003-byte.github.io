@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Single-Slit Diffraction: Light Spreading Through a Slit — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Light through one narrow slit spreads out into a wide central bright band with faint bands beside it. Change the slit width, colour and screen distance, find the dark bands at a sin θ = nλ and compare with two slits.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/single-slit-diffraction/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Single-Slit Diffraction: Light Spreading Through a Slit — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Light through one narrow slit spreads out into a wide central bright band with faint bands beside it. Change the slit width, colour and screen distance, find the dark bands at a sin θ = nλ and compare with two slits.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/single-slit-diffraction/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="single-slit-diffraction">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+<section>
+            <h3>💡 The big idea</h3>
+            <p>When light passes through a slit that is only a few wavelengths wide, it does not make a sharp image of the slit. It <strong>spreads out</strong> (<strong>diffraction</strong>) and makes a wide bright band in the middle, with much fainter bands on each side.</p>
+            <p>Huygens' idea explains it: every point of the opening sends out its own little wave. Straight ahead they all arrive in step, so the centre is bright. At an angle where the two <strong>edges</strong> of the slit differ in path by exactly one wavelength, split the slit into a top half and a bottom half: each point in the top half has a partner in the bottom half that is half a wavelength behind, so they cancel in pairs and the screen is <strong>dark</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">dark bands:  a sin θ = nλ   (n = 1, 2, 3, …)  →  yₙ = nλD ÷ a</code>
+            <code class="formula">width of the central bright band = 2λD ÷ a      angle to the first dark band θ = λ ÷ a</code>
+            <code class="formula">faint bright bands near  a sin θ ≈ (n + ½)λ</code>
+            <code class="formula">I = I₀ (sin b ÷ b)²,   b = π a y ÷ λD</code>
+            <p class="formula-note">a is the slit width and D the distance to the screen. Example: λ = 600 nm, a = 0.1 mm, D = 1.5 m gives first dark bands at ±9 mm, so the central band is 18 mm wide. The faint bands are only about 4.7 %, 1.6 % and 0.8 % as bright as the centre (their peaks sit slightly closer in than (n + ½)λ).</p>
+            <p>Simplifications: a far screen and small angles (Fraunhofer diffraction), and an evenly lit slit. The drawing at the left is not to scale, its waves are slowed down and drawn brighter in the directions that get more light; the screen strip at the right is to scale in mm. In “compare” the two slits each have width a and are d = 4a apart.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Look at a tube light through the narrow gap between two fingers held close together: you see faint dark lines inside the gap.</li>
+              <li>A laser beam through a hair or a thin wire makes the same pattern, used to measure the thickness of wires.</li>
+              <li>Diffraction limits how sharp a camera, a telescope or your eye can see: a bigger opening spreads the light less, so it shows finer detail.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the starting settings, drag P to the first dark band. Where is it, and what is the path difference between the slit edges?<details><summary>Show answer</summary>At 9 mm (λD ÷ a = 600 nm × 1.5 m ÷ 0.1 mm). The edge path difference is a y ÷ D = 600 nm, exactly one wavelength.</details></li>
+              <li>Make the slit narrower, from 0.1 mm to 0.05 mm. Does the central band get wider or narrower?<details><summary>Show answer</summary>Wider: it doubles from 18 mm to 36 mm. The narrower the opening, the more the light spreads, which is the opposite of what you might expect from shadows.</details></li>
+              <li>Turn on “Show faint bands 10× brighter” and move P to the first faint bright band. How bright is it compared with the centre?<details><summary>Show answer</summary>About 4.7 %, near 1.43λ of edge path difference (close to 1.5λ). Here the slit splits into three parts: two cancel, one third is left over, so the band is faint.</details></li>
+              <li>Switch on “Compare with two such slits”. How do the two patterns fit together?<details><summary>Show answer</summary>The two-slit pattern has many narrow, equally spaced fringes of width λD ÷ d, but their brightness follows the single-slit curve: the single-slit pattern is the envelope. Inside the central band there are 7 fringes here, because d = 4a.</details></li>
+              <li>Use white light. What colour are the edges of the central band?<details><summary>Show answer</summary>The centre is white, but the edges are reddish on the outside: red light (long λ) spreads the most, violet the least.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Diffraction:</strong> the spreading of a wave around an obstacle or through an opening.</li>
+              <li><strong>Central maximum:</strong> the wide bright band straight ahead of the slit.</li>
+              <li><strong>Secondary maxima:</strong> the much fainter bright bands beside it.</li>
+              <li><strong>Interference vs diffraction:</strong> both are waves adding up. We say interference for a few sources (two slits) and diffraction for the many wavelets from one opening.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

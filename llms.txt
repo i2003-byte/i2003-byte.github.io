@@ -80,6 +80,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Human Eye: Power of Accommodation](https://i2003-byte.github.io/physics/eye-accommodation/): Bring an object closer to a model eye and watch the ciliary muscles thicken the lens to keep the image on the retina, until the near point. (Intermediate)
 - [Myopia and Hypermetropia: Correcting Vision](https://i2003-byte.github.io/physics/eye-defects/): See why a short-sighted eye blurs the blackboard and a long-sighted eye blurs a book, then add concave or convex glasses and find their power. (Intermediate)
 - [Dispersion by a Prism and the Blue Sky](https://i2003-byte.github.io/physics/prism-dispersion/): Split white light into VIBGYOR with a glass prism, recombine it with a second prism, and see how scattering makes the sky blue and sunsets red. (Intermediate)
+- [Young's Double-Slit Experiment: Interference Fringes](https://i2003-byte.github.io/physics/youngs-double-slit/): Light from two narrow slits overlaps on a screen and makes bright and dark fringes. Change the colour, slit gap and screen distance, measure the fringe width β = λD/d, try white light and cover one slit. (Advanced)
+- [Single-Slit Diffraction: Light Spreading Through a Slit](https://i2003-byte.github.io/physics/single-slit-diffraction/): Light through one narrow slit spreads out into a wide central bright band with faint bands beside it. Change the slit width, colour and screen distance, find the dark bands at a sin θ = nλ and compare with two slits. (Advanced)
 
 ### Electricity & Magnetism
 
@@ -144,9 +146,14 @@ Count in binary, wire up logic gates and race sorting algorithms. The ideas insi
 
 - [Sorting Race: Bubble, Selection and Merge](https://i2003-byte.github.io/computer-science/sorting-race/): Race bubble sort, selection sort and merge sort on the same bars, step by step, counting comparisons and swaps. See why n log n beats n² as the list grows. (Intermediate)
 
-## Chemistry (coming soon)
+## Chemistry
 
-Build molecules, balance reactions and watch gases behave. Chemistry simulations are on the way.
+Test everyday solutions with natural indicators, neutralise acids with bases and watch reactions happen. More chemistry simulations are on the way.
+
+### Acids, Bases & Salts
+
+- [Natural Indicators: Litmus, Turmeric and China Rose](https://i2003-byte.github.io/chemistry/natural-indicators/): Test lemon juice, vinegar, soap water, baking soda and more with litmus paper, turmeric paper and china rose solution. Watch the colours change and work out which solutions are acidic, basic or neutral. (Beginner)
+- [Neutralisation: Acid Meets Base](https://i2003-byte.github.io/chemistry/neutralisation/): Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping. (Beginner)
 
 ## Mathematics (coming soon)
 

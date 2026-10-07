@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**88 live simulations** in Physics, Geography, Economics and Computer Science. Chemistry, Mathematics, Biology and Astronomy are coming soon.
+**92 live simulations** in Physics, Chemistry, Geography, Economics and Computer Science. Mathematics, Biology and Astronomy are coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -19,7 +19,8 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
 | 🔥 **Heat** (6, Class 7) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes |
 | ⚡ **Electricity** (15, Class 7, 8, 10 and 12) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor · Ohm's Law and Resistivity · Resistors in Series and Parallel · Electric Power and the Electricity Bill · Magnetic Field Lines: Magnets and a Wire · Magnetic Field of a Loop and a Solenoid · Electric Motor and Generator · Coulomb's Law: Force Between Charges · Electric Fields: Field Lines and Equipotentials · Electric Dipole in a Uniform Field |
-| 💡 **Light** (9, Class 7 and 10) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab · Convex and Concave Lenses: Ray Diagrams · Human Eye: Power of Accommodation · Myopia and Hypermetropia: Correcting Vision · Dispersion by a Prism and the Blue Sky |
+| 💡 **Light** (11, Class 7, 10 and 12) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab · Convex and Concave Lenses: Ray Diagrams · Human Eye: Power of Accommodation · Myopia and Hypermetropia: Correcting Vision · Dispersion by a Prism and the Blue Sky · Young's Double-Slit Experiment: Interference Fringes · Single-Slit Diffraction: Light Spreading Through a Slit |
+| ⚗️ **Chemistry: Acids, bases and salts** (2, Class 7) | Natural Indicators: Litmus, Turmeric and China Rose · Neutralisation: Acid Meets Base |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
