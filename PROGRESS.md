@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-08 · fix · Logic gates truth table on phones + phone review of all sims
+- Built/changed: `computer-science/logic-gates/sim.js`: when the picture is short (phones), the truth table turns sideways (one column per input combination, rows A, B, (C), (X), Y) and "tap a column" sets the switches; the tall-screen and desktop table is unchanged
+- Checks: ✅ check.mjs passed · ✅ browser-test (sample, phone + desktop) · tap-a-column and tap-a-row checked on phone and desktop · reviewed contact sheets of all 92 sims at 412×915 (running)
+- Roadmap: unchanged
+- Next time (weekly maintenance): small label overlaps seen at 412×915: distance-time-graph (left axis "km" cut off), balloon-rocket ("drag" label on the balloon), refraction-glass-slab ("i = 40°" over the normal label), electric-dipole ("stable (U lowest)" on the curve)
+- Problems/notes: from the owner's phone screenshot of logic gates
+
 ## 2026-10-08 · fix · Phone simulation pages start with the simulation
 - Built/changed: `style.css` (≤ 767px): simulation pages hide the breadcrumbs, badges and description (the Learn panel and the menu cover them), the title is one compact line (2 at most) and Fullscreen / Share / Sound become 44px icon buttons beside it. The picture, key numbers, tabs and the first control now fit the first screen
 - Checks: ✅ check.mjs passed · ✅ browser-test (sample pages, phone + desktop) · screenshots at 412×915

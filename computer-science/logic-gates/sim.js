@@ -44,6 +44,26 @@
     var tab = narrow ? { x: 8, y: cir.y + cir.h + 8, w: W - 16, h: H - cir.y - cir.h - 16 } : { x: W * 0.6 + 12, y: 44, w: W * 0.4 - 24, h: H - 56 };
     return { narrow: narrow, cir: cir, tab: tab };
   }
+  // truth-table geometry. When the box is short (phones), the table turns sideways:
+  // one column per input combination, rows A, B, (C), (X), Y, so rows stay readable
+  function tableGeo(T, p) {
+    var vs = vars(p), cols = vs.slice(), n = 1 << vs.length;
+    if (p.mode === 'two') cols.push('X'); cols.push('Y');
+    if ((T.h - 64) / n >= 22) {
+      var rh = Math.min(30, (T.h - 64) / n), cw = Math.min(64, T.w / cols.length);
+      return { side: false, vs: vs, cols: cols, n: n, rh: rh, cw: cw, tx: T.x + (T.w - cw * cols.length) / 2, y0: T.y + 56, h: Math.min(T.h, 64 + rh * n) };
+    }
+    var lw = 30, rh2 = Math.max(16, Math.min(26, (T.h - 38) / cols.length)), cw2 = Math.min(48, (T.w - 20 - lw) / n);
+    var tx2 = T.x + (T.w - lw - cw2 * n) / 2;
+    return { side: true, vs: vs, cols: cols, n: n, rh: rh2, cw: cw2, lw: lw, tx: tx2, y0: T.y + 30, h: Math.min(T.h, 38 + rh2 * cols.length) };
+  }
+  function tableRowAt(T, p, x, y) { // input combination under the pointer, or -1
+    var t = tableGeo(T, p);
+    if (x < T.x || x > T.x + T.w) return -1;
+    if (!t.side) return y >= t.y0 && y < t.y0 + t.rh * t.n ? Math.floor((y - t.y0) / t.rh) : -1;
+    var k = Math.floor((x - t.tx - t.lw) / t.cw);
+    return y >= t.y0 && y < t.y0 + t.rh * t.cols.length && k >= 0 && k < t.n ? k : -1;
+  }
   // geometry of switches, gates and lamp inside the circuit box
   function geo(sim) {
     var L = layout(sim), C = L.cir, p = sim.p, two = p.mode === 'two';
@@ -126,15 +146,14 @@
           if (x >= g.swX - 4 && x <= g.swX + g.sw.w + 4 && Math.abs(y - g.inputs[k]) <= g.sw.h / 2 + 4) hit = k.toLowerCase();
         });
         if (hit) { sim.setParam(hit, !p[hit], true); return false; }
-        var T = g.L.tab, vs = vars(p), n = 1 << vs.length, rh = Math.min(30, (T.h - 64) / n), y0 = T.y + 56;
-        if (x >= T.x && x <= T.x + T.w && y >= y0 && y < y0 + rh * n) {
-          var row = Math.floor((y - y0) / rh);
+        var vs = vars(p), row = tableRowAt(g.L.tab, p, x, y);
+        if (row >= 0) {
           vs.forEach(function (v, i) { sim.setParam(v.toLowerCase(), !!((row >> (vs.length - 1 - i)) & 1), true); });
         }
         return false;
       },
       hover: function (sim, x, y) {
-        var g = geo(sim), T = g.L.tab, over = x >= T.x && x <= T.x + T.w && y >= T.y + 56 && y <= T.y + T.h;
+        var g = geo(sim), over = tableRowAt(g.L.tab, sim.p, x, y) >= 0;
         Object.keys(g.inputs).forEach(function (k) { if (x >= g.swX && x <= g.swX + g.sw.w && Math.abs(y - g.inputs[k]) <= g.sw.h / 2) over = true; });
         return over;
       }
@@ -210,25 +229,42 @@
       D.text(ctx, eg, C.x + 10, ey + 17, { color: c.muted, size: es });
 
       // truth table
-      var vs = vars(p), cols = vs.slice(), n = 1 << vs.length;
-      if (p.mode === 'two') cols.push('X'); cols.push('Y');
-      var rh = Math.min(30, (T.h - 64) / n), cw = Math.min(64, T.w / cols.length), tx = T.x + (T.w - cw * cols.length) / 2, y0 = T.y + 56;
-      D.roundRect(ctx, T.x, T.y, T.w, Math.min(T.h, 64 + rh * n), 10, c.surface2, c.border, 1);
-      D.text(ctx, 'Truth table · tap a row', T.x + 10, T.y + 14, { color: c.ink, size: 12, weight: 700 });
-      cols.forEach(function (h, i) {
-        D.text(ctx, h, tx + cw * (i + 0.5), T.y + 40, { color: h === 'Y' ? c.warning : h === 'X' ? c.s3 : c.muted, size: 12, weight: 700, align: 'center' });
-      });
-      D.line(ctx, T.x + 8, T.y + 52, T.x + T.w - 8, T.y + 52, c.border, 1);
+      var t = tableGeo(T, p), vs = t.vs, cols = t.cols, n = t.n, rh = t.rh, cw = t.cw, tx = t.tx, y0 = t.y0;
       var curRow = 0; vs.forEach(function (v) { curRow = curRow * 2 + val[v]; });
-      for (var row = 0; row < n; row++) {
-        var bits = {}, yy = y0 + rh * row + rh / 2;
-        vs.forEach(function (v, i) { bits[v] = (row >> (vs.length - 1 - i)) & 1; });
-        var rr = evalC(p, bits.A, bits.B || 0, bits.C || 0);
-        if (row === curRow) D.roundRect(ctx, T.x + 6, y0 + rh * row + 1, T.w - 12, rh - 2, 6, D.alpha('#fbbf24', 0.2), c.warning, 1.5);
+      var mono = 'ui-monospace, SFMono-Regular, Menlo, monospace';
+      function colColor(h, v) { return h === 'Y' ? (v ? c.warning : c.muted) : h === 'X' ? c.s3 : c.ink; }
+      D.roundRect(ctx, T.x, T.y, T.w, t.h, 10, c.surface2, c.border, 1);
+      D.text(ctx, t.side ? 'Truth table · tap a column' : 'Truth table · tap a row', T.x + 10, T.y + 14, { color: c.ink, size: 12, weight: 700 });
+      if (t.side) {
         cols.forEach(function (h, i) {
-          var v = h === 'Y' ? rr.y : h === 'X' ? rr.x : bits[h];
-          D.text(ctx, String(v), tx + cw * (i + 0.5), yy, { color: h === 'Y' ? (v ? c.warning : c.muted) : h === 'X' ? c.s3 : c.ink, size: Math.min(14, rh * 0.6), weight: h === 'Y' ? 700 : 500, align: 'center', font: 'ui-monospace, SFMono-Regular, Menlo, monospace' });
+          D.text(ctx, h, tx + t.lw / 2, y0 + rh * (i + 0.5), { color: h === 'Y' ? c.warning : h === 'X' ? c.s3 : c.muted, size: 12, weight: 700, align: 'center' });
         });
+        D.line(ctx, tx + t.lw - 4, y0, tx + t.lw - 4, y0 + rh * cols.length, c.border, 1);
+        for (var k = 0; k < n; k++) {
+          var kb = {}, cx = tx + t.lw + cw * (k + 0.5);
+          vs.forEach(function (v, i) { kb[v] = (k >> (vs.length - 1 - i)) & 1; });
+          var kr = evalC(p, kb.A, kb.B || 0, kb.C || 0);
+          if (k === curRow) D.roundRect(ctx, cx - cw / 2 + 2, y0 - 2, cw - 4, rh * cols.length + 4, 6, D.alpha('#fbbf24', 0.2), c.warning, 1.5);
+          cols.forEach(function (h, i) {
+            var v = h === 'Y' ? kr.y : h === 'X' ? kr.x : kb[h];
+            D.text(ctx, String(v), cx, y0 + rh * (i + 0.5), { color: colColor(h, v), size: Math.min(14, rh * 0.62), weight: h === 'Y' ? 700 : 500, align: 'center', font: mono });
+          });
+        }
+      } else {
+        cols.forEach(function (h, i) {
+          D.text(ctx, h, tx + cw * (i + 0.5), T.y + 40, { color: h === 'Y' ? c.warning : h === 'X' ? c.s3 : c.muted, size: 12, weight: 700, align: 'center' });
+        });
+        D.line(ctx, T.x + 8, T.y + 52, T.x + T.w - 8, T.y + 52, c.border, 1);
+        for (var row = 0; row < n; row++) {
+          var bits = {}, yy = y0 + rh * row + rh / 2;
+          vs.forEach(function (v, i) { bits[v] = (row >> (vs.length - 1 - i)) & 1; });
+          var rr = evalC(p, bits.A, bits.B || 0, bits.C || 0);
+          if (row === curRow) D.roundRect(ctx, T.x + 6, y0 + rh * row + 1, T.w - 12, rh - 2, 6, D.alpha('#fbbf24', 0.2), c.warning, 1.5);
+          cols.forEach(function (h, i) {
+            var v = h === 'Y' ? rr.y : h === 'X' ? rr.x : bits[h];
+            D.text(ctx, String(v), tx + cw * (i + 0.5), yy, { color: colColor(h, v), size: Math.min(14, rh * 0.6), weight: h === 'Y' ? 700 : 500, align: 'center', font: mono });
+          });
+        }
       }
     }
   });
