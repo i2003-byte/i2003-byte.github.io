@@ -1371,25 +1371,125 @@ input[type='range']:focus-visible::-moz-range-thumb { box-shadow: var(--focus); 
 .feedback-band p { margin: 0; }
 .feedback-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 
-/* ---------- Phones & tablets: keep the simulation in view ----------
-   Below the desktop layout the controls sit under the canvas. Pin the canvas
-   (under the sticky header) so every slider change is visible as it happens. */
-.status-mini { display: none; }
+/* ---------- Simulation pages: big start button, steppers, phone "app" layout ----------
+   Desktop keeps the side-by-side layout. Below 1024px the page becomes an app:
+   the picture (with its key numbers and tabs) stays pinned at the top, and the
+   tab bar shows one panel at a time: Controls · Numbers · Graph · Try this. */
+.sim-start {
+  position: absolute; left: 50%; top: 50%; z-index: 2;
+  transform: translate(-50%, -50%);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 56px; padding: 0 1.7rem;
+  border: 0; border-radius: var(--radius-pill);
+  background: var(--brand-gradient); color: #fff;
+  font: 700 1.1rem/1 var(--font-heading); white-space: nowrap;
+  box-shadow: 0 10px 34px -6px color-mix(in srgb, var(--primary) 85%, transparent);
+  cursor: pointer;
+}
+/* a soft ring pulses around the button (the button itself stays still) */
+.sim-start::after {
+  content: ''; position: absolute; inset: -6px; border-radius: inherit;
+  border: 2px solid color-mix(in srgb, var(--primary) 70%, transparent);
+  animation: start-ring 2s ease-out infinite; pointer-events: none;
+}
+.sim-start svg { width: 22px; height: 22px; }
+.sim-canvas-wrap.is-started .sim-start { display: none; }
+@keyframes start-ring { 0% { opacity: 0.9; transform: scale(1); } 100% { opacity: 0; transform: scale(1.25); } }
+@media (prefers-reduced-motion: reduce) { .sim-start::after { animation: none; opacity: 0.6; } }
+canvas.tap-to-play { cursor: pointer; }
+
+.range-row { display: flex; align-items: center; gap: var(--space-2); }
+.range-row input { flex: 1; min-width: 0; }
+.step-btn {
+  display: none; flex: none; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border: 1px solid var(--border); border-radius: 50%;
+  background: var(--surface-2); color: var(--text);
+  font-size: 1.35rem; line-height: 1; cursor: pointer;
+  touch-action: manipulation; -webkit-user-select: none; user-select: none;
+}
+.step-btn:active { background: var(--surface-3); }
+
+.coach h2 { display: flex; justify-content: space-between; align-items: baseline; }
+.coach-count { font-family: var(--font-mono); letter-spacing: 0; }
+.coach-q { font-size: var(--fs-sm); line-height: 1.55; }
+.coach-q details { margin-top: var(--space-2); }
+.coach-q summary { cursor: pointer; color: var(--accent); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+.coach-nav { display: flex; gap: var(--space-2); margin-top: var(--space-3); }
+.coach-nav .btn-primary { flex: 1; }
+.coach-nav .btn { min-height: 44px; }
+
+.status-mini, .sim-hud, .sim-tabs { display: none; }
+.sim-tabs[hidden] { display: none !important; }
+
 @media (max-width: 1023px) {
+  /* the site header scrolls away so the picture can use the top of the screen */
+  [data-page='sim'] .site-header { position: relative; }
   .sim-view {
-    position: sticky; top: var(--header-h); z-index: 20;
+    position: sticky; top: 0; z-index: 20;
     background: var(--bg);
-    padding-block: var(--space-2) var(--space-1);
+    padding-top: var(--space-2);
     margin-top: calc(-1 * var(--space-2));
+    box-shadow: 0 10px 14px -12px rgba(0, 0, 0, 0.45);
   }
   /* width: 100% keeps the full width when max-height clips a tall aspect ratio */
-  .sim-canvas-wrap { width: 100%; max-height: 46svh; min-height: 200px; }
-  .sim-status { margin-top: var(--space-1); }
+  .sim-canvas-wrap { width: 100%; max-height: 44svh; min-height: 200px; }
+  .sim-status { margin-top: var(--space-1); min-height: 44px; }
   .status-mini { display: flex; gap: var(--space-2); margin-left: auto; }
   .status-mini .btn { min-width: 44px; min-height: 40px; padding: 0 var(--space-3); }
   .status-mini .btn svg { width: 18px; height: 18px; }
+  [data-status] { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .sim-hud { display: flex; gap: 6px; overflow-x: auto; padding: 0 0 var(--space-2); scrollbar-width: none; }
+  .sim-hud::-webkit-scrollbar { display: none; }
+  .hud-chip {
+    flex: 1 1 0; min-width: 0; overflow: hidden;
+    display: flex; flex-direction: column; gap: 0;
+    padding: 3px 10px 4px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--surface); font-size: var(--fs-xs);
+  }
+  .hud-l { min-width: 0; color: var(--text-muted); font-size: 0.68rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hud-chip b { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .hud-chip b small { margin-left: 2px; color: var(--text-muted); font-weight: 400; }
+
+  .sim-tabs { display: flex; overflow-x: auto; border-bottom: 1px solid var(--border); scrollbar-width: none; }
+  .sim-tabs::-webkit-scrollbar { display: none; }
+  .sim-tabs [role='tab'] {
+    position: relative; flex: 1 1 0; min-width: 0;
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    min-height: 50px; padding: 4px 2px;
+    border: 0; border-bottom: 3px solid transparent; background: none;
+    color: var(--text-muted); font: 600 0.75rem/1.1 var(--font-body); white-space: nowrap; cursor: pointer;
+  }
+  .sim-tabs [role='tab'] > span { font-size: 1.05rem; }
+  .sim-tabs [aria-selected='true'] { color: var(--text); border-bottom-color: var(--accent); }
+  .sim-tabs .has-dot::after {
+    content: ''; position: absolute; top: 6px; left: calc(50% + 12px);
+    width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+    animation: start-pulse-dot 1.6s ease-in-out infinite;
+  }
+  @keyframes start-pulse-dot { 50% { opacity: 0.35; } }
+
+  .sim-stage.has-tabs .sim-panel > [data-tab]:not(.tab-on) { display: none; }
+  .sim-stage.has-tabs .sim-panel { gap: var(--space-3); }
+  .sim-panel .sim-graph-wrap { margin-top: 0; }
+  .sim-panel .transport { display: none; }        /* play / restart live under the picture */
+  .sim-panel .speed-row { margin-top: 0; }
+  .sim-panel > [aria-label='Playback'] { order: 5; }   /* speed control at the bottom of Controls */
+  .sim-panel > .panel-end { order: 6; }
+  .step-btn { display: inline-flex; }
+  input[type='range'] { height: 44px; }
+  input[type='range']::-webkit-slider-thumb { width: 28px; height: 28px; margin-top: -11px; }
+  input[type='range']::-moz-range-thumb { width: 22px; height: 22px; }
+
   .sim-stage:fullscreen .sim-view, .sim-stage.is-pseudo-fs .sim-view { top: 0; }
   .sim-stage:fullscreen .sim-canvas-wrap, .sim-stage.is-pseudo-fs .sim-canvas-wrap { max-height: none; }
+}
+/* Phone turned sideways: picture on the left, panels on the right */
+@media (max-width: 1023px) and (orientation: landscape) and (max-height: 560px) {
+  .sim-stage { grid-template-columns: minmax(0, 1fr) minmax(260px, 42%); align-items: start; gap: var(--space-3); }
+  .sim-canvas-wrap { max-height: calc(100svh - 150px); min-height: 150px; }
+  .sim-hud { display: none; }
 }
 /* Compact title so the simulation starts higher on the first screen */
 @media (max-width: 600px) {

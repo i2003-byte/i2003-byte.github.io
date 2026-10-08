@@ -497,7 +497,7 @@
       '</div>';
 
     var transportPanel = hasTransport
-      ? '<section class="panel" aria-label="Playback">' +
+      ? '<section class="panel" data-tab="controls" aria-label="Playback">' +
           '<div class="transport">' +
             '<button class="btn btn-primary" type="button" data-act="play" aria-keyshortcuts="Space"></button>' +
             '<button class="btn" type="button" data-act="step" aria-label="Step forward one frame" title="Step (→)">' + icon('step') + '</button>' +
@@ -510,21 +510,48 @@
       : '';
 
     var buttonsPanel = cfg.buttons && cfg.buttons.length
-      ? '<section class="panel"><h2>' + esc(cfg.buttonsTitle || 'Actions') + '</h2><div class="panel-actions">' +
+      ? '<section class="panel" data-tab="controls"><h2>' + esc(cfg.buttonsTitle || 'Actions') + '</h2><div class="panel-actions">' +
           cfg.buttons.map(function (b, i) {
             return '<button class="btn' + (b.primary ? ' btn-primary' : '') + (b.full ? ' full' : '') + '" type="button" data-btn="' + i + '">' + esc(b.label) + '</button>';
           }).join('') + '</div></section>'
       : '';
 
     var paramsPanel = params.length
-      ? '<section class="panel"><h2>' + esc(cfg.paramsTitle || 'Controls') + '</h2><div id="sim-controls"></div></section>'
+      ? '<section class="panel" data-tab="controls"><h2>' + esc(cfg.paramsTitle || 'Controls') + '</h2><div id="sim-controls"></div></section>'
       : '';
 
     var readoutsPanel = (cfg.readouts || []).length
-      ? '<section class="panel"><h2>Live readouts</h2><dl class="readouts" id="sim-readouts">' +
+      ? '<section class="panel" data-tab="numbers"><h2>Live readouts</h2><dl class="readouts" id="sim-readouts">' +
           cfg.readouts.map(function (r) {
             return '<div class="readout' + (r.key ? ' is-key' : '') + '"><dt>' + esc(r.label) + '</dt><dd data-r="' + r.id + '">—</dd></div>';
           }).join('') + '</dl></section>'
+      : '';
+
+    // "Try this" coach: the challenges from the page's Learn panel, one at a time
+    var tries = $$('.learn .try-list > li');
+    var coachPanel = tries.length
+      ? '<section class="panel coach" data-tab="try" aria-labelledby="coach-h">' +
+          '<h2 id="coach-h">🎯 Try this <span class="coach-count" id="coach-count"></span></h2>' +
+          '<div class="coach-q" id="coach-q" aria-live="polite"></div>' +
+          '<div class="coach-nav">' +
+            (tries.length > 1 ? '<button class="btn" type="button" data-coach="-1" aria-label="Previous challenge">‹</button>' : '') +
+            (tries.length > 1 ? '<button class="btn btn-primary" type="button" data-coach="1">Next challenge ›</button>' : '') +
+          '</div>' +
+        '</section>'
+      : '';
+
+    // Phones: the 2–3 most important numbers sit right under the picture
+    var hudList = (cfg.readouts || []).filter(function (r) { return r.key; });
+    if (!hudList.length) hudList = (cfg.readouts || []).slice(0, 2);
+    hudList = hudList.slice(0, 3);
+    var hud = hudList.length
+      ? '<div class="sim-hud" aria-hidden="true">' + hudList.map(function (r) {
+          return '<span class="hud-chip"><span class="hud-l">' + esc(r.short || r.label) + '</span><b data-hud="' + r.id + '">—</b></span>';
+        }).join('') + '</div>'
+      : '';
+
+    var startBtn = hasTransport && !cfg.autoplay
+      ? '<button class="sim-start" type="button" data-act="play" data-start>' + icon('play') + '<span>' + esc(cfg.playLabel || 'Play') + '</span></button>'
       : '';
 
     app.innerHTML =
@@ -533,6 +560,7 @@
         '<div class="sim-view">' +
           '<div class="sim-canvas-wrap"' + (cfg.mobileAspect ? ' style="--mobile-aspect:' + esc(cfg.mobileAspect) + '"' : '') + '>' +
             '<canvas id="sim-canvas" role="img" aria-label="' + esc(cfg.ariaLabel || entry.title + ' simulation') + '"></canvas>' +
+            startBtn +
           '</div>' +
           '<div class="sim-status"><span class="led" aria-hidden="true"></span><span data-status>Paused</span>' +
             // Phone/tablet: play + restart stay next to the pinned canvas while the controls scroll
@@ -543,17 +571,21 @@
                 '</span>'
               : '') +
           '</div>' +
+          hud +
+          '<div class="sim-tabs" role="tablist" aria-label="Simulation panels" hidden></div>' +
         '</div>' +
-        '<aside class="sim-panel" aria-label="Simulation controls">' +
-          transportPanel + buttonsPanel + paramsPanel + readoutsPanel +
-          '<div class="panel-actions">' +
-            '<button class="btn full" type="button" data-act="defaults">' + icon('reset') + 'Reset to defaults</button>' +
+        '<aside class="sim-panel" id="sim-panel" aria-label="Simulation controls">' +
+          transportPanel + buttonsPanel + paramsPanel + readoutsPanel + coachPanel +
+          '<div class="panel-end" data-tab="controls">' +
+            '<div class="panel-actions">' +
+              '<button class="btn full" type="button" data-act="defaults">' + icon('reset') + 'Reset to defaults</button>' +
+            '</div>' +
+            (hasTransport ? '<p class="shortcut-hint"><kbd>Space</kbd> play/pause · <kbd>R</kbd> restart · <kbd>→</kbd> step</p>' : '') +
           '</div>' +
-          (hasTransport ? '<p class="shortcut-hint"><kbd>Space</kbd> play/pause · <kbd>R</kbd> restart · <kbd>→</kbd> step</p>' : '') +
         '</aside>' +
       '</div>' +
       (cfg.graph
-        ? '<section class="card sim-graph-wrap" aria-label="' + esc(cfg.graph.title || 'Graph') + '">' +
+        ? '<section class="card sim-graph-wrap" data-tab="graph" aria-label="' + esc(cfg.graph.title || 'Graph') + '">' +
             '<div class="graph-head"><h2>' + esc(cfg.graph.title || 'Graph') + '</h2><div class="sim-meta" id="graph-legend"></div></div>' +
             '<canvas class="sim-graph" id="sim-graph" role="img" aria-label="' + esc(cfg.graph.title || 'Live graph') + '"></canvas>' +
           '</section>'
@@ -564,6 +596,8 @@
     sim.stage = $('#sim-stage');
     var statusEl = $('[data-status]'), statusWrap = $('.sim-status');
     var playBtn = $('.sim-panel [data-act="play"]'), miniPlay = $('[data-mini]');
+    var canvasWrap = $('.sim-canvas-wrap');
+    function markStarted() { canvasWrap.classList.add('is-started'); }
 
     /* ---------- controls ---------- */
     var controlsEl = $('#sim-controls');
@@ -581,7 +615,11 @@
       } else {
         html = '<div class="control"><div class="control-head"><label for="' + id + '">' + esc(p.label) + '</label>' +
           '<output for="' + id + '" id="' + id + '-out"></output></div>' +
-          '<input type="range" id="' + id + '" min="' + p.min + '" max="' + p.max + '" step="' + p.step + '">' +
+          '<div class="range-row">' +
+            '<button class="step-btn" type="button" data-step="-1" aria-label="Decrease ' + esc(p.label) + '">−</button>' +
+            '<input type="range" id="' + id + '" min="' + p.min + '" max="' + p.max + '" step="' + p.step + '">' +
+            '<button class="step-btn" type="button" data-step="1" aria-label="Increase ' + esc(p.label) + '">+</button>' +
+          '</div>' +
           (p.presets ? '<div class="presets" role="group" aria-label="' + esc(p.label) + ' presets">' + p.presets.map(function (pr) {
             return '<button type="button" data-preset="' + pr.value + '">' + esc(pr.label) + '</button>';
           }).join('') + '</div>' : '') +
@@ -598,6 +636,22 @@
         el.addEventListener('input', function () { setParam(p.id, parseFloat(el.value), true); });
         $$('[data-preset]', node).forEach(function (b) {
           b.addEventListener('click', function () { setParam(p.id, parseFloat(b.dataset.preset), true); });
+        });
+        // − / + buttons: one step per tap; hold to repeat (speeding up for long ranges)
+        $$('.step-btn', node).forEach(function (b) {
+          var dir = +b.dataset.step, t1 = 0, t2 = 0, n = 0;
+          function bump() {
+            n++;
+            var k = n > 30 ? 10 : n > 12 ? 3 : 1;
+            setParam(p.id, parseFloat((sim.p[p.id] + dir * k * p.step).toFixed(stepDigits(p.step))), true);
+          }
+          function stop() { clearTimeout(t1); clearInterval(t2); n = 0; }
+          b.addEventListener('pointerdown', function (e) {
+            e.preventDefault(); stop(); bump();
+            t1 = setTimeout(function () { t2 = setInterval(bump, 70); }, 400);
+          });
+          ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (ev) { b.addEventListener(ev, stop); });
+          b.addEventListener('click', function (e) { if (e.detail === 0) { bump(); n = 0; } }); // keyboard
         });
       }
     });
@@ -630,6 +684,7 @@
       sim.p[id] = value;
       syncInput(id);
       if (fromUser) {
+        markStarted();
         var keep = cfg.onParam ? cfg.onParam(sim, id, value) : false;
         if (!keep) resetSim(true);
         saveUrlSoon();
@@ -641,7 +696,7 @@
 
     /* ---------- extra buttons ---------- */
     (cfg.buttons || []).forEach(function (b, i) {
-      $('[data-btn="' + i + '"]').addEventListener('click', function () { b.onClick(sim); requestRender(); });
+      $('[data-btn="' + i + '"]').addEventListener('click', function () { markStarted(); b.onClick(sim); requestRender(); });
     });
 
     /* ---------- graph ---------- */
@@ -709,6 +764,7 @@
         miniPlay.setAttribute('aria-label', on ? 'Pause' : (cfg.playLabel || 'Play'));
       }
       statusWrap.classList.toggle('is-running', sim.running);
+      if (on) markStarted();
       if (cfg.onRunChange) cfg.onRunChange(sim, sim.running);
       if (on) { last = performance.now(); requestRender(); }
     }
@@ -758,6 +814,8 @@
         el.classList.toggle('is-text', isText);
         var txt = isText ? esc(v) : M.fmt(v, r.digits == null ? 2 : r.digits);
         el.innerHTML = txt + (r.unit && typeof v !== 'string' ? '<small>' + esc(r.unit) + '</small>' : '');
+        var hv = $('[data-hud="' + r.id + '"]');
+        if (hv) hv.innerHTML = el.innerHTML;
       });
     }
 
@@ -775,6 +833,7 @@
       function pos(e) { var r = sim.canvas.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
       sim.canvas.addEventListener('pointerdown', function (e) {
         var p = pos(e);
+        markStarted();
         if (cfg.pointer.down && cfg.pointer.down(sim, p.x, p.y, e) !== false) {
           dragging = true;
           sim.canvas.setPointerCapture(e.pointerId);
@@ -798,6 +857,73 @@
       }
       sim.canvas.addEventListener('pointerup', up);
       sim.canvas.addEventListener('pointercancel', up);
+    }
+
+    /* ---------- tap the picture to play / pause (sims without their own touch input) ---------- */
+    if (!cfg.pointer && hasTransport) {
+      sim.canvas.classList.add('tap-to-play');
+      sim.canvas.addEventListener('click', function () { sim.running ? sim.pause() : sim.play(); });
+    }
+
+    /* ---------- phone tabs: Controls · Numbers · Graph · Try this ---------- */
+    var panel = $('#sim-panel'), tabBar = $('.sim-tabs'), graphWrap = $('.sim-graph-wrap');
+    var phone = window.matchMedia('(max-width: 1023px)');
+    var tabDefs = [
+      { id: 'controls', label: 'Controls', ic: '🎛' },
+      { id: 'numbers', label: 'Numbers', ic: '📊' },
+      { id: 'graph', label: 'Graph', ic: '📈' },
+      { id: 'try', label: 'Try this', ic: '🎯' }
+    ].filter(function (t) { return $('[data-tab="' + t.id + '"]'); });
+    var activeTab = tabDefs.length ? tabDefs[0].id : '';
+    function placeGraph() {
+      if (!graphWrap) return;
+      if (phone.matches) { if (graphWrap.parentNode !== panel) panel.insertBefore(graphWrap, $('.panel-end', panel)); }
+      else if (graphWrap.previousElementSibling !== sim.stage) sim.stage.parentNode.insertBefore(graphWrap, sim.stage.nextSibling);
+      requestRender();
+    }
+    function showTab(id, scroll) {
+      activeTab = id;
+      $$('[role="tab"]', tabBar).forEach(function (b) {
+        var on = b.dataset.tabBtn === id;
+        b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1;
+        if (on) b.classList.remove('has-dot');
+      });
+      $$('[data-tab]').forEach(function (sec) { sec.classList.toggle('tab-on', sec.dataset.tab === id); });
+      requestRender();
+      if (scroll) { // bring the panel's top up to just under the pinned picture
+        var gap = panel.getBoundingClientRect().top - $('.sim-view').getBoundingClientRect().bottom;
+        if (gap < 0) window.scrollBy(0, gap);
+      }
+    }
+    if (tabDefs.length > 1) {
+      tabBar.innerHTML = tabDefs.map(function (t) {
+        return '<button type="button" role="tab" data-tab-btn="' + t.id + '"' + (t.id === 'try' ? ' class="has-dot"' : '') +
+          ' aria-controls="sim-panel"><span aria-hidden="true">' + t.ic + '</span>' + t.label + '</button>';
+      }).join('');
+      tabBar.hidden = false;
+      sim.stage.classList.add('has-tabs');
+      tabBar.addEventListener('click', function (e) { var b = e.target.closest('[role="tab"]'); if (b) showTab(b.dataset.tabBtn, true); });
+      tabBar.addEventListener('keydown', function (e) {
+        var bs = $$('[role="tab"]', tabBar), i = bs.indexOf(document.activeElement);
+        var j = e.key === 'ArrowRight' ? (i + 1) % bs.length : e.key === 'ArrowLeft' ? (i - 1 + bs.length) % bs.length : -1;
+        if (i < 0 || j < 0) return;
+        e.preventDefault(); bs[j].focus(); showTab(bs[j].dataset.tabBtn, true);
+      });
+    }
+    placeGraph();
+    if (phone.addEventListener) phone.addEventListener('change', placeGraph);
+    if (activeTab) showTab(activeTab, false);
+
+    /* ---------- "Try this" coach ---------- */
+    if (tries.length) {
+      var ci = 0;
+      var showTry = function (i) {
+        ci = (i + tries.length) % tries.length;
+        $('#coach-q').innerHTML = tries[ci].innerHTML;
+        $('#coach-count').textContent = (ci + 1) + ' / ' + tries.length;
+      };
+      $$('[data-coach]').forEach(function (b) { b.addEventListener('click', function () { showTry(ci + +b.dataset.coach); }); });
+      showTry(0);
     }
 
     /* ---------- toolbar actions ---------- */
