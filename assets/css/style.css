@@ -1506,37 +1506,6 @@ canvas.tap-to-play { cursor: pointer; }
 /* Keyboard tips are useless on touch screens */
 @media (hover: none) { .shortcut-hint { display: none; } }
 
-/* ---------- Home: hero mini experiment (tap to throw a ball) ---------- */
-.hero { flex-direction: column; justify-content: center; }
-.hero > .container { width: 100%; }
-.hero-toy {
-  position: relative; z-index: 1; width: 100%;
-  margin-top: var(--space-6);
-  display: grid; justify-items: center; gap: var(--space-2);
-  pointer-events: none;                       /* taps fall through to the hero… */
-}
-.hero-toy .toy-bar, .hero-toy a { pointer-events: auto; }   /* …except the controls */
-.toy-hint {
-  margin: 0; max-width: 46ch; min-height: 2.9em;
-  display: block; text-align: center; line-height: 1.45;
-  font-size: var(--fs-sm); color: var(--text-muted);
-}
-.toy-hint b { color: var(--text); font-family: var(--font-mono); font-weight: 600; }
-.toy-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-2); }
-.toy-g {
-  display: inline-flex; padding: 3px;
-  border: 1px solid var(--border); border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--surface) 75%, transparent);
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-}
-.toy-g button {
-  min-height: 40px; padding: 0 0.85rem;
-  border: 0; border-radius: var(--radius-pill); background: none;
-  color: var(--text-muted); font: 600 var(--fs-sm) var(--font-body); cursor: pointer;
-}
-.toy-g button[aria-pressed='true'] { background: var(--brand-gradient); color: #fff; }
-.toy-more { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.6rem; font-weight: 600; font-size: var(--fs-sm); }
-
 /* ---------- Home: Tap & play row + class chips ---------- */
 .play-section { padding-top: 0; }
 .play-section .section-head { margin-bottom: var(--space-3); }
@@ -1582,12 +1551,6 @@ canvas.tap-to-play { cursor: pointer; }
 .cp-chip:hover { border-color: var(--border-strong); text-decoration: none; }
 
 @media (max-width: 600px) {
-  .hero { min-height: min(80svh, 660px); }
-  .hero-toy { margin-top: var(--space-4); }
-  .hero h1 { margin-bottom: var(--space-3); }
-  .hero .lead { margin-bottom: var(--space-4); font-size: 1rem; }
-  .hero-actions .btn-lg { min-height: 50px; padding-inline: 1.2rem; }
-  .toy-g button { padding: 0 0.65rem; }
   /* subjects become compact tiles: icon, name and count */
   #subject-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   #subject-grid .subject-card { padding: var(--space-4); gap: var(--space-2); }

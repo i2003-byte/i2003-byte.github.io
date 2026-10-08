@@ -2,9 +2,8 @@
    SimLab — main.js  (landing page only)
    ---------------------------------------------------------------------
    Fills every landing-page section from catalog.js:
-     hero particles + ball-throw mini experiment · live stats · Surprise Me ·
-     Tap & play row + class chips · quick search + chips · subject grid ·
-     recently added
+     hero particles · live stats · Surprise Me · Tap & play row +
+     class chips · quick search + chips · subject grid · recently added
    ===================================================================== */
 (function () {
   'use strict';
@@ -24,7 +23,6 @@
     var W = 0, H = 0, dpr = 1, parts = [], mouse = { x: -9999, y: -9999, active: false };
     var running = true, visible = true, raf = 0;
     var colors = [];
-    var toy = heroToy();
 
     function readColors() {
       var cs = getComputedStyle(document.documentElement);
@@ -94,22 +92,15 @@
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
       }
       ctx.globalAlpha = 1;
-      toy.draw(ctx, W, H, colors);
     }
 
-    var lastT = 0;
-    function loop(now) {
+    function loop() {
       raf = 0;
-      if (!running || !visible || (ui.reduceMotion && !toy.busy())) { if (ui.reduceMotion) draw(); return; }
-      toy.step(Math.min(0.05, (now - (lastT || now)) / 1000));
-      lastT = now;
+      if (!running || !visible || ui.reduceMotion) return;
       draw();
       raf = requestAnimationFrame(loop);
     }
-    // With reduced motion the background stays still, but a ball the visitor throws still flies:
-    // it only moves when they tap, and it is the experiment itself
-    function kick() { if (!raf && running && visible && (!ui.reduceMotion || toy.busy())) { lastT = 0; raf = requestAnimationFrame(loop); } }
-    toy.onChange = kick;
+    function kick() { if (!raf && running && visible && !ui.reduceMotion) raf = requestAnimationFrame(loop); }
 
     var hero = canvas.parentElement;
     hero.addEventListener('pointermove', function (e) {
@@ -127,105 +118,6 @@
     readColors();
     resize();
     kick();
-    toy.start(canvas);
-  }
-
-  /* -------------------------------------------------------------------
-     HERO mini experiment: tap anywhere to throw a ball.
-     The tap point sets the top of the throw (for Earth gravity); the
-     ball then flies under the chosen gravity, so the same throw soars on
-     the Moon and barely lifts off on Jupiter. Real numbers, real parabola.
-     ------------------------------------------------------------------- */
-  function heroToy() {
-    var hero = $('.hero'), box = $('#hero-toy'), hint = $('#toy-hint');
-    var G_EARTH = 9.8, TIME = 1.6;            // animation runs 1.6× real time (readouts stay real)
-    var g = G_EARTH, gName = 'Earth', balls = [], floorY = 0, ppm = 25, W = 0, touched = false, n = 0;
-    var NAMES = { '9.8': 'Earth', '1.62': 'Moon', '24.8': 'Jupiter' };
-    var self = { onChange: function () {} };
-    var fmt = function (v) { return v >= 100 ? v.toFixed(0) : v.toFixed(1); };
-
-    function geometry(w, h) {
-      W = w;
-      floorY = box ? box.offsetTop - 6 : h - 40;
-      ppm = Math.max(14, floorY / 22);       // the hero is about 22 m tall
-    }
-    function say(html) { if (hint) hint.innerHTML = html; }
-    function throwAt(x, y) {
-      var tx = Math.max(40, Math.min(W - 10, x)), ty = Math.min(y, floorY - 40);
-      var hM = (floorY - ty) / ppm, vy = Math.sqrt(2 * G_EARTH * hM), tUp = vy / G_EARTH;
-      var vx = ((tx - 28) / ppm) / tUp;
-      var b = { x: 28 / ppm, y: 0, vx: vx, vy: vy, age: 0, trail: [], bounces: 0, maxH: 0, landed: false, c: n++ % 3, fade: 1,
-        H: vy * vy / (2 * g), R: 2 * vx * vy / g, T: 2 * vy / g };
-      balls.push(b); if (balls.length > 6) balls.shift();
-      say('Flying… <b>' + gName + '</b> gravity');
-      self.onChange();
-    }
-    function report(b) {
-      var extra = gName === 'Moon' ? ' 🌙 Same throw, 6× higher than on Earth!' : gName === 'Jupiter' ? ' 🪐 Jupiter pulls 2.5× harder!' : '';
-      say('Max height <b>' + fmt(b.H) + ' m</b> · distance <b>' + fmt(b.R) + ' m</b> · <b>' + fmt(b.T) + ' s</b> in the air.' + extra);
-    }
-    self.step = function (dt) {
-      dt *= TIME;
-      balls.forEach(function (b) {
-        if (b.landed) { b.fade -= dt * 0.25; return; }
-        b.age += dt;
-        b.vy -= g * dt; b.x += b.vx * dt; b.y += b.vy * dt;
-        b.maxH = Math.max(b.maxH, b.y);
-        if (b.x * ppm < 10 || b.x * ppm > W - 10) { b.vx = -b.vx * 0.8; b.x = Math.max(10 / ppm, Math.min((W - 10) / ppm, b.x)); }
-        if (b.y < 0) {
-          b.y = 0; b.vy = -b.vy * 0.55; b.vx *= 0.85; b.bounces++;
-          if (b.bounces === 1) report(b);
-          if (b.bounces > 3 || Math.abs(b.vy) < 1) b.landed = true;
-        }
-        b.trail.push({ x: b.x * ppm, y: floorY - b.y * ppm });
-        if (b.trail.length > 70) b.trail.shift();
-      });
-      balls = balls.filter(function (b) { return b.fade > 0; });
-    };
-    self.draw = function (ctx, w, h, colors) {
-      if (w !== W || !floorY) geometry(w, h);
-      // launcher
-      ctx.globalAlpha = 0.9; ctx.fillStyle = colors[0];
-      ctx.beginPath(); ctx.arc(28, floorY, 7, 0, Math.PI * 2); ctx.fill();
-      balls.forEach(function (b) {
-        var col = colors[b.c] || colors[0], f = Math.max(0, Math.min(1, b.fade));
-        ctx.globalAlpha = 0.55 * f; ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.lineCap = 'round';
-        ctx.beginPath(); b.trail.forEach(function (p, i) { i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); }); ctx.stroke();
-        var last = b.trail[b.trail.length - 1];
-        if (!last) return;
-        ctx.globalAlpha = f; ctx.fillStyle = col; ctx.shadowColor = col; ctx.shadowBlur = 18;
-        ctx.beginPath(); ctx.arc(last.x, last.y, 9, 0, Math.PI * 2); ctx.fill();
-        ctx.shadowBlur = 0;
-        if (!b.landed && b.y > 0.5) { // live height label next to the ball
-          ctx.globalAlpha = 0.95; ctx.fillStyle = colors[0];
-          ctx.font = '600 13px ui-monospace, monospace';
-          ctx.fillText(fmt(b.y) + ' m', Math.min(last.x + 14, W - 60), Math.max(14, last.y - 10));
-        }
-      });
-      ctx.globalAlpha = 1;
-    };
-    self.busy = function () { return balls.length > 0; };
-    self.start = function (canvas) {
-      var r = canvas.getBoundingClientRect(); geometry(r.width, r.height);
-      hero.addEventListener('pointerdown', function (e) {
-        if (e.target.closest('a, button, input, label, .toy-bar')) return;
-        var rr = canvas.getBoundingClientRect();
-        touched = true; throwAt(e.clientX - rr.left, e.clientY - rr.top);
-      });
-      $$('[data-g]').forEach(function (bt) {
-        bt.addEventListener('click', function () {
-          g = parseFloat(bt.dataset.g); gName = NAMES[bt.dataset.g];
-          $$('[data-g]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === bt)); });
-          say('<b>' + gName + '</b>: g = ' + bt.dataset.g + ' m/s². Now tap to throw!');
-          var rr = canvas.getBoundingClientRect();
-          throwAt(rr.width * 0.62, floorY * 0.42); // same throw as the demo, to compare
-        });
-      });
-      window.addEventListener('resize', function () { var rr = canvas.getBoundingClientRect(); geometry(rr.width, rr.height); });
-      // one demo throw so something is already moving
-      if (!ui.reduceMotion) setTimeout(function () { if (!touched) throwAt(r.width * 0.62, floorY * 0.42); }, 700);
-    };
-    return self;
   }
 
   /* -------------------------------------------------------------------
@@ -234,8 +126,13 @@
   function stats() {
     var live = S.liveSims();
     var subjectsWithSims = S.subjects.length;
-    var el = $('#hero-lead');
-    if (el) el.innerHTML = '<strong>' + live.length + ' free simulations</strong> across ' + subjectsWithSims + ' subjects, for Class 7 to 12.';
+    var el = $('#hero-stats');
+    if (el) {
+      el.innerHTML =
+        '<span><strong>' + live.length + '</strong>Simulation' + (live.length === 1 ? '' : 's') + '</span><span class="dot" aria-hidden="true"></span>' +
+        '<span><strong>' + subjectsWithSims + '</strong>Subjects</span><span class="dot" aria-hidden="true"></span>' +
+        '<span><strong>100%</strong>Free &amp; Open</span>';
+    }
     var newest = live.slice().sort(function (a, b) { return S.parseDate(b.dateAdded) - S.parseDate(a.dateAdded); })[0];
     var pill = $('#hero-pill');
     if (pill && newest) {

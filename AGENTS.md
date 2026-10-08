@@ -68,7 +68,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 | Colours, fonts, spacing, radius, shadows | CSS variables at the top of `assets/css/style.css` (light theme under `[data-theme='light']`) |
 | Header, mega-menu, drawer, search, breadcrumbs, footer | `assets/js/nav.js` |
 | Simulation engine: sliders, loop, graph, audio, URL share state, fullscreen | `assets/js/common.js` (API documented in its header comment) |
-| Landing page sections (hero ball-throw, Tap & play row, class chips) | `index.html` + `assets/js/main.js`; the Tap & play order is `SimLab.site.showcase` in `catalog.js` |
+| Landing page sections (hero, Tap & play row, class chips) | `index.html` + `assets/js/main.js`; the Tap & play order is `SimLab.site.showcase` in `catalog.js` |
 | Subject pages + `/simulations/` | `<subject>/index.html` (8-line template) + `assets/js/subject.js` |
 | One simulation's behaviour | `<subject>/<id>/sim.js` |
 | One simulation's page text (Learn panel, meta tags) | `<subject>/<id>/index.html` |

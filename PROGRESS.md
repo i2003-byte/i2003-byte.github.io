@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-08 · request · Original home hero restored
+- Built/changed: removed the tap-to-throw ball experiment from the home hero (the owner preferred the original); the original hero is back (moving dots, headline, Start Exploring, Surprise Me, stats strip). "Start Exploring" now jumps to the Tap & play cards. Tap & play row, class chips and compact subject tiles stay
+- Checks: ✅ check.mjs passed · ✅ browser-test (home + sample pages, phone + desktop) · phone screenshot reviewed
+- Roadmap: unchanged
+- Next time: don't put interactive experiments behind the hero text; the owner wants the hero clean
+- Problems/notes: none
+
 ## 2026-10-08 · fix · Home hero on real phones (reduce motion, larger text)
 - Built/changed: `main.js`: with reduce-motion on, a ball the visitor throws still flies and fades (before: dashed still paths piled up over the text); the demo throw and background drift stay off. `style.css`: the hero experiment bar is now in normal flow under the buttons, so larger phone text can't overlap them. `common.js`: links ending in `#play` start the simulation even with reduce-motion (the visitor asked by tapping)
 - Checks: ✅ check.mjs passed · ✅ browser-test (home + sample sims, phone + desktop) · screenshots at 390×844 with reduce-motion and 122% text

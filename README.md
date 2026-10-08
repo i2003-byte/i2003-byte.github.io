@@ -27,7 +27,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## Features
 - **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs
-- **Made for phones:** each simulation opens like an app, with the picture and its key numbers pinned at the top, tabs for Controls · Numbers · Graph · Try this, a big start button, and − / + buttons on every slider. The home page is a live experiment: tap to throw a ball on Earth, the Moon or Jupiter, then pick a simulation from the Tap & play row or by class
+- **Made for phones:** each simulation opens like an app, with the picture and its key numbers pinned at the top, tabs for Controls · Numbers · Graph · Try this, a big start button, and − / + buttons on every slider. On the home page, pick a simulation from the Tap & play row (it opens already running) or by class
 - **For classrooms:**
   - Filter simulations by class (7–12), topic or level
   - Fullscreen mode
@@ -56,7 +56,7 @@ See **Maintaining with AI** below.
 
 ```
 /
-├── index.html              Landing page (hero ball-throw, Tap & play, class chips, search, subjects, recent…)
+├── index.html              Landing page (hero, Tap & play, class chips, search, subjects, recent…)
 ├── about.html              About page
 ├── 404.html                Friendly "not found" page (GitHub Pages serves it automatically)
 ├── .nojekyll               Tells GitHub Pages to serve files as-is (needed for /_template/)
@@ -81,7 +81,7 @@ See **Maintaining with AI** below.
 │   ├── css/style.css       ALL styles. Theme tokens (colours, fonts, spacing…) live at the top
 │   ├── js/catalog.js       ★ The single data file: site settings, subjects, simulations
 │   ├── js/nav.js           Shared header, mega-menu, mobile drawer, search, breadcrumbs, footer
-│   ├── js/main.js          Landing-page logic (hero particles + ball throw, Tap & play row, class chips…)
+│   ├── js/main.js          Landing-page logic (hero particles, Tap & play row, class chips…)
 │   ├── js/subject.js       Renders subject pages and /simulations/ from the catalog
 │   ├── js/common.js        Simulation toolkit: loop, sliders, graph, audio, URL state, fullscreen…
 │   └── img/                favicon, social preview image, thumbnails (thumbs/*.svg)
