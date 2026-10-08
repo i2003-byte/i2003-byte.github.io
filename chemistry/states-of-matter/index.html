@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Solids, Liquids and Gases: The Particle Model — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch the particles of a solid, a liquid and a gas side by side. Change the jar's shape, push a piston to squeeze them, heat them up and add colour to see diffusion.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/states-of-matter/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Solids, Liquids and Gases: The Particle Model — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch the particles of a solid, a liquid and a gas side by side. Change the jar's shape, push a piston to squeeze them, heat them up and add colour to see diffusion.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/states-of-matter/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="states-of-matter">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Everything around us is made of tiny <strong>particles</strong> that are always moving and attract each other. How tightly they are held decides whether a substance is a <strong>solid</strong>, a <strong>liquid</strong> or a <strong>gas</strong>.</p>
+            <ul>
+              <li><strong>Solid:</strong> particles are packed close in a fixed pattern and held strongly. They can only vibrate about their places, so a solid keeps its own shape and volume.</li>
+              <li><strong>Liquid:</strong> particles are still close together, but held less strongly, so they can slide past one another. A liquid flows and takes the shape of its container, but keeps its volume.</li>
+              <li><strong>Gas:</strong> particles are far apart and hardly attract each other. They fly about in all directions, fill the whole container and can easily be squeezed into a smaller space.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">space between particles: solid &lt; liquid ≪ gas</code>
+            <code class="formula">hotter → particles move faster (more kinetic energy)</code>
+            <p class="formula-note">Each jar holds 100 mL. The solid takes 22 mL and the liquid 30 mL whatever the jar shape or the piston, while the gas takes all the room it is given.</p>
+            <p><strong>Diffusion</strong> is the spreading of particles of one substance into another because of their own motion. It is fastest in gases, slow in liquids and almost zero in solids.</p>
+            <p>Simplifications: drawn in 2D and not to scale. In a real gas the particles are about 10 diameters apart and move at hundreds of metres per second (oxygen in air at 27 °C: about 480 m/s); here they are slowed down so you can follow them. The temperature slider only speeds the particles up; it does not melt or boil anything (see the heating curve simulation for that).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The smell of hot food or agarbatti reaches you across the room quickly because the gas particles diffuse through the air.</li>
+              <li>A drop of ink spreads slowly in a glass of still water, and faster in hot water.</li>
+              <li>LPG and CNG are gases squeezed into strong cylinders; a lot of gas fits into a small space.</li>
+              <li>A brick keeps its shape on the ground, but water poured from a lota takes the shape of the bucket.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Push the piston all the way down (70%). What happens to the space taken by each state?<details><summary>Show answer</summary>The gas is squeezed from 100 mL to 30 mL. The piston stops when it touches the liquid and the solid: they stay at 30 mL and 22 mL because their particles are already touching.</details></li>
+              <li>Change the jar to “Tall, narrow jar” and then “Wide, flat dish”. Which state changes its shape?<details><summary>Show answer</summary>The liquid flows into the new shape (taller in the narrow jar, flatter in the dish) and the gas fills the whole jar. The solid keeps its own shape.</details></li>
+              <li>Press “Add colour to the left half” and watch the “Colour spread” numbers for 20 seconds. Rank the three states.<details><summary>Show answer</summary>Gas mixes fastest (close to 100%), the liquid slowly, the solid not at all (0%): its particles never leave their places.</details></li>
+              <li>Watch the yellow path of the followed particle in each jar. Then set the temperature to “Very hot”. What changes?<details><summary>Show answer</summary>In the solid it only shakes on the spot; in the liquid it wanders slowly among its neighbours; in the gas it zooms in straight lines between collisions. When hotter, every particle moves faster.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Matter:</strong> anything that has mass and takes up space.</li>
+              <li><strong>Compressible:</strong> can be squeezed into a smaller volume (gases are; solids and liquids hardly are).</li>
+              <li><strong>Diffusion:</strong> the mixing of particles of different substances on their own, because they move.</li>
+              <li><strong>Fluid:</strong> something that can flow: liquids and gases.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

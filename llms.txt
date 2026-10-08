@@ -148,12 +148,19 @@ Count in binary, wire up logic gates and race sorting algorithms. The ideas insi
 
 ## Chemistry
 
-Test everyday solutions with natural indicators, neutralise acids with bases and watch reactions happen. More chemistry simulations are on the way.
+See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, test everyday solutions with indicators and the pH scale, and neutralise acids with bases.
+
+### Matter & Its States
+
+- [Solids, Liquids and Gases: The Particle Model](https://i2003-byte.github.io/chemistry/states-of-matter/): Watch the particles of a solid, a liquid and a gas side by side. Change the jar's shape, push a piston to squeeze them, heat them up and add colour to see diffusion. (Beginner)
+- [Evaporation and Cooling](https://i2003-byte.github.io/chemistry/evaporation-cooling/): Watch water evaporate from a plate or a glass. Change the air temperature, humidity, fan speed and surface area, and see how evaporation cools the water below the air temperature. (Beginner)
+- [Heating Curve of Water: Melting and Boiling](https://i2003-byte.github.io/chemistry/heating-curve/): Heat ice from −20 °C until all the water boils away. Plot the heating curve, watch the temperature stay flat while ice melts and water boils, see the particles in a zoom window, and boil water in Shimla or Leh. (Intermediate)
 
 ### Acids, Bases & Salts
 
 - [Natural Indicators: Litmus, Turmeric and China Rose](https://i2003-byte.github.io/chemistry/natural-indicators/): Test lemon juice, vinegar, soap water, baking soda and more with litmus paper, turmeric paper and china rose solution. Watch the colours change and work out which solutions are acidic, basic or neutral. (Beginner)
 - [Neutralisation: Acid Meets Base](https://i2003-byte.github.io/chemistry/neutralisation/): Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping. (Beginner)
+- [The pH Scale: How Acidic, How Basic?](https://i2003-byte.github.io/chemistry/ph-scale/): Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7. (Beginner)
 
 ## Mathematics (coming soon)
 

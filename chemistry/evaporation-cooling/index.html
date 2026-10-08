@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Evaporation and Cooling — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch water evaporate from a plate or a glass. Change the air temperature, humidity, fan speed and surface area, and see how evaporation cools the water below the air temperature.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/evaporation-cooling/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Evaporation and Cooling — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch water evaporate from a plate or a glass. Change the air temperature, humidity, fan speed and surface area, and see how evaporation cools the water below the air temperature.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/evaporation-cooling/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="evaporation-cooling">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Particles in a liquid move at different speeds. A few fast ones near the surface have enough energy to break away from the others and escape into the air as vapour. This change of a liquid into vapour <strong>below its boiling point</strong> is called <strong>evaporation</strong>. It happens only at the surface.</p>
+            <p>The particles that escape are the most energetic ones, so the water left behind has less energy on average: it gets <strong>cooler</strong>. It keeps cooling until the heat flowing in from the warmer air and the dish balances the heat carried away by evaporation.</p>
+          </section>
+          <section>
+            <h3>🧮 What makes water evaporate faster</h3>
+            <code class="formula">larger surface area → faster</code>
+            <code class="formula">higher temperature → faster</code>
+            <code class="formula">lower humidity (drier air) → faster</code>
+            <code class="formula">more wind → faster</code>
+            <p class="formula-note">The model: rate = (transfer coefficient) × (surface area) × (vapour the air could hold at the water's temperature − vapour already in the air). Wind increases the transfer coefficient by sweeping away the damp air above the water.</p>
+            <p>Every gram of water that evaporates takes about 2430 J (its <strong>latent heat of vaporisation</strong>) away from the water that is left.</p>
+            <p>Simplifications: indoors in the shade (sunshine would add much more heat), 100 g of water stirred so it has one temperature, and the air in the room stays at the same temperature and humidity. One second on screen is 20 minutes.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Water in an earthen pot (matka or surahi) stays cool in summer: it seeps through tiny pores and evaporates from the whole outer surface.</li>
+              <li>Sweating cools us. On a humid day in Mumbai sweat does not evaporate easily, so we feel sticky and hot; in dry Delhi heat it evaporates quickly.</li>
+              <li>Clothes dry faster on a sunny, windy day, and faster when spread out than when bunched up.</li>
+              <li>In summer, people sprinkle water on the floor or courtyard to cool it, and desert coolers blow air through wet pads.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with the plate at 35 °C and 40% humidity, fan off. How cool does the water get, and how fast does it evaporate?<details><summary>Show answer</summary>It settles at about 26.7 °C, about 8 °C cooler than the air, and loses about 2.8 g per hour. All 100 g is gone after about 36 hours.</details></li>
+              <li>Now turn the fan to Fast. What happens to the temperature and the rate?<details><summary>Show answer</summary>The water cools further, to about 24.8 °C, and evaporates about 2.6 times faster (7.3 g/h). The plate is dry in about 13.5 hours.</details></li>
+              <li>Pour the water into the steel glass instead (same air, fan off). Why is it so much slower?<details><summary>Show answer</summary>The glass's surface is only 7 cm across instead of 20 cm, about 8 times less area, so only about 0.7 g/h evaporates. Evaporation happens only at the surface.</details></li>
+              <li>Set the humidity to Humid (Mumbai, July). What happens?<details><summary>Show answer</summary>At 85% humidity the air already holds most of the vapour it can, so evaporation drops to about 0.6 g/h and the water cools only about 2 °C below the air.</details></li>
+              <li>At 100% humidity, does the water still cool?<details><summary>Show answer</summary>Hardly at all: the air cannot take any more vapour at its temperature, so evaporation stops once the water is as warm as the air.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Evaporation:</strong> a liquid changing into vapour at its surface, at any temperature below its boiling point.</li>
+              <li><strong>Humidity:</strong> the amount of water vapour in the air; 100% means the air holds all it can at that temperature.</li>
+              <li><strong>Latent heat of vaporisation:</strong> the heat needed to turn 1 kg of liquid into vapour without changing its temperature.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

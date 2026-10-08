@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The pH Scale: How Acidic, How Basic? — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/ph-scale/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="The pH Scale: How Acidic, How Basic? — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/ph-scale/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ph-scale">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Litmus only tells you <em>whether</em> a solution is acidic or basic. The <strong>pH scale</strong> tells you <em>how</em> acidic or basic it is, with a number from 0 to 14.</p>
+            <p>Below 7 is <strong>acidic</strong> (the lower, the more acidic), exactly 7 is <strong>neutral</strong>, and above 7 is <strong>basic</strong> (the higher, the more basic). <strong>Universal indicator</strong> is a mixture of several indicators, so it shows a different colour for each pH: red for strong acids, through orange and yellow, green at 7, then blue and purple for strong bases.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas and numbers</h3>
+            <code class="formula">pH &lt; 7 acidic · pH = 7 neutral · pH &gt; 7 basic</code>
+            <code class="formula">1 step on the pH scale = 10 times more (or fewer) H⁺ ions</code>
+            <p class="formula-note">Acids give hydrogen ions (H⁺) in water and bases give hydroxide ions (OH⁻). pH 4 has 10 times more H⁺ than pH 5 and 1000 times more than pH 7.</p>
+            <p><strong>Strong and weak:</strong> a strong acid such as the hydrochloric acid in your stomach gives up nearly all its H⁺, so it has a very low pH. A weak acid such as the acetic acid in vinegar gives up only a few, so the same amount has a higher pH.</p>
+            <p><strong>Adding water</strong> spreads the ions out, so pH moves towards 7 but never crosses it: an acid stays acidic. Here a strong acid or base moves 1 pH unit for every 10 times more water, a weak one about half a unit, and baking soda solution stays close to 8.</p>
+            <p>Simplifications: the pH values are typical ones (real lemons, milk and soaps vary a little), the colours are a common universal-indicator chart, and the dilution rules are a simple model of what real solutions do.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Your stomach makes hydrochloric acid (pH about 1.5) to help digest food. Too much causes acidity; an antacid (a weak base) brings the pH up.</li>
+              <li>Tooth decay starts when bacteria in the mouth turn sugar into acid and the pH falls below about 5.5. Toothpaste is slightly basic.</li>
+              <li>Farmers test soil pH. Acidic soil is treated with quicklime or slaked lime; basic soil with organic matter such as compost.</li>
+              <li>Rain with a pH below 5.6 is called acid rain. It can damage buildings such as the Taj Mahal's marble.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Turn on “Guess first”, tap all eight tubes and put them in order from most acidic to most basic using only the colours. Then turn it off and check.<details><summary>Show answer</summary>Stomach acid (1.5), lemon juice (2.4), vinegar (2.9), milk (6.6), pure water (7.0), baking soda (8.3), soap water (10.0), lime water (12.4).</details></li>
+              <li>Choose lemon juice and read “H⁺ compared with pure water”. How many times more H⁺ ions does it have?<details><summary>Show answer</summary>About 40,000 times. Its pH is 4.6 below 7, and 10<sup>4.6</sup> ≈ 40,000.</details></li>
+              <li>Choose stomach acid and add water three times. What happens to its pH? Does it ever become basic?<details><summary>Show answer</summary>It goes 1.5 → 2.5 → 3.5 → 4.5: one unit for every 10 times more water, because it is a strong acid. It gets closer to 7 but never passes it.</details></li>
+              <li>Dilute vinegar (a weak acid) 10 times and compare with stomach acid diluted 10 times. Which changes more?<details><summary>Show answer</summary>Stomach acid changes by 1 unit (1.5 → 2.5); vinegar only by about half a unit (2.9 → 3.4). The weak acid has more acid molecules waiting to give up H⁺ as the water is added.</details></li>
+              <li>Which tube would you use to soothe a bee sting (it is acidic)?<details><summary>Show answer</summary>A mild base such as baking soda solution (pH 8.3). Lime water is too strongly basic for skin.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>pH:</strong> a number from 0 to 14 that tells how acidic or basic a solution is.</li>
+              <li><strong>Universal indicator:</strong> a mixture of indicators that shows a different colour at each pH.</li>
+              <li><strong>Strong acid:</strong> an acid that gives up almost all of its hydrogen ions in water.</li>
+              <li><strong>Dilute:</strong> to add water so the solution becomes weaker.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -139,10 +139,11 @@ SimLab.subjects = [
     color: '#f472b6',
     tagline: 'Atoms, bonds and reactions you can build and break.',
     description:
-      'Test everyday solutions with natural indicators, neutralise acids with bases ' +
-      'and watch reactions happen. More chemistry simulations are on the way.',
+      'See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, ' +
+      'test everyday solutions with indicators and the pH scale, and neutralise acids with bases.',
     status: 'live',
     branches: [
+      { id: 'matter', name: 'Matter & Its States' },
       { id: 'acids-bases', name: 'Acids, Bases & Salts' },
       { id: 'atoms', name: 'Atomic Structure' },
       { id: 'bonding', name: 'Bonding' },
@@ -1705,6 +1706,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-07',
     prerequisites: ['natural-indicators']
+  },
+  {
+    id: 'ph-scale',
+    subject: 'chemistry',
+    branch: 'acids-bases',
+    title: 'The pH Scale: How Acidic, How Basic?',
+    description:
+      'Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7.',
+    level: 'Beginner',
+    tags: ['ph', 'universal indicator', 'acid', 'base', 'neutral', 'strong acid', 'weak acid', 'dilution', 'hydrogen ions', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/ph-scale.svg',
+    link: '/chemistry/ph-scale/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-08',
+    prerequisites: ['natural-indicators']
+  },
+  {
+    id: 'states-of-matter',
+    subject: 'chemistry',
+    branch: 'matter',
+    title: 'Solids, Liquids and Gases: The Particle Model',
+    description:
+      'Watch the particles of a solid, a liquid and a gas side by side. Change the jar\'s shape, push a piston to squeeze them, heat them up and add colour to see diffusion.',
+    level: 'Beginner',
+    tags: ['states of matter', 'solid', 'liquid', 'gas', 'particles', 'diffusion', 'compressibility', 'kinetic energy', 'class 9'],
+    thumbnail: '/assets/img/thumbs/states-of-matter.svg',
+    link: '/chemistry/states-of-matter/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-08',
+    prerequisites: []
+  },
+  {
+    id: 'evaporation-cooling',
+    subject: 'chemistry',
+    branch: 'matter',
+    title: 'Evaporation and Cooling',
+    description:
+      'Watch water evaporate from a plate or a glass. Change the air temperature, humidity, fan speed and surface area, and see how evaporation cools the water below the air temperature.',
+    level: 'Beginner',
+    tags: ['evaporation', 'cooling', 'humidity', 'surface area', 'wind', 'latent heat', 'matka', 'sweating', 'class 9'],
+    thumbnail: '/assets/img/thumbs/evaporation-cooling.svg',
+    link: '/chemistry/evaporation-cooling/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-08',
+    prerequisites: ['states-of-matter']
+  },
+  {
+    id: 'heating-curve',
+    subject: 'chemistry',
+    branch: 'matter',
+    title: 'Heating Curve of Water: Melting and Boiling',
+    description:
+      'Heat ice from −20 °C until all the water boils away. Plot the heating curve, watch the temperature stay flat while ice melts and water boils, see the particles in a zoom window, and boil water in Shimla or Leh.',
+    level: 'Intermediate',
+    tags: ['heating curve', 'melting point', 'boiling point', 'latent heat', 'change of state', 'specific heat', 'ice', 'steam', 'class 9'],
+    thumbnail: '/assets/img/thumbs/heating-curve.svg',
+    link: '/chemistry/heating-curve/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-08',
+    prerequisites: ['states-of-matter']
   }
 ];
 

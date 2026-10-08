@@ -111,7 +111,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - branch `waves` (Class 11 Waves): wave-types, standing-waves, beats, doppler-effect; Class 12 Wave optics: wave-interference (ripple tank; the double-slit and single-slit sims go in branch `optics`)
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
   - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
-- **Chemistry (live):** branch `acids-bases` (Class 7 Acids, bases and salts): natural-indicators, neutralisation. Branches `atoms`, `bonding`, `reactions`, `gases` are empty so far.
+- **Chemistry (live):** branch `matter` (Class 9 Matter in our surroundings): states-of-matter, evaporation-cooling, heating-curve; branch `acids-bases` (Class 7 Acids, bases and salts): natural-indicators, neutralisation, ph-scale. Branches `atoms`, `bonding`, `reactions`, `gases` are empty so far.
 - **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
 - **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve, supply-equilibrium, price-controls. Branch `money` is empty so far.
 - **Computer Science (live):** branch `data` (Class 11 Numbers and logic): binary-counter; branch `logic`: logic-gates; branch `algorithms`: sorting-race.

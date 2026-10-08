@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="evaporation-cooling">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="0" y="160" width="320" height="40" fill="#5b4630"/>
+  <path d="M70 145H250L240 160H80Z" fill="#94a3b8"/>
+  <rect x="84" y="148" width="152" height="7" rx="2" fill="#38bdf8"/>
+  <circle cx="183.65767776254566" cy="128.2498321140016" r="3.5" fill="#38bdf8" fill-opacity="0.81"/>
+  <circle cx="223.82865383294597" cy="103.77098650543923" r="3.5" fill="#38bdf8" fill-opacity="0.40"/>
+  <circle cx="206.88287930511487" cy="131.64012999436085" r="3.5" fill="#38bdf8" fill-opacity="0.84"/>
+  <circle cx="168.98397545166205" cy="107.81261691654893" r="3.5" fill="#38bdf8" fill-opacity="0.43"/>
+  <circle cx="203.10903093553605" cy="94.48557347337206" r="3.5" fill="#38bdf8" fill-opacity="0.47"/>
+  <circle cx="103.24987502887981" cy="121.12453640015461" r="3.5" fill="#38bdf8" fill-opacity="0.89"/>
+  <circle cx="106.50735210426468" cy="116.05655551946268" r="3.5" fill="#38bdf8" fill-opacity="0.55"/>
+  <circle cx="114.59949867886525" cy="67.9196684478109" r="3.5" fill="#38bdf8" fill-opacity="0.76"/>
+  <circle cx="208.45971320166618" cy="44.19805580730662" r="3.5" fill="#38bdf8" fill-opacity="0.67"/>
+  <circle cx="100.8422316544847" cy="108.25184535760904" r="3.5" fill="#38bdf8" fill-opacity="0.50"/>
+  <circle cx="209.51768994215655" cy="133.16039690011726" r="3.5" fill="#38bdf8" fill-opacity="0.60"/>
+  <circle cx="224.80616289885094" cy="69.41865508025221" r="3.5" fill="#38bdf8" fill-opacity="0.35"/>
+  <rect x="270" y="60" width="10" height="90" rx="5" fill="#1e293b" stroke="#94a3b8"/><rect x="273" y="90" width="4" height="60" fill="#22c55e"/><circle cx="275" cy="152" r="8" fill="#22c55e"/>
+</svg>

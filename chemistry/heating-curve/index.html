@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heating Curve of Water: Melting and Boiling — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Heat ice from −20 °C until all the water boils away. Plot the heating curve, watch the temperature stay flat while ice melts and water boils, see the particles in a zoom window, and boil water in Shimla or Leh.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/heating-curve/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Heating Curve of Water: Melting and Boiling — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Heat ice from −20 °C until all the water boils away. Plot the heating curve, watch the temperature stay flat while ice melts and water boils, see the particles in a zoom window, and boil water in Shimla or Leh.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/heating-curve/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="heating-curve">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Heat a beaker of ice steadily and watch its temperature. It does <strong>not</strong> rise all the time. It rises, then stays at 0 °C while the ice melts, rises again, then stays at 100 °C while the water boils. These flat parts are the most important part of the graph.</p>
+            <p>While ice melts, the heat goes into <strong>breaking the particles out of their fixed pattern</strong>, not into making them move faster. Temperature measures how fast the particles move, so it stays the same until all the ice has melted. The heat hidden in this way is called <strong>latent heat</strong> (latent means hidden). The same happens while water boils, when the particles are pulled right apart into steam.</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas and numbers</h3>
+            <code class="formula">heat supplied Q = power × time = P t</code>
+            <code class="formula">warming: Q = m c ΔT          changing state: Q = m L</code>
+            <p class="formula-note">Specific heat c: ice 2100 J/(kg·°C), water 4186 J/(kg·°C). Latent heat L: melting 334 kJ/kg (fusion), boiling 2260 kJ/kg (vaporisation).</p>
+            <p>For 100 g of ice at −20 °C on a 500 W heater: warming the ice takes 4.2 kJ (8 s), melting 33.4 kJ (67 s), warming the water to 100 °C 41.9 kJ (84 s) and boiling it all away 226 kJ (7 min 32 s). Boiling needs almost 7 times more heat than melting.</p>
+            <p><strong>Boiling point and height:</strong> water boils when its vapour can push back the air above it. High in the mountains the air pressure is lower, so water boils at a lower temperature: about 93 °C in Shimla and 88 °C in Leh.</p>
+            <p>Simplifications: all the heat goes into the water (none is lost to the air or the beaker), the water is stirred so it has one temperature, and the latent heat of boiling is taken as its 100 °C value at every height. The zoom window is a picture of the idea, not to scale. Time runs faster than real time; the readouts show the real heating time.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Ice in a glass of nimbu pani keeps the drink near 0 °C until it has all melted.</li>
+              <li>Steam at 100 °C burns more than boiling water at 100 °C: as it condenses on the skin it gives out its large latent heat.</li>
+              <li>Dal takes much longer to cook in Leh, because the water boils at only about 88 °C. A pressure cooker raises the boiling point to about 120 °C, so food cooks faster.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Heat and watch the graph. Where are the two flat parts, and what is happening in the beaker during each?<details><summary>Show answer</summary>At 0 °C the ice is melting; at 100 °C the water is boiling. In both, heat is still going in, but the temperature does not change.</details></li>
+              <li>Watch “particle speed” in the zoom window while the ice melts. Does it change?<details><summary>Show answer</summary>No. It stays at ×1.00 the whole time the ice melts, because the temperature stays at 0 °C. The heat is used to free the particles from their fixed places.</details></li>
+              <li>Which flat part is longer, melting or boiling? Use the heat supplied to compare.<details><summary>Show answer</summary>Boiling. For 100 g, melting needs 33.4 kJ but boiling needs 226 kJ, almost 7 times more, so it lasts almost 7 times longer.</details></li>
+              <li>Double the heater power to 1000 W. What happens to the times and the temperatures of the flat parts?<details><summary>Show answer</summary>Every stage takes half as long (the whole run 5 min 05 s instead of 10 min 10 s), but the flat parts are still at 0 °C and 100 °C.</details></li>
+              <li>Choose Leh. At what temperature does the water boil, and does it take more or less heat to reach boiling?<details><summary>Show answer</summary>About 88 °C. It needs less heat to reach boiling (water warms by 88 °C instead of 100 °C), but food cooks more slowly because the water is not as hot.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Melting point:</strong> the temperature at which a solid turns into a liquid (ice: 0 °C).</li>
+              <li><strong>Boiling point:</strong> the temperature at which a liquid boils all through (water: 100 °C at sea level).</li>
+              <li><strong>Latent heat:</strong> heat taken in or given out when a substance changes state, without any change in temperature.</li>
+              <li><strong>Specific heat:</strong> the heat needed to warm 1 kg of a substance by 1 °C.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

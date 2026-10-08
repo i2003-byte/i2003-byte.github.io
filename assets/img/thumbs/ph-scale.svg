@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="ph-scale">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="20" y="30" width="20" height="22" fill="#b3122e"/>
+  <rect x="40" y="30" width="20" height="22" fill="#e0262b"/>
+  <rect x="60" y="30" width="20" height="22" fill="#ef4a2d"/>
+  <rect x="80" y="30" width="20" height="22" fill="#f47b2a"/>
+  <rect x="100" y="30" width="20" height="22" fill="#f9a72b"/>
+  <rect x="120" y="30" width="20" height="22" fill="#f2cf2a"/>
+  <rect x="140" y="30" width="20" height="22" fill="#bcd636"/>
+  <rect x="160" y="30" width="20" height="22" fill="#4fb848"/>
+  <rect x="180" y="30" width="20" height="22" fill="#23a17a"/>
+  <rect x="200" y="30" width="20" height="22" fill="#2a8fb5"/>
+  <rect x="220" y="30" width="20" height="22" fill="#2f63b8"/>
+  <rect x="240" y="30" width="20" height="22" fill="#3d3fa6"/>
+  <rect x="260" y="30" width="20" height="22" fill="#5a3399"/>
+  <rect x="280" y="30" width="20" height="22" fill="#6b2a8a"/>
+  <path d="M60 100V160a10 10 0 0 0 20 0V100" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
+  <path d="M61.5 125V160a8.5 8.5 0 0 0 17 0V125Z" fill="#ef4a2d"/>
+  <path d="M140 100V160a10 10 0 0 0 20 0V100" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
+  <path d="M141.5 125V160a8.5 8.5 0 0 0 17 0V125Z" fill="#4fb848"/>
+  <path d="M200 100V160a10 10 0 0 0 20 0V100" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
+  <path d="M201.5 125V160a8.5 8.5 0 0 0 17 0V125Z" fill="#2f63b8"/>
+  <path d="M250 100V160a10 10 0 0 0 20 0V100" fill="none" stroke="#cbd5e1" stroke-width="2.5"/>
+  <path d="M251.5 125V160a8.5 8.5 0 0 0 17 0V125Z" fill="#5a3399"/>
+  <path d="M160 58l-6 -10h12z" fill="#4fb848" stroke="#fff"/>
+</svg>
