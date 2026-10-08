@@ -1507,9 +1507,11 @@ canvas.tap-to-play { cursor: pointer; }
 @media (hover: none) { .shortcut-hint { display: none; } }
 
 /* ---------- Home: hero mini experiment (tap to throw a ball) ---------- */
-.hero { padding-bottom: calc(var(--space-8) + 92px); }
+.hero { flex-direction: column; justify-content: center; }
+.hero > .container { width: 100%; }
 .hero-toy {
-  position: absolute; left: 0; right: 0; bottom: var(--space-4); z-index: 1;
+  position: relative; z-index: 1; width: 100%;
+  margin-top: var(--space-6);
   display: grid; justify-items: center; gap: var(--space-2);
   pointer-events: none;                       /* taps fall through to the hero… */
 }
@@ -1580,7 +1582,8 @@ canvas.tap-to-play { cursor: pointer; }
 .cp-chip:hover { border-color: var(--border-strong); text-decoration: none; }
 
 @media (max-width: 600px) {
-  .hero { min-height: min(80svh, 660px); padding-bottom: calc(var(--space-6) + 120px); }
+  .hero { min-height: min(80svh, 660px); }
+  .hero-toy { margin-top: var(--space-4); }
   .hero h1 { margin-bottom: var(--space-3); }
   .hero .lead { margin-bottom: var(--space-4); font-size: 1rem; }
   .hero-actions .btn-lg { min-height: 50px; padding-inline: 1.2rem; }

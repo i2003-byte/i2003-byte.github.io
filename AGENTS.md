@@ -125,6 +125,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
 - `tools/browser-test.mjs` does not press Play, so an error inside `update` passes it. Press Play (and wait) when screenshotting time-based sims.
 - Don't animate a clickable element's own transform (Playwright waits for it to stop moving and times out). Animate a `::after` ring instead, like `.sim-start`.
+- Many phones use larger text or have reduce-motion on (Android "Remove animations", battery saver). Keep text blocks in normal flow (no absolute positioning near text), and let motion the visitor asks for (a tap, a Play press, a `#play` link) still run with reduced motion; only automatic motion stops.
 - Sessions cannot push git tags (HTTP 403). For a backup marker, push a branch instead (e.g. `before-capabilities`).
 - On phones and tablets (< 1024px) the page is an app: the picture (full width, max 44% of the screen height), its key-number chips and the tab bar stay pinned at the top and one tab panel shows below, so a phone canvas is often wide and short (about 358×370). Choose layouts by height as well as width (e.g. stack a panel under the scene only if `H > W * 1.15`), and size labels to the room they get, or rows overlap.
 - `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

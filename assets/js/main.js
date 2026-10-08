@@ -100,14 +100,16 @@
     var lastT = 0;
     function loop(now) {
       raf = 0;
-      if (!running || !visible || ui.reduceMotion) return;
+      if (!running || !visible || (ui.reduceMotion && !toy.busy())) { if (ui.reduceMotion) draw(); return; }
       toy.step(Math.min(0.05, (now - (lastT || now)) / 1000));
       lastT = now;
       draw();
       raf = requestAnimationFrame(loop);
     }
-    function kick() { if (!raf && running && visible && !ui.reduceMotion) { lastT = 0; raf = requestAnimationFrame(loop); } }
-    toy.onChange = function () { if (ui.reduceMotion) draw(); else kick(); };
+    // With reduced motion the background stays still, but a ball the visitor throws still flies:
+    // it only moves when they tap, and it is the experiment itself
+    function kick() { if (!raf && running && visible && (!ui.reduceMotion || toy.busy())) { lastT = 0; raf = requestAnimationFrame(loop); } }
+    toy.onChange = kick;
 
     var hero = canvas.parentElement;
     hero.addEventListener('pointermove', function (e) {
@@ -155,10 +157,7 @@
       var b = { x: 28 / ppm, y: 0, vx: vx, vy: vy, age: 0, trail: [], bounces: 0, maxH: 0, landed: false, c: n++ % 3, fade: 1,
         H: vy * vy / (2 * g), R: 2 * vx * vy / g, T: 2 * vy / g };
       balls.push(b); if (balls.length > 6) balls.shift();
-      if (ui.reduceMotion) { // no animation: draw the whole path at once
-        for (var t = 0; t <= b.T; t += b.T / 60) b.trail.push({ x: (b.x + vx * t) * ppm, y: floorY - (vy * t - g * t * t / 2) * ppm });
-        b.landed = true; b.fade = 0.9; report(b);
-      } else say('Flying… <b>' + gName + '</b> gravity');
+      say('Flying… <b>' + gName + '</b> gravity');
       self.onChange();
     }
     function report(b) {
@@ -191,9 +190,7 @@
       balls.forEach(function (b) {
         var col = colors[b.c] || colors[0], f = Math.max(0, Math.min(1, b.fade));
         ctx.globalAlpha = 0.55 * f; ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.lineCap = 'round';
-        ctx.setLineDash(ui.reduceMotion ? [4, 6] : []);
         ctx.beginPath(); b.trail.forEach(function (p, i) { i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); }); ctx.stroke();
-        ctx.setLineDash([]);
         var last = b.trail[b.trail.length - 1];
         if (!last) return;
         ctx.globalAlpha = f; ctx.fillStyle = col; ctx.shadowColor = col; ctx.shadowBlur = 18;
@@ -226,7 +223,7 @@
       });
       window.addEventListener('resize', function () { var rr = canvas.getBoundingClientRect(); geometry(rr.width, rr.height); });
       // one demo throw so something is already moving
-      setTimeout(function () { if (!touched) throwAt(r.width * 0.62, floorY * 0.42); }, 700);
+      if (!ui.reduceMotion) setTimeout(function () { if (!touched) throwAt(r.width * 0.62, floorY * 0.42); }, 700);
     };
     return self;
   }

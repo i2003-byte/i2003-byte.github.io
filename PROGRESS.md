@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-08 · fix · Home hero on real phones (reduce motion, larger text)
+- Built/changed: `main.js`: with reduce-motion on, a ball the visitor throws still flies and fades (before: dashed still paths piled up over the text); the demo throw and background drift stay off. `style.css`: the hero experiment bar is now in normal flow under the buttons, so larger phone text can't overlap them. `common.js`: links ending in `#play` start the simulation even with reduce-motion (the visitor asked by tapping)
+- Checks: ✅ check.mjs passed · ✅ browser-test (home + sample sims, phone + desktop) · screenshots at 390×844 with reduce-motion and 122% text
+- Roadmap: unchanged
+- Next time: nothing extra
+- Problems/notes: found from the owner's phone screenshot
+
 ## 2026-10-08 · request · Phone app layout for simulations + exciting home page
 - Built/changed:
   - every simulation on phones/tablets (`common.js`, `style.css`): picture + key-number chips + tab bar pinned at the top; tabs Controls · Numbers · Graph · Try this (challenges from each page's try-list, one at a time); big start button on the picture; tap picture to play/pause; slider −/+ buttons with hold-to-repeat; site header scrolls away; sideways-phone layout. Desktop keeps its layout (plus the start button and a Try-this panel)

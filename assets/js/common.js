@@ -1047,7 +1047,7 @@
     // Opened from a "Tap & play" card (link ends in #play): start straight away,
     // and on phones scroll so the picture fills the top of the screen
     if (location.hash === '#play') {
-      if (hasTransport && !ui.reduceMotion) setRunning(true);
+      if (hasTransport) setRunning(true); // the visitor asked for it by tapping the card, so this holds with reduced motion too
       markStarted();
       if (phone.matches) requestAnimationFrame(function () { window.scrollTo(0, sim.stage.getBoundingClientRect().top + window.scrollY); });
       history.replaceState(null, '', location.pathname + location.search);
