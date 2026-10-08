@@ -13,6 +13,13 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-08 · fix · Phone simulation pages start with the simulation
+- Built/changed: `style.css` (≤ 767px): simulation pages hide the breadcrumbs, badges and description (the Learn panel and the menu cover them), the title is one compact line (2 at most) and Fullscreen / Share / Sound become 44px icon buttons beside it. The picture, key numbers, tabs and the first control now fit the first screen
+- Checks: ✅ check.mjs passed · ✅ browser-test (sample pages, phone + desktop) · screenshots at 412×915
+- Roadmap: unchanged
+- Next time: nothing extra
+- Problems/notes: from the owner's phone screenshot of the double-slit page
+
 ## 2026-10-08 · request · Original home hero restored
 - Built/changed: removed the tap-to-throw ball experiment from the home hero (the owner preferred the original); the original hero is back (moving dots, headline, Start Exploring, Surprise Me, stats strip). "Start Exploring" now jumps to the Tap & play cards. Tap & play row, class chips and compact subject tiles stay
 - Checks: ✅ check.mjs passed · ✅ browser-test (home + sample pages, phone + desktop) · phone screenshot reviewed

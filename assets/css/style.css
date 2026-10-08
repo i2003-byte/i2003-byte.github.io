@@ -1491,17 +1491,24 @@ canvas.tap-to-play { cursor: pointer; }
   .sim-canvas-wrap { max-height: calc(100svh - 150px); min-height: 150px; }
   .sim-hud { display: none; }
 }
-/* Compact title so the simulation starts higher on the first screen */
-@media (max-width: 600px) {
-  [data-page='sim'] .breadcrumbs li:last-child { display: none; }
-  .sim-title { padding-block: var(--space-2) var(--space-3); gap: var(--space-3); }
-  .sim-title h1 { font-size: 1.55rem; margin: var(--space-1) 0; }
-  .sim-title p {
-    font-size: var(--fs-sm);
+/* Phones: the simulation comes first. One title line with icon buttons;
+   breadcrumbs, badges and the description are hidden (the Learn panel and the
+   site menu cover them), so the picture, key numbers and tabs fit the first screen. */
+@media (max-width: 767px) {
+  [data-page='sim'] .breadcrumbs { display: none; }
+  .sim-title {
+    flex-wrap: nowrap; align-items: center; gap: var(--space-2);
+    padding-block: var(--space-3) var(--space-3);
+  }
+  .sim-title > div:first-child { min-width: 0; }
+  .sim-title .sim-meta, .sim-title p { display: none; }
+  .sim-title h1 {
+    margin: 0; font-size: 1.2rem; line-height: 1.25;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
-  .sim-title .sim-meta .badge { font-size: 0.72rem; padding-block: 2px; }
-  .sim-tools .btn { min-height: 44px; padding-block: 0; }
+  .sim-tools { width: auto; flex: none; flex-wrap: nowrap; gap: 6px; }
+  .sim-tools .btn { flex: none; width: 44px; min-height: 44px; padding: 0; justify-content: center; }
+  .sim-tools .btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
 /* Keyboard tips are useless on touch screens */
 @media (hover: none) { .shortcut-hint { display: none; } }
