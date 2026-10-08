@@ -120,10 +120,24 @@ for (const m of simulations) {
     if (!exists(`${dir}/index.html`)) err(`${where}: missing ${dir}/index.html (copy /_template/)`);
     else if (!fs.readFileSync(path.join(ROOT, dir, 'index.html'), 'utf8').includes(`data-sim="${m.id}"`)) err(`${dir}/index.html: must contain data-sim="${m.id}"`);
     if (!exists(`${dir}/sim.js`)) err(`${where}: missing ${dir}/sim.js`);
+    // Phone layout needs: the "Try this" coach reads the Learn panel's try-list,
+    // and the numbers under the picture are the readouts marked key: true
+    else {
+      const page = exists(`${dir}/index.html`) ? fs.readFileSync(path.join(ROOT, dir, 'index.html'), 'utf8') : '';
+      const tryList = (page.match(/<ol class="try-list">([\s\S]*?)<\/ol>/) || [])[1] || '';
+      if ((tryList.match(/<li>/g) || []).length < 2) err(`${dir}/index.html: needs an <ol class="try-list"> with at least 2 Try-this challenges (shown in the phone "Try this" tab)`);
+      const js = fs.readFileSync(path.join(ROOT, dir, 'sim.js'), 'utf8');
+      if (/readouts\s*:/.test(js) && !/key\s*:\s*true/.test(js)) err(`${dir}/sim.js: mark the 1–3 most important readouts key: true (shown under the picture on phones)`);
+    }
     if (!(m.tags || []).some((t) => /^class (7|8|9|10|11|12)$/.test(t))) err(`${where}: add a 'class N' tag (7–12) so the Class filter can find it`);
   } else if (exists(`${m.subject}/${m.id}/index.html`)) {
     warn(`${where}: folder exists but status is "coming-soon" — set status: 'live' when it is ready`);
   }
+}
+
+for (const id of S.site.showcase || []) {
+  const m = simulations.find((x) => x.id === id);
+  if (!m || m.status !== 'live') warn(`SimLab.site.showcase: "${id}" is not a live simulation (home page "Tap & play" row)`);
 }
 
 /* ---------- 5 + 6. HTML pages ---------- */

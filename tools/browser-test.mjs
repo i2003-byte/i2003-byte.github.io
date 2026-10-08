@@ -89,6 +89,8 @@ for (const vp of VIEWPORTS) {
         if (play) await play.click();
         for (const b of await page.$$('[data-btn]')) { await b.click().catch(() => {}); await page.waitForTimeout(60); }
         for (const r of await page.$$('#sim-controls input[type=range]')) { await r.focus(); await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowLeft'); }
+        // phone layout: open every tab (Controls · Numbers · Graph · Try this)
+        for (const t of await page.$$('[role=tab][data-tab-btn]:visible')) { await t.click(); await page.waitForTimeout(60); }
         await page.waitForTimeout(300);
       }
       const overflow = await page.evaluate((w) => document.documentElement.scrollWidth - w, vp.viewport.width);

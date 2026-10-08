@@ -2,8 +2,9 @@
    SimLab — main.js  (landing page only)
    ---------------------------------------------------------------------
    Fills every landing-page section from catalog.js:
-     hero particles · live stats · Surprise Me · quick search + chips ·
-     subject grid · featured scroller · recently added · browse by level
+     hero particles + ball-throw mini experiment · live stats · Surprise Me ·
+     Tap & play row + class chips · quick search + chips · subject grid ·
+     recently added
    ===================================================================== */
 (function () {
   'use strict';
@@ -23,6 +24,7 @@
     var W = 0, H = 0, dpr = 1, parts = [], mouse = { x: -9999, y: -9999, active: false };
     var running = true, visible = true, raf = 0;
     var colors = [];
+    var toy = heroToy();
 
     function readColors() {
       var cs = getComputedStyle(document.documentElement);
@@ -92,15 +94,20 @@
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
       }
       ctx.globalAlpha = 1;
+      toy.draw(ctx, W, H, colors);
     }
 
-    function loop() {
+    var lastT = 0;
+    function loop(now) {
       raf = 0;
       if (!running || !visible || ui.reduceMotion) return;
+      toy.step(Math.min(0.05, (now - (lastT || now)) / 1000));
+      lastT = now;
       draw();
       raf = requestAnimationFrame(loop);
     }
-    function kick() { if (!raf && running && visible && !ui.reduceMotion) raf = requestAnimationFrame(loop); }
+    function kick() { if (!raf && running && visible && !ui.reduceMotion) { lastT = 0; raf = requestAnimationFrame(loop); } }
+    toy.onChange = function () { if (ui.reduceMotion) draw(); else kick(); };
 
     var hero = canvas.parentElement;
     hero.addEventListener('pointermove', function (e) {
@@ -118,6 +125,110 @@
     readColors();
     resize();
     kick();
+    toy.start(canvas);
+  }
+
+  /* -------------------------------------------------------------------
+     HERO mini experiment: tap anywhere to throw a ball.
+     The tap point sets the top of the throw (for Earth gravity); the
+     ball then flies under the chosen gravity, so the same throw soars on
+     the Moon and barely lifts off on Jupiter. Real numbers, real parabola.
+     ------------------------------------------------------------------- */
+  function heroToy() {
+    var hero = $('.hero'), box = $('#hero-toy'), hint = $('#toy-hint');
+    var G_EARTH = 9.8, TIME = 1.6;            // animation runs 1.6× real time (readouts stay real)
+    var g = G_EARTH, gName = 'Earth', balls = [], floorY = 0, ppm = 25, W = 0, touched = false, n = 0;
+    var NAMES = { '9.8': 'Earth', '1.62': 'Moon', '24.8': 'Jupiter' };
+    var self = { onChange: function () {} };
+    var fmt = function (v) { return v >= 100 ? v.toFixed(0) : v.toFixed(1); };
+
+    function geometry(w, h) {
+      W = w;
+      floorY = box ? box.offsetTop - 6 : h - 40;
+      ppm = Math.max(14, floorY / 22);       // the hero is about 22 m tall
+    }
+    function say(html) { if (hint) hint.innerHTML = html; }
+    function throwAt(x, y) {
+      var tx = Math.max(40, Math.min(W - 10, x)), ty = Math.min(y, floorY - 40);
+      var hM = (floorY - ty) / ppm, vy = Math.sqrt(2 * G_EARTH * hM), tUp = vy / G_EARTH;
+      var vx = ((tx - 28) / ppm) / tUp;
+      var b = { x: 28 / ppm, y: 0, vx: vx, vy: vy, age: 0, trail: [], bounces: 0, maxH: 0, landed: false, c: n++ % 3, fade: 1,
+        H: vy * vy / (2 * g), R: 2 * vx * vy / g, T: 2 * vy / g };
+      balls.push(b); if (balls.length > 6) balls.shift();
+      if (ui.reduceMotion) { // no animation: draw the whole path at once
+        for (var t = 0; t <= b.T; t += b.T / 60) b.trail.push({ x: (b.x + vx * t) * ppm, y: floorY - (vy * t - g * t * t / 2) * ppm });
+        b.landed = true; b.fade = 0.9; report(b);
+      } else say('Flying… <b>' + gName + '</b> gravity');
+      self.onChange();
+    }
+    function report(b) {
+      var extra = gName === 'Moon' ? ' 🌙 Same throw, 6× higher than on Earth!' : gName === 'Jupiter' ? ' 🪐 Jupiter pulls 2.5× harder!' : '';
+      say('Max height <b>' + fmt(b.H) + ' m</b> · distance <b>' + fmt(b.R) + ' m</b> · <b>' + fmt(b.T) + ' s</b> in the air.' + extra);
+    }
+    self.step = function (dt) {
+      dt *= TIME;
+      balls.forEach(function (b) {
+        if (b.landed) { b.fade -= dt * 0.25; return; }
+        b.age += dt;
+        b.vy -= g * dt; b.x += b.vx * dt; b.y += b.vy * dt;
+        b.maxH = Math.max(b.maxH, b.y);
+        if (b.x * ppm < 10 || b.x * ppm > W - 10) { b.vx = -b.vx * 0.8; b.x = Math.max(10 / ppm, Math.min((W - 10) / ppm, b.x)); }
+        if (b.y < 0) {
+          b.y = 0; b.vy = -b.vy * 0.55; b.vx *= 0.85; b.bounces++;
+          if (b.bounces === 1) report(b);
+          if (b.bounces > 3 || Math.abs(b.vy) < 1) b.landed = true;
+        }
+        b.trail.push({ x: b.x * ppm, y: floorY - b.y * ppm });
+        if (b.trail.length > 70) b.trail.shift();
+      });
+      balls = balls.filter(function (b) { return b.fade > 0; });
+    };
+    self.draw = function (ctx, w, h, colors) {
+      if (w !== W || !floorY) geometry(w, h);
+      // launcher
+      ctx.globalAlpha = 0.9; ctx.fillStyle = colors[0];
+      ctx.beginPath(); ctx.arc(28, floorY, 7, 0, Math.PI * 2); ctx.fill();
+      balls.forEach(function (b) {
+        var col = colors[b.c] || colors[0], f = Math.max(0, Math.min(1, b.fade));
+        ctx.globalAlpha = 0.55 * f; ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.lineCap = 'round';
+        ctx.setLineDash(ui.reduceMotion ? [4, 6] : []);
+        ctx.beginPath(); b.trail.forEach(function (p, i) { i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y); }); ctx.stroke();
+        ctx.setLineDash([]);
+        var last = b.trail[b.trail.length - 1];
+        if (!last) return;
+        ctx.globalAlpha = f; ctx.fillStyle = col; ctx.shadowColor = col; ctx.shadowBlur = 18;
+        ctx.beginPath(); ctx.arc(last.x, last.y, 9, 0, Math.PI * 2); ctx.fill();
+        ctx.shadowBlur = 0;
+        if (!b.landed && b.y > 0.5) { // live height label next to the ball
+          ctx.globalAlpha = 0.95; ctx.fillStyle = colors[0];
+          ctx.font = '600 13px ui-monospace, monospace';
+          ctx.fillText(fmt(b.y) + ' m', Math.min(last.x + 14, W - 60), Math.max(14, last.y - 10));
+        }
+      });
+      ctx.globalAlpha = 1;
+    };
+    self.busy = function () { return balls.length > 0; };
+    self.start = function (canvas) {
+      var r = canvas.getBoundingClientRect(); geometry(r.width, r.height);
+      hero.addEventListener('pointerdown', function (e) {
+        if (e.target.closest('a, button, input, label, .toy-bar')) return;
+        var rr = canvas.getBoundingClientRect();
+        touched = true; throwAt(e.clientX - rr.left, e.clientY - rr.top);
+      });
+      $$('[data-g]').forEach(function (bt) {
+        bt.addEventListener('click', function () {
+          g = parseFloat(bt.dataset.g); gName = NAMES[bt.dataset.g];
+          $$('[data-g]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === bt)); });
+          say('<b>' + gName + '</b>: g = ' + bt.dataset.g + ' m/s². Now tap to throw!');
+          var rr = canvas.getBoundingClientRect();
+          throwAt(rr.width * 0.62, floorY * 0.42); // same throw as the demo, to compare
+        });
+      });
+      window.addEventListener('resize', function () { var rr = canvas.getBoundingClientRect(); geometry(rr.width, rr.height); });
+      // one demo throw so something is already moving
+      setTimeout(function () { if (!touched) throwAt(r.width * 0.62, floorY * 0.42); }, 700);
+    };
+    return self;
   }
 
   /* -------------------------------------------------------------------
@@ -126,13 +237,8 @@
   function stats() {
     var live = S.liveSims();
     var subjectsWithSims = S.subjects.length;
-    var el = $('#hero-stats');
-    if (el) {
-      el.innerHTML =
-        '<span><strong>' + live.length + '</strong>Simulation' + (live.length === 1 ? '' : 's') + '</span><span class="dot" aria-hidden="true"></span>' +
-        '<span><strong>' + subjectsWithSims + '</strong>Subjects</span><span class="dot" aria-hidden="true"></span>' +
-        '<span><strong>100%</strong>Free &amp; Open</span>';
-    }
+    var el = $('#hero-lead');
+    if (el) el.innerHTML = '<strong>' + live.length + ' free simulations</strong> across ' + subjectsWithSims + ' subjects, for Class 7 to 12.';
     var newest = live.slice().sort(function (a, b) { return S.parseDate(b.dateAdded) - S.parseDate(a.dateAdded); })[0];
     var pill = $('#hero-pill');
     if (pill && newest) {
@@ -178,30 +284,54 @@
   }
 
   /* -------------------------------------------------------------------
-     Featured scroller with arrow buttons
+     Tap & play: big cards that open a simulation already running (#play),
+     then "I'm in Class …" shortcuts
      ------------------------------------------------------------------- */
-  function featured() {
-    var track = $('#featured-track');
+  function playRow() {
+    var track = $('#play-track');
     if (!track) return;
-    var list = S.liveSims().filter(function (s) { return s.featured; });
-    if (!list.length) { $('#featured').hidden = true; return; }
-    track.innerHTML = list.map(function (s) { return ui.simCard(s); }).join('');
+    var live = S.liveSims(), seen = {}, list = [];
+    function add(s) { if (s && S.isLive(s) && !seen[s.id]) { seen[s.id] = 1; list.push(s); } }
+    (S.site.showcase || []).forEach(function (id) { add(S.getSim(id)); });
+    live.filter(function (s) { return s.featured; }).forEach(add);
+    live.slice().sort(function (a, b) { return S.parseDate(b.dateAdded) - S.parseDate(a.dateAdded); }).forEach(add);
+    list = list.slice(0, 16);
+    function cls(s) { var m = (s.tags || []).join(' ').match(/class (\d+)/); return m ? 'Class ' + m[1] : s.level; }
+    track.innerHTML = list.map(function (s) {
+      var subj = S.getSubject(s.subject);
+      return '<a class="play-card" href="' + esc(s.link) + '#play" style="' + ui.accent(subj) + '">' +
+        '<span class="pc-thumb"><img src="' + esc(s.thumbnail || '/assets/img/thumbs/default.svg') + '" alt="" loading="lazy" width="320" height="200">' +
+          '<span class="pc-play" aria-hidden="true">' + ui.icon('play') + '</span>' +
+          (S.isNew(s) ? '<span class="badge badge-new">New</span>' : '') + '</span>' +
+        '<span class="pc-t">' + esc(s.title) + '</span>' +
+        '<span class="pc-m">' + (subj ? subj.icon + ' ' + esc(subj.name) + ' · ' : '') + esc(cls(s)) + '</span>' +
+      '</a>';
+    }).join('') +
+      '<button class="play-card pc-surprise" type="button" data-surprise><span class="pc-thumb"><span>🎲</span></span>' +
+      '<span class="pc-t">Surprise me</span><span class="pc-m">Any of ' + live.length + ' simulations</span></button>';
 
-    var prev = $('#featured-prev'), next = $('#featured-next');
+    var prev = $('#play-prev'), next = $('#play-next');
     function update() {
       var max = track.scrollWidth - track.clientWidth - 2;
       prev.disabled = track.scrollLeft <= 2;
       next.disabled = track.scrollLeft >= max;
-      $('.scroller-controls').style.visibility = max <= 0 ? 'hidden' : '';
     }
-    function by(dir) {
-      track.scrollBy({ left: dir * track.clientWidth * 0.85, behavior: ui.reduceMotion ? 'auto' : 'smooth' });
-    }
+    function by(dir) { track.scrollBy({ left: dir * track.clientWidth * 0.85, behavior: ui.reduceMotion ? 'auto' : 'smooth' }); }
     prev.addEventListener('click', function () { by(-1); });
     next.addEventListener('click', function () { by(1); });
     track.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', update);
     update();
+
+    var pick = $('#class-pick');
+    if (pick) {
+      var classes = ['7', '8', '9', '10', '11', '12'].map(function (c) {
+        return { c: c, n: live.filter(function (s) { return (s.tags || []).indexOf('class ' + c) !== -1; }).length };
+      }).filter(function (x) { return x.n; });
+      pick.innerHTML = '<span class="cp-label">I’m in</span>' + classes.map(function (x) {
+        return '<a class="cp-chip" href="/simulations/?class=' + x.c + '">Class ' + x.c + ' <small>' + x.n + '</small></a>';
+      }).join('');
+    }
   }
 
   /* -------------------------------------------------------------------
@@ -216,58 +346,12 @@
     grid.innerHTML = list.map(function (s) { return ui.simCard(s); }).join('');
   }
 
-  /* -------------------------------------------------------------------
-     Browse by level (accessible tabs)
-     ------------------------------------------------------------------- */
-  function levels() {
-    var tablist = $('#level-tabs'), panel = $('#level-panel');
-    if (!tablist) return;
-    tablist.innerHTML = S.LEVELS.map(function (lvl, i) {
-      var n = S.liveSims().filter(function (s) { return s.level === lvl; }).length;
-      return '<button class="tab" role="tab" type="button" id="tab-' + lvl + '" aria-controls="level-panel" aria-selected="' + (i === 0) + '"' +
-        (i === 0 ? '' : ' tabindex="-1"') + ' data-level="' + lvl + '">' +
-        '<span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:var(--level-' + lvl.toLowerCase() + ')"></span>' +
-        lvl + ' <span class="n">' + n + '</span></button>';
-    }).join('');
-
-    function show(lvl) {
-      $$('.tab', tablist).forEach(function (t) {
-        var on = t.dataset.level === lvl;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-      });
-      panel.setAttribute('aria-labelledby', 'tab-' + lvl);
-      var sims = S.simulations.filter(function (s) { return s.level === lvl && S.isSubjectLive(s.subject); })
-        .sort(function (a, b) { return (S.isLive(b) ? 1 : 0) - (S.isLive(a) ? 1 : 0); });
-      panel.innerHTML = sims.length ? sims.map(function (s) {
-        var live = S.isLive(s), subj = S.getSubject(s.subject), br = S.getBranch(s.subject, s.branch);
-        var tag = live ? 'a' : 'div';
-        return '<' + tag + ' class="level-item' + (live ? '' : ' is-soon') + '"' + (live ? ' href="' + esc(s.link) + '"' : '') + ' style="' + ui.accent(subj) + '">' +
-          '<img src="' + esc(s.thumbnail) + '" alt="" loading="lazy" width="72" height="45">' +
-          '<span><span class="t">' + esc(s.title) + '</span><span class="m">' + subj.icon + ' ' + esc(subj.name) + (br ? ' › ' + esc(br.name) : '') + '</span></span>' +
-          (live ? (S.isNew(s) ? '<span class="badge badge-new">New</span>' : '') : '<span class="badge badge-soon">Soon</span>') +
-          '</' + tag + '>';
-      }).join('') : '<p class="muted">No simulations at this level yet — check back soon!</p>';
-    }
-    tablist.addEventListener('click', function (e) { var t = e.target.closest('.tab'); if (t) show(t.dataset.level); });
-    tablist.addEventListener('keydown', function (e) {
-      var tabs = $$('.tab', tablist), i = tabs.indexOf(document.activeElement);
-      if (i < 0) return;
-      var j = e.key === 'ArrowRight' ? (i + 1) % tabs.length : e.key === 'ArrowLeft' ? (i - 1 + tabs.length) % tabs.length :
-        e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length - 1 : -1;
-      if (j < 0) return;
-      e.preventDefault(); tabs[j].focus(); show(tabs[j].dataset.level);
-    });
-    show(S.LEVELS[0]);
-  }
-
   /* ------------------------------------------------------------------- */
   heroParticles();
+  playRow();   // before stats(): it adds a Surprise me card
   stats();
   quickSearch();
   subjects();
-  featured();
   recent();
-  levels();
   ui.reveal();
 })();

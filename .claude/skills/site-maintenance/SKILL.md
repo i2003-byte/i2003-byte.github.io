@@ -18,7 +18,7 @@ node tools/check.mjs --write
 node tools/browser-test.mjs          # ALL pages, phone and desktop (skips itself if Playwright is missing)
 ```
 - For each failure, find the root cause and fix it with the smallest change. Re-run until green.
-- Take **one combined screenshot contact sheet** of a sample: the 5 newest simulations plus 3 random older ones, at phone width, both at the top of the page and scrolled down to the controls (the canvas should stay pinned and readable). Fix overlapping, cut-off or unreadable drawings.
+- Take **one combined screenshot contact sheet** of a sample: the 5 newest simulations plus 3 random older ones, at phone width, both at the top of the page and after pressing Play and scrolling down to the controls (the picture, key-number chips and tabs should stay pinned and readable). Also check the home page on a phone: the hero ball-throw, the Tap & play row and the class chips. Fix overlapping, cut-off or unreadable drawings.
 - Science spot-check: pick 2 simulations built this week, and check one key formula or number in each against physics (e.g. pendulum T = 2π√(L/g)). Fix any errors.
 
 ## 2. Roadmap health (`ROADMAP.md`)

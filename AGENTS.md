@@ -68,7 +68,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 | Colours, fonts, spacing, radius, shadows | CSS variables at the top of `assets/css/style.css` (light theme under `[data-theme='light']`) |
 | Header, mega-menu, drawer, search, breadcrumbs, footer | `assets/js/nav.js` |
 | Simulation engine: sliders, loop, graph, audio, URL share state, fullscreen | `assets/js/common.js` (API documented in its header comment) |
-| Landing page sections | `index.html` + `assets/js/main.js` |
+| Landing page sections (hero ball-throw, Tap & play row, class chips) | `index.html` + `assets/js/main.js`; the Tap & play order is `SimLab.site.showcase` in `catalog.js` |
 | Subject pages + `/simulations/` | `<subject>/index.html` (8-line template) + `assets/js/subject.js` |
 | One simulation's behaviour | `<subject>/<id>/sim.js` |
 | One simulation's page text (Learn panel, meta tags) | `<subject>/<id>/index.html` |
@@ -92,14 +92,15 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 
 ## Simulation API cheat-sheet (`SimLab.createSim(cfg)`)
 - `params: [{id,label,min,max,step,value,unit,presets?,help?} | {id,label,type:'select',options:[{value,label}],value} | {id,label,type:'toggle',value}]` → read as `sim.p.<id>`, saved in the URL automatically
-- `readouts: [{id,label,unit,digits,key?}]` + `readout(sim) → {id: value|string}`
+- `readouts: [{id,label,unit,digits,key?,short?}]` + `readout(sim) → {id: value|string}`. Mark the 1–3 most important `key: true` (required): phones show them under the picture, using `short` (≤ 14 chars) if the label is long
 - `graph: {title,yLabel,series:[{label,color?}],window?,yMin?,yMax?}` + `sample(sim) → [values]`
 - `reset(sim)`, `update(sim, dt)` (fixed 1/240 s steps), `draw(sim, now)` (use `sim.ctx`, `sim.width`, `sim.height`, `sim.colors`)
 - Optional:
   - `finished(sim)`, `onParam(sim,id,v) → true to keep running`, `status(sim)`
   - `buttons:[{label,onClick,primary?,full?}]`, `pointer:{down,move,up,hover}`
   - `audio:true` (then `SimLab.audio.tone/voice/noise`), `transport:false`, `autoplay:true`
-  - `animate(sim) → bool`, `mobileAspect:'3 / 4'`
+  - `animate(sim) → bool`, `mobileAspect:'3 / 4'`, `playLabel` (text of Play and of the big start button on the picture)
+- Built in for every sim, no code needed: big start button on the picture, tap the picture to play/pause (sims without `pointer`), slider −/+ buttons, links ending in `#play` start running at once, and the phone tabs (Controls · Numbers · Graph · Try this). The Try-this tab shows the Learn panel's `<ol class="try-list">` one challenge at a time (at least 2 required).
 - Helpers: `SimLab.math` (clamp, rk4, fmt, rng…), `SimLab.vec`, `SimLab.draw` (arrow, text{fit}, grid, curve, roundRect, alpha…)
 
 ## Current content (update when it changes)
@@ -123,6 +124,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Share-link numbers are written with `String(parseFloat(x.toFixed(d)))`. Never strip zeros with a regex (350 would become 35).
 - On desktop the mega-menu opens on hover. A click right after the hover must not close it.
 - `tools/browser-test.mjs` does not press Play, so an error inside `update` passes it. Press Play (and wait) when screenshotting time-based sims.
+- Don't animate a clickable element's own transform (Playwright waits for it to stop moving and times out). Animate a `::after` ring instead, like `.sim-start`.
 - Sessions cannot push git tags (HTTP 403). For a backup marker, push a branch instead (e.g. `before-capabilities`).
-- On phones and tablets (< 1024px) the canvas is pinned under the header while the controls scroll, and its height is capped at 46% of the screen, so a phone canvas is often wide and short (about 343×340). Choose layouts by height as well as width (e.g. stack a panel under the scene only if `H > W * 1.15`), and size labels to the room they get, or rows overlap.
+- On phones and tablets (< 1024px) the page is an app: the picture (full width, max 44% of the screen height), its key-number chips and the tab bar stay pinned at the top and one tab panel shows below, so a phone canvas is often wide and short (about 358×370). Choose layouts by height as well as width (e.g. stack a panel under the scene only if `H > W * 1.15`), and size labels to the room they get, or rows overlap.
 - `SimLab.current` does not exist. For a graph `xMax` that depends on state, keep a closure variable set in `reset`. To plot in a time other than `sim.time`, omit `sample` and call `sim.graph.push(t, [..])` yourself.

@@ -47,7 +47,8 @@ Follow `.claude/skills/add-simulation/SKILL.md` for each one:
 node tools/check.mjs --write          # must end with ✅
 node tools/browser-test.mjs <new pages>   # if Playwright is available
 ```
-Look at one combined screenshot of the new simulations at phone and desktop width (cheaper than many separate images). Fix anything that overlaps, is cut off or unreadable.
+Look at one combined screenshot of the new simulations at phone and desktop width (cheaper than many separate images). At phone width, take it after pressing Play and scrolling to the controls, so the pinned picture, key-number chips and tabs show. Fix anything that overlaps, is cut off or unreadable.
+If a new simulation is one of the most exciting on the site, you may add its id near the front of `SimLab.site.showcase` in `catalog.js` (the home page "Tap & play" row; keep it to about 12).
 
 ## 4. Update the tracking files (always, even if unfinished)
 - **Finished:** move the item from 🔨 In progress to ✅ Done: `- [x] **…** N sims: <ids>. Done YYYY-MM-DD.`

@@ -39,7 +39,11 @@ SimLab.site = {
     return this.github + '/issues/new?labels=simulation-request&title=' +
       encodeURIComponent('Simulation idea: ');
   },
-  newBadgeDays: 30 // Items added within this many days get a "New" badge
+  newBadgeDays: 30, // Items added within this many days get a "New" badge
+  // "Tap & play" row on the home page: the most exciting simulations first (ids).
+  // Featured simulations follow automatically, then the newest ones.
+  showcase: ['energy-roller-coaster', 'guitar-string', 'youngs-double-slit', 'sorting-race', 'balloon-rocket',
+    'water-xylophone', 'prism-dispersion', 'logic-gates', 'day-night-india', 'natural-indicators', 'demand-curve', 'collisions']
 };
 
 /* ---------------------------------------------------------------------
