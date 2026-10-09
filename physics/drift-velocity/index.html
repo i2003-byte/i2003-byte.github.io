@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Drift Velocity of Electrons — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/drift-velocity/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Drift Velocity of Electrons — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/drift-velocity/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="drift-velocity">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A metal wire is full of <strong>free electrons</strong>: copper has about 8.5 × 10²⁸ in every cubic metre. Even with no battery they move very fast in random directions, bumping into the vibrating positive ions. Because the motion is random, there is no overall flow and no current.</p>
+            <p>Connect a battery and an <strong>electric field E</strong> sets up along the wire. Between collisions every electron gets a small push opposite to E. After each collision it starts again in a random direction, so on average it gains only a tiny steady velocity: the <strong>drift velocity</strong>. For 1 A in a 1 mm² copper wire this is only about 0.07 mm per second.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">I = n e A v_d   →   v_d = I ÷ (n e A)</code>
+            <p class="formula-note">n = free electrons per m³, e = 1.6 × 10⁻¹⁹ C, A = cross-section area in m². Current density J = I ÷ A = n e v_d.</p>
+            <code class="formula">v_d = e E τ ÷ m</code>
+            <p class="formula-note">τ = relaxation time, the average time between collisions (about 10⁻¹⁴ s); m = mass of an electron. Mobility μ = v_d ÷ E = eτ ÷ m.</p>
+            <code class="formula">E = ρ J   and   ρ = m ÷ (n e² τ)</code>
+            <p class="formula-note">This is Ohm's law seen from inside the wire. A hotter wire has more collisions (smaller τ), so a larger field is needed to keep the same current. The drift speed for a given current does not change.</p>
+            <p><strong>Not to scale:</strong> in a real wire the random speed (about 10⁵–10⁶ m/s) is roughly a billion times the drift speed. Here the drift is speeded up a lot so you can see it, but the numbers in the readouts are real. The electrons are also shown far fewer and bigger than they are.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Switch on a fan and it starts at once, although a single electron would take hours to travel 1 m. The field spreads through the wire at nearly the speed of light, and every electron along the wire starts drifting together.</li>
+              <li>House wiring uses thicker wire (2.5 mm² or 4 mm²) for geysers and ACs. More area means a lower current density, less heating and a safer wire.</li>
+              <li>Aluminium has more free electrons per m³ than copper, but more collisions, so it is a poorer conductor. It is used in overhead power lines because it is light and cheap.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press “Switch on” with 1 A in a 1 mm² copper wire. Read the drift speed. How long would one electron take to drift along 1 m of wire?<details><summary>Show answer</summary>v_d ≈ 0.073 mm/s, so 1 m takes about 13,600 s, nearly 4 hours.</details></li>
+              <li>Set the current to 0. Do the electrons stop moving?<details><summary>Show answer</summary>No. They still move fast at random, but the trail of the followed electron wanders with no overall direction. No drift means no current.</details></li>
+              <li>Keep 1 A and make the wire 4 times thicker (1 mm² to 4 mm²). What happens to the drift speed?<details><summary>Show answer</summary>It falls to a quarter (about 0.018 mm/s). The same charge per second is now carried by four times as many electrons.</details></li>
+              <li>Heat the copper wire from 20 °C to 200 °C at the same current. What changes and what stays the same?<details><summary>Show answer</summary>The drift speed stays the same (it depends only on I, n, e and A). τ gets shorter (more collisions) and the field E needed grows by about 70%, because the resistivity rises.</details></li>
+              <li>Switch between copper, aluminium and silver at 1 A in 1 mm². Which has the slowest drift, and why?<details><summary>Show answer</summary>Aluminium (about 0.035 mm/s), because it has the most free electrons per m³ (n ≈ 1.8 × 10²⁹), so each one needs to move less to carry the same current.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Drift velocity:</strong> the small average velocity of free electrons along a wire when a current flows.</li>
+              <li><strong>Relaxation time (τ):</strong> the average time between two collisions of a free electron.</li>
+              <li><strong>Current density (J):</strong> current per unit cross-section area, in A/m².</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

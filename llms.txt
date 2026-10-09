@@ -100,6 +100,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Coulomb's Law: Force Between Charges](https://i2003-byte.github.io/physics/coulombs-law/): Change two charges, the distance between them and the medium, and see the equal and opposite forces with an inverse-square graph. Add a third charge to add forces as vectors. (Intermediate)
 - [Electric Fields: Field Lines and Equipotentials](https://i2003-byte.github.io/physics/electric-fields/): Drag positive and negative charges and watch their electric field lines and equipotential lines change. Add charges, read E and V at a test point and see superposition at work. (Advanced)
 - [Electric Dipole in a Uniform Field](https://i2003-byte.github.io/physics/electric-dipole/): A dipole on a pivot swings in a uniform electric field. See the two equal and opposite forces, the torque p × E, the potential energy and the stable and unstable positions. (Advanced)
+- [Drift Velocity of Electrons](https://i2003-byte.github.io/physics/drift-velocity/): See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second. (Advanced)
 
 ### Thermodynamics
 
@@ -162,9 +163,15 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Neutralisation: Acid Meets Base](https://i2003-byte.github.io/chemistry/neutralisation/): Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping. (Beginner)
 - [The pH Scale: How Acidic, How Basic?](https://i2003-byte.github.io/chemistry/ph-scale/): Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7. (Beginner)
 
-## Mathematics (coming soon)
+## Mathematics
 
-Interactive geometry, graphs you can bend and probability experiments you can run thousands of times. Mathematics simulations are on the way.
+Turn a transversal across parallel lines, tear the corners off a triangle and slide four triangles around a square to prove Pythagoras. Drag the shapes and watch the rules hold.
+
+### Lines, Angles & Triangles
+
+- [Parallel Lines and a Transversal](https://i2003-byte.github.io/mathematics/parallel-lines-angles/): Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule. (Beginner)
+- [Angle Sum of a Triangle](https://i2003-byte.github.io/mathematics/triangle-angle-sum/): Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property. (Beginner)
+- [Pythagoras' Theorem by Rearrangement](https://i2003-byte.github.io/mathematics/pythagoras-proof/): Watch four copies of a right triangle slide around inside a big square: the empty space changes from c² into a² + b². Draw squares on the sides and see why the theorem needs a right angle. (Intermediate)
 
 ## Biology (coming soon)
 

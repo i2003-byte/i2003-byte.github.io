@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Parallel Lines and a Transversal — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/parallel-lines-angles/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Parallel Lines and a Transversal — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/parallel-lines-angles/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="parallel-lines-angles">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>transversal</strong> is a line that cuts two other lines. At each crossing it makes four angles, so there are <strong>eight angles</strong> in all, numbered 1 to 8 here (1 to 4 at P, 5 to 8 at Q).</p>
+            <p>When the two lines are <strong>parallel</strong>, the transversal meets both of them at the same slant. That is why the angles at Q are exact copies of the angles at P. Tilt line m a little and the copies stop matching. This is how we test whether two lines are parallel.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">Corresponding angles are equal (∠1 = ∠5, ∠2 = ∠6, ∠3 = ∠7, ∠4 = ∠8)</code>
+            <code class="formula">Alternate interior angles are equal (∠3 = ∠5, ∠4 = ∠6)</code>
+            <code class="formula">Co-interior angles add up to 180° (∠4 + ∠5 = 180°, ∠3 + ∠6 = 180°)</code>
+            <p class="formula-note">These three rules hold <strong>only when l ∥ m</strong>. The reverse is also true: if any one of them holds, the lines are parallel.</p>
+            <code class="formula">Vertically opposite angles are equal · a linear pair adds up to 180°</code>
+            <p class="formula-note">These two work at any crossing of two lines, parallel or not.</p>
+            <p><strong>Interior</strong> angles lie between the two lines (3, 4, 5, 6). <strong>Exterior</strong> angles lie outside them (1, 2, 7, 8). <strong>Alternate</strong> means on opposite sides of the transversal.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Railway tracks are parallel. A road crossing them at a slant makes equal corresponding angles at both rails.</li>
+              <li>A zebra crossing, the rungs of a ladder and the lines on a ruled notebook page are all parallel lines cut by a transversal.</li>
+              <li>Carpenters and masons check that two edges are parallel by measuring the angles a crossing line makes with each of them.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep line m at 0° tilt and set the transversal to 60°. Find the sizes of all eight angles. How many different sizes are there?<details><summary>Show answer</summary>Only two: 60° (∠1, ∠3, ∠5, ∠7) and 120° (∠2, ∠4, ∠6, ∠8). Turn on “Show all eight sizes” to check. 60° + 120° = 180°.</details></li>
+              <li>Choose “Alternate interior angles” and tap ∠3. Now tilt line m to 10°. What happens?<details><summary>Show answer</summary>∠3 stays 60° but ∠5 becomes 50°, so they are no longer equal. Unequal alternate angles mean the lines are not parallel.</details></li>
+              <li>Choose “Co-interior angles” with the lines parallel. Move the transversal. Is the sum ever anything other than 180°?<details><summary>Show answer</summary>No. For parallel lines, co-interior angles always add up to 180°, whatever the slant of the transversal.</details></li>
+              <li>Tilt line m to −15° and choose “Vertically opposite angles”. Does the rule still work?<details><summary>Show answer</summary>Yes. Vertically opposite angles are equal at any crossing, because both are “180° minus the same angle”. Parallel lines are not needed.</details></li>
+              <li>Set the transversal to 90°. What can you say about all eight angles?<details><summary>Show answer</summary>All eight are right angles (90°). The transversal is perpendicular to both parallel lines.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Transversal:</strong> a line that crosses two or more lines at different points.</li>
+              <li><strong>Parallel lines (l ∥ m):</strong> lines in a plane that never meet, however far they are drawn.</li>
+              <li><strong>Linear pair:</strong> two angles side by side that make a straight line (180°).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

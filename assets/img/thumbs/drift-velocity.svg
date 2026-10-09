@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="drift-velocity">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="20" y="60" width="280" height="90" rx="14" fill="#e08a4f" fill-opacity=".2" stroke="#e08a4f" stroke-width="3"/>
+  <g fill="#e08a4f" fill-opacity=".6"><circle cx="55" cy="85" r="7"/><circle cx="105" cy="85" r="7"/><circle cx="155" cy="85" r="7"/><circle cx="205" cy="85" r="7"/><circle cx="255" cy="85" r="7"/><circle cx="80" cy="125" r="7"/><circle cx="130" cy="125" r="7"/><circle cx="180" cy="125" r="7"/><circle cx="230" cy="125" r="7"/></g>
+  <path d="M240 112l-18 -16l-10 26l-24 -20l-14 22l-22 -18l-12 24l-26 -14" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="114" cy="122" r="6" fill="#fbbf24"/>
+  <g fill="#38bdf8"><circle cx="70" cy="105" r="4"/><circle cx="190" cy="72" r="4"/><circle cx="270" cy="110" r="4"/><circle cx="150" cy="140" r="4"/></g>
+  <path d="M110 40H230" stroke="#f87171" stroke-width="4"/><path d="M238 40l-12 -7v14z" fill="#f87171"/>
+  <text x="96" y="46" font-family="sans-serif" font-size="16" font-weight="700" fill="#f87171">E</text>
+  <path d="M220 172H110" stroke="#38bdf8" stroke-width="4"/><path d="M102 172l12 -7v14z" fill="#38bdf8"/>
+  <text x="232" y="178" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">e⁻</text>
+</svg>

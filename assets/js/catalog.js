@@ -158,11 +158,11 @@ SimLab.subjects = [
     color: '#a78bfa',
     tagline: 'Drag, twist and explore the shapes behind the formulas.',
     description:
-      'Interactive geometry, graphs you can bend and probability experiments ' +
-      'you can run thousands of times. Mathematics simulations are on the way.',
-    status: 'coming-soon',
+      'Turn a transversal across parallel lines, tear the corners off a triangle and slide ' +
+      'four triangles around a square to prove Pythagoras. Drag the shapes and watch the rules hold.',
+    status: 'live',
     branches: [
-      { id: 'geometry', name: 'Geometry' },
+      { id: 'geometry', name: 'Lines, Angles & Triangles' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
       { id: 'probability', name: 'Probability' }
@@ -1770,6 +1770,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-08',
     prerequisites: ['states-of-matter']
+  },
+  {
+    id: 'parallel-lines-angles',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: 'Parallel Lines and a Transversal',
+    description:
+      'Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule.',
+    level: 'Beginner',
+    tags: ['angles', 'parallel lines', 'transversal', 'corresponding angles', 'alternate angles', 'co-interior angles', 'vertically opposite angles', 'linear pair', 'geometry', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/parallel-lines-angles.svg',
+    link: '/mathematics/parallel-lines-angles/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-09',
+    prerequisites: []
+  },
+  {
+    id: 'triangle-angle-sum',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: 'Angle Sum of a Triangle',
+    description:
+      'Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property.',
+    level: 'Beginner',
+    tags: ['triangle', 'angle sum', '180 degrees', 'exterior angle', 'parallel lines', 'proof', 'geometry', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/triangle-angle-sum.svg',
+    link: '/mathematics/triangle-angle-sum/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-09',
+    prerequisites: ['parallel-lines-angles']
+  },
+  {
+    id: 'pythagoras-proof',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: "Pythagoras' Theorem by Rearrangement",
+    description:
+      'Watch four copies of a right triangle slide around inside a big square: the empty space changes from c² into a² + b². Draw squares on the sides and see why the theorem needs a right angle.',
+    level: 'Intermediate',
+    tags: ['pythagoras', 'right triangle', 'hypotenuse', 'pythagorean triples', 'proof', 'area', 'squares', 'geometry', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/pythagoras-proof.svg',
+    link: '/mathematics/pythagoras-proof/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-09',
+    prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'drift-velocity',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Drift Velocity of Electrons',
+    description:
+      'See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second.',
+    level: 'Advanced',
+    tags: ['drift velocity', 'current', 'free electrons', 'current density', 'relaxation time', 'resistivity', 'mobility', 'class 12'],
+    thumbnail: '/assets/img/thumbs/drift-velocity.svg',
+    link: '/physics/drift-velocity/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-09',
+    prerequisites: ['ohms-law']
   }
 ];
 

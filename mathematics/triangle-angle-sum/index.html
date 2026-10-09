@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Angle Sum of a Triangle — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/triangle-angle-sum/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Angle Sum of a Triangle — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/triangle-angle-sum/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="triangle-angle-sum">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Draw any triangle at all: thin, fat, or with a wide obtuse corner. Its three angles <strong>always add up to 180°</strong>, the same as a straight line.</p>
+            <p>You can see this by tearing off the three corners and placing them side by side: they fit exactly along a straight line. A line drawn through the top corner parallel to the base explains why, using the alternate angles you met with parallel lines.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">∠A + ∠B + ∠C = 180°</code>
+            <p class="formula-note">Angle sum property. So if you know two angles, the third is 180° minus their sum.</p>
+            <code class="formula">Exterior angle = sum of the two interior opposite angles</code>
+            <p class="formula-note">Extend side AB beyond B to D. Then ∠CBD = 180° − ∠B = ∠A + ∠C.</p>
+            <p><strong>Why (parallel-line proof):</strong> draw a line through C parallel to AB. The angle on its left next to C equals ∠A and the angle on its right equals ∠B (alternate interior angles). Those two angles and ∠C sit together on a straight line, so they add up to 180°.</p>
+            <p>A triangle can have at most one right angle or one obtuse angle. With all three angles below 90° it is <strong>acute</strong>.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Roof trusses and bridge frames use triangles. If the slope of a roof is 30° at each side, the angle at the top must be 120°.</li>
+              <li>A set square has angles 30°, 60°, 90°; the other one has 45°, 45°, 90°. Both add up to 180°.</li>
+              <li>Surveyors measure two angles of a triangle and work out the third, instead of measuring it.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Tap “Tear off the corners”. Then drag corner C to make a very different triangle and tear them again. Do the corners still fill the straight line?<details><summary>Show answer</summary>Yes, every time. Whatever the shape, the three corners together make exactly 180°.</details></li>
+              <li>Set ∠A = 90° and ∠B = 45°. What is ∠C, and what kind of triangle is it?<details><summary>Show answer</summary>∠C = 180° − 90° − 45° = 45°. It is a right-angled isosceles triangle, like one of your set squares.</details></li>
+              <li>Can you make a triangle with two right angles? Try to set ∠A = 90° and ∠B = 90°.<details><summary>Show answer</summary>No. 90° + 90° already makes 180°, leaving nothing for ∠C: the two sides would be parallel and never meet. The sim will not let both be 90°.</details></li>
+              <li>Choose “The exterior angle at B” with ∠A = 50° and ∠B = 70°. Find the exterior angle in two ways.<details><summary>Show answer</summary>180° − 70° = 110°, and ∠A + ∠C = 50° + 60° = 110°. Tear the corners to watch A and C fill it exactly.</details></li>
+              <li>Make all three angles equal. What is each one?<details><summary>Show answer</summary>60°, because 180° ÷ 3 = 60°. This is an equilateral triangle.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Interior angle:</strong> an angle inside the triangle, at one of its corners.</li>
+              <li><strong>Exterior angle:</strong> the angle between one side and the extension of the next side.</li>
+              <li><strong>Interior opposite angles:</strong> the two interior angles not next to a given exterior angle.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
