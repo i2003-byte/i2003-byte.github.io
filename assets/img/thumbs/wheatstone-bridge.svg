@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="wheatstone-bridge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#064e3b"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <g fill="none" stroke="#cbd5e1" stroke-width="3" stroke-linejoin="round"><path d="M60 100L160 40L260 100L160 160Z"/><path d="M160 40V78M160 122V160"/><path d="M60 100V182H260V100"/></g>
+  <g fill="none" stroke-width="3.5" stroke-linejoin="round"><path d="M92 81l10 -16l6 12l10 -16l6 12" stroke="#38bdf8"/><path d="M196 61l6 12l10 -16l6 12l10 -16" stroke="#38bdf8"/><path d="M92 119l10 16l6 -12l10 16l6 -12" stroke="#a78bfa"/><path d="M196 139l6 -12l10 16l6 -12l10 16" stroke="#f472b6"/></g>
+  <circle cx="160" cy="100" r="22" fill="#0f172a" stroke="#e2e8f0" stroke-width="3"/>
+  <path d="M160 108L160 84" stroke="#34d399" stroke-width="3"/><text x="160" y="116" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#e2e8f0">G</text>
+  <g stroke="#e2e8f0"><path d="M154 170V194" stroke-width="3"/><path d="M164 176V188" stroke-width="6"/></g>
+  <text x="250" y="160" font-family="sans-serif" font-size="18" font-weight="800" fill="#f472b6">X?</text>
+</svg>

@@ -101,6 +101,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Electric Fields: Field Lines and Equipotentials](https://i2003-byte.github.io/physics/electric-fields/): Drag positive and negative charges and watch their electric field lines and equipotential lines change. Add charges, read E and V at a test point and see superposition at work. (Advanced)
 - [Electric Dipole in a Uniform Field](https://i2003-byte.github.io/physics/electric-dipole/): A dipole on a pivot swings in a uniform electric field. See the two equal and opposite forces, the torque p × E, the potential energy and the stable and unstable positions. (Advanced)
 - [Drift Velocity of Electrons](https://i2003-byte.github.io/physics/drift-velocity/): See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second. (Advanced)
+- [Kirchhoff's Laws: Junctions and Loops](https://i2003-byte.github.io/physics/kirchhoffs-laws/): Two cells and three resistors in a two-loop circuit. Find each branch current, then check the junction rule and walk round each loop to see the rises and drops add up to zero. (Advanced)
+- [Wheatstone Bridge and Metre Bridge](https://i2003-byte.github.io/physics/wheatstone-bridge/): Balance a Wheatstone bridge until the galvanometer reads zero, then slide the jockey along a metre bridge wire to find the null point and measure an unknown coil. (Advanced)
 
 ### Thermodynamics
 
@@ -110,6 +112,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Convection Currents in Water](https://i2003-byte.github.io/physics/convection/): Heat a beaker at one corner and drop in a permanganate crystal. Hot water rises, cool water sinks and a current carries the heat. (Beginner)
 - [Radiation: Black vs Shiny](https://i2003-byte.github.io/physics/radiation/): Race black, white and shiny cans in front of a heater. Which colour absorbs heat best, and which cools fastest? (Beginner)
 - [Sea and Land Breezes](https://i2003-byte.github.io/physics/sea-land-breeze/): Run a day at the seaside. Land heats and cools faster than water, so the breeze blows from the sea by day and from the land by night. (Beginner)
+- [Gas Pressure from Molecules](https://i2003-byte.github.io/physics/gas-pressure-molecules/): Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases. (Advanced)
+- [Gas Laws: Boyle and Charles with a Piston](https://i2003-byte.github.io/physics/gas-laws-piston/): Squeeze a gas with a piston, heat it under a load or in a sealed cylinder, and plot Boyle's law, Charles's law and the pressure law. Extend the line to find absolute zero. (Intermediate)
 
 ## Geography
 

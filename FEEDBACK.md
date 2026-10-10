@@ -9,4 +9,4 @@
 -->
 
 ## Handled issues
-_None yet._
+- #1 · 2026-10-10 · idea · photosynthesis simulation: a leaf using light, water and CO₂, and oxygen bubbles from a water plant vs light → added to 📋 Next as "Class 7 · Biology · Nutrition in plants (photosynthesis)"

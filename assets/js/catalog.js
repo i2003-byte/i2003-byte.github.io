@@ -878,6 +878,38 @@ SimLab.simulations = [
     dateAdded: '2026-09-27',
     prerequisites: ['convection', 'radiation']
   },
+  {
+    id: 'gas-pressure-molecules',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Gas Pressure from Molecules',
+    description:
+      'Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases.',
+    level: 'Advanced',
+    tags: ['kinetic theory', 'gas pressure', 'molecules', 'rms speed', 'temperature', 'ideal gas', 'class 11'],
+    thumbnail: '/assets/img/thumbs/gas-pressure-molecules.svg',
+    link: '/physics/gas-pressure-molecules/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['states-of-matter']
+  },
+  {
+    id: 'gas-laws-piston',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Gas Laws: Boyle and Charles with a Piston',
+    description:
+      "Squeeze a gas with a piston, heat it under a load or in a sealed cylinder, and plot Boyle's law, Charles's law and the pressure law. Extend the line to find absolute zero.",
+    level: 'Intermediate',
+    tags: ["boyle's law", "charles's law", 'pressure law', 'ideal gas equation', 'absolute zero', 'kelvin', 'class 11'],
+    thumbnail: '/assets/img/thumbs/gas-laws-piston.svg',
+    link: '/physics/gas-laws-piston/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['gas-pressure-molecules']
+  },
 
   {
     id: 'day-night-india',
@@ -1834,6 +1866,38 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-09',
     prerequisites: ['ohms-law']
+  },
+  {
+    id: 'kirchhoffs-laws',
+    subject: 'physics',
+    branch: 'electricity',
+    title: "Kirchhoff's Laws: Junctions and Loops",
+    description:
+      'Two cells and three resistors in a two-loop circuit. Find each branch current, then check the junction rule and walk round each loop to see the rises and drops add up to zero.',
+    level: 'Advanced',
+    tags: ['kirchhoff', 'junction rule', 'loop rule', 'network', 'current', 'emf', 'class 12'],
+    thumbnail: '/assets/img/thumbs/kirchhoffs-laws.svg',
+    link: '/physics/kirchhoffs-laws/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['series-parallel', 'ohms-law']
+  },
+  {
+    id: 'wheatstone-bridge',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Wheatstone Bridge and Metre Bridge',
+    description:
+      'Balance a Wheatstone bridge until the galvanometer reads zero, then slide the jockey along a metre bridge wire to find the null point and measure an unknown coil.',
+    level: 'Advanced',
+    tags: ['wheatstone bridge', 'metre bridge', 'meter bridge', 'galvanometer', 'null point', 'resistance', 'practical', 'class 12'],
+    thumbnail: '/assets/img/thumbs/wheatstone-bridge.svg',
+    link: '/physics/wheatstone-bridge/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['kirchhoffs-laws']
   }
 ];
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gas Pressure from Molecules — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/gas-pressure-molecules/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Gas Pressure from Molecules — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/gas-pressure-molecules/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="gas-pressure-molecules">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A gas is a huge number of tiny molecules moving fast in all directions. Every time a molecule hits a wall and bounces back, its momentum changes, so it gives the wall a small push. Billions of billions of these pushes every second add up to a steady force on each square metre of wall: the <strong>pressure</strong> of the gas.</p>
+            <p>This is the <strong>kinetic theory of gases</strong>. It explains pressure from the motion of molecules, and it shows that <strong>temperature is a measure of the average kinetic energy</strong> of the molecules. Watch the gauge: the red needle is measured by adding up the wall hits in the box; the dashed needle is the kinetic-theory prediction.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Push from one hit:  Δp = m v − (−m v) = 2 m v</code>
+            <code class="formula">P = ⅓ (N ÷ V) m v²_rms   (a 3-D box)</code>
+            <p class="formula-note">N ÷ V is the number of molecules per m³, m the mass of one molecule, v_rms the root-mean-square speed. More molecules, or faster ones, give more and harder hits.</p>
+            <code class="formula">Average KE = ½ m v²_rms = 3⁄2 k T     v_rms = √(3RT ÷ M)</code>
+            <p class="formula-note">k = 1.38 × 10⁻²³ J/K (Boltzmann constant), R = 8.314 J/(mol K), M = molar mass in kg/mol, T in kelvin. At the same temperature every gas has the same average KE per molecule, so lighter molecules move faster.</p>
+            <p><strong>How the picture works:</strong> the box is flat (2-D), where the same reasoning gives P = ½ (N ÷ A) m v²_rms, and the pressure is shown as a multiple of “100 molecules at 300 K”. Speeds are drawn about a thousand times slower than real (the readout gives the real v_rms). The molecules are hard discs; when they are crowded (200 molecules) they take up some of the box, so the measured pressure comes out a little above the ideal-gas value, just as in a real, squeezed gas.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A bicycle tyre is hard because air molecules inside hit the rubber more often than the molecules outside do.</li>
+              <li>On a hot afternoon the pressure in a car tyre rises: the molecules move faster and hit harder and more often.</li>
+              <li>Helium escapes from a balloon faster than air does, partly because its light molecules move about 2.6 times faster than nitrogen at the same temperature.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Release 100 molecules of nitrogen at 300 K and watch the pressure for 10 seconds. Does it stay exactly steady?<details><summary>Show answer</summary>It wobbles around 1.0 because hits arrive at random moments. Averaged over time it agrees with kinetic theory. A real gas has so many molecules that the wobble is far too small to notice.</details></li>
+              <li>Double the number of molecules from 100 to 200 at the same temperature. What happens to the pressure?<details><summary>Show answer</summary>It roughly doubles (about 2, a little more because crowded molecules take up space). Twice as many molecules make twice as many hits per second.</details></li>
+              <li>Halve the temperature from 300 K to 150 K. What happens to v_rms and to the pressure?<details><summary>Show answer</summary>v_rms falls from about 517 m/s to 366 m/s (÷ √2) and the pressure halves: each hit is softer and hits are less frequent.</details></li>
+              <li>Switch from nitrogen to helium and then to carbon dioxide at 300 K. Which molecules move fastest? Does the pressure change?<details><summary>Show answer</summary>Helium is fastest (about 1370 m/s) and CO₂ slowest (about 412 m/s), but the pressure stays the same. Heavy molecules hit less often but harder; at the same T the average KE is the same, so P is the same.</details></li>
+              <li>Switch off “Molecules bump into each other”. Does the pressure change?<details><summary>Show answer</summary>Hardly at all. Collisions between molecules swap energy around but do not change the total, so the pressure is the same. They do share out the speeds: with bumps on, the followed molecule keeps changing speed and colour; with bumps off, every molecule keeps its own speed for ever.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Ideal gas:</strong> a gas of tiny molecules with no forces between them except during collisions.</li>
+              <li><strong>rms speed:</strong> the square root of the average of the squares of the molecular speeds.</li>
+              <li><strong>Elastic collision:</strong> a collision in which no kinetic energy is lost.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kirchhoff's Laws: Junctions and Loops — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Two cells and three resistors in a two-loop circuit. Find each branch current, then check the junction rule and walk round each loop to see the rises and drops add up to zero.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/kirchhoffs-laws/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Kirchhoff's Laws: Junctions and Loops — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Two cells and three resistors in a two-loop circuit. Find each branch current, then check the junction rule and walk round each loop to see the rises and drops add up to zero.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/kirchhoffs-laws/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="kirchhoffs-laws">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A circuit with two cells in different branches cannot be reduced to one resistor, so “series” and “parallel” rules are not enough. <strong>Kirchhoff's two laws</strong> solve any such network.</p>
+            <p><strong>Junction rule (current law):</strong> charge does not pile up at a junction, so the total current flowing into a junction equals the total current flowing out. <strong>Loop rule (voltage law):</strong> if you walk round any closed loop and come back to where you started, you are back at the same potential, so all the rises (across cells) and drops (across resistors) add up to zero.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">ΣI (in) = ΣI (out)     at A:  I₁ + I₂ = I₃</code>
+            <code class="formula">Σ E − Σ I R = 0   round any closed loop</code>
+            <p class="formula-note">Sign rules while walking round a loop: crossing a cell from − to + is a rise (+E); crossing a resistor in the direction of its current is a drop (−IR), against its current a rise (+IR).</p>
+            <code class="formula">Left loop: E₁ − I₁R₁ − I₃R₃ = 0     Right loop: E₂ − I₂R₂ − I₃R₃ = 0</code>
+            <p class="formula-note">Three equations, three unknown currents. Choose any direction for each current first; if an answer comes out negative, the current simply flows the other way. The cells here are ideal (no internal resistance).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A car's alternator and battery both feed the lights and the radio. Kirchhoff's laws decide how much current each one supplies, and whether the battery is charging or discharging.</li>
+              <li>A solar panel charging a battery while the battery runs a fan is the same two-source network.</li>
+              <li>Circuit simulation software on a computer solves thousands of junction and loop equations at once to design a phone's circuit board.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the default values (E₁ = 6 V, E₂ = 9 V, R₁ = 2 Ω, R₂ = 4 Ω, R₃ = 6 Ω), check the junction rule. Then choose each loop and check that the rises and drops add to zero.<details><summary>Show answer</summary>I₁ ≈ 0.14 A, I₂ ≈ 0.82 A, I₃ ≈ 0.95 A, and 0.14 + 0.82 = 0.95 (rounding). Left loop: 6 − 0.27 − 5.73 = 0. Right loop: 9 − 3.27 − 5.73 = 0.</details></li>
+              <li>Lower E₂ to 4 V. What happens to I₂, and what does the minus sign mean?<details><summary>Show answer</summary>I₂ ≈ −0.09 A. The current in the right branch now flows downwards, into the + terminal of E₂: the stronger left cell is pushing current backwards through it (like charging a battery).</details></li>
+              <li>Go back to E₂ = 9 V and find the value of E₂ that makes I₂ exactly zero.<details><summary>Show answer</summary>E₂ = 4.5 V. Then no current flows through R₂, so A sits at the same potential as E₂, which is E₁ × R₃ ÷ (R₁ + R₃) = 6 × 6 ÷ 8 = 4.5 V. The same balancing idea is used in a potentiometer.</details></li>
+              <li>Turn cell E₂ round. What happens to I₁ and I₃?<details><summary>Show answer</summary>The two cells now push the same way round the outer loop. I₁ jumps to about 2.6 A and I₂ to about −2.45 A, while only about 0.14 A goes through the middle resistor. Check the outer loop: 6 − 5.18 − 9.82 + 9 = 0.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Junction (node):</strong> a point where three or more wires meet.</li>
+              <li><strong>Loop (mesh):</strong> any closed path round a circuit.</li>
+              <li><strong>EMF (E):</strong> the energy a cell gives each coulomb of charge that passes through it, in volts.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

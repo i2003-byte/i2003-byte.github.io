@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wheatstone Bridge and Metre Bridge — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Balance a Wheatstone bridge until the galvanometer reads zero, then slide the jockey along a metre bridge wire to find the null point and measure an unknown coil.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/wheatstone-bridge/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Wheatstone Bridge and Metre Bridge — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Balance a Wheatstone bridge until the galvanometer reads zero, then slide the jockey along a metre bridge wire to find the null point and measure an unknown coil.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/wheatstone-bridge/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="wheatstone-bridge">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>Wheatstone bridge</strong> is four resistors in a diamond, with a cell across one diagonal (A to C) and a sensitive <strong>galvanometer</strong> across the other (B to D). Current from the cell splits into the upper path A–B–C and the lower path A–D–C.</p>
+            <p>If B and D are at the same potential, no current flows through the galvanometer and its needle stays at zero. This happens only when the two paths divide the voltage in the same ratio: R₁ ÷ R₂ = R₃ ÷ X. The bridge is then <strong>balanced</strong>, and if you know three resistances you can find the fourth. Watch V_B and V_D become equal at balance.</p>
+            <p>The <strong>metre bridge</strong> is a practical Wheatstone bridge: the lower two arms are the two parts of a uniform 1 m wire, so their resistances are in the ratio of their lengths. You slide a <strong>jockey</strong> along the wire until the galvanometer shows no deflection.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Balance:  R₁ ÷ R₂ = R₃ ÷ X   →   X = R₃ × R₂ ÷ R₁</code>
+            <code class="formula">Metre bridge:  R ÷ X = l ÷ (100 − l)   →   X = R (100 − l) ÷ l</code>
+            <p class="formula-note">l is the balancing length in cm from end A. At balance the galvanometer's own resistance and the cell's voltage do not matter, which is why the bridge measures resistance so accurately.</p>
+            <p><strong>Simplifications:</strong> ideal 2 V cell, galvanometer resistance 40 Ω, a 4 Ω bridge wire, and no end corrections (the small extra resistance where the wire meets the copper strips). Controls move in steps of 0.1, so the needle may not reach exactly zero: the <strong>null point</strong> is the setting where it is closest to zero.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Strain gauges in electronic weighing scales and bridges are Wheatstone bridges: a tiny stretch changes one resistance and unbalances the bridge.</li>
+              <li>Platinum resistance thermometers measure temperature by balancing a bridge as the platinum wire's resistance changes.</li>
+              <li>The metre bridge is a standard Class 12 practical in Indian school labs, used to find the resistance and resistivity of a wire.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In the Wheatstone bridge with R₁ = R₂ = 10 Ω, adjust R₃ until the needle reads zero. What is coil A?<details><summary>Show answer</summary>Balance comes at R₃ = 5.6 Ω, and since R₂ ÷ R₁ = 1, X = R₃ = 5.6 Ω. At balance V_B = V_D.</details></li>
+              <li>Keep coil A but set R₁ = 20 Ω, R₂ = 10 Ω. Where is the new balance, and does it give the same X?<details><summary>Show answer</summary>R₃ = 11.2 Ω. X = 11.2 × 10 ÷ 20 = 5.6 Ω, the same. Changing the ratio arms just changes which R₃ balances.</details></li>
+              <li>Switch to the metre bridge with R = 5 Ω and drag the jockey to the null point for coil A. Work out X.<details><summary>Show answer</summary>The null point is at about l = 47.2 cm, so X = 5 × 52.8 ÷ 47.2 ≈ 5.59 Ω. Turn on “Reveal” to check the error (about 0.1%).</details></li>
+              <li>Measure coil D (metre bridge) with R = 2 Ω and then with R = 20 Ω. Which gives a balance point nearer the middle, and why is that better?<details><summary>Show answer</summary>With 2 Ω the null point is near 8.3 cm (X ≈ 22.1 Ω); with 20 Ω it is near 47.6 cm (X ≈ 22.02 Ω). A 0.1 cm error in reading l matters much less in the middle of the wire, so choose R close to X.</details></li>
+              <li>In the metre bridge, find the null point for coil A, then move the jockey 1 cm to the left and then 1 cm to the right. What does the galvanometer show?<details><summary>Show answer</summary>About 450 µA each time, but in opposite directions: the needle swings one way on one side of the null point and the other way on the other side. That swing tells you which way to move the jockey.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Galvanometer:</strong> a meter that detects very small currents and shows their direction.</li>
+              <li><strong>Null point (balance point):</strong> the setting where the galvanometer shows no deflection.</li>
+              <li><strong>Jockey:</strong> the sliding contact with a knife edge that touches the metre bridge wire.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

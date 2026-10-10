@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="kirchhoffs-laws">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <g fill="none" stroke="#cbd5e1" stroke-width="3" stroke-linejoin="round"><path d="M70 40H250V160H70Z"/><path d="M160 40V160"/></g>
+  <path d="M60 64l20 6l-20 6l20 6l-20 6l20 6l-10 3" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M150 82l20 6l-20 6l20 6l-20 6l20 6l-10 3" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M240 64l20 6l-20 6l20 6l-20 6l20 6l-10 3" fill="none" stroke="#f472b6" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#e2e8f0"><path d="M56 128H84" stroke-width="3"/><path d="M63 136H77" stroke-width="6"/><path d="M236 128H264" stroke-width="3"/><path d="M243 136H257" stroke-width="6"/></g>
+  <circle cx="160" cy="40" r="6" fill="#fbbf24"/><circle cx="160" cy="160" r="6" fill="#fbbf24"/>
+  <path d="M100 40H128" stroke="#38bdf8" stroke-width="4"/><path d="M136 40l-11 -7v14z" fill="#38bdf8"/>
+  <path d="M220 40H192" stroke="#f472b6" stroke-width="4"/><path d="M184 40l11 -7v14z" fill="#f472b6"/>
+  <path d="M120 120a22 22 0 1 1 8 -26" fill="none" stroke="#34d399" stroke-width="3"/><path d="M130 88l-1 12l-9 -6z" fill="#34d399"/>
+  <text x="160" y="190" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="700" fill="#e2e8f0">ΣI = 0   ΣV = 0</text>
+</svg>
