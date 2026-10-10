@@ -114,6 +114,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Sea and Land Breezes](https://i2003-byte.github.io/physics/sea-land-breeze/): Run a day at the seaside. Land heats and cools faster than water, so the breeze blows from the sea by day and from the land by night. (Beginner)
 - [Gas Pressure from Molecules](https://i2003-byte.github.io/physics/gas-pressure-molecules/): Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases. (Advanced)
 - [Gas Laws: Boyle and Charles with a Piston](https://i2003-byte.github.io/physics/gas-laws-piston/): Squeeze a gas with a piston, heat it under a load or in a sealed cylinder, and plot Boyle's law, Charles's law and the pressure law. Extend the line to find absolute zero. (Intermediate)
+- [Speeds of Gas Molecules (Maxwell Distribution)](https://i2003-byte.github.io/physics/molecular-speeds/): Give every molecule the same speed and watch collisions spread them into the Maxwell curve. Compare hot and cold gases, light and heavy ones, and find v_p, v̄ and v_rms. (Advanced)
 
 ## Geography
 
@@ -177,9 +178,15 @@ Turn a transversal across parallel lines, tear the corners off a triangle and sl
 - [Angle Sum of a Triangle](https://i2003-byte.github.io/mathematics/triangle-angle-sum/): Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property. (Beginner)
 - [Pythagoras' Theorem by Rearrangement](https://i2003-byte.github.io/mathematics/pythagoras-proof/): Watch four copies of a right triangle slide around inside a big square: the empty space changes from c² into a² + b². Draw squares on the sides and see why the theorem needs a right angle. (Intermediate)
 
-## Biology (coming soon)
+## Biology
 
-Model predator–prey populations, cross genes and peek inside cells. Biology simulations are on the way.
+Look inside a leaf as it makes food, count oxygen bubbles from a water plant and test leaves for starch. Change the conditions and see how living things respond.
+
+### Plant Nutrition
+
+- [Photosynthesis in a Leaf](https://i2003-byte.github.io/biology/photosynthesis-leaf/): Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water become glucose and oxygen. (Beginner)
+- [Oxygen Bubbles from a Water Plant](https://i2003-byte.github.io/biology/oxygen-bubbles/): Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas. (Beginner)
+- [Starch Test on a Leaf](https://i2003-byte.github.io/biology/starch-test/): Cover part of a leaf, use a variegated leaf or take away CO₂, then boil, decolourise and add iodine. See where starch was made. (Beginner)
 
 ## Astronomy (coming soon)
 

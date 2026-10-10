@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oxygen Bubbles from a Water Plant — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/oxygen-bubbles/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Oxygen Bubbles from a Water Plant — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/oxygen-bubbles/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="oxygen-bubbles">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A water plant such as <strong>Hydrilla</strong> makes food by photosynthesis just like a land plant, and gives out <strong>oxygen</strong>. Under water you can actually see the oxygen: it comes out of the cut stems as a stream of tiny bubbles. Counting the bubbles per minute is a simple way to measure <strong>how fast photosynthesis is going</strong>.</p>
+            <p>Bring the lamp closer and the bubbles come faster, because more light reaches the leaves. Move it away and they slow down. The gas collects in the test tube, and a glowing splint bursts into flame in it, which shows that the gas is oxygen.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">light intensity ∝ 1 ÷ (distance)²</code>
+            <p class="formula-note">Double the distance and the light falling on the plant drops to a quarter. Halve it and the light becomes four times stronger. The "Light" reading is 1 when the lamp is 25 cm away.</p>
+            <code class="formula">rate of photosynthesis ∝ bubbles per minute</code>
+            <p class="formula-note">Photosynthesis goes only as fast as the ingredient in shortest supply allows (the <strong>limiting factor</strong>). When the lamp is close, light is plentiful and the small amount of carbon dioxide dissolved in tap water holds the rate back. Baking soda (sodium hydrogen carbonate) adds CO₂ to the water.</p>
+            <p><strong>How the model works:</strong> the lamp is an LED, so it does not warm the water (a hot bulb close to the beaker would also change the temperature, which is why real experiments use a heat screen or an LED). The bubble rates are realistic but simplified, all bubbles are taken to be the same size, and the colour filters let through about the same amount of light, of which the plant uses red and blue well and green poorly.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In an aquarium with bright lights, water plants are often covered in silvery oxygen bubbles by the afternoon.</li>
+              <li>Ponds and lakes get much of their oxygen from water plants and algae; fish depend on it.</li>
+              <li>Leaves look green because chlorophyll reflects green light and uses red and blue light.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Switch on the lamp at 50 cm and wait for a few bubbles. Record the point. Then record points at 100, 75, 35, 25 and 10 cm. What shape does the graph have?<details><summary>Show answer</summary>The rate rises steeply as the lamp comes closer (about 7 per minute at 100 cm, 21 at 50 cm), then levels off at about 35 per minute when the lamp is 25 cm or closer. Close up, more light does not help any more.</details></li>
+              <li>Moving the lamp from 50 cm to 100 cm cuts the light to a quarter. Do the bubbles fall to a quarter too?<details><summary>Show answer</summary>Not quite: they fall from about 21 to about 7 per minute (a third). Even in dim light the plant does not use every bit of light at full efficiency, so the rate is not exactly proportional to the intensity.</details></li>
+              <li>Put the lamp at 10 cm and add baking soda. What happens, and why did the bubbles stop rising before?<details><summary>Show answer</summary>The rate jumps from about 35 to about 72 per minute. With the lamp close, carbon dioxide was the limiting factor; baking soda gives the plant more CO₂, so now light can push the rate higher. Record a second line with baking soda to compare.</details></li>
+              <li>At 50 cm, compare white light with the red, blue and green filters. Which colour gives the fewest bubbles?<details><summary>Show answer</summary>Green (about 5 per minute against 21 for white, 17 for red and 15 for blue). Chlorophyll absorbs red and blue light well but reflects most green light, which is why leaves look green.</details></li>
+              <li>Collect at least 1 mL of gas, then test it with a glowing splint. What do you see?<details><summary>Show answer</summary>The glowing splint bursts into flame. Only oxygen does this, so the bubbles are oxygen made by photosynthesis.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Hydrilla:</strong> a common water plant found in Indian ponds and aquariums.</li>
+              <li><strong>Limiting factor:</strong> the condition in shortest supply, which sets the rate.</li>
+              <li><strong>Inverse square law:</strong> light from a small lamp spreads out, so its intensity falls as 1 ÷ distance².</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

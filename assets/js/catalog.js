@@ -42,8 +42,8 @@ SimLab.site = {
   newBadgeDays: 30, // Items added within this many days get a "New" badge
   // "Tap & play" row on the home page: the most exciting simulations first (ids).
   // Featured simulations follow automatically, then the newest ones.
-  showcase: ['energy-roller-coaster', 'guitar-string', 'youngs-double-slit', 'sorting-race', 'balloon-rocket',
-    'water-xylophone', 'prism-dispersion', 'logic-gates', 'day-night-india', 'natural-indicators', 'demand-curve', 'collisions']
+  showcase: ['energy-roller-coaster', 'guitar-string', 'youngs-double-slit', 'sorting-race', 'photosynthesis-leaf', 'balloon-rocket',
+    'water-xylophone', 'prism-dispersion', 'logic-gates', 'day-night-india', 'natural-indicators', 'demand-curve']
 };
 
 /* ---------------------------------------------------------------------
@@ -173,12 +173,13 @@ SimLab.subjects = [
     name: 'Biology',
     icon: '🧬',
     color: '#4ade80',
-    tagline: 'Cells, genes and ecosystems — life, simulated.',
+    tagline: 'Cells, plants and living things, simulated.',
     description:
-      'Model predator–prey populations, cross genes and peek inside cells. ' +
-      'Biology simulations are on the way.',
-    status: 'coming-soon',
+      'Look inside a leaf as it makes food, count oxygen bubbles from a water plant and test leaves for starch. ' +
+      'Change the conditions and see how living things respond.',
+    status: 'live',
     branches: [
+      { id: 'plants', name: 'Plant Nutrition' },
       { id: 'cells', name: 'Cells' },
       { id: 'genetics', name: 'Genetics' },
       { id: 'ecology', name: 'Ecology' },
@@ -909,6 +910,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-10',
     prerequisites: ['gas-pressure-molecules']
+  },
+  {
+    id: 'molecular-speeds',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Speeds of Gas Molecules (Maxwell Distribution)',
+    description:
+      'Give every molecule the same speed and watch collisions spread them into the Maxwell curve. Compare hot and cold gases, light and heavy ones, and find v_p, v̄ and v_rms.',
+    level: 'Advanced',
+    tags: ['maxwell distribution', 'kinetic theory', 'rms speed', 'most probable speed', 'mean speed', 'molecules', 'class 11'],
+    thumbnail: '/assets/img/thumbs/molecular-speeds.svg',
+    link: '/physics/molecular-speeds/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['gas-pressure-molecules']
+  },
+  {
+    id: 'photosynthesis-leaf',
+    subject: 'biology',
+    branch: 'plants',
+    title: 'Photosynthesis in a Leaf',
+    description:
+      'Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water become glucose and oxygen.',
+    level: 'Beginner',
+    tags: ['photosynthesis', 'leaf', 'chlorophyll', 'stomata', 'limiting factor', 'nutrition in plants', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/photosynthesis-leaf.svg',
+    link: '/biology/photosynthesis-leaf/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: []
+  },
+  {
+    id: 'oxygen-bubbles',
+    subject: 'biology',
+    branch: 'plants',
+    title: 'Oxygen Bubbles from a Water Plant',
+    description:
+      'Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas.',
+    level: 'Beginner',
+    tags: ['photosynthesis', 'hydrilla', 'oxygen', 'light intensity', 'inverse square', 'nutrition in plants', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/oxygen-bubbles.svg',
+    link: '/biology/oxygen-bubbles/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['photosynthesis-leaf']
+  },
+  {
+    id: 'starch-test',
+    subject: 'biology',
+    branch: 'plants',
+    title: 'Starch Test on a Leaf',
+    description:
+      'Cover part of a leaf, use a variegated leaf or take away CO₂, then boil, decolourise and add iodine. See where starch was made.',
+    level: 'Beginner',
+    tags: ['starch test', 'iodine', 'photosynthesis', 'variegated leaf', 'destarching', 'nutrition in plants', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/starch-test.svg',
+    link: '/biology/starch-test/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-10',
+    prerequisites: ['photosynthesis-leaf']
   },
 
   {

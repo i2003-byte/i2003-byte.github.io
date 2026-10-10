@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Photosynthesis in a Leaf — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water turn into glucose and oxygen.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/photosynthesis-leaf/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Photosynthesis in a Leaf — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water turn into glucose and oxygen.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/photosynthesis-leaf/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="photosynthesis-leaf">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Green plants make their own food. Inside the leaf, tiny green bodies called <strong>chloroplasts</strong> contain <strong>chlorophyll</strong>, which traps the energy of sunlight. Using that energy, the leaf joins <strong>carbon dioxide</strong> from the air and <strong>water</strong> from the soil to make <strong>glucose</strong>, a sugar. <strong>Oxygen</strong> is given out as a by-product. This is <strong>photosynthesis</strong> ("putting together with light").</p>
+            <p>Carbon dioxide gets in through tiny pores called <strong>stomata</strong>, mostly on the underside of the leaf. Water comes up from the roots through the <strong>xylem</strong> in the veins. The glucose is carried to the rest of the plant through the <strong>phloem</strong>, and much of it is stored as <strong>starch</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">carbon dioxide + water  —(sunlight, chlorophyll)→  glucose + oxygen</code>
+            <code class="formula">6 CO₂ + 6 H₂O  →  C₆H₁₂O₆ + 6 O₂</code>
+            <p class="formula-note">For every 6 molecules of carbon dioxide and 6 of water, the leaf makes 1 molecule of glucose and gives out 6 of oxygen. Watch the counters in the Numbers panel: they always stay in this 6 : 6 : 1 : 6 ratio.</p>
+            <p><strong>Limiting factor:</strong> photosynthesis can only go as fast as the ingredient in shortest supply allows. In dim light, more light speeds it up. In bright sun, the small amount of CO₂ in normal air (0.04 %) usually holds it back, which is why some greenhouses add extra CO₂.</p>
+            <p><strong>How the picture works:</strong> each dot stands for a huge number of real molecules, and the rates are relative (100 % = the fastest this leaf can go). In dry soil the guard cells close the stomata to save water, so less CO₂ can get in; the water used in photosynthesis itself is only a tiny part of what a plant takes up. At night there is no photosynthesis, but the leaf keeps respiring (using oxygen and giving out a little CO₂) all the time; that is not shown here.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Almost every food you eat, from rice and wheat to dal and mangoes, began as glucose made in a leaf.</li>
+              <li>Leaves are broad and flat to catch light, and thin so that gases can reach every cell quickly.</li>
+              <li>The oxygen we breathe was put into the air by plants and algae doing photosynthesis.</li>
+              <li>Cactus stems are green and do the photosynthesis, because the leaves have become spines to save water.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Start, then follow one grey CO₂ dot from below the leaf. Where does it enter, and where does it go?<details><summary>Show answer</summary>It enters through the stoma in the lower skin, moves through the air spaces between the spongy cells and reaches a chloroplast. Later red O₂ dots leave by the same stoma.</details></li>
+              <li>Tap the Night preset. What happens to the rate? Which ingredient is missing?<details><summary>Show answer</summary>The rate drops to 0 %. Without sunlight there is no energy to join CO₂ and water, so no glucose and no oxygen are made, even though CO₂ and water are still there.</details></li>
+              <li>In full sun with normal air, read the limiting factor. Now choose CO₂-rich air. What happens?<details><summary>Show answer</summary>In bright sun the limiting factor is carbon dioxide (the rate is about 70 %). With extra CO₂ the rate climbs to about 100 %, and now light becomes the limit. This is why some greenhouses add CO₂.</details></li>
+              <li>Switch off "Soil is watered". Watch the stoma and the rate.<details><summary>Show answer</summary>The guard cells close the stoma almost completely to stop water escaping, so very little CO₂ gets in and the rate falls to about 21 %. A wilting plant makes much less food.</details></li>
+              <li>Switch off chlorophyll (like the white part of a variegated leaf, such as some money plants and crotons). Does photosynthesis happen?<details><summary>Show answer</summary>No. The cells get light, CO₂ and water, but without chlorophyll they cannot trap the light energy, so the rate is 0 %. The starch test on a variegated leaf shows the same thing.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Autotroph:</strong> a living thing that makes its own food (green plants); humans and animals are heterotrophs.</li>
+              <li><strong>Chlorophyll:</strong> the green pigment that traps light energy.</li>
+              <li><strong>Stomata:</strong> tiny pores in the leaf skin, each opened and closed by two guard cells.</li>
+              <li><strong>Xylem and phloem:</strong> tubes in the veins; xylem carries water up from the roots, phloem carries food around the plant.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="starch-test">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <ellipse cx="160" cy="104" rx="140" ry="82" fill="#e5e7eb"/>
+  <path d="M60 104C95 52 190 50 260 104C190 158 95 156 60 104Z" fill="#1e1b4b"/>
+  <path d="M138 52H182V156H138Z" fill="#c27a1a" clip-path="url(#lf)"/>
+  <clipPath id="lf"><path d="M60 104C95 52 190 50 260 104C190 158 95 156 60 104Z"/></clipPath>
+  <path d="M60 104H260" stroke="#a8a29e" stroke-width="2"/>
+  <path d="M30 108L60 104" stroke="#1e1b4b" stroke-width="3"/>
+  <circle cx="150" cy="24" r="6" fill="#c27a1a"/><circle cx="172" cy="34" r="5" fill="#c27a1a"/>
+</svg>

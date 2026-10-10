@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="molecular-speeds">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M40 170H290M40 170V30" stroke="#e2e8f0" stroke-width="2.5"/>
+  <g>
+    <rect x="46" y="164" width="18" height="6" fill="#3b82f6"/><rect x="66" y="138" width="18" height="32" fill="#3b82f6"/><rect x="86" y="96" width="18" height="74" fill="#22d3ee"/>
+    <rect x="106" y="66" width="18" height="104" fill="#34d399"/><rect x="126" y="58" width="18" height="112" fill="#a3e635"/><rect x="146" y="70" width="18" height="100" fill="#facc15"/>
+    <rect x="166" y="94" width="18" height="76" fill="#fbbf24"/><rect x="186" y="120" width="18" height="50" fill="#fb923c"/><rect x="206" y="142" width="18" height="28" fill="#f97316"/>
+    <rect x="226" y="156" width="18" height="14" fill="#ef4444"/><rect x="246" y="164" width="18" height="6" fill="#ef4444"/>
+  </g>
+  <path d="M42 170C70 165 85 110 112 70S150 50 170 85S220 160 285 168" fill="none" stroke="#f8fafc" stroke-width="3"/>
+  <path d="M42 170C80 168 105 135 135 112S185 100 210 125S260 165 290 168" fill="none" stroke="#c4b5fd" stroke-width="2.5" stroke-dasharray="6 4"/>
+  <path d="M135 50V170" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="140" y="44" font-family="sans-serif" font-size="13" font-weight="700" fill="#4ade80">v_p</text>
+</svg>

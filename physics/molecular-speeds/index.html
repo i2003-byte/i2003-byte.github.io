@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Speeds of Gas Molecules (Maxwell Distribution) — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch collisions spread equal molecular speeds into the Maxwell distribution. Compare temperatures and gases, and find the most probable, mean and rms speeds.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/molecular-speeds/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Speeds of Gas Molecules (Maxwell Distribution) — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch collisions spread equal molecular speeds into the Maxwell distribution. Compare temperatures and gases, and find the most probable, mean and rms speeds.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/molecular-speeds/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="molecular-speeds">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The molecules of a gas do not all move at the same speed. At any moment a few are almost still, most are moving at middling speeds and a few are racing very fast. Every collision changes the speeds of the two molecules, but the <strong>share</strong> of molecules at each speed soon settles to a fixed pattern: the <strong>Maxwell speed distribution</strong>.</p>
+            <p>Press <em>Give every molecule the same speed</em>. The bar chart starts as one tall spike. Within a few seconds collisions spread the speeds out into the lopsided hump of the Maxwell curve, and it stays that way. Heat the gas and the hump moves to higher speeds and gets flatter and wider.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">f(v) = 4π (M ÷ 2πRT)^{3/2} v² e^(−Mv² / 2RT)</code>
+            <p class="formula-note">f(v) tells you what share of the molecules have speeds near v. The v² part makes it rise from zero; the exponential part makes it fall away at high speeds. The area under the curve is 1 (all the molecules).</p>
+            <code class="formula">v_p = √(2RT ÷ M)    v̄ = √(8RT ÷ πM)    v_rms = √(3RT ÷ M)</code>
+            <p class="formula-note">Most probable speed v_p (the peak), mean speed v̄ and root-mean-square speed v_rms. Always v_p &lt; v̄ &lt; v_rms, in the ratio 1 : 1.128 : 1.225. R = 8.314 J/(mol K), M is the molar mass in kg/mol and T is in kelvin.</p>
+            <p><strong>How the picture works:</strong> the box is a thin flat slab seen from above. Each molecule also moves up and down (that motion is hidden), and collisions are real three-dimensional bumps between equal hard balls, so the speeds settle into the true 3-D Maxwell curve. Two molecules that seem to pass through each other are at different depths. Molecules are drawn huge and about a thousand times slower than real; all the numbers are real speeds in m/s. With only a couple of hundred molecules the bars wobble around the curve; a real gas has so many molecules that the curve is followed almost exactly.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Water in a bowl slowly evaporates even far below 100 °C: the few fastest molecules in the tail of the curve have enough energy to escape from the surface.</li>
+              <li>A hot day speeds up drying of clothes because heating stretches the tail of the curve, so many more molecules are fast enough to escape.</li>
+              <li>The Moon has no air: at its daytime temperature a small but steady share of gas molecules would be faster than the Moon's escape speed (2.4 km/s), and over millions of years they leak away.</li>
+              <li>The rate of most chemical reactions rises steeply with temperature because only molecules in the fast tail collide hard enough to react.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Release, then press <em>Give every molecule the same speed</em>. Watch the bars and the graph of the spread. How long does it take for the bars to look like the curve?<details><summary>Show answer</summary>About 3 to 5 seconds of picture time (a few collisions per molecule). The spread starts at zero and climbs to the Maxwell value, then just wobbles. Collisions alone turn equal speeds into the Maxwell pattern; nothing else is needed.</details></li>
+              <li>For nitrogen at 300 K, read v_p, v̄ and v_rms. Which is largest, and why are they not equal?<details><summary>Show answer</summary>v_p ≈ 422 m/s, v̄ ≈ 476 m/s, v_rms ≈ 517 m/s. The curve has a long tail on the fast side. The few very fast molecules pull the mean above the peak, and squaring the speeds (for v_rms) gives them even more weight.</details></li>
+              <li>Choose <em>Same gas, double temperature</em> as the comparison. How do the peak speed and the height of the curve change?<details><summary>Show answer</summary>The peak moves right by √2 (about 1.41 times faster, 422 → 597 m/s) and the curve becomes lower and wider. The area under both curves is the same, because both describe all the molecules.</details></li>
+              <li>At 300 K compare nitrogen with helium. Which gas has the wider spread of speeds? What share of each is faster than 1000 m/s?<details><summary>Show answer</summary>Helium: its molecules are 7 times lighter, so its speeds are √7 ≈ 2.6 times larger and the curve is much wider. About two-thirds (66%) of helium molecules are faster than 1000 m/s, but only about 1% of nitrogen molecules.</details></li>
+              <li>Set CO₂ at 150 K, then 600 K, and watch the "faster than 1000 m/s" share. Why does a small rise in temperature matter so much for evaporation and reactions?<details><summary>Show answer</summary>At 150 K practically none (about 1 in 10 million) of the CO₂ molecules pass 1000 m/s; at 600 K about 3% do. The share in the fast tail grows much faster than the average speed (only ×2 here), and those fast molecules are the ones that escape or react.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Distribution:</strong> how a quantity (here, speed) is shared out among many things (here, molecules).</li>
+              <li><strong>Most probable speed:</strong> the speed at the peak of the curve, the speed more molecules have than any other.</li>
+              <li><strong>Equilibrium:</strong> the steady state the gas settles into, where collisions no longer change the overall pattern.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

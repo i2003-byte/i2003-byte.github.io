@@ -110,14 +110,15 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - branch `electricity`: Class 7 Electric current and its effects: electric-circuit, heating-fuse, electromagnet; Class 8 Some natural phenomena: charging-by-rubbing, electroscope, lightning-conductor; Class 10 Electricity: ohms-law, series-parallel, power-bill; Class 10 Magnetic effects of current: magnetic-field-lines, solenoid-field, motor-generator; Class 12 Electric charges and fields: coulombs-law, electric-fields, electric-dipole; Class 12 Current electricity: drift-velocity, kirchhoffs-laws, wheatstone-bridge
   - branch `waves` (Class 11 Waves): wave-types, standing-waves, beats, doppler-effect; Class 12 Wave optics: wave-interference (ripple tank; the double-slit and single-slit sims go in branch `optics`)
   - branch `sound` ("Sound Lab", Class 7): 14 simulations (vibration, sound-media, bell-jar, amplitude-loudness, frequency-pitch, oscillation-counter, vocal-cords, human-ear, who-can-hear, music-or-noise, decibel-meter, noise-pollution, water-xylophone, guitar-string)
-  - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze); Class 11 Kinetic theory of gases: gas-pressure-molecules, gas-laws-piston
+  - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze); Class 11 Kinetic theory of gases: gas-pressure-molecules, gas-laws-piston, molecular-speeds
 - **Chemistry (live):** branch `matter` (Class 9 Matter in our surroundings): states-of-matter, evaporation-cooling, heating-curve; branch `acids-bases` (Class 7 Acids, bases and salts): natural-indicators, neutralisation, ph-scale. Branches `atoms`, `bonding`, `reactions`, `gases` are empty so far.
+- **Biology (live):** branch `plants` ("Plant Nutrition", Class 7 Nutrition in plants): photosynthesis-leaf, oxygen-bubbles, starch-test. Branches `cells`, `genetics`, `ecology`, `evolution` are empty so far.
 - **Mathematics (live):** branch `geometry` ("Lines, Angles & Triangles", Class 7 Lines, angles and triangles): parallel-lines-angles, triangle-angle-sum, pythagoras-proof. Branches `functions`, `calculus`, `probability` are empty so far.
 - **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
 - **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve, supply-equilibrium, price-controls. Branch `money` is empty so far.
 - **Computer Science (live):** branch `data` (Class 11 Numbers and logic): binary-counter; branch `logic`: logic-gates; branch `algorithms`: sorting-race.
 - **Coming soon (catalog placeholders):** none.
-- **Subjects coming soon:** biology, astronomy (their folders exist).
+- **Subjects coming soon:** astronomy (its folder exists).
 
 ## Gotchas
 - Canvases are absolutely positioned inside `.sim-canvas-wrap`, so don't let content set their size.
