@@ -13,6 +13,17 @@
 - Problems/notes: <anything the next session must know, or "none">
 -->
 
+## 2026-10-11 · maintenance · Weekly health check + printable worksheet
+- Checked: ✅ check.mjs (108 live sims, 121 pages) · ✅ browser-test on all 121 pages, phone + desktop (before and after the capability) · phone contact sheet of the newest sims, 3 older ones and the home page (start and after Play) · science: molecular-speeds N₂ 300 K v_p = √(2RT/M) = 422 m/s, v_rms = 517 m/s ✓; gas-laws-piston 0.040 mol, 300 K, 1.00 L → nRT/V = 99.8 kPa ✓
+- Fixed: phone key-number chips cut off text values ("carbon dioxi…", "300 K (27 °C", "Tokyo 3:46 pm, Monda…"); text values now wrap to two lines (`common.js` marks the chip, `style.css`). ROADMAP Class 11 Physics coverage was 14, now 15 (total 108 was right). Skills disagreed on when to refill 📋 Next (roadmap-run below 5, maintenance below 8); roadmap-run now says 8
+- Roadmap: nothing in progress; 📋 Next refilled from 5 to 9 (Class 9 Sound, Class 11 Thermal properties of matter, Class 12 Ray optics and optical instruments, Class 8 Combustion and flame). README and AGENTS "Current content" match the catalog
+- Feedback: no open issues (#1 already handled)
+- Learned: Gotcha added: keep text values in `key: true` readouts short and check them in a phone screenshot (browser-test can't see clipping)
+- Harness: ✅ settings.json valid, generic attribution · ✅ pre-push hook exits 2 with a model name in a file, 0 without · ✅ referenced files exist (other hits were code names, not paths) · ✅ skills now agree (4 sims per run, approved subjects, queue size) · ✅ last 5 "Site check" runs on main green · ✅ daily runs on 10-09 and 10-10 · ✅ visitor counter check passes
+- Capability: **Printable worksheet**. Every simulation has a 🖨 Print worksheet button at the end of the Learn panel (the browser's Print does the same): light page, Name/Class/Date line, picture and graph as images, settings and numbers, share link, Learn text, Try-this questions with answer lines (answers hidden). Drawing pauses while printing. Proved: browser-test on all pages + all 108 sim pages printed to PDF without errors; PDFs of 3 pages reviewed
+- Next time: take the first 📋 Next item (Class 9 · Mathematics · Statistics and probability)
+- Problems/notes: none
+
 ## 2026-10-11 · request · Hidden visitor counter (GoatCounter)
 - Built/changed: owner-approved GoatCounter counter (`simlab-edu`): `SimLab.site.analytics` in `catalog.js`; `visitorCounter()` in `nav.js` loads it once on every page, only on the live site (local tests and previews are not counted); Privacy note on the About page; `check.mjs` fails if the counter is removed, changed or added to a page directly, or if any other analytics script appears; AGENTS.md hard rule 11; site-maintenance harness check; README
 - Checks: ✅ check.mjs passed (guards tested: removing the call and adding a page script both fail) · ✅ browser-test (sample pages, phone + desktop)
@@ -229,77 +240,3 @@
 - Roadmap: Earth's motions → Done · Demand and supply → In progress (1 of 3)
 - Next time: build `supply-equilibrium` and `price-controls` (see the item's Next note), finish Demand and supply, then start Class 11 · Computer Science · Numbers and logic (new subject `computer-science`) with the remaining 2 simulations
 - Problems/notes: sunrise times were checked against almanac values for Delhi (5:24 am / 7:22 pm on 21 June, 7:11 am / 5:30 pm on 22 December) and agree within about a minute. The seasons sim ignores refraction (12 h days at the equinox) while the day-night sim includes it (about 12 h 6 min); both Learn panels say so. The mango demand numbers are an invented teaching model, stated in its Learn panel. The time-zone map uses hand-drawn rough coastlines and ignores daylight saving time. 📋 Next has 17 items, so no roadmap evolution needed.
-
-## 2026-09-29 · routine · Class 8 · Physics · Friction (finished) + Some natural phenomena (finished)
-- Built/changed: `physics/ball-bearings-lubricants` (potter's wheel on a pivot: dry / graphite powder / oil / ball bearings / greased bearings, clay load 0–20 kg, friction μN at a 1 cm pivot radius plus light air drag, predicted stop time, heat made and pivot temperature, motor mode showing the power lost, magnified top view with rolling balls, results table), `physics/charging-by-rubbing` (drag a balloon, comb, glass rod, polythene or steel spoon over hair or cloth; equal and opposite charges, electron count, humidity-dependent leakage, paper bits lifted above 80 kV/m, a −80 nC hanging balloon swinging by Coulomb's law, hair pulled towards the object), `physics/electroscope` (gold-leaf electroscope: induction as the rod nears, conduction on touch, earthing with a finger and electron-flow arrows, charging by induction), `physics/lightning-conductor` (cloud charges to 20 C, zig-zag stepped leader with a 15 m striking-distance rule, house / three-tip conductor with copper strip and earth plate / tree / person inside, under the tree, standing or crouching; tally and "20 quick strikes"; thunder delay = distance ÷ 343 m/s with optional sound); thumbnails, catalog, README, AGENTS, ROADMAP
-- Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages at phone + desktop); combined canvas screenshot reviewed: fixed a cut-off phone headline (all four sims now shrink long headlines to fit), an rpm label overlapping the clay label, a lumpy cloud and tiny buildings in the lightning scene (world height reduced), and the hanging balloon disappearing when the sim updated before the canvas was measured (guarded)
-- Roadmap: Friction → Done · Some natural phenomena → Done
-- Next time: take the next 📋 Next item, Class 7 · Geography · Earth's motions (new subject `geography`: add the SUBJECTS entry and folder first), then start Class 11 · Economics · Demand and supply with the remaining simulation
-- Problems/notes: a single conductor rod left the roof edges exposed in testing, so the conductor has three tips along the roof (as real systems do). Monte-Carlo check: without it the roof takes ~45 % of flashes, with it 0 %. Crouching only lowers the person's hits by ~15 % in this model; the Learn panel says nowhere outdoors is safe. Charges, leak times, pivot μ values and the leaf-angle rule are simple typical values; each Learn panel says so. 📋 Next has 18 items, so no roadmap evolution needed.
-
-## 2026-09-28 · routine · Class 8 · Physics · Force and pressure (finished) + Friction (part 1)
-- Built/changed: `physics/balanced-forces` (loaded trolley pulled by two teams, net force = right − left, balanced vs unbalanced headline, a = F ÷ m, camera follows the trolley over metre marks, "balance the forces" and "left team lets go" buttons, velocity–time graph; forces can change mid-run to show constant speed when balanced), `physics/liquid-pressure` (bottle on a stool with holes A/B/C, P = h ρ g bars, v = √(2gh) jets landing at R = 2√(hz), four liquids, tap on/off draining, low-stool case where the middle jet lands farthest), `physics/friction-surfaces` (spring balance pulling a block on 5 surfaces, μs/μk, static friction matching the pull, slow pull test showing the drop from static to sliding friction, magnified bumps), `physics/rolling-vs-sliding` (30° ramp, block vs toy car on glass/tile/cloth/sand, d = v² ÷ 2μg, fair-test results table per height); thumbnails, catalog, README, AGENTS, ROADMAP
-- Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages at phone + desktop); combined canvas screenshot reviewed: fixed overlapping text rows in the liquid-pressure panel on phones (taller canvas), a cut-off phone headline, overlapping landing letters, the missing magnified view on phones (friction) and a distance label running into the results table (ramp)
-- Roadmap: Force and pressure → Done · Friction → still In progress (2 of 3)
-- Next time: build `ball-bearings-lubricants` (see the item's Next note), finish Friction, then start Class 8 · Some natural phenomena with the remaining 3 simulations
-- Problems/notes: friction coefficients (surfaces, rolling toy car) are typical classroom values, and the ramp model keeps the speed at the turn; both Learn panels say so. The trolley floor is frictionless on purpose (stated in its Learn panel). 📋 Next has 19 items, so no roadmap evolution needed.
-
-## 2026-09-28 · routine · Class 7 · Physics · Light (finished) + Class 8 · Force and pressure (part 1)
-- Built/changed: `physics/pinhole-camera` (true-scale side view with ray cones through the hole, h' = h × v ÷ u, inset of the screen showing the image turned through 180°, blur patch d × (u + v) ÷ u and relative brightness, candle or lit letter F), `physics/plane-mirror` (top view, drag the object and the eye, i = r with normal and angle arcs, image as far behind as the object is in front, "many rays" fan meeting at I, short-mirror case, word card vs its mirror image for lateral inversion), `physics/newtons-disc` (VIBGYOR and colour-pair discs, rpm → rev/s, blending between 4 and 16 rev/s, angle-weighted linear-light mixed colour), `physics/pressure-area` (23 × 11 × 7 cm, 3 kg brick on three faces, 1–4 bricks, P = F ÷ A in Pa, dent depth model, pressure bars for every face); new `optics` content; thumbnails, catalog, README, AGENTS, ROADMAP
-- Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages and /physics/ at phone + desktop); combined canvas screenshot reviewed: fixed a cut-off phone headline and crowded angle labels (plane mirror), mirror-word overflow on phones, clipped colour swatch and a pinkish rainbow mix (Newton's disc: colours and sector sizes retuned to mix to near-neutral grey #9e9da3), small footprints (pressure)
-- Roadmap: Light → Done · Force and pressure → still In progress (1 of 3)
-- Next time: build `balanced-forces` and `liquid-pressure` (see the item's Next note), finish Force and pressure, then start Class 8 · Friction with the remaining 2 simulations
-- Problems/notes: the pressure dent depth (P ÷ 300 mm) and Newton's disc blending thresholds are simple models; both Learn panels say so. 📋 Next has 20 items, so no roadmap evolution needed.
-
-## 2026-09-27 · routine · Class 7 · Physics · Motion and time (finished) + Electric current and its effects
-- Built/changed: `physics/pendulum-clock` (time n oscillations, T = t ÷ n, observation table that spots the length/mass pattern, tick per swing, seconds-pendulum preset), `physics/electric-circuit` (battery/switch/bulbs loop, picture ↔ circuit-symbol view, fused bulb, reversed cell, series bulbs, tap the switch), `physics/heating-fuse` (220 V house circuit with 6 tappable appliances, fuse wire heats and melts on overload or short circuit, unsafe copper-wire option sets the wiring on fire, temperature graph), `physics/electromagnet` (turns, cells, iron/wood/air core, pins lifted, N/S poles by right-hand grip rule, compass deflection from a two-pole field); thumbnails, catalog, README, AGENTS, ROADMAP
-- Checks: ✅ check.mjs passed · ✅ browser-test (4 new pages, /physics/ and / at phone + desktop); combined canvas screenshot reviewed: fixed a 24px phone overflow (long graph legend), tiny pendulum scale, switch label over the wire, and fuse not melting just above its rating
-- Roadmap: Motion and time → Done · Electric current and its effects → Done (3 sims each item; the circuit item was completed in one go)
-- Next time: take the next 📋 Next item, Class 7 · Physics · Light (branch `optics`: pinhole camera, plane mirror and lateral inversion, Newton's disc / prism), then start Class 8 · Force and pressure
-- Problems/notes: the electricity models are relative/simplified (10 Ω bulbs, 0.5 A per cell, fuse temperature formula); each Learn panel states this. 📋 Next still has 22 items, so no roadmap evolution needed.
-
-## 2026-09-27 · request · 4 simulations per run; new subjects approved
-- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md
-  - each run builds 4 simulations: finish the current item, then start the next
-  - approved new subjects: Economics, Geography, Computer Science
-  - languages are out of scope for now
-  - seeded one starter item for each new subject in 📋 Next
-- Checks: ✅ check.mjs passed
-- Roadmap: 3 items added to 📋 Next
-- Next time: finish Motion and time (pendulum-clock), then start the next 📋 Next item (3 more simulations)
-- Problems/notes: none
-
-## 2026-09-27 · routine · Class 7 · Physics · Motion and time (part 1 of 2)
-- Built/changed: `physics/speed-race` (two-lane race, km/h → m/s, time = d ÷ v, d–t graph in race time with auto fast-forward), `physics/distance-time-graph` (4-leg bus trip drawing its own d–t graph, "guess first" toggle, ready-made trips); thumbnails, catalog, README, AGENTS
-- Checks: ✅ check.mjs passed · ✅ browser-test (both pages, /physics/ and / at phone + desktop); combined screenshot reviewed, label overlaps fixed
-- Roadmap: Motion and time → still In progress (2 of 3)
-- Next time: build `pendulum-clock` (see the item's Next note), then move Motion and time to ✅ Done; that run builds only that 1 simulation
-- Problems/notes: `SimLab.current` is undefined; projectile's graph `xMax` uses it and silently falls back (harmless, graph still auto-extends). Added a Gotcha.
-
-## 2026-09-27 · request · 2 simulations per run, quality first
-- Built/changed: roadmap-run skill, AGENTS.md, ROADMAP.md (2 simulations per run, quality first)
-- Checks: ✅ check.mjs passed
-- Roadmap: unchanged
-- Next time: take the first item in 📋 Next (Class 7 · Physics · Motion and time) and build 2 of its 3 simulations
-- Problems/notes: none
-
-## 2026-09-27 · request · Add weekly maintenance
-- Built/changed: `.claude/skills/site-maintenance`, AGENTS.md rules (learn from mistakes, NEEDS HUMAN flag), weekly routine (Sunday ≈10 AM IST)
-- Checks: ✅ check.mjs passed
-- Roadmap: unchanged
-- Next time: daily builders continue with 📋 Next; maintenance runs on Sunday
-- Problems/notes: none
-
-## 2026-09-27 · request · Set up roadmap-driven autonomous building
-- Built/changed: ROADMAP.md, PROGRESS.md, `.claude/skills/roadmap-run`, AGENTS.md "Roadmap workflow", two daily routines (≈8 AM and 12 AM IST)
-- Checks: ✅ check.mjs passed
-- Roadmap: seeded 📋 Next with 22 Class 7–12 items; Done holds Sound, Heat and Mechanics basics
-- Next time: take the first item in 📋 Next (Class 7 · Physics · Motion and time)
-- Problems/notes: none
-
-## 2026-09-27 · request · Heat batch
-- Built/changed: 6 Class 7 Heat simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze)
-- Checks: ✅ check.mjs passed
-- Roadmap: Class 7 · Physics · Heat → Done
-- Next time: n/a (before the roadmap existed)
-- Problems/notes: none
