@@ -1330,9 +1330,32 @@ input[type='range']:focus-visible::-moz-range-thumb { box-shadow: var(--focus); 
   .btn, .chip, .card, .sim-card, .subject-card { border: 1px solid CanvasText; }
 }
 
+/* Printable worksheet: built in common.js on beforeprint (images of the picture and graph) */
+.print-sheet { display: none; }
+.print-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-5); }
 @media print {
   .site-header, .site-footer, .back-to-top, .sim-panel, .hero-canvas { display: none !important; }
   body { background: #fff; color: #000; }
+
+  [data-page='sim'] .breadcrumbs, .sim-stage, .sim-graph-wrap, .sim-tools, .feedback-band, .sim-pager,
+  #sim-footer, .print-row, .noscript, .toast, .skip-link { display: none !important; }
+  .print-sheet { display: block; }
+  .print-head { margin: 0 0 12px; font-size: 11pt; }
+  .print-shots img { display: block; width: 100%; max-height: 10cm; object-fit: contain; margin: 0 auto 8px; break-inside: avoid; }
+  .print-shots img + img { max-height: 6cm; }
+  .print-table { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px 16px; margin: 0 0 8px; font-size: 9pt; }
+  .print-table div { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px solid #ddd; padding: 2px 0; }
+  .print-table dt { color: #555; }
+  .print-table dd { margin: 0; font-weight: 600; text-align: right; }
+  .print-url { margin: 0 0 12px; font-size: 8pt; color: #555; overflow-wrap: anywhere; }
+  .sim-title { padding: 0 0 8px; }
+  .sim-title .sim-meta, .sim-title p { display: revert; }
+  .learn { border: 0; box-shadow: none; background: none; }
+  .learn > summary .chev { display: none; }
+  .learn section, .formula { break-inside: avoid; }
+  .try-list li { break-inside: avoid; margin-bottom: 4px; }
+  .try-list details { display: none; }   /* questions only: answers stay on screen */
+  .try-list li::after { content: ''; display: block; height: 2.6em; border-bottom: 1px dotted #888; }
 }
 
 /* Fullscreen fallback (iPhone Safari has no element fullscreen API) */

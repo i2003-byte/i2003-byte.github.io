@@ -787,6 +787,7 @@
 
     function frame(now) {
       rafId = 0;
+      if (printState && printState.frozen) return;
       var dtReal = Math.min((now - last) / 1000, 0.1);
       last = now;
       if (sim.running) advance(dtReal * sim.speed);
@@ -821,7 +822,7 @@
 
     /* ---------- canvas resize & theme ---------- */
     if ('ResizeObserver' in window) {
-      new ResizeObserver(function () { if (cfg.resize) cfg.resize(sim); requestRender(); }).observe(sim.canvas);
+      new ResizeObserver(function () { if (printState && printState.frozen) return; if (cfg.resize) cfg.resize(sim); requestRender(); }).observe(sim.canvas);
     } else window.addEventListener('resize', requestRender);
     document.addEventListener('simlab:themechange', function () {
       requestAnimationFrame(function () { sim.colors = themeColors(); requestRender(); });
@@ -985,6 +986,67 @@
         navigator.clipboard.writeText(url).then(function () { ui.toast('Link copied — it includes your current settings'); }, fallback);
       } else fallback();
     }
+
+    /* ---------- printable worksheet (Print button in Learn, or the browser's Print) ----------
+       Before printing: light theme, picture and graph frozen as images (a canvas
+       stretches when the paper is a different width), Learn panel opened, and the
+       Try-this list gets answer lines (CSS). Everything is put back afterwards. */
+    var printSheet = document.createElement('div');
+    printSheet.className = 'print-sheet';
+    printSheet.innerHTML = '<p class="print-head">Name ____________________ &nbsp; Class ______ &nbsp; Date __________</p><div class="print-shots"></div>';
+    app.insertBefore(printSheet, sim.stage);
+    var learnBody = $('.learn .learn-body');
+    if (learnBody) {
+      var printRow = document.createElement('p');
+      printRow.className = 'print-row';
+      printRow.innerHTML = '<button class="btn" type="button" data-print>🖨 Print worksheet</button>' +
+        '<span class="muted small">The picture as it is now, the numbers, and the Try-this questions with space for answers.</span>';
+      learnBody.appendChild(printRow);
+      printRow.querySelector('[data-print]').addEventListener('click', function () { window.print(); });
+    }
+    var printState = null;
+    function printTable() {
+      var rows = params.map(function (p) {
+        var v = sim.p[p.id];
+        if (p.type === 'toggle') v = v ? 'on' : 'off';
+        else if (p.type === 'select') { var o = p.options.filter(function (x) { return String(x.value) === String(v); })[0]; v = o ? o.label : v; }
+        else v = M.fmt(v, p.digits) + (p.unit ? ' ' + p.unit : '');
+        return [p.label, v];
+      }).concat((cfg.readouts || []).map(function (r) {
+        var el = $('[data-r="' + r.id + '"]');
+        var u = el && el.querySelector('small');
+        return [r.label, !el ? '' : u ? el.textContent.slice(0, -u.textContent.length) + ' ' + u.textContent : el.textContent];
+      }));
+      return rows.length ? '<dl class="print-table">' + rows.map(function (r) {
+        return '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(String(r[1])) + '</dd></div>';
+      }).join('') + '</dl>' : '';
+    }
+    window.addEventListener('beforeprint', function () {
+      if (printState) return;
+      var root = document.documentElement;
+      printState = { theme: root.dataset.theme, closed: $$('details.learn:not([open])') };
+      root.dataset.theme = 'light';
+      sim.colors = themeColors();
+      render();
+      var shots = [[sim.canvas, cfg.ariaLabel || entry.title]];
+      var gc = $('#sim-graph');
+      if (gc && sim.graph && gc.offsetWidth) shots.push([gc, cfg.graph.title || 'Graph']);
+      $('.print-shots', printSheet).innerHTML = shots.map(function (s) {
+        try { return '<img src="' + s[0].toDataURL('image/png') + '" alt="' + esc(s[1]) + '">'; } catch (err) { return ''; }
+      }).join('') + printTable() + '<p class="print-url">' + esc(currentUrl()) + '</p>';
+      printState.closed.forEach(function (d) { d.open = true; });
+      printState.frozen = true;   // the hidden canvas has no size while printing: don't draw into it
+    });
+    window.addEventListener('afterprint', function () {
+      if (!printState) return;
+      document.documentElement.dataset.theme = printState.theme;
+      printState.closed.forEach(function (d) { d.open = false; });
+      $('.print-shots', printSheet).innerHTML = '';
+      printState = null;
+      sim.colors = themeColors();
+      if (cfg.resize) cfg.resize(sim);
+      requestRender();
+    });
 
     /* ---------- fullscreen (real API, or CSS fallback for iPhone) ---------- */
     function toggleFullscreen() {
