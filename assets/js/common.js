@@ -815,7 +815,7 @@
         var txt = isText ? esc(v) : M.fmt(v, r.digits == null ? 2 : r.digits);
         el.innerHTML = txt + (r.unit && typeof v !== 'string' ? '<small>' + esc(r.unit) + '</small>' : '');
         var hv = $('[data-hud="' + r.id + '"]');
-        if (hv) hv.innerHTML = el.innerHTML;
+        if (hv) { hv.innerHTML = el.innerHTML; hv.classList.toggle('is-text', isText); }
       });
     }
 

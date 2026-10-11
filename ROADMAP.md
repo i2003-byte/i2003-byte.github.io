@@ -24,7 +24,7 @@
 | 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 3 (Matter in our surroundings 3) | 0 | 0 | 0 | 0 | 0 |
 | 10 | 12 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 3) | 0 | 0 | 0 | 0 | 0 | 0 |
-| 11 | 14 (projectile, pendulum, Oscillations 3, Gravitation 3, Waves 4, Kinetic theory 3) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
+| 11 | 15 (projectile, pendulum, Oscillations 3, Gravitation 3, Waves 4, Kinetic theory 3) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 9 (Electric charges and fields 3, Wave optics 3, Current electricity 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 
 **Total live simulations: 108**
@@ -39,6 +39,10 @@ _None. Take the first 📋 Next item._
 - [ ] **Class 10 · Chemistry · Chemical reactions and equations.** Branch `reactions`. Sims: balancing an equation by counting atoms on both sides; types of reactions (combination, decomposition, displacement, double displacement) with particle pictures; rusting of iron (air, water and oil-coated nails over days).
 - [ ] **Class 10 · Mathematics · Introduction to trigonometry.** Subject `mathematics` (new branch `trigonometry`). Sims: sin, cos and tan as ratios in a right triangle you can resize; the unit circle and the graphs of sin and cos; heights and distances (angle of elevation to a tower or the Qutub Minar).
 - [ ] **Class 9 · Biology · The fundamental unit of life.** Subject `biology` (make it live on first use). Sims: explore plant and animal cells (tap the organelles); osmosis (raisin and potato strips in water and salt solution); diffusion across a membrane.
+- [ ] **Class 9 · Physics · Sound.** Branch `sound`. Sims: sound as a longitudinal wave (compressions and rarefactions on a slinky and in air, wavelength, frequency, v = fλ); echo and SONAR (measure the depth of the sea or a well from the echo time, minimum 17 m for an echo); reflection of sound (concave sound boards, stethoscope, ear trumpet).
+- [ ] **Class 11 · Physics · Thermal properties of matter.** Branch `thermodynamics`. Sims: thermal expansion (rails with gaps, bimetallic strip, ΔL = αLΔT); calorimetry by method of mixtures (specific heat, latent heat, final temperature); Newton's law of cooling (cooling curve of hot tea, effect of surroundings).
+- [ ] **Class 12 · Physics · Ray optics and optical instruments.** Branch `optics`. Sims: total internal reflection and optical fibres (critical angle, mirage, diamond); compound microscope and astronomical telescope (ray diagram, magnifying power from focal lengths); refraction at a spherical surface and the lens maker's formula.
+- [ ] **Class 8 · Chemistry · Combustion and flame.** Branch `reactions`. Sims: the fire triangle (fuel, oxygen, ignition temperature; put out a fire by removing one); zones of a candle flame (hottest outer zone, unburnt wax vapour); fuel efficiency and calorific value of common fuels (wood, coal, LPG, CNG).
 
 ## 💡 Proposed (needs a human decision; only for ideas outside the Class 7–12 India syllabus)
 _None yet._

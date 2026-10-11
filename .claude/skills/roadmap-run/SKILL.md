@@ -70,7 +70,7 @@ If you truly cannot get a green check:
 2. Leave the item 🔨 In progress.
 3. Do not push broken simulations.
 
-## 6. Evolve the roadmap (when 📋 Next has fewer than 5 items, or once a week)
+## 6. Evolve the roadmap (when 📋 Next has fewer than 8 items, or once a week)
 - Compare ✅ Done with the Class 7–12 India syllabus (CBSE / NCERT topic list) across all subjects in `catalog.js`.
 - **Approved new subjects (auto-approved, Class 7–12 India curriculum):**
   - Economics: supply and demand, simple and compound interest, budgets

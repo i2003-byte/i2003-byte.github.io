@@ -1451,6 +1451,8 @@ canvas.tap-to-play { cursor: pointer; }
   .hud-l { min-width: 0; color: var(--text-muted); font-size: 0.68rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .hud-chip b { font-family: var(--font-mono); font-size: var(--fs-sm); color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .hud-chip b small { margin-left: 2px; color: var(--text-muted); font-weight: 400; }
+  /* text values ("carbon dioxide", "Tokyo 3:46 pm, Monday") wrap to two lines instead of being cut off */
+  .hud-chip b.is-text { font-family: var(--font-body); font-size: 0.72rem; line-height: 1.25; white-space: normal; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 
   .sim-tabs { display: flex; overflow-x: auto; border-bottom: 1px solid var(--border); scrollbar-width: none; }
   .sim-tabs::-webkit-scrollbar { display: none; }
