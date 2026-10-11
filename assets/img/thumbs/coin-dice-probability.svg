@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="coin-dice-probability">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b21b6"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="70" cy="62" r="34" fill="#f5c542" stroke="#8a6d12" stroke-width="4"/>
+  <text x="70" y="74" font-family="sans-serif" font-size="34" font-weight="800" fill="#5a4508" text-anchor="middle">H</text>
+  <g transform="rotate(-12 160 62)"><rect x="128" y="30" width="64" height="64" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="3"/>
+  <g fill="#0f172a"><circle cx="145" cy="47" r="6"/><circle cx="175" cy="47" r="6"/><circle cx="145" cy="62" r="6"/><circle cx="175" cy="62" r="6"/><circle cx="145" cy="77" r="6"/><circle cx="175" cy="77" r="6"/></g></g>
+  <path d="M30 170H300" stroke="#e2e8f0" stroke-width="3"/>
+  <path d="M30 150L50 125L70 160L90 132L115 148L140 137L170 143L210 139L250 141L300 140" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M30 140H300" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="290" y="64" font-family="sans-serif" font-size="26" font-weight="700" fill="#4ade80" text-anchor="end">½</text>
+</svg>

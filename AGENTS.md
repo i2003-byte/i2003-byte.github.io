@@ -114,8 +114,8 @@ git add -A && git commit -m "…" && git push origin HEAD:main
   - branch `thermodynamics` ("Heat", Class 7): 6 simulations (hot-and-cold, thermometer, conduction, convection, radiation, sea-land-breeze); Class 11 Kinetic theory of gases: gas-pressure-molecules, gas-laws-piston, molecular-speeds
 - **Chemistry (live):** branch `matter` (Class 9 Matter in our surroundings): states-of-matter, evaporation-cooling, heating-curve; branch `acids-bases` (Class 7 Acids, bases and salts): natural-indicators, neutralisation, ph-scale. Branches `atoms`, `bonding`, `reactions`, `gases` are empty so far.
 - **Biology (live):** branch `plants` ("Plant Nutrition", Class 7 Nutrition in plants): photosynthesis-leaf, oxygen-bubbles, starch-test. Branches `cells`, `genetics`, `ecology`, `evolution` are empty so far.
-- **Mathematics (live):** branch `geometry` ("Lines, Angles & Triangles", Class 7 Lines, angles and triangles): parallel-lines-angles, triangle-angle-sum, pythagoras-proof. Branches `functions`, `calculus`, `probability` are empty so far.
-- **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones. Branches `climate` and `maps` are empty so far.
+- **Mathematics (live):** branch `geometry` ("Lines, Angles & Triangles", Class 7 Lines, angles and triangles): parallel-lines-angles, triangle-angle-sum, pythagoras-proof; branch `probability` ("Statistics & Probability", Class 9): histogram-polygon, mean-median-mode, coin-dice-probability. Branches `functions`, `calculus` are empty so far.
+- **Geography (live):** branch `earth-motions` (Class 7 Earth's motions): day-night-india, seasons-revolution, time-zones; branch `climate` (Class 7 Weather and climate): monsoon-winds. Branch `maps` is empty so far.
 - **Economics (live):** branch `markets` (Class 11 Demand and supply): demand-curve, supply-equilibrium, price-controls. Branch `money` is empty so far.
 - **Computer Science (live):** branch `data` (Class 11 Numbers and logic): binary-counter; branch `logic`: logic-gates; branch `algorithms`: sorting-race.
 - **Coming soon (catalog placeholders):** none.

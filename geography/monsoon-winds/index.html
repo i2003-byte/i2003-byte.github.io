@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Monsoon Winds over India — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/monsoon-winds/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Monsoon Winds over India — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/monsoon-winds/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="monsoon-winds">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Land heats up quickly in the sun and cools quickly when the sun is weaker. The sea changes its temperature slowly. From April, north-west India becomes much hotter than the Arabian Sea. Hot air over the land rises, leaving <strong>low pressure</strong>. Cooler, moist air from the sea blows in to take its place: the <strong>south-west monsoon</strong>, which brings most of India's rain from June to September.</p>
+            <p>In winter it is the other way round. The land is cooler than the sea, so there is <strong>high pressure</strong> over the land and dry winds blow from the land to the sea: the <strong>north-east monsoon</strong>. Crossing the Bay of Bengal, they pick up moisture and give Tamil Nadu its rain in October to December.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">wind blows from high pressure → low pressure</code>
+            <p class="formula-note">Warm air rises and spreads out, so the air pressure below it falls. A bigger temperature difference gives a stronger push.</p>
+            <code class="formula">summer: land hotter → low over land → winds from sea (moist, rain)</code>
+            <code class="formula">winter: land cooler → high over land → winds from land (dry)</code>
+            <p>Winds coming from south of the equator start as south-east trade winds. After crossing the equator they turn to their right because of the Earth's spin, so they reach India from the <strong>south-west</strong>. The Western Ghats and the hills of the north-east force the moist air to rise, so the windward slopes get very heavy rain and the far side stays drier (a <strong>rain shadow</strong>).</p>
+            <p class="formula-note">Simplified: temperatures are rounded monthly averages for north-west India (Jodhpur) and the Arabian Sea surface, onset and withdrawal dates are rounded normal dates for 17 cities joined smoothly, rain values are rounded monthly normals, and the winds are drawn from typical patterns, not from a weather model. The real monsoon also depends on the heating of the Tibetan plateau, the shifting belt of rising air near the equator and high-level winds.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The monsoon normally reaches Kerala around 1 June and covers all of India by about 8 July. The IMD announces the onset each year.</li>
+              <li>Sohra (Cherrapunji) and Mawsynram in Meghalaya are among the wettest places on Earth: moist winds from the Bay of Bengal are pushed up steep hills.</li>
+              <li>Kharif crops such as rice, cotton and soybean are sown when the monsoon arrives; a late or weak monsoon hurts farmers and food prices.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set the month to 5 (May). Compare the land and sea temperatures. Where is the low pressure?<details><summary>Show answer</summary>The land is about 34 °C and the Arabian Sea about 29.5 °C, so the land is hotter and the low pressure sits over north-west India (the Thar desert).</details></li>
+              <li>Set the month to 1 (January). Which way do the winds blow now, and are they wet or dry?<details><summary>Show answer</summary>From the land to the sea (from the north-east). The land (about 17 °C) is cooler than the sea (about 25.5 °C), so pressure is high over the land. The winds come from the dry interior, so they bring little rain to most of India.</details></li>
+              <li>Pick Delhi, set June and press “Run the year”. When does the monsoon reach Delhi, and when does it leave?<details><summary>Show answer</summary>About 27 June, and it goes back around 25 September. Mumbai gets it about two weeks earlier (11 June).</details></li>
+              <li>Compare the July rain in Mumbai with the July rain in Jaisalmer. Why is there such a big difference?<details><summary>Show answer</summary>Mumbai gets about 840 mm, Jaisalmer only about 70 mm. Mumbai is on the coast where moist winds meet the Western Ghats; by the time the winds reach western Rajasthan they have lost most of their moisture, and there are no hills to lift them.</details></li>
+              <li>Pick Chennai. In which months does it get the most rain? Which monsoon brings it?<details><summary>Show answer</summary>October and November (about 280 and 350 mm). The north-east monsoon and the retreating monsoon winds pick up moisture over the Bay of Bengal and drop it on the Tamil Nadu coast. In July Chennai gets only about 100 mm.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Monsoon:</strong> a wind that reverses its direction with the seasons (from the Arabic word <em>mausim</em>, season).</li>
+              <li><strong>Onset / withdrawal:</strong> the arrival of the monsoon rains at a place, and their going back.</li>
+              <li><strong>Rain shadow:</strong> the dry side of a mountain, away from the moist wind.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

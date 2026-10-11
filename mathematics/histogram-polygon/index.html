@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Histogram and Frequency Polygon — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Group test marks, heights or temperatures into classes and draw a histogram and a frequency polygon. Change the class width, read the tally table and see why unequal classes need adjusted heights.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/histogram-polygon/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Histogram and Frequency Polygon — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Group test marks, heights or temperatures into classes and draw a histogram and a frequency polygon. Change the class width, read the tally table and see why unequal classes need adjusted heights.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/histogram-polygon/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="histogram-polygon">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A long list of numbers is hard to read. Group the values into <strong>classes</strong> (like 40–50, 50–60) and count how many fall in each: that count is the <strong>frequency</strong>. A <strong>histogram</strong> draws each class as a bar touching its neighbours, so you can see at a glance where most values lie.</p>
+            <p>A <strong>frequency polygon</strong> joins the mid-points of the bar tops with straight lines. It shows the same shape, and two polygons can be drawn on one graph to compare two sets of data.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">class mark = (lower limit + upper limit) ÷ 2</code>
+            <p class="formula-note">The polygon joins the points (class mark, frequency). It is closed at the class marks of the empty classes just before the first class and just after the last one.</p>
+            <code class="formula">adjusted frequency = (smallest class width ÷ class width) × frequency</code>
+            <p class="formula-note">Only for <em>unequal</em> class widths: then the <strong>area</strong> of a bar, not its height, must show the frequency.</p>
+            <p>Here a value on a boundary goes in the higher class (40 goes in 40–50), except the largest value, which stays in the last class. The bars touch because the classes follow on with no gaps. When the axis does not start at 0, a small zig-zag (a “kink”) on the axis shows that a part has been left out.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Schools draw histograms of marks to see how a whole class did in a test, not just the topper.</li>
+              <li>The India Meteorological Department groups daily temperatures to show how many very hot days a city had.</li>
+              <li>Doctors compare a child's height with the frequency polygon of heights for that age.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the maths test marks and medium classes, tap the tallest bar. Which class has the most students, and what is its class mark?<details><summary>Show answer</summary>60–70, with 9 students. Its class mark is (60 + 70) ÷ 2 = 65.</details></li>
+              <li>Switch between wide, medium and narrow classes. Which picture shows the shape of the data best?<details><summary>Show answer</summary>Medium classes. Wide classes hide the detail (only 5 bars); narrow classes give many tiny, uneven bars that make the shape hard to see. Usually 5 to 12 classes work well.</details></li>
+              <li>Choose “Frequency polygon” only. Where does the polygon start and end, and why?<details><summary>Show answer</summary>On the axis, at the class marks of the empty classes just outside the data (for marks with width 10: at −5 and 105). This closes the polygon so its area matches the histogram's.</details></li>
+              <li>Turn on “Merge the end classes” and then turn “Adjust heights” off. What goes wrong?<details><summary>Show answer</summary>The merged class 80–100 has 9 students. Drawn 9 high and twice as wide as the others, its area looks like 18 students, so it seems to beat 60–70 (9 students). With adjustment its height becomes 9 × 10 ÷ 20 = 4.5, and its area is fair again.</details></li>
+              <li>Pick the Delhi temperatures with narrow classes. On how many days did it reach 44 °C or more?<details><summary>Show answer</summary>Add the last four classes: 44–45 (3), 45–46 (2), 46–47 (1), 47–48 (0) = 6 days.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Class interval:</strong> a group such as 40–50. Its <strong>width</strong> is upper limit − lower limit.</li>
+              <li><strong>Frequency:</strong> how many values fall in a class. The total of all frequencies is the number of values.</li>
+              <li><strong>Tally marks:</strong> strokes in groups of five (four lines and a cross line) used while counting.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

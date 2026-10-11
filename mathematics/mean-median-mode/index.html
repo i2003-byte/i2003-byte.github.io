@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mean, Median and Mode — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag dots on a number line and watch the mean, median and mode change. The line balances at the mean, the middle of the sorted list is the median, and an outlier shows which average to trust.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/mean-median-mode/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Mean, Median and Mode — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag dots on a number line and watch the mean, median and mode change. The line balances at the mean, the middle of the sorted list is the median, and an outlier shows which average to trust.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/mean-median-mode/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="mean-median-mode">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>One number that describes a whole set of data is called an <strong>average</strong>, or a measure of central tendency. There are three common ones, and each answers a different question.</p>
+            <p>The <strong>mean</strong> shares the total out equally. It is also the <strong>balance point</strong>: put the dots on a ruler and it balances on a pivot at the mean. The <strong>median</strong> is the middle value when the data is in order. The <strong>mode</strong> is the value that turns up most often.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">mean x̄ = (x₁ + x₂ + … + xₙ) ÷ n</code>
+            <p class="formula-note">Sum of all values divided by how many there are. The distances above and below it always cancel: Σ(x − x̄) = 0.</p>
+            <code class="formula">median = middle value (n odd) · average of the two middle values (n even)</code>
+            <p class="formula-note">Sort first. For n values the middle one is the ((n + 1) ÷ 2)th.</p>
+            <code class="formula">mode = the most frequent value · range = largest − smallest</code>
+            <p class="formula-note">A set can have two modes, or none if every value occurs equally often. Range measures how spread out the data is, not an average.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A cricketer's batting average is a mean: total runs ÷ number of times out.</li>
+              <li>A shoe shop orders the most of the <em>modal</em> size; a mean shoe size like 7.3 is no use to it.</li>
+              <li>The median income of a town is a better “typical” figure than the mean, which a few very rich people pull upwards.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the marks of 9 students, find the mean, median and mode yourself, then check the numbers.<details><summary>Show answer</summary>Sum = 120, so the mean = 120 ÷ 9 ≈ 13.33. Sorted, the 5th value is 14, so the median = 14. The mode is 15 (three times).</details></li>
+              <li>Press “Add an outlier” once. Which average moves the most?<details><summary>Show answer</summary>The mean jumps from 13.33 to 14.0 (140 ÷ 10). The median only moves from 14 to 14.5 and the mode stays 15. The mean feels every value, so one extreme value pulls it.</details></li>
+              <li>Turn on “Show distances from the mean”. Compare the total length on each side. Now drag a dot and look again.<details><summary>Show answer</summary>The two sides are always equal, wherever you drag the dots. That is why the line balances on the mean: Σ(x − x̄) = 0.</details></li>
+              <li>Drag the dots so that the mean, median and mode are all 10.<details><summary>Show answer</summary>Many answers. One: 8, 9, 10, 10, 10, 11, 12 — symmetric data with the most dots in the middle has all three equal.</details></li>
+              <li>In the Pune rainy-days data, which average best describes a “typical month”? Why?<details><summary>Show answer</summary>The months are very uneven: mean ≈ 5.75, median 2.5, mode 0. No single number is “typical” here; the data has a monsoon season and a dry season, so it is better to describe them separately.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Observation:</strong> one value in the data set.</li>
+              <li><strong>Outlier:</strong> a value far away from the rest.</li>
+              <li><strong>Dot plot:</strong> one dot per value, stacked above its place on a number line.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

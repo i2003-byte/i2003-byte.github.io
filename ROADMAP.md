@@ -20,22 +20,20 @@
 ## Coverage (agents: update after every run)
 | Class | Physics | Chemistry | Mathematics | Biology | Geography | Economics | Computer Science |
 |---|---|---|---|---|---|---|---|
-| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 3 (Acids, bases and salts 3) | 3 (Lines, angles and triangles 3) | 3 (Nutrition in plants 3) | 3 (Earth's motions 3) | 0 | 0 |
+| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 3 (Acids, bases and salts 3) | 3 (Lines, angles and triangles 3) | 3 (Nutrition in plants 3) | 4 (Earth's motions 3, Weather and climate 1) | 0 | 0 |
 | 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
-| 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 3 (Matter in our surroundings 3) | 0 | 0 | 0 | 0 | 0 |
+| 9 | 13 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3) | 3 (Matter in our surroundings 3) | 3 (Statistics and probability 3) | 0 | 0 | 0 | 0 |
 | 10 | 12 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 | 11 | 15 (projectile, pendulum, Oscillations 3, Gravitation 3, Waves 4, Kinetic theory 3) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 9 (Electric charges and fields 3, Wave optics 3, Current electricity 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 108**
+**Total live simulations: 112**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-_None. Take the first 📋 Next item._
+- [~] **Class 7 · Geography · Weather and climate.** Branch `climate`. Done: monsoon-winds. Next: humidity, evaporation and rainfall (water cycle: relative humidity, dew point, clouds and rain); reading a rainfall and temperature graph (climograph) for Indian cities. Started 2026-10-11.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 9 · Mathematics · Statistics and probability.** Subject `mathematics` (branch `probability`). Sims: histogram and frequency polygon from class marks data; mean, median and mode with draggable data points; experimental probability with coins and dice approaching the theoretical value.
-- [ ] **Class 7 · Geography · Weather and climate.** Branch `climate`. Sims: monsoon winds (land and sea heating, June vs December winds over India); humidity, evaporation and rainfall; reading a rainfall and temperature graph for Indian cities.
 - [ ] **Class 10 · Chemistry · Chemical reactions and equations.** Branch `reactions`. Sims: balancing an equation by counting atoms on both sides; types of reactions (combination, decomposition, displacement, double displacement) with particle pictures; rusting of iron (air, water and oil-coated nails over days).
 - [ ] **Class 10 · Mathematics · Introduction to trigonometry.** Subject `mathematics` (new branch `trigonometry`). Sims: sin, cos and tan as ratios in a right triangle you can resize; the unit circle and the graphs of sin and cos; heights and distances (angle of elevation to a tower or the Qutub Minar).
 - [ ] **Class 9 · Biology · The fundamental unit of life.** Subject `biology` (make it live on first use). Sims: explore plant and animal cells (tap the organelles); osmosis (raisin and potato strips in water and salt solution); diffusion across a membrane.
@@ -53,6 +51,7 @@ _None yet._
 - [x] **Printable worksheet** (2026-10-11). Every simulation page has a 🖨 Print worksheet button in the Learn panel (the browser's Print does the same): a clean light page with Name/Class/Date lines, the picture and graph as they are now, the settings and numbers, the page's share link, the Learn text, and the Try-this questions with answer lines (answers hidden). Shared code only (`common.js`, `style.css`).
 
 ## ✅ Done
+- [x] **Class 9 · Mathematics · Statistics and probability.** 3 sims (branch `probability`, renamed "Statistics & Probability"): histogram-polygon (marks, heights or Delhi temperatures grouped into classes; histogram, frequency polygon closed at the empty end classes, tally table, tap a bar for its class mark, axis kink, merged end classes with and without adjusted heights), mean-median-mode (draggable dot plot balancing on a pivot at the mean, sorted strip with the median, mode stack, outlier button, distances from the mean summing to 0), coin-dice-probability (one coin, one die, two coins, two dice; toss 1/10/100/1000 or keep tossing; outcome bars vs theory, experimental probability graph settling on the theoretical value). Done 2026-10-11.
 - [x] **Class 7 · Biology · Nutrition in plants (photosynthesis).** 3 sims (Biology now live, new branch `plants`; from feedback #1): photosynthesis-leaf (leaf cross-section with palisade and spongy cells, vein and stoma; CO₂ through the stoma, water from the xylem, glucose to the phloem, O₂ out, counters in the 6 : 6 : 1 : 6 ratio; sunlight, CO₂ level, dry soil closing the stomata, chlorophyll on/off; limiting factor), oxygen-bubbles (Hydrilla under a funnel with a test tube; lamp distance 10–100 cm by slider or drag, inverse-square light, baking soda, colour filters, bubbles counted per minute, record points on a rate–distance graph, glowing-splint test), starch-test (step-by-step: sunlight, boil, alcohol, rinse, iodine; black paper strip, variegated leaf, KOH bag vs control; destarching on/off and 0–8 h of sunlight). Done 2026-10-10.
 - [x] **Class 11 · Physics · Kinetic theory of gases.** 3 sims (branch `thermodynamics`): gas-pressure-molecules, gas-laws-piston, molecular-speeds (hard spheres in a thin slab with real 3-D collisions; "same speed" start spreads into the Maxwell curve; smoothed histogram vs f(v), v_p, v̄, v_rms marked, compare 2T, T/2, He or CO₂, share faster than 1000 m/s, spread-of-speeds graph). Done 2026-10-10.
 - [x] **Class 12 · Physics · Current electricity.** 3 sims (branch `electricity`): drift-velocity, kirchhoffs-laws (two cells and three resistors in a two-loop circuit; junction rule at A, left/right/outer loop rule with rises and drops in numbers, negative currents explained, reversible cell E₂), wheatstone-bridge (diamond bridge with ratio arms and galvanometer, V_B and V_D shown; metre bridge with a draggable jockey, null point, four hidden coils with reveal and % error). Done 2026-10-10.

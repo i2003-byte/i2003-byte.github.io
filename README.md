@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**108 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**112 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -24,7 +24,9 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🧊 **Chemistry: Matter in our surroundings** (3, Class 9) | Solids, Liquids and Gases: The Particle Model · Evaporation and Cooling · Heating Curve of Water: Melting and Boiling |
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
+| 📐 **Mathematics: Statistics and probability** (3, Class 9) | Histogram and Frequency Polygon · Mean, Median and Mode · Coins and Dice: Experimental Probability |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
+| 🌏 **Geography: Weather and climate** (1, Class 7) | Monsoon Winds over India |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
 

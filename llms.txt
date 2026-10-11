@@ -118,13 +118,17 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 ## Geography
 
-Watch the Earth turn and go round the Sun, see why days are long in June and short in December, and find out why India has one clock time.
+Watch the Earth turn and go round the Sun, see why days are long in June and short in December, find out why India has one clock time, and follow the monsoon winds.
 
 ### Earth's Motions
 
 - [Day, Night and Sunrise Across India](https://i2003-byte.github.io/geography/day-night-india/): Spin the Earth seen from above the North Pole and watch the Sun rise in Dibrugarh almost two hours before Dwarka, all on one IST clock. (Beginner)
 - [Revolution and the Seasons](https://i2003-byte.github.io/geography/seasons-revolution/): Send the tilted Earth round the Sun. See how high the noon Sun climbs and how long the day lasts in Delhi, Kanyakumari or Sydney through the year. (Beginner)
 - [Time Zones: IST and World Clocks](https://i2003-byte.github.io/geography/time-zones/): Move the clock in India and watch day and night sweep across a world map. Why is IST 5 h 30 min ahead of Greenwich, and where is it already tomorrow? (Beginner)
+
+### Weather & Climate
+
+- [Monsoon Winds over India](https://i2003-byte.github.io/geography/monsoon-winds/): Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea. (Beginner)
 
 ## Economics
 
@@ -170,13 +174,19 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 
 ## Mathematics
 
-Turn a transversal across parallel lines, tear the corners off a triangle and slide four triangles around a square to prove Pythagoras. Drag the shapes and watch the rules hold.
+Turn a transversal across parallel lines, tear the corners off a triangle and slide four triangles around a square to prove Pythagoras. Draw histograms, balance data on its mean and toss coins a thousand times to watch probability settle.
 
 ### Lines, Angles & Triangles
 
 - [Parallel Lines and a Transversal](https://i2003-byte.github.io/mathematics/parallel-lines-angles/): Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule. (Beginner)
 - [Angle Sum of a Triangle](https://i2003-byte.github.io/mathematics/triangle-angle-sum/): Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property. (Beginner)
 - [Pythagoras' Theorem by Rearrangement](https://i2003-byte.github.io/mathematics/pythagoras-proof/): Watch four copies of a right triangle slide around inside a big square: the empty space changes from c² into a² + b². Draw squares on the sides and see why the theorem needs a right angle. (Intermediate)
+
+### Statistics & Probability
+
+- [Histogram and Frequency Polygon](https://i2003-byte.github.io/mathematics/histogram-polygon/): Group test marks, heights or temperatures into classes and draw a histogram and a frequency polygon. Change the class width, read the tally table and see why unequal classes need adjusted heights. (Beginner)
+- [Mean, Median and Mode](https://i2003-byte.github.io/mathematics/mean-median-mode/): Drag dots on a number line and watch the mean, median and mode change. The line balances at the mean, the middle of the sorted list is the median, and an outlier shows which average to trust. (Beginner)
+- [Coins and Dice: Experimental Probability](https://i2003-byte.github.io/mathematics/coin-dice-probability/): Toss coins and throw dice ten, a hundred or a thousand times. Watch the experimental probability wobble and then settle close to the theoretical value, for one coin, one die, two coins and two dice. (Beginner)
 
 ## Biology
 

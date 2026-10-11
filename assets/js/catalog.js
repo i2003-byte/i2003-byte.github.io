@@ -96,7 +96,7 @@ SimLab.subjects = [
     tagline: 'Spin the Earth, chase the seasons and read the clocks of the world.',
     description:
       'Watch the Earth turn and go round the Sun, see why days are long in June ' +
-      'and short in December, and find out why India has one clock time.',
+      'and short in December, find out why India has one clock time, and follow the monsoon winds.',
     status: 'live',
     branches: [
       { id: 'earth-motions', name: "Earth's Motions" },
@@ -162,13 +162,14 @@ SimLab.subjects = [
     tagline: 'Drag, twist and explore the shapes behind the formulas.',
     description:
       'Turn a transversal across parallel lines, tear the corners off a triangle and slide ' +
-      'four triangles around a square to prove Pythagoras. Drag the shapes and watch the rules hold.',
+      'four triangles around a square to prove Pythagoras. Draw histograms, balance data on its mean ' +
+      'and toss coins a thousand times to watch probability settle.',
     status: 'live',
     branches: [
       { id: 'geometry', name: 'Lines, Angles & Triangles' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
-      { id: 'probability', name: 'Probability' }
+      { id: 'probability', name: 'Statistics & Probability' }
     ]
   },
   {
@@ -1026,6 +1027,22 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-09-29',
     prerequisites: ['day-night-india', 'seasons-revolution']
+  },
+  {
+    id: 'monsoon-winds',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'Monsoon Winds over India',
+    description:
+      'Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea.',
+    level: 'Beginner',
+    tags: ['monsoon', 'winds', 'air pressure', 'land and sea', 'rainfall', 'climate', 'weather', 'india', 'rain shadow', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/monsoon-winds.svg',
+    link: '/geography/monsoon-winds/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-11',
+    prerequisites: ['seasons-revolution']
   },
   {
     id: 'demand-curve',
@@ -1918,6 +1935,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-09',
     prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'histogram-polygon',
+    subject: 'mathematics',
+    branch: 'probability',
+    title: 'Histogram and Frequency Polygon',
+    description:
+      'Group test marks, heights or temperatures into classes and draw a histogram and a frequency polygon. Change the class width, read the tally table and see why unequal classes need adjusted heights.',
+    level: 'Beginner',
+    tags: ['statistics', 'histogram', 'frequency polygon', 'class interval', 'class mark', 'frequency distribution', 'tally', 'grouped data', 'class 9'],
+    thumbnail: '/assets/img/thumbs/histogram-polygon.svg',
+    link: '/mathematics/histogram-polygon/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-11',
+    prerequisites: []
+  },
+  {
+    id: 'mean-median-mode',
+    subject: 'mathematics',
+    branch: 'probability',
+    title: 'Mean, Median and Mode',
+    description:
+      'Drag dots on a number line and watch the mean, median and mode change. The line balances at the mean, the middle of the sorted list is the median, and an outlier shows which average to trust.',
+    level: 'Beginner',
+    tags: ['statistics', 'mean', 'median', 'mode', 'average', 'range', 'outlier', 'central tendency', 'dot plot', 'class 7', 'class 9', 'class 10'],
+    thumbnail: '/assets/img/thumbs/mean-median-mode.svg',
+    link: '/mathematics/mean-median-mode/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-11',
+    prerequisites: ['histogram-polygon']
+  },
+  {
+    id: 'coin-dice-probability',
+    subject: 'mathematics',
+    branch: 'probability',
+    title: 'Coins and Dice: Experimental Probability',
+    description:
+      'Toss coins and throw dice ten, a hundred or a thousand times. Watch the experimental probability wobble and then settle close to the theoretical value, for one coin, one die, two coins and two dice.',
+    level: 'Beginner',
+    tags: ['probability', 'experimental probability', 'theoretical probability', 'coin', 'dice', 'random', 'law of large numbers', 'statistics', 'class 9', 'class 10'],
+    thumbnail: '/assets/img/thumbs/coin-dice-probability.svg',
+    link: '/mathematics/coin-dice-probability/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-11',
+    prerequisites: ['mean-median-mode']
   },
   {
     id: 'drift-velocity',

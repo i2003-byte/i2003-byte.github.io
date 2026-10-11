@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Coins and Dice: Experimental Probability — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Toss coins and throw dice ten, a hundred or a thousand times. Watch the experimental probability wobble and then settle close to the theoretical value, for one coin, one die, two coins and two dice.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/coin-dice-probability/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Coins and Dice: Experimental Probability — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Toss coins and throw dice ten, a hundred or a thousand times. Watch the experimental probability wobble and then settle close to the theoretical value, for one coin, one die, two coins and two dice.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/coin-dice-probability/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="coin-dice-probability">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When you toss a coin you cannot say whether it will land Head or Tail. But toss it many times and about half the tosses are Heads. Probability puts a number on “how likely”.</p>
+            <p>The <strong>experimental</strong> (empirical) probability comes from actually doing the trials. The <strong>theoretical</strong> probability comes from counting equally likely outcomes. With a few trials the two can be far apart; with thousands of trials they get very close.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">experimental P(E) = number of trials in which E happened ÷ total number of trials</code>
+            <code class="formula">theoretical P(E) = number of outcomes favourable to E ÷ number of possible outcomes</code>
+            <p class="formula-note">Only when all outcomes are equally likely. Every probability is between 0 (impossible) and 1 (certain).</p>
+            <p>Two coins: HH, HT, TH, TT are equally likely, so P(exactly one Head) = 2/4 = 1/2, but P(two Heads) = 1/4. Two dice: 36 equally likely pairs; 6 of them add up to 7, so P(sum 7) = 6/36 = 1/6, the most likely sum.</p>
+            <p class="formula-note">The computer's random numbers act as a perfectly fair coin and die.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The toss at the start of a cricket match is fair because P(Head) = P(Tail) = 1/2.</li>
+              <li>Insurance companies use experimental probability from thousands of past cases to set premiums.</li>
+              <li>A weather forecast of “70% chance of rain” means rain fell on about 70 of 100 similar past days.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Toss one coin 10 times. Did you get exactly 5 Heads? Clear it (the reset button) and try again a few times.<details><summary>Show answer</summary>Usually not exactly 5: 3, 4, 6 or 7 Heads are common. In only 10 tosses the experimental probability often differs from 0.5 by 0.1 or more.</details></li>
+              <li>Now press “Toss 1000 times” a few times. How close does the experimental probability get to 0.5?<details><summary>Show answer</summary>Within about 0.01 to 0.02 after a few thousand tosses. The graph wobbles a lot at first and then flattens out near the theory line.</details></li>
+              <li>Throw one die 600 times. About how many 6s do you expect?<details><summary>Show answer</summary>About 600 × 1/6 = 100. You will usually get between 85 and 115.</details></li>
+              <li>Toss two coins many times. Is “0 Heads, 1 Head, 2 Heads” a fair three-way split?<details><summary>Show answer</summary>No. “1 Head” comes up about half the time, because it can happen in two ways (HT and TH). 0 Heads and 2 Heads each come up about a quarter of the time.</details></li>
+              <li>Throw two dice 1000 times. Which sum comes up most, and which least?<details><summary>Show answer</summary>7 is most common (6 ways out of 36). 2 and 12 are least common (1 way each, 1/36 ≈ 0.028).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Trial:</strong> one toss or throw. <strong>Outcome:</strong> what can happen in one trial.</li>
+              <li><strong>Event:</strong> one or more outcomes we are interested in, like “a 6” or “sum is 7”.</li>
+              <li><strong>Equally likely:</strong> no outcome is more likely than another, as for a fair coin or die.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="monsoon-winds">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M120 0L250 0L250 40L232 48L200 52L178 60L160 58L140 54L120 60L105 64L98 80L112 88L118 110L128 140L142 172L152 180L160 168L168 142L184 118L208 100L226 86L236 78L250 74L250 0Z" fill="#b45309" fill-opacity=".75"/>
+  <path d="M100 0H260V36L238 44L214 46L190 50L162 50L140 46L120 50L100 46Z" fill="#78716c"/>
+  <path d="M110 44L140 42L170 47L200 45L230 40" fill="none" stroke="#e7e5e4" stroke-width="4"/>
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="#ffffff">
+    <path d="M30 150L80 128"/><path d="M80 128L70 124L74 134Z"/>
+    <path d="M30 110L82 92"/><path d="M82 92L71 89L76 99Z"/>
+    <path d="M210 175L235 135"/><path d="M235 135L226 140L236 145Z"/>
+    <path d="M260 160L280 118"/><path d="M280 118L271 123L281 128Z"/>
+  </g>
+  <g fill="#e2e8f0"><circle cx="118" cy="110" r="9"/><circle cx="130" cy="104" r="12"/><circle cx="142" cy="110" r="9"/></g>
+  <g stroke="#93c5fd" stroke-width="2"><path d="M120 122l-3 9M130 122l-3 9M140 122l-3 9"/></g>
+  <text x="160" y="85" font-family="sans-serif" font-size="26" font-weight="800" fill="#fca5a5" text-anchor="middle">L</text>
+</svg>
