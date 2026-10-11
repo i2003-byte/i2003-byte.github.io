@@ -33,6 +33,9 @@ SimLab.site = {
   tagline: 'Interactive science simulations',
   url: 'https://i2003-byte.github.io',
   github: 'https://github.com/i2003-byte/i2003-byte.github.io',
+  // Hidden visitor counter (GoatCounter: no cookies, no personal data), approved by the owner.
+  // Loaded once for every page by nav.js, only on the live site. Don't remove or duplicate it.
+  analytics: 'https://simlab-edu.goatcounter.com/count',
   // Issue links are built from the GitHub URL above:
   get issues() { return this.github + '/issues/new?title=' + encodeURIComponent('Issue: '); },
   get suggest() {

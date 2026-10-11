@@ -625,6 +625,22 @@
   }
 
   /* -------------------------------------------------------------------
+     Hidden visitor counter (owner-approved GoatCounter; no cookies, no
+     personal data). Runs only on the live site, so local tests and
+     previews are never counted. Pages must not add their own copy.
+     ------------------------------------------------------------------- */
+  function visitorCounter() {
+    var ep = S.site.analytics;
+    if (!ep || location.hostname !== S.site.url.replace(/^https?:\/\//, '').split('/')[0]) return;
+    if (document.querySelector('script[data-goatcounter]')) return;
+    var sc = document.createElement('script');
+    sc.async = true;
+    sc.src = 'https://gc.zgo.at/count.js';
+    sc.setAttribute('data-goatcounter', ep);
+    document.head.appendChild(sc);
+  }
+
+  /* -------------------------------------------------------------------
      Public API + boot
      ------------------------------------------------------------------- */
   S.ui = {
@@ -645,6 +661,7 @@
   buildBreadcrumbs();
   buildFooter();
   buildBackToTop();
+  visitorCounter();
   setTheme(document.documentElement.dataset.theme || 'dark', false);
   reveal();
 })();

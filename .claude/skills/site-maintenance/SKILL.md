@@ -49,6 +49,7 @@ Quick tests, a few seconds each. Fix anything broken before step 5b.
 - **References:** every file path named in `AGENTS.md`, `CLAUDE.md` and `.claude/skills/*/SKILL.md` exists, and the skills agree with each other and with AGENTS.md (e.g. simulations per run, approved subjects).
 - **CI:** the latest "Site check" runs on `main` are green: `curl -sS "https://api.github.com/repos/i2003-byte/i2003-byte.github.io/actions/runs?branch=main&per_page=10"` (look at `name` and `conclusion`).
 - **Daily runs are happening:** `PROGRESS.md` has routine entries from the last 2 days. If not, write **NEEDS HUMAN** (the owner checks the routines).
+- **Visitor counter:** `check.mjs` verifies the counter is configured and loaded once by `nav.js` (AGENTS.md rule 11). If the check reports it, restore it; never remove it to make a check pass.
 - **Size:** AGENTS.md stays short (Gotchas about 20 lines or fewer, Current content is a list, not prose) so every run stays cheap to start.
 
 ## 5. Tidy
@@ -62,7 +63,7 @@ Capabilities are site features beyond new simulations. There is **no fixed list*
 3. **Qualify each candidate. Skip it if any answer is "yes":**
    - **Too costly:** would it take a large share of this run, touch many simulation files one by one, or need ongoing per-simulation work from the daily builders?
    - **Disruptive:** could it change how existing simulations look or behave, break share links, move or rename things, or need a redesign?
-   - **Platform-heavy:** does it need a framework, build step, server, outside service or script, accounts, tracking or data collection, ads or payments, or a change to the engine's existing API?
+   - **Platform-heavy:** does it need a framework, build step, server, outside service or script, accounts, tracking or data collection, ads or payments, or a change to the engine's existing API? (The owner-approved visitor counter already exists; never add another.)
    - **Low value:** is it nice-to-have rather than something students or teachers would notice and use?
    Pick the best candidate that passes. If none passes, add none this week and say so in `PROGRESS.md`. That is a fine outcome.
    Ideas that are valuable but fail only the platform test go to 💡 Proposed with a one-line reason, for a human.

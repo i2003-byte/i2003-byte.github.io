@@ -25,6 +25,7 @@ It deploys from the `main` branch via GitHub Pages. There is no build step.
    This includes commit messages and trailers: use only the generic `Co-Authored-By: Claude <noreply@anthropic.com>` that `.claude/settings.json` configures. `tools/check.mjs` blocks pushes whose files or unpushed commit messages contain model names or session links.
 9. **Never edit generated files by hand:** `sitemap.xml`, `llms.txt`, `robots.txt`. Regenerate them with `node tools/check.mjs --write`.
 10. **Keep `.nojekyll`.** Without it, GitHub Pages hides `/_template/`.
+11. **One hidden visitor counter, approved by the owner:** GoatCounter (`simlab-edu`, no cookies, no personal data), set in `SimLab.site.analytics` and loaded once for every page by `visitorCounter()` in `nav.js`, only on the live site. Keep it. Never add a copy to a page, and never add any other analytics or tracking. `tools/check.mjs` enforces this. The owner reads the numbers at https://simlab-edu.goatcounter.com.
 
 ## Workflow (every change)
 **Start of every session:** get the latest `main` (`git fetch origin main && git checkout -B <work-branch> origin/main`), then read the top 3 entries of `PROGRESS.md` to see where the last session stopped.
@@ -53,7 +54,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 - Humans may edit `ROADMAP.md` at any time. Agents must respect its current order and content.
 - **Weekly maintenance** follows `.claude/skills/site-maintenance/SKILL.md`: full checks and browser tests, fix regressions, unstick the roadmap, test that the harness itself still works (hook, CI, settings, references), tidy, and record lessons.
   - Then, only if all green, it may add **one** site capability per week. There is no fixed list: it picks one fresh and logs it in `ROADMAP.md` → 🧩 Capabilities.
-  - It skips anything costly, disruptive to existing simulations, or platform-heavy (frameworks, servers, outside services, tracking, accounts, ads, engine API changes). Adding none is fine.
+  - It skips anything costly, disruptive to existing simulations, or platform-heavy (frameworks, servers, outside services, tracking, accounts, ads, engine API changes). Adding none is fine. (The owner-approved visitor counter in rule 11 is the only exception and already exists.)
   - Daily runs build simulations only; they never take capability items.
 - **Learn from mistakes:** whenever you fix a non-obvious bug or a blocked push, add a one-line lesson to **Gotchas** below. Keep it at about 20 lines or fewer.
 - **Visitor feedback** arrives as GitHub Issues (the feedback box on every simulation page).
@@ -73,7 +74,7 @@ git add -A && git commit -m "…" && git push origin HEAD:main
 | One simulation's behaviour | `<subject>/<id>/sim.js` |
 | One simulation's page text (Learn panel, meta tags) | `<subject>/<id>/index.html` |
 | Thumbnails | `assets/img/thumbs/<id>.svg` (320×200 SVG) |
-| Site name, GitHub URL, "New" badge window | `SimLab.site` at the top of `catalog.js` |
+| Site name, GitHub URL, "New" badge window, visitor counter address | `SimLab.site` at the top of `catalog.js` |
 
 ## Recipes
 - **Continue the roadmap / scheduled run.** Follow `.claude/skills/roadmap-run/SKILL.md`.

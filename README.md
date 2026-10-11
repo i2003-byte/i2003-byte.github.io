@@ -39,7 +39,8 @@ SimLab is a free collection of interactive science simulations for school studen
 - **Works everywhere:** phone and desktop layouts, light and dark themes, keyboard shortcuts, screen-reader labels and reduced-motion support
 - **Fast and simple:**
   - Plain HTML, CSS and JavaScript
-  - No frameworks, no build step, no tracking
+  - No frameworks, no build step, no cookies
+  - One hidden, anonymous visitor counter ([GoatCounter](https://www.goatcounter.com)): no cookies, no personal data, loaded once by `assets/js/nav.js` on the live site only
   - Hosted free on GitHub Pages
 
 ## Suggest a simulation or report a problem

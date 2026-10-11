@@ -140,6 +140,13 @@ for (const id of S.site.showcase || []) {
   if (!m || m.status !== 'live') warn(`SimLab.site.showcase: "${id}" is not a live simulation (home page "Tap & play" row)`);
 }
 
+/* ---------- visitor counter (owner-approved GoatCounter, loaded once by nav.js) ---------- */
+{
+  const navJs = fs.readFileSync(path.join(ROOT, 'assets/js/nav.js'), 'utf8');
+  if (S.site.analytics !== 'https://simlab-edu.goatcounter.com/count') err('catalog.js: SimLab.site.analytics must stay "https://simlab-edu.goatcounter.com/count" (the owner\'s visitor counter)');
+  if (!/visitorCounter\(\);/.test(navJs) || !navJs.includes('gc.zgo.at/count.js')) err('assets/js/nav.js: the visitor counter (visitorCounter) must stay in place and be called at boot');
+}
+
 /* ---------- 5 + 6. HTML pages ---------- */
 for (const f of files.filter((f) => f.endsWith('.html'))) {
   const html = fs.readFileSync(f, 'utf8');
@@ -147,6 +154,7 @@ for (const f of files.filter((f) => f.endsWith('.html'))) {
   if (!/<title>[^<]+<\/title>/.test(html)) err(`${r}: missing <title>`);
   if (!/<meta name="description" content="[^"]+"/.test(html)) err(`${r}: missing meta description`);
   if (!/<meta name="viewport"/.test(html)) err(`${r}: missing viewport meta (needed for phones)`);
+  if (/<script[^>]*(goatcounter|gc\.zgo\.at|googletagmanager|google-analytics)|gtag\(/i.test(html)) err(`${r}: no analytics scripts in pages; the one visitor counter is loaded by nav.js`);
   for (const [, url] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     if (/^(https?:|mailto:|#|data:|javascript:)/.test(url)) continue;
     const clean = url.split(/[?#]/)[0];
