@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Climate Graphs of Indian Cities — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/climate-graphs/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Climate Graphs of Indian Cities — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/climate-graphs/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="climate-graphs">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Weather</strong> is what the air is like today. <strong>Climate</strong> is the usual pattern of weather over many years. A <strong>climate graph</strong> (climograph) shows a place's climate in one picture: <strong>bars</strong> for the rain that normally falls in each month and a <strong>line</strong> for the normal temperature of each month.</p>
+            <p>India has very different climates. Coasts facing the monsoon winds are wet, the Thar desert gets almost no rain, Leh in the high Himalaya is a cold desert, and places far from the sea, like Delhi, have hot summers and cool winters.</p>
+          </section>
+          <section>
+            <h3>🧮 How to read it</h3>
+            <code class="formula">rain in a year = add up the 12 bars</code>
+            <code class="formula">temperature range = warmest month − coldest month</code>
+            <p class="formula-note">Read rain on the left axis (mm) and temperature on the right axis (°C). Watch the rain scale: it changes from city to city unless you switch on the same scale for all.</p>
+            <p>Things to look for: when is the rainy season and how long is it; how many months are dry; is the temperature line flat (near the sea or the equator) or a big hill (inland, far from the sea); is it ever near 0 °C (high mountains).</p>
+            <p class="formula-note">The numbers are rounded long-term monthly averages (about 30 years of weather records). The temperature is the average of the day's highest and lowest. Leh's rain includes melted snow. Climate types are simple descriptions, not an official scheme.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Farmers plan sowing with the climate: kharif crops (rice, cotton) start with the June rains; rabi crops (wheat, mustard) grow in the cool, dry winter of the northern plains.</li>
+              <li>Sohra (Cherrapunji) gets more rain in July alone than Delhi gets in three years.</li>
+              <li>Houses in Jaisalmer have thick walls and small windows against the heat; houses in Kerala have sloping roofs to shed heavy rain.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Pick Mumbai, then Chennai. Which months are the wettest in each city? Why are they different?<details><summary>Show answer</summary>Mumbai: July (840 mm), from the south-west monsoon. Chennai: November (350 mm). Tamil Nadu lies in the rain shadow of the Western Ghats in summer and gets its main rain from the north-east (retreating) monsoon in October–December.</details></li>
+              <li>Compare Thiruvananthapuram with Delhi. Which has the bigger temperature range, and why?<details><summary>Show answer</summary>Delhi: 34 − 14 = 20 °C; Thiruvananthapuram: 29 − 27 = 2 °C. Thiruvananthapuram is beside the sea and close to the equator, so its temperature hardly changes. Delhi is far from the sea, so it heats up a lot in summer and cools a lot in winter.</details></li>
+              <li>Look at Leh and Jaisalmer. Both are deserts. What is the big difference?<details><summary>Show answer</summary>Both get very little rain (about 100 mm and 210 mm a year), but Leh is cold: its winter months are below 0 °C because it is 3,500 m high. Jaisalmer is a hot desert with a warmest month of 34 °C.</details></li>
+              <li>Pick Sohra and switch on “Same rain scale”. Then pick Delhi. What do you notice?<details><summary>Show answer</summary>Sohra's July bar (2,900 mm) reaches almost the top, while Delhi's bars are tiny. Sohra gets about 11,400 mm a year, about 14 times Delhi's 785 mm. Without the same scale, the two graphs look much more alike than they are.</details></li>
+              <li>Press “🎲 Mystery city” and guess the city from the graph. Can you get three right in a row?<details><summary>Show answer</summary>Clues: a temperature line below 0 °C means Leh; tiny bars and a 34 °C summer mean Jaisalmer; a wettest month of October or November means Chennai; two rainy peaks with a flat line mean Thiruvananthapuram; giant bars mean Sohra.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Climate:</strong> the average weather of a place over many years.</li>
+              <li><strong>Climograph:</strong> a graph of monthly rainfall (bars) and temperature (line).</li>
+              <li><strong>Temperature range:</strong> the difference between the warmest and the coldest month.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

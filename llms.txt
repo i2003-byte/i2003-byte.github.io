@@ -118,7 +118,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 
 ## Geography
 
-Watch the Earth turn and go round the Sun, see why days are long in June and short in December, find out why India has one clock time, and follow the monsoon winds.
+Watch the Earth turn and go round the Sun, see why days are long in June and short in December, find out why India has one clock time, follow the monsoon winds, watch clouds and rain form over the Western Ghats and read the climate graphs of Indian cities.
 
 ### Earth's Motions
 
@@ -129,6 +129,8 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 ### Weather & Climate
 
 - [Monsoon Winds over India](https://i2003-byte.github.io/geography/monsoon-winds/): Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea. (Beginner)
+- [Humidity, Clouds and Rain](https://i2003-byte.github.io/geography/humidity-clouds-rain/): Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow. (Intermediate)
+- [Climate Graphs of Indian Cities](https://i2003-byte.github.io/geography/climate-graphs/): Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph. (Beginner)
 
 ## Economics
 
@@ -158,7 +160,7 @@ Count in binary, wire up logic gates and race sorting algorithms. The ideas insi
 
 ## Chemistry
 
-See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, test everyday solutions with indicators and the pH scale, and neutralise acids with bases.
+See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, test everyday solutions with indicators and the pH scale, neutralise acids with bases, balance chemical equations and watch the main types of reactions happen.
 
 ### Matter & Its States
 
@@ -171,6 +173,11 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Natural Indicators: Litmus, Turmeric and China Rose](https://i2003-byte.github.io/chemistry/natural-indicators/): Test lemon juice, vinegar, soap water, baking soda and more with litmus paper, turmeric paper and china rose solution. Watch the colours change and work out which solutions are acidic, basic or neutral. (Beginner)
 - [Neutralisation: Acid Meets Base](https://i2003-byte.github.io/chemistry/neutralisation/): Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping. (Beginner)
 - [The pH Scale: How Acidic, How Basic?](https://i2003-byte.github.io/chemistry/ph-scale/): Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7. (Beginner)
+
+### Reactions
+
+- [Balancing Chemical Equations](https://i2003-byte.github.io/chemistry/balancing-equations/): Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis. (Intermediate)
+- [Types of Chemical Reactions](https://i2003-byte.github.io/chemistry/reaction-types/): Watch particles react: combination, decomposition with heat or sunlight, displacement of copper by iron and zinc, and a double displacement that forms a white precipitate. (Intermediate)
 
 ## Mathematics
 

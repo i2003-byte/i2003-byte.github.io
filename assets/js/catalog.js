@@ -96,7 +96,8 @@ SimLab.subjects = [
     tagline: 'Spin the Earth, chase the seasons and read the clocks of the world.',
     description:
       'Watch the Earth turn and go round the Sun, see why days are long in June ' +
-      'and short in December, find out why India has one clock time, and follow the monsoon winds.',
+      'and short in December, find out why India has one clock time, follow the monsoon winds, ' +
+      'watch clouds and rain form over the Western Ghats and read the climate graphs of Indian cities.',
     status: 'live',
     branches: [
       { id: 'earth-motions', name: "Earth's Motions" },
@@ -143,7 +144,8 @@ SimLab.subjects = [
     tagline: 'Atoms, bonds and reactions you can build and break.',
     description:
       'See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, ' +
-      'test everyday solutions with indicators and the pH scale, and neutralise acids with bases.',
+      'test everyday solutions with indicators and the pH scale, neutralise acids with bases, ' +
+      'balance chemical equations and watch the main types of reactions happen.',
     status: 'live',
     branches: [
       { id: 'matter', name: 'Matter & Its States' },
@@ -1045,6 +1047,38 @@ SimLab.simulations = [
     prerequisites: ['seasons-revolution']
   },
   {
+    id: 'humidity-clouds-rain',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'Humidity, Clouds and Rain',
+    description:
+      'Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow.',
+    level: 'Intermediate',
+    tags: ['humidity', 'relative humidity', 'dew point', 'evaporation', 'condensation', 'clouds', 'rain', 'water cycle', 'rain shadow', 'western ghats', 'weather', 'class 7', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/humidity-clouds-rain.svg',
+    link: '/geography/humidity-clouds-rain/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-12',
+    prerequisites: ['monsoon-winds']
+  },
+  {
+    id: 'climate-graphs',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'Climate Graphs of Indian Cities',
+    description:
+      'Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph.',
+    level: 'Beginner',
+    tags: ['climate', 'climograph', 'climate graph', 'rainfall', 'temperature', 'weather and climate', 'india', 'cities', 'desert', 'monsoon', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/climate-graphs.svg',
+    link: '/geography/climate-graphs/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-12',
+    prerequisites: ['monsoon-winds']
+  },
+  {
     id: 'demand-curve',
     subject: 'economics',
     branch: 'markets',
@@ -1839,6 +1873,38 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-08',
     prerequisites: ['natural-indicators']
+  },
+  {
+    id: 'balancing-equations',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Balancing Chemical Equations',
+    description:
+      'Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis.',
+    level: 'Intermediate',
+    tags: ['chemical equation', 'balancing', 'atoms', 'conservation of mass', 'coefficients', 'reactants', 'products', 'combustion', 'class 9', 'class 10'],
+    thumbnail: '/assets/img/thumbs/balancing-equations.svg',
+    link: '/chemistry/balancing-equations/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-12',
+    prerequisites: []
+  },
+  {
+    id: 'reaction-types',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Types of Chemical Reactions',
+    description:
+      'Watch particles react: combination, decomposition with heat or sunlight, displacement of copper by iron and zinc, and a double displacement that forms a white precipitate.',
+    level: 'Intermediate',
+    tags: ['chemical reactions', 'combination', 'decomposition', 'displacement', 'double displacement', 'precipitate', 'reactivity series', 'exothermic', 'endothermic', 'particles', 'class 10'],
+    thumbnail: '/assets/img/thumbs/reaction-types.svg',
+    link: '/chemistry/reaction-types/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-12',
+    prerequisites: ['balancing-equations']
   },
   {
     id: 'states-of-matter',

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Types of Chemical Reactions — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch particles react: combination, decomposition with heat or sunlight, displacement of copper by iron and zinc, and a double displacement that forms a white precipitate.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/reaction-types/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Types of Chemical Reactions — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch particles react: combination, decomposition with heat or sunlight, displacement of copper by iron and zinc, and a double displacement that forms a white precipitate.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/reaction-types/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="reaction-types">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a chemical reaction, particles break apart and join up in new ways to make new substances. Most reactions you meet in Class 10 fit one of four patterns:</p>
+            <ul>
+              <li><strong>Combination:</strong> two or more substances join to make one (quicklime + water → slaked lime).</li>
+              <li><strong>Decomposition:</strong> one substance breaks into simpler ones. It needs energy: heat, light or electricity (limestone → lime + carbon dioxide).</li>
+              <li><strong>Displacement:</strong> a more reactive metal pushes a less reactive metal out of its salt solution (iron + copper sulphate → iron sulphate + copper).</li>
+              <li><strong>Double displacement:</strong> two compounds swap partners. Often one new substance does not dissolve and appears as a solid, a <strong>precipitate</strong>.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Patterns</h3>
+            <code class="formula">combination: A + B → AB</code>
+            <code class="formula">decomposition: AB → A + B</code>
+            <code class="formula">displacement: A + BC → AC + B</code>
+            <code class="formula">double displacement: AB + CD → AD + CB</code>
+            <p class="formula-note">Reactions that give out heat are <strong>exothermic</strong> (burning, quicklime with water). Reactions that take in energy are <strong>endothermic</strong> (most decompositions).</p>
+            <p>Reactivity series (part): <strong>K &gt; Na &gt; Ca &gt; Mg &gt; Al &gt; Zn &gt; Fe &gt; Pb &gt; Cu &gt; Ag &gt; Au</strong>. A metal can displace only the metals to its right.</p>
+            <p class="formula-note">Simplified: there are far fewer particles than in real life, and they are not to scale. In solutions, salts are shown as separate ions (Cu²⁺ and SO₄²⁻), and water molecules are left out except where water reacts. Sulphate ions, Na⁺ and Cl⁻ do not change: they are spectator ions. Real reactions also depend on concentration and surface area.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Whitewashing walls: slaked lime from quicklime and water reacts slowly with carbon dioxide in the air to form a shiny coat of calcium carbonate.</li>
+              <li>Lime kilns heat limestone to make quicklime for cement; this decomposition is why cement plants give out a lot of carbon dioxide.</li>
+              <li>Black-and-white photographs used silver salts that darken in light, the same change as silver chloride in sunlight.</li>
+              <li>Iron pipes must not carry copper sulphate solution: the iron would slowly dissolve as copper is deposited.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose “Decomposition: heating limestone” and set the heat to Off. Press Start. What happens? Now set it to Strong.<details><summary>Show answer</summary>With no heat, nothing happens. Decomposition needs energy to break the bonds. With strong heat, carbon dioxide bubbles off and white quicklime (CaO) is left behind. Turn the heat off midway and the reaction stops: it is endothermic.</details></li>
+              <li>Choose “Displacement: iron nail in copper sulphate”. Watch the colour of the solution and the nail.<details><summary>Show answer</summary>Brown copper builds up on the nail, and the blue colour (from Cu²⁺ ions) fades towards pale green (from Fe²⁺ ions). Iron is more reactive than copper, so it takes copper's place in the solution.</details></li>
+              <li>Now choose “copper in iron sulphate”. Does anything happen? Why?<details><summary>Show answer</summary>No. Copper is less reactive than iron, so it cannot push iron out of iron sulphate. The ions just move around.</details></li>
+              <li>Compare zinc and iron in copper sulphate at the same heat. Which one finishes faster?<details><summary>Show answer</summary>Zinc. It is higher in the reactivity series than iron, so it displaces copper more readily. (In the simulation zinc's reaction chance per hit is set higher to show this.)</details></li>
+              <li>Choose “Double displacement”. Which ions form the white solid, and which stay in the solution?<details><summary>Show answer</summary>Ba²⁺ and SO₄²⁻ join to form insoluble barium sulphate, which sinks as a white precipitate. Na⁺ and Cl⁻ stay dissolved as sodium chloride solution.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Precipitate:</strong> an insoluble solid that forms in a solution during a reaction.</li>
+              <li><strong>Exothermic / endothermic:</strong> giving out heat / taking in heat.</li>
+              <li><strong>Reactivity series:</strong> metals listed from most to least reactive.</li>
+              <li><strong>Spectator ion:</strong> an ion that is present but does not take part in the reaction.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="humidity-clouds-rain">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1e3a"/><stop offset="1" stop-color="#1e3a5f"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect x="0" y="170" width="110" height="30" fill="#1d4ed8"/>
+  <path d="M100 200L100 172L140 168L190 70L230 130L320 135L320 200Z" fill="#4d7c3a"/>
+  <path d="M210 200L210 112L230 130L320 135L320 200Z" fill="#b4783c" fill-opacity=".45"/>
+  <circle cx="34" cy="34" r="13" fill="#fbbf24"/>
+  <g stroke="#e0f2fe" stroke-width="2" fill="none" stroke-opacity=".8"><path d="M30 160q4-6 0-12q-4-6 0-12"/><path d="M60 160q4-6 0-12q-4-6 0-12"/><path d="M90 160q4-6 0-12q-4-6 0-12"/></g>
+  <g fill="#cbd5e1"><circle cx="150" cy="104" r="11"/><circle cx="164" cy="96" r="15"/><circle cx="178" cy="104" r="11"/><circle cx="176" cy="76" r="9"/><circle cx="188" cy="70" r="12"/><circle cx="200" cy="76" r="9"/></g>
+  <g stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"><path d="M152 120l-3 9M162 122l-3 9M172 120l-3 9M184 92l-3 9M194 94l-3 9"/></g>
+  <circle cx="110" cy="140" r="16" fill="#f97316" fill-opacity=".25" stroke="#e2e8f0" stroke-width="2"/>
+  <g fill="#38bdf8"><circle cx="104" cy="136" r="2.5"/><circle cx="114" cy="134" r="2.5"/><circle cx="108" cy="146" r="2.5"/><circle cx="117" cy="144" r="2.5"/><circle cx="101" cy="144" r="2.5"/></g>
+  <path d="M60 110L95 110" stroke="#fff" stroke-width="3"/><path d="M95 110l-9-5v10z" fill="#fff"/>
+</svg>

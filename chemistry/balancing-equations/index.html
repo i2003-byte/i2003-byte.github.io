@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Balancing Chemical Equations — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/balancing-equations/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Balancing Chemical Equations — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/balancing-equations/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="balancing-equations">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a chemical reaction, atoms are <strong>not created or destroyed</strong>. They only change partners. So every atom on the left side of an equation (the <strong>reactants</strong>) must turn up on the right side (the <strong>products</strong>). That is why the total mass stays the same: the <strong>law of conservation of mass</strong>.</p>
+            <p>An equation is <strong>balanced</strong> when each element has the same number of atoms on both sides. You balance it by changing the big numbers <strong>in front of</strong> the formulas (coefficients). You must never change the small numbers inside a formula: H₂O₂ is hydrogen peroxide, not water!</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">atoms of an element = coefficient × small number in the formula</code>
+            <p class="formula-note">In 2H₂O there are 2 × 2 = 4 hydrogen atoms and 2 × 1 = 2 oxygen atoms. In 2Pb(NO₃)₂ the bracket doubles everything inside: 2 × 2 × 3 = 12 oxygen atoms.</p>
+            <code class="formula">2H₂ + O₂ → 2H₂O   (H: 4 = 4,  O: 2 = 2)</code>
+            <p>A good method (hit and trial):</p>
+            <ol>
+              <li>Start with the formula that has the most atoms.</li>
+              <li>Balance the elements that appear in only one formula on each side first; leave H, O and free elements (Fe, O₂, H₂) for last.</li>
+              <li>Recount every element after each change.</li>
+              <li>Use the smallest whole numbers: 4H₂ + 2O₂ → 4H₂O is balanced but should be divided by 2.</li>
+            </ol>
+            <p class="formula-note">The atom pictures are not to scale and do not show real shapes or bonds. Physical states (s), (l), (g), (aq) and conditions such as heat or sunlight are left out to keep the equation short.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The LPG cylinder in a kitchen: propane burns as C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. The balanced equation tells engineers how much air a gas stove burner needs.</li>
+              <li>CNG buses run on methane: CH₄ + 2O₂ → CO₂ + 2H₂O.</li>
+              <li>Plants make food by photosynthesis: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (with sunlight and chlorophyll).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Reaction 1: with all numbers at 1, which element is not balanced? Balance it.<details><summary>Show answer</summary>Oxygen: 2 on the left, 1 on the right. Make it 2H₂O; now hydrogen is 2 against 4, so make it 2H₂: 2H₂ + O₂ → 2H₂O.</details></li>
+              <li>Reaction 5 (methane): set CH₄ to 1. How many H₂O and how many O₂ do you need?<details><summary>Show answer</summary>CH₄ has 4 H, so 2H₂O. Then the right has 2 (in CO₂) + 2 (in 2H₂O) = 4 O, so 2O₂: CH₄ + 2O₂ → CO₂ + 2H₂O.</details></li>
+              <li>Reaction 7 (rusting): balance Fe + O₂ → Fe₂O₃. Why are the numbers so big?<details><summary>Show answer</summary>4Fe + 3O₂ → 2Fe₂O₃. Oxygen comes in pairs (O₂) on the left and threes (O₃) on the right, so the smallest number both share is 6: 3O₂ and 2Fe₂O₃, which needs 4Fe.</details></li>
+              <li>Reaction 9 (iron with steam) is the textbook example. Can you balance it without the hint?<details><summary>Show answer</summary>3Fe + 4H₂O → Fe₃O₄ + 4H₂. Start with Fe₃O₄: it needs 3Fe and 4 O, so 4H₂O; then 8 H needs 4H₂.</details></li>
+              <li>Balance reaction 1 as 4H₂ + 2O₂ → 4H₂O. What does the headline say?<details><summary>Show answer</summary>It is balanced, but every number can be divided by 2. Chemists always write the lowest whole numbers: 2H₂ + O₂ → 2H₂O.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Reactants / products:</strong> the substances you start with / the new substances formed.</li>
+              <li><strong>Coefficient:</strong> the number in front of a formula; it tells how many molecules (or units).</li>
+              <li><strong>Skeletal equation:</strong> an equation with the right formulas that is not yet balanced.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

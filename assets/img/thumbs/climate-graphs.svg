@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="climate-graphs">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M40 30V170H290" stroke="#94a3b8" stroke-width="2" fill="none"/>
+  <g fill="#60a5fa">
+    <rect x="48" y="168" width="14" height="2"/><rect x="68" y="168" width="14" height="2"/><rect x="88" y="168" width="14" height="2"/><rect x="108" y="167" width="14" height="3"/>
+    <rect x="128" y="165" width="14" height="5"/><rect x="148" y="105" width="14" height="65"/><rect x="168" y="66" width="14" height="104"/><rect x="188" y="97" width="14" height="73"/>
+    <rect x="208" y="128" width="14" height="42"/><rect x="228" y="159" width="14" height="11"/><rect x="248" y="168" width="14" height="2"/><rect x="268" y="169" width="14" height="1"/>
+  </g>
+  <path d="M55 72L75 68L95 58L115 50L135 46L155 50L175 56L195 58L215 56L235 52L255 56L275 64" fill="none" stroke="#f87171" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="#f87171"><circle cx="135" cy="46" r="5"/><circle cx="55" cy="72" r="5"/></g>
+  <text x="290" y="30" font-family="sans-serif" font-size="16" font-weight="700" fill="#f87171" text-anchor="end">°C</text>
+  <text x="48" y="28" font-family="sans-serif" font-size="14" font-weight="700" fill="#93c5fd">mm</text>
+</svg>

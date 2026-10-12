@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Humidity, Clouds and Rain — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/humidity-clouds-rain/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Humidity, Clouds and Rain — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/humidity-clouds-rain/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="humidity-clouds-rain">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Air always holds some invisible <strong>water vapour</strong>. The sun warms the sea and water <strong>evaporates</strong> into the air above it. How much vapour air can hold depends on its temperature: warm air can hold much more than cold air. <strong>Relative humidity</strong> tells you how full the air is, compared with the most it could hold at that temperature.</p>
+            <p>When moist air is pushed up a mountain, it expands and cools. At the <strong>dew point</strong> it is full (100% humidity), so the extra vapour <strong>condenses</strong> into tiny drops: a cloud. When the drops grow big enough they fall as <strong>rain</strong>. On the far side the air sinks, warms up and dries, so it rarely rains there: a <strong>rain shadow</strong>. Rivers carry the rainwater back to the sea, and the <strong>water cycle</strong> starts again.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">relative humidity = vapour in the air ÷ most it can hold × 100%</code>
+            <p class="formula-note">Air at 30 °C can hold about 27 g of vapour per kg of air; at 10 °C only about 8 g.</p>
+            <code class="formula">rising air cools ≈ 10 °C per km (no cloud) · ≈ 4–6 °C per km (in cloud)</code>
+            <p class="formula-note">Inside a cloud, condensing vapour gives out heat (latent heat), so the air cools more slowly. Sinking air warms by about 10 °C per km.</p>
+            <code class="formula">cloud base ≈ 125 m × (temperature − dew point)</code>
+            <p class="formula-note">A quick rule for air near the ground. If the air is 27 °C and its dew point 23 °C, clouds start about 500 m up.</p>
+            <p class="formula-note">Simplified: one bubble of air moves along the ground and is lifted only by the slope (real air also rises by convection); drops fall out once the cloud holds more than 0.3 g of water per kg of air; the rain depth assumes a 1 km thick layer of such air, so 1 g per kg rained out = 1 mm. Real monsoon rain comes from air flowing in for days, so totals are far larger. Heights are stretched to fit the picture.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Mumbai and the Konkan coast, on the windward side of the Western Ghats, get over 2,000 mm of rain a year; Pune, just behind the Ghats, gets about 700 mm.</li>
+              <li>On a humid day in Chennai or Kolkata, sweat does not evaporate easily, so you feel sticky and hot.</li>
+              <li>Dew on grass on winter mornings forms when the ground cools below the dew point of the air at night. A cold glass of water “sweats” for the same reason.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press “Send the air” with the default settings. At what height does the cloud start to form?<details><summary>Show answer</summary>About 0.4–0.5 km (the dashed “cloud base” line). Over the sea the air reaches about 27 °C with a dew point near 23.5 °C, so it only has to cool by about 3–4 °C before it is full.</details></li>
+              <li>Watch the graph. What happens to the air temperature line when it meets the dew point line?<details><summary>Show answer</summary>The two lines run together: the air is saturated (100% humidity), and it keeps cooling but more slowly, because condensing vapour releases heat. When the air sinks, the temperature line pulls away above the dew point again.</details></li>
+              <li>Compare the air temperature at the end (on the plateau at 0.65 km) with its temperature at the same height on the way up.<details><summary>Show answer</summary>It is warmer on the far side (about 25.5 °C against about 22 °C at that height going up). The air lost water as rain, and the heat released when that vapour condensed stays in the air. That is why rain-shadow areas are warmer and drier.</details></li>
+              <li>Set the mountain to “Low hills 0.5”. Does it still rain?<details><summary>Show answer</summary>Only a little or none: the air is lifted to just above its cloud base, so a thin cloud forms but it hardly grows enough to rain. Higher mountains squeeze out more rain.</details></li>
+              <li>Set the sea to “Cool 22” and the arriving air to 30%. How does the rain change?<details><summary>Show answer</summary>There is less rain (about 1 mm instead of 1.5 mm) and the cloud base is higher (about 0.6 km instead of 0.45 km). Cooler water evaporates less, and cooler air holds less vapour, so the cloud forms higher and holds less water.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Humidity:</strong> the amount of water vapour in the air.</li>
+              <li><strong>Dew point:</strong> the temperature to which air must cool to become saturated.</li>
+              <li><strong>Condensation:</strong> vapour turning into liquid drops.</li>
+              <li><strong>Windward / leeward:</strong> the side of a mountain facing the wind / the sheltered side away from it.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
