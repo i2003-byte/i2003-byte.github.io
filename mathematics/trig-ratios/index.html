@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Trigonometric Ratios — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Resize a right triangle and watch sin, cos and tan stay the same for the same angle. See the opposite, adjacent and hypotenuse, all six ratios, exact values for 30°, 45° and 60° and complementary angles.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/trig-ratios/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Trigonometric Ratios — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Resize a right triangle and watch sin, cos and tan stay the same for the same angle. See the opposite, adjacent and hypotenuse, all six ratios, exact values for 30°, 45° and 60° and complementary angles.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/trig-ratios/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="trig-ratios">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a right-angled triangle, pick one of the two sharp (acute) angles and call it θ. The three sides then get names from where they sit: the <strong>hypotenuse</strong> is the longest side, across from the right angle; the <strong>opposite</strong> side is across from θ; the <strong>adjacent</strong> side is the other side touching θ.</p>
+            <p>Divide one side by another and you get a <strong>trigonometric ratio</strong>. The surprise: for a given angle the ratio is always the same, however big or small the triangle is, because all right triangles with that angle are <strong>similar</strong> (same shape, different size). So a ratio like sin 30° is just a number: 0.5.</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">sin θ = opposite ÷ hypotenuse   cos θ = adjacent ÷ hypotenuse   tan θ = opposite ÷ adjacent</code>
+            <code class="formula">cosec θ = 1 ÷ sin θ   sec θ = 1 ÷ cos θ   cot θ = 1 ÷ tan θ   tan θ = sin θ ÷ cos θ</code>
+            <code class="formula">sin²θ + cos²θ = 1   sin(90° − θ) = cos θ   tan(90° − θ) = cot θ</code>
+            <p class="formula-note">Standard values: sin 30° = 1/2, sin 45° = 1/√2, sin 60° = √3/2; cos goes the other way (cos 30° = √3/2, cos 60° = 1/2); tan 30° = 1/√3, tan 45° = 1, tan 60° = √3. A memory trick: one old way is “Some People Have Curly Brown Hair Through Proper Brushing” (sin = P/H, cos = B/H, tan = P/B, with P = perpendicular, B = base, H = hypotenuse).</p>
+            <p class="formula-note">Lengths are shown to 2 decimal places and ratios to 3, so a calculation with the rounded lengths can differ in the last digit.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A ramp for wheelchairs should rise gently: a slope of 1 in 12 means tan θ = 1/12, an angle of about 4.8°.</li>
+              <li>Surveyors and engineers use tan to find the height of hills, towers and bridges they cannot climb.</li>
+              <li>A ladder leaning against a wall: if it makes 60° with the ground, its foot is cos 60° = half its length from the wall.</li>
+              <li>Roofs, staircases and road slopes in hill stations are designed with these ratios.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set θ = 30° and choose sin. Now change the size of the triangle with the hypotenuse slider. What happens to the sides, and to sin 30°?<details><summary>Show answer</summary>Both the opposite side and the hypotenuse change, but their ratio stays 0.500. The opposite side is always half the hypotenuse when θ = 30°.</details></li>
+              <li>Turn on the half-size similar triangle. Compare its ratio with the big triangle's.<details><summary>Show answer</summary>The same. Both sides are halved, so the fraction does not change. This is why a trigonometric ratio depends only on the angle.</details></li>
+              <li>Choose tan and drag C so θ goes from 5° to 85°. What happens to tan θ? At what angle is it exactly 1?<details><summary>Show answer</summary>tan θ grows from about 0.087 to about 11.4, and keeps growing without limit as θ nears 90°. It is 1 at 45°, where the opposite and adjacent sides are equal (an isosceles right triangle).</details></li>
+              <li>Set θ = 30° and note sin θ. Now turn on “Look from angle C”. Which ratio of 60° has the same value?<details><summary>Show answer</summary>Seen from C, the angle is 60°, and the sides swap roles: the side that was opposite is now adjacent. So cos 60° = sin 30° = 0.5. In general sin θ = cos(90° − θ).</details></li>
+              <li>For any angle, look at sin² + cos² in the numbers panel. Why is it always 1?<details><summary>Show answer</summary>(opposite/hypotenuse)² + (adjacent/hypotenuse)² = (opposite² + adjacent²) ÷ hypotenuse² = 1, by Pythagoras' theorem.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Hypotenuse:</strong> the side opposite the right angle; the longest side.</li>
+              <li><strong>Opposite / adjacent:</strong> the side facing the chosen angle / the shorter side touching it.</li>
+              <li><strong>Similar triangles:</strong> triangles with the same angles; their sides are in the same ratio.</li>
+              <li><strong>Complementary angles:</strong> two angles that add up to 90°, like the two acute angles of a right triangle.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

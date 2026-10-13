@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="unit-circle-graphs">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="70" cy="100" r="50" fill="#ffffff" fill-opacity=".05" stroke="#e2e8f0" stroke-width="2.5"/>
+  <path d="M14 100H310M70 44V156" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M70 100L105 65" stroke="#e2e8f0" stroke-width="3"/><path d="M70 100H105" stroke="#38bdf8" stroke-width="4"/><path d="M105 100V65" stroke="#f472b6" stroke-width="4"/>
+  <circle cx="105" cy="65" r="6" fill="#fbbf24"/>
+  <path d="M140 100C150 82 160 50 182 50S214 82 224 100S256 150 266 150S296 118 304 100" fill="none" stroke="#f472b6" stroke-width="3.5"/>
+  <path d="M105 65H166" stroke="#f472b6" stroke-dasharray="4 4" stroke-width="1.5"/>
+  <circle cx="166" cy="65" r="5" fill="#f472b6"/>
+  <text x="300" y="185" font-family="sans-serif" font-size="16" font-weight="700" fill="#4ade80" text-anchor="end">y = sin θ</text>
+</svg>

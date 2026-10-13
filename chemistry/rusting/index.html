@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rusting of Iron — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Leave iron nails in five test tubes for two weeks: air and water, dry air, boiled water under oil, salt water, and a painted, greased or galvanised nail. See why rust needs both oxygen and water.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/rusting/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Rusting of Iron — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Leave iron nails in five test tubes for two weeks: air and water, dry air, boiled water under oil, salt water, and a painted, greased or galvanised nail. See why rust needs both oxygen and water.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/rusting/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="rusting">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Iron left in moist air slowly turns into a flaky reddish-brown substance: <strong>rust</strong>. Rusting is a chemical reaction, a slow <strong>oxidation</strong>: iron combines with oxygen from the air, with water taking part. It needs <strong>both oxygen and water</strong>. Take away either one and the iron stays bright.</p>
+            <p>Rust is weak and crumbly, and it falls off, so fresh iron below is exposed and the damage keeps going. That is why we protect iron: by keeping air and water away (paint, oil, grease), by covering it with a more reactive metal (zinc in <strong>galvanising</strong>), or by mixing it with other metals to make an <strong>alloy</strong> such as stainless steel.</p>
+          </section>
+          <section>
+            <h3>🧮 The reaction</h3>
+            <code class="formula">4Fe + 3O₂ + 2xH₂O → 2Fe₂O₃·xH₂O (rust, hydrated iron(III) oxide)</code>
+            <p class="formula-note">The x means the amount of water in rust varies. The equation is balanced: 4 iron, 6 + 2x oxygen and 4x hydrogen on each side.</p>
+            <p>The same kind of slow oxidation is called <strong>corrosion</strong> for other metals (silver turns black, copper turns green). In food, oxidation of fats and oils makes them smell and taste bad: <strong>rancidity</strong>. Chips packets are filled with nitrogen and foods get antioxidants or airtight packing to slow it.</p>
+            <p class="formula-note">Simplified: one day passes per second, and the rusting speeds are chosen to show which tube rusts faster, not measured values. Real nails rust in patches that depend on the iron and the room. Tube C is an idealised “no air” tube; in a real one a little air dissolves again over many days.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Iron railings, gates and bridges are painted again every few years. Where the paint chips, rust starts.</li>
+              <li>Galvanised iron sheets, buckets and water pipes have a zinc coat. Even when it is scratched, the zinc corrodes first and saves the iron.</li>
+              <li>Cars, fishing boats and buildings near the sea in Mumbai, Chennai or Goa rust faster because of the salt in the air and spray.</li>
+              <li>Kitchen sinks, spoons and pressure-cooker parts are stainless steel, which does not rust.</li>
+              <li>The Iron Pillar in Delhi has stood for about 1600 years with very little rust. Its iron has a lot of phosphorus, which helps form a protective layer.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Start and let the 14 days run. Which tubes rust, and what do they have in common?<details><summary>Show answer</summary>Only A and D rust (and E if it is unprotected). They are the only tubes where the nail has both oxygen (air) and water. B has no water, C has no oxygen.</details></li>
+              <li>Look closely at nail A while it rusts. Where does the rust appear first?<details><summary>Show answer</summary>Near the waterline, where the nail touches both air and water. Deep in the water there is less dissolved oxygen, and above the water there is less moisture.</details></li>
+              <li>Compare tubes A and D on the graph. How much faster does salt water rust the nail?<details><summary>Show answer</summary>In this model D's rusting rate is about 2.6 times A's: after 2 days A is about 27% rusted and D about 57%. Salt ions let the electric currents of rusting flow more easily.</details></li>
+              <li>Set tube E to “Painted, but scratched”. Then try “Galvanised, but scratched”. What is the difference?<details><summary>Show answer</summary>The scratched paint lets rust start at the scratch. On the scratched galvanised nail the iron stays bright and the zinc turns dull white instead: zinc is more reactive than iron, so it is oxidised first and protects the iron.</details></li>
+              <li>Why is calcium chloride put in tube B, and why is a cork needed?<details><summary>Show answer</summary>Anhydrous calcium chloride absorbs water vapour, so the air in the tube is dry. The cork stops moist air from the room getting back in.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Rusting:</strong> the corrosion of iron by oxygen and water, forming hydrated iron(III) oxide.</li>
+              <li><strong>Corrosion:</strong> a metal being slowly eaten away by substances around it, such as air, water and acids.</li>
+              <li><strong>Galvanisation:</strong> coating iron or steel with a thin layer of zinc.</li>
+              <li><strong>Alloy:</strong> a mixture of a metal with other metals or carbon (stainless steel = iron + chromium + nickel + a little carbon).</li>
+              <li><strong>Rancidity:</strong> the spoiling of fats and oils in food by oxidation.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

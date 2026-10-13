@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heights and Distances — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Find the height of the Qutub Minar, a coconut tree and the Charminar from angles of elevation, and how far a boat is from a lighthouse from the angle of depression.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/heights-distances/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Heights and Distances — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Find the height of the Qutub Minar, a coconut tree and the Charminar from angles of elevation, and how far a boat is from a lighthouse from the angle of depression.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/heights-distances/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="heights-distances">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>You cannot put a measuring tape up the Qutub Minar, but you can measure two things on the ground: how far you stand from its foot, and the angle you look up to see its top. The line from your eye to the top is the <strong>line of sight</strong>. The angle between it and the horizontal is the <strong>angle of elevation</strong>. Distance, height and line of sight make a right triangle, so tan does the rest.</p>
+            <p>Looking <em>down</em> from a height, the angle below the horizontal is the <strong>angle of depression</strong>. The horizontal at the top is parallel to the ground, so the angle of depression from the top equals the angle of elevation from the bottom (alternate angles).</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">tan θ = height ÷ distance ⇒ h = d × tan θ (+ eye height)</code>
+            <code class="formula">two points: x + g = h cot α,  x = h cot β ⇒ h = g ÷ (cot α − cot β)</code>
+            <code class="formula">angle of depression δ from height h: d = h ÷ tan δ</code>
+            <p class="formula-note">Angles are measured from the eye, so add the eye height (about 1.5 m) to the answer, or take it away from the height in the formula. A school clinometer reads to the nearest degree; that small error is why the worked-out answer is a little off. Simplified: flat ground, the top seen exactly above the foot, heights rounded (Qutub Minar 72.5 m, Charminar 56 m, an 18 m coconut tree, a lighthouse lamp 60 m above the sea). People and the boat are drawn larger than scale.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In 1852 the Great Trigonometrical Survey of India worked out the height of Peak XV (Mount Everest) from angles measured from plains more than 100 km away.</li>
+              <li>You can make a clinometer from a protractor, a straw and a thread with a weight, and measure your school building.</li>
+              <li>Lighthouse keepers and coast guards estimate the distance of ships from the angle of depression.</li>
+              <li>Pilots use the angle of the glide path to land: a 3° approach drops about 52 m for every kilometre.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Height of the Qutub Minar: stand 100 m away. What angle do you measure, and what height do you work out?<details><summary>Show answer</summary>About 35° (35.4° exactly). h = 100 × tan 35° + 1.5 = 70.0 + 1.5 = 71.5 m, about 1.4% less than the true 72.5 m, because the clinometer rounds the angle down.</details></li>
+              <li>Turn off “whole degrees”. Does the answer get better? Then switch it back on and move closer to the tower. When is the rounding error biggest?<details><summary>Show answer</summary>With tenths of a degree the answer is within a few tenths of a metre. With whole degrees the error depends on how much the angle is rounded. Half a degree matters most when the angle is very steep (close to the tower, where tan changes fast) or very shallow (far away). Angles near 45° give the most reliable answers.</details></li>
+              <li>Coconut tree: at what distance is the angle of elevation 45°? Why is that a handy distance?<details><summary>Show answer</summary>Between 16 and 17 m: exactly 16.5 m, because the tree is 18 m and the eye 1.5 m high. At 45°, tan = 1, so the height above your eye equals your distance from the tree: no calculator needed.</details></li>
+              <li>Charminar from two points: you measure α from P, walk 50 m closer to Q and measure β. Why do we need two angles?<details><summary>Show answer</summary>When you can't reach the foot (a crowd or a river is in the way), you don't know x. Two angles and the gap give two equations, and subtracting them removes x.</details></li>
+              <li>Lighthouse: move the boat from 150 m to 50 m. What happens to the angle of depression?<details><summary>Show answer</summary>It grows from about 22° to about 50°. The closer the boat, the steeper you look down. The angle of elevation from the boat to the lamp is the same angle.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Line of sight:</strong> the line from the observer's eye to the object.</li>
+              <li><strong>Angle of elevation:</strong> the angle above the horizontal when looking up at an object.</li>
+              <li><strong>Angle of depression:</strong> the angle below the horizontal when looking down at an object.</li>
+              <li><strong>Clinometer:</strong> a simple instrument for measuring angles of elevation.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

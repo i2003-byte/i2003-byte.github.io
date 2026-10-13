@@ -145,7 +145,7 @@ SimLab.subjects = [
     description:
       'See the particles of solids, liquids and gases, melt and boil water, cool it by evaporation, ' +
       'test everyday solutions with indicators and the pH scale, neutralise acids with bases, ' +
-      'balance chemical equations and watch the main types of reactions happen.',
+      'balance chemical equations, watch the main types of reactions happen and leave iron nails to rust.',
     status: 'live',
     branches: [
       { id: 'matter', name: 'Matter & Its States' },
@@ -164,11 +164,13 @@ SimLab.subjects = [
     tagline: 'Drag, twist and explore the shapes behind the formulas.',
     description:
       'Turn a transversal across parallel lines, tear the corners off a triangle and slide ' +
-      'four triangles around a square to prove Pythagoras. Draw histograms, balance data on its mean ' +
-      'and toss coins a thousand times to watch probability settle.',
+      'four triangles around a square to prove Pythagoras. Resize right triangles to discover sin, cos and tan, ' +
+      'trace the sine wave round a circle and find the height of the Qutub Minar. Draw histograms, balance data ' +
+      'on its mean and toss coins a thousand times to watch probability settle.',
     status: 'live',
     branches: [
       { id: 'geometry', name: 'Lines, Angles & Triangles' },
+      { id: 'trigonometry', name: 'Trigonometry' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
       { id: 'probability', name: 'Statistics & Probability' }
@@ -1907,6 +1909,22 @@ SimLab.simulations = [
     prerequisites: ['balancing-equations']
   },
   {
+    id: 'rusting',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Rusting of Iron',
+    description:
+      'Leave iron nails in five test tubes for two weeks: air and water, dry air, boiled water under oil, salt water, and a painted, greased or galvanised nail. See why rust needs both oxygen and water.',
+    level: 'Beginner',
+    tags: ['rusting', 'corrosion', 'oxidation', 'iron', 'galvanisation', 'paint', 'alloy', 'stainless steel', 'rancidity', 'chemical reactions', 'class 7', 'class 10'],
+    thumbnail: '/assets/img/thumbs/rusting.svg',
+    link: '/chemistry/rusting/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-13',
+    prerequisites: ['reaction-types']
+  },
+  {
     id: 'states-of-matter',
     subject: 'chemistry',
     branch: 'matter',
@@ -2001,6 +2019,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-09',
     prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'trig-ratios',
+    subject: 'mathematics',
+    branch: 'trigonometry',
+    title: 'Trigonometric Ratios',
+    description:
+      'Resize a right triangle and watch sin, cos and tan stay the same for the same angle. See the opposite, adjacent and hypotenuse, all six ratios, exact values for 30°, 45° and 60° and complementary angles.',
+    level: 'Intermediate',
+    tags: ['trigonometry', 'sine', 'cosine', 'tangent', 'right triangle', 'hypotenuse', 'similar triangles', 'complementary angles', 'standard angles', 'class 10'],
+    thumbnail: '/assets/img/thumbs/trig-ratios.svg',
+    link: '/mathematics/trig-ratios/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-13',
+    prerequisites: ['pythagoras-proof']
+  },
+  {
+    id: 'unit-circle-graphs',
+    subject: 'mathematics',
+    branch: 'trigonometry',
+    title: 'Unit Circle and Trig Graphs',
+    description:
+      'Send a point round a circle of radius 1 and watch its height trace the sine wave. Compare sin and cos, see why tan is not defined at 90°, and check sin² + cos² = 1.',
+    level: 'Intermediate',
+    tags: ['trigonometry', 'unit circle', 'sine wave', 'cosine', 'tangent', 'graphs', 'quadrants', 'identity', 'class 10', 'class 11'],
+    thumbnail: '/assets/img/thumbs/unit-circle-graphs.svg',
+    link: '/mathematics/unit-circle-graphs/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-13',
+    prerequisites: ['trig-ratios']
+  },
+  {
+    id: 'heights-distances',
+    subject: 'mathematics',
+    branch: 'trigonometry',
+    title: 'Heights and Distances',
+    description:
+      'Find the height of the Qutub Minar, a coconut tree and the Charminar from angles of elevation, and how far a boat is from a lighthouse from the angle of depression.',
+    level: 'Intermediate',
+    tags: ['trigonometry', 'heights and distances', 'angle of elevation', 'angle of depression', 'clinometer', 'tan', 'Qutub Minar', 'line of sight', 'class 10'],
+    thumbnail: '/assets/img/thumbs/heights-distances.svg',
+    link: '/mathematics/heights-distances/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-13',
+    prerequisites: ['trig-ratios']
   },
   {
     id: 'histogram-polygon',
