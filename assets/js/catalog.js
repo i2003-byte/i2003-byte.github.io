@@ -183,8 +183,8 @@ SimLab.subjects = [
     color: '#4ade80',
     tagline: 'Cells, plants and living things, simulated.',
     description:
-      'Look inside a leaf as it makes food, count oxygen bubbles from a water plant and test leaves for starch. ' +
-      'Change the conditions and see how living things respond.',
+      'Explore plant, animal and bacterial cells, watch molecules diffuse and water move by osmosis, look inside a leaf as it makes food ' +
+      'and test leaves for starch. Change the conditions and see how living things respond.',
     status: 'live',
     branches: [
       { id: 'plants', name: 'Plant Nutrition' },
@@ -789,6 +789,22 @@ SimLab.simulations = [
     dateAdded: '2026-09-25',
     prerequisites: ['water-xylophone']
   },
+  {
+    id: 'compressions-rarefactions',
+    subject: 'physics',
+    branch: 'sound',
+    title: 'Sound Waves: Compressions and Rarefactions',
+    description:
+      'Switch on a loudspeaker and watch air particles bunch into compressions and spread into rarefactions. Follow one particle, compare a slinky, and check v = fλ in air, water and steel.',
+    level: 'Intermediate',
+    tags: ['sound', 'longitudinal wave', 'compression', 'rarefaction', 'wavelength', 'frequency', 'speed of sound', 'class 9'],
+    thumbnail: '/assets/img/thumbs/compressions-rarefactions.svg',
+    link: '/physics/compressions-rarefactions/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['vibration']
+  },
 
   /* ---- HEAT: 6 simulations for Class 7 'Heat' ------------------------ */
   {
@@ -982,6 +998,55 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-10',
     prerequisites: ['photosynthesis-leaf']
+  },
+
+  {
+    id: 'cell-explorer',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'Cell Explorer: Plant, Animal and Bacterial Cells',
+    description:
+      'Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself.',
+    level: 'Beginner',
+    tags: ['cell', 'organelles', 'nucleus', 'mitochondria', 'chloroplast', 'prokaryote', 'eukaryote', 'fundamental unit of life', 'class 8', 'class 9'],
+    thumbnail: '/assets/img/thumbs/cell-explorer.svg',
+    link: '/biology/cell-explorer/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: []
+  },
+  {
+    id: 'osmosis',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'Osmosis: Potato, Raisins and Plant Cells',
+    description:
+      'Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope.',
+    level: 'Intermediate',
+    tags: ['osmosis', 'plasmolysis', 'turgid', 'hypotonic', 'hypertonic', 'selectively permeable', 'fundamental unit of life', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/osmosis.svg',
+    link: '/biology/osmosis/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['diffusion']
+  },
+  {
+    id: 'diffusion',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'Diffusion Across a Membrane',
+    description:
+      'Watch glucose and starch molecules wander at random in water. See glucose spread through a selectively permeable membrane until both sides are equal, while starch stays behind. Change the temperature.',
+    level: 'Beginner',
+    tags: ['diffusion', 'concentration gradient', 'brownian motion', 'membrane', 'dynamic equilibrium', 'fundamental unit of life', 'class 9'],
+    thumbnail: '/assets/img/thumbs/diffusion.svg',
+    link: '/biology/diffusion/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['cell-explorer']
   },
 
   {

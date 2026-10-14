@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="osmosis">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c4a6e"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M40 40V170H170V40" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+  <rect x="42" y="60" width="126" height="108" fill="#cbd5e1" fill-opacity=".25"/>
+  <path d="M100 166Q100 120 140 100" fill="none" stroke="#f5deb3" stroke-width="16"/>
+  <rect x="196" y="40" width="100" height="130" rx="8" fill="#38bdf8" fill-opacity=".12" stroke="#94a3b8"/>
+  <path d="M246 46V164" stroke="#a855f7" stroke-width="4" stroke-dasharray="9 5"/>
+  <circle cx="216" cy="80" r="4" fill="#d946ef"/><circle cx="226" cy="130" r="4" fill="#d946ef"/>
+  <circle cx="266" cy="70" r="4" fill="#e2e8f0"/><circle cx="280" cy="100" r="4" fill="#e2e8f0"/><circle cx="262" cy="130" r="4" fill="#e2e8f0"/><circle cx="284" cy="150" r="4" fill="#e2e8f0"/><circle cx="270" cy="160" r="4" fill="#e2e8f0"/>
+  <path d="M226 108H272" stroke="#0ea5e9" stroke-width="4"/><path d="M226 108l10-7v14z" fill="#0ea5e9"/>
+</svg>

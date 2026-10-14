@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sound Waves: Compressions and Rarefactions — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Switch on a loudspeaker and watch air particles bunch into compressions and spread into rarefactions. Follow one particle, compare a slinky, and check v = fλ in air, water and steel.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/compressions-rarefactions/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Sound Waves: Compressions and Rarefactions — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Switch on a loudspeaker and watch air particles bunch into compressions and spread into rarefactions. Follow one particle, compare a slinky, and check v = fλ in air, water and steel.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/compressions-rarefactions/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="compressions-rarefactions">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Sound is made by vibrating objects. As the cone of a loudspeaker (or the prong of a tuning fork) moves forward, it pushes the air particles in front of it closer together: a region of high pressure called a <strong>compression (C)</strong>. As it moves back, it leaves a region where the particles are spread out: a <strong>rarefaction (R)</strong>, with low pressure. These compressions and rarefactions travel outwards one after another.</p>
+            <p>Watch the red particle: it only moves back and forth around its own place. The particles do not travel with the sound; only the <strong>disturbance</strong> (and the energy) moves along. Because the particles vibrate <strong>along</strong> the direction the wave travels, sound is a <strong>longitudinal wave</strong>, just like a pulse sent along a stretched slinky by pushing and pulling one end. Sound needs a medium (a solid, liquid or gas) and cannot travel through a vacuum.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">v = f × λ</code>
+            <p class="formula-note"><strong>Wavelength λ</strong> is the distance between two neighbouring compressions (or two rarefactions). <strong>Frequency f</strong> is the number of compressions passing a point each second, in hertz (Hz). <strong>v</strong> is the speed of sound. In air at 20 °C, a 343 Hz note has λ = 343 ÷ 343 = 1 m.</p>
+            <code class="formula">T = 1 ÷ f</code>
+            <p class="formula-note">The <strong>time period</strong> is the time for one complete vibration. A 250 Hz note has T = 0.004 s = 4 ms.</p>
+            <p>The speed depends on the medium, not on the frequency: about 343 m/s in air at 20 °C (faster in warmer air, about 0.6 m/s more for each 1 °C), 1482 m/s in water and nearly 6000 m/s in steel. So for the same frequency, the wavelength is longer in water and longer still in steel.</p>
+            <p><strong>How the model works:</strong> the motion is shown 300 times slower than real, and the back-and-forth movement is hugely exaggerated so you can see it; in real sound, air particles move less than a thousandth of a millimetre. The picture is 3 m wide for air at 20 °C and is stretched for other media so the waves still fit.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Put your hand in front of a loudspeaker playing a deep bass note: you can feel the air being pushed and pulled.</li>
+              <li>A tabla or dholak skin moves in and out, sending compressions and rarefactions into the air.</li>
+              <li>You see lightning before you hear thunder: light is almost instant, while sound covers about 1 km in 3 seconds.</li>
+              <li>Putting your ear to a railway line lets you hear a train sooner, because sound travels about 17 times faster in steel than in air.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Play and follow the red particle. Does it travel along with the wave to the right?<details><summary>Show answer</summary>No. It only moves back and forth about its dashed rest line. The compressions move along, but each particle stays near its place. The graph shows its displacement going up and down in time.</details></li>
+              <li>Set 343 Hz in air at 20 °C, then 686 Hz. What happens to the wavelength? Check that f × λ stays the same.<details><summary>Show answer</summary>The wavelength halves from 1 m to 0.5 m. 343 × 1 = 686 × 0.5 = 343 m/s: the speed is set by the air, so doubling the frequency halves the wavelength.</details></li>
+              <li>Keep 343 Hz and change the medium to water, then steel. What changes, and what stays the same?<details><summary>Show answer</summary>The frequency stays 343 Hz (it is set by the speaker). The speed rises to 1482 m/s and 5960 m/s, so the wavelength becomes 4.3 m and 17.4 m.</details></li>
+              <li>Compare air at 0 °C and at 40 °C for a 256 Hz tuning fork. Which has the longer wavelength?<details><summary>Show answer</summary>Air at 40 °C: sound is faster in warm air (355 m/s against 331 m/s), so λ = 355 ÷ 256 ≈ 1.39 m against 331 ÷ 256 ≈ 1.29 m.</details></li>
+              <li>Look at the graph. When the red particle is at its middle position moving forward, is the pressure there high or low?<details><summary>Show answer</summary>High: that is when a compression passes it. Pressure peaks a quarter of a period away from the largest displacement, so the two curves are out of step by a quarter cycle.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Longitudinal wave:</strong> particles vibrate along the direction in which the wave travels.</li>
+              <li><strong>Compression / rarefaction:</strong> regions of higher / lower pressure and density than normal.</li>
+              <li><strong>Amplitude:</strong> the largest disturbance from the normal value; a larger amplitude gives a louder sound.</li>
+              <li><strong>Medium:</strong> the material (solid, liquid or gas) that carries the sound.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

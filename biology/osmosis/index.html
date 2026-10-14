@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Osmosis: Potato, Raisins and Plant Cells — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/osmosis/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Osmosis: Potato, Raisins and Plant Cells — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/osmosis/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="osmosis">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Osmosis</strong> is the movement of water through a <strong>selectively permeable membrane</strong>, from a region where there is more water (a weaker solution) to a region where there is less water (a stronger solution). Water molecules pass through the membrane easily; the dissolved salt or sugar is held back or passes very slowly.</p>
+            <p>Every cell membrane works like this. Put a cell in a <strong>hypotonic</strong> solution (weaker than its own sap, such as pure water) and water flows in, so the cell swells. In an <strong>isotonic</strong> solution there is no net flow. In a <strong>hypertonic</strong> solution (stronger, such as strong salt water) water flows out and the cell shrinks. A plant cell’s wall stops it bursting and makes it firm, or <strong>turgid</strong>. When it loses water, the membrane and cytoplasm pull away from the wall: this is <strong>plasmolysis</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">water flows from weaker solution → stronger solution</code>
+            <p class="formula-note">“Stronger” means more dissolved particles per litre. Salt (NaCl) splits into two ions in water and its particles are light, so 1 g of salt pulls water about 12 times as strongly as 1 g of sugar. That is why a 10 % sugar solution affects the potato far less than 10 % salt.</p>
+            <code class="formula">% change in mass = (mass now − mass at start) ÷ mass at start × 100</code>
+            <p class="formula-note">Using the percentage change lets you compare strips or raisins of different sizes.</p>
+            <p><strong>How the model works:</strong> water flow is set by the difference between the pull of the cell sap and of the solution, minus the push back from a stretched cell wall (or raisin skin). The constants are chosen to match typical school results: a potato strip gains about 8 % in water and loses about a quarter of its mass in strong salt; raisins nearly double. Time is speeded up. The model treats mass as proportional to volume and assumes no salt or sugar enters the cells; in real life a little does, over many hours.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Raisins (kishmish) soaked overnight in water swell up; this is how dried fruit is plumped for kheer.</li>
+              <li>Salt sprinkled on cut cucumber or mango for pickle draws water out, and the pieces go soft.</li>
+              <li>Wilted spinach or coriander perks up in cold water as its cells become turgid again.</li>
+              <li>Hospital drips use 0.9 % salt solution (“normal saline”) because it is isotonic with our blood cells; pure water would make red blood cells swell and burst.</li>
+              <li>Too much fertiliser near roots makes the soil water hypertonic, so roots lose water and the plant wilts.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Soak the potato strip in pure water, then in 10 % salt. Compare the change in mass and the shape of the strip.<details><summary>Show answer</summary>In water it gains about 8 % and stands up firm (turgid). In 10 % salt it loses about 27 % and flops over, because its cells lose water and become plasmolysed.</details></li>
+              <li>Find the salt strength at which the potato strip hardly changes. What does this tell you?<details><summary>Show answer</summary>About 0.7 to 0.8 % salt. At this strength the solution is isotonic with the potato cells, so water enters and leaves at the same rate.</details></li>
+              <li>Switch the solute to sugar and try 10 %. Why does the potato change so little compared with 10 % salt?<details><summary>Show answer</summary>A gram of sugar contains far fewer particles than a gram of salt (sugar molecules are heavy, and salt splits into two ions). Osmosis depends on the number of dissolved particles, so 10 % sugar is only about as strong as 0.9 % salt.</details></li>
+              <li>Soak the raisins in pure water and in 10 % salt. Why do raisins still swell in 5 % salt, when the potato shrinks?<details><summary>Show answer</summary>A raisin’s cells are packed with sugar, so its inside is a very strong solution. Even 5 % salt is weaker, so water still flows in. Only at about 10 % salt is the outside as strong as the raisin.</details></li>
+              <li>Look at Rhoeo leaf peel under the microscope in pure water, then in 5 % salt. What happens to the purple part of each cell?<details><summary>Show answer</summary>In water it presses against the wall (turgid). In 5 % salt it shrinks and pulls away from the wall within a few minutes: plasmolysis. The cell wall keeps its shape, because it is freely permeable and stiff.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Selectively permeable membrane:</strong> lets some substances (water) through but not others.</li>
+              <li><strong>Endosmosis / exosmosis:</strong> water moving into / out of a cell.</li>
+              <li><strong>Turgid:</strong> swollen and firm with water, the membrane pressed against the wall.</li>
+              <li><strong>Plasmolysis:</strong> the shrinking of the cytoplasm away from the cell wall when a plant cell loses water.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

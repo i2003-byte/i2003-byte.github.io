@@ -10,13 +10,13 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**120 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**124 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
 | ⚙️ **Mechanics** (30) | Projectile Motion · Simple Pendulum · Speed Race: Distance ÷ Time · Distance–Time Graph Builder · Pendulum Clock Lab · Pressure = Force ÷ Area · Balanced and Unbalanced Forces · Pressure in Liquids · Friction on Different Surfaces · Rolling vs Sliding Friction · Ball Bearings and Lubricants · Distance and Displacement · Velocity–Time Graph: Area = Distance · Uniform Circular Motion · Inertia: Coin on a Card · Newton's Second Law: F = ma Cart Lab · Action and Reaction: Balloon Rocket · Collisions and Momentum · Universal Law of Gravitation · Free Fall and g on Different Worlds · Buoyancy and Archimedes' Principle · Work Done: W = F s cos θ · Roller Coaster: Potential and Kinetic Energy · Power Race: Same Work, Different Time · Spring–Mass Oscillator · SHM and Uniform Circular Motion · Forced Oscillations and Resonance · Planetary Orbits and Kepler's Laws · Escape Velocity Launcher · Satellites and Geostationary Orbit |
 | 🌊 **Waves** (5, Class 11 and 12) | Transverse and Longitudinal Waves · Standing Waves on a String · Beats · Doppler Effect · Wave Interference: Two Sources in a Ripple Tank |
-| 🔊 **Sound Lab** (14, Class 7) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String |
+| 🔊 **Sound Lab** (15, Class 7 and 9) | Vibrating Objects · Sound Through Solids, Liquids & Gases · Bell Jar: Sound in a Vacuum · Amplitude & Loudness · Frequency & Pitch · Oscillation Counter · Voice Box (Larynx) · Inside the Ear · Who Can Hear It? · Music or Noise? · City Decibel Meter · Quiet the Neighbourhood · Water Glass Xylophone · Guitar String | · Sound Waves: Compressions and Rarefactions
 | 🔥 **Heat and gases** (9, Class 7 and 11) | Hot and Cold: Temperature · Clinical vs Laboratory Thermometer · Conduction: Heat Through a Rod · Convection Currents in Water · Radiation: Black vs Shiny · Sea and Land Breezes · Gas Pressure from Molecules · Gas Laws: Boyle and Charles with a Piston · Speeds of Gas Molecules (Maxwell Distribution) |
 | ⚡ **Electricity** (18, Class 7, 8, 10 and 12) | Electric Circuits and Symbols · Heating Effect and the Fuse · Make an Electromagnet · Charging by Rubbing · Gold-Leaf Electroscope · Lightning and the Lightning Conductor · Ohm's Law and Resistivity · Resistors in Series and Parallel · Electric Power and the Electricity Bill · Magnetic Field Lines: Magnets and a Wire · Magnetic Field of a Loop and a Solenoid · Electric Motor and Generator · Coulomb's Law: Force Between Charges · Electric Fields: Field Lines and Equipotentials · Electric Dipole in a Uniform Field · Drift Velocity of Electrons · Kirchhoff's Laws: Junctions and Loops · Wheatstone Bridge and Metre Bridge |
 | 💡 **Light** (11, Class 7, 10 and 12) | Pinhole Camera · Plane Mirror and Lateral Inversion · Newton's Colour Disc · Spherical Mirrors: Ray Diagrams · Refraction through a Glass Slab · Convex and Concave Lenses: Ray Diagrams · Human Eye: Power of Accommodation · Myopia and Hypermetropia: Correcting Vision · Dispersion by a Prism and the Blue Sky · Young's Double-Slit Experiment: Interference Fringes · Single-Slit Diffraction: Light Spreading Through a Slit |
@@ -24,6 +24,7 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🧊 **Chemistry: Matter in our surroundings** (3, Class 9) | Solids, Liquids and Gases: The Particle Model · Evaporation and Cooling · Heating Curve of Water: Melting and Boiling |
 | 🧪 **Chemistry: Chemical reactions and equations** (3, Class 10) | Balancing Chemical Equations · Types of Chemical Reactions · Rusting of Iron |
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
+| 🔬 **Biology: The fundamental unit of life** (3, Class 9) | Cell Explorer: Plant, Animal and Bacterial Cells · Osmosis: Potato, Raisins and Plant Cells · Diffusion Across a Membrane |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |
 | 📐 **Mathematics: Statistics and probability** (3, Class 9) | Histogram and Frequency Polygon · Mean, Median and Mode · Coins and Dice: Experimental Probability |
@@ -98,7 +99,7 @@ See **Maintaining with AI** below.
 │   ├── index.html          Subject page (tiny template, reads data-subject="physics")
 │   ├── projectile/         index.html (page + Learn text) and sim.js (the simulation)
 │   ├── pendulum/
-│   └── …14 Sound Lab folders
+│   └── …15 Sound Lab folders
 ├── chemistry/ mathematics/ biology/ astronomy/   Subject pages (coming soon)
 ├── simulations/index.html  "All Simulations" page (same template, data-subject="all")
 │

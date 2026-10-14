@@ -60,6 +60,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Quiet the Neighbourhood](https://i2003-byte.github.io/physics/noise-pollution/): Add trees, silencers and soundproof walls to cut noise pollution around a school, a hospital and homes. (Beginner)
 - [Water Glass Xylophone](https://i2003-byte.github.io/physics/water-xylophone/): Fill glasses with different amounts of water, tap or blow, and tune your own musical scale. (Beginner)
 - [Guitar String](https://i2003-byte.github.io/physics/guitar-string/): Change the length, thickness and tightness of a string and pluck it. Discover what makes a note higher or lower. (Beginner)
+- [Sound Waves: Compressions and Rarefactions](https://i2003-byte.github.io/physics/compressions-rarefactions/): Switch on a loudspeaker and watch air particles bunch into compressions and spread into rarefactions. Follow one particle, compare a slinky, and check v = fλ in air, water and steel. (Intermediate)
 
 ### Waves
 
@@ -204,13 +205,19 @@ Turn a transversal across parallel lines, tear the corners off a triangle and sl
 
 ## Biology
 
-Look inside a leaf as it makes food, count oxygen bubbles from a water plant and test leaves for starch. Change the conditions and see how living things respond.
+Explore plant, animal and bacterial cells, watch molecules diffuse and water move by osmosis, look inside a leaf as it makes food and test leaves for starch. Change the conditions and see how living things respond.
 
 ### Plant Nutrition
 
 - [Photosynthesis in a Leaf](https://i2003-byte.github.io/biology/photosynthesis-leaf/): Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water become glucose and oxygen. (Beginner)
 - [Oxygen Bubbles from a Water Plant](https://i2003-byte.github.io/biology/oxygen-bubbles/): Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas. (Beginner)
 - [Starch Test on a Leaf](https://i2003-byte.github.io/biology/starch-test/): Cover part of a leaf, use a variegated leaf or take away CO₂, then boil, decolourise and add iodine. See where starch was made. (Beginner)
+
+### Cells
+
+- [Cell Explorer: Plant, Animal and Bacterial Cells](https://i2003-byte.github.io/biology/cell-explorer/): Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself. (Beginner)
+- [Osmosis: Potato, Raisins and Plant Cells](https://i2003-byte.github.io/biology/osmosis/): Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope. (Intermediate)
+- [Diffusion Across a Membrane](https://i2003-byte.github.io/biology/diffusion/): Watch glucose and starch molecules wander at random in water. See glucose spread through a selectively permeable membrane until both sides are equal, while starch stays behind. Change the temperature. (Beginner)
 
 ## Astronomy (coming soon)
 

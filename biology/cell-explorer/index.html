@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cell Explorer: Plant, Animal and Bacterial Cells — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/cell-explorer/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Cell Explorer: Plant, Animal and Bacterial Cells — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/cell-explorer/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="cell-explorer">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every living thing is made of <strong>cells</strong>, and every cell comes from an earlier cell. A cell is the smallest part that can carry out all the jobs of life, so it is called the <strong>basic structural and functional unit of life</strong>. Robert Hooke first saw tiny boxes in a slice of cork in 1665 and named them cells.</p>
+            <p>Inside a cell, small parts called <strong>organelles</strong> share the work, like departments in a factory: the nucleus gives the instructions, mitochondria supply energy, ribosomes make proteins, and the Golgi apparatus packs and sends out products. Plant and animal cells have a <strong>true nucleus</strong> and organelles wrapped in membranes (they are <strong>eukaryotes</strong>). A bacterium is much smaller and simpler: its DNA lies loose in a <strong>nucleoid</strong> and it has no membrane-bound organelles (it is a <strong>prokaryote</strong>).</p>
+          </section>
+          <section>
+            <h3>🧮 Key facts</h3>
+            <code class="formula">1 µm (micrometre) = 1/1000 mm = 10⁻⁶ m</code>
+            <p class="formula-note">Most plant and animal cells are 10 to 100 µm across, so you need a microscope to see them. A bacterium is only 1 to 2 µm long. The scale bar under each drawing shows its real size.</p>
+            <code class="formula">plant cell = animal cell parts + cell wall + chloroplasts + one large vacuole</code>
+            <p class="formula-note">Plant cells have a stiff <strong>cellulose cell wall</strong>, <strong>chloroplasts</strong> (in green parts) and a <strong>large central vacuole</strong>. Animal cells have no wall, no chloroplasts, only small vacuoles, and more lysosomes.</p>
+            <p><strong>How the model works:</strong> the cells are simplified drawings, not photographs. Real cells have many more mitochondria, ribosomes and ER tubes, and the parts are shown in flat outline. Each type is drawn at a different magnification to fill the screen; the scale bar tells you the true size.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>An onion peel under a school microscope shows brick-shaped plant cells with clear walls; a drop of iodine stains the nuclei.</li>
+              <li>Cells scraped gently from the inside of your cheek, stained with methylene blue, show round animal cells with no wall.</li>
+              <li>The bacteria that turn milk into curd (Lactobacillus) are prokaryotes: thousands of them would fit across one cheek cell.</li>
+              <li>Muscle cells have a lot of mitochondria because they need a lot of energy.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Tap every part of the plant cell, then switch to the animal cell. Which three parts are missing in the animal cell?<details><summary>Show answer</summary>The cell wall, the chloroplasts and the large central vacuole. (The animal cell has small vacuoles instead.)</details></li>
+              <li>Choose the bacterium. Pick “Nucleus” from the list. What does the picture tell you, and what is the bacterium’s DNA in?<details><summary>Show answer</summary>A bacterium has no nucleus. Its DNA is one loop lying in the nucleoid, with no membrane around it. This is why bacteria are called prokaryotes.</details></li>
+              <li>Which parts are found in all three cells?<details><summary>Show answer</summary>The cell membrane, the cytoplasm and the ribosomes. Every cell needs a boundary, a place for its reactions and a way to make proteins.</details></li>
+              <li>Compare the scale bars. About how many bacteria, laid end to end, would stretch across the plant cell?<details><summary>Show answer</summary>The plant cell is about 60 µm long and a bacterium about 2 µm, so roughly 30 bacteria.</details></li>
+              <li>Press “Quiz me” and get five right in a row, in each type of cell.<details><summary>Show answer</summary>Hints: the Golgi apparatus is the stack of curved yellow sacs, the ER is the purple wavy tubes next to the nucleus, and lysosomes are the small orange dots in the animal cell.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Organelle:</strong> a small part inside a cell with its own job.</li>
+              <li><strong>Eukaryote:</strong> a cell with a true nucleus and membrane-bound organelles (plants, animals, fungi).</li>
+              <li><strong>Prokaryote:</strong> a cell with no true nucleus (bacteria).</li>
+              <li><strong>Plastids:</strong> plant organelles such as chloroplasts (green) and leucoplasts (colourless, store starch).</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
