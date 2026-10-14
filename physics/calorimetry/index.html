@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calorimetry: Method of Mixtures — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drop a hot copper, aluminium or lead block, hot water or ice into a calorimeter. Watch the temperatures meet, check heat lost = heat gained, and find the specific heat of an unknown metal.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/calorimetry/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Calorimetry: Method of Mixtures — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drop a hot copper, aluminium or lead block, hot water or ice into a calorimeter. Watch the temperatures meet, check heat lost = heat gained, and find the specific heat of an unknown metal.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/calorimetry/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="calorimetry">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When a hot body and a cold body touch, heat flows from the hotter one to the colder one until both reach the same temperature (<strong>thermal equilibrium</strong>). If no heat escapes to the surroundings, the heat lost by the hot body is exactly the heat gained by the cold one. This is the <strong>principle of calorimetry</strong>, and using it to find an unknown is called the <strong>method of mixtures</strong>.</p>
+            <p>Different substances need different amounts of heat to warm up. The <strong>specific heat capacity c</strong> is the heat needed to raise 1 g (or 1 kg) by 1 °C. Water's is very large (4.18 J/g°C), about 11 times copper's, so a hot copper block hardly warms a cup of water, while the same mass of hot water warms it a lot.</p>
+            <p>Melting needs heat too, without any rise in temperature: ice at 0 °C takes 334 J per gram (the <strong>latent heat of fusion</strong>) just to turn into water at 0 °C. That is why ice cools a drink so well.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Q = m × c × ΔT</code>
+            <code class="formula">heat lost by hot body = heat gained by cold body</code>
+            <code class="formula">T_final = (m₁c₁T₁ + m₂c₂T₂) ÷ (m₁c₁ + m₂c₂)</code>
+            <p class="formula-note">Example: 200 g of copper (c = 0.385) at 100 °C into 200 g of water at 25 °C in a 100 g copper can (38.5 J/°C): T = (77 × 100 + 874.5 × 25) ÷ (77 + 874.5) ≈ 31.1 °C.</p>
+            <code class="formula">c of a solid = (m_w c_w + C_can)(T_f − T_w) ÷ (m (T − T_f))</code>
+            <code class="formula">Q to melt = m × L,   L(ice) = 334 J/g</code>
+            <p><strong>How the model works:</strong> the calorimeter is perfectly insulated (no heat is lost to the air), the water is always well stirred, and the stirrer and thermometer take no heat. The can and the water are always at the same temperature. Heat flows at a rate proportional to the temperature difference, speeded up so things settle in a few seconds. Ice is taken to be exactly at 0 °C, and the water from melted ice mixes in at once.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Coastal cities like Mumbai and Chennai have mild days and nights compared with Delhi or Nagpur: the sea's huge mass of water, with its large specific heat, warms and cools slowly.</li>
+              <li>Car and bike engines are cooled with water, and hot-water bottles use water, because it carries a lot of heat per kilogram.</li>
+              <li>A few ice cubes cool a glass of nimbu-pani far more than the same mass of cold water would, because melting takes so much heat.</li>
+              <li>Food labs measure the energy in food by burning it in a bomb calorimeter and measuring the rise in water temperature.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drop the 200 g copper block at 100 °C (default). Predict the final temperature with the formula, then check. Do the two heat bars stay equal?<details><summary>Show answer</summary>About 31.1 °C. The bars always match: about 5.3 kJ lost by the copper and 5.3 kJ gained by the water and can.</details></li>
+              <li>Compare copper, aluminium and lead blocks of the same mass and temperature. Which warms the water most, and why?<details><summary>Show answer</summary>Aluminium (37.8 °C), then copper (31.1 °C), then lead (27.1 °C). Aluminium has the largest specific heat (0.900 J/g°C), so at the same temperature it holds the most heat.</details></li>
+              <li>Drop “Metal X” with the default settings. Use the final temperature to find its specific heat.<details><summary>Show answer</summary>Final ≈ 28.8 °C. Heat gained = (200 × 4.18 + 38.5) × 3.8 ≈ 3350 J; heat lost = 200 × c × 71.2. So c ≈ 3350 ÷ 14 240 ≈ 0.235 J/g°C. That matches silver.</details></li>
+              <li>Drop 200 g of hot water at 100 °C into the 200 g of water at 25 °C. Why isn't the answer exactly the average, 62.5 °C?<details><summary>Show answer</summary>You get about 61.7 °C, because the copper can also has to be warmed. Switch off “Count the copper calorimeter” and it becomes 62.5 °C.</details></li>
+              <li>Drop 200 g of ice, then only 20 g. What happens each time?<details><summary>Show answer</summary>200 g: the water cools to 0 °C after melting only about 65 g, so about 135 g of ice stays (melting all of it would need 66.8 kJ but the water can give only 21.9 kJ). 20 g: all of it melts (6.7 kJ) and the mixture ends at about 15.8 °C.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Specific heat capacity c:</strong> heat needed to raise the temperature of unit mass by 1 °C (J/g°C or J/kg K).</li>
+              <li><strong>Heat capacity:</strong> m × c, the heat a whole body needs per 1 °C (the copper can holds 38.5 J/°C).</li>
+              <li><strong>Calorimeter:</strong> an insulated container, usually of copper, used to measure heat.</li>
+              <li><strong>Latent heat of fusion:</strong> heat needed to melt unit mass of a solid without changing its temperature.</li>
+              <li><strong>Thermal equilibrium:</strong> the state in which bodies in contact have the same temperature and no net heat flows.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

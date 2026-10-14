@@ -805,6 +805,38 @@ SimLab.simulations = [
     dateAdded: '2026-10-14',
     prerequisites: ['vibration']
   },
+  {
+    id: 'echo-sonar',
+    subject: 'physics',
+    branch: 'sound',
+    title: 'Echo and SONAR',
+    description:
+      'Clap in front of a cliff, shout into a well, or let a ship map the sea bed with ultrasound. Time the echo, find the distance with d = vt/2, and see why an echo needs at least 17.2 m.',
+    level: 'Intermediate',
+    tags: ['sound', 'echo', 'sonar', 'ultrasound', 'reflection of sound', 'speed of sound', 'reverberation', 'class 9'],
+    thumbnail: '/assets/img/thumbs/echo-sonar.svg',
+    link: '/physics/echo-sonar/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['compressions-rarefactions']
+  },
+  {
+    id: 'sound-reflection',
+    subject: 'physics',
+    branch: 'sound',
+    title: 'Reflection of Sound',
+    description:
+      'Find the angle where a clock ticks loudest in the two-tube experiment, then see how a curved sound board, a megaphone and a stethoscope use reflections of sound.',
+    level: 'Beginner',
+    tags: ['sound', 'reflection of sound', 'laws of reflection', 'megaphone', 'stethoscope', 'sound board', 'multiple reflection', 'class 9'],
+    thumbnail: '/assets/img/thumbs/sound-reflection.svg',
+    link: '/physics/sound-reflection/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['echo-sonar']
+  },
 
   /* ---- HEAT: 6 simulations for Class 7 'Heat' ------------------------ */
   {
@@ -950,6 +982,38 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-10',
     prerequisites: ['gas-pressure-molecules']
+  },
+  {
+    id: 'thermal-expansion',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Thermal Expansion',
+    description:
+      'Heat a rod against a dial gauge, watch railway rails close their expansion gaps and buckle, and make a bimetallic strip ring a fire alarm. Check ΔL = αLΔT for steel, aluminium, brass and invar.',
+    level: 'Intermediate',
+    tags: ['thermal expansion', 'coefficient of linear expansion', 'bimetallic strip', 'railway gaps', 'thermal stress', 'class 11'],
+    thumbnail: '/assets/img/thumbs/thermal-expansion.svg',
+    link: '/physics/thermal-expansion/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['thermometer']
+  },
+  {
+    id: 'calorimetry',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: 'Calorimetry: Method of Mixtures',
+    description:
+      'Drop a hot copper, aluminium or lead block, hot water or ice into a calorimeter. Watch the temperatures meet, check heat lost = heat gained, and find the specific heat of an unknown metal.',
+    level: 'Intermediate',
+    tags: ['calorimetry', 'specific heat capacity', 'method of mixtures', 'latent heat', 'thermal equilibrium', 'class 11'],
+    thumbnail: '/assets/img/thumbs/calorimetry.svg',
+    link: '/physics/calorimetry/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-14',
+    prerequisites: ['thermal-expansion']
   },
   {
     id: 'photosynthesis-leaf',

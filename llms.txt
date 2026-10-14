@@ -61,6 +61,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Water Glass Xylophone](https://i2003-byte.github.io/physics/water-xylophone/): Fill glasses with different amounts of water, tap or blow, and tune your own musical scale. (Beginner)
 - [Guitar String](https://i2003-byte.github.io/physics/guitar-string/): Change the length, thickness and tightness of a string and pluck it. Discover what makes a note higher or lower. (Beginner)
 - [Sound Waves: Compressions and Rarefactions](https://i2003-byte.github.io/physics/compressions-rarefactions/): Switch on a loudspeaker and watch air particles bunch into compressions and spread into rarefactions. Follow one particle, compare a slinky, and check v = fλ in air, water and steel. (Intermediate)
+- [Echo and SONAR](https://i2003-byte.github.io/physics/echo-sonar/): Clap in front of a cliff, shout into a well, or let a ship map the sea bed with ultrasound. Time the echo, find the distance with d = vt/2, and see why an echo needs at least 17.2 m. (Intermediate)
+- [Reflection of Sound](https://i2003-byte.github.io/physics/sound-reflection/): Find the angle where a clock ticks loudest in the two-tube experiment, then see how a curved sound board, a megaphone and a stethoscope use reflections of sound. (Beginner)
 
 ### Waves
 
@@ -116,6 +118,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Gas Pressure from Molecules](https://i2003-byte.github.io/physics/gas-pressure-molecules/): Watch gas molecules bounce in a box and measure the pressure from their wall hits. Change the number of molecules, the temperature and the gas, and test the kinetic theory of gases. (Advanced)
 - [Gas Laws: Boyle and Charles with a Piston](https://i2003-byte.github.io/physics/gas-laws-piston/): Squeeze a gas with a piston, heat it under a load or in a sealed cylinder, and plot Boyle's law, Charles's law and the pressure law. Extend the line to find absolute zero. (Intermediate)
 - [Speeds of Gas Molecules (Maxwell Distribution)](https://i2003-byte.github.io/physics/molecular-speeds/): Give every molecule the same speed and watch collisions spread them into the Maxwell curve. Compare hot and cold gases, light and heavy ones, and find v_p, v̄ and v_rms. (Advanced)
+- [Thermal Expansion](https://i2003-byte.github.io/physics/thermal-expansion/): Heat a rod against a dial gauge, watch railway rails close their expansion gaps and buckle, and make a bimetallic strip ring a fire alarm. Check ΔL = αLΔT for steel, aluminium, brass and invar. (Intermediate)
+- [Calorimetry: Method of Mixtures](https://i2003-byte.github.io/physics/calorimetry/): Drop a hot copper, aluminium or lead block, hot water or ice into a calorimeter. Watch the temperatures meet, check heat lost = heat gained, and find the specific heat of an unknown metal. (Intermediate)
 
 ## Geography
 

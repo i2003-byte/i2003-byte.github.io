@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reflection of Sound — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Find the angle where a clock ticks loudest in the two-tube experiment, then see how a curved sound board, a megaphone and a stethoscope use reflections of sound.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/sound-reflection/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Reflection of Sound — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Find the angle where a clock ticks loudest in the two-tube experiment, then see how a curved sound board, a megaphone and a stethoscope use reflections of sound.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/sound-reflection/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="sound-reflection">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Sound bounces off hard surfaces just as light bounces off a mirror, and it follows the same <strong>laws of reflection</strong>. Draw a line at right angles to the surface (the <strong>normal</strong>) where the sound strikes it. The angle between the incoming sound and the normal (<strong>angle of incidence, i</strong>) equals the angle between the reflected sound and the normal (<strong>angle of reflection, r</strong>), and the incoming sound, the normal and the reflected sound all lie in the same plane.</p>
+            <p>Sound does not need a shiny surface, but it needs a <strong>large</strong> one: the surface should be bigger than the wavelength of the sound (about 0.3 m to a few metres for speech). Hard, smooth surfaces such as walls, boards and metal reflect sound well. Soft, porous materials such as curtains, cushions and foam soak most of it up.</p>
+            <p>We use <strong>multiple reflections</strong> to send sound where we want it: a megaphone, a horn or a shehnai sends sound forwards instead of letting it spread out; a curved sound board behind a stage sends the sound to the audience; and in a stethoscope the sound of the heartbeat bounces many times along the tube to the doctor's ears.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">angle of incidence i = angle of reflection r</code>
+            <p class="formula-note">Both angles are measured from the normal, not from the surface.</p>
+            <code class="formula">a reflector works well when its size ≫ λ = v ÷ f</code>
+            <p class="formula-note">For a 1000 Hz sound in air, λ = 344 ÷ 1000 ≈ 0.34 m, so a board 1–2 m wide reflects it well.</p>
+            <p><strong>How the model works:</strong> sound is drawn as <strong>rays</strong> (the directions in which it travels), which is a fair picture when the surfaces are much bigger than the wavelength; real sound also spreads round edges a little (diffraction), which the model leaves out. Each reflection off a hard surface keeps 95% of the energy and off a soft one 20%. “Sound reaching the listener” is the share of the sent-out sound energy that reaches the ear. Everything is drawn flat (2D), and the pulses move very slowly so you can follow them.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Megaphones, loudhailers used by traffic police, and horns of musical instruments like the shehnai, trumpet and tuba are shaped to send sound in one direction.</li>
+              <li>A doctor's stethoscope: the chest piece picks up the heartbeat, and the sound travels to the ears by bouncing again and again inside the tubes.</li>
+              <li>Concert halls, auditoriums and some temples and mosques have curved ceilings or a curved sound board behind the stage, so sound spreads evenly to the audience.</li>
+              <li>The Gol Gumbaz in Vijayapura (Bijapur), Karnataka has a huge dome: a whisper near the wall of its gallery travels round the dome by reflection and is heard clearly on the far side.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the clock tube at i = 40° and drag the listening tube (or move its slider) until the tick is loudest. What angle is that?<details><summary>Show answer</summary>40°, the same as the angle of incidence (about 66% of the sound reaches the ear; at 25° only about 4%). Only when r = i does the reflected sound go straight down the listening tube to the ear.</details></li>
+              <li>With r = i, change the surface to “Soft” and then to “No board”. What happens to the sound at the ear?<details><summary>Show answer</summary>With a soft cushion only about a fifth of the sound is reflected (about 14% reaches the ear instead of about 66%). With no board nothing comes back at all: the sound goes off into the room.</details></li>
+              <li>Choose “Curved sound board on a stage”. Note the share reaching the audience, then switch the board off.<details><summary>Show answer</summary>With the board, sound that would have gone backwards is reflected into a beam towards the audience: about 38% reaches them. Without it only about 5% does.</details></li>
+              <li>Choose “Megaphone” and switch it on and off. How much louder is it for the listener?<details><summary>Show answer</summary>About 5 times: roughly 31% of the sound reaches the listener instead of 6%. Without the megaphone the sound spreads in all directions and only a few rays reach the listener; inside the cone, sideways rays reflect again and again and come out pointing forwards.</details></li>
+              <li>Choose “Stethoscope”. How many times does a ray reflect on its way to the ear? What happens if the tube is lined with something soft?<details><summary>Show answer</summary>About 13 times on average (the “Reflections” number), and about 55% of the sound reaches the ear. With a soft lining each reflection loses most of the sound, so after many reflections nothing reaches the ear (0%). That is why the tubes must reflect sound well.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Normal:</strong> a line at right angles to the surface at the point where the sound strikes.</li>
+              <li><strong>Angle of incidence / reflection:</strong> the angles of the incoming / reflected sound from the normal.</li>
+              <li><strong>Multiple reflection:</strong> sound reflecting again and again from surfaces, used to guide it.</li>
+              <li><strong>Sound board:</strong> a curved board behind a speaker that reflects sound towards the audience.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

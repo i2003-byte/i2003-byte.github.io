@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thermal Expansion — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Heat a rod against a dial gauge, watch railway rails close their expansion gaps and buckle, and make a bimetallic strip ring a fire alarm. Check ΔL = αLΔT for steel, aluminium, brass and invar.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/thermal-expansion/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Thermal Expansion — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Heat a rod against a dial gauge, watch railway rails close their expansion gaps and buckle, and make a bimetallic strip ring a fire alarm. Check ΔL = αLΔT for steel, aluminium, brass and invar.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/thermal-expansion/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="thermal-expansion">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When a solid is heated, its particles vibrate more strongly and push one another slightly further apart, so the whole object gets a little bigger. This is <strong>thermal expansion</strong>. When it cools it shrinks again. The change is tiny (a 1 m steel rod grows only about 1.2 mm when it is heated by 100 °C), but in long rails, bridges and pipes it adds up to centimetres, and if the expansion is blocked the material pushes with enormous force.</p>
+            <p>Different materials expand by different amounts. This is measured by the <strong>coefficient of linear expansion α</strong>: the fractional change in length for each 1 °C rise. Aluminium (23 × 10⁻⁶ per °C) expands almost twice as much as steel (12 × 10⁻⁶), while invar, a nickel–iron alloy, hardly expands at all.</p>
+            <p>A <strong>bimetallic strip</strong> uses this difference: two metals are joined along their length. On heating, one grows more than the other, so the strip has to bend, with the metal that expands more on the outside of the curve. The bend can close or open an electric circuit.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">ΔL = α × L × ΔT</code>
+            <p class="formula-note"><strong>ΔL</strong> change in length, <strong>L</strong> original length, <strong>ΔT</strong> change in temperature (°C or K), <strong>α</strong> coefficient of linear expansion. Example: a 13 m steel rail heated from 20 °C to 60 °C: ΔL = 12 × 10⁻⁶ × 13 × 40 = 0.0062 m = 6.2 mm.</p>
+            <code class="formula">β ≈ 2α (area),   γ ≈ 3α (volume)</code>
+            <p class="formula-note">A sheet expands in two directions and a block in three, so their coefficients of area and volume expansion are about two and three times α.</p>
+            <code class="formula">thermal stress = Y × α × ΔT</code>
+            <p class="formula-note">If a rod cannot expand, the force per unit area it pushes with is Young's modulus Y times the strain it was prevented from having. For steel (Y = 200 GPa) that is 2.4 MPa for each 1 °C: a big force on a rail.</p>
+            <p><strong>How the model works:</strong> each rail is laid at 20 °C with the chosen gap. Once the gap closes, the extra length makes the rail bend sideways in a smooth curve; real track is held by sleepers and ballast, so it resists until the stress is large and then buckles suddenly. The bimetallic strip is 15 cm long and 1 mm thick, its two layers of equal thickness and similar stiffness, so its curvature is 1.5 × (α₁ − α₂) × ΔT ÷ thickness. Changes in length, gaps and the bend are drawn many times larger than they are.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Older railway lines have small gaps at the rail joints, which give the familiar “khat-khat” sound of a train. Modern Indian lines use long welded rails, laid at a carefully chosen temperature and clamped firmly to concrete sleepers, with special expansion joints only at their ends.</li>
+              <li>Bridges and flyovers have expansion joints (the metal teeth you feel as a bump in the road), and one end of a steel bridge often rests on rollers.</li>
+              <li>Overhead electric wires sag more on a hot summer afternoon than on a winter morning.</li>
+              <li>A thick glass tumbler can crack when hot tea is poured in: the inside expands before the outside. Laboratory glassware is made of borosilicate (Pyrex) glass, which expands only about a third as much.</li>
+              <li>Bimetallic strips switch off electric irons, room heaters and old-style kettles at a set temperature, and work in fire alarms and the flashing indicator lights of vehicles.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>On the railway, heat the 13 m rails to 60 °C. How much does each rail grow, and is the 8 mm gap enough?<details><summary>Show answer</summary>Each rail grows 12 × 10⁻⁶ × 13 × 40 ≈ 6.2 mm, so a gap of about 1.8 mm is left. The gap would only close at about 71 °C.</details></li>
+              <li>Reduce the gap to 5 mm and heat to 60 °C again. At what temperature does it close, and what happens after that?<details><summary>Show answer</summary>It closes at about 52 °C (5 mm ÷ (12 × 10⁻⁶ × 13 000 mm) ≈ 32 °C above 20 °C). Above that the rail is squeezed (about 19 MPa at 60 °C) and bends sideways: a “sun kink”, which can derail a train.</details></li>
+              <li>Choose the rod and dial gauge with a 1 m rod. Heat it to 100 °C for steel, then aluminium, then invar. Which grows most?<details><summary>Show answer</summary>Aluminium: 23 × 10⁻⁶ × 1 × 80 = 1.84 mm. Steel grows 0.96 mm and invar only 0.10 mm. ΔL is proportional to α.</details></li>
+              <li>Choose the bimetallic strip (brass + steel) with an 8 mm contact gap. At what temperature does the alarm ring? Then try brass + invar.<details><summary>Show answer</summary>Brass + steel: about 88 °C. Brass + invar rings much earlier, at about 47 °C, because the difference in α (17.8 against 7 × 10⁻⁶ per °C) is bigger, so the strip bends more.</details></li>
+              <li>Cool the brass + steel strip to 0 °C. Which way does it bend, and why?<details><summary>Show answer</summary>Upwards, away from the contact. Brass now shrinks more than steel, so brass ends up on the inside (shorter side) of the curve.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Coefficient of linear expansion α:</strong> fractional change in length per 1 °C, ΔL ÷ (L ΔT).</li>
+              <li><strong>Expansion joint / gap:</strong> a space left so a structure can grow without being squeezed.</li>
+              <li><strong>Thermal stress:</strong> the stress in a body that is prevented from expanding or contracting.</li>
+              <li><strong>Bimetallic strip:</strong> two metals with different α joined together; it bends when its temperature changes.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
