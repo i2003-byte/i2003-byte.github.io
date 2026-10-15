@@ -1016,6 +1016,22 @@ SimLab.simulations = [
     prerequisites: ['thermal-expansion']
   },
   {
+    id: 'newtons-cooling',
+    subject: 'physics',
+    branch: 'thermodynamics',
+    title: "Newton's Law of Cooling: Why Chai Gets Cold",
+    description:
+      'Watch two cups of hot chai cool in the same room: steel tumbler, kulhad, mug or flask, with or without a lid or a fan. See the rate of cooling fall in step with the temperature difference.',
+    level: 'Intermediate',
+    tags: ['newtons law of cooling', 'rate of cooling', 'temperature difference', 'heat loss', 'evaporation', 'vacuum flask', 'class 11'],
+    thumbnail: '/assets/img/thumbs/newtons-cooling.svg',
+    link: '/physics/newtons-cooling/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['calorimetry']
+  },
+  {
     id: 'photosynthesis-leaf',
     subject: 'biology',
     branch: 'plants',
@@ -1956,6 +1972,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-07',
     prerequisites: ['youngs-double-slit']
+  },
+  {
+    id: 'total-internal-reflection',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Total Internal Reflection: Critical Angle, Fibres, Diamonds and Mirages',
+    description:
+      'Shine a laser through a glass block past the critical angle, trap light in a bent optical fibre, see why a diamond sparkles more than glass, and bend light over a hot road into a mirage.',
+    level: 'Intermediate',
+    tags: ['total internal reflection', 'critical angle', 'optical fibre', 'diamond', 'mirage', 'refraction', 'snells law', 'class 12'],
+    thumbnail: '/assets/img/thumbs/total-internal-reflection.svg',
+    link: '/physics/total-internal-reflection/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['refraction-glass-slab']
+  },
+  {
+    id: 'lens-maker',
+    subject: 'physics',
+    branch: 'optics',
+    title: "Refraction at Curved Surfaces and the Lens Maker's Formula",
+    description:
+      "Trace real rays through one curved glass surface or a lens. Change the radius, refractive index and surrounding liquid, check the lens maker's formula and see spherical aberration.",
+    level: 'Advanced',
+    tags: ['lens makers formula', 'spherical surface', 'refraction', 'focal length', 'power of a lens', 'spherical aberration', 'class 12'],
+    thumbnail: '/assets/img/thumbs/lens-maker.svg',
+    link: '/physics/lens-maker/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['lens-images']
+  },
+  {
+    id: 'optical-instruments',
+    subject: 'physics',
+    branch: 'optics',
+    title: 'Compound Microscope and Astronomical Telescope',
+    description:
+      'Ray diagrams of a compound microscope and an astronomical telescope. Change the focal lengths and see the first image, the final image, the magnifying power and what your eye sees.',
+    level: 'Advanced',
+    tags: ['compound microscope', 'telescope', 'magnifying power', 'objective', 'eyepiece', 'optical instruments', 'class 12'],
+    thumbnail: '/assets/img/thumbs/optical-instruments.svg',
+    link: '/physics/optical-instruments/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['lens-maker']
   },
   {
     id: 'natural-indicators',

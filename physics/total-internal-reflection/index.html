@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Total Internal Reflection: Critical Angle, Fibres, Diamonds and Mirages — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shine a laser through a glass block past the critical angle, trap light in a bent optical fibre, see why a diamond sparkles more than glass, and bend light over a hot road into a mirage.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/total-internal-reflection/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Total Internal Reflection: Critical Angle, Fibres, Diamonds and Mirages — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shine a laser through a glass block past the critical angle, trap light in a bent optical fibre, see why a diamond sparkles more than glass, and bend light over a hot road into a mirage.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/total-internal-reflection/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="total-internal-reflection">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When light goes from a denser medium (glass, water, diamond) into a rarer one (air), it bends <strong>away</strong> from the normal. As the angle of incidence grows, the refracted ray swings closer to the surface. At the <strong>critical angle i_c</strong> it skims along the surface (r = 90°). Beyond that there is no refracted ray at all: <strong>all</strong> the light is reflected back. This is <strong>total internal reflection (TIR)</strong>, and it is a better mirror than any silvered glass, because it loses no light.</p>
+            <p>Two conditions are needed: light must travel from the <strong>denser</strong> medium towards the rarer one, and the angle of incidence must be <strong>greater than the critical angle</strong>. The denser the material, the smaller its critical angle: 48.8° for water, 41.8° for glass, only 24.4° for diamond.</p>
+            <p>Even below the critical angle a little light is reflected. Watch the small graph in the block scene: the reflected share stays near 4–5 % and then shoots up to 100 % just before i_c.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">n₁ sin i = n₂ sin r   (Snell's law)</code>
+            <code class="formula">sin i_c = n₂ / n₁   (= 1/n when the outside is air)</code>
+            <p class="formula-note">Glass in air: sin i_c = 1/1.5 = 0.667, so i_c = 41.8°. Glass in water: sin i_c = 1.33/1.5, so i_c = 62.5°.</p>
+            <code class="formula">optical fibre acceptance angle: sin θ_max = √(n_core² − n_clad²)</code>
+            <p class="formula-note">Core 1.50, cladding 1.46: √(2.25 − 2.13) = 0.344, so θ_max = 20.1°.</p>
+            <p><strong>How the model works:</strong> rays are traced with Snell's law, and the share reflected at each surface uses the Fresnel equations for ordinary (unpolarised) light. The fibre core is drawn about 100 times wider than a real one, and the diamond is a 2-D slice of a round brilliant cut with standard angles; the splitting of white light into colours (the diamond's “fire”) is left out. In the mirage, air 30 °C sits over a hotter road, with the warm layer about 30 cm thick; heights are stretched about 50 times so the gently curving rays can be seen.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Optical fibres</strong> carry internet and phone calls across India and under the sea as pulses of light, trapped by TIR for thousands of kilometres. Doctors use bundles of fibres in endoscopes to look inside the stomach.</li>
+              <li><strong>Diamonds sparkle</strong> because their small critical angle traps light: it bounces off the lower facets and comes back out of the top towards your eye.</li>
+              <li>On a hot summer road (or in the Thar desert) you see “water” far ahead: it is the sky, seen by light that curved back up through the hot air near the ground. This is a <strong>mirage</strong>.</li>
+              <li>Binoculars and periscopes use glass prisms with 45° angles, which reflect totally, instead of mirrors.</li>
+              <li>Look up from under water in a swimming pool: beyond about 49° from straight up, the surface looks like a silver mirror.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In the block scene (glass in air), increase the angle of incidence from 30° to 41° and then to 42°. What happens to the refracted ray and to the reflected share?<details><summary>Show answer</summary>At 30° the refracted ray leaves at 48.6° and only 5.5 % is reflected. At 41° the refracted ray is almost along the surface (79.8°) and 38 % is reflected. At 42° (just past i_c = 41.8°) the refracted ray disappears and 100 % is reflected.</details></li>
+              <li>Keep the angle at 45° and change the block to water, then diamond. Which ones show total internal reflection, and why?<details><summary>Show answer</summary>Water (i_c = 48.8°) does not: 45° is below its critical angle, so light still escapes. Glass (41.8°) and diamond (24.4°) do. The larger the refractive index, the smaller the critical angle.</details></li>
+              <li>Put water outside the glass block. Find the new critical angle. Why is it larger?<details><summary>Show answer</summary>62.5°. Glass and water have closer refractive indices, so light bends less at the surface and needs a larger angle before it is trapped.</details></li>
+              <li>Choose “Optical fibre” with cladding 1.46 and the bend radius at 40. Try laser angles of 15° and 22°. Then, at 0°, make the bend tighter. What do you find?<details><summary>Show answer</summary>15° is inside the acceptance angle (20.1°), so the light is trapped and 96 % reaches the end (4 % is lost at the entry face). At 22° the light meets the wall at 75.5°, below the critical angle of 76.7°, and leaks out within a few reflections. At 0° the light still escapes once the bend radius is below about 15–20 core widths: tight bends leak.</details></li>
+              <li>In “Why diamonds sparkle”, compare diamond with glass of exactly the same cut. How much light comes back out of the top?<details><summary>Show answer</summary>About 72 % for diamond but only about 48 % for glass. The pavilion facets meet the light at about 41°, more than diamond's 24.4° critical angle (total reflection) but just under glass's 41.8°, so in glass much of the light leaks out of the bottom.</details></li>
+              <li>In the mirage scene, raise the road temperature from 40 °C to 55 °C and 70 °C. Where does the “water” appear?<details><summary>Show answer</summary>At 40 °C there is no mirage within 600 m. At 55 °C rays within about 0.36° of level bend back up and the sky appears on the road about 300 m ahead; at 70 °C it is about 250 m ahead. A hotter road bends rays more strongly, so the mirage comes closer.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Critical angle:</strong> the angle of incidence (in the denser medium) for which the angle of refraction is 90°.</li>
+              <li><strong>Total internal reflection:</strong> complete reflection of light back into the denser medium when the angle of incidence is greater than the critical angle.</li>
+              <li><strong>Optical fibre:</strong> a thin glass strand with a core and a cladding of lower refractive index, which guides light by TIR.</li>
+              <li><strong>Acceptance angle:</strong> the largest angle to the axis at which light can enter a fibre and still be trapped.</li>
+              <li><strong>Mirage:</strong> an image of the sky (or of distant objects, upside down) seen on hot ground, caused by light bending in layers of air of different temperature.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -85,6 +85,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Dispersion by a Prism and the Blue Sky](https://i2003-byte.github.io/physics/prism-dispersion/): Split white light into VIBGYOR with a glass prism, recombine it with a second prism, and see how scattering makes the sky blue and sunsets red. (Intermediate)
 - [Young's Double-Slit Experiment: Interference Fringes](https://i2003-byte.github.io/physics/youngs-double-slit/): Light from two narrow slits overlaps on a screen and makes bright and dark fringes. Change the colour, slit gap and screen distance, measure the fringe width β = λD/d, try white light and cover one slit. (Advanced)
 - [Single-Slit Diffraction: Light Spreading Through a Slit](https://i2003-byte.github.io/physics/single-slit-diffraction/): Light through one narrow slit spreads out into a wide central bright band with faint bands beside it. Change the slit width, colour and screen distance, find the dark bands at a sin θ = nλ and compare with two slits. (Advanced)
+- [Total Internal Reflection: Critical Angle, Fibres, Diamonds and Mirages](https://i2003-byte.github.io/physics/total-internal-reflection/): Shine a laser through a glass block past the critical angle, trap light in a bent optical fibre, see why a diamond sparkles more than glass, and bend light over a hot road into a mirage. (Intermediate)
+- [Refraction at Curved Surfaces and the Lens Maker's Formula](https://i2003-byte.github.io/physics/lens-maker/): Trace real rays through one curved glass surface or a lens. Change the radius, refractive index and surrounding liquid, check the lens maker's formula and see spherical aberration. (Advanced)
+- [Compound Microscope and Astronomical Telescope](https://i2003-byte.github.io/physics/optical-instruments/): Ray diagrams of a compound microscope and an astronomical telescope. Change the focal lengths and see the first image, the final image, the magnifying power and what your eye sees. (Advanced)
 
 ### Electricity & Magnetism
 
@@ -120,6 +123,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Speeds of Gas Molecules (Maxwell Distribution)](https://i2003-byte.github.io/physics/molecular-speeds/): Give every molecule the same speed and watch collisions spread them into the Maxwell curve. Compare hot and cold gases, light and heavy ones, and find v_p, v̄ and v_rms. (Advanced)
 - [Thermal Expansion](https://i2003-byte.github.io/physics/thermal-expansion/): Heat a rod against a dial gauge, watch railway rails close their expansion gaps and buckle, and make a bimetallic strip ring a fire alarm. Check ΔL = αLΔT for steel, aluminium, brass and invar. (Intermediate)
 - [Calorimetry: Method of Mixtures](https://i2003-byte.github.io/physics/calorimetry/): Drop a hot copper, aluminium or lead block, hot water or ice into a calorimeter. Watch the temperatures meet, check heat lost = heat gained, and find the specific heat of an unknown metal. (Intermediate)
+- [Newton's Law of Cooling: Why Chai Gets Cold](https://i2003-byte.github.io/physics/newtons-cooling/): Watch two cups of hot chai cool in the same room: steel tumbler, kulhad, mug or flask, with or without a lid or a fan. See the rate of cooling fall in step with the temperature difference. (Intermediate)
 
 ## Geography
 

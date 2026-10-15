@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Newton's Law of Cooling: Why Chai Gets Cold — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch two cups of hot chai cool in the same room: steel tumbler, kulhad, mug or flask, with or without a lid or a fan. See the rate of cooling fall in step with the temperature difference.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/newtons-cooling/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Newton's Law of Cooling: Why Chai Gets Cold — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch two cups of hot chai cool in the same room: steel tumbler, kulhad, mug or flask, with or without a lid or a fan. See the rate of cooling fall in step with the temperature difference.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/newtons-cooling/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="newtons-cooling">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A hot cup of chai loses heat to the cooler room around it. <strong>Newton's law of cooling</strong> says the <strong>rate of cooling is proportional to the temperature difference</strong> between the body and its surroundings. At 90 °C in a 25 °C room the chai cools fast; at 40 °C it cools slowly; it never quite reaches room temperature, it just gets closer and closer.</p>
+            <p>The number <strong>k</strong> (per minute) tells how quickly a cup loses heat. It is large when there is a lot of surface for heat to escape through (an open top, a wide cup, a fan blowing) and small when there is a lot of chai to cool (a large heat capacity). A lid stops most of the <strong>evaporation</strong> from the hot surface, which is one of the biggest losses, and a vacuum flask also stops conduction and convection through its walls.</p>
+            <p>The plot on the right of the picture shows the law directly: each dot is one reading of the rate of cooling against T − T_room. The dots fall on a <strong>straight line through zero</strong>, and its slope is k. The first few faint dots sit above the line: in the first minute the cold cup itself is soaking up heat from the chai.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">dT/dt = −k (T − T_room)</code>
+            <code class="formula">T = T_room + (T₀ − T_room) e^(−kt)</code>
+            <code class="formula">k = (heat lost per second per °C) ÷ (m c)</code>
+            <p class="formula-note">Example: with k = 0.040 per minute, chai at 85 °C in a 25 °C room is 60 °C hotter than the room. After 10 minutes the difference is 60 × e^(−0.40) ≈ 40 °C, so the chai is at about 65 °C.</p>
+            <code class="formula">ln(T − T_room) = ln(T₀ − T_room) − kt</code>
+            <p>So a graph of ln(T − T_room) against time is a straight line with slope −k. This is how the law is checked in the school lab with a calorimeter of hot water and a stopwatch.</p>
+            <p><strong>How the model works:</strong> each cup is two parts, the chai and the cup wall. Heat flows from the chai to the wall, from the chai's open surface to the air (evaporation and convection; a lid cuts this to a fifth, a fan raises it), and from the wall to the air. Every flow is proportional to a temperature difference, as in Newton's law. The heat capacities and loss rates are rounded values chosen to match everyday cooling times. Real chai cools a little faster than this at high temperatures, because evaporation and radiation grow faster than the temperature difference; the law is most exact for small differences. 1 second on screen is 1 minute.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Pouring chai from one tumbler to another (as at a tea stall) or into a saucer cools it fast: more surface, more evaporation.</li>
+              <li>A kulhad is easier to hold than a steel tumbler. Clay conducts heat poorly, so it feels less hot when you touch it, even though both outsides are warm.</li>
+              <li>Doctors use Newton's law to estimate the time of death from body temperature, and cooks use it to know how long a cake takes to cool.</li>
+              <li>A vacuum flask (thermos) keeps tea hot for hours: the vacuum stops conduction and convection, and the silvered walls cut radiation.</li>
+              <li>In winter, a cup cools much faster in Shimla than in Chennai because the temperature difference is bigger.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Start with the defaults (steel tumbler and kulhad, 25 °C room). Which is first to reach 60 °C, the good-to-drink temperature?<details><summary>Show answer</summary>The kulhad, after about 11 minutes; the steel tumbler takes about 13 minutes. The thick clay soaks up more heat at the start, and its porous wall lets a little extra water evaporate.</details></li>
+              <li>Watch the dots on the plot of rate against (T − T_room). What shape do they make, and what does that tell you?<details><summary>Show answer</summary>A straight line through zero: the rate of cooling is proportional to the temperature difference. That is Newton's law of cooling, and the slope is k (about 0.040 per minute for the steel tumbler).</details></li>
+              <li>Set both cups to a ceramic mug and put a lid on cup B. How much longer does B stay above 60 °C?<details><summary>Show answer</summary>Cup A (open) reaches 60 °C after about 9 minutes, cup B (lid) after about 15. The lid cuts k from about 0.032 to 0.020 per minute, because it stops most of the evaporation.</details></li>
+              <li>Try the room at 8 °C (Shimla winter) and at 42 °C (Delhi in May). Does k change?<details><summary>Show answer</summary>No, k stays about 0.040 per minute for the tumbler. The rate changes because the temperature difference changes: the chai reaches 60 °C after about 9 minutes in Shimla but about 22 minutes in Delhi.</details></li>
+              <li>Choose a ceramic mug for both and switch on “Pre-warm both cups”. Why does the mug now keep the chai hot much longer?<details><summary>Show answer</summary>A cold, heavy mug takes a lot of heat from the chai in the first two minutes (the chai drops from 90 °C to about 69 °C). A pre-warmed mug does not, so the chai starts its slow Newton cooling from 90 °C and stays above 60 °C for about 19 minutes instead of 9.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Rate of cooling:</strong> how fast the temperature falls, in °C per minute.</li>
+              <li><strong>Newton's law of cooling:</strong> the rate of cooling of a body is proportional to the difference between its temperature and that of its surroundings (for small differences).</li>
+              <li><strong>Cooling constant k:</strong> the rate of cooling per degree of temperature difference; it depends on the surface, the container and the mass of the body.</li>
+              <li><strong>Evaporation:</strong> the fastest molecules escape from a liquid's surface, taking heat with them.</li>
+              <li><strong>Vacuum flask:</strong> a double-walled bottle with a vacuum between the walls, which stops conduction and convection.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

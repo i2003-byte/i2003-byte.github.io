@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Refraction at Curved Surfaces and the Lens Maker's Formula — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Trace real rays through one curved glass surface or a lens. Change the radius, refractive index and surrounding liquid, check the lens maker&#x27;s formula and see spherical aberration.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lens-maker/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Refraction at Curved Surfaces and the Lens Maker's Formula — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Trace real rays through one curved glass surface or a lens. Change the radius, refractive index and surrounding liquid, check the lens maker&#x27;s formula and see spherical aberration.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lens-maker/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lens-maker">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A lens is just two curved surfaces of glass. At each surface, light bends by Snell's law. A <strong>curved</strong> surface bends rays at different heights by different amounts, so it can bring parallel rays together at one point (or spread them out as if from one point).</p>
+            <p>For <strong>one spherical surface</strong> between two media, the object distance u, the image distance v, the radius R and the two refractive indices are linked by one formula. Apply it twice, once for each face of a thin lens, and you get the <strong>lens maker's formula</strong>: the focal length depends on the curvature of both faces and on how much denser the glass is than its surroundings.</p>
+            <p>That last part surprises many people: a glass lens that converges in air converges less in water, does nothing at all in a liquid of the same refractive index, and even <strong>diverges</strong> in a denser liquid like carbon disulphide.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">one surface:  n₂/v − n₁/u = (n₂ − n₁)/R</code>
+            <code class="formula">lens maker's formula:  1/f = (n₂/n₁ − 1)(1/R₁ − 1/R₂)</code>
+            <code class="formula">lens formula:  1/v − 1/u = 1/f,   power P = 1/f (f in metres)</code>
+            <p class="formula-note">Sign convention: light goes left to right; distances are measured from the surface or lens; R is positive when the centre of curvature is on the right. A biconvex lens has R₁ = +R and R₂ = −R. Example: crown glass (n = 1.5), R = 20 cm, in air: 1/f = 0.5 × (1/20 + 1/20) = 1/20, so f = 20 cm and P = +5 D.</p>
+            <p><strong>How the model works:</strong> every ray is traced exactly with Snell's law at each spherical surface. The formulas above are for near-axis (paraxial) rays and a thin lens, so: rays near the axis (blue) meet where the formula says, while rays near the edge (orange) meet a little closer to the lens. This is <strong>spherical aberration</strong>. The lens is drawn with a real thickness, which shifts the traced focus by a few per cent from the thin-lens value.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Opticians grind spectacle lenses to a chosen power using the lens maker's formula: the same power can be made as a thin meniscus that sits comfortably in front of the eye.</li>
+              <li>The eye's cornea is one curved surface that does most of the focusing. Under water it hardly works (water and the eye have similar refractive indices), so everything looks blurred; goggles put air back in front of the eye.</li>
+              <li>A glass marble or a water drop on a leaf acts as a tiny lens, and a glass rod with a rounded end focuses light inside it.</li>
+              <li>Good camera lenses combine several lenses to cancel spherical aberration.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with the biconvex lens (n = 1.50, |R| = 20 cm, in air). Use the formula to find f, then compare with where the blue and orange rays meet.<details><summary>Show answer</summary>f = 20 cm (P = +5 D). Near-axis rays meet at about 20.6 cm (the lens has real thickness), edge rays at about 18.5 cm: that spread is spherical aberration.</details></li>
+              <li>Keep |R| = 20 cm and change the shape to plano-convex, then convex meniscus. How does f change?<details><summary>Show answer</summary>Plano-convex: 1/f = 0.5 × (1/20 − 0) gives f = 40 cm. Meniscus (R₁ = 20, R₂ = 40): 1/f = 0.5 × (1/20 − 1/40) gives f = 80 cm. Less total curvature means a weaker lens.</details></li>
+              <li>Put the biconvex lens in water, then in glycerine (set n = 1.47), then in carbon disulphide. What happens?<details><summary>Show answer</summary>In water f = 78.2 cm (much weaker). In glycerine with n = 1.47 the lens disappears: no bending at all, f = ∞. In carbon disulphide (n = 1.63) the convex lens becomes diverging, f ≈ −125 cm.</details></li>
+              <li>Choose “One convex surface (glass rod)” and parallel light. Where do the rays meet inside the glass? Then use a point object at 40 cm and at 30 cm.<details><summary>Show answer</summary>Parallel rays meet 60 cm inside the glass: 1.5/v = 0.5/20 gives v = 60 cm. A point at 40 cm is at the first focus, so the rays go on parallel inside the glass (v = ∞). At 30 cm the rays still diverge in the glass and seem to come from a virtual image 180 cm to the left.</details></li>
+              <li>Set n = 2.42 (diamond) for the biconvex lens. What happens to the edge rays, and why?<details><summary>Show answer</summary>The focal length drops to 7 cm, but the edge rays now meet at about 4 cm while near-axis rays meet at about 7.7 cm. Strong bending at steep angles makes spherical aberration much worse.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Radius of curvature R:</strong> the radius of the sphere of which a lens surface is a part; its centre is the centre of curvature C.</li>
+              <li><strong>Paraxial rays:</strong> rays close to the axis and making small angles with it; the simple formulas hold for them.</li>
+              <li><strong>Lens maker's formula:</strong> 1/f = (n₂/n₁ − 1)(1/R₁ − 1/R₂) for a thin lens of index n₂ in a medium n₁.</li>
+              <li><strong>Power of a lens:</strong> P = 1/f with f in metres, measured in dioptres (D); positive for converging lenses.</li>
+              <li><strong>Spherical aberration:</strong> rays through the edge of a spherical lens focus closer than rays near the axis, blurring the image.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

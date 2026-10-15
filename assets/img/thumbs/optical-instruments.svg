@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="optical-instruments">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M10 110h300" stroke="#94a3b8"/>
+  <path d="M70 70q10 40 0 80q-10-40 0-80z" fill="#38bdf8" fill-opacity=".3" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M240 60q10 50 0 100q-10-50 0-100z" fill="#38bdf8" fill-opacity=".3" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M40 98v12" stroke="#f8fafc" stroke-width="3"/>
+  <path d="M40 98L70 98L180 150L240 178L300 200" fill="none" stroke="#f97316" stroke-width="2.5"/>
+  <path d="M40 98L180 150L240 172L300 190" fill="none" stroke="#a78bfa" stroke-width="2.5"/>
+  <path d="M180 110v40" stroke="#facc15" stroke-width="3"/>
+  <circle cx="282" cy="40" r="22" fill="#020617" stroke="#e2e8f0"/><text x="282" y="49" font-family="sans-serif" font-size="26" font-weight="700" fill="#f8fafc" text-anchor="middle" transform="rotate(180 282 40)">F</text>
+</svg>

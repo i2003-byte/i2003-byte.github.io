@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Compound Microscope and Astronomical Telescope — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Ray diagrams of a compound microscope and an astronomical telescope. Change the focal lengths and see the first image, the final image, the magnifying power and what your eye sees.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/optical-instruments/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Compound Microscope and Astronomical Telescope — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Ray diagrams of a compound microscope and an astronomical telescope. Change the focal lengths and see the first image, the final image, the magnifying power and what your eye sees.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/optical-instruments/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="optical-instruments">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>How big a thing looks depends on the <strong>angle</strong> it makes at your eye. You can bring a tiny object closer to make that angle bigger, but only until 25 cm (the <strong>least distance of distinct vision D</strong>). Optical instruments use two convex lenses to make that angle much bigger. Their <strong>magnifying power</strong> M is the angle with the instrument divided by the angle without it.</p>
+            <p>In a <strong>compound microscope</strong>, the <strong>objective</strong> (very short focal length) is placed just outside its focus, close to the tiny object, and makes a real, inverted, enlarged first image inside the tube. The <strong>eyepiece</strong> then works like a magnifying glass on that image. The two magnifications multiply.</p>
+            <p>In an <strong>astronomical telescope</strong>, the object is very far away, so its rays arrive parallel. The objective (long focal length) forms a small real image at its focus, and the eyepiece magnifies it. The longer the objective's focal length and the shorter the eyepiece's, the greater the magnification. Both instruments show the image <strong>upside down</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">microscope: M = m_o × m_e,   m_o = v_o / u_o</code>
+            <code class="formula">m_e = 1 + D/f_e (image at 25 cm)   or   D/f_e (image at infinity)</code>
+            <code class="formula">M ≈ (L/f_o) × (D/f_e)   (normal adjustment)</code>
+            <p class="formula-note">L is the tube length: the gap between the objective's back focus and the eyepiece's front focus. With f_o = 1.5 cm, f_e = 3 cm and the lenses 14 cm apart, L = 9.5 cm and M = (9.5/1.5)(25/3) ≈ 53 at normal adjustment.</p>
+            <code class="formula">telescope: M = f_o / f_e   (normal adjustment, length f_o + f_e)</code>
+            <code class="formula">M = (f_o / f_e)(1 + f_e/D)   (final image at 25 cm)</code>
+            <p><strong>How the model works:</strong> both lenses are thin and the rays are traced with the lens formula (near-axis approximation). The lenses are drawn just tall enough to catch the rays shown. The eye sits at the eyepiece and D = 25 cm. In the microscope you choose the lenses and their separation, and the object distance is set for a sharp image (as when you turn the focus knob). In the telescope diagram, heights are drawn many times bigger than lengths, and angles above 0.5° are exaggerated to make the rays visible.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>School lab microscopes have a 10× eyepiece (f_e = 2.5 cm) and objectives marked 10×, 40× and 100×. The total magnification is the product, for example 10 × 40 = 400×.</li>
+              <li>Galileo's first telescopes (1609) magnified about 20×, enough to see Jupiter's four big moons.</li>
+              <li>The 2-metre telescope at the Indian Astronomical Observatory in Hanle, Ladakh, and the 3.6-metre Devasthal telescope near Nainital collect faint light with big mirrors. Big diameters gather more light and show finer detail.</li>
+              <li>A pathologist uses a microscope to look at blood cells, about 7 µm across: invisible to the eye, but easy to see at 400×.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Use the default microscope (f_o = 1.5 cm, f_e = 3 cm, lenses 14 cm apart, final image at 25 cm). Find m_o, m_e and M. Check that M = m_o × m_e.<details><summary>Show answer</summary>m_o ≈ −6.55 (the first image is 11.3 cm behind the objective and the object is 1.73 cm in front of it), m_e = 1 + 25/3 ≈ 9.33, so M ≈ −61: 61 times bigger and upside down.</details></li>
+              <li>Switch to “At infinity”. Compare M with the formula (L/f_o)(D/f_e).<details><summary>Show answer</summary>Both give about 52.8×. In normal adjustment the first image sits exactly at the eyepiece's focus, so m_o = L/f_o and m_e = D/f_e exactly. The eye is relaxed, but M is a little smaller than at the near point (61×).</details></li>
+              <li>Make the microscope as powerful as you can. Which settings help, and why?<details><summary>Show answer</summary>Short f_o (0.5 cm), short f_e (1.5 cm) and a long tube (20 cm): M ≈ 640×. A short objective focal length lets the object come very close and gives a large first image; a short eyepiece focal length magnifies that image more.</details></li>
+              <li>Choose the telescope with f_o = 100 cm and f_e = 5 cm at normal adjustment. Find M and the length of the telescope.<details><summary>Show answer</summary>M = 100/5 = 20× and the length is f_o + f_e = 105 cm. The first image of a 1.5° object is 100 × tan 1.5° ≈ 2.6 cm tall.</details></li>
+              <li>Look at the “eye alone” and “through the telescope” circles. What two things change?<details><summary>Show answer</summary>The Moon looks M times bigger (it fills a much larger angle) and it is upside down: the craters swap sides. That is why astronomical telescopes are not used for looking at things on Earth without an extra erecting lens.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Objective:</strong> the lens nearer the object.</li>
+              <li><strong>Eyepiece:</strong> the lens nearer the eye; it acts as a simple magnifier.</li>
+              <li><strong>Magnifying power:</strong> the angle subtended at the eye by the final image divided by the angle subtended by the object seen directly (at 25 cm for a microscope).</li>
+              <li><strong>Normal adjustment:</strong> the final image is at infinity, so the eye is relaxed.</li>
+              <li><strong>Least distance of distinct vision D:</strong> the closest distance at which a normal eye sees clearly, taken as 25 cm.</li>
+            </ul>
+          </section>
+      </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
