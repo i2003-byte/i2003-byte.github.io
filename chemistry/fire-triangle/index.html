@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Fire Triangle: Fuel, Air and Heat — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Light paper, wood, kerosene or a gas stove and keep it burning only while fuel, oxygen and heat are all there. Put fires out with a lid, sand, water or a CO₂ extinguisher, and see why water is wrong for an oil or electrical fire.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/fire-triangle/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="The Fire Triangle: Fuel, Air and Heat — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Light paper, wood, kerosene or a gas stove and keep it burning only while fuel, oxygen and heat are all there. Put fires out with a lid, sand, water or a CO₂ extinguisher, and see why water is wrong for an oil or electrical fire.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/fire-triangle/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="fire-triangle">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Burning is a chemical reaction called <strong>combustion</strong>: a fuel combines with <strong>oxygen</strong> from the air and gives out <strong>heat</strong> and often <strong>light</strong>. A fire needs three things at the same time, drawn as the three sides of the <strong>fire triangle</strong>:</p>
+            <ul>
+              <li><strong>Fuel:</strong> something that can burn (paper, wood, kerosene, LPG, plastic).</li>
+              <li><strong>Oxygen:</strong> normal air has about 21% oxygen. Most flames die when the oxygen near them falls to about 15%.</li>
+              <li><strong>Heat:</strong> the fuel must be heated to its <strong>ignition temperature</strong>, the lowest temperature at which it catches fire.</li>
+            </ul>
+            <p>Take away any one side and the fire goes out. That is the whole secret of fire fighting: <strong>cut off the fuel</strong> (close the gas knob), <strong>cut off the air</strong> (a lid, a blanket, sand, CO₂), or <strong>cool it</strong> below its ignition temperature (water).</p>
+            <p>Substances that can burn are <strong>combustible</strong> (paper, wood, kerosene); those that cannot are <strong>non-combustible</strong> (stone, glass, sand, iron). Substances with a very low ignition temperature that catch fire easily from a flame or spark, such as petrol, alcohol and LPG, are called <strong>inflammable</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 The reactions</h3>
+            <code class="formula">C + O₂ → CO₂ + heat and light (charcoal, and the carbon in wood)</code>
+            <code class="formula">CH₄ + 2O₂ → CO₂ + 2H₂O + heat (methane, the main gas in CNG and biogas)</code>
+            <code class="formula">C₄H₁₀ (butane, in LPG) + oxygen → CO₂ + H₂O + heat: 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O</code>
+            <p>Burning releases heat, and that heat keeps the next bit of fuel above its ignition temperature. This is why a fire, once started, keeps itself going.</p>
+            <p class="formula-note">Approximate ignition temperatures used here (published values vary with the sample, its size and how it is heated): paper about 230 °C, dry wood about 300 °C, plastic wire covering about 450 °C, kerosene about 220 °C by heat alone, LPG about 450 °C by heat alone. Kerosene gives off enough vapour to catch fire from a nearby flame above its <em>flash point</em>, about 50 °C (real kerosene: roughly 38–72 °C). LPG catches from a flame or spark at any normal temperature.</p>
+            <p class="formula-note">Simplified: the fire is a toy model. The temperature, oxygen and fuel move smoothly towards their targets at made-up speeds chosen to be easy to watch; “temperature of the fuel” is one number for the whole fuel; flames go out below 15% oxygen; the paper cup holds enough water to last about a minute and a half on the hottest plate. Real fires are far less tidy, and smoke, toxic gases and spreading make them much more dangerous.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>LPG at home:</strong> the gas has a strong smell added so a leak is noticed. If you smell gas, close the cylinder regulator, open doors and windows, and do not light a match or touch electric switches (a switch makes a tiny spark).</li>
+              <li><strong>Oil in a kadhai catches fire:</strong> turn off the stove and slide a lid over it. Never throw water: it sinks under the hot oil, boils at once and throws burning oil out.</li>
+              <li><strong>Electrical fires:</strong> switch off the mains (MCB) first. Water conducts electricity, so it can give a deadly shock.</li>
+              <li><strong>Fire extinguishers</strong> in school buses, schools, cinemas and offices are often CO₂ or dry powder types. CO₂ is heavier than air, so it covers the fire like a blanket, and it is safe on oil and electrical fires.</li>
+              <li><strong>Forest fires</strong> in summer, for example in Uttarakhand, spread through dry leaves and twigs. Fire lines (cleared strips with no fuel) stop them by removing fuel.</li>
+              <li><strong>Diwali crackers</strong> contain fuel and chemicals that supply their own oxygen, so they must be lit from a distance, with a bucket of water or sand nearby.</li>
+              <li>In an emergency in India, call the fire service on <strong>101</strong> (or <strong>112</strong>).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With Paper as the fuel, press Light it, then press Cover with a lid / blanket. Watch the oxygen bar. At what oxygen level does the flame go out, and which side of the triangle turns grey?<details><summary>Show answer</summary>The fire uses up the oxygen under the lid. When the oxygen near the fuel falls below about 15% the flame dies, and the OXYGEN side goes grey. Fuel and heat were still there for a while.</details></li>
+              <li>Choose Kerosene in a dish, light it and press Pour water. What happens? Then put it out the right way.<details><summary>Show answer</summary>The fire gets bigger and burning oil splashes out. Water is heavier than kerosene and does not mix with it, so it sinks, boils and throws the oil about. A lid, sand or the CO₂ extinguisher works, because they cut off the air.</details></li>
+              <li>Choose the LPG gas stove, light it and press Throw sand. Why is the message red even though the flame went out? What should you have done?<details><summary>Show answer</summary>The flame is out but the knob is still open, so gas keeps leaking into the room, where a spark could make it explode. For a gas fire, close the knob first: that removes the fuel and the flame dies at once.</details></li>
+              <li>Choose Electrical fire, light it and try Pour water. Then try the CO₂ extinguisher without switching off the mains, and wait. What happens, and what is the safe order?<details><summary>Show answer</summary>Water is refused: it conducts electricity and could give a shock. CO₂ puts the flames out, but the sparking plug keeps heating the plastic above 450 °C, so it catches fire again when the CO₂ drifts away. Safe order: switch off the mains, then use CO₂ or sand.</details></li>
+              <li>Change the Scene to the ignition temperature test, set the hot plate to 350 °C and press Light it. Which items catch fire, and why does the paper cup with water not burn? Then try 500 °C with a lit match held near.<details><summary>Show answer</summary>At 350 °C paper (about 230 °C), kerosene (about 220 °C) and, a little later, wood (about 300 °C) catch fire; plastic and LPG need about 450 °C, so they do not. The water in the cup boils at 100 °C and takes up the heat, so the paper cup stays far below 230 °C. With the match held near, LPG lights at once and kerosene lights once it is warmer than about 50 °C: inflammable vapours catch from a flame long before they reach their ignition temperature by heat alone.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Combustion:</strong> a chemical reaction in which a substance reacts with oxygen to give off heat (and often light).</li>
+              <li><strong>Ignition temperature:</strong> the lowest temperature at which a substance catches fire.</li>
+              <li><strong>Combustible / non-combustible:</strong> can burn / cannot burn.</li>
+              <li><strong>Inflammable:</strong> catches fire very easily from a flame or spark because it has a low ignition temperature (petrol, alcohol, LPG).</li>
+              <li><strong>Flash point:</strong> the lowest temperature at which a liquid gives off enough vapour to catch fire from a nearby flame.</li>
+              <li><strong>Fire extinguisher:</strong> a device that puts out a fire by cutting off air, cooling the fuel, or both.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

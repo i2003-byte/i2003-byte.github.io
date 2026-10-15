@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="fuels and calorific value">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c2410c"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <g fill="#a8a29e" fill-opacity=".45"><circle cx="38" cy="40" r="12"/><circle cx="52" cy="22" r="9"/><circle cx="120" cy="34" r="11"/><circle cx="108" cy="16" r="8"/></g>
+  <rect x="44" y="62" width="72" height="44" rx="5" fill="#cbd5e1"/><rect x="38" y="58" width="84" height="6" rx="3" fill="#cbd5e1"/>
+  <rect x="48" y="78" width="64" height="25" rx="3" fill="#ef4444" fill-opacity=".75"/>
+  <rect x="44" y="94" width="72" height="12" fill="#111" fill-opacity=".55"/>
+  <g fill="#ea580c"><path d="M58 128q4-14 8-18q4 6 8 18z"/><path d="M74 128q4-16 8-20q4 8 8 20z"/><path d="M90 128q3-12 6-16q4 6 6 16z"/></g>
+  <g fill="#facc15"><path d="M62 128q2-7 4-9q2 3 4 9z"/><path d="M78 128q2-8 4-10q2 4 4 10z"/></g>
+  <rect x="34" y="124" width="92" height="40" rx="8" fill="#92400e"/><rect x="56" y="134" width="48" height="26" rx="8" fill="#1c1917"/>
+  <g font-family="sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">
+    <text x="150" y="58">Dung</text><text x="150" y="88">Wood</text><text x="150" y="118">Coal</text><text x="150" y="148">LPG</text><text x="150" y="178">H₂</text>
+  </g>
+  <rect x="190" y="48" width="112" height="14" rx="3" fill="#a16207"/>
+  <rect x="190" y="78" width="40" height="14" rx="3" fill="#a16207" fill-opacity=".85"/>
+  <rect x="190" y="108" width="18" height="14" rx="3" fill="#f59e0b"/>
+  <rect x="190" y="138" width="6" height="14" rx="2" fill="#3b82f6"/>
+  <rect x="190" y="168" width="3" height="14" rx="1" fill="#38bdf8"/>
+  <text x="80" y="188" font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#fbbf24">grams to boil</text>
+</svg>

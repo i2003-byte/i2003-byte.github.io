@@ -1226,6 +1226,22 @@ SimLab.simulations = [
     prerequisites: ['monsoon-winds']
   },
   {
+    id: 'desert-day-night',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'Why Deserts Are Hot by Day and Cold at Night',
+    description:
+      'Run a 24-hour day in the Thar desert next to Mumbai and a cloudy night. Dry air, bare sand and clear skies let the ground heat fast in sunshine and lose its heat to space after sunset.',
+    level: 'Beginner',
+    tags: ['desert', 'thar', 'temperature', 'day and night', 'humidity', 'clouds', 'heat', 'radiation', 'weather and climate', 'class 7', 'class 11'],
+    thumbnail: '/assets/img/thumbs/desert-day-night.svg',
+    link: '/geography/desert-day-night/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['humidity-clouds-rain']
+  },
+  {
     id: 'demand-curve',
     subject: 'economics',
     branch: 'markets',
@@ -2116,6 +2132,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-13',
     prerequisites: ['reaction-types']
+  },
+  {
+    id: 'fire-triangle',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'The Fire Triangle: Fuel, Air and Heat',
+    description:
+      'Light paper, wood, kerosene or a gas stove and keep it burning only while fuel, oxygen and heat are all there. Put fires out with a lid, sand, water or a CO₂ extinguisher, and see why water is wrong for an oil or electrical fire.',
+    level: 'Beginner',
+    tags: ['combustion', 'fire', 'fire triangle', 'ignition temperature', 'fire extinguisher', 'inflammable', 'oxygen', 'class 8'],
+    thumbnail: '/assets/img/thumbs/fire-triangle.svg',
+    link: '/chemistry/fire-triangle/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['rusting']
+  },
+  {
+    id: 'candle-flame',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Zones of a Candle Flame',
+    description:
+      'Look inside a candle flame: the dark zone of unburnt wax vapour, the yellow luminous zone and the hot blue outer zone. Probe it with a glass plate, a glass tube, a copper wire and a thermometer, or cover it with a jar.',
+    level: 'Beginner',
+    tags: ['combustion', 'candle', 'flame', 'luminous zone', 'non-luminous zone', 'wax', 'soot', 'class 8'],
+    thumbnail: '/assets/img/thumbs/candle-flame.svg',
+    link: '/chemistry/candle-flame/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['fire-triangle']
+  },
+  {
+    id: 'fuel-calorific-value',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Fuels and Calorific Value',
+    description:
+      'Boil the same pot of water with cow dung cakes, wood, coal, kerosene, LPG, CNG, biogas or hydrogen. Compare how many grams each fuel needs, its calorific value, the stove’s efficiency and the smoke it makes.',
+    level: 'Intermediate',
+    tags: ['fuel', 'calorific value', 'combustion', 'lpg', 'cng', 'biogas', 'coal', 'pollution', 'ideal fuel', 'class 8'],
+    thumbnail: '/assets/img/thumbs/fuel-calorific-value.svg',
+    link: '/chemistry/fuel-calorific-value/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-15',
+    prerequisites: ['fire-triangle']
   },
   {
     id: 'states-of-matter',

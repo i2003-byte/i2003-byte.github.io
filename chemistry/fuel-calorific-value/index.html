@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fuels and Calorific Value — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Boil the same pot of water with cow dung cakes, wood, coal, kerosene, LPG, CNG, biogas or hydrogen. Compare how many grams of each fuel it takes, its calorific value, how much heat the stove wastes and the smoke it makes.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/fuel-calorific-value/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Fuels and Calorific Value — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Boil the same pot of water with cow dung cakes, wood, coal, kerosene, LPG, CNG, biogas or hydrogen. Compare how many grams of each fuel it takes, its calorific value, how much heat the stove wastes and the smoke it makes.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/fuel-calorific-value/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="fuel-calorific-value">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>fuel</strong> is a substance we burn to get heat. Different fuels give very different amounts of heat. The heat released when <strong>1 kg</strong> of a fuel burns completely is its <strong>calorific value</strong>, measured in <strong>kilojoules per kilogram (kJ/kg)</strong>. LPG gives about 55 000 kJ/kg, cow dung cakes only about 6 000–8 000 kJ/kg. So to boil the same pot you need a few grams of LPG but hundreds of grams of dung cakes.</p>
+            <p>Not all of that heat reaches the food. An open <strong>chulha</strong> lets most of it escape into the air around the pot, while a gas burner puts a much larger share into the pot. This share is the stove's <strong>efficiency</strong>. A good fuel and a good stove together save fuel, money and forests.</p>
+            <p>An <strong>ideal fuel</strong> is easy to get, cheap, burns easily in air at a moderate, steady rate, has a high calorific value and leaves little smoke or residue. No fuel is perfect, so we choose the best one for the job.</p>
+            <p>Burning fuels also <strong>pollutes</strong>. Incomplete burning makes <strong>carbon monoxide (CO)</strong>, a poisonous gas that can kill in a closed room, and black <strong>soot</strong> that harms the lungs. All carbon fuels give <strong>carbon dioxide (CO₂)</strong>, which traps heat and adds to <strong>global warming</strong>. Coal and diesel give <strong>sulphur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NO₂)</strong>, which cause <strong>acid rain</strong>. Hydrogen burns to give only water.</p>
+          </section>
+          <section>
+            <h3>🧮 The formulas</h3>
+            <code class="formula">Heat needed by the water: Q = m × c × ΔT</code>
+            <code class="formula">Mass of fuel burned = Q ÷ (calorific value × efficiency)</code>
+            <p>Here m is the mass of water (1 L of water has a mass of 1 kg), c = 4.18 kJ/kg °C is the specific heat of water and ΔT is the rise in temperature.</p>
+            <p><strong>Worked example (1 L of water on LPG):</strong> Q = 1 kg × 4.18 kJ/kg °C × (100 − 25) °C = 313.5 kJ. With an ideal stove the LPG needed is 313.5 ÷ 55 000 = 0.0057 kg = 5.7 g. A real burner puts about 58 % of the heat into the pot, so it needs 313.5 ÷ (55 000 × 0.58) ≈ 9.8 g of LPG.</p>
+            <p class="formula-note">Simplified: each fuel uses one value from its range: cow dung cakes 7 000, wood 20 000, coal 30 000, biogas 37 500, kerosene, petrol and diesel 45 000, CNG (methane) 50 000, LPG 55 000 and hydrogen 150 000 kJ/kg. Stove efficiencies are typical rough values (chulha 10–12 %, coal angithi 20 %, kerosene stove 45 %, gas burners 55–60 %), as are the ash amounts. The model ignores the heat taken by the pot itself and water lost as steam before boiling. Time runs 30 times faster than real time; the clock shows real minutes. Petrol and diesel are vehicle fuels and are shown on a stove only to compare.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Smoke from chulhas burning wood, dung cakes and crop waste is a major cause of lung and eye disease among women and children in villages. Schemes such as the Pradhan Mantri Ujjwala Yojana (from 2016) gave LPG connections to millions of poor homes to replace that smoke.</li>
+              <li>After a Supreme Court order, Delhi switched its buses and autorickshaws to CNG around 2002. CNG burns much more cleanly than diesel, with far less soot and sulphur dioxide.</li>
+              <li>A biogas plant turns cow dung into a clean gas fuel, and the slurry left behind is good manure. It is a better use of dung than burning cakes of it.</li>
+              <li>Hydrogen has the highest calorific value of all and gives only water, so it is used as a rocket fuel and is being tried for buses, but it is costly to make and hard to store safely.</li>
+              <li>Coal-burning power plants release SO₂ and soot. Newer plants fit equipment that removes much of the SO₂ from the smoke before it leaves the chimney.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Boil 1 L of water with LPG, then with wood, then with cow dung cakes. How many grams of each do you need?<details><summary>Show answer</summary>About 9.8 g of LPG, 131 g of wood and 448 g of cow dung cakes. Wood needs about 13 times as much as LPG, and dung cakes about 46 times as much.</details></li>
+              <li>Pick wood and watch the heat bar while it heats. How much of the heat goes into the water? Now turn on “Ideal stove”.<details><summary>Show answer</summary>Only 12 %: the wood releases about 2 600 kJ, but just 313 kJ goes into the water and about 2 300 kJ is lost to the air. With an ideal stove you would need only 15.7 g of wood instead of 131 g. A better stove saves a lot of fuel.</details></li>
+              <li>Compare kerosene, petrol and diesel on the bar chart. Why do they need the same mass? Then look at their ideal-fuel checklists.<details><summary>Show answer</summary>All three have a calorific value of about 45 000 kJ/kg and are burned here on the same kind of stove, so each needs about 15.5 g. But petrol catches fire far too easily to be safe in a kitchen and diesel gives soot, so a high calorific value alone does not make an ideal fuel.</details></li>
+              <li>Pick hydrogen. How many grams boil the pot, and what comes out of the burner? Why don't we cook with it?<details><summary>Show answer</summary>Only about 3.5 g, and the only product is water vapour. But hydrogen is costly to make and hard and dangerous to store (it can explode), so it scores only 2 of 5 on the ideal-fuel checklist.</details></li>
+              <li>Pick LPG and set the water to 2 L, then 3 L. What happens to the grams needed?<details><summary>Show answer</summary>They go up in step with the water: about 19.7 g for 2 L and 29.5 g for 3 L. Twice the water needs twice the heat (Q = m c ΔT), so twice the fuel.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Fuel:</strong> a substance that is burned to give heat (and often light).</li>
+              <li><strong>Calorific value:</strong> the heat given by the complete burning of 1 kg of a fuel, in kJ/kg.</li>
+              <li><strong>Efficiency (of a stove):</strong> the share of the fuel's heat that actually reaches the pot.</li>
+              <li><strong>Ideal fuel:</strong> cheap, easy to get, burns at a steady rate, high calorific value, little pollution or residue.</li>
+              <li><strong>Incomplete combustion:</strong> burning with too little air, which makes carbon monoxide and soot.</li>
+              <li><strong>Acid rain:</strong> rain made acidic by sulphur dioxide and nitrogen oxides from burning fuels.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

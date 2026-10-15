@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Why Deserts Are Hot by Day and Cold at Night — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Run a 24-hour day in the Thar desert next to Mumbai, a cloudy night or wet fields. See why dry, clear air and bare sand make deserts hot by day and cold at night.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/desert-day-night/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Why Deserts Are Hot by Day and Cold at Night — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Run a 24-hour day in the Thar desert next to Mumbai, a cloudy night or wet fields. See why dry, clear air and bare sand make deserts hot by day and cold at night.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/desert-day-night/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="desert-day-night">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a desert like the Thar, the air is <strong>dry</strong> and the sky is usually <strong>clear</strong>. By day almost all the sunshine reaches the ground. Dry sand has a <strong>small heat capacity</strong> and no water to evaporate, so all that energy goes into warming the top few centimetres of sand, which can pass 55–60 °C, and the sand then heats the air above it.</p>
+            <p>After sunset the ground keeps giving off heat as invisible <strong>infrared radiation</strong> (terrestrial radiation). Water vapour and clouds act like a <strong>blanket</strong>: they soak up this heat and send part of it back down. Desert air has little vapour and no clouds, so much more heat escapes to space and the sand and air cool quickly. That is why the gap between day and night, the <strong>diurnal range</strong>, is so large in deserts.</p>
+            <p>Near the sea it is different. Water warms and cools slowly, sea breezes bring that mild air inland, and the moist air and clouds hold heat in at night. So Mumbai’s days are less hot and its nights less cool.</p>
+            <p>The hottest time is not at noon. After noon the ground still gains more heat than it loses, so the air keeps warming until about 2–3 pm. The coldest time is around sunrise, after a whole night of losing heat.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">heat gained − heat lost = heat capacity × change in temperature</code>
+            <p class="formula-note">For the ground: heat gained is the sunlight it absorbs plus the infrared sent back by the sky; heat lost is its own infrared, the heat it gives to the air, and heat used to evaporate water. The same heat warms dry sand (small heat capacity) much more than wet soil or sea water (large heat capacity).</p>
+            <code class="formula">sunlight absorbed = sunlight × (1 − albedo) × (1 − share reflected by clouds)</code>
+            <p class="formula-note">Albedo is the fraction of light a surface reflects: about 0.3 for desert sand, about 0.2 for green fields.</p>
+            <code class="formula">diurnal range = highest temperature of the day − lowest temperature</code>
+            <p class="formula-note">About 15 °C in Jaisalmer in May (roughly 41 °C and 27 °C), about 7 °C in Mumbai (roughly 34 °C and 27 °C).</p>
+            <p class="formula-note">Simplified: each place is just two boxes, the ground surface and the air near it. The sky’s infrared is worked out from the air temperature, water vapour and cloud cover with a standard formula; the air also mixes with the air above it (and with sea air on the coast). Times are sun time, where 12:00 is when the sun is highest; in Jaisalmer clocks on Indian Standard Time run about 45 minutes ahead of sun time. Real weather also depends on wind, dust storms and the season, so real days vary by a few degrees.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In Jaisalmer and Barmer in May, afternoons often reach 42–45 °C, yet the sand can feel cool under your feet just before sunrise.</li>
+              <li>People in Rajasthan wear loose, light-coloured clothes and turbans that reflect sunlight and shade the head and neck, and build houses with thick mud or stone walls. Thick walls are slow to warm in the day and give back their stored heat at night.</li>
+              <li>Camels have thick fur on their backs that blocks the sun, and they can let their body temperature rise by day and fall at night, so they lose less water as sweat.</li>
+              <li>Leh in Ladakh is a cold desert: the air is thin and dry, so summer days are warm in the sun but nights can be near freezing.</li>
+              <li>In the Sahara, where the air is even drier, days above 40 °C can be followed by nights below 15 °C. A cloudy night anywhere stays warmer than a clear one, which is why frost forms on clear, still winter nights.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press “Run the day” with Thar and Mumbai. At what time is each place hottest and coldest?<details><summary>Show answer</summary>The Thar air is hottest around 3 pm (about 41 °C) and coldest around 6 am, just after sunrise (about 27 °C): a range of about 14.5 °C. Mumbai only goes from about 28 °C to 35 °C, a range of about 7 °C. Neither is hottest at noon, because the ground keeps adding heat after noon.</details></li>
+              <li>Watch the “sand” label and the air thermometer in the Thar at about 1:30 pm. Which is hotter?<details><summary>Show answer</summary>The sand surface reaches about 58 °C while the air is about 39–40 °C. The sun heats the ground; the ground then heats the air, so the air is always cooler than the sand by day and peaks later.</details></li>
+              <li>Change “Compare with” to “Thar under cloud, humid air”. How do the coldest and hottest temperatures change?<details><summary>Show answer</summary>The cloudy, humid Thar is coldest at about 30.5 °C instead of 26.5 °C (4 °C warmer) and hottest at about 36 °C instead of 41 °C. Clouds block sunlight by day and send heat back at night, so the range falls from about 14.5 °C to under 6 °C.</details></li>
+              <li>Set the water vapour in the desert air to 3, run the day, then try 18. What happens to the night?<details><summary>Show answer</summary>With 3 g/m³ the night is colder (lowest about 24 °C, range about 17 °C). With 18 g/m³ the lowest is about 28.5 °C and the range about 12 °C. More vapour means a thicker heat blanket, so fewer orange arrows escape to space.</details></li>
+              <li>Choose the Sahara as the desert. How big is its day–night range?<details><summary>Show answer</summary>About 27–28 °C: from about 42 °C in the afternoon down to about 15 °C at dawn. The Sahara’s air is drier still and its sand cools even faster at night.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Insolation:</strong> the sunlight (incoming solar radiation) that reaches the Earth’s surface.</li>
+              <li><strong>Terrestrial radiation:</strong> heat given off by the Earth’s surface as invisible infrared rays.</li>
+              <li><strong>Diurnal range:</strong> the difference between the highest and lowest temperature in a day.</li>
+              <li><strong>Humidity:</strong> the amount of water vapour in the air.</li>
+              <li><strong>Heat capacity:</strong> how much heat is needed to warm something by 1 °C. Water and wet soil need much more than dry sand.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

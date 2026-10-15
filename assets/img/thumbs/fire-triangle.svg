@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="fire triangle">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9a3412"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+    <linearGradient id="f1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3b82f6" stop-opacity=".8"/><stop offset=".15" stop-color="#ea580c"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/></linearGradient>
+    <linearGradient id="f2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fb923c"/><stop offset="1" stop-color="#facc15" stop-opacity="0"/></linearGradient>
+    <linearGradient id="f3" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fef08a"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="40" y="166" width="22" height="12" rx="2" fill="#b45309"/><rect x="104" y="166" width="22" height="12" rx="2" fill="#b45309"/>
+  <rect x="28" y="158" width="110" height="9" rx="3" fill="#94a3b8"/>
+  <g fill="#78350f"><rect x="40" y="149" width="86" height="8" rx="4" transform="rotate(-6 83 153)"/><rect x="42" y="148" width="82" height="8" rx="4" transform="rotate(7 83 152)"/></g>
+  <path d="M50 152C50 120 70 100 83 40C96 100 116 120 116 152Z" fill="url(#f1)"/>
+  <path d="M60 152C60 126 74 112 84 70C94 112 106 126 106 152Z" fill="url(#f2)"/>
+  <path d="M70 152C70 134 78 124 84 100C90 124 96 134 96 152Z" fill="url(#f3)"/>
+  <g stroke-width="7" stroke-linecap="round"><path d="M236 34L188 118" stroke="#fb923c"/><path d="M236 34L284 118" stroke="#38bdf8"/><path d="M188 118H284" stroke="#facc15"/></g>
+  <g font-family="sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="196" y="68" fill="#fb923c" transform="rotate(-60 196 68)">HEAT</text>
+    <text x="278" y="70" fill="#38bdf8" transform="rotate(60 278 70)">OXYGEN</text>
+    <text x="236" y="138" fill="#facc15">FUEL</text>
+    <text x="236" y="186" fill="#e2e8f0">take one away: fire out</text>
+  </g>
+</svg>

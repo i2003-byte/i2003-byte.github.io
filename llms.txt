@@ -140,6 +140,7 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 - [Monsoon Winds over India](https://i2003-byte.github.io/geography/monsoon-winds/): Run through a year over India: the land heats up faster than the sea, low pressure pulls in moist south-west monsoon winds and rain, and in winter dry winds blow back from land to sea. (Beginner)
 - [Humidity, Clouds and Rain](https://i2003-byte.github.io/geography/humidity-clouds-rain/): Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow. (Intermediate)
 - [Climate Graphs of Indian Cities](https://i2003-byte.github.io/geography/climate-graphs/): Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph. (Beginner)
+- [Why Deserts Are Hot by Day and Cold at Night](https://i2003-byte.github.io/geography/desert-day-night/): Run a 24-hour day in the Thar desert next to Mumbai and a cloudy night. Dry air, bare sand and clear skies let the ground heat fast in sunshine and lose its heat to space after sunset. (Beginner)
 
 ## Economics
 
@@ -188,6 +189,9 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Balancing Chemical Equations](https://i2003-byte.github.io/chemistry/balancing-equations/): Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis. (Intermediate)
 - [Types of Chemical Reactions](https://i2003-byte.github.io/chemistry/reaction-types/): Watch particles react: combination, decomposition with heat or sunlight, displacement of copper by iron and zinc, and a double displacement that forms a white precipitate. (Intermediate)
 - [Rusting of Iron](https://i2003-byte.github.io/chemistry/rusting/): Leave iron nails in five test tubes for two weeks: air and water, dry air, boiled water under oil, salt water, and a painted, greased or galvanised nail. See why rust needs both oxygen and water. (Beginner)
+- [The Fire Triangle: Fuel, Air and Heat](https://i2003-byte.github.io/chemistry/fire-triangle/): Light paper, wood, kerosene or a gas stove and keep it burning only while fuel, oxygen and heat are all there. Put fires out with a lid, sand, water or a CO₂ extinguisher, and see why water is wrong for an oil or electrical fire. (Beginner)
+- [Zones of a Candle Flame](https://i2003-byte.github.io/chemistry/candle-flame/): Look inside a candle flame: the dark zone of unburnt wax vapour, the yellow luminous zone and the hot blue outer zone. Probe it with a glass plate, a glass tube, a copper wire and a thermometer, or cover it with a jar. (Beginner)
+- [Fuels and Calorific Value](https://i2003-byte.github.io/chemistry/fuel-calorific-value/): Boil the same pot of water with cow dung cakes, wood, coal, kerosene, LPG, CNG, biogas or hydrogen. Compare how many grams each fuel needs, its calorific value, the stove’s efficiency and the smoke it makes. (Intermediate)
 
 ## Mathematics
 

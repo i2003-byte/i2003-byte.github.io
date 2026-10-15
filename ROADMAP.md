@@ -20,21 +20,20 @@
 ## Coverage (agents: update after every run)
 | Class | Physics | Chemistry | Mathematics | Biology | Geography | Economics | Computer Science |
 |---|---|---|---|---|---|---|---|
-| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 3 (Acids, bases and salts 3) | 3 (Lines, angles and triangles 3) | 3 (Nutrition in plants 3) | 6 (Earth's motions 3, Weather and climate 3) | 0 | 0 |
-| 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 0 | 0 | 0 | 0 | 0 | 0 |
+| 7 | 29 (Sound 14, Heat 6, Motion 3, Electricity 3, Light 3) | 3 (Acids, bases and salts 3) | 3 (Lines, angles and triangles 3) | 3 (Nutrition in plants 3) | 7 (Earth's motions 3, Weather and climate 3, Life in the deserts 1) | 0 | 0 |
+| 8 | 9 (Force and pressure 3, Friction 3, Natural phenomena 3) | 3 (Combustion and flame 3) | 0 | 0 | 0 | 0 | 0 |
 | 9 | 16 (Motion 3, Force and laws of motion 4, Gravitation 3, Work and energy 3, Sound 3) | 3 (Matter in our surroundings 3) | 3 (Statistics and probability 3) | 3 (The fundamental unit of life 3) | 0 | 0 | 0 |
 | 10 | 12 (Light: reflection and refraction 3, Human eye and the colourful world 3, Electricity 3, Magnetic effects of current 3) | 3 (Chemical reactions and equations 3) | 3 (Introduction to trigonometry 3) | 0 | 0 | 0 | 0 |
 | 11 | 18 (projectile, pendulum, Oscillations 3, Gravitation 3, Waves 4, Kinetic theory 3, Thermal properties of matter 3) | 0 | 0 | 0 | 0 | 3 (Demand and supply 3) | 3 (Numbers and logic 3) |
 | 12 | 12 (Electric charges and fields 3, Ray optics and optical instruments 3, Wave optics 3, Current electricity 3) | 0 | 0 | 0 | 0 | 0 | 0 |
 
-**Total live simulations: 132**
+**Total live simulations: 136**
 
 ## 🔨 In progress
 <!-- Format: - [~] **Class · Subject · Sub-topic**. Done: <ids>. Next: <what remains>. Started <YYYY-MM-DD>. -->
-_None. Take the first 📋 Next item._
+- [~] **Class 7 · Geography · Life in the deserts (from feedback #3).** Branch `climate`. Done: desert-day-night. Next: build `wind-shapes-desert` (wind erosion and deposition: mushroom rocks, barchan sand dunes moving downwind, loess; Class 7 "Our changing earth") and `insolation-angle` (Class 11: why the same sunlight heats less when the Sun is low; latitude, season and slope, tropical deserts under sinking dry air). Started 2026-10-15.
 
 ## 📋 Next (auto-approved; take items from the top. Each item plans ~3 simulations; each run builds 4)
-- [ ] **Class 8 · Chemistry · Combustion and flame.** Branch `reactions`. Sims: the fire triangle (fuel, oxygen, ignition temperature; put out a fire by removing one); zones of a candle flame (hottest outer zone, unburnt wax vapour); fuel efficiency and calorific value of common fuels (wood, coal, LPG, CNG).
 - [ ] **Class 9 · Chemistry · Atoms and molecules.** Branch `atoms`. Sims: law of conservation of mass and constant proportions (burn magnesium in a closed flask, water always 1 : 8 by mass); build a formula from valencies (criss-cross: Al₂O₃, CaCl₂, Na₂CO₃) with molecular mass; the mole (count particles by weighing: 1 mol of carbon, water and salt side by side, 6.022 × 10²³).
 - [ ] **Class 12 · Physics · Electromagnetic induction.** Branch `electricity`. Sims: Faraday's law (move a magnet through a coil, galvanometer kick ∝ rate of change of flux); Lenz's law (falling magnet in a copper tube, eddy-current braking); self and mutual induction with a transformer (turns ratio, step-up/step-down, power lines).
 - [ ] **Class 10 · Mathematics · Coordinate geometry.** Subject `mathematics` (new branch `coordinate-geometry`). Sims: distance formula (drag two points, the right triangle and Pythagoras; is it a square, a rectangle or a right triangle?); section formula (a point dividing a segment in m : n, midpoint, centroid); area of a triangle from coordinates (shoelace, collinear points give 0).
@@ -50,6 +49,7 @@ _None yet._
 - [x] **Printable worksheet** (2026-10-11). Every simulation page has a 🖨 Print worksheet button in the Learn panel (the browser's Print does the same): a clean light page with Name/Class/Date lines, the picture and graph as they are now, the settings and numbers, the page's share link, the Learn text, and the Try-this questions with answer lines (answers hidden). Shared code only (`common.js`, `style.css`).
 
 ## ✅ Done
+- [x] **Class 8 · Chemistry · Combustion and flame.** 3 sims (branch `reactions`): fire-triangle (paper, wood, kerosene, LPG burner or sparking plug; lid, sand, water, CO₂ and gas knob/mains each remove one side of the triangle; water spreads an oil fire and is refused on a live electrical fire; ignition-test hot plate with a paper cup of water), candle-flame (dark, luminous and outer zones with rounded temperatures; draggable thermometer, glass plate soot ring, glass tube wax vapour lit at the far end, copper wire glow; jar on the table or on blocks), fuel-calorific-value (boil 0.5–3 L of water with 10 fuels on their usual stoves; grams needed per fuel, heat into water vs lost, pollutants, ideal-fuel checklist, ideal-stove toggle). Done 2026-10-15.
 - [x] **Class 12 · Physics · Ray optics and optical instruments.** 3 sims (branch `optics`): total-internal-reflection (semicircular block with Fresnel reflected share and critical angle, optical fibre with acceptance cone and bend loss, diamond vs glass brilliant cut, hot-road mirage with a “what you see” strip), lens-maker (exact ray tracing through one spherical surface or five lens shapes; index and surrounding liquid; formula vs traced focus and spherical aberration), optical-instruments (compound microscope and astronomical telescope ray diagrams, near point or normal adjustment, magnifying power, eye-alone vs instrument view). Done 2026-10-15.
 - [x] **Class 11 · Physics · Thermal properties of matter.** 3 sims (branch `thermodynamics`): thermal-expansion, calorimetry, newtons-cooling (two cups of chai: steel tumbler, kulhad, ceramic mug, vacuum flask; lids, fan, room temperature, pre-warmed cups; rate of cooling vs temperature difference plot with fitted k). Done 2026-10-15.
 - [x] **Class 9 · Physics · Sound.** 3 sims (branch `sound`): compressions-rarefactions, echo-sonar (clap in front of a cliff or shout into a well with the pulse in slow motion and the real echo delay as sound; the 0.1 s rule and the 17.2 m least distance on a “what you hear” strip; ship SONAR pings a made-up but realistic sea bed and maps it from echo times, optionally blind), sound-reflection (2D sound-ray tracer: the NCERT two-tube and board activity with a draggable listening tube, hard/soft/no board; curved sound board on a stage, megaphone, stethoscope tube with many reflections; share of sound reaching the listener). Done 2026-10-14.

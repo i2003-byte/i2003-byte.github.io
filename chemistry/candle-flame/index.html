@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Zones of a Candle Flame — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Look inside a candle flame: the dark zone of unburnt wax vapour, the yellow luminous zone and the hot blue outer zone. Probe it with a thermometer, a glass plate, a glass tube and a copper wire, or cover it with a jar.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/candle-flame/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Zones of a Candle Flame — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Look inside a candle flame: the dark zone of unburnt wax vapour, the yellow luminous zone and the hot blue outer zone. Probe it with a thermometer, a glass plate, a glass tube and a copper wire, or cover it with a jar.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/candle-flame/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="candle-flame">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>flame</strong> is burning gas. The heat of the flame melts the wax, the liquid wax climbs up the wick, and near the hot flame it turns into <strong>wax vapour</strong>. It is this vapour that burns, not the solid wax. So substances that turn into vapour when heated burn with a flame: wax, kerosene, LPG, camphor. Charcoal does not vaporise, so it only <strong>glows</strong> red without a flame.</p>
+            <p>A candle flame has three main zones, because air (oxygen) reaches different parts in different amounts:</p>
+            <ul>
+              <li><strong>Dark zone</strong> (innermost, around the wick): unburnt wax vapour. No air reaches it, so nothing burns here. It is the least hot part, about 600–800 °C.</li>
+              <li><strong>Luminous zone</strong> (middle, bright yellow): there is not enough air, so the wax burns only partly (<strong>incomplete combustion</strong>). Tiny carbon particles (<strong>soot</strong>) get very hot and glow yellow. It is moderately hot, about 1200 °C.</li>
+              <li><strong>Outer, non-luminous zone</strong> (thin, faint blue): plenty of air, so the wax burns completely (<strong>complete combustion</strong>). It is the hottest part, about 1400 °C.</li>
+            </ul>
+            <p>At the very bottom there is also a small <strong>blue base</strong>, where fresh air flows in and the vapour burns completely.</p>
+          </section>
+          <section>
+            <h3>🧮 The reaction</h3>
+            <code class="formula">wax + oxygen → carbon dioxide + water + heat + light</code>
+            <code class="formula">C₂₅H₅₂ + 38O₂ → 25CO₂ + 26H₂O</code>
+            <p class="formula-note">Candle wax (paraffin) is a mixture of many similar compounds; C₂₅H₅₂ is a typical one, so this equation is only an example. It is for complete burning, as in the outer zone. With too little air some of the carbon is left as soot (C) or becomes poisonous carbon monoxide (CO).</p>
+            <p class="formula-note">Simplified: the zone temperatures are rounded values; real ones differ from book to book and from candle to candle. The flame shapes are drawn, not calculated. Under the jar the oxygen is used up about three times more slowly than in a real tumbler (where a candle goes out within a few seconds to about half a minute, depending on the jar), so you can watch it. A real candle goes out at about 16% oxygen; the rest of the air is mostly nitrogen. The copper wire is shown heating to about 60% of the gas temperature, because a wire also loses heat.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Goldsmiths blow the outermost zone of a flame onto gold and silver through a thin metal pipe to melt them, because it is the hottest part.</li>
+              <li>A kerosene lamp, a <em>diya</em> and a candle give a bright yellow flame: lots of glowing soot, good for light. The glass chimney of a lantern turns black from that soot.</li>
+              <li>A well-adjusted LPG stove burns with a blue flame: enough air, complete combustion, more heat. If the burner is dirty or the air hole is wrong, the flame turns yellow and the bottom of the pan gets black with soot (and fuel is wasted).</li>
+              <li>In earlier times, people made <em>kajal</em> (kohl) by holding a cool plate over the flame of a <em>diya</em> to collect soot.</li>
+              <li>Charcoal in a <em>sigri</em> or <em>angithi</em> glows red without a flame, because charcoal does not turn into vapour.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the thermometer, start in the dark zone, then slowly drag the probe up and out to the edge of the flame. Where is it hottest?<details><summary>Show answer</summary>About 700 °C in the dark zone, about 1200 °C in the yellow luminous zone, and about 1400 °C at the faint blue outer edge. The outer zone is hottest because the wax vapour gets plenty of oxygen there and burns completely.</details></li>
+              <li>Choose the glass plate and hold it in the luminous zone for about 10 seconds. What forms on the glass? Then try it in the outer zone, or above the tip.<details><summary>Show answer</summary>A black ring of soot: unburnt carbon from the luminous zone. It is a ring (with a clear middle) when the plate is low enough to cut the dark zone. In the outer zone no soot collects, because there the carbon burns completely to carbon dioxide.</details></li>
+              <li>Choose the glass tube and put its lower end in the dark zone. Press “Hold a lit match at the tube”. Then move the end into the luminous zone and try again.<details><summary>Show answer</summary>From the dark zone white wax vapour comes out of the tube, and it catches fire at the far end. This shows the dark zone holds unburnt wax vapour. From the luminous zone only a little sooty smoke comes out, and it does not light.</details></li>
+              <li>Choose the copper wire and hold it straight across the middle of the flame. Which parts of the wire glow brightest?<details><summary>Show answer</summary>The two bits in the outer zone, at the edges of the flame, glow brightest red: the outer zone is the hottest. The middle bits (luminous zone) glow less, and if you lower the wire into the dark zone, the middle barely glows.</details></li>
+              <li>Set “Cover the candle” to “Glass jar over the candle” and press Start. Then try “Jar raised on two blocks”. What is different?<details><summary>Show answer</summary>Under the closed jar the flame uses up the oxygen and no fresh air gets in. The flame shrinks, turns orange and smoky, and goes out at about 16% oxygen; drops of water (made by burning) mist the glass. On blocks, air flows in at the bottom, so the candle keeps burning.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Flame:</strong> the zone where a gas or vapour burns, giving out heat and light.</li>
+              <li><strong>Luminous zone:</strong> the bright yellow part of a flame, where glowing soot gives out light.</li>
+              <li><strong>Non-luminous zone:</strong> the faint blue outer part, where burning is complete and the flame is hottest.</li>
+              <li><strong>Complete combustion:</strong> burning with enough oxygen, giving carbon dioxide and water.</li>
+              <li><strong>Incomplete combustion:</strong> burning with too little oxygen, leaving soot (carbon) and carbon monoxide.</li>
+              <li><strong>Soot:</strong> fine black particles of unburnt carbon.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

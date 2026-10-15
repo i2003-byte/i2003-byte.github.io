@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**132 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**136 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -23,13 +23,14 @@ SimLab is a free collection of interactive science simulations for school studen
 | ⚗️ **Chemistry: Acids, bases and salts** (3, Class 7 and 10) | Natural Indicators: Litmus, Turmeric and China Rose · Neutralisation: Acid Meets Base · The pH Scale: How Acidic, How Basic? |
 | 🧊 **Chemistry: Matter in our surroundings** (3, Class 9) | Solids, Liquids and Gases: The Particle Model · Evaporation and Cooling · Heating Curve of Water: Melting and Boiling |
 | 🧪 **Chemistry: Chemical reactions and equations** (3, Class 10) | Balancing Chemical Equations · Types of Chemical Reactions · Rusting of Iron |
+| 🔥 **Chemistry: Combustion and flame** (3, Class 8) | The Fire Triangle: Fuel, Air and Heat · Zones of a Candle Flame · Fuels and Calorific Value |
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
 | 🔬 **Biology: The fundamental unit of life** (3, Class 9) | Cell Explorer: Plant, Animal and Bacterial Cells · Osmosis: Potato, Raisins and Plant Cells · Diffusion Across a Membrane |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |
 | 📐 **Mathematics: Statistics and probability** (3, Class 9) | Histogram and Frequency Polygon · Mean, Median and Mode · Coins and Dice: Experimental Probability |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
-| 🌏 **Geography: Weather and climate** (3, Class 7) | Monsoon Winds over India · Humidity, Clouds and Rain · Climate Graphs of Indian Cities |
+| 🌏 **Geography: Weather and climate** (4, Class 7 and 11) | Monsoon Winds over India · Humidity, Clouds and Rain · Climate Graphs of Indian Cities · Why Deserts Are Hot by Day and Cold at Night |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
 
