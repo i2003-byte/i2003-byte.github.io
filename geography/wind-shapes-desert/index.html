@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How Wind Shapes the Desert — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Let the desert wind blow: sand grains hop and carve a mushroom rock, barchan dunes march downwind towards a road, and dust storms carry fine silt hundreds of kilometres to form loess.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/wind-shapes-desert/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="How Wind Shapes the Desert — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Let the desert wind blow: sand grains hop and carve a mushroom rock, barchan dunes march downwind towards a road, and dust storms carry fine silt hundreds of kilometres to form loess.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/wind-shapes-desert/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="wind-shapes-desert">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a desert there are few plants and little water to hold the ground together, so <strong>wind</strong> is a strong agent of change. It does two jobs: it wears rock away (<strong>erosion</strong>) and it drops the sand and dust it carries somewhere else (<strong>deposition</strong>).</p>
+            <p><strong>Erosion:</strong> wind on its own cannot cut rock, but wind loaded with sand works like sandpaper. Sand grains are heavy, so they move in low hops and bounces, mostly less than a metre above the ground. The lower part of a rock is blasted much more than its top, so over hundreds to thousands of years it becomes a narrow stem with a wide top: a <strong>mushroom rock</strong>. A layer of harder rock on top makes the shape sharper.</p>
+            <p><strong>Deposition:</strong> where the wind slows down, it drops its sand as <strong>sand dunes</strong>. A crescent-shaped <strong>barchan</strong> dune has a gentle slope facing the wind and a steep <strong>slip face</strong> on the other side, with two horns pointing downwind. Wind blows sand up the gentle side and over the crest, where it slides down the slip face, so the whole dune creeps downwind. A small dune holds less sand, so it moves faster.</p>
+            <p>The finest dust, called <strong>silt</strong>, is light enough to be lifted high in dust storms and carried hundreds of kilometres. When it settles it forms thick, soft, yellowish layers called <strong>loess</strong>, which make very fertile soil. The very finest particles (clay) can drift for days and cross whole oceans.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">dune speed = sand blown over the crest per metre of width per year ÷ dune height</code>
+            <p class="formula-note">With 150 m² of sand a year crossing each metre of crest, a 3 m dune moves 50 m a year and a 12 m dune about 12.5 m a year.</p>
+            <code class="formula">sand moved ∝ (wind speed − 5 m/s)³</code>
+            <p class="formula-note">Below about 5 m/s dry sand does not move at all. Above it, a little more wind moves a lot more sand: 8 m/s moves about a fifth as much as 10 m/s, and 13 m/s about four times as much.</p>
+            <code class="formula">time to fall = height ÷ falling speed</code>
+            <p class="formula-note">Fine silt (0.03 mm) falls at about 7 cm/s in still air; very fine clay (0.002 mm) falls at about 0.3 mm/s, 200 times more slowly. Sand (0.2 mm) falls at more than 1 m/s and never gets lifted high.</p>
+            <p class="formula-note">Simplified: the rock wears at about 1 mm a year at its most-hit height (about 35 cm above the ground) in a 10 m/s wind, plus 0.1 mm a year all over from rain and heat cracking; the hard cap wears 6 times more slowly; the cap falls when the neck is under about 0.3 m wide. Real mushroom rocks take thousands to tens of thousands of years, and the wind blows from many directions in a year (the picture shows it from one side). Dunes keep their shape and do not meet or merge; the side view shows the 6 m dune with sand grains far too big. Dust is lifted only during a 6-hour storm and mixed up and down in random steps; the loess layer is drawn thousands of times thicker than it really is (a storm leaves a fraction of a millimetre).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The Thar desert in Rajasthan has many kinds of dunes, including barchans. Around Jaisalmer and Bikaner, shifting sand can bury roads, railway lines and fields, so long rows of trees (shelter belts) and grass are planted to slow the wind and hold the sand.</li>
+              <li>The Sam and Khuri sand dunes near Jaisalmer change shape from year to year as the summer winds push them.</li>
+              <li>Mushroom rocks and other wind-carved rocks are found in deserts across the world, for example in the White Desert of Egypt and in the deserts of the south-western USA.</li>
+              <li>The Loess Plateau of China is built from dust blown out of the Gobi desert. Its loess is up to a few hundred metres thick and very fertile, but it washes away easily, which makes the Huang He (Yellow River) yellow.</li>
+              <li>In May and June, dust storms from the Thar often carry fine dust over Delhi and the Ganga plains, making the sky hazy and orange.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In the mushroom-rock scene, press “Let the wind blow” with the wind at 10 m/s. At what height does the rock wear fastest, and how long until the cap falls?<details><summary>Show answer</summary>The neck forms about 30–40 cm above the ground, where the orange “where sand hits” curve peaks. Right at the ground the grains are sliding slowly, and above about 1 m there are few grains. The cap falls after about 1200–1300 years.</details></li>
+              <li>Set the wind to 8 m/s, then 13 m/s, and run the rock again. How does the time change?<details><summary>Show answer</summary>At 8 m/s it takes about 4300 years; at 13 m/s only about 330 years. Sand moved grows very fast with wind speed, so a few stormy seasons do more work than many gentle years.</details></li>
+              <li>Turn off “Hard cap rock on top” and compare the top of the rock with the cap on.<details><summary>Show answer</summary>Without the cap, the top of the soft rock slowly shrinks too, so you get a tapering pillar. With the cap, the top stays wide (about 2.9–3.0 m) while the stem is eaten away, giving a sharper mushroom.</details></li>
+              <li>Switch to “Moving sand dunes”. Which dune reaches the road first? How fast does each move?<details><summary>Show answer</summary>The 3 m dune moves about 50 m a year, the 6 m dune about 25 m and the 12 m dune about 12.5 m (at 10 m/s). Halve the height and the speed doubles, because the same sand flux has less sand to move.</details></li>
+              <li>Switch to “Dust carried far away: loess” and run it at 7 m/s and then 13 m/s. Where does most of the loess settle each time?<details><summary>Show answer</summary>At 7 m/s the dust is lifted to about 0.9 km and the silt lands about 70 km from the desert on average. At 13 m/s it is lifted to about 2.7 km and travels further, about 260 km on average. Much of the finest clay is still floating after 60 hours.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Erosion:</strong> wearing away of rock and soil by wind, water or ice.</li>
+              <li><strong>Deposition:</strong> dropping of sand, silt and other material carried by wind or water.</li>
+              <li><strong>Saltation:</strong> the low hopping and bouncing way in which wind moves sand grains.</li>
+              <li><strong>Barchan:</strong> a crescent-shaped dune with its horns pointing downwind.</li>
+              <li><strong>Slip face:</strong> the steep downwind side of a dune (about 30–35°), where sand slides down.</li>
+              <li><strong>Loess:</strong> a thick deposit of fine wind-blown silt; it forms fertile soil.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

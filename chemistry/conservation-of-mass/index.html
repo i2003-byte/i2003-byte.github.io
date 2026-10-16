@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Conservation of Mass and Fixed Proportions — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Weigh reactions on a balance: a precipitate, baking soda and vinegar, burning magnesium, in open or closed containers. Then react elements in any amounts and see they always join in the same mass ratio.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/conservation-of-mass/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Conservation of Mass and Fixed Proportions — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Weigh reactions on a balance: a precipitate, baking soda and vinegar, burning magnesium, in open or closed containers. Then react elements in any amounts and see they always join in the same mass ratio.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/conservation-of-mass/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="conservation-of-mass">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a chemical reaction, atoms are <strong>not created or destroyed</strong>. They only change partners to make new substances. So the total mass of the products is always equal to the total mass of the reactants. This is the <strong>law of conservation of mass</strong>, shown by Antoine Lavoisier in the 1770s.</p>
+            <p>It can look as if mass changes. When baking soda fizzes in vinegar in an open bottle, carbon dioxide gas <strong>escapes</strong>, so the balance reading goes down. When magnesium burns in an open crucible, it takes <strong>oxygen from the air</strong>, so the ash is heavier than the ribbon. Close the container so that nothing can get in or out, and the reading stays exactly the same.</p>
+            <p>A compound also always contains its elements in the <strong>same proportion by mass</strong>, however it is made and wherever it comes from. Water from a river, a well or a laboratory is always 1 part hydrogen to 8 parts oxygen by mass. If you mix the elements in any other ratio, the extra is simply left over. This is the <strong>law of constant (definite) proportions</strong>, stated by Joseph Proust. John Dalton explained both laws with his atomic theory: matter is made of atoms of fixed mass that join in whole numbers.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">mass of reactants = mass of products</code>
+            <p class="formula-note">2.08 g barium chloride + 1.42 g sodium sulphate → 2.33 g barium sulphate + 1.17 g sodium chloride. Both sides add up to 3.50 g.</p>
+            <code class="formula">balance change = gas taken from the air − gas that escaped</code>
+            <p class="formula-note">0.84 g baking soda gives 0.44 g carbon dioxide; in an open bottle the reading falls by 0.44 g. 0.24 g magnesium takes 0.16 g oxygen from the air; in an open crucible the reading rises by 0.16 g.</p>
+            <code class="formula">water: hydrogen : oxygen = 1 : 8 · magnesium oxide: Mg : O = 3 : 2 · carbon dioxide: C : O = 3 : 8</code>
+            <p class="formula-note">These come from the atomic masses: H = 1, O = 16, Mg = 24, C = 12. In H₂O there are 2 × 1 = 2 g of hydrogen for every 16 g of oxygen, which is 1 : 8.</p>
+            <p class="formula-note">Simplified: each reaction uses 0.01 mol of the limiting substance, molar masses are rounded to two decimal places, and the reactions go to completion. Real burning magnesium loses a little white smoke unless the crucible lid is lifted only now and then. A sealed bottle of gas pushes up on the air around it a little more as it swells; this tiny buoyancy effect is ignored. The balance reads to 0.01 g.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A burning candle seems to disappear, but the wax has turned into carbon dioxide and water vapour that float away. Collect them all and the mass is the same.</li>
+              <li>An iron nail gets heavier as it rusts, because oxygen and water from the air join the iron.</li>
+              <li>When dough rises and bakes, carbon dioxide from baking soda or yeast escapes, so a cake weighs a little less than the batter.</li>
+              <li>Chemists in industry use fixed proportions to mix exactly enough of each raw material, for example in making ammonia for fertilisers, so nothing expensive is wasted.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Run “Barium chloride + sodium sulphate” in an open flask. What happens to the balance reading? Why doesn’t it matter whether the flask is closed?<details><summary>Show answer</summary>A white solid (barium sulphate) appears, but the reading stays at 144.90 g. No gas is made or used, so nothing leaves or enters even when the flask is open.</details></li>
+              <li>Run “Baking soda + vinegar” open, then closed. How much does the reading change each time?<details><summary>Show answer</summary>Open: it falls by 0.44 g, the mass of carbon dioxide that escapes. Closed: it does not change at all, because the gas is trapped in the bottle.</details></li>
+              <li>Burn the magnesium ribbon in the open crucible. Does the ash weigh more or less than the ribbon? Then try the sealed flask.<details><summary>Show answer</summary>In the open crucible the reading rises by 0.16 g: 0.24 g magnesium joins with 0.16 g oxygen from the air to make 0.40 g magnesium oxide. In the sealed flask the oxygen was already inside, so the reading does not change.</details></li>
+              <li>Choose “hydrogen + oxygen → water”, with 2 g hydrogen and 20 g oxygen. How much water forms and what is left over? Now try 4 g hydrogen.<details><summary>Show answer</summary>2 g hydrogen uses 16 g oxygen and makes 18 g water; 4 g oxygen is left over. With 4 g hydrogen, the 20 g oxygen is used up first: it reacts with only 2.5 g hydrogen to make 22.5 g water and 1.5 g hydrogen is left.</details></li>
+              <li>Using “magnesium + oxygen”, find a pair of masses that leaves nothing over.<details><summary>Show answer</summary>Any pair in the ratio 3 : 2, for example 6 g magnesium and 4 g oxygen (10 g magnesium oxide), or 3 g and 2 g, or 9 g and 6 g.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Law of conservation of mass:</strong> mass is neither created nor destroyed in a chemical reaction.</li>
+              <li><strong>Law of constant proportions:</strong> a chemical compound always contains the same elements in the same proportion by mass.</li>
+              <li><strong>Closed system:</strong> a container that lets nothing in or out, so all the reactants and products stay on the balance.</li>
+              <li><strong>Precipitate:</strong> an insoluble solid that forms when two solutions react.</li>
+              <li><strong>Limiting reactant:</strong> the substance that runs out first and decides how much product forms.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

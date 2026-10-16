@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="valency-formula">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <g stroke="#22c55e" stroke-width="3"><path d="M104 46L216 38M104 56L216 92M104 66L216 104M104 116L216 146M104 126L216 156M104 136L216 48"/></g>
+  <rect x="40" y="26" width="64" height="60" rx="10" fill="#3b82f6"/>
+  <rect x="40" y="96" width="64" height="60" rx="10" fill="#3b82f6"/>
+  <rect x="216" y="18" width="64" height="44" rx="10" fill="#ef4444"/>
+  <rect x="216" y="76" width="64" height="44" rx="10" fill="#ef4444"/>
+  <rect x="216" y="134" width="64" height="44" rx="10" fill="#ef4444"/>
+  <g fill="#fff" font-family="Inter, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="72" y="62" font-size="22">Al</text><text x="72" y="132" font-size="22">Al</text>
+    <text x="248" y="47" font-size="20">O</text><text x="248" y="105" font-size="20">O</text><text x="248" y="163" font-size="20">O</text>
+  </g>
+  <text x="160" y="192" fill="#4ade80" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Al₂O₃</text>
+</svg>

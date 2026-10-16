@@ -141,6 +141,8 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 - [Humidity, Clouds and Rain](https://i2003-byte.github.io/geography/humidity-clouds-rain/): Follow a bubble of air from the sea up the Western Ghats: water evaporates, the rising air cools to its dew point, clouds form and it rains, then the air sinks warm and dry into the rain shadow. (Intermediate)
 - [Climate Graphs of Indian Cities](https://i2003-byte.github.io/geography/climate-graphs/): Read climate graphs of nine Indian cities: monthly rain as bars and temperature as a line. Compare Mumbai, Delhi, Chennai, Leh, Sohra and more, then guess a mystery city from its graph. (Beginner)
 - [Why Deserts Are Hot by Day and Cold at Night](https://i2003-byte.github.io/geography/desert-day-night/): Run a 24-hour day in the Thar desert next to Mumbai and a cloudy night. Dry air, bare sand and clear skies let the ground heat fast in sunshine and lose its heat to space after sunset. (Beginner)
+- [Why a Low Sun Heats Less](https://i2003-byte.github.io/geography/insolation-angle/): Change latitude, season, time of day and slope and watch a 1 m beam of sunlight spread over more ground and cross more air when the sun is low. See why clear-sky deserts near the tropics get the most sunshine. (Intermediate)
+- [How Wind Shapes the Desert](https://i2003-byte.github.io/geography/wind-shapes-desert/): Sand grains hop low and carve a mushroom rock, crescent barchan dunes march downwind (small ones fastest) towards a road, and dust storms carry fine silt hundreds of kilometres to settle as loess. (Beginner)
 
 ## Economics
 
@@ -183,6 +185,11 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Natural Indicators: Litmus, Turmeric and China Rose](https://i2003-byte.github.io/chemistry/natural-indicators/): Test lemon juice, vinegar, soap water, baking soda and more with litmus paper, turmeric paper and china rose solution. Watch the colours change and work out which solutions are acidic, basic or neutral. (Beginner)
 - [Neutralisation: Acid Meets Base](https://i2003-byte.github.io/chemistry/neutralisation/): Add sodium hydroxide drop by drop to hydrochloric acid with phenolphthalein, china rose or turmeric. Watch the colour change at neutralisation, the flask warming up, the salt forming and the pH jumping. (Beginner)
 - [The pH Scale: How Acidic, How Basic?](https://i2003-byte.github.io/chemistry/ph-scale/): Test stomach acid, lemon juice, vinegar, milk, water, baking soda, soap and lime water with universal indicator. Read their pH from 0 to 14, compare H⁺ ions with pure water and see how adding water moves the pH towards 7. (Beginner)
+
+### Atoms & Molecules
+
+- [Conservation of Mass and Fixed Proportions](https://i2003-byte.github.io/chemistry/conservation-of-mass/): Weigh a precipitate forming, baking soda fizzing in vinegar and magnesium burning, in open or closed containers. Then react hydrogen, magnesium or carbon with oxygen in any amounts: they always combine in the same mass ratio. (Beginner)
+- [Writing Formulae from Valency](https://i2003-byte.github.io/chemistry/valency-formula/): Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out each formula unit mass. (Beginner)
 
 ### Reactions
 

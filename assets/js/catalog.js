@@ -150,7 +150,7 @@ SimLab.subjects = [
     branches: [
       { id: 'matter', name: 'Matter & Its States' },
       { id: 'acids-bases', name: 'Acids, Bases & Salts' },
-      { id: 'atoms', name: 'Atomic Structure' },
+      { id: 'atoms', name: 'Atoms & Molecules' },
       { id: 'bonding', name: 'Bonding' },
       { id: 'reactions', name: 'Reactions' },
       { id: 'gases', name: 'Gases' }
@@ -1242,6 +1242,38 @@ SimLab.simulations = [
     prerequisites: ['humidity-clouds-rain']
   },
   {
+    id: 'insolation-angle',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'Why a Low Sun Heats Less',
+    description:
+      'Change latitude, season, time of day and slope and watch a 1 m beam of sunlight spread over more ground and cross more air when the sun is low. See why clear-sky deserts near the tropics get the most sunshine.',
+    level: 'Intermediate',
+    tags: ['insolation', 'sun angle', 'latitude', 'seasons', 'solar radiation', 'tropic of cancer', 'desert', 'slope', 'weather and climate', 'class 7', 'class 11'],
+    thumbnail: '/assets/img/thumbs/insolation-angle.svg',
+    link: '/geography/insolation-angle/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['seasons-revolution', 'desert-day-night']
+  },
+  {
+    id: 'wind-shapes-desert',
+    subject: 'geography',
+    branch: 'climate',
+    title: 'How Wind Shapes the Desert',
+    description:
+      'Sand grains hop low and carve a mushroom rock, crescent barchan dunes march downwind (small ones fastest) towards a road, and dust storms carry fine silt hundreds of kilometres to settle as loess.',
+    level: 'Beginner',
+    tags: ['wind', 'erosion', 'deposition', 'mushroom rock', 'sand dunes', 'barchan', 'loess', 'desert', 'thar', 'our changing earth', 'class 7'],
+    thumbnail: '/assets/img/thumbs/wind-shapes-desert.svg',
+    link: '/geography/wind-shapes-desert/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['desert-day-night']
+  },
+  {
     id: 'demand-curve',
     subject: 'economics',
     branch: 'markets',
@@ -2180,6 +2212,38 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-15',
     prerequisites: ['fire-triangle']
+  },
+  {
+    id: 'conservation-of-mass',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: 'Conservation of Mass and Fixed Proportions',
+    description:
+      'Weigh a precipitate forming, baking soda fizzing in vinegar and magnesium burning, in open or closed containers. Then react hydrogen, magnesium or carbon with oxygen in any amounts: they always combine in the same mass ratio.',
+    level: 'Beginner',
+    tags: ['law of conservation of mass', 'law of constant proportions', 'chemical reaction', 'balance', 'lavoisier', 'dalton', 'atoms and molecules', 'class 9'],
+    thumbnail: '/assets/img/thumbs/conservation-of-mass.svg',
+    link: '/chemistry/conservation-of-mass/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['balancing-equations']
+  },
+  {
+    id: 'valency-formula',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: 'Writing Formulae from Valency',
+    description:
+      'Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out each formula unit mass.',
+    level: 'Beginner',
+    tags: ['valency', 'chemical formula', 'ions', 'polyatomic ions', 'criss-cross method', 'formula unit mass', 'molecular mass', 'atoms and molecules', 'class 9'],
+    thumbnail: '/assets/img/thumbs/valency-formula.svg',
+    link: '/chemistry/valency-formula/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['conservation-of-mass']
   },
   {
     id: 'states-of-matter',

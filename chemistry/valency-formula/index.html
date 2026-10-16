@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Writing Formulae from Valency — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out their formula unit mass.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/valency-formula/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Writing Formulae from Valency — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out their formula unit mass.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/valency-formula/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="valency-formula">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Many compounds, like common salt, are made of <strong>ions</strong>: atoms or groups of atoms that carry an electric charge. Metals form <strong>positive ions</strong> (Na⁺, Mg²⁺, Al³⁺); non-metals form <strong>negative ions</strong> (Cl⁻, O²⁻). The size of the charge is the ion’s <strong>valency</strong>, its combining capacity.</p>
+            <p>Think of valency as the number of <strong>hands</strong> an ion has. In a compound every hand must hold a hand of the opposite kind, so the total positive charge equals the total negative charge and the compound is <strong>neutral</strong>. Aluminium has 3 hands and oxygen 2, so it takes 2 aluminium ions (6 hands) and 3 oxide ions (6 hands): Al₂O₃.</p>
+            <p>Some ions are groups of atoms that stay together, called <strong>polyatomic ions</strong>: ammonium NH₄⁺, hydroxide OH⁻, nitrate NO₃⁻, sulphate SO₄²⁻, carbonate CO₃²⁻, phosphate PO₄³⁻. When more than one of them is needed, the group goes in <strong>brackets</strong> with the number outside: Ca(OH)₂ has one calcium and two whole hydroxide groups.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">total positive charge = total negative charge</code>
+            <p class="formula-note">Number of positive ions × their valency = number of negative ions × their valency.</p>
+            <code class="formula">criss-cross: Al³⁺ O²⁻ → Al₂O₃</code>
+            <p class="formula-note">Write the valency of each ion above its symbol, swap them to become the small numbers (subscripts) of the other ion, and divide by any common factor: Mg²⁺ O²⁻ → Mg₂O₂ → MgO. A subscript of 1 is not written.</p>
+            <code class="formula">formula unit mass = sum of the atomic masses of all the atoms</code>
+            <p class="formula-note">Al₂O₃ = 2 × 27 + 3 × 16 = 102 u. Ca(OH)₂ = 40 + 2 × 16 + 2 × 1 = 74 u. For compounds made of molecules (like H₂O or CO₂) the same sum is called the molecular mass.</p>
+            <p class="formula-note">Simplified: atomic masses are rounded (Cl = 35.5, Cu = 63.5, the rest whole numbers). Iron and copper can have more than one valency, so the name shows which one: iron(II) is Fe²⁺, iron(III) is Fe³⁺. Not every pair makes a stable everyday compound (for example, silver hydrogencarbonate is not a common substance), and covalent compounds such as water share electrons rather than forming ions, though the same valency rule gives their formulae.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Common salt is sodium chloride, NaCl: one hand each.</li>
+              <li>Limestone, marble and chalk are calcium carbonate, CaCO₃; the Taj Mahal is built of marble.</li>
+              <li>Lime water used to test for carbon dioxide is calcium hydroxide, Ca(OH)₂, and it is also used to whitewash walls.</li>
+              <li>Ammonium sulphate, (NH₄)₂SO₄, and calcium phosphate, Ca₃(PO₄)₂, are used in fertilisers. Calcium phosphate is also what makes bones and teeth hard.</li>
+              <li>Alum, used to clean water in many Indian homes, contains aluminium sulphate, Al₂(SO₄)₃.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep aluminium and oxide. Change the numbers of each ion until no red hand is left. What is the formula?<details><summary>Show answer</summary>2 aluminium ions and 3 oxide ions: Al₂O₃. Positive charge 2 × 3 = +6, negative charge 3 × 2 = −6. Formula unit mass 2 × 27 + 3 × 16 = 102 u.</details></li>
+              <li>Choose magnesium and oxide, and set 2 of each. Is this right? What should you do?<details><summary>Show answer</summary>The charges balance (+4 and −4), but 2 : 2 is not the simplest ratio. Divide both by 2: MgO (40 u).</details></li>
+              <li>Make calcium hydroxide. Why are there brackets in its formula?<details><summary>Show answer</summary>It needs 1 Ca²⁺ and 2 OH⁻: Ca(OH)₂. The brackets show that the whole OH group is taken twice. Writing CaOH₂ would mean one oxygen and two hydrogens, which is wrong.</details></li>
+              <li>Work out the formula of ammonium sulphate on paper, then check it with the tiles.<details><summary>Show answer</summary>NH₄⁺ has 1 hand and SO₄²⁻ has 2, so you need 2 ammonium ions: (NH₄)₂SO₄. Its mass is 2 × 14 + 8 × 1 + 32 + 4 × 16 = 132 u.</details></li>
+              <li>Compare iron(II) chloride and iron(III) chloride. How are they different?<details><summary>Show answer</summary>Fe²⁺ needs 2 chloride ions: FeCl₂ (127 u). Fe³⁺ needs 3: FeCl₃ (162.5 u). The same metal with a different valency makes a different compound.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Valency:</strong> the combining capacity of an atom or ion; for an ion it equals the size of its charge.</li>
+              <li><strong>Cation / anion:</strong> a positively / negatively charged ion.</li>
+              <li><strong>Polyatomic ion:</strong> a group of atoms that carries a charge and acts as one unit, such as SO₄²⁻.</li>
+              <li><strong>Chemical formula:</strong> symbols and subscripts that show which elements are in a compound and in what ratio.</li>
+              <li><strong>Formula unit mass:</strong> the sum of the atomic masses of all the atoms in one formula unit of an ionic compound, in atomic mass units (u).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
