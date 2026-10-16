@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lenz's Law and Eddy Currents — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Race a magnet down a copper pipe against one in a plastic pipe, and swing a metal plate through a magnet. Change the metal, the wall thickness and the magnet, cut a slit, and see eddy currents oppose the motion.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lenz-law/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Lenz's Law and Eddy Currents — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Race a magnet down a copper pipe against one in a plastic pipe, and swing a metal plate through a magnet. Change the metal, the wall thickness and the magnet, cut a slit, and see eddy currents oppose the motion.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lenz-law/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lenz-law">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Lenz’s law:</strong> an induced current always flows in the direction that <strong>opposes the change</strong> that produced it. Nature does not give you electricity for free; you have to do work against this opposition, and that work becomes electrical energy.</p>
+            <p>Drop a strong magnet down a copper pipe. As it falls, the flux through each ring of the pipe changes, so currents swirl round the pipe wall. These are <strong>eddy currents</strong>. The ring just below the magnet gets a current that makes it a magnet facing the falling one with the <em>same</em> pole (it pushes up); the ring just above becomes a magnet that <em>pulls</em> it back. Both slow the magnet, which drifts down at a small, steady <strong>terminal speed</strong>.</p>
+            <p>The faster the magnet moves, the bigger the currents and the bigger the braking force. Nothing magnetic is attracting the copper: the force exists only while there is motion. A plastic pipe carries no current, and an unmagnetised steel slug makes no changing flux, so both fall freely.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">ε = −N dΦ/dt</code>
+            <p class="formula-note">The minus sign in Faraday’s law is Lenz’s law: the emf opposes the change in flux.</p>
+            <code class="formula">m dv/dt = m g − k v  ⇒  v<sub>t</sub> = m g ÷ k</code>
+            <p class="formula-note">The eddy-current force grows with speed (F = k v), so the magnet speeds up until the braking force equals its weight. Here k grows with the conductivity of the metal, the wall thickness and the square of the magnet’s strength.</p>
+            <code class="formula">heat produced = m g h − ½ m v²</code>
+            <p class="formula-note">Energy is conserved: the potential energy the magnet loses but does not keep as kinetic energy becomes heat in the pipe.</p>
+            <p class="formula-note">Simplified: the braking constant is chosen to match school demonstrations (a 12 g neodymium magnet takes several seconds to fall through 1 m of 1.5 mm copper pipe). Air drag is ignored for the pipes. A slit or slots are assumed to cut the braking to about 12 %. The magnet is drawn much bigger than life.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Some high-speed trains and many roller coasters use <strong>eddy-current brakes</strong>: magnets near a metal rail or disc slow the vehicle without any rubbing parts.</li>
+              <li>In the old spinning-disc electricity meters, a magnet beside the aluminium disc used eddy currents to keep it from racing.</li>
+              <li>Moving-coil meters are wound on a metal frame so eddy currents stop the needle swinging (“dead-beat” meters).</li>
+              <li>Transformer cores are made of thin insulated sheets (laminations) to break up eddy currents, which would waste energy as heat.</li>
+              <li>Induction furnaces in steel plants melt metal with huge eddy currents.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drop the neodymium magnet into the copper pipe. How long does it take, compared with the plastic pipe?<details><summary>Show answer</summary>About 6.7 s instead of 0.45 s. It soon reaches a terminal speed of about 0.15 m/s, while in the plastic pipe it reaches about 4.4 m/s at the bottom.</details></li>
+              <li>Choose “an unmagnetised steel slug” instead. Why does it fall freely even through copper?<details><summary>Show answer</summary>It is not a magnet, so it does not change the flux through the pipe. No eddy currents are induced, so there is no braking force.</details></li>
+              <li>Turn on the slit along the copper pipe. What happens and why?<details><summary>Show answer</summary>The magnet falls much faster (about 0.9 s). The slit breaks the rings that the eddy currents need to flow round, so the currents and the braking force are much smaller.</details></li>
+              <li>Compare copper, aluminium and brass pipes of the same thickness. Which slows the magnet most?<details><summary>Show answer</summary>Copper (6.7 s), then aluminium (4.2 s), then brass (1.9 s). A better conductor carries bigger eddy currents for the same emf.</details></li>
+              <li>Switch to the swinging plate. How many times does a solid copper plate pass through the magnet, and how many times a slotted one?<details><summary>Show answer</summary>The solid plate stops after passing through about once, in under a second. The slotted plate swings through about 9 times before stopping, because the slots break up the eddy currents.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Lenz’s law:</strong> the direction of the induced current is such that it opposes the change in flux that causes it.</li>
+              <li><strong>Eddy currents:</strong> loops of induced current inside a solid piece of metal when the flux through it changes.</li>
+              <li><strong>Terminal speed:</strong> the steady speed reached when the braking force balances the weight.</li>
+              <li><strong>Electromagnetic damping:</strong> slowing down of motion by eddy currents.</li>
+              <li><strong>Lamination:</strong> building a core from thin insulated sheets to reduce eddy currents.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

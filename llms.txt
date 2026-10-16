@@ -109,6 +109,9 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Drift Velocity of Electrons](https://i2003-byte.github.io/physics/drift-velocity/): See free electrons dart about inside a copper wire and drift slowly against the field. Change the current, wire thickness, metal and temperature, and find the real drift speed: a fraction of a millimetre per second. (Advanced)
 - [Kirchhoff's Laws: Junctions and Loops](https://i2003-byte.github.io/physics/kirchhoffs-laws/): Two cells and three resistors in a two-loop circuit. Find each branch current, then check the junction rule and walk round each loop to see the rises and drops add up to zero. (Advanced)
 - [Wheatstone Bridge and Metre Bridge](https://i2003-byte.github.io/physics/wheatstone-bridge/): Balance a Wheatstone bridge until the galvanometer reads zero, then slide the jockey along a metre bridge wire to find the null point and measure an unknown coil. (Advanced)
+- [Faraday's Law of Induction](https://i2003-byte.github.io/physics/faradays-law/): Push a bar magnet into a coil and watch the meter kick. Change the speed, the number of turns and the magnet, move the coil instead, and see that the emf equals the rate of change of flux linkage. (Advanced)
+- [Lenz's Law and Eddy Currents](https://i2003-byte.github.io/physics/lenz-law/): Race a magnet down a copper pipe against one in a plastic pipe, and swing a metal plate through a magnet. Change the metal, the wall thickness and the magnet, cut a slit, and see eddy currents oppose the motion. (Advanced)
+- [Transformers and Power Lines](https://i2003-byte.github.io/physics/transformer/): Wind a transformer: change the turns, the core and the supply, and see why it steps voltage up or down on AC but not on DC. Then send power to a town and find why grids use very high voltages. (Advanced)
 
 ### Thermodynamics
 
@@ -190,6 +193,7 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 
 - [Conservation of Mass and Fixed Proportions](https://i2003-byte.github.io/chemistry/conservation-of-mass/): Weigh a precipitate forming, baking soda fizzing in vinegar and magnesium burning, in open or closed containers. Then react hydrogen, magnesium or carbon with oxygen in any amounts: they always combine in the same mass ratio. (Beginner)
 - [Writing Formulae from Valency](https://i2003-byte.github.io/chemistry/valency-formula/): Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out each formula unit mass. (Beginner)
+- [The Mole: Counting Atoms by Weighing](https://i2003-byte.github.io/chemistry/mole-concept/): Weigh carbon, water, salt, sugar and metals and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³. (Intermediate)
 
 ### Reactions
 

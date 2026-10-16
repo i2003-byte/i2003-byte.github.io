@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Mole: Counting Atoms by Weighing — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Weigh carbon, water, salt, sugar and metals on a balance and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/mole-concept/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="The Mole: Counting Atoms by Weighing — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Weigh carbon, water, salt, sugar and metals on a balance and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/mole-concept/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="mole-concept">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Atoms are far too small and too many to count one by one. Chemists count them the way a shopkeeper counts coins: by <strong>weighing</strong>. A shopkeeper knows that 100 one-rupee coins weigh a fixed amount, so a heap that weighs ten times as much holds 1000 coins.</p>
+            <p>The chemist’s “bundle” is the <strong>mole</strong>. One mole is <strong>6.022 × 10²³</strong> particles, a number called the <strong>Avogadro constant</strong>. It was chosen so that one mole of a substance weighs its atomic or molecular mass in grams: 1 mole of carbon atoms (12 u each) weighs 12 g, and 1 mole of water molecules (18 u each) weighs 18 g.</p>
+            <p>So 12 g of carbon, 18 g of water and 58.5 g of salt look very different on a balance, but each holds exactly the same number of particles.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">number of moles n = mass m ÷ molar mass M</code>
+            <p class="formula-note">The molar mass is the atomic, molecular or formula unit mass written in g/mol. For water, M = 2 × 1 + 16 = 18 g/mol, so 36 g of water is 2 mol.</p>
+            <code class="formula">number of particles N = n × 6.022 × 10²³</code>
+            <p class="formula-note">“Particles” means atoms for an element such as carbon or iron, molecules for water, sugar or oxygen gas, and formula units for ionic compounds such as salt (NaCl).</p>
+            <code class="formula">number of atoms = N × atoms in one particle</code>
+            <p class="formula-note">One water molecule has 3 atoms, so 1 mol of water holds 3 × 6.022 × 10²³ = 1.8 × 10²⁴ atoms. Sugar, C₁₂H₂₂O₁₁, has 45 atoms in every molecule.</p>
+            <p class="formula-note">Simplified: atomic masses are rounded (Cl = 35.5, Cu = 63.5, the rest whole numbers). The heaps and cubes use typical densities; the “one mole of each” cubes are drawn to scale, the heaps on the balance only roughly. Gas volumes are for 25 °C and normal air pressure, where 1 mol of any gas fills about 24 L. Weighing a real gas needs a sealed container; the balance here shows the mass of the gas alone.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A glass of water (about 180 mL) is 10 mol of water: 6 × 10²⁴ molecules.</li>
+              <li>A 1 kg packet of sugar is 1000 ÷ 342 = 2.9 mol of sucrose: about 1.8 × 10²⁴ molecules.</li>
+              <li>An iron nail of 5.6 g is 0.1 mol of iron, still 6 × 10²² atoms.</li>
+              <li>Doctors and pharmacists measure some medicines and blood tests in millimoles per litre (mmol/L), for example blood sugar.</li>
+              <li>Fertiliser makers work out how many moles of nitrogen a bag of urea or ammonium sulphate gives to the soil.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press “Take exactly 1 mole” for carbon, then for water and for salt. What changes and what stays the same?<details><summary>Show answer</summary>The mass changes (12 g, 18 g, 58.5 g) because each particle has a different mass. The number of particles stays the same: 6.022 × 10²³ every time.</details></li>
+              <li>Choose water and set the mass to 1 g. How many molecules is that?<details><summary>Show answer</summary>1 ÷ 18 = 0.0556 mol, and 0.0556 × 6.022 × 10²³ = 3.35 × 10²² molecules. Even a single drop (about 0.05 g) has over 10²¹ molecules.</details></li>
+              <li>Which has more atoms: 12 g of carbon or 12 g of magnesium? Check with the balance.<details><summary>Show answer</summary>Carbon. 12 g of carbon is 1 mol, but 12 g of magnesium is only 0.5 mol, because each magnesium atom (24 u) is twice as heavy as a carbon atom (12 u).</details></li>
+              <li>Switch to “One mole of each”. Iron’s mole is almost 5 times heavier than carbon’s. Why is its cube only a little bigger?<details><summary>Show answer</summary>Iron is very dense (7.87 g/cm³ against 2.26 g/cm³ for graphite), so its 56 g fits in just 7.1 cm³. Carbon’s 12 g takes 5.3 cm³.</details></li>
+              <li>Press “New challenge” and solve three challenges without using the hint.<details><summary>Show answer</summary>Work step by step: atoms ÷ atoms per particle = particles; particles ÷ 6.022 × 10²³ = moles; moles × molar mass = grams. Example: 1.204 × 10²⁴ molecules of water is 2 mol, so 36 g.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Mole (mol):</strong> the amount of substance that contains 6.022 × 10²³ particles.</li>
+              <li><strong>Avogadro constant (N<sub>A</sub>):</strong> 6.022 × 10²³ per mole, the number of particles in one mole.</li>
+              <li><strong>Molar mass:</strong> the mass of one mole of a substance in grams per mole; numerically equal to its atomic, molecular or formula unit mass in u.</li>
+              <li><strong>Atomic mass unit (u):</strong> one twelfth of the mass of a carbon-12 atom, about 1.66 × 10⁻²⁴ g.</li>
+              <li><strong>Formula unit:</strong> the smallest repeating group of ions in an ionic compound, such as one Na⁺ with one Cl⁻ in salt.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

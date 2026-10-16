@@ -2246,6 +2246,22 @@ SimLab.simulations = [
     prerequisites: ['conservation-of-mass']
   },
   {
+    id: 'mole-concept',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: 'The Mole: Counting Atoms by Weighing',
+    description:
+      'Weigh carbon, water, salt, sugar and metals and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³.',
+    level: 'Intermediate',
+    tags: ['mole concept', 'avogadro number', 'avogadro constant', 'molar mass', 'number of particles', 'atoms and molecules', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/mole-concept.svg',
+    link: '/chemistry/mole-concept/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['valency-formula']
+  },
+  {
     id: 'states-of-matter',
     subject: 'chemistry',
     branch: 'matter',
@@ -2484,6 +2500,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-10',
     prerequisites: ['kirchhoffs-laws']
+  },
+  {
+    id: 'faradays-law',
+    subject: 'physics',
+    branch: 'electricity',
+    title: "Faraday's Law of Induction",
+    description:
+      'Push a bar magnet into a coil and watch the meter kick. Change the speed, the number of turns and the magnet, move the coil instead, and see that the emf equals the rate of change of flux linkage.',
+    level: 'Advanced',
+    tags: ['electromagnetic induction', 'faraday', 'magnetic flux', 'flux linkage', 'induced emf', 'galvanometer', 'class 10', 'class 12'],
+    thumbnail: '/assets/img/thumbs/faradays-law.svg',
+    link: '/physics/faradays-law/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['motor-generator']
+  },
+  {
+    id: 'lenz-law',
+    subject: 'physics',
+    branch: 'electricity',
+    title: "Lenz's Law and Eddy Currents",
+    description:
+      'Race a magnet down a copper pipe against one in a plastic pipe, and swing a metal plate through a magnet. Change the metal, the wall thickness and the magnet, cut a slit, and see eddy currents oppose the motion.',
+    level: 'Advanced',
+    tags: ['lenz law', 'eddy currents', 'electromagnetic damping', 'magnetic braking', 'terminal velocity', 'electromagnetic induction', 'class 12'],
+    thumbnail: '/assets/img/thumbs/lenz-law.svg',
+    link: '/physics/lenz-law/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['faradays-law']
+  },
+  {
+    id: 'transformer',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Transformers and Power Lines',
+    description:
+      'Wind a transformer: change the turns, the core and the supply, and see why it steps voltage up or down on AC but not on DC. Then send power to a town and find why grids use very high voltages.',
+    level: 'Advanced',
+    tags: ['transformer', 'mutual induction', 'self induction', 'step-up', 'step-down', 'turns ratio', 'power transmission', 'i2r loss', 'electromagnetic induction', 'class 10', 'class 12'],
+    thumbnail: '/assets/img/thumbs/transformer.svg',
+    link: '/physics/transformer/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-16',
+    prerequisites: ['faradays-law', 'lenz-law']
   }
 ];
 

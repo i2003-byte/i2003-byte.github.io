@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Transformers and Power Lines — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Wind a transformer: change the turns, the core and the supply, and see why it steps voltage up or down on AC but not on DC. Then send power to a town and find why grids use very high voltages.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/transformer/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Transformers and Power Lines — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Wind a transformer: change the turns, the core and the supply, and see why it steps voltage up or down on AC but not on DC. Then send power to a town and find why grids use very high voltages.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/transformer/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="transformer">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>transformer</strong> is two coils wound on one iron core. An alternating current in the <strong>primary</strong> coil makes an alternating magnetic flux in the core. The core carries this flux through the <strong>secondary</strong> coil, and the changing flux induces an emf there. This is <strong>mutual induction</strong>: a changing current in one coil induces an emf in a nearby coil. (A changing current also induces an emf in its own coil, which is <strong>self-induction</strong>.)</p>
+            <p>Each turn of either coil gets the same emf, so the voltages are in the ratio of the turns. More turns on the secondary <strong>steps up</strong> the voltage; fewer turns <strong>steps it down</strong>. A transformer cannot make energy: when the voltage goes up, the current goes down, so the power stays almost the same.</p>
+            <p>A transformer needs a <strong>changing</strong> flux, so it works on AC, not on steady DC. With a battery, the secondary only gives a short kick when you switch on or off.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Vs ÷ Vp = Ns ÷ Np</code>
+            <p class="formula-note">For an ideal transformer. 230 V mains with Np = 1000 and Ns = 50 gives 11.5 V.</p>
+            <code class="formula">Vp Ip = Vs Is  (ideal)  ⇒  Is ÷ Ip = Np ÷ Ns</code>
+            <p class="formula-note">Power in equals power out for an ideal transformer. Real ones lose a few percent as heat in the copper and the core: efficiency η = Pout ÷ Pin.</p>
+            <code class="formula">power lost in a line = I² R,  with I = P ÷ V</code>
+            <p class="formula-note">Sending the same power at a higher voltage needs a smaller current. Ten times the voltage means one tenth of the current and one hundredth of the heat lost in the wires.</p>
+            <p class="formula-note">Simplified: the share of flux that reaches the secondary and the efficiencies are fixed typical values for each core. The DC pulse is drawn slower than real life. The power line is shown as one pair of wires with 0.2 Ω per km; real lines carry three-phase AC on several conductors.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>India’s power stations generate at about 11–25 kV. Step-up transformers raise this to 220 kV, 400 kV or even 765 kV for the long lines of the national grid.</li>
+              <li>Sub-stations step it down to 33 kV and 11 kV for cities and villages, and the transformer on a pole or a plinth near your home gives 230 V.</li>
+              <li>Mobile chargers, laptop adapters and doorbells step 230 V down to a few volts. (Modern chargers switch the current very fast so their transformer can be tiny.)</li>
+              <li>Microwave ovens and the old CRT televisions step voltage <em>up</em> to thousands of volts.</li>
+              <li>Transformer cores are made of thin insulated sheets of silicon steel so eddy currents cannot flow far and waste energy.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With 230 V mains and Np = 1000, which secondary turns give about 12 V? Is the current bigger in the primary or the secondary?<details><summary>Show answer</summary>Ns ≈ 50 to 55 gives about 11.4–12.5 V. The secondary current (about 1 A in a 12 Ω lamp) is much bigger than the primary current (about 50 mA): stepping the voltage down steps the current up.</details></li>
+              <li>Choose the 12 V DC battery. What does the lamp do? Now press the switch a few times.<details><summary>Show answer</summary>With steady DC the flux does not change, so the secondary gives nothing. Each time you switch on or off the flux changes for a moment, so there is a short pulse, one way on switching on and the other way on switching off.</details></li>
+              <li>Change the core from laminated iron to a solid block, then to no core. What happens to the output?<details><summary>Show answer</summary>A solid block lets big eddy currents flow, so it heats up and the efficiency drops to about 80 %. With no core most of the flux misses the secondary, so the output voltage falls to about one twentieth.</details></li>
+              <li>In “Sending power to a town”, send 2 MW over 30 km at 11 kV, then at 33 kV and 132 kV. How does the loss change?<details><summary>Show answer</summary>About 9.9 % at 11 kV, 1.1 % at 33 kV and 0.07 % at 132 kV. Three times the voltage cuts the current to a third and the loss to a ninth.</details></li>
+              <li>Try to send the power at 230 V without any transformers. Why is it impossible?<details><summary>Show answer</summary>2 MW at 230 V needs about 8700 A. In 6 Ω of line, I²R would be far more than the power sent: the wires would melt long before the town got anything. That is why grids need transformers and AC.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Mutual induction:</strong> an emf induced in one coil by a changing current in a nearby coil.</li>
+              <li><strong>Self-induction:</strong> an emf induced in a coil by a change of current in the same coil; it opposes the change.</li>
+              <li><strong>Step-up / step-down transformer:</strong> one that raises / lowers the voltage (Ns &gt; Np or Ns &lt; Np).</li>
+              <li><strong>Turns ratio:</strong> Ns ÷ Np, which equals Vs ÷ Vp for an ideal transformer.</li>
+              <li><strong>Transmission loss:</strong> electrical energy turned into heat in the wires of a power line, I²R.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Faraday's Law of Induction — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Push a bar magnet into a coil and watch the meter kick. Change the speed, the number of turns and the magnet, move the coil instead, and see that the emf equals the rate of change of flux linkage.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/faradays-law/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Faraday's Law of Induction — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Push a bar magnet into a coil and watch the meter kick. Change the speed, the number of turns and the magnet, move the coil instead, and see that the emf equals the rate of change of flux linkage.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/faradays-law/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="faradays-law">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In 1831 Michael Faraday found that a magnet can make electricity, but only while something is <strong>changing</strong>. Push a magnet into a coil and the meter kicks; hold it still inside and the needle goes back to zero; pull it out and the needle kicks the other way.</p>
+            <p>What matters is the <strong>magnetic flux</strong> through the coil: roughly, how many field lines pass through its turns. Moving the magnet, moving the coil or making the magnet stronger all change the flux. A changing flux pushes charges round the coil, which is an <strong>induced emf</strong>. Only the relative motion matters: moving the coil over a still magnet gives the same kick as moving the magnet.</p>
+            <p>The induced emf is larger when the flux changes faster (move quickly), when there are more turns (each turn adds its own emf) and when the magnet is stronger.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Φ = B A cos θ</code>
+            <p class="formula-note">Magnetic flux through one turn of area A in a uniform field B at angle θ to the normal. Unit: weber (Wb) = T m². The field of a bar magnet is not uniform, so the simulation adds up the flux through each turn from the magnet’s two poles.</p>
+            <code class="formula">ε = −d(NΦ)/dt</code>
+            <p class="formula-note">Faraday’s law: the emf equals the rate of change of the flux linkage NΦ. The minus sign is Lenz’s law: the induced current opposes the change. On the graph, the emf (in mV) is minus the slope of the flux linkage curve (in mWb per second).</p>
+            <code class="formula">I = ε ÷ R</code>
+            <p class="formula-note">The current through the coil and meter. Here R = 0.02 Ω per turn plus 50 Ω for the meter.</p>
+            <p class="formula-note">Simplified: the magnet is treated as two magnetic poles at its ends, the coil as 24 thin turns spread along its length, and the meter responds instantly. The magnetic effect of the induced current on the magnet is ignored.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Every power station, from a coal plant in Jharkhand to the Bhakra Nangal dam, makes electricity by turning coils and magnets past each other.</li>
+              <li>A bicycle dynamo spins a small magnet inside a coil to light the lamp.</li>
+              <li>An induction cooktop uses a rapidly changing field to induce currents in the steel pan, which heat it.</li>
+              <li>Electric guitar pickups, metal detectors at railway stations and wireless phone chargers all work by induction.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Drag the magnet into the coil and hold it still in the middle. What does the meter show while it is still?<details><summary>Show answer</summary>Zero. The flux through the coil is large, but it is not changing, so no emf is induced. Only a change in flux gives an emf.</details></li>
+              <li>Push the magnet in slowly, then quickly. Compare the kicks and the area under the emf curve.<details><summary>Show answer</summary>The quick push gives a much bigger but shorter kick. The total change in flux linkage is the same, so the area under the emf–time curve is the same both ways.</details></li>
+              <li>Choose “Drag the coil” and move the coil over the still magnet. Is the result different?<details><summary>Show answer</summary>No. Only the relative motion matters. Moving the coil towards the magnet changes the flux just like moving the magnet towards the coil.</details></li>
+              <li>Use the machine at 0.4 m/s with 400 turns, then double the turns to 800. What happens to the peak emf?<details><summary>Show answer</summary>It doubles (about 260 mV to about 520 mV), because each turn adds the same emf and ε = −N dΦ/dt.</details></li>
+              <li>Turn the magnet round so its S pole faces the coil. What changes?<details><summary>Show answer</summary>The kicks reverse direction, and the coil end facing the magnet now becomes an S pole while the magnet comes in, still opposing its approach.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Electromagnetic induction:</strong> producing an emf in a conductor by changing the magnetic flux through it.</li>
+              <li><strong>Magnetic flux (Φ):</strong> a measure of the magnetic field passing through an area, in webers (Wb).</li>
+              <li><strong>Flux linkage (NΦ):</strong> the flux through one turn times the number of turns.</li>
+              <li><strong>Induced emf:</strong> the voltage produced by a changing flux, which drives an induced current if the circuit is closed.</li>
+              <li><strong>Galvanometer:</strong> a sensitive centre-zero meter that shows small currents in either direction.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
