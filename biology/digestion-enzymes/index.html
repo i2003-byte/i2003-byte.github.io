@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Digestion Along the Gut — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Follow a meal from the mouth to the large intestine and watch enzymes cut starch, protein and fat into glucose, amino acids, fatty acids and glycerol. Try it without bile or stomach acid. Interactive Class 10 biology simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/digestion-enzymes/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Digestion Along the Gut — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Follow a meal from the mouth to the large intestine and watch enzymes cut starch, protein and fat into glucose, amino acids, fatty acids and glycerol. Try it without bile or stomach acid. Interactive Class 10 biology simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/digestion-enzymes/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="digestion-enzymes">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Food is made of big molecules: <strong>starch</strong> (long chains of glucose), <strong>proteins</strong> (chains of amino acids) and <strong>fats</strong>. They are far too big to pass through the wall of the gut into the blood. <strong>Digestion</strong> cuts them into small, soluble pieces: glucose, amino acids, and fatty acids with glycerol.</p>
+            <p>The cutting is done by <strong>enzymes</strong>, special proteins made by glands along the alimentary canal. Each enzyme works on one kind of food, and in the right conditions: pepsin in the acid of the stomach, the pancreatic enzymes in the alkaline small intestine. The small pieces are then absorbed by the <strong>villi</strong> of the small intestine into the blood.</p>
+          </section>
+          <section>
+            <h3>🧮 Who does what</h3>
+            <code class="formula">Mouth: starch —(salivary amylase)→ maltose</code>
+            <p class="formula-note">Chewing mixes food with saliva; only a little starch is digested here because the food soon leaves.</p>
+            <code class="formula">Stomach: protein —(pepsin + HCl)→ peptides</code>
+            <p class="formula-note">Hydrochloric acid (pH about 2) lets pepsin work and kills germs. Mucus protects the stomach wall from its own acid.</p>
+            <code class="formula">Small intestine: bile + pancreatic juice + intestinal juice</code>
+            <p class="formula-note">Bile from the liver (stored in the gall bladder) breaks fat into tiny droplets (emulsification) and makes the food alkaline. Pancreatic amylase, trypsin and lipase, and then the enzymes of the intestinal wall, finish the job: glucose, amino acids, fatty acids and glycerol.</p>
+            <code class="formula">Large intestine: water is absorbed</code>
+            <p class="formula-note">Undigested food such as fibre (roughage) is pushed out through the anus.</p>
+            <p><strong>Simplifications:</strong> the times are typical but vary a lot from person to person (stomach 2–4 h, longer for oily food; small intestine 3–5 h; large intestine about a day). The rates are rounded, simple models. A little salivary amylase keeps working inside the swallowed lump for a while in the stomach; here it stops at once. The meals contain other things (fibre, vitamins, minerals, water) not drawn here, and the gut is shown unrolled and not to scale.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Chew a piece of chapati</strong> for a minute: it starts to taste sweet as amylase turns starch into maltose.</li>
+              <li><strong>Acidity:</strong> too much stomach acid gives a burning feeling; antacids are mild bases (like magnesium hydroxide) that neutralise it.</li>
+              <li><strong>Gallstones</strong> can block the bile duct. Then fat is digested poorly, and doctors advise a low-fat diet.</li>
+              <li><strong>Diarrhoea</strong> is dangerous because water is not taken back in the large intestine; ORS (oral rehydration solution) replaces the lost water and salts.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Eat the balanced meal and pause in the mouth. How much starch is digested after 30 s of chewing? Try 60 s.<details><summary>Show answer</summary>About 14 % after 30 s and about 26 % after 60 s. Chewing longer gives saliva more time, but most starch is still digested in the small intestine.</details></li>
+              <li>Which food is digested in the stomach, and which is not touched there at all?<details><summary>Show answer</summary>Only protein (by pepsin). Starch and fat pass through the stomach almost unchanged.</details></li>
+              <li>Switch off “Bile reaches the intestine” and run the meal again. How much fat is digested by the end?<details><summary>Show answer</summary>Only about 45 % instead of about 94 %. Without bile the fat stays in big drops, so lipase can only work on their surface.</details></li>
+              <li>Compare the puri with chapati and jam. Which stays longer in the stomach?<details><summary>Show answer</summary>The puri: about 3 h 15 min against about 2 h 15 min. Fatty food leaves the stomach slowly, which is why oily meals make you feel full for longer.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Enzyme:</strong> a protein that speeds up one particular reaction without being used up.</li>
+              <li><strong>Peristalsis:</strong> waves of muscle squeezing that push food along the gut.</li>
+              <li><strong>Emulsification:</strong> breaking fat into tiny droplets, giving enzymes much more surface to work on.</li>
+              <li><strong>Villi:</strong> finger-like folds of the small intestine wall that give a huge area for absorption.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

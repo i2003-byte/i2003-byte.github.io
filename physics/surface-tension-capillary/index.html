@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Surface Tension &amp; Capillarity — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Water climbs thin glass tubes while mercury dips, a steel needle floats until soap is added, and a small soap bubble empties into a big one. Interactive Class 11 surface tension simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/surface-tension-capillary/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Surface Tension &amp; Capillarity — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Water climbs thin glass tubes while mercury dips, a steel needle floats until soap is added, and a small soap bubble empties into a big one. Interactive Class 11 surface tension simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/surface-tension-capillary/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="surface-tension-capillary">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Molecules inside a liquid are pulled equally in all directions by their neighbours, but molecules at the surface are pulled only sideways and inwards. So the surface behaves like a stretched elastic skin that tries to shrink. This pull along the surface is <strong>surface tension</strong>.</p>
+            <p>It is small, but it can lift water up a thin tube, hold a steel needle on water, and make a small soap bubble push its air into a bigger one.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">T = F / L</code>
+            <p class="formula-note">Surface tension: force per unit length along a line drawn in the surface (N/m). Water ≈ 0.073 N/m at 20 °C, soapy water ≈ 0.03 N/m, mercury ≈ 0.49 N/m.</p>
+            <code class="formula">h = 2T cos θ / (rρg)</code>
+            <p class="formula-note">Capillary rise (Jurin’s law). The surface pulls up along the rim, 2πr·T cos θ, and holds a column of weight πr²hρg. θ = contact angle, r = tube radius. Half the radius → twice the height. If θ &gt; 90° (mercury on glass, water on wax), cos θ is negative and the level falls.</p>
+            <code class="formula">Δp = 2T/R (drop) &nbsp;·&nbsp; Δp = 4T/R (soap bubble)</code>
+            <p class="formula-note">Excess pressure inside a curved surface of radius R. A soap bubble has two surfaces (inside and outside of the film), hence 4T/R. A smaller bubble has the higher pressure.</p>
+            <p><strong>Simplifications:</strong> the contact angles (0° for clean glass, 105° for wax, 140° for mercury) and surface tensions are typical values at 20 °C. The tubes are drawn wider than life. For the needle, only the two surface pulls hold it up; the small upthrust of the water pushed aside by the dent is ignored, so real needles can be a little thicker. In the bubbles scene the air is taken as incompressible and the flow is slowed down so you can watch it.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Wicks and towels:</strong> oil climbs the narrow gaps in the cotton wick of a diya; a towel soaks up water the same way.</li>
+              <li><strong>Plants</strong> draw water up thin xylem vessels partly by capillary action (most of the lift comes from evaporation at the leaves).</li>
+              <li><strong>Pond skaters</strong> walk on water: their legs are covered with waxy hairs, so the water surface dips under them like a trampoline instead of wetting them.</li>
+              <li><strong>Soap and detergents</strong> lower surface tension so water can spread into fabric and lift away oil and dirt.</li>
+              <li>Farmers <strong>plough fields after rain</strong>: breaking the fine channels in the top soil stops water from rising by capillarity and evaporating.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With water and r = 0.25 mm, read the rise in the three tubes. What is the pattern?<details><summary>Show answer</summary>5.94 cm, 2.97 cm and 1.49 cm. Doubling the radius halves the height, so h × r stays the same (about 14.9 mm²).</details></li>
+              <li>Change the liquid to mercury. What happens to the level and the shape of the surface?<details><summary>Show answer</summary>The level falls below the outside level (about 2.2 cm in the thinnest tube at r = 0.25 mm) and the surface bulges upwards (convex), because mercury does not wet glass (θ ≈ 140°).</details></li>
+              <li>Float the 1.2 mm needle, then switch on “add a drop of soap”. Why does it sink?<details><summary>Show answer</summary>Soap lowers T from 0.073 to 0.030 N/m. The greatest upward pull, 2T = 60 mN per metre, is now less than the needle’s weight of 86.5 mN per metre.</details></li>
+              <li>Without soap, find the thickest needle that still floats.<details><summary>Show answer</summary>About 1.55 mm. Weight grows as d², but the surface pull 2T stays fixed, so thick needles sink.</details></li>
+              <li>In the bubbles scene, start with a 1.5 cm and a 3 cm bubble. Which one grows when the tap opens, and when does the flow stop?<details><summary>Show answer</summary>The big one grows. The small bubble has the higher pressure (4T/R = 6.7 Pa vs 3.3 Pa), so it empties until only a shallow cap is left whose curve matches the big bubble (both R ≈ 3.1 cm).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Contact angle (θ):</strong> the angle between the liquid surface and the solid, measured through the liquid. Below 90° the liquid wets the solid.</li>
+              <li><strong>Meniscus:</strong> the curved surface of a liquid in a tube: concave for water, convex for mercury.</li>
+              <li><strong>Capillarity:</strong> the rise or fall of a liquid in a narrow tube.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

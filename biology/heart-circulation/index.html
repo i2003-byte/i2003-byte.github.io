@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Heart &amp; Double Circulation — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch blood go round the body and the lungs through the four chambers of the heart, with valves opening and shutting to the lub-dub beat. Compare frog and fish hearts. Interactive Class 10 biology simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/heart-circulation/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Heart &amp; Double Circulation — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch blood go round the body and the lungs through the four chambers of the heart, with valves opening and shutting to the lub-dub beat. Compare frog and fish hearts. Interactive Class 10 biology simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/heart-circulation/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="heart-circulation">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Your heart is two pumps side by side. The <strong>right side</strong> collects oxygen-poor blood from the body and pumps it to the <strong>lungs</strong>, where it picks up oxygen and gives out carbon dioxide. The <strong>left side</strong> collects this oxygen-rich blood and pumps it hard to the whole <strong>body</strong>. So blood passes through the heart <strong>twice</strong> in every round trip: this is <strong>double circulation</strong>.</p>
+            <p>Because the two sides are completely separate, oxygen-rich and oxygen-poor blood never mix. Birds and mammals need this: they keep their bodies warm, which uses a lot of energy and so a lot of oxygen.</p>
+          </section>
+          <section>
+            <h3>🧮 Key numbers</h3>
+            <code class="formula">Cardiac output = heart rate × stroke volume</code>
+            <p class="formula-note">At rest: 72 beats/min × 70 mL ≈ 5 L/min, about all the blood in an adult’s body every minute. When you run, both numbers rise and the heart can pump 15–20 L/min.</p>
+            <code class="formula">One beat ≈ 0.8 s at 72 beats/min</code>
+            <p class="formula-note">Atria squeeze (≈ 0.1 s) → ventricles squeeze (≈ 0.3 s) → the whole heart relaxes and fills (≈ 0.4 s). “Lub” is the sound of the valves between atria and ventricles shutting; “dub” is the valves at the exits (pulmonary and aortic) shutting.</p>
+            <p><strong>Simplifications:</strong> the picture is a flat diagram, not the real shape: the real heart is one fist-sized organ and the blood vessels branch into millions of capillaries. The dots move about 8 times faster than real blood. Stroke volume is a rough rule (it rises from about 70 to 110 mL with exercise). In the frog and fish views, the heart rate slider only sets the drawing speed.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Pulse:</strong> each squeeze of the left ventricle sends a pressure wave along the arteries; you feel it at the wrist. A doctor’s stethoscope picks up the lub-dub of the valves.</li>
+              <li><strong>Blood pressure</strong> of about 120/80 mm of mercury means 120 while the ventricles squeeze and 80 while the heart relaxes. The left ventricle has the thickest wall because it pumps to the whole body.</li>
+              <li><strong>Fish</strong> have a 2-chambered heart and single circulation: blood loses pressure in the gills, so it reaches the body slowly. That is enough for a cold-blooded animal.</li>
+              <li><strong>Frogs</strong> and most reptiles have 3 chambers. Some mixing in the single ventricle is fine because they also take in oxygen through their skin and do not keep their bodies warm.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Follow one blue dot from the vena cava. Name the chambers and places it passes before it comes back.<details><summary>Show answer</summary>Right atrium → right ventricle → pulmonary artery → lungs (turns red) → pulmonary vein → left atrium → left ventricle → aorta → body (turns blue) → vena cava. It passes through the heart twice.</details></li>
+              <li>Watch the valves. Which ones are shut when you hear (or see) “LUB”?<details><summary>Show answer</summary>The tricuspid and bicuspid valves between the atria and ventricles. They shut as the ventricles start to squeeze, so blood cannot flow back into the atria; the pulmonary and aortic valves open instead.</details></li>
+              <li>Set the heart rate to Running (160). How much blood is pumped per minute, and how long does a full round trip take?<details><summary>Show answer</summary>About 17.5 L/min (160 × 110 mL), and the 5 L of blood go round in about 17 s instead of a minute at rest.</details></li>
+              <li>Switch to the frog heart. What colour is the blood going to the body, and why?<details><summary>Show answer</summary>Purple, a mix: oxygen-rich blood from the lungs and oxygen-poor blood from the body meet in the single ventricle.</details></li>
+              <li>Switch to the fish. How many times does the blood pass through the heart in one round, and where does it slow down?<details><summary>Show answer</summary>Once (single circulation). It slows down after the gills, because pushing through the narrow gill capillaries uses up most of the pressure.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Atrium (plural atria):</strong> thin-walled upper chamber that receives blood.</li>
+              <li><strong>Ventricle:</strong> thick-walled lower chamber that pumps blood out.</li>
+              <li><strong>Artery / vein:</strong> arteries carry blood away from the heart, veins bring it back. (The pulmonary artery carries oxygen-poor blood, the pulmonary vein oxygen-rich.)</li>
+              <li><strong>Valve:</strong> a flap that lets blood flow one way only.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

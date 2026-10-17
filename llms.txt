@@ -38,6 +38,8 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Roller Coaster: Potential and Kinetic Energy](https://i2003-byte.github.io/physics/energy-roller-coaster/): Release a cart from any height and watch PE turn into KE and back. Live energy bars show the total staying constant, and friction turning some of it into heat. (Beginner)
 - [Power Race: Same Work, Different Time](https://i2003-byte.github.io/physics/power-race/): A walker, a runner and a motor lift raise the same mass up the same height. Same work, different power: P = W ÷ t in watts and horsepower, plus kWh and the electricity bill in ₹. (Beginner)
 - [Bernoulli's Principle](https://i2003-byte.github.io/physics/bernoulli-principle/): Water speeds up in a narrow pipe and the pressure tubes above it drop. Faster air over an aeroplane wing gives lift, and a fast train pulls air, paper and people towards it on the platform. (Intermediate)
+- [Viscosity & Terminal Velocity](https://i2003-byte.github.io/physics/viscosity-terminal-velocity/): Drop steel, glass or plastic balls into glycerine, honey, castor oil or water and watch them reach a steady terminal speed. Test Stokes' law and v ∝ r², warm the liquid, and see why raindrops fall slowly while cloud droplets float. (Intermediate)
+- [Surface Tension & Capillarity](https://i2003-byte.github.io/physics/surface-tension-capillary/): Water climbs thin glass tubes while mercury dips below the outside level. A steel needle floats in a dent of the water surface until a drop of soap is added, and a small soap bubble empties into a big one. (Intermediate)
 - [Spring–Mass Oscillator](https://i2003-byte.github.io/physics/spring-mass/): Pull a block on a spring and let it go. Explore Hooke's law, simple harmonic motion, T = 2π√(m/k) and the swap between kinetic and spring energy, with optional damping. (Intermediate)
 - [SHM and Uniform Circular Motion](https://i2003-byte.github.io/physics/shm-circular/): Watch the shadow of a point going round a circle move back and forth in simple harmonic motion. Link the amplitude, period and phase to the circle, and compare x, v and a. (Advanced)
 - [Forced Oscillations and Resonance](https://i2003-byte.github.io/physics/resonance/): Shake the top of a spring with a motor and find the frequency where the block swings hugely. Plot the resonance curve and see how damping shapes the peak. (Advanced)
@@ -242,6 +244,11 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 - [Photosynthesis in a Leaf](https://i2003-byte.github.io/biology/photosynthesis-leaf/): Look inside a leaf as it makes food. Change sunlight, carbon dioxide, water and chlorophyll, and watch CO₂ and water become glucose and oxygen. (Beginner)
 - [Oxygen Bubbles from a Water Plant](https://i2003-byte.github.io/biology/oxygen-bubbles/): Move a lamp nearer to a Hydrilla plant and count the oxygen bubbles. Plot bubbles per minute against distance, add baking soda, try coloured light and test the gas. (Beginner)
 - [Starch Test on a Leaf](https://i2003-byte.github.io/biology/starch-test/): Cover part of a leaf, use a variegated leaf or take away CO₂, then boil, decolourise and add iodine. See where starch was made. (Beginner)
+
+### Human Body
+
+- [Heart & Double Circulation](https://i2003-byte.github.io/biology/heart-circulation/): Follow blood cells from the body to the right side of the heart, through the lungs, back to the left side and out to the body again. The chambers squeeze in turn and the valves open and shut to the lub-dub beat. Compare frog and fish hearts. (Beginner)
+- [Digestion Along the Gut](https://i2003-byte.github.io/biology/digestion-enzymes/): Follow a meal from the mouth through the stomach and small intestine to the large intestine. Enzymes cut starch, protein and fat into glucose, amino acids, fatty acids and glycerol, and the villi absorb them. Try it without bile or stomach acid. (Beginner)
 
 ### Cells
 

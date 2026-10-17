@@ -189,6 +189,7 @@ SimLab.subjects = [
     status: 'live',
     branches: [
       { id: 'plants', name: 'Plant Nutrition' },
+      { id: 'human-body', name: 'Human Body' },
       { id: 'cells', name: 'Cells' },
       { id: 'genetics', name: 'Genetics' },
       { id: 'ecology', name: 'Ecology' },
@@ -1033,6 +1034,38 @@ SimLab.simulations = [
     prerequisites: ['calorimetry']
   },
   {
+    id: 'heart-circulation',
+    subject: 'biology',
+    branch: 'human-body',
+    title: 'Heart & Double Circulation',
+    description:
+      'Follow blood cells from the body to the right side of the heart, through the lungs, back to the left side and out to the body again. The chambers squeeze in turn and the valves open and shut to the lub-dub beat. Compare frog and fish hearts.',
+    level: 'Beginner',
+    tags: ['life processes', 'heart', 'circulation', 'blood', 'valves', 'pulse', 'transport', 'class 10'],
+    thumbnail: '/assets/img/thumbs/heart-circulation.svg',
+    link: '/biology/heart-circulation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: []
+  },
+  {
+    id: 'digestion-enzymes',
+    subject: 'biology',
+    branch: 'human-body',
+    title: 'Digestion Along the Gut',
+    description:
+      'Follow a meal from the mouth through the stomach and small intestine to the large intestine. Enzymes cut starch, protein and fat into glucose, amino acids, fatty acids and glycerol, and the villi absorb them. Try it without bile or stomach acid.',
+    level: 'Beginner',
+    tags: ['life processes', 'digestion', 'enzymes', 'alimentary canal', 'bile', 'nutrition', 'class 10'],
+    thumbnail: '/assets/img/thumbs/digestion-enzymes.svg',
+    link: '/biology/digestion-enzymes/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: []
+  },
+  {
     id: 'photosynthesis-leaf',
     subject: 'biology',
     branch: 'plants',
@@ -1789,6 +1822,38 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-17',
     prerequisites: ['liquid-pressure']
+  },
+  {
+    id: 'viscosity-terminal-velocity',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Viscosity & Terminal Velocity',
+    description:
+      'Drop steel, glass or plastic balls into glycerine, honey, castor oil or water and watch them reach a steady terminal speed. Test Stokes\' law and v ∝ r², warm the liquid, and see why raindrops fall slowly while cloud droplets float.',
+    level: 'Intermediate',
+    tags: ['fluids', 'viscosity', 'Stokes law', 'terminal velocity', 'Reynolds number', 'raindrops', 'class 11'],
+    thumbnail: '/assets/img/thumbs/viscosity-terminal-velocity.svg',
+    link: '/physics/viscosity-terminal-velocity/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['bernoulli-principle', 'buoyancy-archimedes']
+  },
+  {
+    id: 'surface-tension-capillary',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Surface Tension & Capillarity',
+    description:
+      'Water climbs thin glass tubes while mercury dips below the outside level. A steel needle floats in a dent of the water surface until a drop of soap is added, and a small soap bubble empties into a big one.',
+    level: 'Intermediate',
+    tags: ['fluids', 'surface tension', 'capillarity', 'meniscus', 'contact angle', 'soap bubble', 'excess pressure', 'class 11'],
+    thumbnail: '/assets/img/thumbs/surface-tension-capillary.svg',
+    link: '/physics/surface-tension-capillary/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['viscosity-terminal-velocity']
   },
   {
     id: 'spring-mass',

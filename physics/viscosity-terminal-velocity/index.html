@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Viscosity &amp; Terminal Velocity — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drop steel balls into glycerine, honey or water and watch them reach a steady terminal speed. Test Stokes’ law, see v ∝ r², and find out why raindrops fall slowly. Interactive Class 11 fluids simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/viscosity-terminal-velocity/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Viscosity &amp; Terminal Velocity — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drop steel balls into glycerine, honey or water and watch them reach a steady terminal speed. Test Stokes’ law, see v ∝ r², and find out why raindrops fall slowly. Interactive Class 11 fluids simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/viscosity-terminal-velocity/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="viscosity-terminal-velocity">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Liquids and gases resist being sheared, a bit like friction between their layers. This is <strong>viscosity</strong>. Honey and glycerine are very viscous; water and air much less so.</p>
+            <p>Drop a ball into a liquid. At first it speeds up, but the faster it goes, the bigger the <strong>viscous drag</strong> on it. Soon drag + upthrust exactly balance the weight. The net force is zero, so the ball stops speeding up and falls at a steady <strong>terminal speed</strong>. Raindrops do the same in air, which is why rain does not hit us like bullets.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">F = 6πηrv</code>
+            <p class="formula-note">Stokes’ law: drag on a small sphere of radius r moving slowly at speed v through a fluid of viscosity η (unit: pascal-second, Pa·s).</p>
+            <code class="formula">v_t = 2r²(σ − ρ)g / (9η)</code>
+            <p class="formula-note">Terminal speed from weight = upthrust + drag. σ = density of the ball, ρ = density of the fluid. Double the radius → 4 times the terminal speed (v_t ∝ r²).</p>
+            <code class="formula">Re = ρv(2r) / η</code>
+            <p class="formula-note">Reynolds number. Stokes’ law is good only when Re is below about 1 (slow, smooth flow). At larger Re the fluid swirls into eddies behind the ball and drag grows faster, roughly as v².</p>
+            <p><strong>Simplifications:</strong> the jar is taken to be much wider than the ball (real walls slow it a little). For larger Re the drag uses a standard formula fitted to experiments (Schiller–Naumann, then a constant drag coefficient of 0.44). Viscosity falls with temperature by a rounded rate for each liquid; honey varies a lot from one sample to the next. Big raindrops really flatten like a bun and fall a little slower than the sim shows (about 9 m/s). The balls and drops are drawn much bigger than life.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Clouds float:</strong> a cloud droplet (0.01 mm) has a terminal speed of only about 1 cm/s, so rising air easily holds it up. Only when droplets join into 1 mm raindrops do they fall at about 7 m/s.</li>
+              <li><strong>Engine oil</strong> is graded by viscosity. Thick oil protects a hot engine; in winter at hill stations a thinner grade is used so the engine turns over easily.</li>
+              <li><strong>Warm honey or ghee</strong> pours much more easily than cold, because viscosity falls quickly as a liquid warms up.</li>
+              <li>Doctors measure the <strong>ESR</strong> (erythrocyte sedimentation rate): how fast red blood cells settle in a thin tube of blood, a sign of infection or inflammation.</li>
+              <li>A <strong>skydiver</strong> reaches about 200 km/h; opening the parachute makes drag much bigger, so the terminal speed falls to a safe 20 km/h or so.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In glycerine, compare the ball r = 1.5 mm with the ball 2r in the next jar. How many times faster is the bigger ball?<details><summary>Show answer</summary>About 3.8 times (2.2 cm/s vs 8.4 cm/s). Stokes’ law says 4 times, because v_t ∝ r²; the big ball is just starting to make the flow less smooth.</details></li>
+              <li>Switch to water with a 2 mm steel ball. What does Stokes’ law predict, and what really happens?<details><summary>Show answer</summary>Stokes’ law predicts about 59 m/s, but the ball really falls at about 0.9 m/s. Re is in the thousands, so the flow is turbulent and Stokes’ law does not apply.</details></li>
+              <li>In glycerine, warm the liquid from 20 °C to 30 °C. What happens to the viscosity and the terminal speed?<details><summary>Show answer</summary>η falls from about 1.4 to 0.63 Pa·s, and the 1.5 mm ball falls more than twice as fast (2.2 → 4.8 cm/s).</details></li>
+              <li>Choose a plastic ball in honey. Why doesn’t it sink?<details><summary>Show answer</summary>Plastic (1150 kg/m³) is less dense than honey (1420 kg/m³), so the upthrust is bigger than the weight and it floats.</details></li>
+              <li>In the sky scene, drop a raindrop and then a cloud droplet. How long does each take to fall 2 km, and how fast would a raindrop hit with no air?<details><summary>Show answer</summary>The raindrop takes about 5 minutes at 7 m/s; the cloud droplet would take about 46 hours. With no air it would hit the ground at about 200 m/s (over 700 km/h) after 20 s.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Viscosity (η):</strong> a fluid’s resistance to flow; SI unit Pa·s (water ≈ 0.001, glycerine ≈ 1.4).</li>
+              <li><strong>Terminal speed:</strong> the steady speed at which drag and upthrust balance the weight.</li>
+              <li><strong>Laminar flow:</strong> smooth flow in layers; turbulent flow is full of swirling eddies.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
