@@ -171,6 +171,7 @@ SimLab.subjects = [
     branches: [
       { id: 'geometry', name: 'Lines, Angles & Triangles' },
       { id: 'trigonometry', name: 'Trigonometry' },
+      { id: 'coordinate-geometry', name: 'Coordinate Geometry' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
       { id: 'probability', name: 'Statistics & Probability' }
@@ -1774,6 +1775,22 @@ SimLab.simulations = [
     prerequisites: ['solenoid-field']
   },
   {
+    id: 'bernoulli-principle',
+    subject: 'physics',
+    branch: 'mechanics',
+    title: 'Bernoulli\'s Principle',
+    description:
+      'Water speeds up in a narrow pipe and the pressure tubes above it drop. Faster air over an aeroplane wing gives lift, and a fast train pulls air, paper and people towards it on the platform.',
+    level: 'Intermediate',
+    tags: ['fluids', 'Bernoulli', 'Venturi meter', 'continuity', 'pressure', 'lift', 'aerofoil', 'train', 'class 11'],
+    thumbnail: '/assets/img/thumbs/bernoulli-principle.svg',
+    link: '/physics/bernoulli-principle/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['liquid-pressure']
+  },
+  {
     id: 'spring-mass',
     subject: 'physics',
     branch: 'mechanics',
@@ -2404,6 +2421,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-13',
     prerequisites: ['trig-ratios']
+  },
+  {
+    id: 'distance-formula',
+    subject: 'mathematics',
+    branch: 'coordinate-geometry',
+    title: 'Distance Formula',
+    description:
+      'Drag points on a grid and see the distance between them as the long side of a right triangle. Then test three points (right-angled, isosceles or on one line) and four points (square, rectangle, rhombus or parallelogram).',
+    level: 'Intermediate',
+    tags: ['coordinate geometry', 'distance formula', 'Pythagoras', 'cartesian plane', 'collinear', 'square', 'rhombus', 'parallelogram', 'class 10'],
+    thumbnail: '/assets/img/thumbs/distance-formula.svg',
+    link: '/mathematics/distance-formula/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['pythagoras-proof']
+  },
+  {
+    id: 'section-formula',
+    subject: 'mathematics',
+    branch: 'coordinate-geometry',
+    title: 'Section Formula',
+    description:
+      'Find the point that divides a segment in the ratio m : n, and watch the same split appear on both axes. Midpoint, points of trisection and the centroid of a triangle, with exact fractions.',
+    level: 'Intermediate',
+    tags: ['coordinate geometry', 'section formula', 'ratio', 'midpoint', 'trisection', 'centroid', 'median', 'class 10'],
+    thumbnail: '/assets/img/thumbs/section-formula.svg',
+    link: '/mathematics/section-formula/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['distance-formula']
+  },
+  {
+    id: 'triangle-area-coordinates',
+    subject: 'mathematics',
+    branch: 'coordinate-geometry',
+    title: 'Area of a Triangle from Coordinates',
+    description:
+      'Drag the corners of a triangle and get its area from the coordinates. See why the formula works (a box minus right triangles, or trapezia), why area 0 means collinear points, and split a quadrilateral in two.',
+    level: 'Intermediate',
+    tags: ['coordinate geometry', 'area of triangle', 'shoelace', 'collinear', 'trapezium', 'quadrilateral', 'class 10'],
+    thumbnail: '/assets/img/thumbs/triangle-area-coordinates.svg',
+    link: '/mathematics/triangle-area-coordinates/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-17',
+    prerequisites: ['distance-formula']
   },
   {
     id: 'histogram-polygon',

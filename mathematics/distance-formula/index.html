@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Distance Formula — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag points on a grid and see the distance between them as the long side of a right triangle. Test whether three points make a right-angled or isosceles triangle, and whether four points make a square, rectangle, rhombus or parallelogram.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/distance-formula/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Distance Formula — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag points on a grid and see the distance between them as the long side of a right triangle. Test whether three points make a right-angled or isosceles triangle, and whether four points make a square, rectangle, rhombus or parallelogram.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/distance-formula/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="distance-formula">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every point on the plane has an address (x, y). To find how far apart two points are, go across from one and then up (or down) to the other. The <strong>across</strong> step and the <strong>up</strong> step are the two short sides of a right triangle, and the distance is its longest side. So the distance formula is just <strong>Pythagoras’ theorem</strong> written with coordinates.</p>
+            <p>Once you can find lengths, you can test shapes: equal sides, a right angle (Pythagoras again), or three points that lie on one line.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">AB = √((x₂ − x₁)² + (y₂ − y₁)²)</code>
+            <p class="formula-note">A(x₁, y₁) and B(x₂, y₂). The order does not matter, because squaring removes the minus sign.</p>
+            <code class="formula">OP = √(x² + y²)</code>
+            <p class="formula-note">Distance of P(x, y) from the origin O(0, 0).</p>
+            <ul>
+              <li><strong>Right-angled triangle:</strong> the squares of the two shorter sides add up to the square of the longest side.</li>
+              <li><strong>Collinear points:</strong> the two shorter distances add up to the longest one (AB + BC = AC). There is no triangle.</li>
+              <li><strong>Square:</strong> four equal sides and equal diagonals. <strong>Rhombus:</strong> four equal sides, diagonals not equal. <strong>Rectangle:</strong> opposite sides equal and equal diagonals. <strong>Parallelogram:</strong> opposite sides equal.</li>
+            </ul>
+            <p>Tip: compare the <em>squares</em> of the lengths (AB² = 50) instead of the roots (7.07…). They are whole numbers here, so the tests are exact. The sim does the same.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A city map with a grid of streets: a shop 3 blocks east and 4 blocks north is 5 blocks away “as the crow flies”, but 7 blocks by road.</li>
+              <li>Phones and GPS find the straight-line distance between two places from their coordinates, the same way (on a curved Earth the formula is a little different).</li>
+              <li>In a computer game, the program checks whether a ball hits a player by comparing the distance between their centres with the sum of their sizes.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with “Two points”. Move A to (0, 0) and B to (3, 4). How far is B from the origin?<details><summary>Show answer</summary>√(3² + 4²) = √25 = 5 units. The famous 3-4-5 right triangle.</details></li>
+              <li>Move B to (5, −2), so that A(−3, −2) and B are on the same horizontal line. What happens to the formula?<details><summary>Show answer</summary>Δy = 0, so AB = √(8²) = 8. For points on a horizontal line the distance is just the difference of the x-coordinates.</details></li>
+              <li>Choose “Triangle: is it right-angled?”. Which angle is 90°, and how do the squared sides show it?<details><summary>Show answer</summary>AB² = 36, CA² = 64 and BC² = 100. 36 + 64 = 100, so the triangle is right-angled at A, the corner opposite the longest side BC.</details></li>
+              <li>Choose “Three points on a line?”. Check that AB + BC = CA.<details><summary>Show answer</summary>AB = 3√5, BC = 2√5, CA = 5√5, and 3√5 + 2√5 = 5√5. The points are collinear. Now move C one step: the sum is no longer equal and a thin triangle appears.</details></li>
+              <li>Choose “Four points: a rhombus”. Move B to (0, −4) and D to (0, 4). What shape is it now, and why?<details><summary>Show answer</summary>A square. All four sides are √32 = 4√2 and both diagonals are now 8, so the diagonals are equal too.</details></li>
+              <li>Hard: try to make an equilateral triangle with whole-number corners. Can you?<details><summary>Show answer</summary>Never exactly. A triangle with whole-number corners has an area that is a whole number or a half, but an equilateral triangle with side² a whole number has area (√3/4) × side², which is never a fraction like that. You can only get close, for example sides √64, √65, √65.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Coordinates (x, y):</strong> how far a point is across (x) and up (y) from the origin.</li>
+              <li><strong>Collinear:</strong> lying on one straight line.</li>
+              <li><strong>Diagonal:</strong> a line joining opposite corners of a quadrilateral (AC and BD).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

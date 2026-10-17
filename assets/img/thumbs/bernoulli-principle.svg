@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="bernoulli-principle">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M0 120H90C120 120 130 140 160 140C190 140 200 120 230 120H320V180H230C200 180 190 160 160 160C130 160 120 180 90 180H0Z" fill="#38bdf8" fill-opacity=".35" stroke="#e2e8f0" stroke-width="3"/>
+  <rect x="38" y="30" width="16" height="90" fill="#ffffff" fill-opacity=".08" stroke="#e2e8f0" stroke-width="2"/><rect x="40" y="45" width="12" height="75" fill="#38bdf8"/>
+  <rect x="152" y="30" width="16" height="110" fill="#ffffff" fill-opacity=".08" stroke="#e2e8f0" stroke-width="2"/><rect x="154" y="95" width="12" height="45" fill="#38bdf8"/>
+  <rect x="266" y="30" width="16" height="90" fill="#ffffff" fill-opacity=".08" stroke="#e2e8f0" stroke-width="2"/><rect x="268" y="45" width="12" height="75" fill="#38bdf8"/>
+  <g stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"><path d="M14 140h14M14 160h14M60 150h14M136 150h34M196 150h12M250 140h14M290 160h14"/></g>
+  <g font-family="sans-serif" font-weight="700"><text x="178" y="82" font-size="14" fill="#4ade80">fast → low p</text></g>
+</svg>

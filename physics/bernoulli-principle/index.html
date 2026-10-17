@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bernoulli’s Principle — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Water speeds up in a narrow pipe and its pressure drops (Venturi meter); faster air over a wing gives lift; a fast train pulls air and people towards it. Interactive Class 11 fluids simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/bernoulli-principle/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Bernoulli’s Principle — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Water speeds up in a narrow pipe and its pressure drops (Venturi meter); faster air over a wing gives lift; a fast train pulls air and people towards it. Interactive Class 11 fluids simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/bernoulli-principle/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="bernoulli-principle">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When water flows into a narrower part of a pipe, the same amount must get through every second, so it has to <strong>speed up</strong>. To speed water up you must push it from behind harder than from in front, so the pressure in the narrow, fast part is <strong>lower</strong>. In short: <strong>where a fluid moves faster, its pressure is lower</strong>. This is Bernoulli’s principle, and it is really the law of conservation of energy for a flowing fluid.</p>
+            <p>The same idea helps explain why an aeroplane wing lifts, why a spray pump pulls up liquid, and why it is dangerous to stand close to a fast train.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">A₁v₁ = A₂v₂</code>
+            <p class="formula-note">Equation of continuity: the volume flowing per second (Q) is the same everywhere. Area A = πd²/4, so halving the diameter makes the water 4 times faster.</p>
+            <code class="formula">p + ½ρv² + ρgh = constant</code>
+            <p class="formula-note">Bernoulli’s equation along a streamline. p = pressure, ρ = density, v = speed, h = height. In a level pipe the ρgh part is the same everywhere, so p₁ − p₂ = ½ρ(v₂² − v₁²).</p>
+            <code class="formula">h = p / (ρg)</code>
+            <p class="formula-note">An open tube on the pipe fills to a height h that shows the pressure above the air outside. 1 kPa ≈ 10.2 cm of water.</p>
+            <code class="formula">Lift L = ½ρv²·S·C_L</code>
+            <p class="formula-note">S = wing area, C_L = lift coefficient (about 0.3 + 2π × angle in radians for this wing, before it stalls).</p>
+            <p><strong>Simplifications:</strong> water and air are treated as ideal (no friction, no squashing), so the outlet tube reads the same as the inlet; a real pipe loses a little pressure along its length. The aeroplane is a typical 1000 kg trainer with 16 m² of wing, and the top and bottom air speeds are drawn so that Bernoulli gives the same lift. A wing also lifts because it turns the air downwards (Newton’s third law); both are two views of the same flow. The train’s air speed is a rough model (half the train’s speed at its side, dying away over a couple of metres) and the platform is not drawn to scale.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Venturi meter:</strong> water boards and factories measure how fast water flows in a main by the pressure difference between the wide part and a narrow throat.</li>
+              <li><strong>Spray pump and atomiser:</strong> fast air across the top of a thin tube lowers its pressure, and the air outside pushes the liquid up into the stream.</li>
+              <li><strong>Railway platforms:</strong> announcements tell you to stay behind the yellow line. A train rushing past at 110 km/h drags fast air along its side, and the low pressure there can pull loose paper, a dupatta or even an unsteady person towards it.</li>
+              <li>In a storm, fast wind over a roof lowers the pressure above it, and tin sheets can be lifted off from below.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In the pipe, make the narrow part 2.5 cm (half of 5 cm). How many times faster is the water there?<details><summary>Show answer</summary>4 times: 0.31 m/s becomes 1.22 m/s at 0.6 L/s. Half the diameter means a quarter of the area.</details></li>
+              <li>Keep 2.5 cm and an inlet pressure of 4 kPa. Raise the flow rate slowly. When does the middle tube start to suck air in?<details><summary>Show answer</summary>At about 1.45 L/s. The throat speed reaches about 2.9 m/s, and ½ρ(v₂² − v₁²) becomes bigger than 4 kPa, so the pressure in the throat falls below the air outside.</details></li>
+              <li>Choose the wing at a tilt of 6°. Find the lowest air speed at which the plane takes off.<details><summary>Show answer</summary>About 117 km/h (120 km/h is enough). Below that, lift is less than the weight of 9.8 kN.</details></li>
+              <li>Set the wing tilt to 0° and then to 14°. How does the take-off speed change?<details><summary>Show answer</summary>About 210 km/h at 0° but only about 85 km/h at 14°. More tilt gives more lift, which is why planes raise their nose to take off. Too much tilt makes a real wing stall.</details></li>
+              <li>Choose the train at 110 km/h with you 1 m from its side. Then step back to 2 m.<details><summary>Show answer</summary>The pull falls from about 26 N to about 7 N. The fast air, and the low pressure, stay close to the train, so a step or two back makes you much safer.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Streamline:</strong> the path followed by a small bit of fluid in steady flow.</li>
+              <li><strong>Gauge pressure:</strong> pressure above the air pressure outside (what the tubes show).</li>
+              <li><strong>Angle of attack:</strong> the tilt of a wing against the oncoming air.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

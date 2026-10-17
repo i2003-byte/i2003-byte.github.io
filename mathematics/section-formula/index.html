@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Section Formula — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Find the point that divides a line segment in the ratio m : n, see the same split on both axes, and explore the midpoint, points of trisection and the centroid of a triangle.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/section-formula/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Section Formula — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Find the point that divides a line segment in the ratio m : n, see the same split on both axes, and explore the midpoint, points of trisection and the centroid of a triangle.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/section-formula/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="section-formula">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Cut the segment AB into m + n equal steps. The point P that is <strong>m steps from A</strong> and <strong>n steps from B</strong> divides AB in the ratio <strong>m : n</strong>.</p>
+            <p>Look at the coloured bars on the axes: the x-coordinates and the y-coordinates are split in exactly the same ratio. That is because the small right triangle from A to P and the one from P to B have the same shape (they are similar), only different sizes. So you can work on x and y separately, and each is a weighted average of the two ends.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">P = ( (m·x₂ + n·x₁)/(m + n) , (m·y₂ + n·y₁)/(m + n) )</code>
+            <p class="formula-note">Section formula. A(x₁, y₁), B(x₂, y₂), AP : PB = m : n. Notice the cross-over: m (the A side) multiplies the coordinates of B. The bigger m is, the closer P gets to B.</p>
+            <code class="formula">Midpoint M = ( (x₁ + x₂)/2 , (y₁ + y₂)/2 )</code>
+            <p class="formula-note">The ratio 1 : 1. The midpoint is the plain average of the two ends.</p>
+            <code class="formula">Centroid G = ( (x₁ + x₂ + x₃)/3 , (y₁ + y₂ + y₃)/3 )</code>
+            <p class="formula-note">A median joins a corner to the midpoint of the opposite side. The three medians meet at G, which divides each median 2 : 1 from the corner.</p>
+            <p>Points of <strong>trisection</strong> cut AB into three equal parts: they divide it 1 : 2 and 2 : 1.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Planting saplings along a straight road: to place a tree one-third of the way from one milestone to the next, use the ratio 1 : 2.</li>
+              <li>A cardboard triangle balances on a pencil tip placed at its centroid. That is why the centroid is also called the centre of mass of a thin, even triangle.</li>
+              <li>A see-saw with a heavy child and a light child balances when the pivot divides the plank in the inverse ratio of their weights, the same weighted average as the section formula.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With A(−6, −3) and B(6, 5), set m = 3 and n = 1. Where is P? Now set m = 1 and n = 3. What changed?<details><summary>Show answer</summary>3 : 1 gives P(3, 3), close to B. 1 : 3 gives P(−3, −1), close to A. Swapping the ratio mirrors P along the segment.</details></li>
+              <li>Set m = 2 and n = 2, then m = 1 and n = 1. Compare the two points.<details><summary>Show answer</summary>Both are the midpoint (0, 1). Only the ratio matters: 2 : 2 is the same as 1 : 1.</details></li>
+              <li>Move A to (−2, 1) and B to (6, 5). Find m : n so that P lands on the y-axis.<details><summary>Show answer</summary>1 : 3. On the y-axis x = 0, so (6m − 2n)/(m + n) = 0, giving 6m = 2n. Then P = (0, 2).</details></li>
+              <li>Choose “Points of trisection”. Check that Q is the midpoint of P and B.<details><summary>Show answer</summary>With A(−6, −3), B(6, 5): P(−2, −1/3) and Q(2, 7/3). The midpoint of P and B is ((−2 + 6)/2, (−1/3 + 5)/2) = (2, 7/3) = Q.</details></li>
+              <li>Choose “Centroid of triangle ABC” and drag C around. Does AG ÷ GD stay the same?<details><summary>Show answer</summary>Yes, always 2. G is two-thirds of the way along every median, wherever the corners are.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Divides internally:</strong> P lies between A and B (the only case in this sim).</li>
+              <li><strong>Median:</strong> a line from a corner of a triangle to the midpoint of the opposite side.</li>
+              <li><strong>Centroid:</strong> the point where the three medians meet.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

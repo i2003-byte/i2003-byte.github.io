@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="triangle-area-coordinates">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c2d12"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="60" y="30" width="200" height="140" fill="#fbbf24" fill-opacity=".08" stroke="#fbbf24" stroke-width="3"/>
+  <path d="M60 170L260 130L260 170Z M260 130L180 30L260 30Z M180 30L60 170L60 30Z" fill="#f87171" fill-opacity=".25" stroke="#f87171" stroke-dasharray="6 4"/>
+  <path d="M60 170L260 130L180 30Z" fill="#38bdf8" fill-opacity=".3" stroke="#e2e8f0" stroke-width="4" stroke-linejoin="round"/>
+  <g font-family="sans-serif" font-weight="700"><text x="155" y="122" font-size="22" fill="#e2e8f0" text-anchor="middle">39</text><text x="160" y="195" font-size="13" fill="#fbbf24" text-anchor="middle">box − corners</text></g>
+</svg>

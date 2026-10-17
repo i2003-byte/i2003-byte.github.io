@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Area of a Triangle from Coordinates — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag the corners of a triangle and find its area from the coordinates. See why the formula works with a box and with trapezia, why zero area means collinear points, and split a quadrilateral into two triangles.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/triangle-area-coordinates/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Area of a Triangle from Coordinates — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag the corners of a triangle and find its area from the coordinates. See why the formula works with a box and with trapezia, why zero area means collinear points, and split a quadrilateral into two triangles.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/triangle-area-coordinates/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="triangle-area-coordinates">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>If you know the three corners of a triangle, you can find its area without measuring any height. Draw the smallest rectangle (box) that fits round the triangle. The triangle is what is left after you cut off a few <strong>right triangles</strong> at the corners of the box, and their areas are easy: ½ × base × height, read straight off the grid.</p>
+            <p>Doing the same thing with letters instead of numbers gives one neat formula. A second picture, with <strong>trapezia</strong> standing on a base line, is how the formula is usually proved. If the formula gives 0, the triangle has squashed flat: the three points are <strong>collinear</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">Area = ½ |x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|</code>
+            <p class="formula-note">A(x₁, y₁), B(x₂, y₂), C(x₃, y₃). The bars | | mean “ignore the sign”: the value inside is positive when A → B → C goes anticlockwise and negative when it goes clockwise.</p>
+            <code class="formula">A, B, C collinear ⇔ x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂) = 0</code>
+            <code class="formula">Trapezium = ½ × (sum of the parallel sides) × (distance between them)</code>
+            <p class="formula-note">Drop lines from the corners straight down to a base line. Two trapezia sit under the upper sides and one under the lower side: upper ones − lower one = triangle.</p>
+            <p><strong>Quadrilateral:</strong> a diagonal that lies inside cuts it into two triangles; add their areas.</p>
+            <p>Note: the box picture works only when the leftover pieces are right triangles. If one corner is strictly inside the box (try “A corner inside the box”), use the trapezia or the formula instead.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Land records: a surveyor notes the corners of a field (in metres east and north of a fixed stone) and works out its area from these numbers, without walking across it.</li>
+              <li>Computer graphics break every shape into tiny triangles, and the program uses the sign of this formula to tell which way a triangle faces.</li>
+              <li>To check whether three bus stops are on one straight road, put their coordinates into the formula and see if it gives 0.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with “A triangle”: A(−5, −3), B(5, −1), C(1, 6). Read the box and the three cut-off triangles. Do you get the same area as the formula?<details><summary>Show answer</summary>Box 10 × 9 = 90. Cut-offs 10 + 14 + 27 = 51. 90 − 51 = 39, and the formula gives ½ × 78 = 39 square units.</details></li>
+              <li>Choose “A right triangle” and check the answer with ½ × base × height.<details><summary>Show answer</summary>The base AB is 8 and the height AC is 8, so ½ × 8 × 8 = 32. The formula gives the same.</details></li>
+              <li>Choose “Three points on a line”. What is the area? Now move C up by one square.<details><summary>Show answer</summary>The area is 0 because A, B and C are collinear. One square up gives area ½ × 6 = 3: a very thin triangle.</details></li>
+              <li>Swap the order: drag B to where C is and C to where B was. What happens to the number inside | |?<details><summary>Show answer</summary>It changes sign (A → B → C now turns the other way), but the area stays the same. That is why the formula takes the absolute value.</details></li>
+              <li>Choose “A quadrilateral ABCD”. Which diagonal is used, and what is the total area?<details><summary>Show answer</summary>The diagonal AC lies inside, giving triangles ABC = 46 and ACD = 42, so ABCD = 88 square units.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Collinear:</strong> lying on one straight line, so no triangle (area 0).</li>
+              <li><strong>Bounding box:</strong> the smallest rectangle with sides along the grid that holds the whole shape.</li>
+              <li><strong>Square units:</strong> the area of one grid square counts as 1.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

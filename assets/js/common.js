@@ -621,6 +621,7 @@
             '<button class="step-btn" type="button" data-step="1" aria-label="Increase ' + esc(p.label) + '">+</button>' +
           '</div>' +
           (p.presets ? '<div class="presets" role="group" aria-label="' + esc(p.label) + ' presets">' + p.presets.map(function (pr) {
+            if (typeof pr !== 'object') pr = { value: pr, label: String(pr).replace('-', '−') + (p.unit ? (/^[°%]/.test(p.unit) ? '' : ' ') + p.unit : '') };   // plain numbers allowed
             return '<button type="button" data-preset="' + pr.value + '">' + esc(pr.label) + '</button>';
           }).join('') + '</div>' : '') +
           (p.help ? '<span class="small muted">' + esc(p.help) + '</span>' : '') + '</div>';
