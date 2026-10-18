@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Surface Area from Nets — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Unfold a cuboid, cube or cylinder into its flat net and add up the faces to find the total surface area. Work out the paint for a room and the steel sheet for a water tank. Interactive Class 8 mathematics simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/surface-area-nets/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Surface Area from Nets — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Unfold a cuboid, cube or cylinder into its flat net and add up the faces to find the total surface area. Work out the paint for a room and the steel sheet for a water tank. Interactive Class 8 mathematics simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/surface-area-nets/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="surface-area-nets">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The <strong>surface area</strong> of a solid is the total area of all its faces: how much paper wraps a gift box, how much paint covers a wall, how much steel sheet makes a tank. A good way to find it is to cut the solid open along some edges and lay it flat. The flat shape is called its <strong>net</strong>, and its area is the surface area.</p>
+            <p>A cuboid unfolds into six rectangles that come in three equal pairs (top and bottom, front and back, left and right). A cylinder unfolds into a rectangle and two circles: the curved surface rolls out into a rectangle whose length is the distance round the circle, 2πr, and whose width is the height h.</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">Cuboid: total surface area = 2(lb + bh + hl)</code>
+            <p class="formula-note">l = length, b = breadth, h = height. Each pair of equal faces gives one term, counted twice. A box with no lid has lb + 2(bh + hl).</p>
+            <code class="formula">Cube: total surface area = 6a²</code>
+            <p class="formula-note">All six faces are squares of side a. Doubling a makes every face 4 times bigger, so the area becomes 4 times bigger too.</p>
+            <code class="formula">Lateral surface of a cuboid = 2h(l + b)</code>
+            <p class="formula-note">Only the four side faces (the walls of a room): the perimeter of the base times the height.</p>
+            <code class="formula">Cylinder: total surface area = 2πrh + 2πr² = 2πr(r + h)</code>
+            <p class="formula-note">Curved surface 2πr × h, plus two circles of area πr² each. An open cylinder (a bucket or a drum without a lid) has 2πrh + πr². Textbook sums often use π = 22/7; the simulation uses the exact π, so its answers can differ in the last digit.</p>
+            <code class="formula">Room: area to paint = 2h(l + b) + lb − doors − windows</code>
+            <p class="formula-note">Walls plus the ceiling; the floor is not painted.</p>
+            <p><strong>Simplifications:</strong> the faces have no thickness, and the sheet for a tank needs no overlap for joints or waste. Every door is taken as 1 m × 2 m and every window as 1.2 m × 1.2 m. Paint is worked out for two coats, with one litre covering about 10 m² per coat (the real figure depends on the paint and the wall). The costs are only examples.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Sweet boxes:</strong> a mithai shop orders flat card nets that fold into boxes; the card needed per box is the box's surface area plus small flaps for gluing.</li>
+              <li><strong>Painting a house before Diwali:</strong> painters measure the walls and ceiling of each room in square metres, subtract the doors and windows, and charge a rate per m².</li>
+              <li><strong>Rooftop water tanks</strong> and oil drums are cylinders. The steel or plastic needed to make one is its total surface area.</li>
+              <li><strong>A label on a can</strong> of paint or a tin of ghee is exactly the curved surface of the cylinder, a rectangle 2πr long.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the cuboid at 8 cm × 5 cm × 4 cm and unfold it. Find the area of each pair of faces and the total.<details><summary>Show answer</summary>Top and bottom 40 cm² each, front and back 32 cm² each, left and right 20 cm² each. Total 2(40 + 20 + 32) = 184 cm².</details></li>
+              <li>Now switch off “Closed top (lid)”. How much card does the open box need?<details><summary>Show answer</summary>184 − 40 = 144 cm². The net has only five rectangles.</details></li>
+              <li>Choose the cube with side 5 cm, then make the side 10 cm. What happens to the surface area?<details><summary>Show answer</summary>It goes from 150 cm² to 600 cm²: 4 times bigger, because every face is 2 × 2 = 4 times bigger.</details></li>
+              <li>Choose the cylinder with r = 3.5 cm and h = 10 cm. How long is the rectangle in its net, and what is the total surface area?<details><summary>Show answer</summary>The rectangle is 2πr ≈ 22 cm long. Curved surface ≈ 220 cm², two circles ≈ 77 cm², total ≈ 297 cm² (296.9 cm² with the exact π).</details></li>
+              <li>Paint the 5 m × 4 m × 3 m room with one door and two windows at ₹30 per m². How much area, paint and money is needed?<details><summary>Show answer</summary>Walls 54 m² + ceiling 20 m² − door 2 m² − windows 2.88 m² = 69.12 m². Two coats need about 13.8 L of paint, and the cost is about ₹2,074.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Net:</strong> a flat shape that folds up into a solid.</li>
+              <li><strong>Total surface area:</strong> the sum of the areas of all the faces of a solid.</li>
+              <li><strong>Lateral surface area:</strong> the area of the side faces only, leaving out the top and the bottom.</li>
+              <li><strong>Curved surface:</strong> the round side of a cylinder; it unrolls into a rectangle.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

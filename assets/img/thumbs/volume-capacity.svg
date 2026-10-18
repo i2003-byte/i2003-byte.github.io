@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="volume-capacity">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <g stroke="#0f172a" stroke-opacity=".5" stroke-width="1">
+    <path d="M40 130L95 98L150 130L95 162Z" fill="#f59e0b"/>
+    <path d="M40 130L95 162V182L40 150Z" fill="#b45309"/>
+    <path d="M150 130L95 162V182L150 150Z" fill="#d97706"/>
+    <path d="M40 106L95 74L150 106L95 138Z" fill="#a78bfa" fill-opacity=".9"/>
+    <path d="M40 106L95 138V130L40 98Z" fill="#7c3aed" fill-opacity=".6"/>
+  </g>
+  <path d="M40 130V60M150 130V60M95 162V92M40 60L95 28L150 60L95 92Z" fill="none" stroke="#e2e8f0" stroke-opacity=".7" stroke-width="2"/>
+  <ellipse cx="240" cy="160" rx="45" ry="16" fill="#38bdf8" fill-opacity=".45"/>
+  <path d="M195 160V110A45 16 0 0 0 285 110V160" fill="#38bdf8" fill-opacity=".35"/>
+  <ellipse cx="240" cy="110" rx="45" ry="16" fill="#38bdf8" fill-opacity=".6" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M195 160V70M285 160V70" stroke="#e2e8f0" stroke-opacity=".7" stroke-width="2"/>
+  <ellipse cx="240" cy="70" rx="45" ry="16" fill="none" stroke="#e2e8f0" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M195 160A45 16 0 0 0 285 160" fill="none" stroke="#e2e8f0" stroke-opacity=".7" stroke-width="2"/>
+  <text x="240" y="40" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="middle">1 L</text>
+</svg>

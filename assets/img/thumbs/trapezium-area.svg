@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="trapezium-area">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/><rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M40 150H160L120 70H80Z" fill="#38bdf8" fill-opacity=".35" stroke="#38bdf8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M160 150H200L240 70H120Z" transform="translate(0 0)" fill="#a78bfa" fill-opacity=".35" stroke="#a78bfa" stroke-width="3" stroke-dasharray="8 5" stroke-linejoin="round"/>
+  <path d="M100 70V150" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <text x="100" y="170" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="15" font-weight="700" text-anchor="middle">a</text>
+  <text x="100" y="62" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="15" font-weight="700" text-anchor="middle">b</text>
+  <text x="108" y="115" fill="#fbbf24" font-family="Inter, sans-serif" font-size="15" font-weight="700">h</text>
+  <text x="160" y="36" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="17" font-weight="700" text-anchor="middle">½ (a + b) × h</text>
+</svg>

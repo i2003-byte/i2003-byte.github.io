@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Volume &amp; Capacity — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Fill a box with 1 cm cubes layer by layer, pour water into a cuboid or a cylinder beside a 1-litre cube, and find how long a rooftop water tank lasts a family. Interactive Class 8 mathematics simulation on volume and capacity.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/volume-capacity/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Volume &amp; Capacity — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Fill a box with 1 cm cubes layer by layer, pour water into a cuboid or a cylinder beside a 1-litre cube, and find how long a rooftop water tank lasts a family. Interactive Class 8 mathematics simulation on volume and capacity.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/volume-capacity/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="volume-capacity">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Volume</strong> is the amount of space a solid takes up. We measure it by counting how many <strong>unit cubes</strong> fit inside. A cube with 1 cm edges has a volume of <strong>1 cubic centimetre (1 cm³)</strong>.</p>
+            <p>A cuboid that is l cm long and b cm broad holds l × b cubes in its bottom layer. If it is h cm high there are h such layers, so it holds l × b × h cubes. That is why the volume is <strong>length × breadth × height</strong>. <strong>Capacity</strong> is how much a container can hold, usually measured in litres (L) and millilitres (mL). A box of 1000 cm³ (10 cm × 10 cm × 10 cm) holds exactly 1 litre.</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">Cuboid: V = l × b × h</code>
+            <p class="formula-note">Area of the base (l × b) times the height. All three lengths must be in the same unit.</p>
+            <code class="formula">Cube of edge a: V = a × a × a = a³</code>
+            <p class="formula-note">Double the edge and the volume becomes 2 × 2 × 2 = 8 times bigger.</p>
+            <code class="formula">Cylinder: V = πr²h</code>
+            <p class="formula-note">Again area of the base (a circle, πr²) times the height. The radius r is half the diameter. Take π ≈ 22/7 or 3.14.</p>
+            <code class="formula">1 cm³ = 1 mL · 1000 cm³ = 1 L · 1 m³ = 1000 L</code>
+            <p class="formula-note">1 m = 100 cm, so 1 m³ = 100 × 100 × 100 cm³ = 10,00,000 cm³ = 1000 L.</p>
+            <p><strong>Simplifications:</strong> the containers have walls of zero thickness, so the inside and outside sizes are the same. The jug pours a steady 250 mL (one glass) each second. The plastic tank sizes are rounded typical sizes, so a “1000 L” tank works out to about 998 L. The family uses water at a steady rate all day and night (really most is used in the morning and evening), and the tank is not refilled. The 135 L and 55 L per person per day figures are rounded planning guidelines for Indian cities and villages; real use varies a lot. Tanks are drawn see-through so you can watch the level.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Milk packets</strong> hold 500 mL = 500 cm³; a one-litre Tetra Pak is a cuboid of roughly 6.5 cm × 9.5 cm × 16.5 cm, close to 1000 cm³.</li>
+              <li><strong>Rooftop tanks:</strong> plastic tanks on Indian houses come in sizes like 500 L, 1000 L and 2000 L. Builders pick the size from the number of people and the water each uses in a day.</li>
+              <li><strong>Bricks:</strong> a standard brick is about 19 cm × 9 cm × 9 cm = 1539 cm³. Dividing the volume of a wall by the volume of one brick tells a mason roughly how many bricks to buy.</li>
+              <li><strong>Rain on a roof:</strong> 1 cm of rain on a 10 m × 10 m roof is 10 m × 10 m × 0.01 m = 1 m³ = 1000 L, enough to fill a big tank. This is the idea behind rainwater harvesting.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In “Fill a box with 1 cm cubes”, set 5 × 4 × 3 cm and press Fill. How many cubes go in each layer, and how many altogether?<details><summary>Show answer</summary>5 × 4 = 20 cubes in each layer, and 3 layers, so 60 cubes. The volume is 60 cm³.</details></li>
+              <li>Fill a 5 cm cube (5 × 5 × 5), then a 10 cm cube. How many times more cubes does the bigger one need?<details><summary>Show answer</summary>125 cubes against 1000 cubes: 8 times as many, because each of the three edges is doubled (2 × 2 × 2 = 8).</details></li>
+              <li>Choose “Pour water” with a cuboid of 10 × 10 × 10 cm. How many 250 mL glasses fill it, and how many litres is that?<details><summary>Show answer</summary>4 glasses: 1000 mL = 1000 cm³ = 1 L. It is exactly the same size as the 1-litre cube beside it.</details></li>
+              <li>A water bottle is about 8 cm across and 20 cm tall. Pour into a cylinder with length (diameter) 8 cm and height 20 cm. Does it hold a litre?<details><summary>Show answer</summary>Yes, almost exactly: r = 4 cm, so V = π × 4² × 20 ≈ 1005 cm³ ≈ 1.0 L.</details></li>
+              <li>Choose “Rooftop water tank” with the 1000 L tank and a family of 4 using 135 L each a day. How long does a full tank last? Try the 2 m × 1.5 m × 1 m concrete tank.<details><summary>Show answer</summary>4 × 135 = 540 L a day. The plastic tank holds π × 0.55² × 1.05 ≈ 0.998 m³ ≈ 998 L, so it lasts about 1.85 days. The concrete tank holds 3 m³ = 3000 L and lasts about 5.56 days.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Volume:</strong> the space a solid occupies, in cubic units such as cm³ or m³.</li>
+              <li><strong>Capacity:</strong> the amount a hollow container can hold, usually in litres or millilitres.</li>
+              <li><strong>Unit cube:</strong> a cube with edges of 1 unit; its volume is 1 cubic unit.</li>
+              <li><strong>Cuboid:</strong> a solid with six rectangular faces, like a brick or a matchbox.</li>
+              <li><strong>Cylinder:</strong> a solid with two equal circular ends joined by a curved surface, like a tin can or a pipe.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

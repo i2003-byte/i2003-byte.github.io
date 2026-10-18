@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Area of a Trapezium — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Turn a copy of a trapezium round to make a parallelogram and see why its area is ½ × (sum of the parallel sides) × height. Cut it into two triangles, split any quadrilateral along a diagonal, and find the area of a field. Interactive Class 8 mensuration simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/trapezium-area/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Area of a Trapezium — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Turn a copy of a trapezium round to make a parallelogram and see why its area is ½ × (sum of the parallel sides) × height. Cut it into two triangles, split any quadrilateral along a diagonal, and find the area of a field. Interactive Class 8 mensuration simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/trapezium-area/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="trapezium-area">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>trapezium</strong> is a quadrilateral with one pair of <strong>parallel sides</strong>. Call them a and b, and call the distance between them (measured at right angles) the <strong>height</strong> h.</p>
+            <p>Make a copy of the trapezium and turn it upside down. Put it next to the first one and the two together make a <strong>parallelogram</strong>. Its base is a + b and its height is still h, so its area is (a + b) × h. Each trapezium is exactly half of it. You can also cut the trapezium along a diagonal into two triangles with the same height h: ½ × a × h + ½ × b × h gives the same answer.</p>
+            <p>Any quadrilateral can be split by a diagonal into two triangles. If the diagonal is d and the perpendiculars to it from the other two corners are h₁ and h₂, the area is ½ × d × (h₁ + h₂).</p>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">Area of trapezium = ½ × (a + b) × h</code>
+            <p class="formula-note">Half the sum of the parallel sides, times the distance between them. The slanting sides are not needed at all.</p>
+            <code class="formula">Area of quadrilateral = ½ × d × (h₁ + h₂)</code>
+            <p class="formula-note">d is a diagonal that lies inside the shape; h₁ and h₂ are the perpendiculars to it from the other two corners.</p>
+            <code class="formula">1 hectare = 10 000 m² · 1 acre ≈ 4047 m²</code>
+            <p class="formula-note">Land is measured in square metres, hectares or acres.</p>
+            <p><strong>Simplifications:</strong> lengths are whole centimetres and corners snap to the 1 cm grid, so the numbers stay simple. The field is drawn as a perfect trapezium on flat ground with straight boundaries; real fields are measured in parts by a surveyor and added up. The “check from the corners” in the quadrilateral view uses the coordinates of the corners (the shoelace method you will meet in Class 10).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Farm fields and plots</strong> along a road or a canal often have two parallel sides. The patwari (land record officer) finds their area in square metres or acres from such measurements.</li>
+              <li><strong>Embankments and canals:</strong> the cross-section of a canal or a railway embankment is a trapezium, so its area tells engineers how much soil to dig or fill.</li>
+              <li><strong>Roofs and steps:</strong> the side face of a sloping roof, a staircase railing panel or a table top for a corner often has trapezium faces.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>In “copy and turn”, set a = 8 cm, b = 4 cm, h = 4 cm and press “Show the trick”. What is the area of the parallelogram, and of the trapezium?<details><summary>Show answer</summary>The parallelogram has base 8 + 4 = 12 cm and height 4 cm, so 48 cm². The trapezium is half of it: 24 cm².</details></li>
+              <li>Keep a, b and h, and move “Shift of the top side” from 0 to 8. Does the area change? Does the perimeter?<details><summary>Show answer</summary>The area stays 24 cm², because it depends only on a, b and h. The perimeter changes, because the slanting sides get longer or shorter.</details></li>
+              <li>Switch to “cut into two triangles” with the same sides. What are the areas of the two triangles?<details><summary>Show answer</summary>½ × 8 × 4 = 16 cm² and ½ × 4 × 4 = 8 cm². Together 24 cm², the same as the formula.</details></li>
+              <li>Open “A field shaped like a trapezium”: parallel sides 120 m and 80 m, 50 m apart. Find its area in m² and in hectares.<details><summary>Show answer</summary>½ × (120 + 80) × 50 = 5000 m², which is 0.5 hectare (about 1.24 acres).</details></li>
+              <li>In “Any quadrilateral”, the diagonal AC is 10 cm, h₁ = 3 cm and h₂ = 4 cm. What is the area? Now drag D sideways along its row of the grid. What happens?<details><summary>Show answer</summary>½ × 10 × (3 + 4) = 35 cm². Moving D sideways keeps its distance from AC, so h₂ and the area stay the same (as long as the shape does not fold over).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Trapezium:</strong> a quadrilateral with exactly one pair of parallel sides.</li>
+              <li><strong>Height (of a trapezium):</strong> the perpendicular distance between the parallel sides.</li>
+              <li><strong>Diagonal:</strong> a line joining two opposite corners of a quadrilateral.</li>
+              <li><strong>Hectare:</strong> the area of a square 100 m by 100 m, 10 000 m².</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

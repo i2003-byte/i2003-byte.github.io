@@ -172,6 +172,7 @@ SimLab.subjects = [
       { id: 'geometry', name: 'Lines, Angles & Triangles' },
       { id: 'trigonometry', name: 'Trigonometry' },
       { id: 'coordinate-geometry', name: 'Coordinate Geometry' },
+      { id: 'mensuration', name: 'Mensuration' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
       { id: 'probability', name: 'Statistics & Probability' }
@@ -1064,6 +1065,22 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-17',
     prerequisites: []
+  },
+  {
+    id: 'kidney-nephron',
+    subject: 'biology',
+    branch: 'human-body',
+    title: 'Kidney & Nephron',
+    description:
+      'Follow blood into a nephron: the glomerulus filters it, the tubule takes back glucose, salts and most of the water, and what is left trickles out as urine. Drink more or less water, or go out on a hot day, and watch the urine volume and colour change.',
+    level: 'Beginner',
+    tags: ['life processes', 'excretion', 'kidney', 'nephron', 'urine', 'filtration', 'reabsorption', 'dialysis', 'class 10'],
+    thumbnail: '/assets/img/thumbs/kidney-nephron.svg',
+    link: '/biology/kidney-nephron/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['heart-circulation']
   },
   {
     id: 'photosynthesis-leaf',
@@ -2438,6 +2455,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-09',
     prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'trapezium-area',
+    subject: 'mathematics',
+    branch: 'mensuration',
+    title: 'Area of a Trapezium',
+    description:
+      'Cut a trapezium, copy it and turn it round to make a parallelogram, then see why its area is ½ × (sum of parallel sides) × height. Split a general quadrilateral along a diagonal, and find the area of a trapezium-shaped field.',
+    level: 'Beginner',
+    tags: ['mensuration', 'area', 'trapezium', 'quadrilateral', 'parallelogram', 'diagonal', 'field', 'class 8'],
+    thumbnail: '/assets/img/thumbs/trapezium-area.svg',
+    link: '/mathematics/trapezium-area/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['pythagoras-proof']
+  },
+  {
+    id: 'surface-area-nets',
+    subject: 'mathematics',
+    branch: 'mensuration',
+    title: 'Surface Area from Nets',
+    description:
+      'Unfold a cuboid or a cylinder into its flat net and watch the faces add up to the total surface area. Work out how much paint a room needs (walls and ceiling, minus doors and windows) or how much sheet makes a water tank.',
+    level: 'Beginner',
+    tags: ['mensuration', 'surface area', 'net', 'cuboid', 'cube', 'cylinder', 'lateral surface', 'paint', 'class 8'],
+    thumbnail: '/assets/img/thumbs/surface-area-nets.svg',
+    link: '/mathematics/surface-area-nets/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['trapezium-area']
+  },
+  {
+    id: 'volume-capacity',
+    subject: 'mathematics',
+    branch: 'mensuration',
+    title: 'Volume & Capacity',
+    description:
+      'Fill a cuboid or a cylinder with 1 cm cubes or with water and count the volume layer by layer. See that 1000 cm³ makes 1 litre and 1 m³ makes 1000 L, and find how long a rooftop water tank lasts a family.',
+    level: 'Beginner',
+    tags: ['mensuration', 'volume', 'capacity', 'litre', 'cuboid', 'cylinder', 'cubic centimetre', 'water tank', 'class 8'],
+    thumbnail: '/assets/img/thumbs/volume-capacity.svg',
+    link: '/mathematics/volume-capacity/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['surface-area-nets']
   },
   {
     id: 'trig-ratios',

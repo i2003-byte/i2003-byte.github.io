@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**152 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**156 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -27,8 +27,9 @@ SimLab is a free collection of interactive science simulations for school studen
 | ⚛️ **Chemistry: Atoms and molecules** (3, Class 9) | Conservation of Mass and Fixed Proportions · Writing Formulae from Valency · The Mole: Counting Atoms by Weighing |
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
 | 🔬 **Biology: The fundamental unit of life** (3, Class 9) | Cell Explorer: Plant, Animal and Bacterial Cells · Osmosis: Potato, Raisins and Plant Cells · Diffusion Across a Membrane |
-| 🫀 **Biology: Life processes** (2, Class 10) | Heart & Double Circulation · Digestion Along the Gut |
+| 🫀 **Biology: Life processes** (3, Class 10) | Heart & Double Circulation · Digestion Along the Gut · Kidney & Nephron |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
+| 📐 **Mathematics: Mensuration** (3, Class 8) | Area of a Trapezium · Surface Area from Nets · Volume & Capacity |
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |
 | 📐 **Mathematics: Coordinate geometry** (3, Class 10) | Distance Formula · Section Formula · Area of a Triangle from Coordinates |
 | 📐 **Mathematics: Statistics and probability** (3, Class 9) | Histogram and Frequency Polygon · Mean, Median and Mode · Coins and Dice: Experimental Probability |

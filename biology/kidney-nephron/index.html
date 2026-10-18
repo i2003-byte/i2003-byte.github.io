@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kidney &amp; Nephron — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Follow blood into a nephron of the kidney: the glomerulus filters it, the tubule takes back glucose, salt and most of the water, and the rest becomes urine. Change how much you drink, try a hot day or high blood sugar. Interactive Class 10 biology simulation.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/kidney-nephron/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Kidney &amp; Nephron — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Follow blood into a nephron of the kidney: the glomerulus filters it, the tubule takes back glucose, salt and most of the water, and the rest becomes urine. Change how much you drink, try a hot day or high blood sugar. Interactive Class 10 biology simulation.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/kidney-nephron/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="kidney-nephron">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every cell makes waste. Breaking down proteins makes <strong>urea</strong>, which is poisonous if it builds up. The two <strong>kidneys</strong> clean the blood. Each has about a million tiny filtering units called <strong>nephrons</strong>.</p>
+            <p>A nephron works in two steps. First the <strong>glomerulus</strong>, a knot of thin blood vessels inside a cup called <strong>Bowman's capsule</strong>, squeezes water, salt, glucose and urea out of the blood. Blood cells and proteins are too big and stay behind. Then, along the long <strong>tubule</strong>, everything useful is taken back into the blood: all the glucose, almost all the salt and about 99 % of the water. What is left, water with urea and extra salt, is <strong>urine</strong>. It flows through the ureters into the bladder.</p>
+            <p>How much water is taken back depends on the body. When you are short of water, a hormone (ADH) makes the collecting duct save more water, so you pass a little dark urine. When you drink a lot, the kidneys let the extra water go, and urine is pale.</p>
+          </section>
+          <section>
+            <h3>🧮 The numbers</h3>
+            <code class="formula">Filtered: about 180 L a day → urine: about 1–2 L a day</code>
+            <p class="formula-note">About 1.2 L of blood flows through the two kidneys every minute, and 125 mL a minute is filtered. So more than 99 % of the filtered water must go back into the blood.</p>
+            <code class="formula">urine = water in − water lost in other ways</code>
+            <p class="formula-note">Water in = what you drink + about 0.7 L in food + 0.3 L made by your cells. Other losses = about 0.8 L in breath and from the skin, sweat, and 0.1 L in faeces.</p>
+            <code class="formula">least urine ≈ waste to remove ÷ strongest urine ≈ 0.5 L a day</code>
+            <p class="formula-note">The kidneys cannot make urine stronger than a certain limit, so a little water must always leave with the waste. If you drink less than that, you start to dry out (dehydration) and feel thirsty.</p>
+            <code class="formula">sugar in urine (g/day) ≈ 1.8 × (blood sugar − 180 mg/dL)</code>
+            <p class="formula-note">The tubule can take back only so much glucose. Above about 180 mg/dL of blood sugar the rest spills into the urine, which is a sign of diabetes. The extra sugar needs water to carry it, so a person with high sugar passes more urine and feels thirsty.</p>
+            <p><strong>Simplifications:</strong> one nephron stands for all two million, and the flow is shown hugely slowed down (one trip along the tubule takes about 9 s here). The shares taken back in each part of the tubule are rounded textbook values. The daily figures are rounded for an adult: 180 L filtered, 0.8 L lost in breath and from the skin, about 2 L of sweat on a hot day, a fixed amount of waste (600 mOsm) and a strongest urine of 1200 mOsm/L. Real kidneys also adjust salt, potassium and acid, which is not shown, and the glucose limit is gradual, not sharp. Urine colour also changes with food and medicines.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li><strong>Summer in Delhi or Nagpur:</strong> you sweat litres a day, so you need to drink much more water, and urine becomes darker. Pale yellow urine is a simple sign that you are drinking enough.</li>
+              <li><strong>Diabetes test:</strong> doctors and labs test urine for sugar. Healthy kidneys return all the glucose, so sugar in urine means the blood sugar is too high.</li>
+              <li><strong>Dialysis:</strong> when both kidneys fail, a dialysis machine (artificial kidney) passes the blood through tubes with a thin membrane in a bath of fluid. Urea and extra salt diffuse out, but nothing is taken back, so it cannot copy the tubule.</li>
+              <li><strong>Kidney stones</strong> are more common in hot, dry places; drinking enough water makes urine less concentrated and helps prevent them.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with 1.5 L of water on a normal day. How much urine is made, and what share of the 180 L filtered goes back into the blood?<details><summary>Show answer</summary>1.5 L of urine a day, pale yellow. About 99.2 % of the filtered water is taken back.</details></li>
+              <li>Switch on “Hot summer day” and keep drinking 1.5 L. What happens to the urine, and why?<details><summary>Show answer</summary>Urine drops to the least possible, 0.5 L, and turns amber. You lose 2 L in sweat, so the body is short of 0.9 L of water a day and the kidneys save every drop they can. You would feel thirsty.</details></li>
+              <li>On the hot day, how much must you drink to make 1.5 L of urine again?<details><summary>Show answer</summary>3.4 L, that is 1.9 L more than on a normal day: exactly the extra sweat (2.0 − 0.1 L).</details></li>
+              <li>Back on a normal day, compare drinking 0.8 L with drinking 4 L. Watch the collecting duct label and the urine colour.<details><summary>Show answer</summary>0.8 L: only 0.8 L of urine, dark yellow, and the duct saves water (ADH high). 4 L: 4.0 L of urine, almost colourless, and the duct lets water go (ADH low).</details></li>
+              <li>Set blood sugar to 300 mg/dL. Watch the orange glucose particles. How much sugar is lost in urine? Now drink only 0.8 L.<details><summary>Show answer</summary>About 216 g of sugar a day reaches the urine. The sugar needs water to carry it, so the least urine rises to 1.5 L; with only 0.8 L to drink the body is short of 0.7 L. That is why high blood sugar causes thirst and frequent urination.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Excretion:</strong> removing harmful waste, such as urea, from the body.</li>
+              <li><strong>Nephron:</strong> the filtering unit of the kidney: glomerulus, Bowman's capsule, tubule and collecting duct.</li>
+              <li><strong>Filtration:</strong> small molecules pushed out of the blood in the glomerulus by blood pressure.</li>
+              <li><strong>Reabsorption:</strong> useful substances (glucose, salt, water) taken back from the tubule into the blood.</li>
+              <li><strong>ADH:</strong> a hormone that makes the kidney save water when the body is short of it.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

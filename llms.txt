@@ -229,6 +229,12 @@ Turn a transversal across parallel lines, tear the corners off a triangle and sl
 - [Section Formula](https://i2003-byte.github.io/mathematics/section-formula/): Find the point that divides a segment in the ratio m : n, and watch the same split appear on both axes. Midpoint, points of trisection and the centroid of a triangle, with exact fractions. (Intermediate)
 - [Area of a Triangle from Coordinates](https://i2003-byte.github.io/mathematics/triangle-area-coordinates/): Drag the corners of a triangle and get its area from the coordinates. See why the formula works (a box minus right triangles, or trapezia), why area 0 means collinear points, and split a quadrilateral in two. (Intermediate)
 
+### Mensuration
+
+- [Area of a Trapezium](https://i2003-byte.github.io/mathematics/trapezium-area/): Cut a trapezium, copy it and turn it round to make a parallelogram, then see why its area is ½ × (sum of parallel sides) × height. Split a general quadrilateral along a diagonal, and find the area of a trapezium-shaped field. (Beginner)
+- [Surface Area from Nets](https://i2003-byte.github.io/mathematics/surface-area-nets/): Unfold a cuboid or a cylinder into its flat net and watch the faces add up to the total surface area. Work out how much paint a room needs (walls and ceiling, minus doors and windows) or how much sheet makes a water tank. (Beginner)
+- [Volume & Capacity](https://i2003-byte.github.io/mathematics/volume-capacity/): Fill a cuboid or a cylinder with 1 cm cubes or with water and count the volume layer by layer. See that 1000 cm³ makes 1 litre and 1 m³ makes 1000 L, and find how long a rooftop water tank lasts a family. (Beginner)
+
 ### Statistics & Probability
 
 - [Histogram and Frequency Polygon](https://i2003-byte.github.io/mathematics/histogram-polygon/): Group test marks, heights or temperatures into classes and draw a histogram and a frequency polygon. Change the class width, read the tally table and see why unequal classes need adjusted heights. (Beginner)
@@ -249,6 +255,7 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 
 - [Heart & Double Circulation](https://i2003-byte.github.io/biology/heart-circulation/): Follow blood cells from the body to the right side of the heart, through the lungs, back to the left side and out to the body again. The chambers squeeze in turn and the valves open and shut to the lub-dub beat. Compare frog and fish hearts. (Beginner)
 - [Digestion Along the Gut](https://i2003-byte.github.io/biology/digestion-enzymes/): Follow a meal from the mouth through the stomach and small intestine to the large intestine. Enzymes cut starch, protein and fat into glucose, amino acids, fatty acids and glycerol, and the villi absorb them. Try it without bile or stomach acid. (Beginner)
+- [Kidney & Nephron](https://i2003-byte.github.io/biology/kidney-nephron/): Follow blood into a nephron: the glomerulus filters it, the tubule takes back glucose, salts and most of the water, and what is left trickles out as urine. Drink more or less water, or go out on a hot day, and watch the urine volume and colour change. (Beginner)
 
 ### Cells
 
