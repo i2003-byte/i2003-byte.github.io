@@ -799,7 +799,8 @@
     function render(now) {
       var size = fitCanvas(sim.canvas, sim.ctx);
       sim.width = size.w; sim.height = size.h;
-      if (cfg.draw) { sim.ctx.save(); cfg.draw(sim, now || performance.now()); sim.ctx.restore(); }
+      // A hidden canvas measures 1×1; drawing into it gives negative radii and errors every frame.
+      if (cfg.draw && size.w >= 20 && size.h >= 20) { sim.ctx.save(); cfg.draw(sim, now || performance.now()); sim.ctx.restore(); }
       if (sim.graph) sim.graph.draw(sim.colors);
       if (!now || now - lastReadout > 80 || !sim.running) { lastReadout = now || 0; updateReadouts(); }
     }

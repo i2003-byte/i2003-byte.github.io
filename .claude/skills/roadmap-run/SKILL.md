@@ -79,7 +79,7 @@ If you truly cannot get a green check:
   - Statistics and probability belong under Mathematics.
 - **Languages are out of scope for now.** Don't add them, not even to Proposed.
 - Any other new subject goes to 💡 Proposed for a human to decide.
-- Add the most valuable missing sub-topics to the end of 📋 Next, each with class, subject, branch and 3 planned simulations. These are auto-approved when on the syllabus.
+- Add the most valuable missing sub-topics to the end of 📋 Next, enough to bring it back to **at least 8 items** (adding just one leaves the queue short), each with class, subject, branch and 3 planned simulations. These are auto-approved when on the syllabus.
 - Ideas outside that scope go to 💡 Proposed with a one-line reason.
 - Don't add duplicates of anything in Done, In progress or Next.
 

@@ -101,7 +101,7 @@
       if (narrow) { ax = 0; ay = 0; aw = W; ah = H * 0.44; } else { ax = 0; ay = 0; aw = W * 0.52; ah = H; }
       var ocx = ax + aw / 2, ocy = ay + ah / 2 + 8, orx = aw / 2 - (narrow ? 52 : 56), ory = orx * 0.36;
       D.text(ctx, 'Orbit (seen at a slant, not to scale)', ax + 10, ay + 14, { color: c.muted, size: 11 });
-      ctx.save(); ctx.strokeStyle = c.axis; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.ellipse(ocx, ocy, orx, ory, 0, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+      ctx.save(); ctx.strokeStyle = c.axis; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.ellipse(ocx, ocy, Math.max(0, orx), Math.max(0, ory), 0, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
       var marks = [[172, '21 Jun'], [266, '23 Sep'], [356, '22 Dec'], [80, '21 Mar']];
       function orbitPos(day) { var th = 2 * Math.PI * (day - 172) / 365; return { x: ocx - orx * Math.cos(th), y: ocy + ory * Math.sin(th), front: Math.sin(th) > 0 }; }
       marks.forEach(function (m) {
