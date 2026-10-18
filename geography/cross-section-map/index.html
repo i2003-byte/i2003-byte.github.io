@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reading a Contour Map: Cross-Sections — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag a line across a contour map and see the side view of the land below it. Tell valleys from spurs by the V of the contours, find a saddle and test whether one place can see another.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/cross-section-map/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Reading a Contour Map: Cross-Sections — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag a line across a contour map and see the side view of the land below it. Tell valleys from spurs by the V of the contours, find a saddle and test whether one place can see another.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/cross-section-map/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="cross-section-map">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A contour map shows the land from above. A <strong>cross-section</strong> (or profile) shows it from the side, as if you sliced the land with a giant knife along a line and looked at the cut face. Geographers draw one to see the real shape of the hills and valleys a map is describing.</p>
+            <p>To draw it by hand, lay a strip of paper along the line from A to B and mark each place where it crosses a contour, with that contour’s height. Then move the strip to a graph, put each mark at its height and join the dots with a smooth curve. The pink dots in the simulation are exactly those marks.</p>
+            <p>Contours also tell you the type of landform. Where they bend into a <strong>V</strong>, look at which way the V points. In a <strong>valley</strong>, the V points <strong>uphill</strong>, towards higher contours and up the river. On a <strong>spur</strong> (a ridge sticking out from a hill), the V points <strong>downhill</strong>, away from the hilltop. Between two hilltops, a low point on the ridge is a <strong>saddle</strong>.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">ground distance = map distance × scale</code>
+            <p class="formula-note">On this map 1 km of ground is the length of the scale bar. The whole square is 5 km across.</p>
+            <code class="formula">average gradient = height difference ÷ ground distance, written “1 in N”</code>
+            <p class="formula-note">Falling 80 m over 2 km (2,000 m) is 2000 ÷ 80 = 1 in 25: you go down 1 m for every 25 m you walk.</p>
+            <code class="formula">vertical exaggeration = vertical scale ÷ horizontal scale</code>
+            <p class="formula-note">Hills are small compared with the distances between them, so profiles are stretched upwards to show their shape. “× 10” means the heights are drawn 10 times bigger than the distances along the ground. The stretch shown depends on the line and on your screen.</p>
+            <p class="formula-note">Simplified: the land is a made-up 5 km square built from smooth shapes, not a real toposheet. For the line of sight, an eye 2 m above A looks at a point 2 m above B in a straight line; the Earth’s curve is ignored over such short distances.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In Class 9 and Class 11 practical geography you read Survey of India toposheets at 1 : 50,000. Their contour interval is 20 m, and drawing a cross-section between two points is a common exam question.</li>
+              <li>Army and forest watch-towers are placed where the line of sight is clear over many kilometres. Mobile phone towers too: a ridge between a tower and a village can leave the village with a weak signal.</li>
+              <li>Dams, like the Bhakra dam on the Sutlej, are built where the valley’s cross-section is narrow and deep, so a short wall holds back a lot of water.</li>
+              <li>Hill villages in Uttarakhand and Himachal are often on spurs: the ground is drier, safer from floods and gets more sun than the valley floor.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose “Across the river valley”. How deep is the valley below its two sides, and which way do the Vs of the contours point where they cross the river?<details><summary>Show answer</summary>The sides are about 175 m and 190 m high and the river is at about 90 m, so the valley is about 80–100 m deep. The Vs point north, up the river and towards higher ground. The river flows south, down the valley.</details></li>
+              <li>Choose “Across the spur”. What shape is the cross-section now, and which way do the Vs point?<details><summary>Show answer</summary>The section is a hump: up to about 315 m on the spur and down again on both sides. The Vs point south-west, downhill, away from the hilltop. A spur is the opposite of a valley.</details></li>
+              <li>Choose “Over both hilltops and the saddle”. Read the heights of the two tops and of the saddle between them.<details><summary>Show answer</summary>The tops are about 815 m and 610 m (the spot heights on the map). The lowest point between them along the line is about 490 m: that dip is the saddle. A path between the valleys on either side would go over it.</details></li>
+              <li>Choose “Can A see the village behind the spur?”. Then drag A up the spur until the line of sight turns green.<details><summary>Show answer</summary>From A at about 185 m the spur (about 215 m on this line, 0.9 km away) blocks the view of the village. Once A is higher than the spur’s crest, or on it, the dashed line clears the ground and turns green.</details></li>
+              <li>Drag A and B to make a short line on a crowded part of the hill, then a line of the same length on the flat ground to the south. Compare the gradients.<details><summary>Show answer</summary>Where contours are close together the gradient is steep: about 1 in 2 to 1 in 4 on the sides of the big hilltop. On the low ground in the south it is only about 1 in 15 to 1 in 20. Close lines mean steep ground, far-apart lines mean gentle ground.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Cross-section (profile):</strong> a side view of the land along a line drawn on a map.</li>
+              <li><strong>Spur:</strong> a ridge of high ground sticking out from a hill into lower land.</li>
+              <li><strong>Valley:</strong> low land between hills, often with a river; its contours form Vs pointing upstream.</li>
+              <li><strong>Saddle (col):</strong> a dip on a ridge between two hilltops.</li>
+              <li><strong>Spot height:</strong> a dot with the exact height of that point, often on a hilltop.</li>
+              <li><strong>Intervisibility:</strong> whether two places can see each other, or whether high ground is in the way.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

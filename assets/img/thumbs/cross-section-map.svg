@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="cross-section-map">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#365314"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <rect x="14" y="16" width="130" height="130" rx="4" fill="#c4c46e"/>
+  <g fill="none" stroke="#5c2e0e" stroke-width="1.6"><circle cx="60" cy="56" r="34"/><circle cx="60" cy="56" r="22"/><circle cx="60" cy="56" r="10"/><path d="M100 16 L112 70 L124 16"/><path d="M90 16 L112 92 L134 16"/></g>
+  <path d="M112 30 L112 146" stroke="#2563eb" stroke-width="3"/>
+  <path d="M24 110 L138 70" stroke="#db2777" stroke-width="3"/><circle cx="24" cy="110" r="7" fill="#db2777"/><circle cx="138" cy="70" r="7" fill="#db2777"/>
+  <path d="M160 170 L160 120 Q190 112 210 70 Q230 110 250 140 Q262 150 274 130 Q288 112 304 106 L304 170 Z" fill="#b4783c" opacity=".7"/>
+  <path d="M160 120 Q190 112 210 70 Q230 110 250 140 Q262 150 274 130 Q288 112 304 106" fill="none" stroke="#fbbf24" stroke-width="3"/>
+  <path d="M160 116 L304 102" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+</svg>

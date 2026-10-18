@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Map Scale and Distance in India — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Measure routes on a map of India with a ruler and a thread. Read the scale as a statement, a ratio (1 : 1,00,00,000) and a line scale, and see why changing the scale changes map distances but not real ones.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/map-scale/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Map Scale and Distance in India — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Measure routes on a map of India with a ruler and a thread. Read the scale as a statement, a ratio (1 : 1,00,00,000) and a line scale, and see why changing the scale changes map distances but not real ones.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/map-scale/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="map-scale">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A map is a small drawing of a big place. The <strong>scale</strong> tells you how much smaller: it links a length on the map to the real length on the ground. With it, a ruler on a school atlas can tell you how far it is from Delhi to Mumbai.</p>
+            <p>Scales are written in three ways, and they all say the same thing:</p>
+            <ul>
+              <li><strong>Statement scale:</strong> in words, “1 cm represents 100 km”.</li>
+              <li><strong>Ratio scale or representative fraction (RF):</strong> 1 : 1,00,00,000. One unit on the map is 1,00,00,000 of the same units on the ground. It has no units, so it works in cm, inches or anything else.</li>
+              <li><strong>Line (graphic) scale:</strong> a bar marked 0, 100, 200 … km. It stays correct even if the map is photocopied bigger or smaller, which is why it is used on screens.</li>
+            </ul>
+            <p>A straight ruler gives the shortest distance (“as the crow flies”). Roads and railways bend, so to measure a route you lay a <strong>thread</strong> along it, then straighten the thread against the ruler. A map that shows a small area in detail (a village, 1 cm = 50 m) is a <strong>large-scale</strong> map; one that shows a whole country (1 cm = 100 km) is a <strong>small-scale</strong> map.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">real distance = map distance × scale</code>
+            <p class="formula-note">11.4 cm on a map where 1 cm represents 100 km is 11.4 × 100 = 1,140 km.</p>
+            <code class="formula">statement → RF: 1 km = 1,000 m = 1,00,000 cm, so 1 cm = 100 km becomes 1 : 1,00,00,000</code>
+            <p class="formula-note">Going back, cancel five zeros to turn cm into km: 1 : 50,00,000 means 1 cm represents 50 km.</p>
+            <code class="formula">map distance = real distance ÷ scale</code>
+            <p class="formula-note">India is 3,214 km from north to south. At 1 cm = 200 km it is 3214 ÷ 200 ≈ 16 cm long on the map.</p>
+            <p class="formula-note">Simplified: places are put on a flat map from their latitude and longitude, so distances are within a few per cent of the true distances over the curved Earth. The outline of India is rough. The picture is zoomed to fit your screen, so the ruler and the line scale use the map’s own centimetres, not your screen’s. Routes run straight between the towns named; real roads bend more, so a road trip is longer than the thread (New Delhi to Mumbai is about 1,400 km by road).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>School atlases print the scale of each map as an RF and a line scale. To fit India’s 3,214 km onto a page about 25 cm tall, a map of all India must be around 1 : 1,30,00,000. A map of one state fills the same page with a smaller area, so it has a larger scale.</li>
+              <li>Survey of India toposheets are large-scale maps: at 1 : 50,000, 2 cm on the sheet is 1 km on the ground, enough to show every village, well and footpath.</li>
+              <li>Google Maps and other phone maps show only a line scale, because when you pinch to zoom the map’s size changes and a fixed statement would be wrong.</li>
+              <li>Indian Railways gives fares by the route length in kilometres, which is longer than the straight-line distance between two stations.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep 1 cm represents 100 km and the route New Delhi → Mumbai. Read the ruler and work out the real distance yourself.<details><summary>Show answer</summary>The ruler reads about 11.4 cm, so the straight-line distance is 11.4 × 100 ≈ 1,140 km. The thread through Jaipur and Ahmedabad is about 12.1 cm, or about 1,210 km.</details></li>
+              <li>Now change the scale to 1 cm represents 50 km. What happens to the ruler reading and to the real distance?<details><summary>Show answer</summary>The ruler now reads about 22.8 cm, twice as long, because a bigger-scale map draws everything bigger. The real distance is still 1,140 km: the ground does not change, only the map.</details></li>
+              <li>Write the RF for 1 cm represents 250 km, then check it with the slider.<details><summary>Show answer</summary>250 km = 250 × 1,00,000 cm = 2,50,00,000 cm, so the RF is 1 : 2,50,00,000. At this scale all of India is only about 12.9 cm long.</details></li>
+              <li>Choose “Length of India” and keep 1 cm represents 100 km. How long is India on the map, and how close is the result to the true 3,214 km?<details><summary>Show answer</summary>The ruler reads about 32.2 cm, so 32.2 × 100 ≈ 3,220 km, within a few kilometres of the true length.</details></li>
+              <li>Choose Mumbai → Chennai. How much longer is the route through Pune, Solapur and Hyderabad than the straight line?<details><summary>Show answer</summary>The ruler gives about 1,000 km and the thread about 1,120 km, so the route is about 120 km (12 %) longer. Then drag A and B to measure any two places you like: tap near a city and the end snaps to it.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Scale:</strong> the ratio between a distance on the map and the same distance on the ground.</li>
+              <li><strong>Representative fraction (RF):</strong> the scale written as a ratio with no units, such as 1 : 50,000.</li>
+              <li><strong>Large-scale map:</strong> shows a small area in great detail (for example 1 : 5,000 or 1 : 50,000).</li>
+              <li><strong>Small-scale map:</strong> shows a large area like a country or the world with little detail.</li>
+              <li><strong>Straight-line distance:</strong> the shortest distance between two places, measured with a ruler.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -101,6 +101,7 @@ Launch projectiles, swing pendulums and explore the rules that govern everything
 - [Gold-Leaf Electroscope](https://i2003-byte.github.io/physics/electroscope/): Bring a charged rod near an electroscope, touch the cap or earth it with your finger. See charges move and the gold leaves open and close. (Beginner)
 - [Lightning and the Lightning Conductor](https://i2003-byte.github.io/physics/lightning-conductor/): Watch charge build up in a storm cloud until lightning strikes. Fit a lightning conductor, move a person to safety and time the thunder. (Beginner)
 - [Ohm's Law and Resistivity](https://i2003-byte.github.io/physics/ohms-law/): Record voltmeter and ammeter readings for nichrome, constantan and manganin wires, plot the V–I graph and find R. See how length and thickness change resistance, and why a bulb is not Ohmic. (Intermediate)
+- [AC Voltage and Phasors](https://i2003-byte.github.io/physics/ac-phasors/): A rotating arrow (phasor) draws the sine wave of the 230 V, 50 Hz mains in slow motion. See why the peak is 325 V, what rms means, and how the current keeps step with a resistor but lags behind in an inductor and runs ahead in a capacitor. (Advanced)
 - [Resistors in Series and Parallel](https://i2003-byte.github.io/physics/series-parallel/): Join two or three resistors in series or in parallel. Watch the current split or stay the same, see the voltage shared, and check R = R₁ + R₂ + R₃ and 1/R = 1/R₁ + 1/R₂ + 1/R₃. (Intermediate)
 - [Electric Power and the Electricity Bill](https://i2003-byte.github.io/physics/power-bill/): Set how long your fans, fridge, AC and geyser run each day, watch the meter count units for a month and work out the bill in rupees with P = VI and E = P × t. (Beginner)
 - [Magnetic Field Lines: Magnets and a Wire](https://i2003-byte.github.io/physics/magnetic-field-lines/): See field lines round a bar magnet, two magnets that attract or repel, and a straight wire carrying current. Sprinkle iron filings, drag a compass and test the right-hand thumb rule. (Intermediate)
@@ -149,6 +150,12 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 - [Why Deserts Are Hot by Day and Cold at Night](https://i2003-byte.github.io/geography/desert-day-night/): Run a 24-hour day in the Thar desert next to Mumbai and a cloudy night. Dry air, bare sand and clear skies let the ground heat fast in sunshine and lose its heat to space after sunset. (Beginner)
 - [Why a Low Sun Heats Less](https://i2003-byte.github.io/geography/insolation-angle/): Change latitude, season, time of day and slope and watch a 1 m beam of sunlight spread over more ground and cross more air when the sun is low. See why clear-sky deserts near the tropics get the most sunshine. (Intermediate)
 - [How Wind Shapes the Desert](https://i2003-byte.github.io/geography/wind-shapes-desert/): Sand grains hop low and carve a mushroom rock, crescent barchan dunes march downwind (small ones fastest) towards a road, and dust storms carry fine silt hundreds of kilometres to settle as loess. (Beginner)
+
+### Maps
+
+- [Contour Lines from a Model Hill](https://i2003-byte.github.io/geography/contour-hill/): Pour water into a tank around a model hill and mark its edge every 50 m. Watch the marks become the contour lines of a map: close lines for steep slopes, far apart for gentle ones, rings inside rings for a peak, a saddle and a crater. (Beginner)
+- [Reading a Contour Map: Cross-Sections](https://i2003-byte.github.io/geography/cross-section-map/): Drag a line across a contour map of hills, a river valley and a spur, and see the side view (cross-section) drawn below. Tell valleys from spurs by which way the V of the contours points, and check whether one point can see another. (Intermediate)
+- [Map Scale and Distance in India](https://i2003-byte.github.io/geography/map-scale/): Measure routes on a map of India with a ruler and a thread. Switch between the statement, ratio (1 : 1,00,00,000) and line scales, change the scale, and see why the map distance changes but the real distance does not. (Beginner)
 
 ## Economics
 

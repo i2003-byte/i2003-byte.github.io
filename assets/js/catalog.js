@@ -1325,6 +1325,54 @@ SimLab.simulations = [
     prerequisites: ['desert-day-night']
   },
   {
+    id: 'contour-hill',
+    subject: 'geography',
+    branch: 'maps',
+    title: 'Contour Lines from a Model Hill',
+    description:
+      'Pour water into a tank around a model hill and mark its edge every 50 m. Watch the marks become the contour lines of a map: close lines for steep slopes, far apart for gentle ones, rings inside rings for a peak, a saddle and a crater.',
+    level: 'Beginner',
+    tags: ['contour lines', 'contour interval', 'relief', 'topographic map', 'slope', 'hill', 'plateau', 'saddle', 'maps', 'class 9'],
+    thumbnail: '/assets/img/thumbs/contour-hill.svg',
+    link: '/geography/contour-hill/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: []
+  },
+  {
+    id: 'cross-section-map',
+    subject: 'geography',
+    branch: 'maps',
+    title: 'Reading a Contour Map: Cross-Sections',
+    description:
+      'Drag a line across a contour map of hills, a river valley and a spur, and see the side view (cross-section) drawn below. Tell valleys from spurs by which way the V of the contours points, and check whether one point can see another.',
+    level: 'Intermediate',
+    tags: ['contour map', 'cross-section', 'profile', 'topographic map', 'toposheet', 'valley', 'spur', 'saddle', 'gradient', 'intervisibility', 'maps', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/cross-section-map.svg',
+    link: '/geography/cross-section-map/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['contour-hill']
+  },
+  {
+    id: 'map-scale',
+    subject: 'geography',
+    branch: 'maps',
+    title: 'Map Scale and Distance in India',
+    description:
+      'Measure routes on a map of India with a ruler and a thread. Switch between the statement, ratio (1 : 1,00,00,000) and line scales, change the scale, and see why the map distance changes but the real distance does not.',
+    level: 'Beginner',
+    tags: ['map scale', 'representative fraction', 'statement scale', 'line scale', 'distance', 'map of india', 'large scale', 'small scale', 'maps', 'class 9', 'class 11'],
+    thumbnail: '/assets/img/thumbs/map-scale.svg',
+    link: '/geography/map-scale/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: []
+  },
+  {
     id: 'demand-curve',
     subject: 'economics',
     branch: 'markets',
@@ -1743,6 +1791,22 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-03',
     prerequisites: ['electric-circuit']
+  },
+  {
+    id: 'ac-phasors',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'AC Voltage and Phasors',
+    description:
+      'A rotating arrow (phasor) draws the sine wave of the 230 V, 50 Hz mains in slow motion. See why the peak is 325 V, what rms means, and how the current keeps step with a resistor but lags behind in an inductor and runs ahead in a capacitor.',
+    level: 'Advanced',
+    tags: ['alternating current', 'ac', 'phasor', 'rms', 'peak voltage', 'mains', '50 hz', 'reactance', 'inductor', 'capacitor', 'phase difference', 'class 12'],
+    thumbnail: '/assets/img/thumbs/ac-phasors.svg',
+    link: '/physics/ac-phasors/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-18',
+    prerequisites: ['ohms-law', 'motor-generator']
   },
   {
     id: 'series-parallel',

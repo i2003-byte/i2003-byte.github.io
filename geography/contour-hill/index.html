@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contour Lines from a Model Hill — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Pour water around a model hill and mark a line every 50 m: the marks become contour lines. See how close lines mean steep slopes, and find a saddle, a plateau and a crater.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/contour-hill/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Contour Lines from a Model Hill — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Pour water around a model hill and mark a line every 50 m: the marks become contour lines. See how close lines mean steep slopes, and find a saddle, a plateau and a crater.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/contour-hill/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="contour-hill">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A map is flat, but the land is not. Mapmakers show hills and valleys with <strong>contour lines</strong>: each line joins points that are at the <strong>same height above sea level</strong>. Walk along one and you never go up or down.</p>
+            <p>You can make contour lines yourself. Stand a clay model hill in a tank and pour in water 1 cm at a time. Each time, scratch a line on the hill where the water touches it. Take the hill out and look down from above: the scratches are rings inside rings. That is exactly what this simulation does, with every 1 cm standing for one <strong>contour interval</strong> (say 50 m).</p>
+            <p>The spacing of the lines tells you the shape. Where the land is <strong>steep</strong>, you climb 50 m in a short walk, so the lines crowd together. Where it is <strong>gentle</strong>, they spread far apart. A flat top has a wide empty space inside the last ring, a pass between two peaks (a <strong>saddle</strong>) shows as lines that pinch in like a figure 8, and a crater is a ring whose height goes <em>down</em> inside.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">number of contour lines = highest point ÷ contour interval (whole lines only)</code>
+            <p class="formula-note">A 472 m hill with a 50 m interval has lines at 50, 100 … 450 m: 9 lines. The heights of nearby lines always differ by the same interval.</p>
+            <code class="formula">slope (gradient) = height difference ÷ distance on the ground</code>
+            <p class="formula-note">Two lines 50 m apart in height that are 100 m apart on the ground give a gradient of 1 in 2 (about 27°). If they are 500 m apart it is 1 in 10 (about 6°).</p>
+            <p class="formula-note">Simplified: the land is a smooth made-up shape 4 km across, not a real place. The 3D view stretches heights 3 times so the hill is easy to see (real hills look flatter); the slope readout uses true heights. Every 100 m line is drawn thicker and labelled, like the index contours on a Survey of India toposheet. The map is coloured by height (layer tints), as in an atlas.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Survey of India toposheets (1 : 50,000) draw brown contour lines every 20 m. Trekkers in the Himalayas use them to find the gentlest way up and to spot a pass between two peaks.</li>
+              <li>The Deccan has many flat-topped hills like the forts of Maharashtra (Raigad, Sinhagad): on a map they show crowded lines round the edge and a big empty patch on top.</li>
+              <li>Engineers use contours to plan hill roads. A road that crosses many lines in a short distance is too steep, so it zig-zags in hairpin bends, as on the ghat roads to Ooty or Mahabaleshwar.</li>
+              <li>Barren Island in the Andaman Sea is India’s only active volcano. Its map shows rings of contours rising to the rim and then dropping into the crater.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Pick “One steep side, one gentle side” and press Pour water. On which side do the lines crowd together, and why?<details><summary>Show answer</summary>On the east (right-hand) side. There the height falls from 400 m to 200 m in about 290 m of ground (about 34°), so the lines are close. On the west side the same 200 m drop takes about 1,170 m (about 10°), so the lines are far apart.</details></li>
+              <li>Keep the same hill and change the contour interval from 50 m to 25 m, then to 100 m. How many lines do you get each time?<details><summary>Show answer</summary>The top is about 472 m, so 25 m gives 18 lines, 50 m gives 9 and 100 m gives only 4. A smaller interval shows more detail but crowds the map.</details></li>
+              <li>Choose “Two peaks with a saddle”. Tap the map between the two peaks to find the lowest point on the ridge joining them. How high is it?<details><summary>Show answer</summary>About 250 m, while the peaks are about 450 m and 365 m. The 250 m line goes round both peaks in a figure-8 shape and pinches in at the saddle. Mountain passes such as the Zoji La are saddles.</details></li>
+              <li>Choose “Volcano with a crater” and pour water. Tap the centre of the crater. Why does the highest ring not mark the top of the map?<details><summary>Show answer</summary>The rim is about 345 m high, but the crater floor is only about 145 m. Inside the rim the land goes down again, so the innermost rings are lower, not higher. Maps mark such hollows with little ticks (hachures) pointing downhill.</details></li>
+              <li>Choose “Flat-topped plateau” and switch on “Show all contour lines at once”. What do you notice about the spacing?<details><summary>Show answer</summary>All the lines bunch tightly at the edges (steep cliffs) and there is a wide empty space in the middle, because the top is almost flat at about 360 m.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Contour line:</strong> a line on a map joining places of the same height above mean sea level.</li>
+              <li><strong>Contour interval:</strong> the difference in height between two neighbouring contour lines.</li>
+              <li><strong>Index contour:</strong> every fifth (or here, every second) line, drawn thicker and labelled with its height.</li>
+              <li><strong>Relief:</strong> the ups and downs of the land: hills, valleys, plateaus and plains.</li>
+              <li><strong>Saddle (col):</strong> a low point on a ridge between two higher peaks.</li>
+              <li><strong>Spot height:</strong> the height of one exact point, written beside a dot on a map.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

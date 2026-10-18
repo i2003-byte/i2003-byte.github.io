@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AC Voltage and Phasors — Interactive Simulation | SimLab</title>
+  <meta name="description" content="A rotating phasor draws the 230 V, 50 Hz mains sine wave in slow motion. See why the peak is 325 V, what rms means, and how current keeps step with a resistor, lags in an inductor and leads in a capacitor.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/ac-phasors/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="AC Voltage and Phasors — Interactive Simulation | SimLab">
+  <meta property="og:description" content="A rotating phasor draws the 230 V, 50 Hz mains sine wave in slow motion. See why the peak is 325 V, what rms means, and how current keeps step with a resistor, lags in an inductor and leads in a capacitor.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/ac-phasors/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ac-phasors">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The electricity in your home is <strong>alternating current (AC)</strong>. The voltage of a socket does not stay at 230 V: it rises, falls, reverses and comes back again 50 times every second. A graph of it against time is a <strong>sine wave</strong>, made by the generators in power stations as their coils turn in a magnetic field.</p>
+            <p>A neat way to picture a sine wave is a <strong>phasor</strong>: an arrow as long as the peak voltage, turning anticlockwise once per cycle. Its height at any moment is the voltage at that moment. Watch the dotted line: the tip of the arrow draws the wave.</p>
+            <p>If the peak is 325 V, why is the mains called 230 V? Because heating depends on v², and the <strong>average of v²</strong> over a cycle is exactly half of the peak value of v². The steady (DC) voltage that would heat a heater just as much is the square root of that average: the <strong>root-mean-square (rms)</strong> value, 325 ÷ √2 ≈ 230 V. Meters and labels always give rms values.</p>
+            <p>The current depends on what is connected. In a <strong>resistor</strong> it rises and falls in step with the voltage. In a coil (<strong>inductor</strong>) a changing current makes a back-voltage that resists the change, so the current reaches its peak a quarter cycle <em>after</em> the voltage: it <strong>lags</strong> by 90°. A <strong>capacitor</strong> takes the most current while its voltage is changing fastest, so its current <strong>leads</strong> by 90°.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">v = Vm sin ωt,  ω = 2πf,  T = 1/f</code>
+            <p class="formula-note">At 50 Hz, ω = 314 rad/s and one cycle takes 20 ms.</p>
+            <code class="formula">Vrms = Vm / √2 ≈ 0.707 Vm,  Irms = Im / √2</code>
+            <p class="formula-note">230 V rms → Vm = 230 × 1.414 ≈ 325 V. In the USA, 120 V rms → about 170 V peak.</p>
+            <code class="formula">XL = ωL = 2πfL,  XC = 1/(ωC) = 1/(2πfC),  Irms = Vrms / X</code>
+            <p class="formula-note">At 50 Hz, 0.5 H gives XL ≈ 157 Ω and 20 µF gives XC ≈ 159 Ω. Doubling the frequency doubles XL but halves XC.</p>
+            <code class="formula">average power P = Vrms Irms cos φ</code>
+            <p class="formula-note">φ is the phase difference between current and voltage. For a resistor φ = 0, so P = 230² ÷ 100 ≈ 529 W. For an ideal inductor or capacitor φ = 90° and cos 90° = 0: energy goes in for a quarter cycle and comes back the next, so the average is zero.</p>
+            <p class="formula-note">Simplified: each part is ideal and connected on its own to the supply (no wire resistance, no losses). The current curve is drawn on its own scale so it can be compared with the voltage. Everything is shown in slow motion; the times on the axis are the real ones.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>India’s mains supply is 230 V, 50 Hz. A mixer or a fan on the mains sees the voltage reach +325 V and −325 V fifty times every second, which is why wires and switches are rated well above 230 V.</li>
+              <li>Tube lights with old chokes flicker at 100 times a second, twice per cycle, each time the current passes through zero.</li>
+              <li>Fans and pumps contain coils, so their current lags the voltage. Electricity boards ask factories to add capacitors to bring current back in step (to improve the “power factor”).</li>
+              <li>The USA and Japan (in parts) use 60 Hz. Equipment made for one frequency can run hot or slow on the other.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep India 230 V, 50 Hz and the resistor. Press Switch on and pause when the arrow points straight up. What is the voltage?<details><summary>Show answer</summary>About +325 V, the peak (Vm). Pointing straight down it is −325 V, and pointing sideways it is 0 V. The rms value 230 V is where the arrow is at 45° above the horizontal.</details></li>
+              <li>Look at the v² panel. Why is the dashed average line exactly halfway up?<details><summary>Show answer</summary>v² = Vm² sin² ωt, and sin² swings between 0 and 1 evenly about ½. The shaded humps above the line fill the dips below it. So the mean of v² is Vm²/2 and Vrms = √(Vm²/2) = Vm/√2.</details></li>
+              <li>Switch to the inductor. Which arrow is ahead? Then look at the power graph below. What is the average power?<details><summary>Show answer</summary>The voltage arrow V is a quarter turn ahead of I: the current lags by 90°. The power graph swings positive and negative equally at twice the supply frequency, so the average is 0 W even though about 1.46 A rms flows.</details></li>
+              <li>With the capacitor chosen, change the frequency from 50 Hz to 100 Hz. What happens to the reactance and the current? Try the same with the inductor.<details><summary>Show answer</summary>For the capacitor XC halves from about 159 Ω to 80 Ω, so the current doubles (about 1.45 A to 2.9 A rms). For the inductor XL doubles from about 157 Ω to 314 Ω, so the current halves. A capacitor passes high frequencies easily; a coil blocks them.</details></li>
+              <li>Set the USA supply (120 V, 60 Hz) with the resistor. What are the peak voltage, the time for one cycle and the power?<details><summary>Show answer</summary>Vm ≈ 170 V, T ≈ 16.7 ms, and P = 120² ÷ 100 = 144 W, far less than the 529 W the same heater gives on Indian mains.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Alternating current (AC):</strong> current that changes direction regularly, usually as a sine wave.</li>
+              <li><strong>Phasor:</strong> a rotating arrow whose length is the peak value and whose projection gives the value at each instant.</li>
+              <li><strong>Peak value (Vm, Im):</strong> the largest value reached in a cycle.</li>
+              <li><strong>rms value:</strong> the square root of the mean of the squares; the steady value that gives the same heating.</li>
+              <li><strong>Reactance (X):</strong> the opposition of an inductor or capacitor to AC, in ohms. It depends on frequency.</li>
+              <li><strong>Phase difference (φ):</strong> how far one wave is ahead of or behind another, as an angle.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

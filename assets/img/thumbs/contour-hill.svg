@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="contour-hill">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M20 150 L90 120 L230 120 L160 150 Z" fill="#2563eb" opacity=".85"/>
+  <path d="M60 140 Q95 60 120 52 Q150 60 190 128 Z" fill="#c8be5c"/>
+  <path d="M78 118 Q100 70 120 64 Q142 72 168 112" fill="none" stroke="#3b1f0e" stroke-width="2"/>
+  <path d="M95 92 Q110 72 120 70 Q133 76 148 92" fill="none" stroke="#3b1f0e" stroke-width="2"/>
+  <path d="M20 150 L160 150 L160 166 L20 166 Z" fill="#5b4330"/>
+  <g fill="none" stroke="#3b1f0e" stroke-width="2"><ellipse cx="262" cy="100" rx="44" ry="56" fill="#7fae4b"/><ellipse cx="270" cy="98" rx="30" ry="40" fill="#c8be5c"/><ellipse cx="276" cy="96" rx="16" ry="24" fill="#d49a52"/><ellipse cx="279" cy="95" rx="6" ry="10" fill="#a8683f"/></g>
+</svg>

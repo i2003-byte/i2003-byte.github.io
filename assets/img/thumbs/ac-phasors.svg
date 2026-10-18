@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="ac-phasors">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <circle cx="70" cy="100" r="48" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <path d="M14 100H126M70 44V156" stroke="#64748b"/>
+  <path d="M70 100 L104 66" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/><path d="M104 66 l-12 2 10 10z" fill="#38bdf8"/>
+  <path d="M70 100 L92 122" stroke="#f472b6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M104 66 H196" stroke="#38bdf8" stroke-dasharray="4 3" opacity=".7"/>
+  <path d="M146 100 C166 30, 186 30, 206 100 S246 170, 266 100 S296 40, 306 60" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <path d="M146 72 C166 72, 176 130, 196 130 S236 72, 256 72 S290 130, 306 128" fill="none" stroke="#f472b6" stroke-width="2" opacity=".85"/>
+  <path d="M146 64 H306" stroke="#34d399" stroke-dasharray="6 4"/>
+  <text x="300" y="58" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="end">230 V rms</text>
+</svg>
