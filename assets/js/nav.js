@@ -655,6 +655,15 @@
   var pageSubj = S.getSubject(body.dataset.subject || (S.getSim(body.dataset.sim || '') || {}).subject);
   if (pageSubj) body.style.setProperty('--accent', pageSubj.color);
 
+  // Embed mode (?embed=1 on a simulation page, for teachers' sites and class
+  // pages): CSS hides the site chrome; a small link opens the full page.
+  if (body.dataset.page === 'sim' && /(?:^|[?&])embed=1(?:&|$)/.test(location.search)) {
+    document.documentElement.classList.add('is-embed');
+    var full = location.pathname + location.search.replace(/([?&])embed=1(&|$)/, function (m, a, b) { return b ? a : ''; }).replace(/[?&]$/, '');
+    var main = $('#main');
+    if (main) main.insertBefore(h('<p class="embed-open container"><a href="' + esc(full) + '" target="_blank" rel="noopener">' + esc(S.site.name) + ' · open the full page ↗</a></p>'), main.firstChild);
+  }
+
   buildHeader();
   var drawerApi = buildDrawer();
   buildSearchOverlay(drawerApi);

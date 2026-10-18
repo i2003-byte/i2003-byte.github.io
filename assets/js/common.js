@@ -974,15 +974,18 @@
       var q = buildQuery(params, sim.p);
       return location.origin + location.pathname + (q ? '?' + q : '');
     }
+    var embedded = document.documentElement.classList.contains('is-embed');
     function saveUrlSoon() {
       clearTimeout(saveTimer);
       saveTimer = setTimeout(function () {
-        if (params.length) history.replaceState(null, '', currentUrl().replace(location.origin, ''));
+        var u = currentUrl();
+        if (embedded) u += (u.indexOf('?') === -1 ? '?' : '&') + 'embed=1';
+        if (params.length) history.replaceState(null, '', u.replace(location.origin, ''));
       }, 300);
     }
     function copyLink() {
       var url = currentUrl();
-      history.replaceState(null, '', url.replace(location.origin, ''));
+      if (!embedded) history.replaceState(null, '', url.replace(location.origin, ''));
       function fallback() { window.prompt('Copy this link:', url); }
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(url).then(function () { ui.toast('Link copied — it includes your current settings'); }, fallback);
@@ -1005,6 +1008,22 @@
         '<span class="muted small">The picture as it is now, the numbers, and the Try-this questions with space for answers.</span>';
       learnBody.appendChild(printRow);
       printRow.querySelector('[data-print]').addEventListener('click', function () { window.print(); });
+      // Embed code for a school website, blog or class page (an iframe of this page with ?embed=1)
+      var embedRow = document.createElement('p');
+      embedRow.className = 'print-row embed-row';
+      embedRow.innerHTML = '<button class="btn" type="button" data-embed>⧉ Copy embed code</button>' +
+        '<span class="muted small">Put this simulation, with your current settings, on a school website or class page.</span>';
+      learnBody.appendChild(embedRow);
+      embedRow.querySelector('[data-embed]').addEventListener('click', function () {
+        var u = currentUrl();
+        u += (u.indexOf('?') === -1 ? '?' : '&') + 'embed=1';
+        var code = '<iframe src="' + u.replace(/&/g, '&amp;') + '" title="' + (entry.title || 'SimLab simulation').replace(/"/g, '&quot;') +
+          '" width="100%" height="720" style="border:0;max-width:1100px" allow="fullscreen" loading="lazy"></iframe>';
+        function fallback() { window.prompt('Copy this embed code:', code); }
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(code).then(function () { ui.toast('Embed code copied — paste it into your site\'s HTML'); }, fallback);
+        } else fallback();
+      });
     }
     var printState = null;
     function printTable() {

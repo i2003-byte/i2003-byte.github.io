@@ -1332,13 +1332,19 @@ input[type='range']:focus-visible::-moz-range-thumb { box-shadow: var(--focus); 
 
 /* Printable worksheet: built in common.js on beforeprint (images of the picture and graph) */
 .print-sheet { display: none; }
+/* Embed mode (?embed=1): only the simulation and its Learn panel */
+html.is-embed { --header-h: 0px; }
+.is-embed .site-header, .is-embed .breadcrumbs, .is-embed .site-footer, .is-embed .back-to-top, .is-embed #sim-footer, .is-embed .embed-row { display: none !important; }
+.embed-open { margin: 0; padding-top: var(--space-2); text-align: right; font-size: var(--fs-sm, 0.875rem); }
+.embed-open a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text-muted); }
 .print-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-5); }
+.print-row + .embed-row { margin-top: 0; }
 @media print {
   .site-header, .site-footer, .back-to-top, .sim-panel, .hero-canvas { display: none !important; }
   body { background: #fff; color: #000; }
 
   [data-page='sim'] .breadcrumbs, .sim-stage, .sim-graph-wrap, .sim-tools, .feedback-band, .sim-pager,
-  #sim-footer, .print-row, .noscript, .toast, .skip-link { display: none !important; }
+  #sim-footer, .print-row, .embed-open, .noscript, .toast, .skip-link { display: none !important; }
   .print-sheet { display: block; }
   .print-head { margin: 0 0 12px; font-size: 11pt; }
   .print-shots img { display: block; width: 100%; max-height: 10cm; object-fit: contain; margin: 0 auto 8px; break-inside: avoid; }
