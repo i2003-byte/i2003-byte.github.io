@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LC Oscillations — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Close the switch and watch a charged capacitor and a coil pass energy back and forth, like a swinging pendulum. See f = 1/(2π√LC), the energy sloshing between electric and magnetic fields, and how resistance damps the swing.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lc-oscillations/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="LC Oscillations — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Close the switch and watch a charged capacitor and a coil pass energy back and forth, like a swinging pendulum. See f = 1/(2π√LC), the energy sloshing between electric and magnetic fields, and how resistance damps the swing.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lc-oscillations/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lc-oscillations">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Charge a capacitor and then connect it across a coil. The capacitor starts pushing charge round the circuit, but the coil fights any change in current, so the current builds up slowly. As the capacitor empties, its <strong>electric field energy</strong> becomes <strong>magnetic field energy</strong> in the coil.</p>
+            <p>When the capacitor is empty the current is at its largest, and the coil will not let it stop suddenly. It keeps pushing charge until the capacitor is full again, the other way round. Then the whole thing runs backwards. The energy sloshes between C and L, and the charge swings back and forth at a natural frequency f = 1/(2π√LC). This is an <strong>LC oscillation</strong>.</p>
+            <p>It is exactly like a <strong>pendulum</strong>. Pulled aside, the bob has potential energy (like the full capacitor). At the bottom it moves fastest (like the largest current) and its energy is all kinetic (like the coil's magnetic energy). The coil's inductance plays the part of the bob's mass: it keeps things moving.</p>
+            <p>Real wires have resistance, so some energy turns into heat on every swing and the oscillation dies away, just as air slows a pendulum down.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">q = Q₀ cos ωt,  i = −Q₀ ω sin ωt,  ω = 1/√(LC),  f = 1/(2π√(LC))</code>
+            <p class="formula-note">With L = 10 mH and C = 10 µF: √(LC) = √(10⁻⁷) ≈ 3.16 × 10⁻⁴ s, so f ≈ 503 Hz and one cycle takes about 2 ms. The sim shows it about 1500 times slower.</p>
+            <code class="formula">UE = q²/(2C),  UB = ½ L i²,  UE + UB = Q₀²/(2C) = ½ C V₀²</code>
+            <p class="formula-note">Charged to 10 V, 10 µF holds Q₀ = 100 µC and ½ × 10⁻⁵ × 10² = 0.5 mJ. A quarter cycle later all of it is in the coil: ½ × 0.01 × I₀² = 0.5 mJ gives I₀ ≈ 0.32 A.</p>
+            <code class="formula">I₀ = Q₀ ω = V₀ √(C/L)</code>
+            <p class="formula-note">Mechanical twin: charge q ↔ displacement x, current i ↔ velocity v, L ↔ mass m, 1/C ↔ spring constant k, so ω = √(k/m) becomes 1/√(LC).</p>
+            <p class="formula-note">Simplified: the coil and capacitor are ideal and all resistance is in R. With resistance the energy falls by about e<sup>−Rt/L</sup>; if R is bigger than 2√(L/C) the charge just drains away without swinging. The pendulum shows the shape of the motion, not its real period.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The LC circuit is the heart of every radio transmitter and receiver: a tuned circuit oscillates at the station's frequency.</li>
+              <li>Old radios and some electronic toys make their tones with an LC oscillator. A transistor tops up the energy lost as heat on each cycle, like a child pushing a swing.</li>
+              <li>The metal detectors used by archaeologists and at security gates use a coil in an oscillating circuit; metal nearby changes L and so the frequency.</li>
+              <li>Wireless phone chargers pass energy from one coil to another with both coils tuned to the same frequency.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press Close the switch. Pause when the capacitor has no charge. Where is the energy now, and what is the current?<details><summary>Show answer</summary>All of it is in the coil's magnetic field, and the current is at its peak, about 316 mA. This happens a quarter of a cycle (about 0.5 ms) after the switch closes, just as a pendulum is fastest at the bottom.</details></li>
+              <li>Watch the energy graph. How many times per cycle is the capacitor full?<details><summary>Show answer</summary>Twice: once with the top plate positive and once with it negative. So the energy sloshes at twice the frequency of the charge, and the total line stays flat at 100 % when R = 0.</details></li>
+              <li>Make C four times bigger (40 µF). What happens to the frequency? Then try L four times bigger instead.<details><summary>Show answer</summary>Either way f halves, from about 503 Hz to 252 Hz, because f = 1/(2π√LC) and √4 = 2. A heavier pendulum bob (bigger L) or a softer spring (bigger C) swings more slowly.</details></li>
+              <li>Press the Real 2 Ω preset. What share of the energy is lost in the first cycle?<details><summary>Show answer</summary>About a third. The energy falls like e<sup>−Rt/L</sup> = e<sup>−2 × 0.002/0.01</sup> ≈ 0.67 after one 2 ms cycle. The swings get smaller but the frequency hardly changes.</details></li>
+              <li>Set L = 1 mH, C = 100 µF and R = 10 Ω. Does it still oscillate?<details><summary>Show answer</summary>No. 2√(L/C) = 2√10 ≈ 6.3 Ω, and R = 10 Ω is more than that, so the circuit is overdamped: the charge drains away to zero without reversing, like a pendulum swinging in thick honey.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>LC circuit (tank circuit):</strong> a coil and a capacitor connected together, which oscillate at their natural frequency.</li>
+              <li><strong>Natural frequency:</strong> the frequency at which a system swings on its own after it is disturbed; for LC, f = 1/(2π√LC).</li>
+              <li><strong>Electric and magnetic energy:</strong> energy stored in the capacitor's electric field (q²/2C) and in the coil's magnetic field (½Li²).</li>
+              <li><strong>Damping:</strong> the loss of energy, here as heat in the resistance, which makes the oscillation die away.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

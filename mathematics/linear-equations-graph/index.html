@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pair of Linear Equations: Graphs — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Draw two lines a₁x + b₁y = c₁ and a₂x + b₂y = c₂ and see if they cross at one point, run parallel or lie on top of each other. Check with the ratio test and drag a point to test solutions.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/linear-equations-graph/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Pair of Linear Equations: Graphs — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Draw two lines a₁x + b₁y = c₁ and a₂x + b₂y = c₂ and see if they cross at one point, run parallel or lie on top of each other. Check with the ratio test and drag a point to test solutions.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/linear-equations-graph/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="linear-equations-graph">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>An equation like <strong>x + y = 5</strong> has many solutions: (0, 5), (1, 4), (2, 3), (2.5, 2.5)… Plot them all and they make a <strong>straight line</strong>. That is why ax + by = c is called a <em>linear</em> equation in two variables.</p>
+            <p>Two such equations together are a <strong>pair of linear equations</strong>. A solution of the pair has to satisfy <em>both</em>, so it must lie on <em>both</em> lines. Two straight lines on a plane can only behave in three ways:</p>
+            <ul>
+              <li>they <strong>cross</strong> at one point: exactly one solution (the pair is <strong>consistent</strong>);</li>
+              <li>they are <strong>parallel</strong>: no solution at all (<strong>inconsistent</strong>);</li>
+              <li>they are the <strong>same line</strong>: every point on it is a solution, so infinitely many (<strong>dependent</strong>, and still consistent).</li>
+            </ul>
+            <p>You can tell which, without drawing, by comparing the ratios of the coefficients. Drag the test point P around to feel what “a solution” means: P turns green only where it fits both equations.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">a₁x + b₁y = c₁  and  a₂x + b₂y = c₂</code>
+            <code class="formula">a₁/a₂ ≠ b₁/b₂  →  one solution (lines cross)</code>
+            <code class="formula">a₁/a₂ = b₁/b₂ ≠ c₁/c₂  →  no solution (parallel lines)</code>
+            <code class="formula">a₁/a₂ = b₁/b₂ = c₁/c₂  →  infinitely many (same line)</code>
+            <p class="formula-note">Example: x + 2y = 4 and 2x + 4y = 12 give 1/2, 2/4 = 1/2 and 4/12 = 1/3. The first two match but the third does not, so the lines are parallel.</p>
+            <code class="formula">x = (c₁b₂ − c₂b₁) / (a₁b₂ − a₂b₁),  y = (a₁c₂ − a₂c₁) / (a₁b₂ − a₂b₁)</code>
+            <p class="formula-note">This is what the sim uses to find the crossing point exactly, even when it is a fraction such as (25/11, 1/11) that is hard to read off a graph. If a₁b₂ − a₂b₁ = 0 the lines have the same slope.</p>
+            <p class="formula-note">The ratio test is done by cross-multiplying (a₁b₂ = a₂b₁ means a₁/a₂ = b₁/b₂), so it also works when a coefficient is 0, as in the lines x = 3 and y = −2. The grid shows −8 to 8 only; crossing points outside it are given in words.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Two shopkeepers' bills for the same two items let you work out each item's price: two equations, one crossing point.</li>
+              <li>Comparing two mobile data plans (a fixed charge plus a rate per GB): the crossing point is the usage at which both cost the same.</li>
+              <li>Two trains on parallel tracks at the same speed never meet: parallel lines on a distance–time graph.</li>
+              <li>Engineers solve thousands of linear equations together to design bridges, electric grids and weather forecasts; the idea is the same as for two.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the first preset (x + y = 5 and x − y = 1), drag P until it turns green. Where is it, and why does it fit both?<details><summary>Show answer</summary>At (3, 2). In ①, 3 + 2 = 5 ✓ and in ②, 3 − 2 = 1 ✓. Any other point fits at most one equation, because it is on at most one of the lines.</details></li>
+              <li>Choose “Parallel lines”. Change c₂ (line 2, c) until the lines join into one. What value works, and what are the ratios then?<details><summary>Show answer</summary>c₂ = 8. Then 2x + 4y = 8 is just x + 2y = 4 doubled, and a₁/a₂ = b₁/b₂ = c₁/c₂ = 1/2. Every point on the line is a solution.</details></li>
+              <li>Start from the first preset and change line 2 to 2x + 2y = 7. How many solutions are there now? Check with the ratios.<details><summary>Show answer</summary>None. a₁/a₂ = 1/2, b₁/b₂ = 1/2 but c₁/c₂ = 5/7, so the lines are parallel. (In fact 2x + 2y = 7 means x + y = 3.5, which can never also equal 5.)</details></li>
+              <li>Choose “Crossing at a fraction”. Can you make P turn green? What is the solution?<details><summary>Show answer</summary>No: P only moves on whole numbers, and the solution is x = 25/11 ≈ 2.27, y = 1/11 ≈ 0.09. A graph only gives an estimate here; the algebraic methods (substitution, elimination) give the exact answer.</details></li>
+              <li>Make your own pair that crosses at (−2, 4). Hint: pick any a and b, then work out c.<details><summary>Show answer</summary>For example x + y = 2 (since −2 + 4 = 2) and 2x + y = 0 (since −4 + 4 = 0). Any line through (−2, 4) works, as long as the two lines are not parallel.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Linear equation in two variables:</strong> an equation of the form ax + by = c, where a and b are not both zero. Its graph is a straight line.</li>
+              <li><strong>Solution of a pair:</strong> values of x and y that make both equations true; the point where the lines meet.</li>
+              <li><strong>Consistent:</strong> has at least one solution (lines cross or coincide).</li>
+              <li><strong>Inconsistent:</strong> has no solution (parallel lines).</li>
+              <li><strong>Dependent:</strong> both equations describe the same line, so there are infinitely many solutions.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1807,7 +1807,39 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-18',
     prerequisites: ['ohms-law', 'motor-generator']
+  },  {
+    id: 'lcr-resonance',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Series LCR Circuit and Resonance',
+    description:
+      'Sweep the frequency of a resistor, coil and capacitor in series and watch the current peak where XL = XC, at f₀ = 1/(2π√LC). See the phasors, the Q factor and bandwidth, and why the coil can get far more than the supply voltage. Then turn a tuning capacitor to pick one FM station out of five.',
+    level: 'Advanced',
+    tags: ['lcr circuit', 'resonance', 'resonant frequency', 'impedance', 'reactance', 'q factor', 'bandwidth', 'phasor', 'radio tuning', 'fm', 'alternating current', 'class 12'],
+    thumbnail: '/assets/img/thumbs/lcr-resonance.svg',
+    link: '/physics/lcr-resonance/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['ac-phasors']
   },
+  {
+    id: 'lc-oscillations',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'LC Oscillations',
+    description:
+      'Close the switch and a charged capacitor and a coil pass energy back and forth: electric field, then magnetic field, then electric again. Charges, field lines, energy bars and a swinging pendulum twin show f = 1/(2π√LC), and resistance damps the swing.',
+    level: 'Advanced',
+    tags: ['lc circuit', 'lc oscillations', 'tank circuit', 'natural frequency', 'electric energy', 'magnetic energy', 'energy conservation', 'damping', 'pendulum analogy', 'inductor', 'capacitor', 'class 12'],
+    thumbnail: '/assets/img/thumbs/lc-oscillations.svg',
+    link: '/physics/lc-oscillations/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['ac-phasors', 'lcr-resonance']
+  },
+
   {
     id: 'series-parallel',
     subject: 'physics',
@@ -2663,7 +2695,39 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-17',
     prerequisites: ['distance-formula']
+  },  {
+    id: 'linear-equations-graph',
+    subject: 'mathematics',
+    branch: 'functions',
+    title: 'Pair of Linear Equations: Graphs',
+    description:
+      'Draw two lines a₁x + b₁y = c₁ and a₂x + b₂y = c₂ and see whether they cross at one point, run parallel or lie on top of each other. The ratio test a₁/a₂, b₁/b₂, c₁/c₂ tells you without drawing, and a test point shows what a solution means.',
+    level: 'Intermediate',
+    tags: ['linear equations', 'pair of linear equations', 'two variables', 'graphical method', 'consistent', 'inconsistent', 'dependent', 'parallel lines', 'intersection', 'class 10'],
+    thumbnail: '/assets/img/thumbs/linear-equations-graph.svg',
+    link: '/mathematics/linear-equations-graph/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['distance-formula']
   },
+  {
+    id: 'linear-word-problems',
+    subject: 'mathematics',
+    branch: 'functions',
+    title: 'Linear Equations in Daily Life',
+    description:
+      'Turn word problems into a pair of linear equations and solve them by graph: notebooks and pens, a mother and son\'s ages, a boat on the Ganga, an auto fare and a garden fence. Drag a guess until it fits both, and meet a bill that cannot be right.',
+    level: 'Intermediate',
+    tags: ['linear equations', 'word problems', 'graphical method', 'table of values', 'ages', 'upstream downstream', 'prices', 'class 10'],
+    thumbnail: '/assets/img/thumbs/linear-word-problems.svg',
+    link: '/mathematics/linear-word-problems/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['linear-equations-graph']
+  },
+
   {
     id: 'histogram-polygon',
     subject: 'mathematics',

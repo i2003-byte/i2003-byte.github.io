@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Series LCR Circuit and Resonance — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Sweep the frequency of a series LCR circuit and watch the current peak at resonance, f₀ = 1/(2π√LC). See the phasors, the Q factor and the bandwidth, then tune a radio to an FM station by turning a capacitor.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/lcr-resonance/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Series LCR Circuit and Resonance — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Sweep the frequency of a series LCR circuit and watch the current peak at resonance, f₀ = 1/(2π√LC). See the phasors, the Q factor and the bandwidth, then tune a radio to an FM station by turning a capacitor.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/lcr-resonance/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="lcr-resonance">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Put a resistor <strong>R</strong>, a coil <strong>L</strong> and a capacitor <strong>C</strong> in a row on an AC supply. The coil opposes fast changes, so its reactance X<sub>L</sub> = 2πfL grows with frequency. The capacitor lets fast changes through, so its reactance X<sub>C</sub> = 1/(2πfC) falls with frequency. Their voltages point in <strong>opposite directions</strong> on the phasor diagram (V<sub>L</sub> up, V<sub>C</sub> down), so they cancel each other partly.</p>
+            <p>At one special frequency the two reactances are equal and cancel completely. Then the circuit behaves as if only R were there: the impedance is smallest, the current is <strong>largest</strong>, and current and voltage are in step. This is <strong>resonance</strong>, and the frequency is f₀ = 1/(2π√LC).</p>
+            <p>Press <strong>Sweep</strong> to turn the signal generator's knob from 10 Hz to 1000 Hz and watch the current climb to a peak at f₀ and fall again. At resonance the coil and the capacitor each get far more than the 10 V supply, because the two large voltages cancel each other.</p>
+            <p>A radio uses exactly this. The aerial picks up every station at once, but only the station whose frequency matches f₀ drives a large current. Turning the tuning knob changes C, which moves f₀ along the band.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">XL = 2πfL,  XC = 1/(2πfC),  Z = √(R² + (XL − XC)²),  I = V/Z</code>
+            <p class="formula-note">With R = 20 Ω, L = 100 mH, C = 10 µF at 50 Hz: XL = 31.4 Ω, XC = 318 Ω, Z ≈ 288 Ω, so I ≈ 0.035 A from 10 V.</p>
+            <code class="formula">tan φ = (XL − XC) / R</code>
+            <p class="formula-note">φ is how far the current lags the voltage. Below f₀ the capacitor wins (current leads); above f₀ the coil wins (current lags).</p>
+            <code class="formula">f₀ = 1 / (2π√(LC))</code>
+            <p class="formula-note">100 mH and 10 µF: √(0.1 × 0.00001) = 0.001 s, so f₀ = 1/(2π × 0.001) ≈ 159 Hz. At f₀, Z = R and I = V/R = 10/20 = 0.5 A.</p>
+            <code class="formula">Q = (1/R)√(L/C) = XL/R at f₀,  bandwidth Δf = R/(2πL) = f₀/Q</code>
+            <p class="formula-note">Q tells you how sharp the peak is and how many times the supply voltage appears across L (and C) at resonance: Q = 100/20 = 5, so V<sub>L</sub> = V<sub>C</sub> = 50 V. Δf is the width of the peak between the two frequencies where the power is half the largest (the current is 1/√2 of the peak).</p>
+            <p class="formula-note">Simplified: the coil and capacitor are ideal (all losses are in R) and the supply keeps 10 V rms at every frequency. In the radio, the coil is 0.1 µH with 1 Ω of resistance and every station arrives equally strong; real FM sets tune in more than one stage, but each stage works like this.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Every radio and TV tuner, and the Wi-Fi and mobile phone circuits in your pocket, pick one frequency out of many with an LC circuit at resonance.</li>
+              <li>Old radios had a <strong>gang capacitor</strong>: metal vanes that slide between each other when you turn the knob, changing C and so the station.</li>
+              <li>Metal detectors at airports and in the security frames at malls use a coil in a resonant circuit; nearby metal changes its resonance.</li>
+              <li>Resonance can be dangerous too: in power systems a capacitor and the inductance of the lines can build up voltages far above normal, which engineers must design against.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the lab settings and press Sweep. Pause when the current is largest. What are f, I and the voltage across the coil?<details><summary>Show answer</summary>About 159 Hz, I = 10/20 = 0.5 A, and V<sub>L</sub> = V<sub>C</sub> ≈ 50 V: five times the 10 V supply (Q = 5). The phasors VL and VC are equal and opposite, so V = VR = 10 V.</details></li>
+              <li>Now halve the resistance from 20 Ω to 10 Ω and sweep again. What happens to the peak and to its width Δf?<details><summary>Show answer</summary>The peak current doubles to 1 A, the peak becomes narrower (Δf falls from 31.8 Hz to 15.9 Hz) and Q doubles to 10, so V<sub>L</sub> reaches 100 V. Lower resistance means sharper tuning.</details></li>
+              <li>Make L four times bigger (400 mH) and keep C = 10 µF. Where is the new resonance?<details><summary>Show answer</summary>f₀ = 1/(2π√LC) halves to about 80 Hz, because √4 = 2. Making C four times bigger has the same effect.</details></li>
+              <li>Press the Mains 50 Hz preset with the starting values. Is the circuit more like a capacitor or a coil, and does the current lead or lag?<details><summary>Show answer</summary>At 50 Hz, XC ≈ 318 Ω is much bigger than XL ≈ 31 Ω, so it behaves like a capacitor: the current leads the voltage by about 86° and is only about 0.035 A.</details></li>
+              <li>Switch to the radio. Turn the tuning capacitor until FM 102.6 is clear. What capacitance did you need? Is it bigger or smaller than for FM 91.1?<details><summary>Show answer</summary>About 24.1 pF. FM 91.1 needs about 30.5 pF: a lower frequency needs a bigger C (f₀ ∝ 1/√C). Halfway between two stations neither gets through well and you hear static.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Impedance (Z):</strong> the total opposition of an AC circuit to current, in ohms, combining resistance and reactance.</li>
+              <li><strong>Resonance:</strong> the frequency at which XL = XC, so the reactances cancel and the current is largest.</li>
+              <li><strong>Q factor:</strong> a number for the sharpness of the resonance; also how many times the supply voltage appears across L or C at resonance.</li>
+              <li><strong>Bandwidth (Δf):</strong> the range of frequencies around f₀ in which the power is at least half its peak value.</li>
+              <li><strong>Tuning:</strong> changing L or C so that f₀ matches the signal you want.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
