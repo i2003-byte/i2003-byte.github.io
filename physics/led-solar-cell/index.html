@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LEDs and Solar Cells — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See how a p-n junction turns electricity into light and light into electricity. The LED band gap sets its colour, λ = 1240/Eg nm, and its switch-on voltage. Then find the best load for a rooftop solar panel in Indian sunshine.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/led-solar-cell/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="LEDs and Solar Cells — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See how a p-n junction turns electricity into light and light into electricity. The LED band gap sets its colour, λ = 1240/Eg nm, and its switch-on voltage. Then find the best load for a rooftop solar panel in Indian sunshine.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/led-solar-cell/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="led-solar-cell">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In a semiconductor, electrons can only have energies in two bands: the <strong>valence band</strong> (bound electrons) and, higher up, the <strong>conduction band</strong> (free electrons). The forbidden gap between them is the <strong>band gap Eg</strong>. A p-n junction can use this gap in two opposite ways.</p>
+            <ul>
+              <li><strong>LED (electricity → light):</strong> in forward bias, free electrons cross from the n side and fall into holes in the valence band. Each fall releases a parcel of energy about equal to Eg, sent out as one <strong>photon</strong> of light. A bigger band gap gives more energetic photons: bluer light. It also needs a higher voltage to switch on, because each electron must be given at least Eg of energy.</li>
+              <li><strong>Solar cell (light → electricity):</strong> a photon with energy more than Eg lifts an electron into the conduction band, leaving a hole: an <strong>electron-hole pair</strong>. The electric field at the junction pushes the electron to the n side and the hole to the p side, so the cell acts like a battery. Photons with less energy than Eg (long-wavelength infrared) pass straight through.</li>
+            </ul>
+            <p>Silicon is great for solar cells but useless for LEDs: in silicon the energy of a falling electron mostly turns into heat. LEDs use compound semiconductors such as GaAs, AlGaInP and InGaN instead. Making a bright blue LED (InGaN) was so hard that it won the 2014 Nobel Prize in Physics; it made white LED lighting possible.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">E = hν = hc/λ   →   λ (nm) ≈ 1240 / Eg (eV)</code>
+            <p class="formula-note">Red AlGaInP, Eg = 1.9 eV: λ = 1240/1.9 ≈ 653 nm. Blue InGaN, Eg = 2.7 eV: λ ≈ 459 nm. A white LED is a blue LED coated with a yellow phosphor; blue plus yellow looks white.</p>
+            <code class="formula">LED switches on at about V ≈ Eg / e   (red ≈ 2 V, blue ≈ 2.9 V)</code>
+            <code class="formula">Solar: P = V × I,   efficiency = P / (sunlight × area)</code>
+            <p class="formula-note">One silicon cell gives about 0.6 V whatever its size; its current grows with the light falling on it (9.5 A for a 156 mm cell in full sun). A rooftop panel joins 60 cells in series: about 37 V with no load, and about 286 W at its best.</p>
+            <p class="formula-note">Simplified: the LED switch-on law is a simple exponential set to give 20 mA at Eg/e + 0.15 V; real LEDs give a narrow band of colours (about 20–30 nm wide), not one wavelength. The sunlight photons are drawn with an even spread of wavelengths, and the cell is at 25 °C (hot cells give a little less voltage). The cell model is the standard single-diode model.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>LED bulbs give the same light as a 60 W filament bulb for about 9 W. India's UJALA scheme gave out more than 36 crore LED bulbs, saving a great deal of electricity.</li>
+              <li>TV remotes use an infrared LED (about 940 nm). You cannot see it, but most phone cameras can: point the remote at the camera and press a button.</li>
+              <li>Rooftop solar panels in India produce roughly 4 units (kWh) per day for every kilowatt of panels, more in sunny states like Rajasthan and Gujarat.</li>
+              <li>Traffic lights, phone screens, torches and car lamps all use LEDs; calculators, satellites and solar street lights use solar cells.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose the red LED and lower the supply voltage until it stops glowing. Then do the same for the blue LED. Why does blue need more voltage?<details><summary>Show answer</summary>Red goes dim near 2 V, blue near 2.8–2.9 V. A blue photon carries more energy (2.7 eV against 1.9 eV), and each electron gets energy e × V from the supply, so V must be at least about Eg/e.</details></li>
+              <li>Choose the infrared LED. What wavelength does it give, and why does it look dark?<details><summary>Show answer</summary>1240/1.42 ≈ 873 nm, beyond red light (about 750 nm), so our eyes cannot see it even though it is shining. Infrared LEDs are used in TV remotes and night-vision cameras.</details></li>
+              <li>Switch to the solar cell with sunlight 1000 W/m² and press “Best load for this sunlight”. What power do you get, and what is the efficiency?<details><summary>Show answer</summary>About 286 W at 31.8 V and 9 A, with a load of about 3.6 Ω. The panel receives 1000 × 60 × 0.0243 ≈ 1460 W of sunlight, so the efficiency is about 19.6 %.</details></li>
+              <li>Try a load of 0.5 Ω and then 40 Ω. Why is the power small in both cases?<details><summary>Show answer</summary>At 0.5 Ω the current is at its biggest (9.5 A) but the voltage is only 4.7 V: about 45 W. At 40 Ω the voltage is high (37 V) but the current is under 1 A: about 34 W. The most power comes in between, at the knee of the I–V curve.</details></li>
+              <li>Keep the load at 3.4 Ω and turn the sunlight down to 300 W/m² (a cloudy day). Now press the best-load button. What changed?<details><summary>Show answer</summary>With 3.4 Ω the panel gives only about 28 W, but the best load is now about 11 Ω and gives about 80 W. The best load changes with the light, so solar inverters keep adjusting the load all day; this is called maximum power point tracking (MPPT).</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Band gap (Eg):</strong> the energy gap between the valence band and the conduction band, measured in electron-volts (eV).</li>
+              <li><strong>Photon:</strong> a single parcel of light energy, E = hν.</li>
+              <li><strong>LED:</strong> light emitting diode; a forward-biased junction that gives out light.</li>
+              <li><strong>Solar (photovoltaic) cell:</strong> a junction that turns light into a voltage and a current.</li>
+              <li><strong>Open-circuit voltage / short-circuit current:</strong> a cell's voltage with no load, and its current with the terminals joined.</li>
+              <li><strong>Maximum power point:</strong> the load at which a solar panel gives the most power.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

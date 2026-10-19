@@ -1839,6 +1839,54 @@ SimLab.simulations = [
     dateAdded: '2026-10-19',
     prerequisites: ['ac-phasors', 'lcr-resonance']
   },
+  {
+    id: 'pn-junction-diode',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'p-n Junction Diode',
+    description:
+      'Join p-type and n-type silicon and watch holes and electrons build a depletion layer. Turn the battery: in forward bias the layer shrinks and current shoots up past the 0.7 V knee; in reverse bias it widens and almost nothing flows. Trace the I–V curve for silicon and germanium.',
+    level: 'Advanced',
+    tags: ['semiconductor', 'p-n junction', 'diode', 'depletion layer', 'forward bias', 'reverse bias', 'barrier potential', 'i-v characteristic', 'holes', 'electrons', 'silicon', 'germanium', 'class 12'],
+    thumbnail: '/assets/img/thumbs/pn-junction-diode.svg',
+    link: '/physics/pn-junction-diode/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['ohms-law', 'drift-velocity']
+  },
+  {
+    id: 'rectifier',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'Rectifier: AC to DC',
+    description:
+      'Turn 12 V AC from a transformer into DC like a phone charger does. Compare a half-wave rectifier, a centre-tap full-wave and a four-diode bridge, see which diodes glow on each half-cycle, and add a smoothing capacitor to flatten the ripple on the oscilloscope.',
+    level: 'Advanced',
+    tags: ['rectifier', 'half-wave', 'full-wave', 'bridge rectifier', 'centre tap', 'diode', 'smoothing capacitor', 'ripple', 'ac to dc', 'charger', 'class 12'],
+    thumbnail: '/assets/img/thumbs/rectifier.svg',
+    link: '/physics/rectifier/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['pn-junction-diode', 'transformer']
+  },
+  {
+    id: 'led-solar-cell',
+    subject: 'physics',
+    branch: 'electricity',
+    title: 'LEDs and Solar Cells',
+    description:
+      'A p-n junction can turn electricity into light and light into electricity. Pick an LED material and see how the band gap sets its colour (λ = 1240/Eg nm) and its switch-on voltage. Then put a rooftop solar panel in Indian sunshine and find the load that gives the most power.',
+    level: 'Advanced',
+    tags: ['led', 'light emitting diode', 'solar cell', 'solar panel', 'band gap', 'photon', 'wavelength', 'semiconductor', 'photovoltaic', 'maximum power', 'renewable energy', 'class 12'],
+    thumbnail: '/assets/img/thumbs/led-solar-cell.svg',
+    link: '/physics/led-solar-cell/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['pn-junction-diode']
+  },
 
   {
     id: 'series-parallel',
@@ -2726,6 +2774,22 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-19',
     prerequisites: ['linear-equations-graph']
+  },
+  {
+    id: 'linear-substitution-elimination',
+    subject: 'mathematics',
+    branch: 'functions',
+    title: 'Substitution and Elimination',
+    description:
+      'Solve a pair of linear equations exactly, one step at a time, by substitution or by elimination. A balance shows that each step does the same to both sides, fractions stay exact, and the last line 0 = 0 or 0 = 4 tells you about same or parallel lines.',
+    level: 'Intermediate',
+    tags: ['linear equations', 'pair of linear equations', 'substitution method', 'elimination method', 'algebra', 'balance', 'fractions', 'class 10'],
+    thumbnail: '/assets/img/thumbs/linear-substitution-elimination.svg',
+    link: '/mathematics/linear-substitution-elimination/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-19',
+    prerequisites: ['linear-equations-graph', 'linear-word-problems']
   },
 
   {

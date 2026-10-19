@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Substitution and Elimination — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Solve a pair of linear equations step by step by substitution or elimination, with exact fractions. A balance shows each step doing the same thing to both sides, and 0 = 0 or 0 = 4 tell you about same or parallel lines.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/linear-substitution-elimination/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Substitution and Elimination — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Solve a pair of linear equations step by step by substitution or elimination, with exact fractions. A balance shows each step doing the same thing to both sides, and 0 = 0 or 0 = 4 tell you about same or parallel lines.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/linear-substitution-elimination/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="linear-substitution-elimination">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A graph shows <em>where</em> two lines cross, but it can only give a rough answer when the crossing is at a point such as (25/11, 1/11). Algebra gives the <strong>exact</strong> answer. The trick is always the same: turn two equations with two unknowns into <strong>one equation with one unknown</strong>, solve it, then go back for the other letter.</p>
+            <p>Think of every equation as a <strong>balance</strong> that is level: the left side weighs the same as the right side. You may do anything you like to it, as long as you do the <em>same thing to both pans</em>: add, subtract, multiply or divide by the same (non-zero) number. It stays level, so it is still true.</p>
+            <ul>
+              <li><strong>Substitution:</strong> make one letter the subject of one equation (y = 14 − x), then put that expression into the <em>other</em> equation in place of the letter. Swapping something for an equal amount keeps the balance level.</li>
+              <li><strong>Elimination:</strong> multiply the equations so one letter has the same number in front in both (the LCM), then add or subtract the two equations so that letter cancels. Adding equal amounts to both pans keeps a balance level, and the two sides of an equation <em>are</em> equal amounts.</li>
+            </ul>
+            <p>If <em>both</em> letters vanish, look at what is left. <strong>0 = 0</strong> is always true: the equations are the same line, with infinitely many solutions. <strong>0 = 4</strong> is never true: the lines are parallel and there is no solution.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">a₁x + b₁y = c₁ ①    a₂x + b₂y = c₂ ②</code>
+            <code class="formula">Substitution: from ①, y = (c₁ − a₁x)/b₁, then put it into ②</code>
+            <code class="formula">Elimination: ① × m₁ and ② × m₂ so the y terms match, then ① ± ②</code>
+            <p class="formula-note">Example: 3x + 2y = 7 and x − 3y = 2. Multiply ② by 3: 3x − 9y = 6. Subtract from ①: 11y = 1, so y = 1/11. Then 3x + 2/11 = 7 gives x = 25/11.</p>
+            <code class="formula">Ends in 0 = 0 → infinitely many    Ends in 0 = k (k ≠ 0) → none</code>
+            <p class="formula-note">The sim picks the easiest route for you: for substitution, the letter whose number in front is smallest (best of all 1 or −1); for elimination, the letter whose LCM is smaller. Any other choice gives the same answer, just with harder numbers. All working is done with exact fractions, never decimals.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A shop sells 2 kg of rice and 3 kg of dal for ₹370, and 3 kg of rice and 1 kg of dal for ₹240. Elimination finds both prices without guessing.</li>
+              <li>Mixing two fertilisers, two medicines or two alloys to get an exact amount of each ingredient is a pair of linear equations.</li>
+              <li>Computers use elimination (in a form called Gaussian elimination) to solve thousands of equations at once, for example to work out the currents in an electric grid or the forces in a bridge.</li>
+              <li>Balancing a chemical equation can be set up and solved the same way: one equation for each kind of atom.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With x + y = 14 and x − y = 4, press Next step all the way with Substitution, then switch to Elimination. Which takes fewer steps, and why?<details><summary>Show answer</summary>Elimination: the y terms are already +y and −y, so adding the equations removes y at once (2x = 18). Substitution needs an extra step to make y the subject and open the brackets. Both give x = 9, y = 5.</details></li>
+              <li>Choose “Fraction answer” and use Elimination. Which equation gets multiplied, and by what?<details><summary>Show answer</summary>② is multiplied by 3, giving 3x − 9y = 6, so the x terms match ① (3x). Subtracting gives 11y = 1, so y = 1/11 and x = 25/11. A graph could never read these off exactly.</details></li>
+              <li>Choose “Parallel” and solve by either method. What does the last line say, and what does it mean?<details><summary>Show answer</summary>Both letters vanish, leaving 0 = 4 (substitution) or 0 = −4 (elimination). That can never be true, so the balance can never be level: there is no solution, and the lines are parallel.</details></li>
+              <li>Choose “Same line” and change c₂ from 8 to 9. What changes in the last step?<details><summary>Show answer</summary>With c₂ = 8 the last step is 0 = 0: always true, infinitely many solutions. With c₂ = 9 it becomes 0 = 1 (or 0 = −1): impossible, so the lines are now parallel and there is no solution.</details></li>
+              <li>Make your own pair for the rice and dal shop: 2x + 3y = 370 does not fit the sliders, so divide prices by 10: 2x + 3y = 37 and 3x + y = 24. What are the prices?<details><summary>Show answer</summary>x = 5 and y = 9, so rice is ₹50 a kg and dal is ₹90 a kg (multiply back by 10). Check: 2 × 50 + 3 × 90 = 370 ✓ and 3 × 50 + 90 = 240 ✓.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Substitution method:</strong> solve one equation for one letter and put that expression into the other equation.</li>
+              <li><strong>Elimination method:</strong> make the numbers in front of one letter equal, then add or subtract the equations to remove it.</li>
+              <li><strong>Coefficient:</strong> the number in front of a letter, like 3 in 3x.</li>
+              <li><strong>LCM:</strong> least common multiple; the smallest number both coefficients divide into, used to make them match.</li>
+              <li><strong>Back-substitution:</strong> putting the value you found into an earlier equation to get the other letter.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

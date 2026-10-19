@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>p-n Junction Diode — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See holes and electrons form a depletion layer at a p-n junction. Forward bias shrinks it and current shoots up past the 0.7 V knee; reverse bias widens it. Trace the I–V curve of silicon and germanium diodes.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/physics/pn-junction-diode/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="p-n Junction Diode — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See holes and electrons form a depletion layer at a p-n junction. Forward bias shrinks it and current shoots up past the 0.7 V knee; reverse bias widens it. Trace the I–V curve of silicon and germanium diodes.">
+  <meta property="og:url" content="https://i2003-byte.github.io/physics/pn-junction-diode/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="pn-junction-diode">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Pure silicon has very few free charges, so it hardly conducts. Add a tiny amount of another element (<strong>doping</strong>) and it changes. Phosphorus has 5 outer electrons, one more than silicon needs, so it gives <strong>free electrons</strong>: this is <strong>n-type</strong>. Boron has only 3, leaving a gap called a <strong>hole</strong> that behaves like a positive charge: this is <strong>p-type</strong>.</p>
+            <p>Join the two and electrons near the join wander into the p side and fill holes, while holes wander into the n side. Both are wiped out near the junction, leaving behind the fixed ions they came from: <strong>negative ions on the p side, positive ions on the n side</strong>. This thin strip with no free charges is the <strong>depletion layer</strong>. Its ions make an electric field and a <strong>barrier potential</strong> (about 0.7 V for silicon, 0.3 V for germanium) that stops any more carriers crossing.</p>
+            <ul>
+              <li><strong>Forward bias</strong> (+ of the battery to p): the battery pushes against the barrier, the layer narrows, and once the battery beats the barrier, electrons and holes pour across and meet. The current rises very steeply after the <strong>knee</strong>.</li>
+              <li><strong>Reverse bias</strong> (+ to n): the battery pulls carriers away from the junction, the layer gets wider and the barrier higher. Only a tiny leakage current flows: nanoamperes in silicon, microamperes in germanium.</li>
+            </ul>
+            <p>So a diode is a one-way valve for current. The 100 Ω resistor in the circuit limits the current, as in any real circuit: without it, a diode on a battery above 1 V would burn out.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">I = Is (e^(V/VT) − 1),   VT = kT/e ≈ 25.9 mV at 27 °C</code>
+            <p class="formula-note">Is is tiny (about 10⁻¹⁴ A for a small silicon diode), so the current only becomes noticeable near 0.6–0.7 V. Above that, every extra 60 mV makes the current about 10 times bigger. That is why the diode voltage hardly changes (0.65 V to 0.74 V) while the current goes from 1.5 mA to 43 mA.</p>
+            <code class="formula">Vs = I × R + V(diode)</code>
+            <p class="formula-note">Whatever the diode does not take, the resistor takes. The sim solves this pair together to find the working point on the I–V curve.</p>
+            <code class="formula">depletion width ∝ √(V₀ − V)</code>
+            <p class="formula-note">V₀ is the barrier potential. Forward voltage (V &gt; 0) shrinks the layer, reverse voltage (V &lt; 0) widens it. The widths shown (about 0.5 µm at 0 V) are typical, not exact; they depend on how heavily the crystal is doped.</p>
+            <p class="formula-note">Simplified: the ideal diode equation plus a small leakage; the particles stand for many billions of carriers; the reverse side of the graph is on a µA/nA scale, as in your textbook. Very large reverse voltages cause breakdown, which is not shown.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Every phone charger and laptop adapter uses diodes to turn AC into DC (see the Rectifier sim).</li>
+              <li>A diode in a torch, toy or TV remote stops damage if the cells are put in the wrong way round.</li>
+              <li>LED bulbs and the solar panels on Indian rooftops are p-n junctions too (see the LEDs and Solar Cells sim).</li>
+              <li>A single computer chip holds billions of tiny p-n junctions inside its transistors.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With a silicon diode, set the supply to 0.5 V. Is the diode forward biased? How much current flows?<details><summary>Show answer</summary>Yes, it is forward biased, but only about 4 µA flows: 0.5 V is below the knee, so the barrier still stops nearly all carriers. Almost all of the 0.5 V sits across the diode.</details></li>
+              <li>Raise the supply to 0.8 V, then 1.5 V, then 5 V. Watch the voltage across the diode and the current.<details><summary>Show answer</summary>The diode voltage only creeps up: about 0.65 V, 0.69 V, 0.74 V. The current jumps: about 1.5 mA, 8 mA, 43 mA. Once the diode is on, the extra supply voltage appears across the 100 Ω resistor.</details></li>
+              <li>Set the supply to −10 V. What happens to the depletion layer and the current?<details><summary>Show answer</summary>The layer gets almost 4 times wider (about 1.9 µm instead of 0.5 µm), because carriers are pulled away from the junction. Only about 10 nA leaks through: the diode is effectively off.</details></li>
+              <li>Switch to germanium and try 0.5 V and −10 V again. How is it different from silicon?<details><summary>Show answer</summary>At 0.5 V germanium already conducts about 2.4 mA, because its knee is near 0.3 V. But in reverse it leaks about 2 µA, roughly 200 times more than silicon. That leakage, which grows quickly with temperature, is a main reason silicon replaced germanium.</details></li>
+              <li>Press Sweep and watch the red dot on the graph. Where does the curve suddenly bend upward?<details><summary>Show answer</summary>At the knee, about 0.6–0.7 V for silicon. Below it the curve hugs the axis; above it the current shoots up almost vertically. On the reverse side the curve stays flat just below the axis.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Doping:</strong> adding a tiny amount of another element to a pure semiconductor to give it free electrons (n-type) or holes (p-type).</li>
+              <li><strong>Hole:</strong> a missing electron in the crystal; it moves like a positive charge.</li>
+              <li><strong>Depletion layer:</strong> the region at the junction with no free carriers, only fixed ions.</li>
+              <li><strong>Barrier potential:</strong> the voltage across the depletion layer that stops carriers crossing (≈ 0.7 V Si, 0.3 V Ge).</li>
+              <li><strong>Forward / reverse bias:</strong> connecting + to the p side / + to the n side.</li>
+              <li><strong>Knee voltage:</strong> the forward voltage above which the current rises steeply.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
