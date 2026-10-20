@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Reactivity Series: Which Metal Wins? — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Dip magnesium, zinc, iron, copper and other metals into salt solutions and see which metal pushes out which. Then drop them into water, steam and dilute acid and rank them yourself.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/reactivity-series/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Reactivity Series: Which Metal Wins? — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Dip magnesium, zinc, iron, copper and other metals into salt solutions and see which metal pushes out which. Then drop them into water, steam and dilute acid and rank them yourself.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/reactivity-series/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="reactivity-series">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Some metals react easily, others hardly at all. If we put metals in order, from the one that reacts most to the one that reacts least, we get the <strong>reactivity series</strong>. You can build it yourself with two kinds of test:</p>
+            <ul>
+              <li><strong>Displacement:</strong> a more reactive metal pushes a less reactive metal out of its salt solution. Zinc in blue copper sulphate gets a brown coat of copper, and the blue colour fades. Copper in zinc sulphate does nothing.</li>
+              <li><strong>Hydrogen test:</strong> reactive metals give hydrogen gas with water or dilute acid. The faster the bubbles, the more reactive the metal. Potassium and sodium react violently even with cold water; iron needs steam; copper and silver give no hydrogen even with dilute acid.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">K &gt; Na &gt; Ca &gt; Mg &gt; Al &gt; Zn &gt; Fe &gt; Pb &gt; [H] &gt; Cu &gt; Ag &gt; Au</code>
+            <code class="formula">metal A + salt of B → salt of A + metal B   (only if A is above B)</code>
+            <code class="formula">Zn + CuSO₄ → ZnSO₄ + Cu</code>
+            <code class="formula">2Na + 2H₂O → 2NaOH + H₂   ·   3Fe + 4H₂O(steam) → Fe₃O₄ + 4H₂</code>
+            <code class="formula">metal + dilute acid → salt + hydrogen   (e.g. Mg + 2HCl → MgCl₂ + H₂)</code>
+            <p class="formula-note">Metals below hydrogen (copper, silver, gold) cannot push hydrogen out of dilute acids. Hydrogen gas burns with a “pop” when a lit matchstick is brought near.</p>
+            <p class="formula-note">Simplified: the speeds are made up but in the right order, and a minute in the lab is shown in a few seconds. Strips are assumed to be cleaned with sandpaper. Even then, aluminium starts slowly because of its thin oxide skin, and lead in copper sulphate soon stops because insoluble lead sulphate coats it. Very reactive metals in salt solutions (and magnesium a little) also react with the water itself; the sim leaves that out. In the water tests a drop of phenolphthalein turns pink when a basic hydroxide forms.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Copper sulphate (neela thotha) used on farms should never be mixed in an iron bucket: iron displaces copper and the bucket gets eaten away.</li>
+              <li>Galvanised iron buckets and roof sheets are coated with zinc. Zinc is more reactive than iron, so it corrodes first and protects the iron.</li>
+              <li>Silver jewellery and gold coins stay bright for years because these metals are at the bottom of the series. Gold is found as pure metal in nature.</li>
+              <li>Sodium and potassium are stored under kerosene so they cannot touch air or moisture.</li>
+              <li>In the past, copper was taken out of mine water by dropping scrap iron into it: the copper came out on the iron.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Pick the zinc strip and tap every tube. Which solutions does it change, and what happens to the blue copper sulphate?<details><summary>Show answer</summary>Zinc pushes out iron, lead, copper and silver, but not magnesium or aluminium. In copper sulphate a brown coat of copper forms and the blue fades to colourless, because zinc sulphate is colourless.</details></li>
+              <li>Now try iron in copper sulphate. How is the colour change different from zinc?<details><summary>Show answer</summary>Copper still coats the iron, but the solution turns pale green, not colourless. Iron(II) sulphate is pale green. This is Fe + CuSO₄ → FeSO₄ + Cu.</details></li>
+              <li>Test every metal strip in all seven tubes (or press “Test every tube” for each). Use the results to write the series from most to least reactive.<details><summary>Show answer</summary>Mg &gt; Al &gt; Zn &gt; Fe &gt; Pb &gt; Cu &gt; Ag. Magnesium pushes out all six others, silver pushes out none. The more metals a strip pushes out, the higher it is.</details></li>
+              <li>Switch to “Metals in dilute hydrochloric acid” and test every tube. Which metals give no gas, and why? Then try cold water: which metals react?<details><summary>Show answer</summary>Copper and silver give no hydrogen: they are below hydrogen in the series. Sodium and potassium are never put in acid (they would explode). In cold water only potassium, sodium and calcium react properly; magnesium gives only a few bubbles.</details></li>
+              <li>Turn on the mystery metal X. Using as few tubes as you can, find out what X is.<details><summary>Show answer</summary>Start in the middle (iron sulphate or zinc sulphate). If X pushes the metal out, X is above it; if not, X is the same or below. Each test halves the choices, so about three tubes are enough, just like a binary search.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Reactivity series:</strong> metals listed from most reactive to least reactive.</li>
+              <li><strong>Displacement reaction:</strong> a more reactive element takes the place of a less reactive one in a compound.</li>
+              <li><strong>Galvanising:</strong> coating iron or steel with zinc to stop rusting.</li>
+              <li><strong>Phenolphthalein:</strong> an indicator that is colourless in acids and neutral water and pink in bases.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

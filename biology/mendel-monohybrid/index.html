@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mendel's Monohybrid Cross — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Cross tall and dwarf pea plants like Mendel did: build the Punnett square, grow the F1 and F2 generations seed by seed, and see the 3 : 1 ratio appear, next to Mendel's own counts for seven traits.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/mendel-monohybrid/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Mendel's Monohybrid Cross — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Cross tall and dwarf pea plants like Mendel did: build the Punnett square, grow the F1 and F2 generations seed by seed, and see the 3 : 1 ratio appear, next to Mendel's own counts for seven traits.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/mendel-monohybrid/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="mendel-monohybrid">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Around 1856–1863, Gregor Mendel crossed thousands of garden pea plants and counted their children. He found that each trait, such as tall or dwarf stems, is controlled by a pair of "factors". Today we call the factor a <strong>gene</strong> and its two forms <strong>alleles</strong>.</p>
+            <ul>
+              <li><strong>Law of dominance:</strong> when a plant has two different alleles (Tt), only one shows. The one that shows is <strong>dominant</strong> (T, tall); the hidden one is <strong>recessive</strong> (t, dwarf).</li>
+              <li><strong>Law of segregation:</strong> the two alleles separate when gametes (pollen and egg cells) form. Each gamete carries just <em>one</em> allele, and a child gets one from each parent, purely by chance.</li>
+              <li>So a pure tall plant (TT) crossed with a pure dwarf plant (tt) gives only tall hybrids (Tt) in the <strong>F1</strong>. When the F1 plants self-pollinate, dwarf plants come back in the <strong>F2</strong>, about one in four.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 The Punnett square</h3>
+            <p>Write one parent's gametes across the top and the other's down the side. Each box is one possible child, and each box is equally likely (¼).</p>
+            <code class="formula">F1 × F1: Tt × Tt → 1 TT : 2 Tt : 1 tt</code>
+            <code class="formula">phenotypes: 3 tall : 1 dwarf</code>
+            <code class="formula">test cross: Tt × tt → 1 Tt : 1 tt (1 tall : 1 dwarf)</code>
+            <p class="formula-note">Chance of a dominant-looking child = 1 − (chance of getting a recessive allele from parent 1) × (chance from parent 2). For Tt × Tt that is 1 − ½ × ½ = ¾.</p>
+            <p class="formula-note">Simplified: one gene, two alleles, complete dominance, and every gamete is equally likely to meet every other one. Real plants also have many genes, and some traits blend or depend on the soil and weather. Because each child is a chance event, small batches often miss 3 : 1; big batches get close, as Mendel's did.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Mendel worked in a monastery garden in Brno (now in the Czech Republic). Peas were a good choice: they grow fast, have clear either-or traits, and normally self-pollinate, but he could also cross them by hand by moving pollen with a brush.</li>
+              <li>His F2 counts were close to 3 : 1 for all seven traits, from 2.82 : 1 (pod colour, 580 plants) to 3.15 : 1 (flower colour). The biggest batch, 7,324 seeds for seed shape, gave 2.96 : 1.</li>
+              <li>Plant breeders in India use the same idea when they develop pure-breeding varieties of rice, wheat and pulses and then cross them to combine useful traits.</li>
+              <li>In people, many traits that look simple, such as free or attached earlobes, are often used as classroom examples, but they actually depend on several genes, so families do not always follow neat ratios.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep Parent 1 pure tall (TT) and Parent 2 pure dwarf (tt). Grow 100 offspring. How many are dwarf?<details><summary>Show answer</summary>None. Every child gets T from the tall parent and t from the dwarf parent, so all are Tt and look tall. The dwarf allele is hidden, not lost.</details></li>
+              <li>Press “Self the F1”. Grow 100 offspring, then press Restart and grow another 100. Do you get exactly 75 tall both times?<details><summary>Show answer</summary>Almost never exactly. You might get 71 one time and 79 the next. Each child is a chance event, like tossing two coins. The ratio comes close to 3 : 1, and the graph line wanders around 0.75.</details></li>
+              <li>Set the number of offspring to 4 and self the F1 a few times. Then try 1000. Which batch size gives a ratio closer to 3 : 1?<details><summary>Show answer</summary>The batch of 1000. With only 4 children you often get 4 : 0 or 2 : 2. This is why Mendel counted hundreds or thousands of plants for each trait.</details></li>
+              <li>You have a tall plant but do not know if it is TT or Tt. Cross it with a dwarf plant (tt). What would each answer look like?<details><summary>Show answer</summary>If it is TT, all the children are tall. If it is Tt, about half are dwarf (1 : 1). Try both by setting Parent 1 to pure dominant or hybrid and Parent 2 to pure recessive. This is the test cross.</details></li>
+              <li>Change the trait to seed colour and self the F1. Among the yellow seeds, what share are hybrids (Yy)?<details><summary>Show answer</summary>About two out of three. The Punnett square has 1 YY, 2 Yy and 1 yy; the three yellow boxes are 1 YY and 2 Yy. Watch the ×counts in the square to check.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Gene / allele:</strong> a unit of heredity for one trait / one of its forms (T or t).</li>
+              <li><strong>Genotype / phenotype:</strong> the alleles a plant carries (Tt) / how it looks (tall).</li>
+              <li><strong>Homozygous / heterozygous:</strong> two same alleles (TT or tt, pure-breeding) / two different alleles (Tt, a hybrid).</li>
+              <li><strong>F1 / F2:</strong> the first filial generation (children of the parents) / the second (children of F1 × F1).</li>
+              <li><strong>Monohybrid cross:</strong> a cross that follows just one trait.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

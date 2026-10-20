@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**168 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**172 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -25,9 +25,11 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🧪 **Chemistry: Chemical reactions and equations** (3, Class 10) | Balancing Chemical Equations · Types of Chemical Reactions · Rusting of Iron |
 | 🔥 **Chemistry: Combustion and flame** (3, Class 8) | The Fire Triangle: Fuel, Air and Heat · Zones of a Candle Flame · Fuels and Calorific Value |
 | ⚛️ **Chemistry: Atoms and molecules** (3, Class 9) | Conservation of Mass and Fixed Proportions · Writing Formulae from Valency · The Mole: Counting Atoms by Weighing |
+| 🔩 **Chemistry: Metals and non-metals** (3, Class 8 and 10) | Reactivity Series: Which Metal Wins? · Ionic Bonds: Giving and Taking Electrons · Metal or Non-metal? Lab Tests |
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
 | 🔬 **Biology: The fundamental unit of life** (3, Class 9) | Cell Explorer: Plant, Animal and Bacterial Cells · Osmosis: Potato, Raisins and Plant Cells · Diffusion Across a Membrane |
 | 🫀 **Biology: Life processes** (3, Class 10) | Heart & Double Circulation · Digestion Along the Gut · Kidney & Nephron |
+| 🧬 **Biology: Principles of inheritance** (1, Class 10 and 12) | Mendel's Monohybrid Cross |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
 | 📐 **Mathematics: Mensuration** (3, Class 8) | Area of a Trapezium · Surface Area from Nets · Volume & Capacity |
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |

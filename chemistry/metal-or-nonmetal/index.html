@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metal or Non-metal? Lab Tests — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Test iron, copper, aluminium, magnesium, sulphur, coal, graphite and iodine: shine, the hammer test, the bulb tester, a ringing sound and burning the element to see if its oxide turns litmus red or blue.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/metal-or-nonmetal/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Metal or Non-metal? Lab Tests — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Test iron, copper, aluminium, magnesium, sulphur, coal, graphite and iodine: shine, the hammer test, the bulb tester, a ringing sound and burning the element to see if its oxide turns litmus red or blue.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/metal-or-nonmetal/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="metal-or-nonmetal">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Elements can be sorted into <strong>metals</strong> and <strong>non-metals</strong> by simple tests. No single test decides it. You look at several properties together:</p>
+            <ul>
+              <li><strong>Lustre:</strong> a freshly rubbed metal surface shines. Most non-metals stay dull.</li>
+              <li><strong>Malleability:</strong> a hammer beats a metal into a flat sheet. Non-metals like sulphur and coal are <strong>brittle</strong>: they break into powder.</li>
+              <li><strong>Conductivity:</strong> metals let electric current through, so the tester's bulb glows. Most non-metals do not.</li>
+              <li><strong>Sonority:</strong> metals make a ringing sound when they hit something hard. Non-metals give a dull thud.</li>
+              <li><strong>Oxides:</strong> when an element burns in air it forms an oxide. Metal oxides are <strong>basic</strong> (red litmus turns blue). Non-metal oxides are <strong>acidic</strong> (blue litmus turns red).</li>
+            </ul>
+            <p>There are exceptions. <strong>Graphite</strong> (pencil lead) is a non-metal that conducts electricity. <strong>Iodine</strong> is a non-metal with a shiny surface. That is why scientists use many properties, not one.</p>
+          </section>
+          <section>
+            <h3>🧮 What happens when they burn</h3>
+            <code class="formula">2Mg + O₂ → 2MgO (white ash)</code>
+            <code class="formula">MgO + H₂O → Mg(OH)₂ (basic: red litmus → blue)</code>
+            <code class="formula">S + O₂ → SO₂ (gas)</code>
+            <code class="formula">SO₂ + H₂O → H₂SO₃ (acidic: blue litmus → red)</code>
+            <code class="formula">C + O₂ → CO₂;  CO₂ + H₂O → H₂CO₃ (weak acid)</code>
+            <p class="formula-note">Copper and iron oxides are basic too, but they hardly dissolve in water, so litmus barely changes. They still react with acids. Aluminium and zinc oxides are <strong>amphoteric</strong>: they react with both acids and bases, and they do not dissolve in water, so litmus shows nothing. Aluminium does not catch fire in a lamp flame: a thin oxide layer forms and protects the metal. Iodine does not burn at all; on heating it turns straight into a violet vapour (it <strong>sublimes</strong>).</p>
+            <p class="formula-note">Simplified: each test gives one clear result as a school lab would see it. Real samples vary: cold zinc is fairly brittle and may crack, a lump of coal conducts a tiny current that a bulb cannot show, and pencil lead is graphite mixed with clay. Sodium and potassium (soft metals kept under kerosene) and mercury (a liquid metal) are left out because they are unsafe to handle in a school test.</p>
+            <p class="formula-note"><strong>Safety:</strong> never burn sulphur or magnesium at home. Sulphur dioxide is a choking, poisonous gas, and burning magnesium is bright enough to hurt your eyes. These tests are done in a lab, with a teacher.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Aluminium foil for wrapping rotis is a metal hammered and rolled extremely thin: malleability.</li>
+              <li>Electric wires are copper or aluminium because they conduct well and can be drawn into wires (<strong>ductility</strong>).</li>
+              <li>Steel plates and tumblers clatter loudly when they fall, and temple bells are made of metal (bronze) because metals are sonorous.</li>
+              <li>Silver and gold are beaten into the thin “varak” sheets on sweets, and they keep their shine for jewellery.</li>
+              <li>Pencil “lead” is not lead at all: it is graphite, which also makes the electrodes in dry cells.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose the hammer test and hit every sample. Which ones become sheets, and which crumble?<details><summary>Show answer</summary>Iron, copper, aluminium and magnesium flatten into sheets. Zinc flattens a little but cracks at the edges (it is less malleable when cold). Sulphur, coal, graphite and iodine break into powder: they are brittle non-metals.</details></li>
+              <li>Use the bulb tester on all nine samples. Which non-metal lights the bulb?<details><summary>Show answer</summary>Graphite. It is a form of carbon whose electrons can move along its layers, so it conducts even though it is a non-metal. Coal, sulphur and iodine leave the bulb off.</details></li>
+              <li>Burn magnesium and sulphur, then look at the litmus papers. What does each oxide tell you?<details><summary>Show answer</summary>Magnesium oxide dissolves a little to form magnesium hydroxide, so red litmus turns blue: a basic oxide, typical of a metal. Sulphur dioxide dissolves to form sulphurous acid, so blue litmus turns red: an acidic oxide, typical of a non-metal.</details></li>
+              <li>Burn copper. The litmus papers do not change. Does that mean copper is a non-metal?<details><summary>Show answer</summary>No. Copper oxide is a basic oxide, but it does not dissolve in water, so it cannot change litmus. The other four tests all say “metal”. One test alone can mislead you.</details></li>
+              <li>Turn on “Mystery samples”. Identify every sample as a metal or a non-metal using as few tests as you can.<details><summary>Show answer</summary>The bulb tester and the hammer test together sort most samples quickly. The only one that conducts but crumbles is graphite (a non-metal). A sample that shines but crumbles and does not conduct is iodine.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Lustre:</strong> the shine of a freshly cut or rubbed surface.</li>
+              <li><strong>Malleable:</strong> can be beaten into thin sheets. <strong>Ductile:</strong> can be drawn into wires.</li>
+              <li><strong>Brittle:</strong> breaks into pieces when hit.</li>
+              <li><strong>Sonorous:</strong> makes a ringing sound when struck.</li>
+              <li><strong>Basic / acidic oxide:</strong> an oxide whose solution turns red litmus blue / blue litmus red.</li>
+              <li><strong>Amphoteric oxide:</strong> reacts with both acids and bases (aluminium oxide, zinc oxide).</li>
+            </ul>
+          </section>
+        </div>
+</details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

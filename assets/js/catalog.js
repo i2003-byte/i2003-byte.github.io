@@ -2935,6 +2935,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-16',
     prerequisites: ['faradays-law', 'lenz-law']
+  },
+  {
+    id: 'reactivity-series',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Reactivity Series: Which Metal Wins?',
+    description:
+      'Dip magnesium, zinc, iron, copper and other metals into salt solutions and see which metal pushes out which. Then drop them into water, steam and dilute acid and rank them yourself.',
+    level: 'Intermediate',
+    tags: ['reactivity series', 'metals', 'displacement', 'metals and non-metals', 'hydrogen', 'dilute acid', 'water', 'chemical reactions', 'class 10'],
+    thumbnail: '/assets/img/thumbs/reactivity-series.svg',
+    link: '/chemistry/reactivity-series/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: ['reaction-types']
+  },
+  {
+    id: 'ionic-bonding',
+    subject: 'chemistry',
+    branch: 'bonding',
+    title: 'Ionic Bonds: Giving and Taking Electrons',
+    description:
+      'Watch sodium hand an electron to chlorine, draw the electron-dot diagrams for NaCl, MgO, MgCl₂ and more, then test why ionic solids melt so hot and conduct only when molten or dissolved.',
+    level: 'Intermediate',
+    tags: ['ionic bond', 'electron transfer', 'electron dot', 'ions', 'octet', 'sodium chloride', 'conductivity', 'melting point', 'metals and non-metals', 'class 10'],
+    thumbnail: '/assets/img/thumbs/ionic-bonding.svg',
+    link: '/chemistry/ionic-bonding/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: ['valency-formula']
+  },
+  {
+    id: 'metal-or-nonmetal',
+    subject: 'chemistry',
+    branch: 'reactions',
+    title: 'Metal or Non-metal? Lab Tests',
+    description:
+      'Test iron, copper, aluminium, magnesium, sulphur, coal, graphite and iodine: shine, the hammer test, the bulb tester, a ringing sound and burning the element to see if its oxide turns litmus red or blue.',
+    level: 'Beginner',
+    tags: ['metals', 'non-metals', 'malleability', 'ductility', 'conductivity', 'lustre', 'sonorous', 'metal oxides', 'litmus', 'metals and non-metals', 'class 8', 'class 10'],
+    thumbnail: '/assets/img/thumbs/metal-or-nonmetal.svg',
+    link: '/chemistry/metal-or-nonmetal/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: []
+  },
+  {
+    id: 'mendel-monohybrid',
+    subject: 'biology',
+    branch: 'genetics',
+    title: "Mendel's Monohybrid Cross",
+    description:
+      "Cross tall and dwarf pea plants like Mendel did: build the Punnett square, grow the F1 and F2 generations seed by seed, and see the 3 : 1 ratio appear, next to Mendel's own counts for seven traits.",
+    level: 'Intermediate',
+    tags: ['mendel', 'monohybrid cross', 'punnett square', 'dominant', 'recessive', 'genotype', 'phenotype', 'heredity', 'inheritance', 'pea plant', 'class 10', 'class 12'],
+    thumbnail: '/assets/img/thumbs/mendel-monohybrid.svg',
+    link: '/biology/mendel-monohybrid/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: []
   }
 ];
 

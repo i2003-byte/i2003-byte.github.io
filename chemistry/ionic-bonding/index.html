@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ionic Bonds: Giving and Taking Electrons — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch sodium hand an electron to chlorine, draw the electron-dot diagrams for NaCl, MgO, MgCl₂ and more, then test why ionic solids melt so hot and conduct only when molten or dissolved.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/ionic-bonding/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Ionic Bonds: Giving and Taking Electrons — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch sodium hand an electron to chlorine, draw the electron-dot diagrams for NaCl, MgO, MgCl₂ and more, then test why ionic solids melt so hot and conduct only when molten or dissolved.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/ionic-bonding/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="ionic-bonding">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Atoms are most stable when their outer shell is full: 8 electrons (an <strong>octet</strong>), like the noble gases neon and argon. A metal atom has only 1, 2 or 3 electrons in its outer shell, so it is easier for it to <strong>give them away</strong>. A non-metal atom such as chlorine or oxygen is 1 or 2 electrons short, so it <strong>takes</strong> them.</p>
+            <p>The metal atom becomes a positive ion (<strong>cation</strong>), the non-metal atom a negative ion (<strong>anion</strong>). Opposite charges pull hard on each other. This pull is the <strong>ionic bond</strong>, and the compound is an ionic (electrovalent) compound.</p>
+          </section>
+          <section>
+            <h3>🧮 Rules</h3>
+            <code class="formula">Na (2,8,1) → Na⁺ (2,8) + e⁻</code>
+            <code class="formula">Cl (2,8,7) + e⁻ → Cl⁻ (2,8,8)</code>
+            <code class="formula">Mg (2,8,2) + 2 Cl → Mg²⁺ + 2 Cl⁻ = MgCl₂</code>
+            <p>Electrons given = electrons taken, so the total charge of the compound is zero. Magnesium gives 2 electrons but each chlorine takes only 1, so it needs two chlorine atoms. Two aluminium atoms give 6 electrons, exactly what three oxygen atoms need: Al₂O₃.</p>
+            <p>Ionic solids melt at high temperatures because millions of ions hold one another in a <strong>lattice</strong>. Ions with bigger charges pull harder: Mg²⁺ and O²⁻ in MgO hold on far more strongly than Na⁺ and Cl⁻, so MgO melts at 2852 °C and NaCl at 801 °C.</p>
+            <p>To carry an electric current, charged particles must be free to move. In a solid the ions are locked in place, so it does not conduct. When it melts or dissolves, the ions move: positive ions to the negative electrode, negative ions to the positive one.</p>
+            <p class="formula-note">Simplified: atoms are drawn with the shell (Bohr) model, not to scale. The lattice is a flat 2D picture with only a few dozen ions; real crystals are 3D (NaCl is a cube pattern). At the electrodes the ions actually change into new substances (electrolysis); here a fresh ion simply enters from the far side. Melting points are rounded data-book values. MgO and Al₂O₃ hardly dissolve in water; CaO and Na₂O react with water, so their solutions hold OH⁻ ions instead of O²⁻.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Common salt is sodium chloride. Much of India's salt comes from sea water dried in the sun in Gujarat and Tamil Nadu, and from Sambhar lake in Rajasthan.</li>
+              <li>ORS (oral rehydration solution) has sodium chloride and potassium chloride. Their ions dissolved in water help the body hold water during diarrhoea.</li>
+              <li>Electric shocks are more dangerous with wet hands: the salts in sweat dissolve and their ions carry current.</li>
+              <li>Furnace linings and fire bricks use magnesium oxide and aluminium oxide because they melt only above 2000 °C.</li>
+              <li>Aluminium is made by passing current through molten aluminium oxide: the Al³⁺ ions collect at the negative electrode.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose NaCl and press Start. How many electrons move, and what are the shells of the two ions?<details><summary>Show answer</summary>One electron moves. Na⁺ has 2,8 (like neon) and Cl⁻ has 2,8,8 (like argon). Both now have full outer shells.</details></li>
+              <li>Choose MgCl₂. Why are there two chlorine atoms?<details><summary>Show answer</summary>Magnesium (2,8,2) must lose 2 electrons, but a chlorine atom (2,8,7) can take only 1. Two chlorine atoms take one each, giving Mg²⁺ and two Cl⁻: total charge +2 − 2 = 0.</details></li>
+              <li>Choose Al₂O₃ and count the electrons that move. Check the charges add up to zero.<details><summary>Show answer</summary>Six electrons move: each aluminium gives 3 and each oxygen takes 2. Charges: 2 × (+3) + 3 × (−2) = 0.</details></li>
+              <li>Choose NaCl and “Test: solid in a bulb tester”, then “heat it until molten”, then “dissolve it in water”. When does the bulb glow, and why?<details><summary>Show answer</summary>Not for the solid: its ions are locked in the lattice. It glows once the salt melts (801 °C) and when it is dissolved, because then the ions are free to move to the electrodes.</details></li>
+              <li>Now pick sugar and run the same three tests. What is different?<details><summary>Show answer</summary>The bulb never glows. Sugar is covalent: it is made of molecules with no charge, so even when melted (at about 186 °C, a low temperature) or dissolved there are no ions to carry current.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Ion:</strong> an atom (or group of atoms) with a charge because it has lost or gained electrons.</li>
+              <li><strong>Cation / anion:</strong> a positive ion (metals) / a negative ion (non-metals).</li>
+              <li><strong>Octet:</strong> 8 electrons in the outer shell, a stable arrangement.</li>
+              <li><strong>Electron-dot (Lewis) structure:</strong> the symbol with its outer electrons shown as dots or crosses.</li>
+              <li><strong>Ionic (electrovalent) bond:</strong> the attraction between oppositely charged ions formed by electron transfer.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

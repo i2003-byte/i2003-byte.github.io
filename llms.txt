@@ -210,6 +210,10 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Writing Formulae from Valency](https://i2003-byte.github.io/chemistry/valency-formula/): Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out each formula unit mass. (Beginner)
 - [The Mole: Counting Atoms by Weighing](https://i2003-byte.github.io/chemistry/mole-concept/): Weigh carbon, water, salt, sugar and metals and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³. (Intermediate)
 
+### Bonding
+
+- [Ionic Bonds: Giving and Taking Electrons](https://i2003-byte.github.io/chemistry/ionic-bonding/): Watch sodium hand an electron to chlorine, draw the electron-dot diagrams for NaCl, MgO, MgCl₂ and more, then test why ionic solids melt so hot and conduct only when molten or dissolved. (Intermediate)
+
 ### Reactions
 
 - [Balancing Chemical Equations](https://i2003-byte.github.io/chemistry/balancing-equations/): Balance chemical equations by counting atoms: change the number of each molecule, watch coloured atom pictures and a left-versus-right tally, from 2H₂ + O₂ → 2H₂O to burning LPG and photosynthesis. (Intermediate)
@@ -218,6 +222,8 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [The Fire Triangle: Fuel, Air and Heat](https://i2003-byte.github.io/chemistry/fire-triangle/): Light paper, wood, kerosene or a gas stove and keep it burning only while fuel, oxygen and heat are all there. Put fires out with a lid, sand, water or a CO₂ extinguisher, and see why water is wrong for an oil or electrical fire. (Beginner)
 - [Zones of a Candle Flame](https://i2003-byte.github.io/chemistry/candle-flame/): Look inside a candle flame: the dark zone of unburnt wax vapour, the yellow luminous zone and the hot blue outer zone. Probe it with a glass plate, a glass tube, a copper wire and a thermometer, or cover it with a jar. (Beginner)
 - [Fuels and Calorific Value](https://i2003-byte.github.io/chemistry/fuel-calorific-value/): Boil the same pot of water with cow dung cakes, wood, coal, kerosene, LPG, CNG, biogas or hydrogen. Compare how many grams each fuel needs, its calorific value, the stove’s efficiency and the smoke it makes. (Intermediate)
+- [Reactivity Series: Which Metal Wins?](https://i2003-byte.github.io/chemistry/reactivity-series/): Dip magnesium, zinc, iron, copper and other metals into salt solutions and see which metal pushes out which. Then drop them into water, steam and dilute acid and rank them yourself. (Intermediate)
+- [Metal or Non-metal? Lab Tests](https://i2003-byte.github.io/chemistry/metal-or-nonmetal/): Test iron, copper, aluminium, magnesium, sulphur, coal, graphite and iodine: shine, the hammer test, the bulb tester, a ringing sound and burning the element to see if its oxide turns litmus red or blue. (Beginner)
 
 ## Mathematics
 
@@ -280,6 +286,10 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 - [Cell Explorer: Plant, Animal and Bacterial Cells](https://i2003-byte.github.io/biology/cell-explorer/): Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself. (Beginner)
 - [Osmosis: Potato, Raisins and Plant Cells](https://i2003-byte.github.io/biology/osmosis/): Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope. (Intermediate)
 - [Diffusion Across a Membrane](https://i2003-byte.github.io/biology/diffusion/): Watch glucose and starch molecules wander at random in water. See glucose spread through a selectively permeable membrane until both sides are equal, while starch stays behind. Change the temperature. (Beginner)
+
+### Genetics
+
+- [Mendel's Monohybrid Cross](https://i2003-byte.github.io/biology/mendel-monohybrid/): Cross tall and dwarf pea plants like Mendel did: build the Punnett square, grow the F1 and F2 generations seed by seed, and see the 3 : 1 ratio appear, next to Mendel's own counts for seven traits. (Intermediate)
 
 ## Astronomy (coming soon)
 
