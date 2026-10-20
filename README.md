@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**172 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**176 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -29,7 +29,7 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🌿 **Biology: Nutrition in plants** (3, Class 7 and 10) | Photosynthesis in a Leaf · Oxygen Bubbles from a Water Plant · Starch Test on a Leaf |
 | 🔬 **Biology: The fundamental unit of life** (3, Class 9) | Cell Explorer: Plant, Animal and Bacterial Cells · Osmosis: Potato, Raisins and Plant Cells · Diffusion Across a Membrane |
 | 🫀 **Biology: Life processes** (3, Class 10) | Heart & Double Circulation · Digestion Along the Gut · Kidney & Nephron |
-| 🧬 **Biology: Principles of inheritance** (1, Class 10 and 12) | Mendel's Monohybrid Cross |
+| 🧬 **Biology: Principles of inheritance** (3, Class 10 and 12) | Mendel's Monohybrid Cross · Mendel's Dihybrid Cross · Sex Determination and Blood Groups |
 | 📐 **Mathematics: Lines, angles and triangles** (3, Class 7) | Parallel Lines and a Transversal · Angle Sum of a Triangle · Pythagoras' Theorem by Rearrangement |
 | 📐 **Mathematics: Mensuration** (3, Class 8) | Area of a Trapezium · Surface Area from Nets · Volume & Capacity |
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |
@@ -40,6 +40,7 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🌏 **Geography: Weather and climate** (6, Class 7 and 11) | Monsoon Winds over India · Humidity, Clouds and Rain · Climate Graphs of Indian Cities · Why Deserts Are Hot by Day and Cold at Night · How Wind Shapes the Desert · Why a Low Sun Heats Less |
 | 🌏 **Geography: Maps** (3, Class 9 and 11) | Contour Lines from a Model Hill · Reading a Contour Map: Cross-Sections · Map Scale and Distance in India |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
+| 💰 **Economics: Money and credit** (2, Class 8 and 10) | Barter vs Money: Double Coincidence of Wants · Simple vs Compound Interest |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
 
 ## Features

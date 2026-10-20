@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Simple vs Compound Interest — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch ₹10,000 grow year by year with simple and compound interest. Change the rate, time and how often interest is added, and see interest on interest pull away, from a bank FD to a moneylender's loan.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/economics/simple-compound-interest/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Simple vs Compound Interest — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch ₹10,000 grow year by year with simple and compound interest. Change the rate, time and how often interest is added, and see interest on interest pull away, from a bank FD to a moneylender's loan.">
+  <meta property="og:url" content="https://i2003-byte.github.io/economics/simple-compound-interest/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="simple-compound-interest">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>When you keep money in a bank, the bank pays you <strong>interest</strong> for using it. When you borrow, you pay interest to the lender. There are two ways to count it.</p>
+            <ul>
+              <li><strong>Simple interest:</strong> interest is worked out on the original amount (the <strong>principal</strong>) only. The same amount is added every year, so the bars grow in equal steps.</li>
+              <li><strong>Compound interest:</strong> each time interest is added, it joins the principal, and next time it earns interest too. This <strong>interest on interest</strong> (orange in the bars) is small at first, then grows faster and faster.</li>
+              <li>Banks compound interest on fixed deposits and most loans, so the compound bar is the one that usually matters in real life.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">SI = P × R × T ÷ 100,   A = P + SI</code>
+            <code class="formula">A = P × (1 + R ÷ 100)^T   (compounded yearly)</code>
+            <code class="formula">A = P × (1 + R ÷ 100k)^(k × T)   (added k times a year)</code>
+            <code class="formula">time to double ≈ 72 ÷ R years (compound) · 100 ÷ R years (simple)</code>
+            <p class="formula-note">Example: ₹10,000 at 10% for 2 years. Simple: 10,000 + 2,000 = ₹12,000. Compound yearly: 10,000 × 1.1 × 1.1 = ₹12,100. The extra ₹100 is the 10% interest earned on the first year's ₹1,000 of interest.</p>
+            <p class="formula-note">Simplified: one fixed rate for the whole time, no tax on interest, no repayments and no fees. For a loan, the picture shows what you would owe if you paid nothing back; with equal monthly payments (EMIs) the amount owed falls instead. Compound interest is added only at the end of each period, so the bars and graph rise in steps.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Bank fixed deposits in India usually compound interest every quarter. A 7% FD then grows like 7.19% a year (the “effective yearly rate” readout).</li>
+              <li>Some village moneylenders charge 3% to 5% <em>a month</em>, which is 36% to 60% a year. At 36% compounded, a ₹10,000 loan becomes about ₹18,500 in 2 years and over ₹46,000 in 5 years if nothing is paid back. This is how farmers fall into debt traps, and why formal credit from banks, cooperatives and self-help groups matters.</li>
+              <li>Credit card dues that are not paid in full are charged around 3–3.75% a month, compounded, one of the most expensive kinds of credit.</li>
+              <li>The rule of 72 is a quick mental check: at 8% a year, money doubles in about 72 ÷ 8 = 9 years.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep ₹10,000 at 10% yearly. Let 10 years pass. How much is simple interest, and how much is compound?<details><summary>Show answer</summary>Simple: ₹20,000, exactly double. Compound: ₹25,937. The orange interest on interest is ₹5,937, bigger than five years of simple interest.</details></li>
+              <li>At 10% for 1 year, is there any difference between simple and compound yearly? Now change to monthly.<details><summary>Show answer</summary>Yearly, both give ₹11,000 after one year: interest has not been added yet, so there is no interest on interest. Monthly, compound gives ₹11,047, because interest is added 12 times and starts earning straight away.</details></li>
+              <li>Press the “Moneylender 36%” preset, choose “A loan”, and set the time to 5 years. What do you owe?<details><summary>Show answer</summary>About ₹46,500 with yearly compounding, nearly 4.7 times the loan. Simple interest would give ₹28,000. Try monthly: it is even more, about ₹59,000.</details></li>
+              <li>Use the doubling readout: how many years does money take to double at 6%, 9% and 12%? Check the rule of 72.<details><summary>Show answer</summary>About 11.9, 8.0 and 6.1 years with yearly compounding. 72 ÷ 6 = 12, 72 ÷ 9 = 8, 72 ÷ 12 = 6, so the rule is very close.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Principal:</strong> the amount first deposited or borrowed.</li>
+              <li><strong>Rate of interest:</strong> the interest on ₹100 for one year, written as % per annum (p.a.).</li>
+              <li><strong>Compounding period:</strong> how often interest is added to the principal (yearly, half-yearly, quarterly, monthly).</li>
+              <li><strong>Effective annual rate:</strong> the yearly rate that would give the same growth if interest were added only once a year.</li>
+              <li><strong>Collateral:</strong> an asset (land, gold) that a borrower pledges to the lender until the loan is repaid.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

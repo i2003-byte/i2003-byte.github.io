@@ -172,6 +172,11 @@ Move prices, change incomes and watch demand and supply respond. Simple models o
 - [Supply and Market Equilibrium](https://i2003-byte.github.io/economics/supply-equilibrium/): Add sellers to the mango market, find where supply crosses demand, and press Play to watch a shortage or surplus push the price to equilibrium. (Intermediate)
 - [Price Ceiling and Price Floor](https://i2003-byte.github.io/economics/price-controls/): Put a price ceiling or a minimum support price on a wheat market and see the shortage, black market or surplus it creates, and what ration shops and procurement change. (Intermediate)
 
+### Money & Interest
+
+- [Barter vs Money: Double Coincidence of Wants](https://i2003-byte.github.io/economics/barter-vs-money/): Two villages with the same traders: one swaps goods, one pays with rupee notes. Watch barter get stuck without a double coincidence of wants, while money lets everyone trade. (Beginner)
+- [Simple vs Compound Interest](https://i2003-byte.github.io/economics/simple-compound-interest/): Watch ₹10,000 grow year by year with simple and compound interest. Change the rate, time and how often interest is added, and see interest on interest pull away, from a bank FD to a moneylender's loan. (Intermediate)
+
 ## Computer Science
 
 Count in binary, wire up logic gates and race sorting algorithms. The ideas inside every phone and computer, one step at a time.
@@ -290,6 +295,8 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 ### Genetics
 
 - [Mendel's Monohybrid Cross](https://i2003-byte.github.io/biology/mendel-monohybrid/): Cross tall and dwarf pea plants like Mendel did: build the Punnett square, grow the F1 and F2 generations seed by seed, and see the 3 : 1 ratio appear, next to Mendel's own counts for seven traits. (Intermediate)
+- [Mendel's Dihybrid Cross](https://i2003-byte.github.io/biology/dihybrid-cross/): Cross round yellow and wrinkled green peas like Mendel: see the four kinds of gametes, a 4 × 4 Punnett square and the 9 : 3 : 3 : 1 ratio, and why independent assortment makes new mixes of traits. (Intermediate)
+- [Sex Determination and Blood Groups](https://i2003-byte.github.io/biology/sex-blood-groups/): See why the father's X or Y sperm decides a baby's sex, and how three alleles and codominance give the A, B, AB and O blood groups. Pick the parents' genes and watch which children are possible. (Intermediate)
 
 ## Astronomy (coming soon)
 

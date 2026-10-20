@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mendel's Dihybrid Cross — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Cross round yellow and wrinkled green peas like Mendel: see the four kinds of gametes, a 4 × 4 Punnett square and the 9 : 3 : 3 : 1 ratio, and why independent assortment makes new mixes of traits.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/dihybrid-cross/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Mendel's Dihybrid Cross — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Cross round yellow and wrinkled green peas like Mendel: see the four kinds of gametes, a 4 × 4 Punnett square and the 9 : 3 : 3 : 1 ratio, and why independent assortment makes new mixes of traits.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/dihybrid-cross/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="dihybrid-cross">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>After following one trait at a time, Mendel asked a bolder question: if a plant differs in <em>two</em> traits, are they passed on together, or separately? He crossed pure-breeding plants with <strong>round yellow</strong> seeds (RRYY) with pure plants that had <strong>wrinkled green</strong> seeds (rryy).</p>
+            <ul>
+              <li>All the F1 seeds were round and yellow (RrYy). Round and yellow are both dominant.</li>
+              <li>When the F1 plants self-pollinated, the F2 had <strong>four</strong> kinds of seeds, including two new mixes that neither grandparent had: round green and wrinkled yellow.</li>
+              <li><strong>Law of independent assortment:</strong> the alleles for seed shape and the alleles for seed colour go into gametes separately. A RrYy plant makes four kinds of gametes, RY, Ry, rY and ry, in equal numbers.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 The 4 × 4 Punnett square</h3>
+            <p>Four kinds of egg cells meet four kinds of pollen, so the square has 16 equally likely boxes, each ¹⁄₁₆.</p>
+            <code class="formula">RrYy × RrYy → 9 round yellow : 3 round green : 3 wrinkled yellow : 1 wrinkled green</code>
+            <code class="formula">P(round yellow) = P(round) × P(yellow) = ¾ × ¾ = 9⁄16</code>
+            <code class="formula">test cross: RrYy × rryy → 1 : 1 : 1 : 1</code>
+            <p class="formula-note">Look at one gene at a time and the old 3 : 1 is still there: 12 round : 4 wrinkled, and 12 yellow : 4 green. The 9 : 3 : 3 : 1 is just (3 : 1) × (3 : 1).</p>
+            <p class="formula-note">Simplified: complete dominance, every gamete equally likely, and the two genes on different chromosomes. Genes that sit close together on the <em>same</em> chromosome are <strong>linked</strong> and tend to travel together, so they break the 9 : 3 : 3 : 1 rule (you meet linkage in Class 12). Small batches wander away from the expected ratio by chance.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Mendel's own F2 count was 315 round yellow, 108 round green, 101 wrinkled yellow and 32 wrinkled green, out of 556 seeds. Scaled to 16 that is 9.1 : 3.1 : 2.9 : 0.9, very close to 9 : 3 : 3 : 1.</li>
+              <li>Breeders use independent assortment to put two good traits into one variety. For example, crossing a high-yielding wheat with a disease-resistant one and picking the rare F2 plants that have both, then breeding them until they are pure.</li>
+              <li>Mendel was lucky: the seven pea traits he studied behave almost independently. Had he picked two linked genes, his numbers would not have fitted this neat pattern.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Press “Pure × pure”, then Grow seeds. What do all the F1 seeds look like, and what is their genotype?<details><summary>Show answer</summary>All are round and yellow, and every box in the square is RrYy. Each child gets RY from one parent and ry from the other.</details></li>
+              <li>Press “Self the F1” and set Highlight to “Wrinkled green boxes”. How many of the 16 boxes light up?<details><summary>Show answer</summary>Just one, rryy. A seed is wrinkled green only if it gets ry from both parents: ¼ × ¼ = ¹⁄₁₆. Try round yellow next: 9 boxes.</details></li>
+              <li>Set the number of seeds to 556 (Mendel's batch) and grow the F2. Compare “Observed, scaled to 16” with Mendel's count.<details><summary>Show answer</summary>Both land near 9 : 3 : 3 : 1, but never exactly, and your run will differ from Mendel's and from the next run. That is chance at work. With 1600 seeds the numbers usually get closer.</details></li>
+              <li>In the F2, look at the readouts “Shape alone” and “Colour alone”. What ratio do you see for each?<details><summary>Show answer</summary>About 3 : 1 for each. Seed shape and seed colour each follow the monohybrid rule on their own, which shows the two genes are sorted independently.</details></li>
+              <li>A round yellow plant of unknown genotype is crossed with rryy. Its seeds come out round yellow and round green, half and half. What was its genotype?<details><summary>Show answer</summary>RRYy. All children are round, so it gives only R; half are green, so it carries one y. Check it by setting Parent 1 to RRYy and Parent 2 to rryy.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Dihybrid cross:</strong> a cross that follows two traits at once.</li>
+              <li><strong>Independent assortment:</strong> alleles of different genes enter gametes independently of each other.</li>
+              <li><strong>Recombinant:</strong> an offspring with a new mix of traits not seen in either original parent (round green, wrinkled yellow).</li>
+              <li><strong>Test cross:</strong> crossing with a fully recessive plant (rryy) to reveal an unknown genotype.</li>
+              <li><strong>Linkage:</strong> genes close together on one chromosome, which tend to be inherited together.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

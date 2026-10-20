@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Barter vs Money: Double Coincidence of Wants — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Two villages with the same traders: one swaps goods, one pays with rupee notes. Watch barter get stuck without a double coincidence of wants, while money lets everyone trade.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/economics/barter-vs-money/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Barter vs Money: Double Coincidence of Wants — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Two villages with the same traders: one swaps goods, one pays with rupee notes. Watch barter get stuck without a double coincidence of wants, while money lets everyone trade.">
+  <meta property="og:url" content="https://i2003-byte.github.io/economics/barter-vs-money/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="barter-vs-money">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Before money, people <strong>bartered</strong>: they swapped goods directly. A farmer with rice who wants shoes must find a cobbler who wants rice, at the same time and place. This is the <strong>double coincidence of wants</strong>: each side must have what the other wants.</p>
+            <ul>
+              <li>In a real village that rarely happens. The cobbler may want cloth, not rice, so the farmer walks home with his rice and no shoes.</li>
+              <li><strong>Money removes the problem.</strong> Everyone accepts it, so the farmer can sell rice to whoever wants rice, and pay the cobbler with the money. Only one side of the coincidence is needed for each deal.</li>
+              <li>That is why money is called a <strong>medium of exchange</strong>: it sits in the middle of every trade.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 How the two villages work</h3>
+            <p>Both villages have the same traders and the same wants. Every hour the traders split into random pairs, and the same pairs meet in both villages.</p>
+            <code class="formula">Barter deal: A has what B wants AND B has what A wants</code>
+            <code class="formula">Money deal: A wants what B has, and A has a ₹ note</code>
+            <p class="formula-note">Each trader makes one good and wants one other good, and each good is wanted by exactly one person. In the money village everyone starts with one ₹ note, and every good costs one note. A seller keeps the note and spends it later.</p>
+            <p class="formula-note">Simplified: one unit of each good, equal prices, and no chains of swaps. Real barter traders sometimes take a good they don't want, hoping to swap it again, but that needs extra trips and trust, and perishable goods like milk and fish spoil while they wait.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Weekly <em>haats</em> in rural India still see some barter: a little grain for vegetables, or forest produce for salt. In Assam, the Jonbeel Mela near Jagiroad is famous as a fair where people still trade goods by barter.</li>
+              <li>Over history, many things served as money: grain, cattle, cowrie shells, then metal coins. The Indian rupee coin goes back to the silver <em>rupiya</em> of Sher Shah Suri in the 1540s.</li>
+              <li>Today's notes are issued by the Reserve Bank of India and are accepted because the law says they must be (legal tender). UPI payments and bank deposits are money too, and do the same job without paper.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep “Random wants” and open the market. After 40 hours, how many traders got what they wanted in each village?<details><summary>Show answer</summary>Usually everyone in the money village, often within 15 to 25 hours, but only a few in the barter village, just the traders who happen to form perfect pairs. Check “Perfect swap pairs”: barter can never do better than that.</details></li>
+              <li>Choose “A circle”. What happens in the barter village?<details><summary>Show answer</summary>Nobody ever trades. A wants B's good, but B wants C's, not A's, so no meeting has a double coincidence. The money village still finishes, because each buyer only needs a note.</details></li>
+              <li>Choose “Perfect pairs”. Is barter still worse than money?<details><summary>Show answer</summary>Not really. Every trader has a swap partner, so both villages finish, at about the same speed. Barter works when wants happen to match. Money matters because in real life they rarely do.</details></li>
+              <li>Press “New village” a few times with 10 traders. Count the red ✗ meetings in the barter village.<details><summary>Show answer</summary>Most barter meetings fail. With more traders and more goods, the chance that two random people want each other's goods gets smaller, so barter gets harder as an economy grows.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Barter system:</strong> exchanging goods directly for other goods, without money.</li>
+              <li><strong>Double coincidence of wants:</strong> both sides want what the other has; needed for every barter deal.</li>
+              <li><strong>Medium of exchange:</strong> something everyone accepts in payment, so it can sit between any two trades.</li>
+              <li><strong>Legal tender:</strong> money that, by law, must be accepted for payments in a country (the rupee in India).</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

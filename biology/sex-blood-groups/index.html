@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sex Determination and Blood Groups — Interactive Simulation | SimLab</title>
+  <meta name="description" content="See why the father's X or Y sperm decides a baby's sex, and how three alleles and codominance give the A, B, AB and O blood groups. Pick the parents' genes and watch which children are possible.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/sex-blood-groups/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Sex Determination and Blood Groups — Interactive Simulation | SimLab">
+  <meta property="og:description" content="See why the father's X or Y sperm decides a baby's sex, and how three alleles and codominance give the A, B, AB and O blood groups. Pick the parents' genes and watch which children are possible.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/sex-blood-groups/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="sex-blood-groups">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Every baby gets half its genes from the mother and half from the father, by chance. This simulation follows two kinds of inheritance in the same babies.</p>
+            <ul>
+              <li><strong>Boy or girl:</strong> humans have 23 pairs of chromosomes. One pair, the <strong>sex chromosomes</strong>, is XX in females and XY in males. Every egg carries an X. Half the sperm carry X and half carry Y. An X sperm makes a girl (XX); a Y sperm makes a boy (XY). So it is the <strong>father's sperm</strong> that decides, never the mother.</li>
+              <li><strong>Blood group:</strong> the ABO blood group is set by one gene with <strong>three alleles</strong>: Iᴬ, Iᴮ and i. Each person carries two of them. Iᴬ and Iᴮ are both dominant over i, and when they meet, <em>both</em> show: IᴬIᴮ is group AB. This is called <strong>codominance</strong>.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Genotypes and blood groups</h3>
+            <code class="formula">IᴬIᴬ or Iᴬi → A · IᴮIᴮ or Iᴮi → B · IᴬIᴮ → AB · ii → O</code>
+            <code class="formula">XX (mother) × XY (father) → ½ XX girls : ½ XY boys</code>
+            <code class="formula">Iᴬi × Iᴮi → ¼ AB : ¼ A : ¼ B : ¼ O</code>
+            <p class="formula-note">Each parent passes one of its two blood group alleles, chance ½ each, and every baby is a fresh draw, so a family can have three girls in a row or four children with four different blood groups.</p>
+            <p class="formula-note">Simplified: only the ABO gene is shown. The Rh factor (the + or − in “B+”) is a separate gene, and a few rare variants (such as the Bombay blood group, first found in Mumbai) are left out. Real births also have slightly more boys than girls (about 105 : 100 at birth), which this ideal model ignores.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In many families a mother is blamed for having daughters. Biology says the opposite: her eggs all carry X, and the father's sperm, X or Y, makes the difference. Finding out a baby's sex before birth for selection is a crime in India (PCPNDT Act, 1994).</li>
+              <li>Blood banks match blood groups before a transfusion. Group O (with Rh−) can be given to almost anyone in an emergency, and AB people can receive from all ABO groups.</li>
+              <li>In India, group B and O are the most common, and AB is the rarest, though the exact shares vary from region to region.</li>
+              <li>Blood groups once helped settle doubts in court about who a child's parents were: an AB parent, for example, can never have an O child. Today DNA tests are used instead.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set the number of babies to 4 and press Babies are born several times. Do you always get 2 girls and 2 boys?<details><summary>Show answer</summary>No. You often get 3 : 1, and sometimes 4 : 0. Each baby is a separate 50 : 50 chance, like a coin toss. With 400 babies the share of girls settles near ½ on the graph.</details></li>
+              <li>Press “A × B (both carry i)”. Which blood groups can the children have?<details><summary>Show answer</summary>All four: A, B, AB and O, each ¼. Two parents with groups A and B can even have an O child, if both pass on their hidden i allele.</details></li>
+              <li>Press “AB × O”. Can any child have the same blood group as either parent?<details><summary>Show answer</summary>No. The AB parent gives Iᴬ or Iᴮ and the O parent gives i, so the children are Iᴬi (A) or Iᴮi (B), half each. Groups AB and O are impossible.</details></li>
+              <li>Both parents are group O. Is a group A child possible? Check with “O × O”.<details><summary>Show answer</summary>No. Both parents are ii and can pass only i, so every child is ii, group O.</details></li>
+              <li>A mother is group A and her child is group O. What can you say about the mother's genotype and the father?<details><summary>Show answer</summary>The mother must be Iᴬi, because the child got an i from her. The father must also carry i, so he could be group A (Iᴬi), B (Iᴮi) or O (ii), but not AB.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Sex chromosomes:</strong> the X and Y chromosomes; the other 22 pairs are autosomes.</li>
+              <li><strong>Multiple alleles:</strong> a gene with more than two forms in a population (Iᴬ, Iᴮ, i), though each person carries only two.</li>
+              <li><strong>Codominance:</strong> both alleles show fully in the hybrid, as Iᴬ and Iᴮ do in group AB.</li>
+              <li><strong>Gamete:</strong> an egg or sperm, carrying one chromosome of each pair.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

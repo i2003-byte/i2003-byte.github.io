@@ -2999,6 +2999,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-20',
     prerequisites: []
+  },
+  {
+    id: 'dihybrid-cross',
+    subject: 'biology',
+    branch: 'genetics',
+    title: "Mendel's Dihybrid Cross",
+    description:
+      'Cross round yellow and wrinkled green peas like Mendel: see the four kinds of gametes, a 4 × 4 Punnett square and the 9 : 3 : 3 : 1 ratio, and why independent assortment makes new mixes of traits.',
+    level: 'Intermediate',
+    tags: ['mendel', 'dihybrid cross', 'independent assortment', 'punnett square', '9:3:3:1', 'recombinant', 'test cross', 'pea plant', 'heredity', 'class 10', 'class 12'],
+    thumbnail: '/assets/img/thumbs/dihybrid-cross.svg',
+    link: '/biology/dihybrid-cross/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: ['mendel-monohybrid']
+  },
+  {
+    id: 'sex-blood-groups',
+    subject: 'biology',
+    branch: 'genetics',
+    title: 'Sex Determination and Blood Groups',
+    description:
+      "See why the father's X or Y sperm decides a baby's sex, and how three alleles and codominance give the A, B, AB and O blood groups. Pick the parents' genes and watch which children are possible.",
+    level: 'Intermediate',
+    tags: ['sex determination', 'X chromosome', 'Y chromosome', 'blood groups', 'ABO', 'codominance', 'multiple alleles', 'heredity', 'punnett square', 'class 10', 'class 12'],
+    thumbnail: '/assets/img/thumbs/sex-blood-groups.svg',
+    link: '/biology/sex-blood-groups/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: ['mendel-monohybrid']
+  },
+  {
+    id: 'barter-vs-money',
+    subject: 'economics',
+    branch: 'money',
+    title: 'Barter vs Money: Double Coincidence of Wants',
+    description:
+      'Two villages with the same traders: one swaps goods, one pays with rupee notes. Watch barter get stuck without a double coincidence of wants, while money lets everyone trade.',
+    level: 'Beginner',
+    tags: ['money', 'barter', 'double coincidence of wants', 'medium of exchange', 'village market', 'money and credit', 'class 10'],
+    thumbnail: '/assets/img/thumbs/barter-vs-money.svg',
+    link: '/economics/barter-vs-money/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: []
+  },
+  {
+    id: 'simple-compound-interest',
+    subject: 'economics',
+    branch: 'money',
+    title: 'Simple vs Compound Interest',
+    description:
+      "Watch ₹10,000 grow year by year with simple and compound interest. Change the rate, time and how often interest is added, and see interest on interest pull away, from a bank FD to a moneylender's loan.",
+    level: 'Intermediate',
+    tags: ['simple interest', 'compound interest', 'interest on interest', 'fixed deposit', 'loan', 'moneylender', 'rule of 72', 'money and credit', 'class 8', 'class 10'],
+    thumbnail: '/assets/img/thumbs/simple-compound-interest.svg',
+    link: '/economics/simple-compound-interest/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-20',
+    prerequisites: []
   }
 ];
 
