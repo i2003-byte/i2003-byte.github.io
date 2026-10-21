@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="yeast-fermentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M86 58Q48 50 52 22A34 34 0 1 1 120 22Q124 50 86 58Z" fill="#ec4899"/>
+  <ellipse cx="74" cy="12" rx="9" ry="6" fill="#fff" opacity=".5"/>
+  <path d="M78 58h16v18q30 4 30 30v62q0 6-6 6H54q-6 0-6-6v-62q0-26 30-30z" fill="#ffffff" fill-opacity=".08" stroke="#e2e8f0" stroke-width="3"/>
+  <path d="M50 112h72v56q0 4-4 4H54q-4 0-4-4z" fill="#d6a85b" opacity=".7"/>
+  <circle cx="70" cy="150" r="3" fill="none" stroke="#fff"/><circle cx="96" cy="132" r="4" fill="none" stroke="#fff"/><circle cx="84" cy="122" r="2.5" fill="none" stroke="#fff"/><circle cx="106" cy="156" r="3" fill="none" stroke="#fff"/>
+  <circle cx="230" cy="100" r="68" fill="#fdf6e3" stroke="#e2e8f0" stroke-width="5"/>
+  <g fill="#e8b65a" stroke="#8a5a12" stroke-width="2">
+    <ellipse cx="205" cy="80" rx="18" ry="14"/><ellipse cx="228" cy="74" rx="9" ry="8"/>
+    <ellipse cx="248" cy="118" rx="18" ry="14"/><ellipse cx="226" cy="128" rx="11" ry="9"/>
+    <ellipse cx="262" cy="80" rx="15" ry="12"/>
+  </g>
+  <text x="230" y="190" font-family="sans-serif" font-size="14" font-weight="700" fill="#fde68a" text-anchor="middle">sugar → CO₂</text>
+</svg>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Congruence Rules: SSS, SAS, ASA, RHS — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Build a triangle from three given parts with ruler and compass and count how many triangles fit. SSS, SAS, ASA and RHS always give one; SSA can give two and AAA any size. Slide a friend’s copy on top to test.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/congruence-rules/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Congruence Rules: SSS, SAS, ASA, RHS — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Build a triangle from three given parts with ruler and compass and count how many triangles fit. SSS, SAS, ASA and RHS always give one; SSA can give two and AAA any size. Slide a friend’s copy on top to test.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/congruence-rules/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="congruence-rules">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Two triangles are <strong>congruent</strong> if one can be placed exactly on top of the other, perhaps after turning it or flipping it over. Then all six parts match: three sides and three angles.</p>
+            <p>You do not need to check all six. If three well-chosen parts are given, a ruler and compass can draw <strong>only one</strong> triangle from them, so any two triangles built from those parts must be congruent. That is what a congruence rule means. Some choices of three parts, though, leave room for two different triangles, or for any size.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">SSS · SAS · ASA (and AAS) · RHS</code>
+            <p class="formula-note">Three sides; two sides and the angle <em>between</em> them; two angles and the side between them (or any side, since the third angle is 180° minus the other two); in right triangles, the hypotenuse and one other side.</p>
+            <code class="formula">ΔABC ≅ ΔPQR  means  A↔P, B↔Q, C↔R</code>
+            <p class="formula-note">The order of the letters tells you which parts match: AB = PQ, ∠B = ∠Q and so on. CPCT: corresponding parts of congruent triangles are equal.</p>
+            <p><strong>Not rules:</strong> SSA (two sides and an angle that is not between them) can give two different triangles, the “ambiguous case”: the arc from B cuts the ray from A twice. AAA fixes only the shape: triangles with equal angles are <em>similar</em> but can be any size.</p>
+            <p>In the sim, the base AB is drawn first and C is found where the compass arcs (dashed circles) and the angle rays meet. Lengths are in cm and rounded to 0.1 cm.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A carpenter cuts three bars and joins them into a triangle: it cannot change shape (SSS). That is why roof trusses, electric towers and bridges are built from triangles, while a four-bar frame wobbles.</li>
+              <li>To make many identical triangular kites or rangoli tiles, you only need to copy two sides and the angle between them (SAS).</li>
+              <li>A surveyor can find a far-off point, like a tree across a river, by measuring a base line and two angles at its ends (ASA).</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose SSS with sides 7, 5 and 6 cm and tap “Test with a friend’s copy”. The friend’s triangle starts turned over. Does it still fit?<details><summary>Show answer</summary>Yes. Turned and flipped back, it lands exactly on yours. Three sides allow only one triangle, so the two are congruent.</details></li>
+              <li>In SSS, set AB = 9 cm, CA = 3 cm and BC = 4 cm. What happens to the arcs?<details><summary>Show answer</summary>They do not meet: 3 + 4 = 7 cm cannot reach across 9 cm, so no triangle exists. Any two sides must add up to more than the third.</details></li>
+              <li>Choose SSA with AB = 7 cm, ∠A = 50° and BC = 6 cm. How many triangles fit? Now test with a friend’s copy.<details><summary>Show answer</summary>Two: the arc from B cuts the ray at C₁ and C₂. The friend builds the other one, and it does not fit on yours, even though the three given parts are the same. So SSA is not a congruence rule.</details></li>
+              <li>Still in SSA, make BC longer than AB (say 8 cm). How many triangles now?<details><summary>Show answer</summary>Only one, because the second crossing falls behind A. SSA only works by luck, which is why it is not a rule. RHS is the safe special case: when the given angle is 90°, there is always just one.</details></li>
+              <li>Choose AAA with ∠A = 60° and ∠B = 60° and test with a friend’s copy. What goes wrong?<details><summary>Show answer</summary>Both are equilateral, with the same angles, but the friend’s is smaller. Equal angles fix the shape, not the size.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Congruent (≅):</strong> exactly the same shape and size.</li>
+              <li><strong>Included angle:</strong> the angle between two given sides.</li>
+              <li><strong>Hypotenuse:</strong> the side opposite the right angle, the longest side of a right triangle.</li>
+              <li><strong>Similar:</strong> the same shape but possibly a different size.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

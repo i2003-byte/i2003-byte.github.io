@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Yeast and Fermentation — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Add yeast to warm sugar water and watch a balloon fill with carbon dioxide while the cells bud under a microscope. Compare with a bottle with no yeast, no sugar, cold or hot water.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/yeast-fermentation/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Yeast and Fermentation — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Add yeast to warm sugar water and watch a balloon fill with carbon dioxide while the cells bud under a microscope. Compare with a bottle with no yeast, no sugar, cold or hot water.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/yeast-fermentation/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="yeast-fermentation">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p><strong>Yeast</strong> is a microorganism: a tiny one-celled fungus, far too small to see without a microscope. Dry yeast from the shop is alive but resting. Put it in warm water with sugar and it wakes up, feeds on the sugar and breaks it down into <strong>alcohol</strong> and <strong>carbon dioxide</strong> gas. This is called <strong>fermentation</strong>.</p>
+            <p>The gas bubbles up and fills a balloon on the bottle. In dough the same gas is trapped in tiny pockets, which is why bread, bhatura and pav rise and turn soft and spongy. Meanwhile the yeast multiplies by <strong>budding</strong>: a small bud grows out of a cell and breaks away as a new cell.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">sugar  →  alcohol + carbon dioxide + energy</code>
+            <p class="formula-note">C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂. The yeast uses the energy to live and grow. 180 g of sugar can give about 50 litres of carbon dioxide.</p>
+            <p><strong>What yeast needs:</strong> food (sugar), water and warmth. It works fastest at about 30–35 °C. In cold water it is slow; above about 50 °C the heat kills it and it never makes gas again.</p>
+            <p><strong>A fair test:</strong> the comparison bottle changes only <em>one</em> thing. If the bottle with no yeast stays flat, the gas must come from the yeast; if the bottle with no sugar stays flat, the yeast needs sugar.</p>
+            <p><strong>Test for the gas:</strong> squeeze the balloon’s gas through limewater and it turns milky. That shows the gas is carbon dioxide.</p>
+            <p class="formula-note">The sim uses a simple model: gas made in proportion to the amount of yeast, a warmth factor that peaks at 32 °C and a sugar factor; the yeast doubles in about 100 minutes in the best conditions. Real amounts depend on the yeast and the bottle. 1 second of the sim is 6 minutes in the bottle.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Bakers knead yeast into dough and leave it in a warm place for an hour or two to rise before baking bread, pizza or pav.</li>
+              <li>Batters for idli, dosa, dhokla and jalebi are left overnight to ferment; microorganisms in them make gas that makes them light and gives a sour taste.</li>
+              <li>Fermentation of sugarcane juice (molasses) is used to make alcohol, and ethanol from it is mixed into petrol in India.</li>
+              <li>Louis Pasteur showed in the 1850s that fermentation is done by living yeast cells.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep 32 °C, 2 spoons of sugar and 1 tsp of yeast, with “Same, but no yeast”, and press Start. Which balloon fills?<details><summary>Show answer</summary>Only yours, to about 1.7 litres in 4 hours. The bottle without yeast makes no gas at all, so the gas comes from the yeast.</details></li>
+              <li>Choose “Same, but no sugar”. What does that tell you?<details><summary>Show answer</summary>The no-sugar balloon stays flat: the yeast is alive but has nothing to ferment. Sugar is its food.</details></li>
+              <li>Choose “Same, but cold water (10 °C)”. Compare the two balloons after 2 hours.<details><summary>Show answer</summary>The cold bottle has made under 20 mL, against about 700 mL in the warm one. Cold slows the yeast down; it does not kill it. That is why dough rises slowly in winter.</details></li>
+              <li>Choose “Same, but hot water (60 °C)”. What happens in the hot bottle, and what does the microscope show if you set your own water to 60 °C?<details><summary>Show answer</summary>The hot bottle makes no gas at all, and at 60 °C the yeast cells turn grey with no buds. Very hot water kills yeast for good, which is why recipes say to use lukewarm water.</details></li>
+              <li>Double the yeast to 2 tsp. What runs out first, and how can you tell?<details><summary>Show answer</summary>The sugar. The balloon fills about twice as fast at first, but by 4 hours less than half a gram of the 10 g is left and the gas rate has dropped well below its peak.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Microorganism:</strong> a living thing too small to see without a microscope, such as bacteria, fungi (yeast), algae and protozoa.</li>
+              <li><strong>Fermentation:</strong> breaking down sugar into alcohol (or acid) and gas without needing oxygen.</li>
+              <li><strong>Budding:</strong> a way of reproducing in which a small outgrowth grows into a new cell.</li>
+              <li><strong>Control:</strong> the setup in an experiment that differs from the test in only one way.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

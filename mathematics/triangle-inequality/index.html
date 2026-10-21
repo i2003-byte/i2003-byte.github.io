@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Triangle Inequality: Will the Sticks Meet? — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Pick three sticks and swing two of them round: they close into a triangle only if any two together are longer than the third. Then see that the bigger side always faces the bigger angle.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/triangle-inequality/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Triangle Inequality: Will the Sticks Meet? — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Pick three sticks and swing two of them round: they close into a triangle only if any two together are longer than the third. Then see that the bigger side always faces the bigger angle.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/triangle-inequality/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="triangle-inequality">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Not every three sticks make a triangle. Lay one on the ground and hinge the other two at its ends: their free ends can only meet if the two of them together are <strong>longer</strong> than the stick on the ground. If they are shorter, a gap is always left; if they are exactly equal, they only meet lying flat on the ground.</p>
+            <p>This is the <strong>triangle inequality</strong>: in every triangle, any two sides added together are longer than the third side. It also says that a straight line is the shortest way between two points: going via a third point is always longer.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">a + b > c,   b + c > a,   c + a > b</code>
+            <p class="formula-note">It is enough to check one: the two shorter sticks together must be longer than the longest stick.</p>
+            <code class="formula">|b − c| < a < b + c</code>
+            <p class="formula-note">The same thing written for one side: the third side must lie between the difference and the sum of the other two.</p>
+            <code class="formula">bigger side ⇔ bigger angle opposite it</code>
+            <p class="formula-note">In ΔABC, if BC > AC then ∠A > ∠B, and the other way round. The longest side faces the largest angle; the shortest side faces the smallest.</p>
+            <p>In the sim, stick AC swings down from A while stick BC always points at its free end. The distance from B to that end shrinks steadily from b + c to |b − c| (cosine rule), so the ends meet only if a lies between the two. The graph shows the gap between the ends; it reaches zero only for sticks that can make a triangle. Sticks are treated as lines with no thickness.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>If your home is 3 km from school and the shop is on the way only when it lies on the straight road, any detour through the shop makes the trip longer than 3 km. Walking across a park instead of along two sides of it is shorter for the same reason.</li>
+              <li>A mason checks whether three bamboo poles can form a support frame: if the two shorter ones together are not longer than the third, it will not work.</li>
+              <li>Mobile towers and GPS find your place from distances to known points; a set of distances that breaks the triangle inequality shows that a measurement is wrong.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the sticks at 8, 5 and 4 cm and press Play. Do they meet? Check: is 5 + 4 more than 8?<details><summary>Show answer</summary>Yes, they meet, because 5 + 4 = 9 cm is more than 8 cm. The gap on the graph falls to zero.</details></li>
+              <li>Make stick AB 10 cm and keep 5 and 4 cm. What is the smallest gap?<details><summary>Show answer</summary>The sticks never meet. Even lying flat, 5 + 4 = 9 cm leaves a 1 cm gap across 10 cm.</details></li>
+              <li>Now try 9, 5 and 4 cm. What happens at the end of the swing?<details><summary>Show answer</summary>The ends only just touch, with both sticks lying flat on AB. 5 + 4 = 9 makes a straight line, not a triangle.</details></li>
+              <li>Keep AB = 8 cm and AC = 5 cm. Which lengths of BC give a triangle?<details><summary>Show answer</summary>Any length more than 8 − 5 = 3 cm and less than 8 + 5 = 13 cm (up to 12 cm on this slider).</details></li>
+              <li>After a triangle forms, look at the colours. Which angle is the biggest, and which side faces it?<details><summary>Show answer</summary>With 8, 5, 4 cm the biggest angle is ∠C (about 125°), facing the longest side c = 8 cm. Each side has the same colour as the angle opposite it.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Triangle inequality:</strong> the sum of any two sides of a triangle is greater than the third side.</li>
+              <li><strong>Degenerate (flat) triangle:</strong> three points on one straight line; it has no area.</li>
+              <li><strong>Opposite angle:</strong> the angle at the corner that a side does not touch.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

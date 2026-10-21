@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="congruence-rules">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b21b6"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M40 160H160" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 160L95 62L160 160" fill="#38bdf8" fill-opacity=".18" stroke="#e2e8f0" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M68 40A62 62 0 0 1 122 52" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M72 60A115 115 0 0 1 116 42" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5 4"/>
+  <circle cx="95" cy="62" r="5" fill="#e2e8f0"/>
+  <path d="M190 120L250 30L290 140Z" fill="#4ade80" fill-opacity=".25" stroke="#4ade80" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M178 96Q190 70 214 72" fill="none" stroke="#4ade80" stroke-width="2.5"/><path d="M214 72l-10-6 1 11z" fill="#4ade80"/>
+  <text x="240" y="182" font-family="sans-serif" font-size="22" font-weight="700" fill="#4ade80" text-anchor="middle">≅</text>
+  <text x="100" y="188" font-family="sans-serif" font-size="15" font-weight="700" fill="#fbbf24" text-anchor="middle">SSS · SAS · ASA</text>
+</svg>

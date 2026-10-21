@@ -243,6 +243,9 @@ Turn a transversal across parallel lines, tear the corners off a triangle and sl
 - [Parallel Lines and a Transversal](https://i2003-byte.github.io/mathematics/parallel-lines-angles/): Two lines cut by a transversal make eight angles. Pick corresponding, alternate or co-interior angles and see when they are equal or add up to 180°, and how tilting one line breaks the rule. (Beginner)
 - [Angle Sum of a Triangle](https://i2003-byte.github.io/mathematics/triangle-angle-sum/): Tear off the three corners of any triangle and line them up: they always make a straight angle of 180°. See why with a parallel line, and find the exterior angle property. (Beginner)
 - [Pythagoras' Theorem by Rearrangement](https://i2003-byte.github.io/mathematics/pythagoras-proof/): Watch four copies of a right triangle slide around inside a big square: the empty space changes from c² into a² + b². Draw squares on the sides and see why the theorem needs a right angle. (Intermediate)
+- [Congruence Rules: SSS, SAS, ASA, RHS](https://i2003-byte.github.io/mathematics/congruence-rules/): Build a triangle from three given parts with ruler and compass and count how many triangles fit. SSS, SAS, ASA and RHS always give one; SSA can give two and AAA any size. Slide a friend’s copy on top to test. (Intermediate)
+- [Isosceles Triangle: Equal Sides, Equal Angles](https://i2003-byte.github.io/mathematics/isosceles-triangle/): Drag the apex of a triangle and fold it along the angle bisector: when two sides are equal, the base angles land exactly on each other. Prove it with SAS and check the converse. (Intermediate)
+- [Triangle Inequality: Will the Sticks Meet?](https://i2003-byte.github.io/mathematics/triangle-inequality/): Pick three sticks and swing two of them round: they close into a triangle only if any two together are longer than the third. Then see that the bigger side always faces the bigger angle. (Beginner)
 
 ### Trigonometry
 
@@ -294,6 +297,7 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 
 - [Cell Explorer: Plant, Animal and Bacterial Cells](https://i2003-byte.github.io/biology/cell-explorer/): Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself. (Beginner)
 - [Osmosis: Potato, Raisins and Plant Cells](https://i2003-byte.github.io/biology/osmosis/): Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope. (Intermediate)
+- [Yeast and Fermentation](https://i2003-byte.github.io/biology/yeast-fermentation/): Add yeast to warm sugar water and watch a balloon fill with carbon dioxide while the cells bud under a microscope. Compare with a bottle with no yeast, no sugar, cold or hot water. (Beginner)
 - [Diffusion Across a Membrane](https://i2003-byte.github.io/biology/diffusion/): Watch glucose and starch molecules wander at random in water. See glucose spread through a selectively permeable membrane until both sides are equal, while starch stays behind. Change the temperature. (Beginner)
 
 ### Genetics

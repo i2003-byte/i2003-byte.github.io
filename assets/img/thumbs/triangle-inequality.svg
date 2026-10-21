@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="triangle-inequality">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d28d9"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <path d="M50 150H250" stroke="#fbbf24" stroke-width="10" stroke-linecap="round"/>
+  <path d="M50 150L150 80" stroke="#f472b6" stroke-width="10" stroke-linecap="round"/>
+  <path d="M250 150L150 80" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="150" cy="80" r="7" fill="#4ade80"/>
+  <circle cx="50" cy="150" r="6" fill="#0f172a" stroke="#e2e8f0" stroke-width="3"/><circle cx="250" cy="150" r="6" fill="#0f172a" stroke="#e2e8f0" stroke-width="3"/>
+  <path d="M-30 150A80 80 0 0 1 130 150" fill="none" stroke="#f472b6" stroke-opacity=".6" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M128 150A122 122 0 0 1 300 72" fill="none" stroke="#38bdf8" stroke-opacity=".6" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="160" y="186" font-family="sans-serif" font-size="16" font-weight="700" fill="#4ade80" text-anchor="middle">a + b &gt; c ?</text>
+</svg>

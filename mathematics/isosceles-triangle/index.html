@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Isosceles Triangle: Equal Sides, Equal Angles — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag the apex of a triangle and fold it along the angle bisector: when two sides are equal, the base angles land exactly on each other. Prove it with SAS and check the converse.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/isosceles-triangle/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Isosceles Triangle: Equal Sides, Equal Angles — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag the apex of a triangle and fold it along the angle bisector: when two sides are equal, the base angles land exactly on each other. Prove it with SAS and check the converse.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/isosceles-triangle/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="isosceles-triangle">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A triangle with two equal sides is called <strong>isosceles</strong>. Fold it along the line that halves the angle between the equal sides, and one half lies exactly on the other. So the two angles opposite the equal sides, the <strong>base angles</strong>, must be equal.</p>
+            <p>The other way round is true too: if two angles of a triangle are equal, the sides opposite them are equal. When the sides are not equal, the fold misses, and the longer side always faces the bigger angle.</p>
+          </section>
+          <section>
+            <h3>🧮 Key rules</h3>
+            <code class="formula">AB = AC  ⇒  ∠B = ∠C</code>
+            <p class="formula-note">Proof: draw AD, the bisector of ∠A. In ΔABD and ΔACD, AB = AC, ∠BAD = ∠CAD and AD is common, so ΔABD ≅ ΔACD by SAS. Hence ∠B = ∠C (corresponding parts, CPCT).</p>
+            <code class="formula">∠B = ∠C  ⇒  AB = AC</code>
+            <p class="formula-note">The converse. Proof: with the same bisector, ΔABD ≅ ΔACD by AAS (∠B = ∠C, ∠BAD = ∠CAD, AD common).</p>
+            <p>The same congruence also gives BD = DC and ∠ADB = ∠ADC = 90°: in an isosceles triangle, the bisector of the top angle is also the perpendicular bisector of the base. If all three sides are equal, every angle is 180° ÷ 3 = 60°.</p>
+            <p>In the sim, D is where the bisector of ∠A meets BC. Folding turns the flap ADC over the line AD like paper; C ends up on line AB, at the same distance from A as before.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The two slopes of a village hut roof or a temple gopuram front are usually equal, so the roof makes equal angles with the walls on both sides.</li>
+              <li>A coat hanger, a ladder opened into an A-shape, and the two equal ropes of a swing hanging from one point all make isosceles triangles.</li>
+              <li>A kite (patang) is two isosceles triangles joined base to base; folding it along its spine shows the same symmetry.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep AB = AC = 7 cm and tap “Fold along AD”. Where does C land, and what happens to ∠C?<details><summary>Show answer</summary>C lands exactly on B and the orange angle covers the blue one: ∠B = ∠C. The fold also shows BD = DC and that AD stands at 90° on BC.</details></li>
+              <li>Set AB = 7 cm and AC = 5 cm and fold again. What goes wrong?<details><summary>Show answer</summary>C lands 2 cm short of B, and the two angles no longer cover each other. ∠C (opposite the longer side AB) is now bigger than ∠B.</details></li>
+              <li>Switch to “The base angles B and C” and set both to 40°. What do you notice about AB and AC?<details><summary>Show answer</summary>They come out equal. Equal base angles force equal sides: the converse of the theorem.</details></li>
+              <li>In an isosceles triangle, the top angle ∠A is 80°. Work out the base angles, then check in the sim.<details><summary>Show answer</summary>(180° − 80°) ÷ 2 = 50° each. In angles mode, set ∠B = ∠C = 50° and read ∠A = 80°.</details></li>
+              <li>Tap “Equilateral”. What are the angles, and why?<details><summary>Show answer</summary>All 60°. AB = AC gives ∠B = ∠C and AB = BC gives ∠A = ∠C, so all three are equal and each is 180° ÷ 3.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Isosceles triangle:</strong> a triangle with (at least) two equal sides.</li>
+              <li><strong>Base angles:</strong> the two angles opposite the equal sides.</li>
+              <li><strong>Angle bisector:</strong> a line that cuts an angle into two equal angles.</li>
+              <li><strong>Converse:</strong> a statement with the “if” and “then” parts swapped.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

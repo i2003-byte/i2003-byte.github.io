@@ -1164,6 +1164,22 @@ SimLab.simulations = [
     prerequisites: ['diffusion']
   },
   {
+    id: 'yeast-fermentation',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'Yeast and Fermentation',
+    description:
+      'Add yeast to warm sugar water and watch a balloon fill with carbon dioxide while the cells bud under a microscope. Compare with a bottle with no yeast, no sugar, cold or hot water.',
+    level: 'Beginner',
+    tags: ['yeast', 'fermentation', 'microorganisms', 'fungi', 'carbon dioxide', 'alcohol', 'budding', 'bread', 'fair test', 'class 8'],
+    thumbnail: '/assets/img/thumbs/yeast-fermentation.svg',
+    link: '/biology/yeast-fermentation/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: ['cell-explorer']
+  },
+  {
     id: 'diffusion',
     subject: 'biology',
     branch: 'cells',
@@ -2646,6 +2662,54 @@ SimLab.simulations = [
     status: 'live',
     featured: false,
     dateAdded: '2026-10-09',
+    prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'congruence-rules',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: 'Congruence Rules: SSS, SAS, ASA, RHS',
+    description:
+      'Build a triangle from three given parts with ruler and compass and count how many triangles fit. SSS, SAS, ASA and RHS always give one; SSA can give two and AAA any size. Slide a friend’s copy on top to test.',
+    level: 'Intermediate',
+    tags: ['congruence', 'congruent triangles', 'SSS', 'SAS', 'ASA', 'RHS', 'AAS', 'construction', 'ambiguous case', 'geometry', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/congruence-rules.svg',
+    link: '/mathematics/congruence-rules/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'isosceles-triangle',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: 'Isosceles Triangle: Equal Sides, Equal Angles',
+    description:
+      'Drag the apex of a triangle and fold it along the angle bisector: when two sides are equal, the base angles land exactly on each other. Prove it with SAS and check the converse.',
+    level: 'Intermediate',
+    tags: ['isosceles triangle', 'base angles', 'angle bisector', 'equilateral', 'congruence', 'SAS', 'converse', 'geometry', 'class 9'],
+    thumbnail: '/assets/img/thumbs/isosceles-triangle.svg',
+    link: '/mathematics/isosceles-triangle/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: ['congruence-rules']
+  },
+  {
+    id: 'triangle-inequality',
+    subject: 'mathematics',
+    branch: 'geometry',
+    title: 'Triangle Inequality: Will the Sticks Meet?',
+    description:
+      'Pick three sticks and swing two of them round: they close into a triangle only if any two together are longer than the third. Then see that the bigger side always faces the bigger angle.',
+    level: 'Beginner',
+    tags: ['triangle inequality', 'sides', 'sticks', 'longest side', 'largest angle', 'triangle', 'geometry', 'class 7', 'class 9'],
+    thumbnail: '/assets/img/thumbs/triangle-inequality.svg',
+    link: '/mathematics/triangle-inequality/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
     prerequisites: ['triangle-angle-sum']
   },
   {
