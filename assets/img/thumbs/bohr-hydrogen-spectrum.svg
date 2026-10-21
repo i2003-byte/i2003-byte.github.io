@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="bohr-hydrogen-spectrum">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <g fill="none" stroke="#94a3b8" stroke-opacity="0.6"><circle cx="80" cy="80" r="12"/><circle cx="80" cy="80" r="28"/><circle cx="80" cy="80" r="46"/><circle cx="80" cy="80" r="64"/></g>
+  <circle cx="80" cy="80" r="5" fill="#ef4444"/><circle cx="125" cy="47" r="5" fill="#38bdf8"/>
+  <path d="M135 40q6-8 12 0t12 0 12 0 12 0" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <rect x="20" y="152" width="280" height="34" fill="#05070d"/>
+  <rect x="47" y="152" width="4" height="34" fill="#7c3aed"/><rect x="58" y="152" width="4" height="34" fill="#6366f1"/>
+  <rect x="85" y="152" width="4" height="34" fill="#3b82f6"/><rect x="153" y="152" width="4" height="34" fill="#22d3ee"/>
+  <rect x="268" y="152" width="5" height="34" fill="#ef4444"/>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#fde68a" x="170" y="100">Eₙ = −13.6/n² eV</text>
+</svg>

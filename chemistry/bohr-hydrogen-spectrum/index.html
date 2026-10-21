@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bohr Model and Hydrogen Spectrum — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Make the electron in a hydrogen atom jump between Bohr's orbits and watch each photon's colour build up the line spectrum: the red, blue and violet Balmer lines, ultraviolet Lyman and infrared Paschen lines, with E = −13.6/n² eV.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/bohr-hydrogen-spectrum/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Bohr Model and Hydrogen Spectrum — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Make the electron in a hydrogen atom jump between Bohr's orbits and watch each photon's colour build up the line spectrum: the red, blue and violet Balmer lines, ultraviolet Lyman and infrared Paschen lines, with E = −13.6/n² eV.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/bohr-hydrogen-spectrum/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="bohr-hydrogen-spectrum">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Pass electricity through hydrogen gas in a glass tube and it glows pink-red. Look at that glow through a prism and you do not see a rainbow. You see a few sharp coloured <strong>lines</strong>: red, blue-green, blue and violet, always at exactly the same places. In 1913 Niels Bohr explained why.</p>
+            <ul>
+              <li>The electron in a hydrogen atom can only move in certain <strong>allowed orbits</strong>, numbered n = 1, 2, 3 … Each orbit has a fixed energy. In an allowed orbit the electron does not give out any energy.</li>
+              <li>To move to a higher orbit, the atom must take in exactly the energy difference, for example from a collision in the lamp or by absorbing a photon of just the right energy.</li>
+              <li>When the electron falls to a lower orbit, the energy difference comes out as one <strong>photon</strong> of light. A bigger fall gives a more energetic photon, which means a shorter wavelength (towards violet and ultraviolet).</li>
+              <li>Because only certain energy differences are possible, only certain wavelengths appear: a <strong>line spectrum</strong>. Falls that end on n = 2 (the Balmer series) give the visible lines; falls to n = 1 (Lyman) are ultraviolet; falls to n = 3 (Paschen) are infrared.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">Eₙ = −13.6 ÷ n²  eV      rₙ = 0.0529 × n²  nm</code>
+            <code class="formula">photon energy  E = 13.6 × (1/n₁² − 1/n₂²)  eV</code>
+            <code class="formula">wavelength  λ = 1240 ÷ E(eV)  nm      (same as 1/λ = R_H (1/n₁² − 1/n₂²))</code>
+            <p class="formula-note">Example: the red line, n = 3 → 2. E = 13.6 × (1/4 − 1/9) = 1.89 eV, so λ = 1240 ÷ 1.89 ≈ 656 nm. The energies are negative because the electron is bound: 13.6 eV must be supplied to pull it free from n = 1 (the ionisation energy).</p>
+            <p class="formula-note">Simplified: orbits are drawn evenly spaced and the energy ladder is squeezed so all levels fit (real radii grow as n², and the top levels crowd together near 0 eV). In the lamp, an excited atom falls to a random lower level each time; in real atoms some jumps are more likely, so real line brightnesses differ. Bohr's model works for hydrogen (and ions with one electron) but not for atoms with more electrons; the later quantum model replaced orbits with orbitals.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The red 656 nm line (H-alpha) is how astronomers photograph hydrogen gas clouds in space and flares on the Sun.</li>
+              <li>Each element has its own pattern of lines, like a fingerprint. Helium was first found in 1868 from a yellow line in the Sun's light, seen during a solar eclipse observed from Guntur in India.</li>
+              <li>Sodium street lamps glow orange-yellow and neon signs glow red for the same reason: electrons falling between fixed levels in those atoms.</li>
+              <li>Dark lines in starlight (absorption) are the same lines in reverse: cooler gas absorbs exactly the photons that its electrons can use to jump up.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Switch on the lamp and let it run for a minute. How many lines appear in the visible window, and what colours are they?<details><summary>Show answer</summary>Five with the top level at 6 or 7: red 656 nm, blue-green 486 nm, blue 434 nm, violet 410 nm and (with level 7) deep violet 397 nm. They are all falls that end on n = 2, the Balmer series.</details></li>
+              <li>Set “Jump from” 3 and “Jump to” 2 and press Make this jump. Then try 4 → 2. Which photon has more energy, and which colour is it?<details><summary>Show answer</summary>3 → 2 gives 1.89 eV, red (656 nm). 4 → 2 gives 2.55 eV, blue-green (486 nm). The bigger fall gives more energy and a shorter wavelength.</details></li>
+              <li>Make the jump 2 → 1. Why can't you see this photon?<details><summary>Show answer</summary>It carries 10.2 eV, with a wavelength of 122 nm. That is ultraviolet, far shorter than violet light (about 400 nm), so our eyes cannot see it. All falls to n = 1 (Lyman series) are ultraviolet.</details></li>
+              <li>Turn the lamp off. With the electron in n = 1, tap level 3. What must the atom take in? Now tap level 1 again.<details><summary>Show answer</summary>It must absorb a photon of exactly 12.09 eV (103 nm, ultraviolet) to rise from n = 1 to n = 3. Falling straight back gives out the same 12.09 eV photon. Absorbing and emitting use the same energy differences.</details></li>
+              <li>Lower “Highest level reached” to 3. Which lines are left in the whole spectrum?<details><summary>Show answer</summary>Only three: 3 → 2 (red, 656 nm), 3 → 1 (103 nm, UV) and 2 → 1 (122 nm, UV). A low lamp voltage cannot lift electrons higher, so the other lines never appear.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Stationary state (orbit):</strong> an allowed orbit in which the electron has a fixed energy and gives out no radiation.</li>
+              <li><strong>Ground state:</strong> the lowest level, n = 1. Higher levels are excited states.</li>
+              <li><strong>Photon:</strong> a packet of light energy, E = hν = hc ÷ λ.</li>
+              <li><strong>Emission spectrum:</strong> the bright lines given out by a hot or excited gas; an absorption spectrum shows the same lines as dark gaps in a rainbow.</li>
+              <li><strong>Electron-volt (eV):</strong> the energy one electron gains across 1 volt, 1.6 × 10⁻¹⁹ J.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="photoelectric-effect">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#581c87"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect x="80" y="40" width="200" height="100" rx="45" fill="#0ea5e9" fill-opacity="0.12" stroke="#0e7490" stroke-width="2"/>
+  <rect x="104" y="60" width="9" height="60" fill="#d4d4d8"/><rect x="250" y="60" width="7" height="60" fill="#94a3b8"/>
+  <circle cx="32" cy="90" r="16" fill="#a78bfa"/>
+  <g fill="none" stroke="#a78bfa" stroke-width="2.5"><path d="M52 72q4-6 8 0t8 0 8 0 8 0"/><path d="M58 98q4-6 8 0t8 0 8 0 8 0"/></g>
+  <g fill="#38bdf8"><circle cx="140" cy="72" r="4"/><circle cx="170" cy="96" r="4"/><circle cx="205" cy="80" r="4"/><circle cx="228" cy="108" r="4"/></g>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#fde68a" x="90" y="178">KE = hν − φ</text>
+</svg>

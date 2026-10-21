@@ -176,6 +176,7 @@ Move prices, change incomes and watch demand and supply respond. Simple models o
 
 - [Barter vs Money: Double Coincidence of Wants](https://i2003-byte.github.io/economics/barter-vs-money/): Two villages with the same traders: one swaps goods, one pays with rupee notes. Watch barter get stuck without a double coincidence of wants, while money lets everyone trade. (Beginner)
 - [Simple vs Compound Interest](https://i2003-byte.github.io/economics/simple-compound-interest/): Watch ₹10,000 grow year by year with simple and compound interest. Change the rate, time and how often interest is added, and see interest on interest pull away, from a bank FD to a moneylender's loan. (Intermediate)
+- [Formal vs Informal Credit](https://i2003-byte.github.io/economics/formal-informal-credit/): A farmer borrows ₹50,000 for a crop from a cooperative, a bank, a self-help group or a moneylender. Add a drought and watch six years of interest: one lender's farmer climbs out, another's sinks into a debt trap. (Intermediate)
 
 ## Computer Science
 
@@ -214,6 +215,9 @@ See the particles of solids, liquids and gases, melt and boil water, cool it by 
 - [Conservation of Mass and Fixed Proportions](https://i2003-byte.github.io/chemistry/conservation-of-mass/): Weigh a precipitate forming, baking soda fizzing in vinegar and magnesium burning, in open or closed containers. Then react hydrogen, magnesium or carbon with oxygen in any amounts: they always combine in the same mass ratio. (Beginner)
 - [Writing Formulae from Valency](https://i2003-byte.github.io/chemistry/valency-formula/): Join positive and negative ion tiles until every valency hand is held, then check with the criss-cross method. Build Al₂O₃, Ca(OH)₂ and (NH₄)₂SO₄ and work out each formula unit mass. (Beginner)
 - [The Mole: Counting Atoms by Weighing](https://i2003-byte.github.io/chemistry/mole-concept/): Weigh carbon, water, salt, sugar and metals and turn grams into moles, particles and atoms. Compare one mole of each side by side and solve weighing challenges with 6.022 × 10²³. (Intermediate)
+- [Rutherford's Gold-Foil Experiment](https://i2003-byte.github.io/chemistry/rutherford-scattering/): Fire alpha particles at thin gold leaf and count the flashes. Almost all go straight through, but about 1 in 10,000 bounces back. Compare Thomson's plum-pudding atom with Rutherford's tiny nucleus. (Intermediate)
+- [Bohr Model and Hydrogen Spectrum](https://i2003-byte.github.io/chemistry/bohr-hydrogen-spectrum/): Make the electron in a hydrogen atom jump between Bohr's orbits and watch each photon's colour build up the line spectrum: the red, blue and violet Balmer lines, ultraviolet Lyman and infrared Paschen lines, with E = −13.6/n² eV. (Advanced)
+- [Photoelectric Effect](https://i2003-byte.github.io/chemistry/photoelectric-effect/): Shine light of any colour on sodium, zinc or caesium and see when electrons jump out. Brighter light gives more electrons, not faster ones; only shorter wavelengths do. Find the threshold, the stopping potential and Einstein's KE = hν − φ. (Advanced)
 
 ### Bonding
 

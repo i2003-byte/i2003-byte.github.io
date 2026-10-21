@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rutherford's Gold-Foil Experiment — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Fire alpha particles at thin gold leaf and count the flashes. Almost all go straight through, but about 1 in 10,000 bounces back. Compare Thomson's plum-pudding atom with Rutherford's tiny nucleus.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/rutherford-scattering/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Rutherford's Gold-Foil Experiment — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Fire alpha particles at thin gold leaf and count the flashes. Almost all go straight through, but about 1 in 10,000 bounces back. Compare Thomson's plum-pudding atom with Rutherford's tiny nucleus.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/rutherford-scattering/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="rutherford-scattering">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>In 1909, Geiger and Marsden, working with Ernest Rutherford, fired <strong>alpha particles</strong> (helium nuclei, charge +2) at gold leaf less than a micrometre thick. A screen coated with zinc sulphide gave a tiny flash of light wherever an alpha landed, and they counted the flashes by eye through a microscope.</p>
+            <ul>
+              <li>J. J. Thomson's <strong>plum-pudding model</strong> said an atom is a ball of spread-out positive charge with electrons dotted in it. Such a soft ball can only nudge a fast alpha by a tiny angle, so every alpha should go almost straight through.</li>
+              <li>That is what happened for nearly all of them. But about 1 alpha in many thousands came back towards the source. Rutherford said it was “as if you fired a 15-inch shell at a piece of tissue paper and it came back and hit you.”</li>
+              <li>His explanation: all the positive charge and almost all the mass of an atom sit in a tiny <strong>nucleus</strong> at the centre. Most of the atom is empty space, so most alphas miss every nucleus by a long way. Only an alpha aimed almost straight at a nucleus is pushed back.</li>
+              <li>From how the counts fall off with angle, Rutherford worked out that the nucleus is about 10,000 times smaller than the atom.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">closest approach (head-on):  d = 2kZe² ÷ E  ≈ 2.88 × Z ÷ E(MeV)  fm</code>
+            <code class="formula">deflection:  tan(θ/2) = d ÷ (2b)   (b = how far off-centre the alpha is aimed)</code>
+            <code class="formula">share deflected more than θ = n t π (d/2)² cot²(θ/2)</code>
+            <code class="formula">nuclear radius R ≈ 1.2 × A^⅓ fm   (1 fm = 10⁻¹⁵ m)</code>
+            <p class="formula-note">Example: a 5 MeV alpha on gold (Z = 79) gets no closer than 2.88 × 79 ÷ 5 ≈ 45 fm, while the gold nucleus has a radius of about 7 fm and the gold atom about 1,44,000 fm. With 1 µm of gold (n = 5.9 × 10²⁸ atoms per m³), about 1 alpha in 10,400 is turned back by more than 90°.</p>
+            <p class="formula-note">Simplified: each alpha is pushed hard by at most one nucleus; the many tiny pushes from other atoms and electrons are added as a small random spread of about 1°. The nucleus is fixed (gold is 50 times heavier than an alpha), and alphas do not lose energy in the foil. The zoomed view uses real paths and sizes in femtometres but picks extra close aims so you can see them; the lab view is not to scale.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>If the nucleus of a gold atom were a 1 cm marble, the atom would be about 200 m across: roughly the size of a large cricket stadium, nearly all empty.</li>
+              <li>Rutherford's way of finding structure by firing particles and watching how they scatter is still used. The Large Hadron Collider does the same with protons to look inside protons.</li>
+              <li>Smoke detectors in many buildings contain a tiny alpha source (americium-241). Smoke particles stop the alphas, the current drops and the alarm sounds.</li>
+              <li>Alpha particles cannot get through a sheet of paper or the dead outer layer of skin, so the gold leaf had to be very thin.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose the plum-pudding model and the very fast beam. Fire 1,00,000 alphas or more. Do any bounce back?<details><summary>Show answer</summary>None. Every alpha is turned by only a degree or two, because the positive charge is spread over the whole atom and pushes only gently. This is what Rutherford expected before the experiment.</details></li>
+              <li>Switch to the nuclear model (gold, 5 MeV, 1 µm). How many alphas, roughly, for each one that bounces back?<details><summary>Show answer</summary>About 1 in 10,000 (the formula gives 1 in 10,400). With the very fast beam you see a few every second. Most of the rest go through with almost no turn: more than 98% stay within 10°.</details></li>
+              <li>Watch the zoomed view. Which alphas turn back, and what does the dashed circle show?<details><summary>Show answer</summary>Only those aimed almost straight at the nucleus. They slow down, stop at the dashed circle (about 45 fm away, where all their energy has become electrical energy) and are pushed back. Alphas aimed further off are bent less, and far-off ones go straight.</details></li>
+              <li>Halve the alpha energy to 2.5 MeV. What happens to the closest approach and to the bounce-back rate?<details><summary>Show answer</summary>The closest approach doubles to about 91 fm, and bounce-backs become 4 times as common (1 in about 2,600), because the rate goes as 1 ÷ E².</details></li>
+              <li>Change gold to aluminium. Why are bounce-backs so rare now?<details><summary>Show answer</summary>Aluminium's nucleus has only 13 protons instead of 79. The push is about 6 times weaker, and the rate goes as Z², so it falls about 37 times, to roughly 1 in 3,80,000.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Alpha particle:</strong> a helium nucleus (2 protons and 2 neutrons) given off by some radioactive elements such as radium.</li>
+              <li><strong>Nucleus:</strong> the tiny, dense, positively charged centre of an atom, holding almost all its mass.</li>
+              <li><strong>Scattering angle:</strong> how far an alpha's path is turned from its original direction (0° = straight on, 180° = straight back).</li>
+              <li><strong>Femtometre (fm):</strong> 10⁻¹⁵ m, the size scale of nuclei.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

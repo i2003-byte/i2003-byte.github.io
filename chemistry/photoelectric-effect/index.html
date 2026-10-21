@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Photoelectric Effect — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shine light of any colour on sodium, zinc or caesium and see when electrons jump out. Brighter light gives more electrons, not faster ones; only shorter wavelengths do. Find the threshold, the stopping potential and Einstein's KE = hν − φ.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/chemistry/photoelectric-effect/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Photoelectric Effect — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shine light of any colour on sodium, zinc or caesium and see when electrons jump out. Brighter light gives more electrons, not faster ones; only shorter wavelengths do. Find the threshold, the stopping potential and Einstein's KE = hν − φ.">
+  <meta property="og:url" content="https://i2003-byte.github.io/chemistry/photoelectric-effect/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="photoelectric-effect">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Shine light on a clean metal plate in a vacuum and, sometimes, electrons jump out of the metal. This is the <strong>photoelectric effect</strong>. What puzzled scientists around 1900 was <em>when</em> it happens.</p>
+            <ul>
+              <li>Red or green light on sodium gives <strong>no electrons at all</strong>, however bright the lamp. Violet or ultraviolet light gives electrons at once, even when it is very dim.</li>
+              <li>A brighter light gives <strong>more</strong> electrons (a bigger current), but not <strong>faster</strong> ones. Only a higher frequency (shorter wavelength) makes the electrons faster.</li>
+              <li>If light were just a wave, a bright enough red light should eventually shake electrons loose. In 1905, Einstein explained it: light comes in packets, <strong>photons</strong>, each with energy E = hν. One photon gives all its energy to one electron.</li>
+              <li>An electron needs a minimum energy, the <strong>work function φ</strong>, to get out of the metal. If hν is less than φ, nothing happens. If hν is more, the extra energy becomes the electron's kinetic energy.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 Formulas</h3>
+            <code class="formula">E = hν = hc ÷ λ   →   E(eV) = 1240 ÷ λ(nm)</code>
+            <code class="formula">KEmax = hν − φ      (Einstein's photoelectric equation)</code>
+            <code class="formula">threshold: ν₀ = φ ÷ h,  λ₀ = hc ÷ φ      stopping potential: eV₀ = KEmax</code>
+            <p class="formula-note">Example: sodium (φ = 2.75 eV) lit with 300 nm ultraviolet. Each photon has 1240 ÷ 300 = 4.13 eV, so the fastest electrons have 4.13 − 2.75 = 1.38 eV, and a collector at −1.38 V just stops them. Sodium's threshold is 1240 ÷ 2.75 ≈ 451 nm: anything redder does nothing. h = 6.63 × 10⁻³⁴ J s = 4.14 × 10⁻¹⁵ eV s.</p>
+            <p class="formula-note">Simplified: brightness here means the number of photons per second. Electron energies are spread evenly from 0 to KEmax, every freed electron reaches the collector when its voltage is zero or positive (so the current is at its saturation value straight away), and the saturation current at full brightness is set at 6 µA. Only a sample of photons and electrons is drawn. Work functions are typical values for clean surfaces.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Solar cells, the light sensors in phone cameras and automatic street lights all turn photons into moving electrons (inside a solid, the related <em>photovoltaic</em> or internal photoelectric effect).</li>
+              <li>Old cinema projectors read the sound track printed on film with a photocell; automatic doors and burglar alarms used photocells with a light beam.</li>
+              <li>Photomultiplier tubes, which can detect a single photon, use the photoelectric effect and are used in medical scanners and to detect neutrinos.</li>
+              <li>Einstein received the 1921 Nobel Prize in Physics for explaining the photoelectric effect, not for relativity.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Choose sodium and red light (650 nm). Turn the brightness up to 100%. Does any current flow?<details><summary>Show answer</summary>No. Each red photon has only 1.91 eV, less than sodium's 2.75 eV work function. More photons do not help, because one electron cannot add up the energy of two photons.</details></li>
+              <li>Keep sodium and slowly lower the wavelength from 650 nm. At what wavelength do electrons first appear?<details><summary>Show answer</summary>At about 451 nm (blue-violet), the threshold wavelength, where the photon energy equals 2.75 eV. The threshold frequency is 6.65 × 10¹⁴ Hz.</details></li>
+              <li>At 300 nm on sodium, lower the collector voltage until the current is just zero. What is the stopping potential?<details><summary>Show answer</summary>About −1.38 V. That matches KEmax = 4.13 − 2.75 = 1.38 eV: the fastest electrons can climb a 1.38 V hill and no more.</details></li>
+              <li>Change the brightness from 60% to 100% and look at the current–voltage graph. What changes, and what stays the same?<details><summary>Show answer</summary>The saturation current rises (3.6 µA to 6 µA) because more photons free more electrons. The stopping potential stays at −1.38 V, because each electron still gets the same energy from one photon.</details></li>
+              <li>Drag the wavelength from 200 nm to 450 nm for two different metals and look at the dots on the kinetic energy–frequency graph. What do the lines have in common?<details><summary>Show answer</summary>They are straight and parallel. The slope is Planck's constant h for every metal; each line only starts at a different threshold frequency, ν₀ = φ ÷ h. Millikan measured this slope in 1916 and confirmed Einstein's equation.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Photon:</strong> a packet (quantum) of light energy, E = hν.</li>
+              <li><strong>Work function (φ):</strong> the least energy needed to pull an electron out of a metal surface.</li>
+              <li><strong>Threshold frequency (ν₀):</strong> the lowest frequency of light that can free electrons from a given metal.</li>
+              <li><strong>Stopping potential (V₀):</strong> the negative collector voltage that just stops the fastest photoelectrons.</li>
+              <li><strong>Saturation current:</strong> the current when every freed electron is being collected; it depends on the brightness.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

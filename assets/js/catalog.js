@@ -2505,6 +2505,54 @@ SimLab.simulations = [
     prerequisites: ['valency-formula']
   },
   {
+    id: 'rutherford-scattering',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: "Rutherford's Gold-Foil Experiment",
+    description:
+      'Fire alpha particles at thin gold leaf and count the flashes. Almost all go straight through, but about 1 in 10,000 bounces back. Compare Thomson\'s plum-pudding atom with Rutherford\'s tiny nucleus.',
+    level: 'Intermediate',
+    tags: ['rutherford', 'alpha particles', 'gold foil', 'nucleus', 'plum pudding', 'scattering', 'structure of atom', 'class 9', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/rutherford-scattering.svg',
+    link: '/chemistry/rutherford-scattering/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: []
+  },
+  {
+    id: 'bohr-hydrogen-spectrum',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: "Bohr Model and Hydrogen Spectrum",
+    description:
+      'Make the electron in a hydrogen atom jump between Bohr\'s orbits and watch each photon\'s colour build up the line spectrum: the red, blue and violet Balmer lines, ultraviolet Lyman and infrared Paschen lines, with E = −13.6/n² eV.',
+    level: 'Advanced',
+    tags: ['bohr model', 'hydrogen spectrum', 'energy levels', 'balmer series', 'lyman series', 'photon', 'line spectrum', 'structure of atom', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/bohr-hydrogen-spectrum.svg',
+    link: '/chemistry/bohr-hydrogen-spectrum/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: ['rutherford-scattering']
+  },
+  {
+    id: 'photoelectric-effect',
+    subject: 'chemistry',
+    branch: 'atoms',
+    title: "Photoelectric Effect",
+    description:
+      'Shine light of any colour on sodium, zinc or caesium and see when electrons jump out. Brighter light gives more electrons, not faster ones; only shorter wavelengths do. Find the threshold, the stopping potential and Einstein\'s KE = hν − φ.',
+    level: 'Advanced',
+    tags: ['photoelectric effect', 'photon', 'work function', 'threshold frequency', 'stopping potential', 'einstein', 'planck constant', 'structure of atom', 'dual nature', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/photoelectric-effect.svg',
+    link: '/chemistry/photoelectric-effect/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: []
+  },
+  {
     id: 'states-of-matter',
     subject: 'chemistry',
     branch: 'matter',
@@ -3063,6 +3111,22 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-20',
     prerequisites: []
+  },
+  {
+    id: 'formal-informal-credit',
+    subject: 'economics',
+    branch: 'money',
+    title: 'Formal vs Informal Credit',
+    description:
+      'A farmer borrows ₹50,000 for a crop from a cooperative, a bank, a self-help group or a moneylender. Add a drought and watch six years of interest: one lender\'s farmer climbs out, another\'s sinks into a debt trap.',
+    level: 'Intermediate',
+    tags: ['credit', 'formal credit', 'informal credit', 'moneylender', 'self-help group', 'collateral', 'debt trap', 'crop loan', 'money and credit', 'class 10'],
+    thumbnail: '/assets/img/thumbs/formal-informal-credit.svg',
+    link: '/economics/formal-informal-credit/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-21',
+    prerequisites: ['simple-compound-interest']
   }
 ];
 

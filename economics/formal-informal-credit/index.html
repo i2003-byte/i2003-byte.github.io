@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Formal vs Informal Credit — Interactive Simulation | SimLab</title>
+  <meta name="description" content="A farmer borrows ₹50,000 for a crop from a cooperative, a bank, a self-help group or a moneylender. Add a drought and watch six years of interest: one lender's farmer climbs out, another's sinks into a debt trap.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/economics/formal-informal-credit/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Formal vs Informal Credit — Interactive Simulation | SimLab">
+  <meta property="og:description" content="A farmer borrows ₹50,000 for a crop from a cooperative, a bank, a self-help group or a moneylender. Add a drought and watch six years of interest: one lender's farmer climbs out, another's sinks into a debt trap.">
+  <meta property="og:url" content="https://i2003-byte.github.io/economics/formal-informal-credit/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="formal-informal-credit">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Most small farmers in India need a loan every year at sowing time, for seed, fertiliser, pesticide and diesel for the pump. They repay it when the crop is sold. <strong>Where</strong> the loan comes from can decide whether the family slowly gets ahead or sinks into debt.</p>
+            <ul>
+              <li><strong>Formal credit:</strong> banks and cooperative societies. They are watched over by the Reserve Bank of India, and their interest is low (here 7–9% a year). But they ask for <strong>collateral</strong>, such as land papers, and for documents.</li>
+              <li><strong>Informal credit:</strong> moneylenders, traders, landlords, relatives. No collateral or paperwork, so they are easy to get, but nobody controls their rates. 3–5% <em>a month</em> (36–60% a year) is common.</li>
+              <li><strong>Self-help groups (SHGs):</strong> 15–20 villagers, mostly women, who save small amounts every month and lend to members at about 1–2% a month. The group, not land, is the guarantee. Banks often lend to SHGs, so they bridge the two worlds.</li>
+              <li>A bad year is where the difference shows. The unpaid part of the loan carries over and earns interest again (interest on interest). At a low rate the farmer climbs out in a few normal years; at a high rate the debt grows faster than any harvest can pay. This is a <strong>debt trap</strong>.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🧮 How the money is counted</h3>
+            <code class="formula">owed at year end = (old debt + new loan) × (1 + yearly rate)</code>
+            <code class="formula">money in = crop sale − family spending + savings</code>
+            <code class="formula">left over = money in − owed  (if negative, it becomes next year's old debt)</code>
+            <p class="formula-note">Example, moneylender at 3% a month with a drought in year 1: owed = 50,000 × 1.36 = ₹68,000. Crop ₹30,000 − family ₹20,000 = ₹10,000, so ₹58,000 is still owed. Next year: (58,000 + 50,000) × 1.36 = ₹1,46,880 owed against ₹70,000 of money in, and the debt has grown to ₹76,880 even with a normal harvest.</p>
+            <p class="formula-note">Simplified: the farmer always needs ₹50,000 for the crop (using own savings first), interest is added monthly but charged on the amount borrowed at sowing, and the old debt rolls over at the same rate. A crop sells for ₹1,10,000 (good), ₹90,000 (normal) or ₹30,000 (drought). There is no crop insurance, government help or loan waiver, and the farm is never sold. Real rates and prices differ from place to place.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The Kisan Credit Card (KCC) gives farmers crop loans from banks and cooperatives at about 7% a year, and less if they repay on time.</li>
+              <li>Surveys show that the poorest rural families still get a large share of their loans from informal lenders, because they have no land or papers to pledge. Better-off households borrow mostly from banks.</li>
+              <li>SHGs under schemes such as DAY-NRLM have brought crores of rural women into saving and borrowing; many members have started small businesses like tailoring, dairy and papad making.</li>
+              <li>Formal lenders also help in bad years: a bank can reschedule a crop loan after a drought, while a moneylender may take land or make the family work for him to clear the debt.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep “Drought in year 1” and the moneylender at 3% a month. Start the seasons. Is the farmer out of debt after 6 years?<details><summary>Show answer</summary>No. The debt grows every year, from ₹58,000 after the drought to about ₹2.5 lakh after year 6, even though years 2 to 6 have normal harvests. The interest (36% a year) on the carried debt is bigger than the ₹20,000 or so the farm can spare. This is a debt trap.</details></li>
+              <li>Same drought, but borrow from the bank instead. When is the farmer debt-free?<details><summary>Show answer</summary>The bank farmer owes ₹44,500 after the drought, then ₹33,000, ₹20,500 and ₹6,800, and is debt-free in year 5 with about ₹24,000 saved by the end of year 6. Same farm, same weather: only the interest rate is different.</details></li>
+              <li>Switch off “Has land papers”. Which lenders are left, and what does that mean for a landless or tenant farmer?<details><summary>Show answer</summary>Only the self-help group and the moneylenders. The cooperative and bank lines disappear. People with no collateral are pushed towards the most expensive credit, which is why SHGs (which need no collateral) matter so much.</details></li>
+              <li>Choose “Normal monsoon every year” and the moneylender at 5% a month. Can the farmer manage even with no drought?<details><summary>Show answer</summary>No. The interest on ₹50,000 is ₹30,000 a year, so ₹80,000 is owed but only ₹70,000 comes in. The debt starts at ₹10,000 and keeps growing, to about ₹2.6 lakh by year 6.</details></li>
+              <li>Pick the SHG with a drought in year 1, then lower family spending to ₹15,000. What changes?<details><summary>Show answer</summary>At ₹20,000 the SHG farmer is still about ₹33,000 in debt after 6 years. Spending ₹5,000 less each year sends that money to the debt, which shrinks from ₹44,000 to about ₹1,900 by year 5 and is cleared in year 6, leaving about ₹14,000 saved. Small savings matter most when interest is high.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Credit:</strong> an agreement in which a lender gives money now and the borrower promises to repay it later, with interest.</li>
+              <li><strong>Terms of credit:</strong> the interest rate, collateral, documents and way of repaying that come with a loan.</li>
+              <li><strong>Collateral:</strong> an asset the borrower owns (land, a house, gold, cattle) that the lender can take if the loan is not repaid.</li>
+              <li><strong>Formal sector:</strong> banks and cooperatives, supervised by the Reserve Bank of India.</li>
+              <li><strong>Debt trap:</strong> when a borrower has to borrow more just to pay back old loans, and the debt keeps growing.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="rutherford-scattering">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c1d95"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <circle cx="190" cy="100" r="8" fill="#ef4444"/>
+  <g fill="none" stroke="#f472b6" stroke-width="2.5">
+    <path d="M20 40H300"/><path d="M20 70Q170 70 300 40"/><path d="M20 85Q165 85 240 10"/><path d="M20 100H160Q175 100 20 112"/>
+    <path d="M20 130Q170 130 300 160"/><path d="M20 165H300"/>
+  </g>
+  <circle cx="190" cy="100" r="34" fill="none" stroke="#94a3b8" stroke-dasharray="4 4"/>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#fde68a" x="200" y="190">+79 gold nucleus</text>
+</svg>

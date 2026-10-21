@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="formal-informal-credit">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M30 70H300" stroke="#94a3b8" stroke-width="1.5"/>
+  <polyline points="30,70 60,95 60,90 100,98 100,86 140,92 140,80 180,84 180,72 220,74 220,62 260,62 260,50 300,48" fill="none" stroke="#22c55e" stroke-width="3"/>
+  <polyline points="30,70 60,110 60,120 100,140 100,150 140,165 140,175 180,186" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#86efac" x="232" y="40">bank 9%</text>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#fca5a5" x="190" y="180">lender 60%</text>
+  <text font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#fde68a" x="30" y="40">₹50,000 crop loan</text>
+</svg>
