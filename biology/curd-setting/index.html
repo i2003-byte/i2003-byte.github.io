@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How Milk Becomes Curd — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Stir a spoon of curd into warm milk and watch lactic acid bacteria multiply, the pH fall and the milk set. Try a cold winter kitchen, hot milk or the fridge, and tilt the bowl to test it.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/curd-setting/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="How Milk Becomes Curd — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Stir a spoon of curd into warm milk and watch lactic acid bacteria multiply, the pH fall and the milk set. Try a cold winter kitchen, hot milk or the fridge, and tilt the bowl to test it.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/curd-setting/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="curd-setting">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>To set curd (dahi) at home, we warm boiled milk, stir in a spoon of old curd and leave the bowl covered for some hours. The spoon of curd is the <strong>starter</strong>: it carries millions of <strong>lactic acid bacteria</strong> (<em>Lactobacillus</em>), tiny rod-shaped microorganisms.</p>
+            <p>The bacteria feed on the sugar in milk (<strong>lactose</strong>) and turn it into <strong>lactic acid</strong>. They also multiply, so the more of them there are, the faster the acid builds up. As the milk turns more acidic its pH falls, and at about pH 4.6 the milk proteins (<strong>casein</strong>) join up into a soft net that traps the water. The runny milk has become solid curd.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">lactose  →  lactic acid   (by Lactobacillus)</code>
+            <p class="formula-note">C₁₂H₂₂O₁₁ + H₂O → 4 C₃H₆O₃. Fresh milk has a pH of about 6.6; set curd is about 4.5, sour curd about 4.</p>
+            <p><strong>Warmth matters:</strong> the bacteria grow fastest at about 40 °C. In a warm place curd sets in 4–5 hours, overnight in a summer kitchen, but in a cold winter kitchen it may not set at all by morning. Milk that is still hot (55 °C or more) kills the starter.</p>
+            <p><strong>Growth is fast:</strong> in warm milk the number of bacteria doubles about every 30–60 minutes, from 1 spoon of starter to about 100 times as many.</p>
+            <p><strong>Stopping it:</strong> once set, curd is kept in the fridge. At 5 °C the bacteria almost stop, so it does not keep getting sourer. Left warm, the acid keeps rising, the curd turns sour and watery <strong>whey</strong> separates on top.</p>
+            <p class="formula-note">The sim uses a simple model: bacterial growth with a warmth factor that peaks at 40 °C, acid made in proportion to the bacteria, a brake as the milk gets very acidic, and pH read from a table for cow’s milk. The bowl stays at the temperature you choose. Real times depend on the milk, the starter and the weather. 1 second of the sim is 12 minutes in the bowl.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>In winter many families keep the curd bowl in a casserole, an oven with its light on or wrapped in a cloth near the stove, so it stays warm enough to set.</li>
+              <li>Dairies make curd and yoghurt in warm rooms at about 40–45 °C with pure starter cultures, so every cup sets the same way in a few hours.</li>
+              <li>The same kind of bacteria sour idli and dosa batter, and make buttermilk (chaas), paneer whey and cheese.</li>
+              <li>Curd bacteria are “friendly” microorganisms: they also help digestion, and the acid they make stops many harmful germs growing in the curd.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the bowl at 30 °C with 1 tsp of starter and press Leave it to set. When does the milk set, and what does the microscope show as it happens?<details><summary>Show answer</summary>It sets after about 7 hours, overnight in a summer kitchen. The rod-shaped bacteria multiply, and once the pH falls below about 5.2 the protein specks start joining up into a net, which is complete at pH 4.6.</details></li>
+              <li>Try 40 °C, then 20 °C. How do the setting times compare?<details><summary>Show answer</summary>At 40 °C it sets in about 4½ hours. At 20 °C the bacteria grow so slowly that it is still liquid after 16 hours, which is why curd often fails to set on a cold winter night.</details></li>
+              <li>Set the temperature to 60 °C (milk still hot). What happens to the starter?<details><summary>Show answer</summary>The bacteria are killed (they turn grey), no acid is made and the pH stays at 6.6. Always let boiled milk cool until it is just warm before adding the starter.</details></li>
+              <li>At 40 °C, let it set, then keep going without the fridge. Run it again and press Put it in the fridge as soon as it sets. What is the difference?<details><summary>Show answer</summary>Left warm, the acid passes 1.1 % less than 2 hours after setting: the curd turns sour and whey separates on top. In the fridge the pH stays almost where it was when you put it in.</details></li>
+              <li>Once it has set, press Tilt the bowl. Then reset and tilt it while it is still milk.<details><summary>Show answer</summary>Set curd tilts with the bowl and stays in, because the protein net holds the water. Milk stays level and pours out over the rim.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Lactobacillus:</strong> a rod-shaped bacterium that turns milk sugar into lactic acid.</li>
+              <li><strong>Starter:</strong> a little curd that carries the bacteria into fresh milk.</li>
+              <li><strong>pH:</strong> a scale of how acidic something is; below 7 is acidic, and the lower the number the more acidic.</li>
+              <li><strong>Casein:</strong> the main protein in milk, which joins into a net when the milk becomes acidic.</li>
+              <li><strong>Whey:</strong> the watery, pale yellow-green liquid that separates from sour curd or from paneer.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

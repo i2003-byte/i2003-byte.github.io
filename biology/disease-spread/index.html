@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How Diseases Spread — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Watch a germ pass through a town of 160 people by coughs or mosquito bites. Vaccinate people, add masks, nets or staying home, and see how herd immunity stops an outbreak.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/biology/disease-spread/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="How Diseases Spread — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Watch a germ pass through a town of 160 people by coughs or mosquito bites. Vaccinate people, add masks, nets or staying home, and see how herd immunity stops an outbreak.">
+  <meta property="og:url" content="https://i2003-byte.github.io/biology/disease-spread/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="disease-spread">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Many diseases are caused by microorganisms (<strong>pathogens</strong>): viruses cause flu, measles, chickenpox and dengue; bacteria cause typhoid and tuberculosis; a protozoan causes malaria. A disease that passes from one person to another is called a <strong>communicable</strong> disease.</p>
+            <p>Germs travel in different ways. Flu and measles spread through the air in tiny droplets when a sick person coughs or sneezes, so people nearby catch them. Dengue and malaria cannot pass straight from person to person: a <strong>mosquito</strong> picks up the germ when it bites a sick person and passes it on with its next bites. The mosquito is a <strong>carrier</strong>.</p>
+            <p>A <strong>vaccine</strong> trains the body to fight a germ before it ever meets it. A vaccinated person cannot catch the disease, and also cannot pass it on, so vaccines protect the people around them too.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">herd immunity needs  1 − 1/R₀  of people immune</code>
+            <p class="formula-note">R₀ (“R nought”) is how many people one sick person would infect in a crowd where nobody is immune. Flu-like: R₀ ≈ 2, so about half must be immune. Measles: R₀ about 12–18, so 92–95 % must be vaccinated.</p>
+            <p><strong>Why an outbreak grows:</strong> if each sick person infects more than one other before they recover, the number of sick people keeps rising. When fewer than one new person is infected each time, it dies out.</p>
+            <p><strong>Herd immunity:</strong> when enough people are immune, a sick person mostly meets people who cannot catch it, so the germ cannot find new hosts. Even the few who are not vaccinated (babies, or people too ill for a vaccine) stay safe.</p>
+            <p><strong>Other protection:</strong> masks, covering a cough and washing hands cut the germs that reach others; sick people who stay at home meet fewer people. For mosquito diseases, nets and repellents stop bites, and emptying stagnant water (coolers, tyres, pots) stops mosquitoes breeding.</p>
+            <p class="formula-note">The sim is a simple model: 160 people walk at random; each cough can infect anyone healthy within a fixed distance with a fixed chance; everyone is sick for about 5 (measles-like: 7) days and then immune for good; vaccines work every time; mosquitoes bite someone nearby about once a day and live about 10 days. Nobody dies or is born. In a town this small an outbreak quickly runs short of people to infect, so even a measles-like germ shows fewer than 12 new cases per person. Each run is a little different, like real outbreaks. 1 second of the sim is 2 days.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>India’s Pulse Polio campaign vaccinated almost every child under 5, again and again, until polio was gone; India was declared polio-free in 2014.</li>
+              <li>The Universal Immunisation Programme gives free vaccines for measles, rubella, tuberculosis (BCG), diphtheria, whooping cough, tetanus and more to millions of babies every year.</li>
+              <li>Dengue is spread by the <em>Aedes</em> mosquito, which breeds in clean still water and bites by day; malaria by the female <em>Anopheles</em>, which bites at night. Cases rise in and just after the monsoon.</li>
+              <li>Edward Jenner made the first vaccine (against smallpox) in 1796. Smallpox was wiped out across the world by 1980.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the flu-like disease with nobody vaccinated and press Start the outbreak. How many people catch it, and when is the peak?<details><summary>Show answer</summary>Usually more than half the town catches it, with the most people sick at once somewhere between day 8 and day 20. Now and then the first few recover before passing it on and the outbreak fizzles out; run it again.</details></li>
+              <li>Now vaccinate 50 % of people. What happens to the outbreak, and to the people who were not vaccinated?<details><summary>Show answer</summary>It stays small, often under 20 % of the town, so most unvaccinated people never catch it either. For a flu-like germ with R₀ ≈ 2, half the town immune is about the herd-immunity level.</details></li>
+              <li>Switch to the measles-like disease. Try 0 %, 70 % and 90 % vaccinated.<details><summary>Show answer</summary>With none, everybody catches it within about 2 weeks. With 70 % vaccinated it still reaches nearly all the unvaccinated people (about 25–30 % of the town). With 90 % it barely spreads. Very catching diseases need almost everyone vaccinated.</details></li>
+              <li>With the flu-like disease and no vaccine, choose Sick stay home. What changes, and why?<details><summary>Show answer</summary>The sick stop walking (a box is drawn round them) and meet far fewer people, so each passes it to fewer others and the outbreak usually stays small.</details></li>
+              <li>Pick the mosquito disease. Watch a few bites, then try Mosquito nets and then Clear stagnant water.<details><summary>Show answer</summary>Germs only move when a mosquito bites a sick person (it turns red) and then bites someone healthy, so the outbreak is slow but can still reach most of the town. Nets block most bites and stop it almost at once; fewer mosquitoes usually stop it too.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Pathogen:</strong> a microorganism that causes disease.</li>
+              <li><strong>Communicable disease:</strong> a disease that spreads from one person to another, through air, water, food, touch or a carrier.</li>
+              <li><strong>Carrier:</strong> an animal (like a mosquito or housefly) that carries germs from one person to another.</li>
+              <li><strong>Vaccine:</strong> a harmless form of a germ (or part of it) that teaches the body to fight that germ.</li>
+              <li><strong>Herd immunity:</strong> protection of a whole group because so many people in it are immune.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

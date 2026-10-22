@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Finding an Earthquake’s Epicentre — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Three seismographs in Indian cities record an earthquake. Read the gap between the P and S waves, turn it into a distance, and see three circles meet at the epicentre of Bhuj, Latur or a mystery quake.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/seismograph-epicentre/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Finding an Earthquake’s Epicentre — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Three seismographs in Indian cities record an earthquake. Read the gap between the P and S waves, turn it into a distance, and see three circles meet at the epicentre of Bhuj, Latur or a mystery quake.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/seismograph-epicentre/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="seismograph-epicentre">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>An earthquake starts at a point deep underground called the <strong>focus</strong> (or hypocentre). The spot on the surface right above it is the <strong>epicentre</strong>. From the focus, waves of shaking spread out in every direction, and <strong>seismographs</strong> far away record them as a wiggly line called a <strong>seismogram</strong>.</p>
+            <p>The waves do not arrive together. <strong>P waves</strong> are fastest and arrive first, with small quick wiggles. <strong>S waves</strong> are slower and come next, shaking harder. <strong>Surface waves</strong> run along the ground, arrive last and are the biggest; they do most of the damage. The farther away a station is, the bigger the gap between the P and S arrivals, just as you hear thunder later the farther away the lightning is.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">distance = (S − P gap) × vp × vs / (vp − vs)</code>
+            <p class="formula-note">With P waves at 8.0 km/s and S waves at 4.5 km/s this is about 10.3 km for every second of gap. A gap of 60 s means the quake was about 620 km away.</p>
+            <p><strong>Why it works:</strong> both waves cover the same distance d, so the S wave arrives d/4.5 − d/8.0 seconds after the P wave. That gap grows steadily with distance.</p>
+            <p><strong>Three stations:</strong> one station tells you how far away the quake was, but not in which direction: it could be anywhere on a circle. Two circles meet at two points. A third circle picks the one true point. This is called <strong>trilateration</strong>; GPS finds your phone the same way, using distances to satellites.</p>
+            <p class="formula-note">The sim keeps it simple: waves travel in straight lines at fixed speeds (real waves curve and their speeds vary with depth and rock), the map is flat, and the shaking fades with distance. The outline of India is rough and the dates are of real earthquakes, but the traces are made up. 1 second of the sim is 20 seconds after the quake.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>The National Center for Seismology in New Delhi uses many stations across India to find each earthquake’s epicentre within minutes and shares it on its website and app.</li>
+              <li>The Bhuj earthquake of 26 January 2001 (magnitude 7.7) was felt as far as Delhi and Chennai; the Latur earthquake of 1993 struck an area long thought to be safe.</li>
+              <li>The Himalayan states and the North-East are in India’s highest earthquake zone because the Indian plate keeps pushing into Asia.</li>
+              <li>Some warning systems detect the fast P waves and send an alert before the damaging S and surface waves arrive, giving a few seconds to stop trains or shut gas lines.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Keep the Bhuj quake with stations in New Delhi, Mumbai and Hyderabad. Tap the map where you think the quake is, then press Start the earthquake. Which station gets the waves first?<details><summary>Show answer</summary>Mumbai, the closest: P after about 70 s and an S − P gap of 54 s, so about 560 km away. Delhi’s gap is 89 s (about 920 km) and Hyderabad’s 104 s (about 1,070 km).</details></li>
+              <li>Watch one seismogram. In what order do the waves come, and which shake hardest?<details><summary>Show answer</summary>P waves first (small, quick), then S waves (bigger), then surface waves last (the biggest, slow swings).</details></li>
+              <li>After the first S wave arrives you get one circle. Why can’t one station find the epicentre on its own?<details><summary>Show answer</summary>It knows only the distance, not the direction, so the quake could be anywhere on that circle. Two circles cross at two points, and the third circle shows which one is right.</details></li>
+              <li>Choose the Uttarkashi quake. Which station would you change to find it more easily, and why?<details><summary>Show answer</summary>A station close by, such as New Delhi, has a short gap (28 s, about 290 km) and a small circle, so the circles meet at a sharp angle near the quake. Far-away stations only give large, nearly parallel arcs.</details></li>
+              <li>Pick Mystery quake. Make your guess from the three gaps before the circles finish, then see how close you were.<details><summary>Show answer</summary>“Your guess is off by” shows the distance in km once the epicentre is revealed. Press New mystery quake to try another.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Focus:</strong> the point underground where the rocks break and an earthquake starts.</li>
+              <li><strong>Epicentre:</strong> the point on the surface right above the focus.</li>
+              <li><strong>Seismograph:</strong> an instrument that records ground shaking; its record is a seismogram.</li>
+              <li><strong>S − P interval:</strong> the time between the first P wave and the first S wave at a station.</li>
+              <li><strong>Trilateration:</strong> finding a point from its distances to three known points.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

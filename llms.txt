@@ -162,6 +162,11 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 - [Reading a Contour Map: Cross-Sections](https://i2003-byte.github.io/geography/cross-section-map/): Drag a line across a contour map of hills, a river valley and a spur, and see the side view (cross-section) drawn below. Tell valleys from spurs by which way the V of the contours points, and check whether one point can see another. (Intermediate)
 - [Map Scale and Distance in India](https://i2003-byte.github.io/geography/map-scale/): Measure routes on a map of India with a ruler and a thread. Switch between the statement, ratio (1 : 1,00,00,000) and line scales, change the scale, and see why the map distance changes but the real distance does not. (Beginner)
 
+### Landforms & the Earth’s Interior
+
+- [Inside the Earth: Layers and Earthquake Waves](https://i2003-byte.github.io/geography/earth-layers/): Tap the crust, mantle and core to read their depth, heat and density, then set off an earthquake: S waves stop at the liquid outer core and P waves bend, leaving shadow zones on the far side. (Intermediate)
+- [Finding an Earthquake’s Epicentre](https://i2003-byte.github.io/geography/seismograph-epicentre/): Three seismographs in Indian cities record an earthquake. Read the gap between the P and S waves, turn it into a distance, and see three circles meet at the epicentre of Bhuj, Latur or a mystery quake. (Intermediate)
+
 ## Economics
 
 Move prices, change incomes and watch demand and supply respond. Simple models of real Indian markets, with every number in rupees.
@@ -298,6 +303,8 @@ Explore plant, animal and bacterial cells, watch molecules diffuse and water mov
 - [Cell Explorer: Plant, Animal and Bacterial Cells](https://i2003-byte.github.io/biology/cell-explorer/): Tap the parts of a plant cell, an animal cell and a bacterium to see what each organelle does, which cells have it, and how big cells really are. Then quiz yourself. (Beginner)
 - [Osmosis: Potato, Raisins and Plant Cells](https://i2003-byte.github.io/biology/osmosis/): Soak a potato strip, raisins or Rhoeo leaf cells in water, salt or sugar solution. Watch water move by osmosis, graph the change in mass and see plasmolysis under the microscope. (Intermediate)
 - [Yeast and Fermentation](https://i2003-byte.github.io/biology/yeast-fermentation/): Add yeast to warm sugar water and watch a balloon fill with carbon dioxide while the cells bud under a microscope. Compare with a bottle with no yeast, no sugar, cold or hot water. (Beginner)
+- [How Milk Becomes Curd](https://i2003-byte.github.io/biology/curd-setting/): Stir a spoon of curd into warm milk and watch lactic acid bacteria multiply, the pH fall and the milk set. Try a cold winter kitchen, hot milk or the fridge, and tilt the bowl to test it. (Beginner)
+- [How Diseases Spread](https://i2003-byte.github.io/biology/disease-spread/): Watch a germ pass through a town of 160 people by coughs or mosquito bites. Vaccinate people, add masks, nets or staying home, and see how herd immunity stops an outbreak. (Beginner)
 - [Diffusion Across a Membrane](https://i2003-byte.github.io/biology/diffusion/): Watch glucose and starch molecules wander at random in water. See glucose spread through a selectively permeable membrane until both sides are equal, while starch stays behind. Change the temperature. (Beginner)
 
 ### Genetics

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Inside the Earth: Layers and Earthquake Waves — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Tap the crust, mantle and core to read their depth, heat and density, then set off an earthquake: S waves stop at the liquid outer core and P waves bend, leaving shadow zones on the far side.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/geography/earth-layers/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Inside the Earth: Layers and Earthquake Waves — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Tap the crust, mantle and core to read their depth, heat and density, then set off an earthquake: S waves stop at the liquid outer core and P waves bend, leaving shadow zones on the far side.">
+  <meta property="og:url" content="https://i2003-byte.github.io/geography/earth-layers/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="earth-layers">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Nobody has ever been inside the Earth: the deepest hole ever drilled goes down only about 12 km, and the centre is 6,371 km away. We know what is inside from <strong>earthquake waves</strong>. They travel right through the planet, and the way they bend, speed up, slow down or stop tells us what they passed through.</p>
+            <p>The Earth has layers, like an egg: a thin rocky <strong>crust</strong>, a thick hot <strong>mantle</strong> of solid rock, a <strong>liquid outer core</strong> of molten iron and nickel, and a <strong>solid inner core</strong>. It gets hotter and denser the deeper you go.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">P waves: solids and liquids  ·  S waves: solids only</code>
+            <p class="formula-note">P (primary) waves push and pull the rock along their path, like sound, and are the fastest (6–14 km/s). S (secondary) waves shake it from side to side (3.5–7 km/s); a liquid cannot pass on a sideways shake.</p>
+            <p><strong>S-wave shadow:</strong> S waves never arrive more than about 103° around the Earth from an earthquake. The whole far side gets none, because they cannot cross the liquid outer core. That is how we know the outer core is liquid.</p>
+            <p><strong>P-wave shadow:</strong> P waves do cross the core, but they slow down sharply as they enter it and bend inwards, like light entering glass. So there is a ring between about 103° and 142° where hardly any P waves arrive.</p>
+            <p><strong>Bending in the mantle:</strong> waves go faster deeper down, so their paths curve back up towards the surface.</p>
+            <p class="formula-note">The sim traces wave paths with Snell’s law through a simple version of the real Earth’s wave speeds. It shows only waves that travel straight through (no reflections or waves that bend round the core), so its shadow zones begin a little earlier, at about 97°–99°. Dashed paths pass close to or through the inner core; such faint waves in the P shadow led Inge Lehmann to discover the inner core in 1936. The crust is drawn thicker than true scale so you can see it. 1 second of the sim is 1 minute.</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Seismographs in India (the National Center for Seismology runs more than 150 of them) pick up big earthquakes from all over the world, often 10–20 minutes after they happen.</li>
+              <li>A big earthquake in Japan or Chile is “in the shadow” for some stations: they get the P waves late or weak and no S waves at all.</li>
+              <li>The crust under the Himalayas is about 70 km thick, roughly twice as thick as under the Deccan plateau, and only about 7 km under the Indian Ocean floor.</li>
+              <li>The Earth’s magnetic field, which turns a compass needle, is made by liquid iron flowing in the outer core.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Tap the crust, the mantle, the outer core and the inner core in turn. Which is the thickest layer, and which is the thinnest?<details><summary>Show answer</summary>The mantle is thickest (35 km to 2,891 km, about 2,850 km thick). The crust is thinnest, only about 35 km on average, less than 1 % of the way to the centre.</details></li>
+              <li>Press Start the earthquake and watch the S waves on the left. What happens when they reach the outer core?<details><summary>Show answer</summary>They stop (each path ends in a small ring at the core). After about 25 minutes there is a red arc on the far side, beyond about 99°, where no S waves ever arrive.</details></li>
+              <li>Now watch the P waves on the right. Where do they reach the surface, and where is the gap?<details><summary>Show answer</summary>Mantle waves reach up to about 97° in 13–14 minutes; waves through the core arrive beyond about 144° after about 20 minutes. The gap between them is the P shadow zone (103°–142° in the real Earth).</details></li>
+              <li>The inner core is hotter than the outer core. Tap both and compare. Why is the inner core solid?<details><summary>Show answer</summary>The inner core is about 5,300–5,500 °C and the outer core about 4,000–5,300 °C. The pressure at the centre is so huge (over 3 million times the air pressure) that the iron is squeezed solid even though it is hotter.</details></li>
+              <li>Tap the outer core and read the wave speeds. Then tap just above it, at the bottom of the mantle.<details><summary>Show answer</summary>P waves drop from 13.7 km/s at the bottom of the mantle to 8.0 km/s in the outer core, and S waves from 7.3 km/s to nothing. The sudden slowdown is what bends the P waves and makes the shadow zone.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Crust:</strong> the thin, solid, outermost layer of the Earth.</li>
+              <li><strong>Mantle:</strong> the thick layer of hot solid rock below the crust; its upper soft part is the asthenosphere.</li>
+              <li><strong>Core:</strong> the iron-nickel centre of the Earth, liquid outside and solid inside.</li>
+              <li><strong>Seismic waves:</strong> waves of shaking that spread out from an earthquake.</li>
+              <li><strong>Shadow zone:</strong> the part of the Earth’s surface where certain earthquake waves do not arrive.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

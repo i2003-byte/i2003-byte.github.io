@@ -102,7 +102,8 @@ SimLab.subjects = [
     branches: [
       { id: 'earth-motions', name: "Earth's Motions" },
       { id: 'climate', name: 'Weather & Climate' },
-      { id: 'maps', name: 'Maps' }
+      { id: 'maps', name: 'Maps' },
+      { id: 'landforms', name: 'Landforms & the Earth’s Interior' }
     ]
   },
   {
@@ -1178,7 +1179,39 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-21',
     prerequisites: ['cell-explorer']
+  },  {
+    id: 'curd-setting',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'How Milk Becomes Curd',
+    description:
+      'Stir a spoon of curd into warm milk and watch lactic acid bacteria multiply, the pH fall and the milk set. Try a cold winter kitchen, hot milk or the fridge, and tilt the bowl to test it.',
+    level: 'Beginner',
+    tags: ['curd', 'dahi', 'lactobacillus', 'bacteria', 'lactic acid', 'ph', 'fermentation', 'microorganisms', 'milk', 'class 8'],
+    thumbnail: '/assets/img/thumbs/curd-setting.svg',
+    link: '/biology/curd-setting/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-22',
+    prerequisites: ['yeast-fermentation']
   },
+  {
+    id: 'disease-spread',
+    subject: 'biology',
+    branch: 'cells',
+    title: 'How Diseases Spread',
+    description:
+      'Watch a germ pass through a town of 160 people by coughs or mosquito bites. Vaccinate people, add masks, nets or staying home, and see how herd immunity stops an outbreak.',
+    level: 'Beginner',
+    tags: ['disease', 'germs', 'pathogens', 'vaccine', 'herd immunity', 'mosquito', 'dengue', 'malaria', 'measles', 'communicable disease', 'microorganisms', 'class 8', 'class 9'],
+    thumbnail: '/assets/img/thumbs/disease-spread.svg',
+    link: '/biology/disease-spread/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-22',
+    prerequisites: ['curd-setting']
+  },
+
   {
     id: 'diffusion',
     subject: 'biology',
@@ -1387,7 +1420,39 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-18',
     prerequisites: []
+  },  {
+    id: 'earth-layers',
+    subject: 'geography',
+    branch: 'landforms',
+    title: 'Inside the Earth: Layers and Earthquake Waves',
+    description:
+      'Tap the crust, mantle and core to read their depth, heat and density, then set off an earthquake: S waves stop at the liquid outer core and P waves bend, leaving shadow zones on the far side.',
+    level: 'Intermediate',
+    tags: ['interior of the earth', 'crust', 'mantle', 'core', 'seismic waves', 'p waves', 's waves', 'shadow zone', 'earthquake', 'landforms', 'class 7', 'class 11'],
+    thumbnail: '/assets/img/thumbs/earth-layers.svg',
+    link: '/geography/earth-layers/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-22',
+    prerequisites: []
   },
+  {
+    id: 'seismograph-epicentre',
+    subject: 'geography',
+    branch: 'landforms',
+    title: 'Finding an Earthquake’s Epicentre',
+    description:
+      'Three seismographs in Indian cities record an earthquake. Read the gap between the P and S waves, turn it into a distance, and see three circles meet at the epicentre of Bhuj, Latur or a mystery quake.',
+    level: 'Intermediate',
+    tags: ['earthquake', 'epicentre', 'seismograph', 'seismogram', 'p waves', 's waves', 'trilateration', 'bhuj', 'landforms', 'class 7', 'class 11'],
+    thumbnail: '/assets/img/thumbs/seismograph-epicentre.svg',
+    link: '/geography/seismograph-epicentre/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-22',
+    prerequisites: ['earth-layers']
+  },
+
   {
     id: 'demand-curve',
     subject: 'economics',

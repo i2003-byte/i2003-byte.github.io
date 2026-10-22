@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="curd-setting">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <rect width="320" height="200" fill="url(#grid)"/>
+  <ellipse cx="88" cy="96" rx="62" ry="10" fill="#efe5c8"/>
+  <path d="M26 96A62 50 0 0 0 150 96" fill="#efe5c8"/>
+  <path d="M26 96A62 50 0 0 0 150 96" fill="none" stroke="#cbd5e1" stroke-width="5"/>
+  <path d="M58 98q14 5 26 0M100 101q12-4 22 1" stroke="#b8a77a" stroke-width="2" fill="none"/>
+  <rect x="24" y="168" width="128" height="10" rx="5" fill="#eab308"/><path d="M84 160l-6-9h12z" fill="#fff"/>
+  <circle cx="232" cy="98" r="66" fill="#dfe6ef" stroke="#e2e8f0" stroke-width="5"/>
+  <g stroke="#64748b" stroke-width="2"><path d="M190 80L214 70L240 88L262 74L278 96M200 118L226 108L250 124L270 112M214 70L226 108M240 88L250 124"/></g>
+  <g fill="#7c3aed"><rect x="196" y="92" width="22" height="7" rx="3.5"/><rect x="219" y="94" width="22" height="7" rx="3.5"/><rect x="246" y="138" width="22" height="7" rx="3.5" transform="rotate(-25 257 141)"/><rect x="232" y="60" width="22" height="7" rx="3.5" transform="rotate(30 243 63)"/><rect x="206" y="140" width="22" height="7" rx="3.5"/></g>
+  <text x="232" y="190" font-family="sans-serif" font-size="14" font-weight="700" fill="#a5f3fc" text-anchor="middle">milk → curd</text>
+</svg>
