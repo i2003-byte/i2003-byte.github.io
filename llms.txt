@@ -166,6 +166,7 @@ Watch the Earth turn and go round the Sun, see why days are long in June and sho
 
 - [Inside the Earth: Layers and Earthquake Waves](https://i2003-byte.github.io/geography/earth-layers/): Tap the crust, mantle and core to read their depth, heat and density, then set off an earthquake: S waves stop at the liquid outer core and P waves bend, leaving shadow zones on the far side. (Intermediate)
 - [Finding an Earthquake’s Epicentre](https://i2003-byte.github.io/geography/seismograph-epicentre/): Three seismographs in Indian cities record an earthquake. Read the gap between the P and S waves, turn it into a distance, and see three circles meet at the epicentre of Bhuj, Latur or a mystery quake. (Intermediate)
+- [Moving Plates: Mountains, Rifts and Quakes](https://i2003-byte.github.io/geography/plate-movements/): Watch India crash into Asia and raise the Himalayas, an ocean plate sink under a continent and feed volcanoes, a rift valley open into an ocean with magnetic stripes, and a fault bend and snap in an earthquake. (Intermediate)
 
 ## Economics
 
@@ -198,6 +199,9 @@ Count in binary, wire up logic gates and race sorting algorithms. The ideas insi
 ### Algorithms
 
 - [Sorting Race: Bubble, Selection and Merge](https://i2003-byte.github.io/computer-science/sorting-race/): Race bubble sort, selection sort and merge sort on the same bars, step by step, counting comparisons and swaps. See why n log n beats n² as the list grows. (Intermediate)
+- [Linear vs Binary Search](https://i2003-byte.github.io/computer-science/linear-binary-search/): Search a class register for a roll number two ways: check students one by one, or check the middle and throw away half. Count the checks, try a missing number and see why binary search needs a sorted list. (Beginner)
+- [Guess the Number by Halving](https://i2003-byte.github.io/computer-science/guess-number-halving/): Guess a hidden number from 1 to 1,000 (or 10 lakh) with only too high or too low as hints. Compare halving with one-by-one and random guessing, and see why 10 guesses are enough for 1,000. (Beginner)
+- [How Step Counts Grow: log n to n²](https://i2003-byte.github.io/computer-science/step-count-growth/): Grow a list from 10 to 100 crore items and watch the steps for binary search, linear search, merge sort and bubble sort, with the time each would take for a person, an old computer or a laptop. (Intermediate)
 
 ## Chemistry
 

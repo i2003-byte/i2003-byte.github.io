@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guess the Number by Halving — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Guess a hidden number from 1 to 1,000 (or 10 lakh) with only too high or too low as hints. Compare halving with one-by-one and random guessing, and see why 10 guesses are enough for 1,000.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/computer-science/guess-number-halving/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Guess the Number by Halving — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Guess a hidden number from 1 to 1,000 (or 10 lakh) with only too high or too low as hints. Compare halving with one-by-one and random guessing, and see why 10 guesses are enough for 1,000.">
+  <meta property="og:url" content="https://i2003-byte.github.io/computer-science/guess-number-halving/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="guess-number-halving">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>The computer hides a number and only answers "too high", "too low" or "correct". After every answer, the numbers still possible form one stretch of the number line. The best plan is to guess the <strong>middle</strong> of that stretch: whatever the answer, half of the possible numbers are ruled out. This is <strong>halving</strong>, the idea behind binary search.</p>
+            <p>Guessing one by one (1, 2, 3 …) rules out only one number per guess. Guessing at random in the possible stretch is somewhere in between: sometimes lucky, often slow.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">After k halvings, about N ÷ 2ᵏ numbers are left</code>
+            <code class="formula">Guesses needed by halving, at most: the smallest k with 2ᵏ ≥ N + 1, written ⌈log₂(N + 1)⌉</code>
+            <code class="formula">N = 10 → 4 · N = 100 → 7 · N = 1,000 → 10 · N = 10 lakh → 20</code>
+            <code class="formula">One by one: up to N guesses</code>
+            <ul>
+              <li>2¹⁰ = 1,024, so 10 halvings shrink 1,000 numbers to 1. Going from 1,000 to 10,00,000 (a thousand times more) needs only 10 more guesses, because 2¹⁰ ≈ 1,000.</li>
+              <li>Each halving guess gives one <strong>bit</strong> of information: "upper half" or "lower half". 20 bits are enough to pick one number out of 10 lakh.</li>
+            </ul>
+            <p>Simplification: the computer always answers truthfully, and every guess counts the same.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>The game "20 questions": 20 good yes/no questions can tell apart about 10 lakh different things.</li>
+              <li>An optician narrowing down your lens power ("better with this one or this one?") is halving in steps.</li>
+              <li>A computer finding a square root or solving an equation by "bisection" halves the range where the answer lies.</li>
+              <li>Finding the faulty bulb in a long chain of festival lights: test the middle first, then the half that fails.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With 1 to 1,000, tap the number line to play yourself. Can you always find the number in 10 guesses or fewer?<details><summary>Show answer</summary>Yes, if you always tap the middle of the green stretch that is still possible. 1,000 → 500 → 250 → 125 → 63 → 32 → 16 → 8 → 4 → 2 → 1: 10 guesses at most.</details></li>
+              <li>Press "New hidden number", choose "One by one" and press Computer guesses. How many guesses could it need in the worst case?<details><summary>Show answer</summary>Up to 1,000, if the number is 1,000. On average about 500. Halving never needs more than 10.</details></li>
+              <li>Choose 10,00,000 (ten lakh) and let the computer guess by halving. How many guesses does it need?<details><summary>Show answer</summary>At most 20, because 2²⁰ = 10,48,576 is more than 10 lakh. The graph of numbers still possible falls by half with every guess.</details></li>
+              <li>Try "Random" several times with 1 to 1,000 (press "New hidden number" between tries). Is it better or worse than halving?<details><summary>Show answer</summary>Usually worse: on average it needs about 14 guesses, and sometimes 20 or more, because a random guess near the edge of the stretch rules out only a small part. Sometimes it gets lucky, but halving is guaranteed to need 10 or fewer.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Halving (bisection):</strong> splitting the possible range in two equal parts with each test.</li>
+              <li><strong>Logarithm base 2 (log₂ N):</strong> how many times N can be halved before reaching 1.</li>
+              <li><strong>Bit:</strong> one yes/no answer; k bits can tell apart 2ᵏ possibilities.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

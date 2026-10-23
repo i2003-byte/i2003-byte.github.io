@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How Step Counts Grow: log n to n² — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Grow a list from 10 to 100 crore items and watch the steps for binary search, linear search, merge sort and bubble sort, with the time each would take for a person, an old computer or a laptop.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/computer-science/step-count-growth/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="How Step Counts Grow: log n to n² — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Grow a list from 10 to 100 crore items and watch the steps for binary search, linear search, merge sort and bubble sort, with the time each would take for a person, an old computer or a laptop.">
+  <meta property="og:url" content="https://i2003-byte.github.io/computer-science/step-count-growth/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="step-count-growth">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <!-- LEARN: concept, formulas, real-world examples, challenges.
+           Edit freely — this is plain HTML. -->
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>For a small list, every algorithm is fast. What matters is how the number of steps <strong>grows</strong> as the list gets bigger. This is called the algorithm's <strong>time complexity</strong>. Four common patterns:</p>
+            <ul>
+              <li><strong>log n</strong> (binary search): doubling the list adds just one step.</li>
+              <li><strong>n</strong> (linear search): doubling the list doubles the steps.</li>
+              <li><strong>n log n</strong> (merge sort): a little more than doubles.</li>
+              <li><strong>n²</strong> (bubble and selection sort): doubling the list makes four times the work; ten times the list makes a hundred times the work.</li>
+            </ul>
+            <p>For 10 items the difference hardly matters. For 10 lakh items it is the difference between a blink and an hour, and for 100 crore items between seconds and centuries.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas &amp; rules</h3>
+            <code class="formula">time = number of steps ÷ steps per second</code>
+            <code class="formula">n = 10 lakh at 10⁸ steps/s:  log₂ n ≈ 20 steps → 0.2 µs · n → 10 ms · n log₂ n ≈ 2 crore → 0.2 s · n² ÷ 2 = 5 × 10¹¹ → about 1.4 hours</code>
+            <code class="formula">n = 100 crore (10⁹): n² ÷ 2 = 5 × 10¹⁷ steps → about 160 years on a laptop</code>
+            <ul>
+              <li>On <strong>log axes</strong> every grid line is 1,000 times the one before, so huge and tiny numbers fit on one chart and n, n², log n become straight-ish lines with different slopes. On <strong>ordinary axes</strong> n² shoots off the top almost at once.</li>
+              <li>A faster computer divides every time by the same number; a better algorithm changes how the time grows. For big n, a better algorithm beats a faster computer.</li>
+            </ul>
+            <p>Simplification: these are worst-case step counts (merge sort and binary search rounded to n log₂ n and log₂ n), and every step takes the same time. Real programs also spend time reading memory and their speed varies.</p>
+          </section>
+          <section>
+            <h3>🌍 In real life</h3>
+            <ul>
+              <li>Aadhaar has more than 100 crore records. Finding one by linear search would take seconds per lookup; with sorted indexes (the log n idea) it takes microseconds, so crores of checks a day are possible.</li>
+              <li>Board exam results for about 10 lakh students must be sorted by marks. An n log n sort finishes in under a second; an n² sort would take over an hour on the same computer.</li>
+              <li>Programmers check the complexity of their code before running it on big data: an n² step hidden in a loop is a common reason apps slow down as they grow.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Set n to 10 lakh (press the preset) with a laptop. How long does each algorithm take?<details><summary>Show answer</summary>Binary search about 0.2 µs, linear search 10 ms, merge sort about 0.2 s, bubble sort about 1.4 hours.</details></li>
+              <li>Now choose "A person: 1 step a second" and n = 1,000. How long would you take to sort 1,000 cards by bubble sort, and by merge sort?<details><summary>Show answer</summary>Bubble sort: about 5 lakh steps, nearly 6 days without sleep. Merge sort: about 10,000 steps, under 3 hours. Binary search through the sorted cards: 10 seconds.</details></li>
+              <li>Change n from 1,000 to 2,000 (k from 3 to 3.3). What happens to each step count?<details><summary>Show answer</summary>log₂ n goes from about 10 to 11 (+1), n doubles, n log₂ n slightly more than doubles (×2.2), n² ÷ 2 quadruples (5 lakh → 20 lakh).</details></li>
+              <li>Switch the chart to "Ordinary scale" and press Grow n. Which curve disappears off the top first, and which looks almost flat?<details><summary>Show answer</summary>n² leaves the chart almost at once. log₂ n hugs the bottom: on ordinary axes it looks flat because it grows so slowly.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Time complexity:</strong> how the number of steps grows with the input size n.</li>
+              <li><strong>Big O:</strong> a short way to write it, e.g. O(log n), O(n), O(n log n), O(n²).</li>
+              <li><strong>Log scale:</strong> an axis where equal distances mean equal multiplication (×10 or ×1000), not equal addition.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

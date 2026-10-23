@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**188 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**192 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -42,10 +42,11 @@ SimLab is a free collection of interactive science simulations for school studen
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
 | 🌏 **Geography: Weather and climate** (6, Class 7 and 11) | Monsoon Winds over India · Humidity, Clouds and Rain · Climate Graphs of Indian Cities · Why Deserts Are Hot by Day and Cold at Night · How Wind Shapes the Desert · Why a Low Sun Heats Less |
 | 🌏 **Geography: Maps** (3, Class 9 and 11) | Contour Lines from a Model Hill · Reading a Contour Map: Cross-Sections · Map Scale and Distance in India |
-| 🌏 **Geography: Interior of the Earth and earthquakes** (2, Class 7 and 11) | Inside the Earth: Layers and Earthquake Waves · Finding an Earthquake’s Epicentre |
+| 🌏 **Geography: Interior of the Earth and earthquakes** (3, Class 7 and 11) | Inside the Earth: Layers and Earthquake Waves · Finding an Earthquake’s Epicentre · Moving Plates: Mountains, Rifts and Quakes |
 | 📈 **Economics: Demand and supply** (3, Class 11–12) | The Demand Curve · Supply and Market Equilibrium · Price Ceiling and Price Floor |
 | 💰 **Economics: Money and credit** (3, Class 8 and 10) | Barter vs Money: Double Coincidence of Wants · Simple vs Compound Interest · Formal vs Informal Credit |
 | 💻 **Computer Science: Numbers and logic** (3, Class 11) | Binary Counter and Place Values · Logic Gates and Truth Tables · Sorting Race: Bubble, Selection and Merge |
+| 💻 **Computer Science: Searching and algorithm efficiency** (3, Class 11 and 12) | Linear vs Binary Search · Guess the Number by Halving · How Step Counts Grow: log n to n² |
 
 ## Features
 - **Hands-on:** sliders, play/pause/step, speed control, live readouts and graphs

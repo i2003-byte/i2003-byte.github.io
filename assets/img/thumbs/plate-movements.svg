@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="plate-movements">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b1730"/><stop offset=".45" stop-color="#1e293b"/><stop offset=".46" stop-color="#9a3412"/><stop offset="1" stop-color="#c2410c"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M0 96H150L170 60L186 40L200 62L214 72H320V130H232L190 116L150 130H0Z" fill="#6b4f3a"/>
+  <path d="M0 96H150L170 60L186 40L200 62L214 72H320V100H210L180 106L150 112H0Z" fill="#a8814b"/>
+  <path d="M150 112L180 106L300 150L300 176L180 132L150 130Z" fill="#b9935c" stroke="#e2e8f0" stroke-opacity=".5" stroke-dasharray="4 3"/>
+  <path d="M182 44l4-6 4 6z" fill="#e2e8f0"/>
+  <path d="M30 84h46" stroke="#38bdf8" stroke-width="4"/><path d="M76 76l12 8-12 8z" fill="#38bdf8"/>
+  <circle cx="170" cy="110" r="5" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="170" cy="110" r="2" fill="#ef4444"/>
+  <circle cx="196" cy="122" r="7" fill="none" stroke="#facc15" stroke-width="2"/>
+  <text x="56" y="120" font-family="sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">INDIA</text>
+  <text x="270" y="92" font-family="sans-serif" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">ASIA</text>
+</svg>

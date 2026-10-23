@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="step-count-growth">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M40 24V170H296" stroke="#e2e8f0" stroke-opacity=".6" stroke-width="2" fill="none"/>
+  <path d="M40 168Q160 150 290 146" stroke="#4ade80" stroke-width="4" fill="none"/>
+  <path d="M40 168L290 110" stroke="#60a5fa" stroke-width="4" fill="none"/>
+  <path d="M40 168Q170 140 290 70" stroke="#c084fc" stroke-width="4" fill="none"/>
+  <path d="M40 168Q130 150 180 24" stroke="#f87171" stroke-width="4" fill="none"/>
+  <g font-family="sans-serif" font-size="13" font-weight="700"><text x="186" y="36" fill="#f87171">n²</text><text x="250" y="66" fill="#c084fc">n log n</text><text x="270" y="104" fill="#60a5fa">n</text><text x="250" y="140" fill="#4ade80">log n</text></g>
+</svg>

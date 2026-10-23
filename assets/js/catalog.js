@@ -1452,6 +1452,22 @@ SimLab.simulations = [
     dateAdded: '2026-10-22',
     prerequisites: ['earth-layers']
   },
+  {
+    id: 'plate-movements',
+    subject: 'geography',
+    branch: 'landforms',
+    title: 'Moving Plates: Mountains, Rifts and Quakes',
+    description:
+      'Watch India crash into Asia and raise the Himalayas, an ocean plate sink under a continent and feed volcanoes, a rift valley open into an ocean with magnetic stripes, and a fault bend and snap in an earthquake.',
+    level: 'Intermediate',
+    tags: ['plate tectonics', 'plates', 'himalayas', 'fold mountains', 'subduction', 'volcano', 'rift valley', 'mid-ocean ridge', 'sea-floor spreading', 'transform fault', 'earthquake', 'landforms', 'class 7', 'class 11'],
+    thumbnail: '/assets/img/thumbs/plate-movements.svg',
+    link: '/geography/plate-movements/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-23',
+    prerequisites: ['earth-layers']
+  },
 
   {
     id: 'demand-curve',
@@ -1549,6 +1565,54 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-09-30',
     prerequisites: ['binary-counter']
+  },
+  {
+    id: 'linear-binary-search',
+    subject: 'computer-science',
+    branch: 'algorithms',
+    title: 'Linear vs Binary Search',
+    description:
+      'Search a class register for a roll number two ways: check students one by one, or check the middle and throw away half. Count the checks, try a missing number and see why binary search needs a sorted list.',
+    level: 'Beginner',
+    tags: ['searching', 'linear search', 'binary search', 'algorithms', 'sorted list', 'log n', 'comparisons', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/linear-binary-search.svg',
+    link: '/computer-science/linear-binary-search/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-23',
+    prerequisites: ['sorting-race']
+  },
+  {
+    id: 'guess-number-halving',
+    subject: 'computer-science',
+    branch: 'algorithms',
+    title: 'Guess the Number by Halving',
+    description:
+      'Guess a hidden number from 1 to 1,000 (or 10 lakh) with only too high or too low as hints. Compare halving with one-by-one and random guessing, and see why 10 guesses are enough for 1,000.',
+    level: 'Beginner',
+    tags: ['halving', 'bisection', 'binary search', 'guessing game', 'logarithm', 'log2', 'algorithms', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/guess-number-halving.svg',
+    link: '/computer-science/guess-number-halving/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-23',
+    prerequisites: ['linear-binary-search']
+  },
+  {
+    id: 'step-count-growth',
+    subject: 'computer-science',
+    branch: 'algorithms',
+    title: 'How Step Counts Grow: log n to n²',
+    description:
+      'Grow a list from 10 to 100 crore items and watch the steps for binary search, linear search, merge sort and bubble sort, with the time each would take for a person, an old computer or a laptop.',
+    level: 'Intermediate',
+    tags: ['time complexity', 'big o', 'algorithm efficiency', 'log n', 'n log n', 'n squared', 'searching', 'sorting', 'class 11', 'class 12'],
+    thumbnail: '/assets/img/thumbs/step-count-growth.svg',
+    link: '/computer-science/step-count-growth/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-23',
+    prerequisites: ['linear-binary-search', 'sorting-race']
   },
   {
     id: 'distance-displacement',
