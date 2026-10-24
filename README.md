@@ -10,7 +10,7 @@ SimLab is a free collection of interactive science simulations for school studen
 
 ## What's inside
 
-**192 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
+**196 live simulations** in Physics, Chemistry, Biology, Mathematics, Geography, Economics and Computer Science. Astronomy is coming soon.
 
 | Topic | Simulations |
 |---|---|
@@ -38,6 +38,8 @@ SimLab is a free collection of interactive science simulations for school studen
 | 📐 **Mathematics: Introduction to trigonometry** (3, Class 10) | Trigonometric Ratios · Unit Circle and Trig Graphs · Heights and Distances |
 | 📐 **Mathematics: Coordinate geometry** (3, Class 10) | Distance Formula · Section Formula · Area of a Triangle from Coordinates |
 | 📐 **Mathematics: Pair of linear equations** (3, Class 10) | Pair of Linear Equations: Graphs · Linear Equations in Daily Life · Substitution and Elimination |
+| 📐 **Mathematics: Quadratic equations** (1, Class 10) | Quadratic Graphs and Roots |
+| 📐 **Mathematics: Sets and Venn diagrams** (3, Class 11) | Making Sets: Roster and Set-Builder Form · Venn Diagram Operations · Survey Problems with Venn Diagrams |
 | 📐 **Mathematics: Statistics and probability** (3, Class 9) | Histogram and Frequency Polygon · Mean, Median and Mode · Coins and Dice: Experimental Probability |
 | 🌏 **Geography: Earth's motions** (3, Class 7) | Day, Night and Sunrise Across India · Revolution and the Seasons · Time Zones: IST and World Clocks |
 | 🌏 **Geography: Weather and climate** (6, Class 7 and 11) | Monsoon Winds over India · Humidity, Clouds and Rain · Climate Graphs of Indian Cities · Why Deserts Are Hot by Day and Cold at Night · How Wind Shapes the Desert · Why a Low Sun Heats Less |

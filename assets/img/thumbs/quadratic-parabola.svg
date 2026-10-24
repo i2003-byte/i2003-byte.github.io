@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-label="quadratic-parabola">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="320" height="200" fill="url(#bg)"/>
+  <path d="M0 130H320M110 0V200" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M150 0V200" stroke="#a78bfa" stroke-dasharray="6 5" stroke-width="2"/>
+  <path d="M80 10Q150 250 220 10" fill="none" stroke="#38bdf8" stroke-width="5"/>
+  <circle cx="113" cy="130" r="8" fill="#4ade80" stroke="#0f172a" stroke-width="3"/><circle cx="187" cy="130" r="8" fill="#4ade80" stroke="#0f172a" stroke-width="3"/>
+  <circle cx="150" cy="150" r="8" fill="#a78bfa" stroke="#0f172a" stroke-width="3"/>
+  <g font-family="sans-serif" font-weight="700"><text x="196" y="186" font-size="18" fill="#e2e8f0">D = b² − 4ac</text><text x="222" y="40" font-size="16" fill="#38bdf8">y = ax² + bx + c</text></g>
+</svg>

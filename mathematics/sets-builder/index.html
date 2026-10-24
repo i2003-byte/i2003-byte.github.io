@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Making Sets: Roster and Set-Builder Form — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Drag numbers or students into a Venn diagram to build sets from their rules. See the roster and set-builder forms side by side, and find subsets, disjoint sets and the empty set.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/sets-builder/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Making Sets: Roster and Set-Builder Form — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Drag numbers or students into a Venn diagram to build sets from their rules. See the roster and set-builder forms side by side, and find subsets, disjoint sets and the empty set.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/sets-builder/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="sets-builder">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>set</strong> is a well-defined collection: for any object you can say clearly whether it belongs or not. “Even numbers up to 20” is a set. “Good students” is not, because people will disagree about who is good.</p>
+            <p>There are two ways to write the same set. The <strong>roster form</strong> lists every element: A = {2, 4, 6, 8}. The <strong>set-builder form</strong> gives the rule instead: A = {x : x is an even number less than 10}. A <strong>Venn diagram</strong> draws it: a rectangle for the universal set U and a circle for each set. Where the circles overlap are the elements that belong to both.</p>
+          </section>
+          <section>
+            <h3>🧮 Key ideas</h3>
+            <code class="formula">x ∈ A  means “x is an element of A”;   x ∉ A  means it is not</code>
+            <code class="formula">A ⊂ B  when every element of A is also in B</code>
+            <p class="formula-note">Then circle A could be drawn inside circle B, and the “only A” part of the diagram is empty.</p>
+            <code class="formula">∅ = { }  the empty set, with no elements</code>
+            <ul>
+              <li><strong>n(A)</strong> is the number of elements in A (its cardinal number).</li>
+              <li>In roster form each element is written once and the order does not matter: {1, 2, 3} = {3, 1, 2}.</li>
+              <li><strong>Disjoint sets</strong> have no element in common, so their circles share nothing.</li>
+              <li>The empty set is a subset of every set, and every set is a subset of itself.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A school sports teacher keeps two lists, the cricket team and the football team. Students in both lists are in A ∩ B; the teacher must not schedule both matches at the same time.</li>
+              <li>A library catalogue search for “physics books in Hindi” finds the overlap of two sets: physics books and Hindi books.</li>
+              <li>The voters’ list of a ward is a set defined by a rule: citizens aged 18 or more who live in the ward.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With “Even numbers and multiples of 3”, place all 20 numbers and press Check my sets. Which numbers go in the middle, and why?<details><summary>Show answer</summary>6, 12 and 18. They are even and also multiples of 3, so they belong to both A and B: they are the multiples of 6.</details></li>
+              <li>Where does 7 go? And 1?<details><summary>Show answer</summary>Outside both circles but inside the rectangle. 7 and 1 are in U (the numbers 1 to 20) but are neither even nor multiples of 3.</details></li>
+              <li>Choose “Class 7B: cricket and football players”. Write A in roster form. Who plays both games?<details><summary>Show answer</summary>A = {Aarav, Diya, Rohan, Sana, Zoya, Arjun}, so n(A) = 6. Aarav, Rohan and Arjun play both, so they go in the overlap.</details></li>
+              <li>Choose “Multiples of 4 and even numbers”. After you place everything, which part of the diagram is empty? What does that tell you?<details><summary>Show answer</summary>The “only A” part is empty: every multiple of 4 is even. So A ⊂ B, and circle A could be drawn inside circle B.</details></li>
+              <li>Choose “Even primes above 2”. How many numbers go in A?<details><summary>Show answer</summary>None. The only even prime is 2, so A = ∅, the empty set, and n(A) = 0. A set given by a rule can be empty.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Element:</strong> one member of a set.</li>
+              <li><strong>Universal set (U):</strong> the set of everything being talked about in a problem, drawn as the rectangle.</li>
+              <li><strong>Subset:</strong> A is a subset of B if nothing in A is outside B.</li>
+              <li><strong>Finite set:</strong> a set whose elements can be counted to an end, like these; {1, 2, 3, …} without end is infinite.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Survey Problems with Venn Diagrams — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Solve colony and school surveys with two or three sets by filling the Venn diagram region by region, from the middle outwards. Find who reads only one paper, exactly two, or none, and spot a survey whose numbers cannot be true.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/venn-survey/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Survey Problems with Venn Diagrams — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Solve colony and school surveys with two or three sets by filling the Venn diagram region by region, from the middle outwards. Find who reads only one paper, exactly two, or none, and spot a survey whose numbers cannot be true.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/venn-survey/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="venn-survey">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Survey questions give you totals that <strong>overlap</strong>. “400 read Hindi” includes the 150 who read both Hindi and English, so you cannot just add the numbers. A Venn diagram keeps the overlaps apart: every person sits in exactly one region.</p>
+            <p>The trick is to <strong>start in the middle</strong>, where the most circles overlap, because that number is usually given directly. Then work outwards: each next region is a given total minus the regions already filled inside it. When every region is filled, any question (only one, exactly two, at least one, none) is just adding the right regions.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</code>
+            <code class="formula">n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A ∩ B) − n(B ∩ C) − n(C ∩ A) + n(A ∩ B ∩ C)</code>
+            <p class="formula-note">Adding the three circles counts each pair overlap twice, so subtract the pairs. But that removes the middle once too often, so add it back.</p>
+            <code class="formula">none = total − n(A ∪ B ∪ C)</code>
+            <ul>
+              <li><strong>Only A and B (not C)</strong> = n(A ∩ B) − n(A ∩ B ∩ C).</li>
+              <li><strong>Only A</strong> = n(A) − (the three other regions inside circle A).</li>
+              <li>Every region must come out as zero or more. A negative region means the survey numbers contradict each other.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>Newspaper companies survey a colony to see how many homes take two papers, so they know how many readers an advert in both papers really reaches.</li>
+              <li>A school planning sports periods needs to know how many students play more than one game, so that matches don’t clash.</li>
+              <li>Health surveys count people with diabetes, high blood pressure, or both; adding the two totals would count the “both” group twice.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With the Hindi and English papers survey, press Next step until it is solved. How many families read neither paper?<details><summary>Show answer</summary>Both = 150, only Hindi = 400 − 150 = 250, only English = 300 − 150 = 150. At least one = 550, so 600 − 550 = 50 families read neither.</details></li>
+              <li>Choose the Hindi, English, Punjabi survey. Before pressing Next, work out how many families read only Hindi and English (not Punjabi).<details><summary>Show answer</summary>40 read Hindi and English, but 10 of them read all three. So 40 − 10 = 30 read only those two.</details></li>
+              <li>Finish that survey. How many families read exactly one paper, and how many read none?<details><summary>Show answer</summary>Only Hindi 55, only English 40, only Punjabi 15, so exactly one = 110. At least one = 175, so 200 − 175 = 25 read none.</details></li>
+              <li>Choose “Tea and coffee: is the report true?” and fill it in. What goes wrong?<details><summary>Show answer</summary>Only tea 55, only coffee 45, both 5: that is 105 people, but only 100 were asked. “None” would be −5, which is impossible, so the report has a mistake. With 100 people, at least 10 must drink both.</details></li>
+              <li>In the cricket, football, kabaddi survey, how many students play exactly two games?<details><summary>Show answer</summary>Cricket and football only 20 − 6 = 14, football and kabaddi only 12 − 6 = 6, cricket and kabaddi only 15 − 6 = 9. Exactly two = 14 + 6 + 9 = 29.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>At least one:</strong> in one or more of the sets, the union.</li>
+              <li><strong>Exactly one / only one:</strong> in one set and none of the others.</li>
+              <li><strong>Inclusion–exclusion:</strong> the add-subtract-add-back formula for the size of a union.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

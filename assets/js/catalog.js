@@ -174,6 +174,7 @@ SimLab.subjects = [
       { id: 'trigonometry', name: 'Trigonometry' },
       { id: 'coordinate-geometry', name: 'Coordinate Geometry' },
       { id: 'mensuration', name: 'Mensuration' },
+      { id: 'sets', name: 'Sets & Venn Diagrams' },
       { id: 'functions', name: 'Functions & Graphs' },
       { id: 'calculus', name: 'Calculus' },
       { id: 'probability', name: 'Statistics & Probability' }
@@ -2840,6 +2841,70 @@ SimLab.simulations = [
     featured: false,
     dateAdded: '2026-10-21',
     prerequisites: ['triangle-angle-sum']
+  },
+  {
+    id: 'sets-builder',
+    subject: 'mathematics',
+    branch: 'sets',
+    title: 'Making Sets: Roster and Set-Builder Form',
+    description:
+      'Drag numbers or students into a Venn diagram to build sets from their rules. See the roster and set-builder forms side by side, and find subsets, disjoint sets and the empty set.',
+    level: 'Beginner',
+    tags: ['sets', 'roster form', 'set-builder form', 'Venn diagram', 'subset', 'empty set', 'universal set', 'class 11'],
+    thumbnail: '/assets/img/thumbs/sets-builder.svg',
+    link: '/mathematics/sets-builder/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-24',
+    prerequisites: []
+  },
+  {
+    id: 'venn-operations',
+    subject: 'mathematics',
+    branch: 'sets',
+    title: 'Venn Diagram Operations',
+    description:
+      'Shade union, intersection, difference and complement on a Venn diagram, or tap regions to shade your own and see which set it is. Check n(A ∪ B) = n(A) + n(B) − n(A ∩ B) with real counts.',
+    level: 'Intermediate',
+    tags: ['sets', 'Venn diagram', 'union', 'intersection', 'complement', 'difference', 'De Morgan', 'class 11'],
+    thumbnail: '/assets/img/thumbs/venn-operations.svg',
+    link: '/mathematics/venn-operations/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-24',
+    prerequisites: ['sets-builder']
+  },
+  {
+    id: 'venn-survey',
+    subject: 'mathematics',
+    branch: 'sets',
+    title: 'Survey Problems with Venn Diagrams',
+    description:
+      'Solve colony and school surveys with two or three sets by filling the Venn diagram region by region, from the middle outwards. Find who reads only one paper, exactly two, or none, and spot a survey whose numbers cannot be true.',
+    level: 'Intermediate',
+    tags: ['sets', 'Venn diagram', 'survey', 'three sets', 'inclusion-exclusion', 'word problems', 'class 11'],
+    thumbnail: '/assets/img/thumbs/venn-survey.svg',
+    link: '/mathematics/venn-survey/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-24',
+    prerequisites: ['venn-operations']
+  },
+  {
+    id: 'quadratic-parabola',
+    subject: 'mathematics',
+    branch: 'functions',
+    title: 'Quadratic Graphs and Roots',
+    description:
+      'Change a, b and c in y = ax² + bx + c and watch the parabola move. The roots are where it meets the x-axis, and the discriminant b² − 4ac decides two, one or no real roots. Drag the vertex or slide c to see roots meet and vanish.',
+    level: 'Intermediate',
+    tags: ['quadratic equation', 'parabola', 'roots', 'discriminant', 'quadratic formula', 'vertex', 'functions', 'class 10'],
+    thumbnail: '/assets/img/thumbs/quadratic-parabola.svg',
+    link: '/mathematics/quadratic-parabola/',
+    status: 'live',
+    featured: false,
+    dateAdded: '2026-10-24',
+    prerequisites: ['linear-equations-graph']
   },
   {
     id: 'trapezium-area',

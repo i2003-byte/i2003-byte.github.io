@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Quadratic Graphs and Roots — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Change a, b and c in y = ax² + bx + c and watch the parabola move. The roots are where it meets the x-axis, and the discriminant b² − 4ac decides two, one or no real roots. Drag the vertex or slide c to see roots meet and vanish.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/quadratic-parabola/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Quadratic Graphs and Roots — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Change a, b and c in y = ax² + bx + c and watch the parabola move. The roots are where it meets the x-axis, and the discriminant b² − 4ac decides two, one or no real roots. Drag the vertex or slide c to see roots meet and vanish.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/quadratic-parabola/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="quadratic-parabola">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>A <strong>quadratic equation</strong> ax² + bx + c = 0 (with a ≠ 0) asks: for which x is ax² + bx + c zero? Draw y = ax² + bx + c and you get a U-shaped curve called a <strong>parabola</strong>. The answers, called <strong>roots</strong>, are the x-values where the curve meets the x-axis, because there y = 0.</p>
+            <p>A parabola can cross the x-axis twice, just touch it once, or miss it completely. So a quadratic equation has two, one or no real roots. The <strong>discriminant</strong> D = b² − 4ac tells you which, without drawing anything.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">x = (−b ± √(b² − 4ac)) / 2a</code>
+            <p class="formula-note">The quadratic formula (Sridharacharya’s formula). The ± gives the two roots, one on each side of the axis of symmetry.</p>
+            <code class="formula">D = b² − 4ac</code>
+            <ul>
+              <li><strong>D &gt; 0:</strong> two different real roots; the curve crosses the x-axis twice.</li>
+              <li><strong>D = 0:</strong> two equal roots x = −b/2a; the curve just touches the x-axis at its vertex.</li>
+              <li><strong>D &lt; 0:</strong> no real roots; the curve stays above (a &gt; 0) or below (a &lt; 0) the x-axis.</li>
+            </ul>
+            <code class="formula">vertex = (−b/2a, −D/4a)     axis of symmetry: x = −b/2a</code>
+            <code class="formula">sum of roots = −b/a     product of roots = c/a</code>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A ball or a stream of water from a garden pipe follows a parabola. Its height is a quadratic in time, so “when does it hit the ground?” is a quadratic equation.</li>
+              <li>A farmer with 40 m of fencing wants a rectangular plot of 96 m²: x(20 − x) = 96 gives x² − 20x + 96 = 0, so the plot is 8 m by 12 m.</li>
+              <li>Dish antennas and car headlight mirrors are parabola-shaped, because a parabola sends parallel rays to a single point.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>Start with x² − 5x + 6. Where does the curve cut the x-axis? Check with the formula.<details><summary>Show answer</summary>At x = 2 and x = 3. D = 25 − 24 = 1, so x = (5 ± 1)/2 = 3 or 2. Their sum is 5 = −b/a and product 6 = c/a.</details></li>
+              <li>Press “Slide c up and down” and watch the two roots. What happens to them as c grows?<details><summary>Show answer</summary>The curve moves up, the roots slide towards each other, meet at the vertex when D = 0 (c = 6.25 for a = 1, b = −5), and then disappear: no real roots once c &gt; 6.25.</details></li>
+              <li>Choose “No real roots: x² + 2x + 5”. What is D? Now drag the vertex down below the x-axis.<details><summary>Show answer</summary>D = 4 − 20 = −16 &lt; 0, so the curve never meets the x-axis (the vertex is at (−1, 4)). Once the vertex is below the axis, D becomes positive and two roots appear.</details></li>
+              <li>Keep b and c, and change a from 1 to −1. What changes?<details><summary>Show answer</summary>The parabola flips and opens downwards. With x² − 5x + 6 → −x² − 5x + 6, D = 25 + 24 = 49 and the roots become −6 and 1. The vertex is now the highest point.</details></li>
+              <li>Find a quadratic with roots 1 and 4 using the sum and product.<details><summary>Show answer</summary>Sum 5 and product 4, so x² − 5x + 4 = 0 (a = 1, b = −5, c = 4). Set the sliders and check that the curve crosses at 1 and 4.</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Parabola:</strong> the graph of a quadratic, symmetric about a vertical line.</li>
+              <li><strong>Vertex:</strong> the turning point, the lowest or highest point of the parabola.</li>
+              <li><strong>Discriminant:</strong> b² − 4ac, which “discriminates” between the kinds of roots.</li>
+            </ul>
+            <p>The grid shows x from −8 to 8 and y from −10 to 10, so roots further out are reported as off the grid.</p>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>

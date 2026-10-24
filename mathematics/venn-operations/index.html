@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Venn Diagram Operations — Interactive Simulation | SimLab</title>
+  <meta name="description" content="Shade union, intersection, difference and complement on a Venn diagram, or tap regions to shade your own and see which set it is. Check n(A ∪ B) = n(A) + n(B) − n(A ∩ B) with real counts.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://i2003-byte.github.io/mathematics/venn-operations/">
+
+  <!-- Social previews (Open Graph / Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SimLab">
+  <meta property="og:title" content="Venn Diagram Operations — Interactive Simulation | SimLab">
+  <meta property="og:description" content="Shade union, intersection, difference and complement on a Venn diagram, or tap regions to shade your own and see which set it is. Check n(A ∪ B) = n(A) + n(B) − n(A ∩ B) with real counts.">
+  <meta property="og:url" content="https://i2003-byte.github.io/mathematics/venn-operations/">
+  <meta property="og:image" content="https://i2003-byte.github.io/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Apply the saved (or system) theme before first paint to avoid a flash -->
+  <script>(function(){var d=document.documentElement,t;try{t=localStorage.getItem('simlab-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.dataset.theme=t})();</script>
+</head>
+<body data-page="sim" data-sim="venn-operations">
+  <noscript><div class="noscript">SimLab needs JavaScript to run its simulations. Please enable it in your browser.</div></noscript>
+
+  <main id="main" class="sim-page">
+    <div class="container">
+      <!-- Title, canvas, controls, readouts & graph are built by common.js -->
+      <div id="sim-app"></div>
+
+      <details class="learn card" open>
+        <summary><span>📘 Learn the science</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="learn-body">
+          <section>
+            <h3>💡 The big idea</h3>
+            <p>Two circles inside a rectangle split the universal set U into four parts: <strong>only A</strong>, <strong>both A and B</strong>, <strong>only B</strong>, and <strong>neither</strong>. Every set you can make from A and B with union, intersection, difference and complement is just a choice of some of these four parts. That gives exactly 2 × 2 × 2 × 2 = 16 possible sets, and the sim has a name for each one.</p>
+            <p>So instead of memorising rules, shade the regions. If two expressions shade the same regions, they are the same set. That is how De Morgan’s laws can be seen at a glance.</p>
+          </section>
+          <section>
+            <h3>🧮 Key formulas</h3>
+            <code class="formula">A ∪ B = {x : x ∈ A or x ∈ B}     A ∩ B = {x : x ∈ A and x ∈ B}</code>
+            <code class="formula">A − B = {x : x ∈ A and x ∉ B}     A′ = U − A</code>
+            <code class="formula">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</code>
+            <p class="formula-note">Adding n(A) and n(B) counts the overlap twice, so take it away once.</p>
+            <code class="formula">(A ∪ B)′ = A′ ∩ B′     (A ∩ B)′ = A′ ∪ B′</code>
+            <p class="formula-note">De Morgan’s laws. Also n(A′) = n(U) − n(A), and n(A − B) = n(A) − n(A ∩ B).</p>
+          </section>
+          <section>
+            <h3>🌍 Real-world examples</h3>
+            <ul>
+              <li>A web search for “mango OR pickle” finds the union of two sets of pages; “mango AND pickle” finds the intersection; “mango −pickle” finds the difference.</li>
+              <li>A railway enquiry: trains from Delhi to Mumbai that run daily and have a pantry car is the intersection of two sets of trains.</li>
+              <li>Exam results: students who passed neither Maths nor Science are (M ∪ S)′, the region outside both circles.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>🎯 Try this</h3>
+            <ol class="try-list">
+              <li>With A even and B multiples of 3 in U = {1, …, 20}, shade A ∪ B. Check the formula n(A ∪ B) = n(A) + n(B) − n(A ∩ B).<details><summary>Show answer</summary>n(A) = 10, n(B) = 6, n(A ∩ B) = 3 (6, 12, 18), so n(A ∪ B) = 10 + 6 − 3 = 13. Counting the shaded numbers also gives 13.</details></li>
+              <li>Choose (A ∪ B)′ and note which regions are shaded. Now choose A′ and then B′. Which regions do A′ and B′ share?<details><summary>Show answer</summary>(A ∪ B)′ is only the outside region. A′ is only B plus outside; B′ is only A plus outside. They share just the outside region, so A′ ∩ B′ = (A ∪ B)′. That is De Morgan’s law.</details></li>
+              <li>Tap the regions to shade only A and only B, but not the middle. What does the sim call this set?<details><summary>Show answer</summary>(A − B) ∪ (B − A), the elements in exactly one of the two sets (the symmetric difference). It equals (A ∪ B) − (A ∩ B).</details></li>
+              <li>Choose “A multiples of 4, B even”. Which region is empty, and what is A − B?<details><summary>Show answer</summary>The “only A” region is empty because every multiple of 4 is even (A ⊂ B). So A − B = ∅ and A ∪ B = B, A ∩ B = A.</details></li>
+              <li>Choose “A multiples of 5, B squares” and shade A ∩ B. What do you get, and what does the formula become?<details><summary>Show answer</summary>A ∩ B = ∅ for U up to 20 (the sets are disjoint), so n(A ∪ B) = n(A) + n(B). Now set n to 25: 25 is both a multiple of 5 and a square, so they are no longer disjoint!</details></li>
+            </ol>
+          </section>
+          <section>
+            <h3>📖 Key terms</h3>
+            <ul>
+              <li><strong>Union (∪):</strong> everything in at least one of the sets.</li>
+              <li><strong>Intersection (∩):</strong> only what is in both sets.</li>
+              <li><strong>Difference (A − B):</strong> what is in A but not in B.</li>
+              <li><strong>Complement (A′):</strong> everything in U that is not in A.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
+      <!-- Previous / next + related simulations (from catalog.js) -->
+      <div id="sim-footer"></div>
+    </div>
+  </main>
+
+  <!-- Load order matters: data → shared chrome → sim toolkit → this simulation -->
+  <script src="/assets/js/catalog.js"></script>
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/common.js"></script>
+  <script src="sim.js"></script>
+</body>
+</html>
